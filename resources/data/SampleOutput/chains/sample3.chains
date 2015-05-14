@@ -1,0 +1,4 @@
+c="ms. **name[aaa]" 23:0 23:1||c="who" 23:10 23:10||c="the patient" 24:0 24:1||c="her" 24:9 24:9||c="her" 25:2 25:2||c="the patient" 26:0 26:1||c="her" 26:6 26:6||c="her" 26:18 26:18||c="the patient" 27:7 27:8||c="the patient" 27:22 27:23||c="the patient" 28:5 28:6||c="her" 29:0 29:0||c="her" 29:8 29:8||c="the patient" 30:0 30:1||c="the patient" 31:12 31:13||c="the patient" 32:3 32:4||c="the patient" 33:0 33:1||c="her" 33:14 33:14||t="coref person"
+c="chronic obstructive pulmonary disease , end stage" 21:0 21:6||c="concurrent end - stage chronic obstructive pulmonary disease" 23:26 23:33||c="her copd" 26:18 26:19||t="coref problem"
+c="**name[xxx , www]" 14:0 14:2||c="**name[www xxx]" 35:0 35:1||t="coref person"
+c="pneumonia" 23:22 23:22||c="her right lower lobe pneumonia" 24:9 24:13||t="coref problem"

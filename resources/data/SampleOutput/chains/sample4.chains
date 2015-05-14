@@ -1,0 +1,8 @@
+c="dr. uph" 40:2 40:3||c="dr. uph" 56:7 56:8||c="dr. uph" 59:20 59:21||c="dr. uph" 60:11 60:12||t="coref person"
+c="the patient" 22:0 22:1||c="she" 23:0 23:0||c="she" 24:0 24:0||c="her" 26:0 26:0||c="she" 27:0 27:0||c="she" 29:0 29:0||c="she" 33:0 33:0||c="her" 35:3 35:3||c="she" 36:0 36:0||c="she" 37:0 37:0||c="she" 38:0 38:0||c="she" 39:0 39:0||c="she" 42:0 42:0||c="she" 43:0 43:0||c="she" 44:0 44:0||c="she" 45:0 45:0||c="her" 46:0 46:0||c="her" 47:0 47:0||c="she" 48:0 48:0||c="she" 49:0 49:0||c="her" 50:0 50:0||c="she" 51:0 51:0||c="her" 52:0 52:0||c="she" 53:0 53:0||c="she" 55:0 55:0||c="she" 56:0 56:0||c="the patient" 59:0 59:1||c="her" 59:10 59:10||t="coref person"
+c="verholl aet over leg brace" 49:4 49:8||c="the brace" 49:16 49:17||c="the brace" 55:5 55:6||t="coref treatment"
+c="dota space m.d." 16:0 16:2||c="space , dota" 66:0 66:2||t="coref person"
+c="l2 to l5 laminectomy" 20:0 20:3||c="laminectomy" 42:16 42:16||t="coref treatment"
+c="l2 through l5 posterior fusion" 20:5 20:9||c="posterior instrumented fusion at l3 to l5" 42:18 42:24||t="coref treatment"
+c="her wounds" 50:0 50:1||c="her back and iliac crest wounds" 59:10 59:15||t="coref problem"
+c="pain medications" 51:4 51:5||c="her pain medications" 52:0 52:2||t="coref treatment"

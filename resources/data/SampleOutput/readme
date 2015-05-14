@@ -1,0 +1,6 @@
+For the coreference resolution ask, input to systems will be patient
+records and markables.  Patient records are found in .txt files and
+markables are in .con files.  While the exact output format for the
+challenge has not yet been finalized, .pair and .chain files can serve
+as starting points.  .pair files mark antecedent and anaphor pairs.
+.chain files show complete coreference chains.

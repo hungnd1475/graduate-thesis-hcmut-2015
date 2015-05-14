@@ -1,0 +1,47 @@
+CONSULTS :
+1. **NAME[VVV UUU] , infectious disease .
+2. **NAME[TTT SSS] , M.D. , surgeon .
+FINAL DIAGNOSES :
+1. Recurrent soft tissue abscess in the gluteal region , Methicillin - resistant Staphylococcus aureus , or folliculitis .
+2. Multiple nodular goiter .
+HISTORY OF PRESENT COMPLAINT :
+The patient is a **AGE[in 40s]- year - old African American female .
+For the last months , the patient had intermittent episodes of rectal pain with draining wound .
+She admits to have fevers .
+She denies chills or old anesthesia .
+She denied that she had any straining or pain during defecation .
+She had incision and drainage of the same area in her buttocks 6 months ago .
+During her stay in the hospital , Dr. **NAME[SSS] saw her , and he said that there are multiple abscesses in her gluteal region , there is no indication for any surgical intervention or incision and drainage and that the patient need to be on antibiotic , and sitz bath and topical Bactroban .
+Dr. **NAME[UUU] , ED doctor , saw her who said that the patient has a recurrence of tissue abscesses with MRSA , most likely source of recurrent folliculitis secondary to colonization of the skin and possible nostril and other area with Methicillin - resistant Staphylococcus aureus .
+He suggests that the patient will continue on IV vancomycin during her stay in the hospital .
+We stopped her clindamycin and started her on rifampin 600 mg orally , and he sent her home with Bactroban double strength tablets 3 times daily for 10 days and oral rifampin 600 mg once daily for 2 weeks , and for decolonization of the skin and nostrils .
+He suggested that the patient will use chlorhexidine soap bath once daily for the next 28 days and application of mupirocin ointment inside both nostrils twice daily for 5 days .
+He recommended the patient that the same treatment will be written to her fiance and a **AGE[in teens]- year - old daughter who lives at home with her to decrease the decolonization .
+The patient also was advised to follow up with Dr. **NAME[UUU] as an outpatient in his clinic .
+During her stay in the hospital , the patient was very stable .
+Upon discharge , she was afebrile .
+Her vitals are stable .
+Her sodium 136 , potassium 3.3 , BUN is 5 , and creatinine is 0.7 .
+Her white blood cell upon discharge was 5 , hemoglobin is 10.8 , and hematocrit 32.5 with platelets 159 .
+Her blood culture did not show any growth , but her deep wound culture showed MRSA which is sensitive to Bactrim and rifampin , but resistant to oxacillin .
+The patient was discharged home and fax a copy of discharge to Latterman .
+Resolution of organism is Methicillin - resistant Staphylococcus aureus infection , location is buttocks area .
+No IV fluids .
+DIET :
+Regular diet .
+ACTIVITY :
+As tolerated .
+FOLLOWUP :
+To follow up with Dr. **NAME[XXX] at **NAME[RRR] in 10 to 14 days and Dr. **NAME[UUU] in 1 to 2 weeks .
+No postdischarge testing .
+No postdischarge services .
+No respiratory therapy .
+No instructions given to the patient .
+______________________________
+**NAME[WWW M XXX] , M.D.
+HS Job # 906487 / 39517 / 32008
+# **ID-NUM
+D :
+**DATE[May 23 2007] 15:24
+T :
+**DATE[May 25 2007] 02:14

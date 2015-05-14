@@ -1,0 +1,12 @@
+c="this 34 year old gravida 1 para 0000" 37:0 37:7||t="coref all"||c="this" 37:0 37:0
+c="this" 37:0 37:0||t="coref person"||c="she" 39:0 39:0
+c="she" 39:0 39:0||t="coref person"||c="her" 40:1 40:1
+c="her" 40:1 40:1||t="coref person"||c="she" 40:3 40:3
+c="she" 40:3 40:3||t="coref person"||c="her" 42:1 42:1
+c="her" 42:1 42:1||t="coref person"||c="she" 42:3 42:3
+c="she" 42:3 42:3||t="coref person"||c="she" 44:1 44:1
+c="she" 44:1 44:1||t="coref person"||c="she" 46:0 46:0
+c="spontaneous vertex vaginal delivery" 24:0 24:3||t="coref treatment"||c="spontaneous vertex vaginal delivery" 39:30 39:33
+c="vaginal delivery" 20:0 20:1||t="coref treatment"||c="spontaneous vertex vaginal delivery" 24:0 24:3
+c="active labor" 33:0 33:1||t="coref problem"||c="active labor" 38:0 38:1
+c="thon meri cinkguay" 12:0 12:2||t="coref person"||c="this 34 year old gravida 1 para 0000" 37:0 37:7

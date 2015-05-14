@@ -1,0 +1,42 @@
+**INSTITUTION
+Discharge Summary
+Name :
+**NAME[AAA , BBB]
+Acct # :
+**ID-NUM
+MRN :
+**ID-NUM
+Admitted :
+**DATE[Mar 12 2007]
+Discharged :
+**DATE[Mar 30 2007]
+Dict :
+**NAME[XXX , WWW]
+Attend :
+**NAME[ZZZ , YYY]
+DEATH SUMMARY
+DATE OF DEATH :
+**DATE[Mar 31 2007] .
+CAUSE OF DEATH :
+Chronic obstructive pulmonary disease , end stage .
+BRIEF HOSPICE COURSE :
+Ms. **NAME[AAA] was an **AGE[in 80s]- year - old female who was admitted on **DATE[Mar 12 2007] , and found to have pneumonia as well as concurrent end - stage chronic obstructive pulmonary disease .
+The patient was started on Pseudomonas for treatment of her right lower lobe pneumonia .
+However , her hospital course was complicated by a GI bleed , requiring 12 units of PRBCs transfusion .
+The patient continued to deteriorate throughout her hospital course and became weaker , and it was clear that her COPD was end stage .
+Therefore , hospice was recommended , and the patient was transferred to hospice on **DATE[Mar 30 2007] , after full discussion with the patient 's family and medical staff and care providers .
+Once transferred to hospice , the patient was managed on the principles of comfort measures only .
+Her respiratory status continued to worsen , and her overall condition continued to deteriorate .
+The patient was eventually placed on continuous IV infusion of morphine for comfort .
+On **DATE[Mar 31 2007] , the nurse notified the **NAME[VVV] MD regarding the patient 's clinical condition .
+Dr. **NAME[UUU] examined the patient at bedside , and findings were significant for no respiration , no pulse , and negative corneal reflex .
+The patient ceased to breathe at 12:30 p.m. on **DATE[Mar 31 2007] , and her death certificate was signed and dated at that time .
+______________________________
+**NAME[WWW XXX]
+HS Job # 370862 / 38636 / 38218
+SHY # **ID-NUM
+D :
+**DATE[Apr 08 2007] 17:33
+T :
+**DATE[Apr 08 2007] 18:57
+**CARBON-COPY

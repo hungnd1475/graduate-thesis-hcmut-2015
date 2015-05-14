@@ -1,0 +1,53 @@
+c="**name[ttt sss] , m.d." 3:1 3:4||t="coref person"||c="dr. **name[sss]" 14:7 14:8
+c="**name[vvv uuu]" 2:1 2:2||t="coref person"||c="dr. **name[uuu]" 15:0 15:1
+c="he" 19:0 19:0||t="coref person"||c="dr. **name[uuu]" 20:9 20:10
+c="his" 20:15 20:15||t="coref person"||c="dr. **name[uuu]" 35:14 35:15
+c="dr. **name[xxx]" 35:4 35:5||t="coref person"||c="**name[www m xxx] , m.d." 41:0 41:4
+c="the patient" 8:0 8:1||t="coref person"||c="the patient" 9:5 9:6
+c="the patient" 9:5 9:6||t="coref person"||c="she" 10:0 10:0
+c="she" 10:0 10:0||t="coref person"||c="she" 11:0 11:0
+c="she" 11:0 11:0||t="coref person"||c="she" 12:0 12:0
+c="she" 12:0 12:0||t="coref person"||c="she" 12:3 12:3
+c="she" 12:3 12:3||t="coref person"||c="she" 13:0 13:0
+c="she" 13:0 13:0||t="coref person"||c="her" 13:10 13:10
+c="her" 13:10 13:10||t="coref person"||c="her" 14:1 14:1
+c="her" 14:1 14:1||t="coref person"||c="her" 14:10 14:10
+c="dr. **name[sss]" 14:7 14:8||t="coref person"||c="he" 14:13 14:13
+c="her" 14:10 14:10||t="coref person"||c="her" 14:21 14:21
+c="her" 14:21 14:21||t="coref person"||c="the patient" 14:39 14:40
+c="the patient" 14:39 14:40||t="coref person"||c="her" 15:7 15:7
+c="dr. **name[uuu]" 15:0 15:1||t="coref person"||c="who" 15:8 15:8
+c="her" 15:7 15:7||t="coref person"||c="the patient" 15:11 15:12
+c="who" 15:8 15:8||t="coref person"||c="he" 16:0 16:0
+c="the patient" 15:11 15:12||t="coref person"||c="the patient" 16:3 16:4
+c="the patient" 16:3 16:4||t="coref person"||c="her" 16:11 16:11
+c="her" 16:11 16:11||t="coref person"||c="her" 17:2 17:2
+c="her" 17:2 17:2||t="coref person"||c="her" 17:6 17:6
+c="he" 16:0 16:0||t="coref person"||c="he" 17:14 17:14
+c="her" 17:6 17:6||t="coref person"||c="her" 17:16 17:16
+c="he" 17:14 17:14||t="coref person"||c="he" 18:0 18:0
+c="her" 17:16 17:16||t="coref person"||c="the patient" 18:3 18:4
+c="he" 18:0 18:0||t="coref person"||c="he" 19:0 19:0
+c="the patient" 18:3 18:4||t="coref person"||c="the patient" 19:2 19:3
+c="the patient" 19:2 19:3||t="coref person"||c="her" 19:12 19:12
+c="her" 19:12 19:12||t="coref person"||c="her" 19:27 19:27
+c="her" 19:27 19:27||t="coref person"||c="the patient" 20:0 20:1
+c="dr. **name[uuu]" 20:9 20:10||t="coref person"||c="his" 20:15 20:15
+c="the patient" 20:0 20:1||t="coref person"||c="her" 21:1 21:1
+c="her" 21:1 21:1||t="coref person"||c="the patient" 21:7 21:8
+c="the patient" 21:7 21:8||t="coref person"||c="she" 22:3 22:3
+c="she" 22:3 22:3||t="coref person"||c="her" 23:0 23:0
+c="her" 23:0 23:0||t="coref person"||c="her" 24:0 24:0
+c="her" 24:0 24:0||t="coref person"||c="her" 25:0 25:0
+c="her" 25:0 25:0||t="coref person"||c="her" 26:0 26:0
+c="her" 26:0 26:0||t="coref person"||c="her" 26:10 26:10
+c="mrsa" 26:15 26:15||t="coref all"||c="which" 26:16 26:16
+c="her" 26:10 26:10||t="coref person"||c="the patient" 27:0 27:1
+c="the patient" 27:0 27:1||t="coref person"||c="the patient" 39:4 39:5
+c="recurrent soft tissue abscess in the gluteal region" 5:1 5:8||t="coref problem"||c="multiple abscesses in her gluteal region" 14:18 14:23
+c="methicillin - resistant staphylococcus aureus" 15:41 15:45||t="coref problem"||c="mrsa" 26:15 26:15
+c="mrsa" 15:20 15:20||t="coref problem"||c="methicillin - resistant staphylococcus aureus" 15:41 15:45
+c="multiple abscesses in her gluteal region" 14:18 14:23||t="coref problem"||c="tissue abscesses" 15:17 15:18
+c="methicillin - resistant staphylococcus aureus" 5:10 5:14||t="coref problem"||c="mrsa" 15:20 15:20
+c="which" 26:16 26:16||t="coref problem"||c="organism" 28:2 28:2
+c="organism" 28:2 28:2||t="coref problem"||c="methicillin - resistant staphylococcus aureus infection" 28:4 28:9
