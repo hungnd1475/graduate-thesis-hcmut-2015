@@ -17,4 +17,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Temporary files
 ~$*
+*.tmp
