@@ -1,0 +1,27 @@
+c="dr. ausguall" 62:22 62:23||t="coref person"||c="dr. ausguall" 68:5 68:6
+c="dr. ausguall" 68:5 68:6||t="coref person"||c="wilftam ausguall , m.d." 73:0 73:3
+c="the patient" 65:0 65:1||t="coref person"||c="her" 66:3 66:3
+c="left axillary node dissection" 22:4 22:7||t="coref treatment"||c="a left axillary lymph nodes dissection" 62:14 62:19
+c="her jp" 66:3 66:4||t="coref treatment"||c="the jp drain" 68:16 68:18
+c="she" 20:0 20:0||t="coref person"||c="she" 22:0 22:0
+c="she" 23:0 23:0||t="coref person"||c="her" 25:2 25:2
+c="a wide resection" 20:2 20:4||t="coref treatment"||c="this resection" 21:2 21:3
+c="dr. ausguall" 20:11 20:12||t="coref person"||c="dr. ausguall" 62:22 62:23
+c="her" 66:3 66:3||t="coref person"||c="patient" 68:0 68:0
+c="her" 40:0 40:0||t="coref person"||c="she" 40:6 40:6
+c="patient" 19:0 19:0||t="coref person"||c="who" 19:10 19:10
+c="she" 40:6 40:6||t="coref person"||c="the patient" 62:0 62:1
+c="breast carcinoma" 17:7 17:8||t="coref problem"||c="a breast carcinoma" 19:19 19:21
+c="the patient" 62:0 62:1||t="coref person"||c="the patient" 63:0 63:1
+c="she" 22:0 22:0||t="coref person"||c="her" 22:11 22:11
+c="her" 25:2 25:2||t="coref person"||c="she" 35:7 35:7
+c="she" 35:7 35:7||t="coref person"||c="patient" 39:0 39:0
+c="patient" 39:0 39:0||t="coref person"||c="her" 40:0 40:0
+c="she" 19:24 19:24||t="coref person"||c="she" 20:0 20:0
+c="a left axillary lymph nodes dissection" 62:14 62:19||t="coref treatment"||c="the procedure" 63:3 63:4
+c="wilftam ausguall , m.d." 73:0 73:3||t="coref person"||c="dr. ausguall" 81:0 81:1
+c="left axillary node dissection" 17:0 17:3||t="coref treatment"||c="left axillary node dissection" 22:4 22:7
+c="her" 22:11 22:11||t="coref person"||c="she" 23:0 23:0
+c="who" 19:10 19:10||t="coref person"||c="she" 19:24 19:24
+c="the patient" 63:0 63:1||t="coref person"||c="the patient" 65:0 65:1
+c="a breast carcinoma" 19:19 19:21||t="coref problem"||c="a grade iii / iii infiltrating ductal carcinoma" 21:5 21:12

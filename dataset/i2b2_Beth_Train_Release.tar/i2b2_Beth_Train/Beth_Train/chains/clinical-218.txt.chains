@@ -1,0 +1,8 @@
+c="the triplet #3" 12:3 12:5||c="this" 20:0 20:0||c="triplet #3" 20:1 20:2||c="he" 22:0 22:0||c="he" 43:0 43:0||c="his" 43:13 43:13||c="he" 44:0 44:0||c="his" 50:0 50:0||c="he" 51:6 51:6||c="his" 54:0 54:0||c="he" 55:0 55:0||c="he" 73:13 73:13||c="triplet #3" 83:1 83:2||t="coref person"
+c="the mother" 15:0 15:1||c="she" 16:0 16:0||c="she" 17:0 17:0||t="coref person"
+c="treatment" 53:5 53:5||c="phototherapy" 53:10 53:10||c="phototherapy" 55:2 55:2||t="coref treatment"
+c="prematurity" 22:12 22:12||c="prematurity at 34 weeks gestation" 82:1 82:5||t="coref problem"
+c="murmur" 33:10 33:10||c="murmurs" 46:1 46:1||t="coref problem"
+c="unconjungated hyperbilirubinemia" 53:7 53:8||c="unconjugated hyperbilirubinemia" 84:1 84:2||t="coref problem"
+c="medications" 68:1 68:1||c="ferrous sulfate" 68:3 68:4||t="coref treatment"
+c="chronic lung disease" 77:2 77:4||c="chronic lung disease" 78:13 78:15||t="coref problem"

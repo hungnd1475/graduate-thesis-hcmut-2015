@@ -1,0 +1,3 @@
+c="savd" 5:0 5:0||c="savd" 38:7 38:7||c="savd" 41:0 41:0||t="coref treatment"
+c="attending" 24:0 24:0||c="douetlepsgiss , valeto , m.d." 25:0 25:4||c="douetlepsgiss , valeto , m.d." 56:0 56:4||t="coref person"
+c="boormkaysscaje , pa a." 13:0 13:3||c="patient" 18:1 18:1||t="coref person"

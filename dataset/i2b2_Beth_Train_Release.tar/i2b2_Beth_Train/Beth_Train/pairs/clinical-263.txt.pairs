@@ -1,0 +1,166 @@
+c="his only family member" 36:0 36:3||t="coref person"||c="a niece" 36:5 36:6
+c="his pcp" 110:15 110:16||t="coref person"||c="his pcp" 133:13 133:14
+c="his cardiologist" 98:5 98:6||t="coref person"||c="his cardiologist" 134:16 134:17
+c="who" 10:28 10:28||t="coref person"||c="his" 10:31 10:31
+c="he" 11:0 11:0||t="coref person"||c="he" 13:5 13:5
+c="he" 13:5 13:5||t="coref person"||c="he" 13:18 13:18
+c="cardiac catheterization" 17:16 17:17||t="coref test"||c="which" 17:18 17:18
+c="a long lad lesion" 17:20 17:23||t="coref problem"||c="that" 17:24 17:24
+c="he" 17:6 17:6||t="coref person"||c="he" 18:0 18:0
+c="he" 31:0 31:0||t="coref person"||c="he" 32:0 32:0
+c="he" 34:0 34:0||t="coref person"||c="he" 35:0 35:0
+c="he" 35:0 35:0||t="coref person"||c="his" 36:0 36:0
+c="he" 37:0 37:0||t="coref person"||c="he" 38:0 38:0
+c="he" 38:0 38:0||t="coref person"||c="he" 39:0 39:0
+c="he" 39:0 39:0||t="coref person"||c="the patient" 43:0 43:1
+c="the patient" 43:0 43:1||t="coref person"||c="he" 55:0 55:0
+c="his" 65:0 65:0||t="coref person"||c="he" 68:0 68:0
+c="he" 72:0 72:0||t="coref person"||c="he" 74:0 74:0
+c="he" 79:0 79:0||t="coref person"||c="he" 81:0 81:0
+c="an 80 percent lad lesion" 84:10 84:14||t="coref problem"||c="which" 84:17 84:17
+c="he" 81:0 81:0||t="coref person"||c="he" 86:23 86:23
+c="he" 86:23 86:23||t="coref person"||c="this" 88:0 88:0
+c="he" 92:0 92:0||t="coref person"||c="his" 93:6 93:6
+c="he" 94:0 94:0||t="coref person"||c="he" 96:0 96:0
+c="he" 100:8 100:8||t="coref person"||c="he" 101:0 101:0
+c="he" 102:0 102:0||t="coref person"||c="his" 102:4 102:4
+c="he" 104:0 104:0||t="coref person"||c="his" 105:0 105:0
+c="his" 105:0 105:0||t="coref person"||c="his" 105:10 105:10
+c="his creatinine" 105:10 105:11||t="coref test"||c="this" 106:2 106:2
+c="his" 105:10 105:10||t="coref person"||c="his" 106:8 106:8
+c="his" 106:8 106:8||t="coref person"||c="he" 107:0 107:0
+c="his" 107:6 107:6||t="coref person"||c="his" 107:16 107:16
+c="his" 107:16 107:16||t="coref person"||c="his" 109:0 109:0
+c="his" 109:34 109:34||t="coref person"||c="him" 110:6 110:6
+c="he" 130:0 130:0||t="coref person"||c="he" 132:0 132:0
+c="he" 132:0 132:0||t="coref person"||c="him" 133:4 133:4
+c="his" 133:13 133:13||t="coref person"||c="he" 134:0 134:0
+c="a non-st elevation mi" 13:22 13:25||t="coref problem"||c="a non-st elevation mi" 88:33 88:36
+c="copd" 88:21 88:21||t="coref problem"||c="copd" 100:5 100:5
+c="a swan" 20:0 20:1||t="coref treatment"||c="a swan" 70:14 70:15
+c="pain-free" 14:14 14:14||t="coref problem"||c="pain-free" 22:15 22:15
+c="ptca" 88:55 88:55||t="coref treatment"||c="angioplasty" 91:24 91:24
+c="the catheterization" 21:8 21:9||t="coref test"||c="catheterization" 80:5 80:5
+c="hematocrit drop" 93:16 93:17||t="coref problem"||c="a slight drop in his hematocrit" 109:30 109:35
+c="gi bleed" 109:19 109:20||t="coref problem"||c="gi bleed" 111:14 111:15
+c="home 02" 25:6 25:7||t="coref treatment"||c="02" 100:15 100:15
+c="chronic renal insufficiency" 10:18 10:20||t="coref problem"||c="chronic renal insufficiency" 27:0 27:2
+c="a tia" 10:26 10:27||t="coref problem"||c="tia" 24:0 24:0
+c="cardiac catheterization" 84:0 84:1||t="coref test"||c="the right heart catheterization" 86:0 86:3
+c="bradycardiac" 18:5 18:5||t="coref problem"||c="bradycardia" 88:64 88:64
+c="cardiac catheterization" 16:9 16:10||t="coref test"||c="cardiac catheterization" 17:16 17:17
+c="tia" 24:0 24:0||t="coref problem"||c="tia" 88:26 88:26
+c="angioplasty" 91:24 91:24||t="coref treatment"||c="angioplasty" 114:20 114:20
+c="aspirin" 45:1 45:1||t="coref treatment"||c="aspirin" 92:5 92:5
+c="which" 84:17 84:17||t="coref problem"||c="mid lad lesion" 88:57 88:59
+c="aspirin" 92:5 92:5||t="coref treatment"||c="his aspirin" 112:4 112:5
+c="his ace inhibitor" 106:8 106:10||t="coref treatment"||c="his ace inhibitor" 107:16 107:18
+c="a creatinine" 104:16 104:17||t="coref test"||c="his creatinine" 105:10 105:11
+c="his ace inhibitor" 105:0 105:2||t="coref treatment"||c="his ace inhibitor" 106:8 106:10
+c="an old right bundle branch block" 79:10 79:15||t="coref problem"||c="an underlying right bundle branch block" 97:8 97:13
+c="plavix" 92:7 92:7||t="coref treatment"||c="his plavix" 93:6 93:7
+c="copd" 25:0 25:0||t="coref problem"||c="copd" 88:21 88:21
+c="a total occlusion of the rca" 17:32 17:37||t="coref problem"||c="a totally occluded rca" 84:3 84:6
+c="an effusion" 19:15 19:16||t="coref problem"||c="effusion" 82:5 82:5
+c="hypertension" 10:12 10:12||t="coref problem"||c="hypertension" 88:15 88:15
+c="the symptoms" 12:0 12:1||t="coref problem"||c="similar symptoms" 15:5 15:6
+c="the right heart catheterization" 86:0 86:3||t="coref test"||c="cardiac catheterization" 88:52 88:53
+c="the initial ekg" 78:0 78:2||t="coref test"||c="the ekg" 80:0 80:1
+c="stent placement" 17:28 17:29||t="coref treatment"||c="stents" 21:3 21:3
+c="cardiac catheterization" 88:52 88:53||t="coref test"||c="catheterization" 111:30 111:30
+c="which" 100:7 100:7||t="coref problem"||c="chronic obstructive pulmonary disease" 117:0 117:3
+c="chronic renal insufficiency" 104:5 104:7||t="coref problem"||c="chronic renal insufficiency" 116:0 116:2
+c="guaiac positive stools" 109:23 109:25||t="coref problem"||c="guaiac positive stools" 118:0 118:2
+c="ptca" 80:10 80:10||t="coref treatment"||c="ptca" 88:55 88:55
+c="which" 91:21 91:21||t="coref problem"||c="80 percent mid lad lesion" 114:11 114:15
+c="his" 62:0 62:0||t="coref person"||c="he" 63:0 63:0
+c="he" 14:0 14:0||t="coref person"||c="he" 15:0 15:0
+c="he" 55:0 55:0||t="coref person"||c="he" 58:0 58:0
+c="guaiac positive" 109:6 109:7||t="coref problem"||c="guaiac positive stools" 109:23 109:25
+c="an 80 percent mid lad lesion" 91:14 91:19||t="coref problem"||c="which" 91:21 91:21
+c="the patient" 10:0 10:1||t="coref person"||c="who" 10:28 10:28
+c="this" 106:2 106:2||t="coref test"||c="his creatinine" 107:6 107:7
+c="a non-st elevation mi" 91:7 91:10||t="coref problem"||c="mi" 105:4 105:4
+c="him" 133:4 133:4||t="coref person"||c="his" 133:13 133:13
+c="dopamine" 18:16 18:16||t="coref treatment"||c="transient dopamine" 88:71 88:72
+c="he" 91:22 91:22||t="coref person"||c="he" 92:0 92:0
+c="metoprolol" 46:1 46:1||t="coref treatment"||c="beta blocker" 92:9 92:10
+c="first-degree av block" 78:19 78:21||t="coref problem"||c="first-degree av block" 97:15 97:17
+c="catheterization" 80:5 80:5||t="coref test"||c="cardiac catheterization" 84:0 84:1
+c="hypertension" 104:11 104:11||t="coref problem"||c="hypertension" 115:0 115:0
+c="he" 22:3 22:3||t="coref person"||c="he" 22:7 22:7
+c="a right groin a line" 53:10 53:14||t="coref treatment"||c="a right groin a line" 70:2 70:6
+c="he" 10:43 10:43||t="coref person"||c="he" 11:0 11:0
+c="iv fluids" 18:13 18:14||t="coref treatment"||c="iv fluids" 88:68 88:69
+c="the patient" 16:0 16:1||t="coref person"||c="he" 17:6 17:6
+c="stent placement" 91:26 91:27||t="coref treatment"||c="a stent" 111:23 111:24
+c="his aspirin" 112:4 112:5||t="coref treatment"||c="aspirin" 124:1 124:1
+c="his plavix" 93:6 93:7||t="coref treatment"||c="his plavix" 111:0 111:1
+c="lipitor" 47:1 47:1||t="coref treatment"||c="statin" 92:12 92:12
+c="copd" 100:5 100:5||t="coref problem"||c="which" 100:7 100:7
+c="his" 111:0 111:0||t="coref person"||c="he" 112:0 112:0
+c="mid lad lesion" 88:57 88:59||t="coref problem"||c="an 80 percent mid lad lesion" 91:14 91:19
+c="he" 98:0 98:0||t="coref person"||c="his" 98:5 98:5
+c="his" 102:9 102:9||t="coref person"||c="he" 104:0 104:0
+c="that" 17:24 17:24||t="coref problem"||c="an 80 percent lad lesion" 84:10 84:14
+c="his" 112:4 112:4||t="coref person"||c="the patient" 128:6 128:7
+c="he" 18:0 18:0||t="coref person"||c="he" 18:21 18:21
+c="this" 88:0 88:0||t="coref person"||c="who" 88:27 88:27
+c="flovent mdi" 101:4 101:5||t="coref treatment"||c="flovent" 123:1 123:1
+c="he" 107:0 107:0||t="coref person"||c="his" 107:6 107:6
+c="stent" 84:22 84:22||t="coref treatment"||c="stent placement" 91:26 91:27
+c="integrelin" 14:11 14:11||t="coref treatment"||c="integrelin drip" 50:1 50:2
+c="he" 33:0 33:0||t="coref person"||c="he" 34:0 34:0
+c="his ace inhibitor" 107:16 107:18||t="coref treatment"||c="lisinopril" 122:1 122:1
+c="his" 97:3 97:3||t="coref person"||c="he" 97:6 97:6
+c="him" 110:6 110:6||t="coref person"||c="his" 110:15 110:15
+c="gastritis" 28:0 28:0||t="coref problem"||c="gastritis" 88:23 88:23
+c="he" 68:0 68:0||t="coref person"||c="he" 71:0 71:0
+c="he" 128:14 128:14||t="coref person"||c="he" 130:0 130:0
+c="hypotensive" 18:3 18:3||t="coref problem"||c="hypotension" 88:62 88:62
+c="he" 63:0 63:0||t="coref person"||c="his" 65:0 65:0
+c="he" 13:18 13:18||t="coref person"||c="he" 14:0 14:0
+c="he" 15:0 15:0||t="coref person"||c="the patient" 16:0 16:1
+c="which" 17:18 17:18||t="coref test"||c="the catheterization" 21:8 21:9
+c="the patient" 91:4 91:5||t="coref person"||c="he" 91:22 91:22
+c="further monitoring" 18:29 18:30||t="coref test"||c="close monitoring" 88:84 88:85
+c="he" 58:0 58:0||t="coref person"||c="his" 62:0 62:0
+c="he" 22:7 22:7||t="coref person"||c="he" 31:0 31:0
+c="ace inhibitor" 92:15 92:16||t="coref treatment"||c="his ace inhibitor" 105:0 105:2
+c="he" 19:0 19:0||t="coref person"||c="he" 22:3 22:3
+c="outpatient colonoscopy" 110:23 110:24||t="coref test"||c="colonoscopy" 133:11 133:11
+c="his" 10:31 10:31||t="coref person"||c="he" 10:43 10:43
+c="which" 81:10 81:10||t="coref test"||c="a transthoracic echocardiogram" 94:2 94:4
+c="troponin" 13:39 13:39||t="coref test"||c="that" 13:40 13:40
+c="he" 101:0 101:0||t="coref person"||c="he" 102:0 102:0
+c="his" 98:5 98:5||t="coref person"||c="he" 100:0 100:0
+c="he" 97:6 97:6||t="coref person"||c="he" 98:0 98:0
+c="stents" 21:3 21:3||t="coref treatment"||c="stent" 84:22 84:22
+c="his" 36:0 36:0||t="coref person"||c="he" 37:0 37:0
+c="he" 18:21 18:21||t="coref person"||c="he" 19:0 19:0
+c="a bedside echocardiogram" 81:2 81:4||t="coref test"||c="which" 81:10 81:10
+c="creatinine" 77:19 77:19||t="coref test"||c="a creatinine" 104:16 104:17
+c="his" 102:4 102:4||t="coref person"||c="his" 102:9 102:9
+c="the patient" 128:6 128:7||t="coref person"||c="he" 128:14 128:14
+c="he" 112:0 112:0||t="coref person"||c="his" 112:4 112:4
+c="he" 134:0 134:0||t="coref person"||c="his" 134:16 134:16
+c="mi" 105:4 105:4||t="coref problem"||c="non-st elevation myocardial infarction" 114:6 114:9
+c="who" 88:27 88:27||t="coref person"||c="the patient" 91:4 91:5
+c="his" 109:0 109:0||t="coref person"||c="his" 109:34 109:34
+c="atropine" 18:18 18:18||t="coref treatment"||c="atropine" 88:66 88:66
+c="a bedside transthoracic echocardiogram" 19:2 19:5||t="coref test"||c="a bedside echocardiogram" 81:2 81:4
+c="guaiac positive stools" 88:38 88:40||t="coref problem"||c="guaiac positive stools" 93:12 93:14
+c="statin" 92:12 92:12||t="coref treatment"||c="lipitor" 121:1 121:1
+c="he" 32:0 32:0||t="coref person"||c="he" 33:0 33:0
+c="chronic renal insufficiency" 27:0 27:2||t="coref problem"||c="chronic renal insufficiency" 88:17 88:19
+c="he" 74:0 74:0||t="coref person"||c="he" 79:0 79:0
+c="he" 100:0 100:0||t="coref person"||c="he" 100:8 100:8
+c="his" 110:15 110:15||t="coref person"||c="his" 111:0 111:0
+c="he" 96:0 96:0||t="coref person"||c="his" 97:3 97:3
+c="guaiac positive stools" 93:12 93:14||t="coref problem"||c="guaiac positive" 109:6 109:7
+c="heparin" 14:9 14:9||t="coref treatment"||c="heparin drip" 49:1 49:2
+c="his" 93:6 93:6||t="coref person"||c="he" 94:0 94:0
+c="hypertension" 88:15 88:15||t="coref problem"||c="hypertension" 104:11 104:11
+c="a non-st elevation mi" 88:33 88:36||t="coref problem"||c="a non-st elevation mi" 91:7 91:10
+c="he" 71:0 71:0||t="coref person"||c="he" 72:0 72:0
+c="chronic renal insufficiency" 88:17 88:19||t="coref problem"||c="chronic renal insufficiency" 104:5 104:7

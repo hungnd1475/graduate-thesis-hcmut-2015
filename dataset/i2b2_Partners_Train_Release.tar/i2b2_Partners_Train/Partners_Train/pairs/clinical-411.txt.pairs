@@ -1,0 +1,18 @@
+c="heent exam" 30:3 30:4||t="coref test"||c="which" 30:5 30:5
+c="her" 22:5 22:5||t="coref person"||c="her" 35:2 35:2
+c="her" 19:3 19:3||t="coref person"||c="she" 19:12 19:12
+c="she" 44:0 44:0||t="coref person"||c="the patient" 47:0 47:1
+c="right radical vulvectomy" 39:4 39:6||t="coref treatment"||c="vulvectomy" 40:1 40:1
+c="vulvar cancer" 16:0 16:1||t="coref problem"||c="squamous cell carcinoma in situ" 22:12 22:16
+c="squamous cell carcinoma in situ" 22:12 22:16||t="coref problem"||c="stage ii squamous cell carcinoma of the vulva" 37:0 37:7
+c="she" 19:12 19:12||t="coref person"||c="she" 21:0 21:0
+c="the patient" 18:0 18:1||t="coref person"||c="she" 19:0 19:0
+c="the patient" 47:0 47:1||t="coref person"||c="she" 48:0 48:0
+c="she" 43:0 43:0||t="coref person"||c="she" 44:0 44:0
+c="the patient" 41:0 41:1||t="coref person"||c="her" 42:0 42:0
+c="a tumor" 22:0 22:1||t="coref problem"||c="which" 22:7 22:7
+c="she" 21:0 21:0||t="coref person"||c="her" 22:5 22:5
+c="her" 35:2 35:2||t="coref person"||c="the patient" 41:0 41:1
+c="vulvectomy" 40:1 40:1||t="coref treatment"||c="a right radical vulvectomy" 41:5 41:8
+c="her" 42:0 42:0||t="coref person"||c="she" 43:0 43:0
+c="she" 19:0 19:0||t="coref person"||c="her" 19:3 19:3

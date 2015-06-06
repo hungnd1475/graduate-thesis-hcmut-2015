@@ -1,0 +1,4 @@
+c="pp" 38:0 38:0||c="pp" 39:11 39:11||c="pp" 40:13 40:13||t="coref problem"
+c="crassbelbkote , nee" 13:0 13:2||c="patient" 18:1 18:1||t="coref person"
+c="attending" 24:0 24:0||c="giengpratlshuff , quasarzell katechel , m.d. , ph.d." 25:0 25:7||t="coref person"
+c="pps" 38:2 38:2||c="pps" 46:0 46:0||t="coref problem"

@@ -1,0 +1,5 @@
+c="attending" 24:0 24:0||c="houghtbreun , tesant e. , m.d." 25:0 25:5||c="houghtbreun" 35:0 35:0||c="houghtbreun , tesant e." 70:0 70:3||t="coref person"
+c="pain" 29:9 29:9||c="pain" 29:27 29:27||c="pain" 29:47 29:47||t="coref problem"
+c="koterostreukote , aro ma o." 13:0 13:4||c="patient" 18:1 18:1||t="coref person"
+c="constipation" 29:20 29:20||c="constipation" 29:40 29:40||t="coref problem"
+c="iup" 39:7 39:7||c="iup" 41:10 41:10||t="coref problem"

@@ -1,0 +1,50 @@
+c="the patient" 42:0 42:1||t="coref person"||c="her" 44:0 44:0
+c="she" 60:0 60:0||t="coref person"||c="her" 62:0 62:0
+c="her" 62:0 62:0||t="coref person"||c="the patient" 66:0 66:1
+c="she" 69:3 69:3||t="coref person"||c="she" 69:12 69:12
+c="parkinson &apos;s disease" 20:1 20:3||t="coref problem"||c="parkinson &apos;s disease" 27:12 27:14
+c="dr. aalv manual" 28:7 28:9||t="coref person"||c="dr. aalv lorjes salv manual pasi" 79:0 79:5
+c="her electrocardiogram" 30:0 30:1||t="coref test"||c="her electrocardiogram" 62:0 62:1
+c="acute myocardial infarction" 6:0 6:2||t="coref problem"||c="acute myocardial infarction" 16:0 16:2
+c="percutaneous transluminal coronary angioplasty" 22:1 22:4||t="coref treatment"||c="coronary angioplasty" 42:14 42:15
+c="acute myocardial infarction" 16:0 16:2||t="coref problem"||c="a revolving anterolateral wall myocardial infarction" 27:28 27:33
+c="balloon angioplasty" 70:1 70:2||t="coref treatment"||c="coronary angioplasty" 70:26 70:27
+c="coronary angiogram" 23:2 23:3||t="coref test"||c="a relook coronary angiography" 73:18 73:21
+c="she" 75:11 75:11||t="coref person"||c="the patient" 76:0 76:1
+c="the patient" 76:0 76:1||t="coref person"||c="she" 77:0 77:0
+c="her" 30:0 30:0||t="coref person"||c="the patient" 31:0 31:1
+c="she" 36:0 36:0||t="coref person"||c="the patient" 42:0 42:1
+c="percutaneous transluminal coronary angioplasty of the proximal left anterior descending" 69:14 69:23||t="coref treatment"||c="balloon angioplasty" 70:1 70:2
+c="her" 48:0 48:0||t="coref person"||c="her" 50:0 50:0
+c="the patient" 72:0 72:1||t="coref person"||c="she" 73:0 73:0
+c="the patient" 27:0 27:1||t="coref person"||c="who" 27:20 27:20
+c="her" 46:0 46:0||t="coref person"||c="her" 48:0 48:0
+c="coronary atherectomy of the left anterior descending" 22:6 22:12||t="coref treatment"||c="directional coronary atherectomy" 71:2 71:4
+c="coronary artery disease" 18:1 18:3||t="coref problem"||c="coronary artery disease" 44:4 44:6
+c="a relook coronary angiography" 73:18 73:21||t="coref test"||c="coronary angiography" 74:0 74:1
+c="the patient" 66:0 66:1||t="coref person"||c="the patient" 67:0 67:1
+c="she" 73:0 73:0||t="coref person"||c="she" 75:11 75:11
+c="her" 29:10 29:10||t="coref person"||c="her" 30:0 30:0
+c="coronary angioplasty" 42:14 42:15||t="coref treatment"||c="percutaneous transluminal coronary angioplasty of the proximal left anterior descending" 69:14 69:23
+c="she" 29:0 29:0||t="coref person"||c="her" 29:10 29:10
+c="who" 27:20 27:20||t="coref person"||c="she" 28:0 28:0
+c="her" 32:0 32:0||t="coref person"||c="she" 33:5 33:5
+c="she" 34:0 34:0||t="coref person"||c="she" 35:0 35:0
+c="intravenous heparin" 68:5 68:6||t="coref treatment"||c="intravenous heparin" 73:4 73:5
+c="she" 57:0 57:0||t="coref person"||c="she" 60:0 60:0
+c="directional coronary atherectomy" 71:2 71:4||t="coref treatment"||c="the initial coronary atherectomy" 74:6 74:9
+c="she" 35:0 35:0||t="coref person"||c="she" 36:0 36:0
+c="a revolving anterolateral wall myocardial infarction" 27:28 27:33||t="coref problem"||c="a myocardial infarction" 32:9 32:11
+c="the patient" 68:0 68:1||t="coref person"||c="she" 69:3 69:3
+c="the patient" 67:0 67:1||t="coref person"||c="the patient" 68:0 68:1
+c="her" 44:0 44:0||t="coref person"||c="her" 46:0 46:0
+c="she" 33:5 33:5||t="coref person"||c="she" 34:0 34:0
+c="she" 28:0 28:0||t="coref person"||c="she" 29:0 29:0
+c="parkinson &apos;s disease" 46:10 46:12||t="coref problem"||c="parkinson &apos;s disease" 67:15 67:17
+c="intraluminal thrombus" 38:16 38:17||t="coref problem"||c="intraluminal thrombus" 70:12 70:13
+c="the patient" 31:0 31:1||t="coref person"||c="her" 32:0 32:0
+c="the initial coronary atherectomy" 74:6 74:9||t="coref treatment"||c="directional atherectomy" 75:14 75:15
+c="parkinson &apos;s disease" 27:12 27:14||t="coref problem"||c="parkinson &apos;s disease" 46:10 46:12
+c="her" 50:0 50:0||t="coref person"||c="she" 57:0 57:0
+c="a myocardial infarction" 32:9 32:11||t="coref problem"||c="lateral myocardial infarction" 63:9 63:11
+c="she" 69:12 69:12||t="coref person"||c="the patient" 72:0 72:1

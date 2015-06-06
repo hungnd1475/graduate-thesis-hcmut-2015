@@ -1,0 +1,8 @@
+c="baby girl kathryn frazier" 13:0 13:3||c="the infant" 25:0 25:1||c="infant" 29:0 29:0||c="she" 47:0 47:0||c="she" 48:0 48:0||c="she" 56:10 56:10||c="she" 57:0 57:0||t="coref person"
+c="the mother" 15:0 15:1||c="mother" 18:0 18:0||c="mother" 24:0 24:0||t="coref person"
+c="birth weight" 14:0 14:1||c="birth weight" 28:2 28:3||t="coref test"
+c="increasing respiratory distress" 46:2 46:4||c="respiratory distress syndrome" 92:1 92:3||t="coref problem"
+c="special care formula" 56:20 56:22||c="special care formula" 57:7 57:9||t="coref treatment"
+c="phototherapy" 62:1 62:1||c="phototherapy" 63:0 63:0||t="coref treatment"
+c="sepsis" 69:10 69:10||c="perinatal sepsis" 94:1 94:2||t="coref problem"
+c="pediatrician" 80:0 80:0||c="dr. manuel burke" 81:0 81:2||t="coref person"

@@ -1,0 +1,5 @@
+c="cesarean" 5:3 5:3||c="cesarean" 37:3 37:3||c="cesarean" 38:14 38:14||c="cesarean" 39:16 39:16||t="coref treatment"
+c="stenobe , landem" 13:0 13:2||c="patient" 18:1 18:1||c="your" 35:0 35:0||t="coref person"
+c="attending" 24:0 24:0||c="clozplu , a a , m.d." 25:0 25:5||c="your obstetrician" 35:0 35:1||t="coref person"
+c="percocet" 29:24 29:24||c="percocet" 78:43 78:43||t="coref treatment"
+c="obstetrician" 52:2 52:2||c="clozplu , a a , m.d." 53:0 53:5||t="coref person"

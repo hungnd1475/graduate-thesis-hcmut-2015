@@ -1,0 +1,95 @@
+c="dr. doll grendbly" 103:12 103:14||t="coref person"||c="doll mao grendbly , m.d." 114:18 114:22
+c="he" 32:0 32:0||t="coref person"||c="his" 33:1 33:1
+c="he" 33:4 33:4||t="coref person"||c="his" 33:12 33:12
+c="his" 33:23 33:23||t="coref person"||c="he" 34:0 34:0
+c="his" 35:0 35:0||t="coref person"||c="he" 35:5 35:5
+c="his" 43:17 43:17||t="coref person"||c="his" 44:0 44:0
+c="his" 44:0 44:0||t="coref person"||c="his" 45:0 45:0
+c="his" 61:0 61:0||t="coref person"||c="his" 62:0 62:0
+c="his" 64:0 64:0||t="coref person"||c="he" 64:9 64:9
+c="he" 64:9 64:9||t="coref person"||c="his" 64:18 64:18
+c="his" 70:0 70:0||t="coref person"||c="he" 71:0 71:0
+c="hemodynamic changes" 80:4 80:5||t="coref problem"||c="which" 80:6 80:6
+c="he" 81:0 81:0||t="coref person"||c="the patient" 84:9 84:10
+c="his" 85:10 85:10||t="coref person"||c="his" 88:2 88:2
+c="he" 88:27 88:27||t="coref person"||c="his" 89:0 89:0
+c="he" 89:10 89:10||t="coref person"||c="his" 90:17 90:17
+c="his" 90:31 90:31||t="coref person"||c="the patient" 91:20 91:21
+c="the patient" 91:20 91:21||t="coref person"||c="his" 91:23 91:23
+c="his" 92:15 92:15||t="coref person"||c="his" 92:39 92:39
+c="his" 92:39 92:39||t="coref person"||c="he" 93:0 93:0
+c="he" 93:0 93:0||t="coref person"||c="his" 93:19 93:19
+c="he" 93:24 93:24||t="coref person"||c="his" 93:33 93:33
+c="his" 95:47 95:47||t="coref person"||c="his" 96:4 96:4
+c="his" 97:7 97:7||t="coref person"||c="his" 97:21 97:21
+c="he" 99:13 99:13||t="coref person"||c="his" 100:4 100:4
+c="his" 100:4 100:4||t="coref person"||c="his" 100:12 100:12
+c="his" 100:12 100:12||t="coref person"||c="his" 100:19 100:19
+c="cervical myelopathy" 31:10 31:11||t="coref problem"||c="myelopathy" 32:12 32:12
+c="right middle cerebral artery infarct" 6:0 6:4||t="coref problem"||c="right middle cerebral artery infarct" 21:0 21:4
+c="his" 100:29 100:29||t="coref person"||c="he" 101:3 101:3
+c="he" 35:5 35:5||t="coref person"||c="older , black gentleman" 43:3 43:6
+c="he" 48:0 48:0||t="coref person"||c="he" 49:0 49:0
+c="his" 90:17 90:17||t="coref person"||c="his" 90:31 90:31
+c="a perfusion , diffusion mr study" 98:4 98:9||t="coref test"||c="which" 98:13 98:13
+c="neurovascular doppler studies" 79:2 79:4||t="coref test"||c="which" 79:5 79:5
+c="he" 85:0 85:0||t="coref person"||c="his" 85:10 85:10
+c="the management of po intake" 95:12 95:16||t="coref treatment"||c="which" 95:17 95:17
+c="he" 88:18 88:18||t="coref person"||c="he" 88:27 88:27
+c="he" 34:0 34:0||t="coref person"||c="his" 35:0 35:0
+c="his" 96:4 96:4||t="coref person"||c="he" 96:18 96:18
+c="he" 68:0 68:0||t="coref person"||c="his" 70:0 70:0
+c="several repeat imaging studies" 97:2 97:5||t="coref test"||c="which" 97:12 97:12
+c="his" 33:1 33:1||t="coref person"||c="he" 33:4 33:4
+c="his" 64:18 64:18||t="coref person"||c="his" 64:25 64:25
+c="he" 56:0 56:0||t="coref person"||c="he" 60:0 60:0
+c="his" 60:9 60:9||t="coref person"||c="his" 60:16 60:16
+c="patient" 31:0 31:0||t="coref person"||c="who" 31:13 31:13
+c="he" 53:0 53:0||t="coref person"||c="he" 55:0 55:0
+c="hypertensive therapy" 88:29 88:30||t="coref treatment"||c="hypertensive therapy" 99:21 99:22
+c="mri" 27:0 27:0||t="coref test"||c="mri" 87:0 87:0
+c="his" 45:0 45:0||t="coref person"||c="he" 48:0 48:0
+c="he" 98:2 98:2||t="coref person"||c="he" 99:0 99:0
+c="older , black gentleman" 43:3 43:6||t="coref person"||c="his" 43:17 43:17
+c="a severe headache" 96:13 96:15||t="coref problem"||c="this" 96:21 96:21
+c="bethtatcha w r new , m.d." 104:0 104:5||t="coref person"||c="bethtatcha w r nique douetmones , iii , m.d. stat" 114:23 114:32
+c="his" 64:25 64:25||t="coref person"||c="he" 65:0 65:0
+c="his" 92:7 92:7||t="coref person"||c="his" 92:15 92:15
+c="his" 93:19 93:19||t="coref person"||c="he" 93:24 93:24
+c="he" 55:0 55:0||t="coref person"||c="he" 56:0 56:0
+c="he" 101:3 101:3||t="coref person"||c="he" 102:0 102:0
+c="his" 62:0 62:0||t="coref person"||c="his" 64:0 64:0
+c="he" 50:0 50:0||t="coref person"||c="he" 53:0 53:0
+c="his" 100:19 100:19||t="coref person"||c="his" 100:29 100:29
+c="his" 91:23 91:23||t="coref person"||c="his" 91:43 91:43
+c="his" 88:2 88:2||t="coref person"||c="his" 88:8 88:8
+c="he" 79:0 79:0||t="coref person"||c="he" 81:0 81:0
+c="he" 95:22 95:22||t="coref person"||c="his" 95:35 95:35
+c="his" 89:0 89:0||t="coref person"||c="he" 89:10 89:10
+c="he" 94:8 94:8||t="coref person"||c="he" 95:0 95:0
+c="his" 94:4 94:4||t="coref person"||c="he" 94:8 94:8
+c="his" 95:35 95:35||t="coref person"||c="his" 95:47 95:47
+c="mr. finger" 78:0 78:1||t="coref person"||c="his" 78:13 78:13
+c="his" 65:5 65:5||t="coref person"||c="he" 67:0 67:0
+c="his" 91:43 91:43||t="coref person"||c="his" 92:7 92:7
+c="he" 96:18 96:18||t="coref person"||c="he" 97:0 97:0
+c="his" 33:12 33:12||t="coref person"||c="his" 33:23 33:23
+c="he" 65:0 65:0||t="coref person"||c="his" 65:5 65:5
+c="mra" 27:2 27:2||t="coref test"||c="mra" 87:2 87:2
+c="who" 31:13 31:13||t="coref person"||c="he" 32:0 32:0
+c="tvi shanel washing , m.d , phd ." 106:0 106:7||t="coref person"||c="tvi shanel washing , m.d. , ph.d." 114:11 114:17
+c="he" 71:0 71:0||t="coref person"||c="mr. finger" 78:0 78:1
+c="the patient" 84:9 84:10||t="coref person"||c="he" 85:0 85:0
+c="urinary tract infection" 23:0 23:2||t="coref problem"||c="urinary tract infection" 25:0 25:2
+c="his" 97:21 97:21||t="coref person"||c="he" 98:2 98:2
+c="he" 49:0 49:0||t="coref person"||c="he" 50:0 50:0
+c="his family" 91:23 91:24||t="coref person"||c="who" 91:26 91:26
+c="he" 99:0 99:0||t="coref person"||c="he" 99:13 99:13
+c="his" 88:8 88:8||t="coref person"||c="he" 88:18 88:18
+c="he" 95:0 95:0||t="coref person"||c="he" 95:22 95:22
+c="he" 67:0 67:0||t="coref person"||c="he" 68:0 68:0
+c="his" 93:33 93:33||t="coref person"||c="his" 94:4 94:4
+c="his" 78:13 78:13||t="coref person"||c="he" 79:0 79:0
+c="he" 60:0 60:0||t="coref person"||c="his" 60:9 60:9
+c="his" 60:16 60:16||t="coref person"||c="his" 61:0 61:0
+c="he" 97:0 97:0||t="coref person"||c="his" 97:7 97:7

@@ -1,0 +1,5 @@
+c="sepsis" 5:0 5:0||c="sepsis" 37:0 37:0||c="sepsis" 38:11 38:11||t="coref problem"
+c="ards" 5:5 5:5||c="ards" 37:2 37:2||c="ards" 38:16 38:16||t="coref problem"
+c="pneumonia" 5:7 5:7||c="pneumonia" 37:4 37:4||c="pneumonia" 38:18 38:18||t="coref problem"
+c="trosprob , styees" 13:0 13:2||c="patient" 19:1 19:1||c="patient" 44:0 44:0||c="patient" 45:0 45:0||t="coref person"
+c="myocardial infarction" 5:2 5:3||c="myocardial infarction" 38:13 38:14||t="coref problem"

@@ -1,0 +1,47 @@
+c="the patient 's family" 23:2 23:5||t="coref person"||c="family" 24:12 24:12
+c="her husband" 24:9 24:10||t="coref person"||c="her husband" 39:3 39:4
+c="family" 24:12 24:12||t="coref person"||c="her family" 66:4 66:5
+c="her family" 66:4 66:5||t="coref person"||c="the family" 69:0 69:1
+c="this" 14:0 14:0||t="coref person"||c="who" 14:7 14:7
+c="she" 15:0 15:0||t="coref person"||c="her" 15:12 15:12
+c="she" 19:0 19:0||t="coref person"||c="her" 19:12 19:12
+c="she" 21:10 21:10||t="coref person"||c="the patient" 23:2 23:3
+c="the patient" 23:2 23:3||t="coref person"||c="her" 23:17 23:17
+c="her comfort care" 23:17 23:19||t="coref treatment"||c="this" 24:0 24:0
+c="her" 23:17 23:17||t="coref person"||c="her" 24:9 24:9
+c="she" 39:0 39:0||t="coref person"||c="her" 39:3 39:3
+c="her husband" 39:3 39:4||t="coref person"||c="him" 39:7 39:7
+c="she" 65:0 65:0||t="coref person"||c="her" 66:4 66:4
+c="her" 66:7 66:7||t="coref person"||c="her" 67:12 67:12
+c="atrial fibrillation" 14:12 14:13||t="coref problem"||c="atrial fibrillation" 29:1 29:2
+c="large left middle cerebral artery stroke" 12:0 12:5||t="coref problem"||c="a large left middle cerebral artery infarction" 61:3 61:9
+c="she" 20:0 20:0||t="coref person"||c="she" 20:17 20:17
+c="posterior cerebral artery distribution cerebral infarction" 21:26 21:31||t="coref problem"||c="multiple smaller posterior circulation infarctions" 61:11 61:15
+c="she" 18:0 18:0||t="coref person"||c="she" 19:0 19:0
+c="atrial emboli" 14:23 14:24||t="coref problem"||c="arterial emboli , left femoral artery" 31:1 31:6
+c="she" 20:17 20:17||t="coref person"||c="her" 21:1 21:1
+c="unresponsive" 21:13 21:13||t="coref problem"||c="unresponsive" 48:5 48:5
+c="who" 64:9 64:9||t="coref person"||c="she" 65:0 65:0
+c="a cold distal left upper extremity" 20:6 20:11||t="coref problem"||c="which" 20:12 20:12
+c="her" 66:4 66:4||t="coref person"||c="her" 66:7 66:7
+c="her" 15:12 15:12||t="coref person"||c="she" 16:0 16:0
+c="she" 17:7 17:7||t="coref person"||c="she" 18:0 18:0
+c="peripheral vascular disease" 14:15 14:17||t="coref problem"||c="peripheral vascular disease" 30:1 30:3
+c="she" 16:0 16:0||t="coref person"||c="she" 17:7 17:7
+c="this" 24:0 24:0||t="coref treatment"||c="comfort care" 25:14 25:15
+c="unresponsive" 48:5 48:5||t="coref problem"||c="unresponsive" 65:3 65:3
+c="her" 24:9 24:9||t="coref person"||c="she" 25:4 25:4
+c="her" 21:1 21:1||t="coref person"||c="she" 21:10 21:10
+c="she" 25:4 25:4||t="coref person"||c="she" 39:0 39:0
+c="multiple smaller posterior circulation infarctions" 61:11 61:15||t="coref problem"||c="multiple cardioembolic cerebral infarctions in multiple arterial territories" 64:12 64:19
+c="who" 14:25 14:25||t="coref person"||c="she" 15:0 15:0
+c="who" 14:7 14:7||t="coref person"||c="who" 14:25 14:25
+c="she" 64:2 64:2||t="coref person"||c="who" 64:9 64:9
+c="posterior cerebral artery strokes bilaterally" 12:8 12:12||t="coref problem"||c="posterior cerebral artery distribution cerebral infarction" 21:26 21:31
+c="the patient" 42:3 42:4||t="coref person"||c="the patient" 48:2 48:3
+c="the patient" 48:2 48:3||t="coref person"||c="the patient" 63:0 63:1
+c="her" 67:12 67:12||t="coref person"||c="the patient" 68:0 68:1
+c="her" 39:3 39:3||t="coref person"||c="the patient" 42:3 42:4
+c="her" 19:12 19:12||t="coref person"||c="she" 20:0 20:0
+c="the patient" 63:0 63:1||t="coref person"||c="she" 64:2 64:2
+c="her husband" 15:12 15:13||t="coref person"||c="her husband" 24:9 24:10

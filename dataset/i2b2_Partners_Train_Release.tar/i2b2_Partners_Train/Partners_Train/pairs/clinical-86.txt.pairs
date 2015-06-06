@@ -1,0 +1,46 @@
+c="the patient" 16:0 16:1||t="coref person"||c="who" 16:22 16:22
+c="the patient" 17:0 17:1||t="coref person"||c="who" 17:8 17:8
+c="his" 18:0 18:0||t="coref person"||c="he" 19:0 19:0
+c="iv antibiotics" 19:15 19:16||t="coref treatment"||c="which" 19:17 19:17
+c="he" 19:0 19:0||t="coref person"||c="he" 19:18 19:18
+c="he" 19:18 19:18||t="coref person"||c="the patient" 20:0 20:1
+c="the patient" 20:0 20:1||t="coref person"||c="he" 20:19 20:19
+c="the patient" 22:0 22:1||t="coref person"||c="he" 23:0 23:0
+c="a left arm graft" 23:2 23:5||t="coref treatment"||c="which" 23:12 23:12
+c="he" 23:0 23:0||t="coref person"||c="he" 24:0 24:0
+c="the patient" 52:0 52:1||t="coref person"||c="his" 52:5 52:5
+c="the patient" 55:0 55:1||t="coref person"||c="his" 55:5 55:5
+c="his" 55:11 55:11||t="coref person"||c="the patient" 56:0 56:1
+c="the patient" 56:0 56:1||t="coref person"||c="the patient" 59:0 59:1
+c="the patient" 59:0 59:1||t="coref person"||c="his" 59:5 59:5
+c="he" 60:0 60:0||t="coref person"||c="he" 61:0 61:0
+c="candida species" 21:5 21:6||t="coref problem"||c="candida" 50:22 50:22
+c="amphotericine" 50:5 50:5||t="coref treatment"||c="the amphotericine" 51:15 51:16
+c="pseudomonas pneumonia" 17:13 17:14||t="coref problem"||c="pseudomonal pneumonia" 19:9 19:10
+c="candida species" 16:34 16:35||t="coref problem"||c="candida species" 21:5 21:6
+c="fever" 16:26 16:26||t="coref problem"||c="fever" 20:21 20:21
+c="chills" 16:28 16:28||t="coref problem"||c="chills" 20:23 20:23
+c="g-csf" 25:45 25:45||t="coref treatment"||c="his g-csf" 55:5 55:6
+c="the passport site" 24:11 24:13||t="coref treatment"||c="the passport in his left arm" 51:0 51:5
+c="his" 27:6 27:6||t="coref person"||c="the patient" 50:0 50:1
+c="he" 24:0 24:0||t="coref person"||c="his" 27:6 27:6
+c="mai" 16:21 16:21||t="coref problem"||c="mai" 17:7 17:7
+c="three liters" 22:9 22:10||t="coref treatment"||c="three liters" 28:3 28:4
+c="his g-csf" 55:5 55:6||t="coref treatment"||c="g-csf" 58:7 58:7
+c="his" 55:5 55:5||t="coref person"||c="his" 55:11 55:11
+c="the patient" 50:0 50:1||t="coref person"||c="his" 51:3 51:3
+c="pseudomonal pneumonia" 19:9 19:10||t="coref problem"||c="pseudomonas pneumonia" 52:8 52:9
+c="his" 53:5 53:5||t="coref person"||c="the patient" 55:0 55:1
+c="he" 20:19 20:19||t="coref person"||c="the patient" 22:0 22:1
+c="which" 19:17 19:17||t="coref treatment"||c="his antibiotics" 52:5 52:6
+c="the patient" 53:0 53:1||t="coref person"||c="his" 53:5 53:5
+c="dapsone" 25:7 25:7||t="coref treatment"||c="dapsone" 58:26 58:26
+c="his" 52:5 52:5||t="coref person"||c="the patient" 53:0 53:1
+c="his" 51:3 51:3||t="coref person"||c="the patient" 52:0 52:1
+c="recurrent pseudomonas infections" 16:11 16:13||t="coref problem"||c="pseudomonas pneumonia" 17:13 17:14
+c="who" 16:22 16:22||t="coref person"||c="the patient" 17:0 17:1
+c="the amphotericine" 51:15 51:16||t="coref treatment"||c="amphotericine" 59:25 59:25
+c="blood cultures" 16:30 16:31||t="coref test"||c="concurrent blood cultures" 21:0 21:2
+c="his" 59:5 59:5||t="coref person"||c="he" 59:19 59:19
+c="he" 59:19 59:19||t="coref person"||c="he" 60:0 60:0
+c="who" 17:8 17:8||t="coref person"||c="his" 18:0 18:0

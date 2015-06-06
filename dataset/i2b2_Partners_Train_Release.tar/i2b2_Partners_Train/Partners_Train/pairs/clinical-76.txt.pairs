@@ -1,0 +1,32 @@
+c="this" 32:0 32:0||t="coref person"||c="who" 32:20 32:20
+c="the patient" 33:0 33:1||t="coref person"||c="the patient" 33:14 33:15
+c="the patient" 33:14 33:15||t="coref person"||c="he" 34:0 34:0
+c="he" 36:0 36:0||t="coref person"||c="his" 37:6 37:6
+c="the patient" 38:2 38:3||t="coref person"||c="the patient" 39:0 39:1
+c="the patient" 39:0 39:1||t="coref person"||c="he" 40:0 40:0
+c="he" 41:0 41:0||t="coref person"||c="he" 42:0 42:0
+c="he" 42:0 42:0||t="coref person"||c="his" 43:0 43:0
+c="his" 43:0 43:0||t="coref person"||c="he" 47:0 47:0
+c="cardiac catheterization" 24:2 24:3||t="coref test"||c="cardiac catheterization" 32:33 32:34
+c="thymoma" 40:20 40:20||t="coref problem"||c="the thymoma" 47:14 47:15
+c="hypothyroidism" 17:1 17:1||t="coref problem"||c="hypothyroidism" 32:19 32:19
+c="myasthenia gravis" 15:0 15:1||t="coref problem"||c="myasthenia gravis" 40:13 40:14
+c="thymoma" 32:9 32:9||t="coref problem"||c="thymoma" 40:20 40:20
+c="iv ig" 40:4 40:5||t="coref treatment"||c="iv ig" 42:6 42:7
+c="a repeat chest ct" 47:3 47:6||t="coref test"||c="which" 47:7 47:7
+c="shortness of breath" 33:3 33:5||t="coref problem"||c="shortness of breath" 36:5 36:7
+c="his" 37:6 37:6||t="coref person"||c="the patient" 38:2 38:3
+c="prednisone" 26:79 26:79||t="coref treatment"||c="p.o. prednisone" 50:5 50:6
+c="thymoma" 18:3 18:3||t="coref problem"||c="thymoma" 32:9 32:9
+c="he" 47:0 47:0||t="coref person"||c="the patient" 50:0 50:1
+c="the thymoma" 47:14 47:15||t="coref problem"||c="this" 49:0 49:0
+c="ct scan of the chest" 24:7 24:11||t="coref test"||c="a repeat chest ct" 47:3 47:6
+c="emg" 24:5 24:5||t="coref test"||c="emg studies" 46:0 46:1
+c="cardiac catheterization" 32:33 32:34||t="coref test"||c="cardiac catheterization" 35:16 35:17
+c="his" 40:16 40:16||t="coref person"||c="he" 41:0 41:0
+c="cardiac catheterization" 35:16 35:17||t="coref test"||c="which" 35:18 35:18
+c="the patient" 35:0 35:1||t="coref person"||c="he" 36:0 36:0
+c="he" 40:0 40:0||t="coref person"||c="his" 40:16 40:16
+c="who" 32:20 32:20||t="coref person"||c="the patient" 33:0 33:1
+c="mestinon" 26:71 26:71||t="coref treatment"||c="mestinon" 50:9 50:9
+c="he" 34:0 34:0||t="coref person"||c="the patient" 35:0 35:1

@@ -1,0 +1,6 @@
+c="congestive heart failure" 8:1 8:3||c="congestive heart failure" 15:30 15:32||c="congestive heart failure" 21:7 21:9||c="congestive heart failure" 29:2 29:4||t="coref problem"
+c="the patient" 15:0 15:1||c="who" 15:20 15:20||c="she" 16:0 16:0||c="she" 17:0 17:0||c="her" 17:8 17:8||c="she" 18:0 18:0||c="her" 18:9 18:9||c="she" 19:0 19:0||c="she" 20:0 20:0||c="she" 21:0 21:0||c="she" 24:4 24:4||c="the patient" 26:18 26:19||c="the patient" 28:0 28:1||c="the patient" 30:0 30:1||c="the patient" 33:0 33:1||c="the patient" 37:0 37:1||c="she" 38:0 38:0||c="she" 39:0 39:0||c="the patient" 40:0 40:1||c="she" 41:0 41:0||c="her" 41:7 41:7||c="her" 41:14 41:14||c="she" 41:18 41:18||c="she" 42:0 42:0||c="she" 43:0 43:0||c="she" 44:0 44:0||c="her" 44:4 44:4||c="the patient" 45:3 45:4||t="coref person"
+c="cesarean section" 32:18 32:19||c="primary low transverse cesarean section" 33:3 33:7||c="the cesarean section" 34:0 34:2||c="this" 35:0 35:0||c="cesarean section" 35:17 35:18||c="the surgery" 36:6 36:7||c="cesarean section" 45:13 45:14||t="coref treatment"
+c="dilated cardiomyopathy" 9:1 9:2||c="known dilated cardiomyopathy" 16:2 16:4||t="coref problem"
+c="asthma" 12:1 12:1||c="her asthma" 18:9 18:10||t="coref problem"
+c="multiple medications" 17:13 17:14||c="her medication regimen" 41:14 41:16||t="coref treatment"

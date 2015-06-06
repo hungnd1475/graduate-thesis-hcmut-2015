@@ -1,0 +1,2 @@
+c="patient" 11:0 11:0||c="he" 14:2 14:2||c="mr. minton" 15:0 15:1||c="his" 15:5 15:5||c="he" 17:0 17:0||c="his" 17:4 17:4||t="coref person"
+c="attending" 12:0 12:0||c="woodrow y williams , m.d." 12:2 12:6||t="coref person"

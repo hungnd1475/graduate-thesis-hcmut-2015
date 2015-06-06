@@ -1,0 +1,47 @@
+c="richard williams" 12:0 12:1||t="coref person"||c="twin number ii" 12:3 12:5
+c="mother" 13:0 13:0||t="coref person"||c="the mother" 14:0 14:1
+c="twin number ii" 12:3 12:5||t="coref person"||c="this infant" 18:0 18:1
+c="the infant" 48:0 48:1||t="coref person"||c="the infant" 49:8 49:9
+c="she" 51:0 51:0||t="coref person"||c="the infant" 53:7 53:8
+c="she" 54:0 54:0||t="coref person"||c="the infant" 55:0 55:1
+c="the infant" 55:0 55:1||t="coref person"||c="ralph" 55:6 55:6
+c="ralph" 55:6 55:6||t="coref person"||c="the infant" 59:0 59:1
+c="preterm infants" 73:11 73:12||t="coref person"||c="they" 73:18 73:18
+c="her parents" 59:7 59:8||t="coref person"||c="the parents" 76:4 76:5
+c="she" 28:11 28:11||t="coref person"||c="her" 29:0 29:0
+c="she" 38:0 38:0||t="coref person"||c="her" 39:6 39:6
+c="her" 39:6 39:6||t="coref person"||c="her" 39:12 39:12
+c="her" 39:12 39:12||t="coref person"||c="her" 39:22 39:22
+c="her" 39:22 39:22||t="coref person"||c="her" 41:0 41:0
+c="she" 42:0 42:0||t="coref person"||c="her" 44:0 44:0
+c="a head ultrasound" 51:2 51:4||t="coref test"||c="that" 51:8 51:8
+c="the infant" 59:0 59:1||t="coref person"||c="her" 59:7 59:7
+c="infants" 70:12 70:12||t="coref person"||c="who" 70:13 70:13
+c="the infant" 49:8 49:9||t="coref person"||c="she" 51:0 51:0
+c="she" 31:0 31:0||t="coref person"||c="she" 33:0 33:0
+c="cesarean section" 12:14 12:15||t="coref treatment"||c="cesarean section" 17:0 17:1
+c="the infant" 63:0 63:1||t="coref person"||c="the infant" 66:1 66:2
+c="her" 29:0 29:0||t="coref person"||c="her" 30:0 30:0
+c="an ad lib feeding plan" 38:14 38:18||t="coref treatment"||c="an ad lib feeding schedule" 63:17 63:21
+c="this infant" 18:0 18:1||t="coref person"||c="non-dysmorphic premature infant" 20:6 20:8
+c="her" 41:0 41:0||t="coref person"||c="she" 42:0 42:0
+c="her" 33:5 33:5||t="coref person"||c="she" 34:0 34:0
+c="her" 44:0 44:0||t="coref person"||c="she" 45:0 45:0
+c="she" 35:0 35:0||t="coref person"||c="she" 37:0 37:0
+c="calorie enhanced breast milk" 37:29 37:32||t="coref treatment"||c="breast milk with enfamil powder" 63:4 63:8
+c="influenza immunization" 73:1 73:2||t="coref treatment"||c="immunization" 74:14 74:14
+c="her" 59:7 59:7||t="coref person"||c="the infant" 63:0 63:1
+c="the infant" 27:0 27:1||t="coref person"||c="she" 28:0 28:0
+c="the infant" 66:1 66:2||t="coref person"||c="the infant" 68:1 68:2
+c="they" 73:18 73:18||t="coref person"||c="the infant" 74:19 74:20
+c="her" 53:12 53:12||t="coref person"||c="she" 54:0 54:0
+c="her" 30:0 30:0||t="coref person"||c="she" 31:0 31:0
+c="she" 46:0 46:0||t="coref person"||c="the infant" 48:0 48:1
+c="the infant" 53:7 53:8||t="coref person"||c="her" 53:12 53:12
+c="non-dysmorphic premature infant" 20:6 20:8||t="coref person"||c="the infant" 27:0 27:1
+c="she" 37:0 37:0||t="coref person"||c="she" 38:0 38:0
+c="she" 33:0 33:0||t="coref person"||c="her" 33:5 33:5
+c="she" 45:0 45:0||t="coref person"||c="she" 46:0 46:0
+c="she" 28:0 28:0||t="coref person"||c="she" 28:11 28:11
+c="she" 34:0 34:0||t="coref person"||c="she" 35:0 35:0
+c="the parents" 53:0 53:1||t="coref person"||c="her parents" 59:7 59:8

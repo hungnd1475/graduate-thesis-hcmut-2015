@@ -1,0 +1,2 @@
+c="the patient" 17:0 17:1||c="he" 18:0 18:0||c="his" 18:20 18:20||c="his" 19:0 19:0||c="the patient" 35:0 35:1||t="coref person"
+c="the chemotherapy" 36:0 36:1||c="intravenous chemotherapy" 38:1 38:2||c="intravenous antibiotics chemotherapy" 42:0 42:2||t="coref treatment"

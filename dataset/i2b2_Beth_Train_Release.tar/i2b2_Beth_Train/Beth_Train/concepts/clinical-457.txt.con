@@ -1,0 +1,7 @@
+c="family" 12:7 12:7||t="person"
+c="patricia e. burnett , m.d." 14:0 14:4||t="person"
+c="sarah g sheahan , m.d." 16:3 16:7||t="person"
+c="the patient" 12:0 12:1||t="person"
+c="pain" 12:10 12:10||t="problem"
+c="comfort ( hospice ) management" 12:12 12:16||t="treatment"
+c="dr. edward larue" 21:4 21:6||t="person"

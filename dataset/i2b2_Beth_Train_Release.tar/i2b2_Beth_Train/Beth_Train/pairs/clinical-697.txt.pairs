@@ -1,0 +1,87 @@
+c="provider" 192:0 192:0||t="coref person"||c="gregory x wingard" 192:2 192:4
+c="she" 88:4 88:4||t="coref person"||c="her" 90:1 90:1
+c="she" 94:1 94:1||t="coref person"||c="her" 95:7 95:7
+c="she" 106:0 106:0||t="coref person"||c="her" 107:0 107:0
+c="you" 181:5 181:5||t="coref person"||c="your" 181:25 181:25
+c="any other symptoms" 181:50 181:52||t="coref problem"||c="which" 181:53 181:53
+c="you" 183:0 183:0||t="coref person"||c="your" 184:6 184:6
+c="your" 184:6 184:6||t="coref person"||c="your" 185:4 185:4
+c="white strips" 185:1 185:2||t="coref treatment"||c="them" 185:10 185:10
+c="your" 186:15 186:15||t="coref person"||c="your" 187:3 187:3
+c="you" 195:0 195:0||t="coref person"||c="your" 195:13 195:13
+c="biliary stent" 98:10 98:11||t="coref treatment"||c="biliary stent" 114:9 114:10
+c="removal" 114:7 114:7||t="coref treatment"||c="the removal" 195:10 195:11
+c="altered mental status" 15:0 15:2||t="coref problem"||c="altered mental status" 22:11 22:13
+c="your incisions" 181:25 181:26||t="coref problem"||c="your incisions" 184:6 184:7
+c="abdominal pain" 17:0 17:1||t="coref problem"||c="right upper quadrant pain" 24:14 24:17
+c="her jp" 95:7 95:8||t="coref treatment"||c="jp" 100:0 100:0
+c="acute cholecystitis" 71:22 71:23||t="coref problem"||c="acute cholecystitis" 176:0 176:1
+c="she" 90:7 90:7||t="coref person"||c="she" 92:0 92:0
+c="she" 111:0 111:0||t="coref person"||c="she" 112:1 112:1
+c="m.d." 132:49 132:49||t="coref person"||c="m.d." 169:6 169:6
+c="biliary stent" 114:9 114:10||t="coref treatment"||c="your biliary stent" 195:13 195:15
+c="she" 83:0 83:0||t="coref person"||c="she" 84:0 84:0
+c="she" 97:0 97:0||t="coref person"||c="she" 98:0 98:0
+c="this" 21:0 21:0||t="coref person"||c="her" 22:0 22:0
+c="her" 22:0 22:0||t="coref person"||c="she" 22:5 22:5
+c="she" 80:2 80:2||t="coref person"||c="she" 81:0 81:0
+c="she" 79:3 79:3||t="coref person"||c="she" 80:2 80:2
+c="open cholecystectomy" 80:12 80:13||t="coref treatment"||c="the procedure" 81:2 81:3
+c="she" 93:0 93:0||t="coref person"||c="she" 94:1 94:1
+c="impacted 1.6 cm gallstone" 71:4 71:7||t="coref problem"||c="cbd stone" 75:4 75:5
+c="she" 102:2 102:2||t="coref person"||c="she" 103:1 103:1
+c="you" 181:57 181:57||t="coref person"||c="you" 183:0 183:0
+c="altered mental status" 22:11 22:13||t="coref problem"||c="altered mental status" 77:8 77:10
+c="lap" 19:0 19:0||t="coref treatment"||c="lap" 80:9 80:9
+c="attending" 13:0 13:0||t="coref person"||c="mattie r. a. hamilton , m.d." 13:2 13:7
+c="diabetic" 23:2 23:2||t="coref problem"||c="dm" 27:0 27:0
+c="she" 84:0 84:0||t="coref person"||c="she" 85:0 85:0
+c="she" 82:0 82:0||t="coref person"||c="she" 83:0 83:0
+c="you" 189:0 189:0||t="coref person"||c="you" 189:9 189:9
+c="your" 187:3 187:3||t="coref person"||c="you" 188:0 188:0
+c="she" 112:1 112:1||t="coref person"||c="she" 114:0 114:0
+c="she" 98:0 98:0||t="coref person"||c="she" 99:0 99:0
+c="she" 96:0 96:0||t="coref person"||c="she" 97:0 97:0
+c="her" 107:0 107:0||t="coref person"||c="her" 108:0 108:0
+c="she" 25:0 25:0||t="coref person"||c="ms malek" 77:0 77:1
+c="you" 188:0 188:0||t="coref person"||c="you" 189:0 189:0
+c="she" 81:0 81:0||t="coref person"||c="she" 82:0 82:0
+c="your" 181:2 181:2||t="coref person"||c="you" 181:5 181:5
+c="she" 24:12 24:12||t="coref person"||c="she" 25:0 25:0
+c="ms malek" 77:0 77:1||t="coref person"||c="she" 79:3 79:3
+c="your" 181:25 181:25||t="coref person"||c="you" 181:57 181:57
+c="straight cathed" 101:8 101:9||t="coref treatment"||c="further straight catheterization" 105:4 105:6
+c="ercp" 73:0 73:0||t="coref test"||c="ercp" 98:4 98:4
+c="her" 90:1 90:1||t="coref person"||c="she" 90:7 90:7
+c="she" 85:0 85:0||t="coref person"||c="she" 86:0 86:0
+c="she" 23:0 23:0||t="coref person"||c="she" 24:12 24:12
+c="plastic biliary stent" 75:9 75:11||t="coref treatment"||c="biliary stent" 98:10 98:11
+c="lantus" 133:1 133:1||t="coref treatment"||c="lantus insulin" 133:4 133:5
+c="she" 103:1 103:1||t="coref person"||c="she" 105:0 105:0
+c="open cholecystectomy" 19:3 19:4||t="coref treatment"||c="open cholecystectomy" 80:12 80:13
+c="you" 189:9 189:9||t="coref person"||c="you" 195:0 195:0
+c="your incisions" 184:6 184:7||t="coref problem"||c="your incisions" 185:4 185:5
+c="foley catheter" 83:7 83:8||t="coref treatment"||c="foley catheter" 94:9 94:10
+c="her" 95:7 95:7||t="coref person"||c="she" 96:0 96:0
+c="your" 185:4 185:4||t="coref person"||c="your" 186:15 186:15
+c="she" 92:0 92:0||t="coref person"||c="she" 93:0 93:0
+c="she" 105:0 105:0||t="coref person"||c="she" 106:0 106:0
+c="her" 109:2 109:2||t="coref person"||c="she" 110:0 110:0
+c="right upper quadrant pain" 24:14 24:17||t="coref problem"||c="acute right upper quadrant abdominal pain" 77:12 77:17
+c="pt" 101:6 101:6||t="coref person"||c="she" 102:2 102:2
+c="she" 110:0 110:0||t="coref person"||c="she" 111:0 111:0
+c="acute right upper quadrant abdominal pain" 77:12 77:17||t="coref problem"||c="worsening abdominal pain" 96:2 96:4
+c="she" 88:0 88:0||t="coref person"||c="she" 88:4 88:4
+c="she" 101:1 101:1||t="coref person"||c="pt" 101:6 101:6
+c="gb us" 69:0 69:1||t="coref test"||c="gallbladder ultra sound" 78:0 78:2
+c="she" 87:1 87:1||t="coref person"||c="she" 88:0 88:0
+c="pain medication" 189:4 189:5||t="coref treatment"||c="which" 189:6 189:6
+c="patient" 12:0 12:0||t="coref person"||c="this" 21:0 21:0
+c="cbd stone" 75:4 75:5||t="coref problem"||c="a distended 1.6 cm non mobile stone in the neck" 78:4 78:13
+c="she" 86:0 86:0||t="coref person"||c="she" 87:1 87:1
+c="she" 99:0 99:0||t="coref person"||c="she" 101:1 101:1
+c="diaphoresis" 16:0 16:0||t="coref problem"||c="diaphoresis" 22:15 22:15
+c="her" 108:0 108:0||t="coref person"||c="her" 109:2 109:2
+c="she" 22:5 22:5||t="coref person"||c="she" 23:0 23:0
+c="she" 114:0 114:0||t="coref person"||c="your" 181:2 181:2
+c="them" 185:10 185:10||t="coref treatment"||c="their" 185:15 185:15

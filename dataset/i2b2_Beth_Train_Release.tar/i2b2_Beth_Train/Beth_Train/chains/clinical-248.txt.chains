@@ -1,0 +1,7 @@
+c="cardiothoracic surgery" 10:0 10:1||c="surgery" 29:12 29:12||c="coronary artery bypass grafting" 50:13 50:16||c="the procedure" 51:6 51:7||t="coref treatment"
+c="this" 12:0 12:0||c="who" 12:13 12:13||c="his" 12:16 12:16||c="he" 13:0 13:0||c="he" 14:2 14:2||c="his" 15:0 15:0||c="him" 15:3 15:3||c="he" 15:7 15:7||c="he" 16:0 16:0||c="his" 17:0 17:0||c="he" 17:5 17:5||c="he" 18:0 18:0||c="the patient" 35:2 35:3||c="the patient" 50:0 50:1||c="the patient" 50:10 50:11||c="the patient" 51:0 51:1||c="he" 52:0 52:0||c="the patient" 53:0 53:1||c="his" 53:18 53:18||c="the patient" 54:0 54:1||c="he" 54:15 54:15||c="his" 54:27 54:27||c="he" 55:0 55:0||c="he" 56:3 56:3||c="him" 56:20 56:20||c="he" 56:29 56:29||c="the patient" 57:2 57:3||c="he" 57:9 57:9||c="he" 58:0 58:0||c="he" 58:6 58:6||c="he" 59:0 59:0||c="he" 60:0 60:0||c="his" 60:5 60:5||c="he" 60:13 60:13||c="his" 60:18 60:18||t="coref person"
+c="physical therapy" 55:4 55:5||c="they" 56:0 56:0||c="physical therapy" 56:17 56:18||t="coref person"
+c="high cholesterol" 12:11 12:12||c="high cholesterol" 22:3 22:4||t="coref problem"
+c="catheterization" 18:2 18:2||c="which" 18:5 18:5||t="coref test"
+c="aspirin" 27:1 27:1||c="aspirin" 65:1 65:1||t="coref treatment"
+c="plavix" 29:1 29:1||c="which" 29:6 29:6||t="coref treatment"
