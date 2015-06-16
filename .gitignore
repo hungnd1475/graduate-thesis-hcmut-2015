@@ -20,3 +20,5 @@ $RECYCLE.BIN/
 # Temporary files
 ~$*
 *.tmp
+/src/EMRCorefResol.IO/obj/Debug
+*.suo
