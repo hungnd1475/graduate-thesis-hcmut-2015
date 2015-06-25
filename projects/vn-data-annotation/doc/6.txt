@@ -1,0 +1,21 @@
+Ngày nhập_viện : .
+23/04/2014 .
+Ngày xuất_viện : .
+25/04/2014 .
+Lý_do vào viện : , sốt cao .
+Bệnh_sử : , bệnh 01 ngày , người_nhà bé khai bé sốt từ sáng nay , đến chiều nay sốt cao khó hạ - > nv . Bé ăn_uống tiêu tiểu_tốt , không ho . người_nhà khai bé giật_mình khi nằm ngủ .
+Tiền_sử : .
+Khám bệnh : .
+1 : Khám toàn_thân : , tỉnh , môi hồng , chi ấm , mạch quay rõ , thở đều .
+2 : Khám bộ_phận : .
+a ) Tuần_hoàn : , tim đều t 2 t2 rõ .
+b ) Hô_hấp : , phổi không rale .
+c ) Tiêu_hóa : , bụng mềm .
+d ) Thận : , không cầu bàng_quang .
+e ) Cơ_quan khác : .
+Thần_kinh : cổ mềm , không dấu thần_kinh khu_trú .
+Cơ : không phù .
+Nội_tiết : họng đỏ , 2 amydal sưng đỏ , .
+Tóm_tắt bệnh_án : , .
+Chẩn_đoán : , Viêm loét họng cấp # Bệnh tay_chân miệng .
+Điều_trị : , nội ,

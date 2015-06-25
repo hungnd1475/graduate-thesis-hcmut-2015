@@ -1,0 +1,24 @@
+Ngày nhập_viện : .
+28/01/2014 .
+Ngày xuất_viện : .
+30/01/2014 .
+Lý_do vào viện : , <span class="selected problem" start="19" end="26" line="5">Đau ngực</span> .
+Bệnh_sử : , <span class="selected person" start="12" end="20" line="6">Bệnh_nhân</span> <span class="selected problem" start="22" end="29" line="6">đau ngực</span> vài ngày_nay , hôm_nay <span class="selected problem" start="54" end="65" line="6">cơn đau ngực</span> tăng dần , không ho , không sôt , <span class="selected person" start="101" end="108" line="6">gia_đình</span> đưa bệnh_nhân vào cấp_cứu .
+Tiền_sử : , <span class="selected problem" start="12" end="19" line="7">Lao_phổi</span> . <span class="selected problem" start="23" end="32" line="7">Suy hô_hấp</span> 1 lần , đang ngưng thuốc_lá .
+Khám bệnh : .
+1 : Khám toàn_thân : , <span class="selected person" start="23" end="31" line="9">Bệnh_nhân</span> tỉnh , niêm hồng , không phù .
+2 : Khám bộ_phận : .
+a ) Tuần_hoàn : , nhịp tim đều .
+b ) Hô_hấp : , phổi không ran .
+c ) Tiêu_hóa : , Bụng mềm , không điểm đau khu_trú .
+d ) Thận : , chưa phát_hiện bất_thường .
+e ) Cơ_quan khác : .
+Thần_kinh : dấu thần_kinh định_vị ( âm_tính ) .
+Cơ : chưa phát_hiện bất_thường .
+Nội_tiết : chưa phát_hiện bất_thường .
+Tai mũi họng : chưa phát_hiện bất_thường .
+Răng_hàm mặt : chưa phát_hiện bất_thường .
+Mắt : chưa phát_hiện bất_thường .
+Tóm_tắt bệnh_án : , .
+Chẩn_đoán : , <span class="selected treatment" start="14" end="21" line="23">Theo_dõi</span> <span class="selected problem" start="23" end="42" line="23">Nhiễm_trùng tiêu_hóa</span> .
+Điều_trị : , <span class="selected treatment" start="13" end="20" line="24">nội_khoa</span> ,

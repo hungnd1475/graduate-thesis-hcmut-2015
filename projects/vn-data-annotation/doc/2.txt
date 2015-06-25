@@ -1,0 +1,24 @@
+Ngày nhập_viện : .
+28/01/2014 .
+Ngày xuất_viện : .
+29/01/2014 .
+Lý_do vào viện : , Đau ngực .
+Bệnh_sử : , Bệnh_nhân đau ngực vài ngày_nay , hôm_nay cơn đau ngực tăng dần , không ho , không sôt , gia_đình đưa bệnh_nhân vào cấp_cứu .
+Tiền_sử : , Lao_phổi . Suy hô_hấp 1 lần , đang ngưng thuốc_lá .
+Khám bệnh : .
+1 : Khám toàn_thân : , Bệnh_nhân tỉnh , niêm hồng , không phù .
+2 : Khám bộ_phận : .
+a ) Tuần_hoàn : , nhịp tim đều .
+b ) Hô_hấp : , phổi không ran .
+c ) Tiêu_hóa : , Bụng mềm , không điểm đau khu_trú .
+d ) Thận : , chưa phát_hiện bất_thường .
+e ) Cơ_quan khác : .
+Thần_kinh : dấu thần_kinh định_vị ( âm_tính ) .
+Cơ : chưa phát_hiện bất_thường .
+Nội_tiết : chưa phát_hiện bất_thường .
+Tai mũi họng : chưa phát_hiện bất_thường .
+Răng_hàm mặt : chưa phát_hiện bất_thường .
+Mắt : chưa phát_hiện bất_thường .
+Tóm_tắt bệnh_án : , .
+Chẩn_đoán : , Phình quai động_mạch chủ / Tăng_Huyết_Áp .
+Điều_trị : , nội_khoa ,

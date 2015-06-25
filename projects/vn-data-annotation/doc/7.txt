@@ -1,0 +1,24 @@
+Ngày nhập_viện : .
+11/05/2014 .
+Ngày xuất_viện : .
+12/05/2014 .
+Lý_do vào viện : , sốt , mệt .
+Bệnh_sử : , Bệnh_nhân khai 2 ngày_nay , xuất_hiện mảng mụn nước vùng ngực - mông - chân trái , hiện_nay sốt , lạnh run , mệt vã mồ_hôi .
+Tiền_sử : , tăng huyết_áp . phì đại tiền_liệt_tuyến .
+Khám bệnh : .
+1 : Khám toàn_thân : , Bệnh_nhân tỉnh , không phù , tiếp_xúc chậm , niêm hồng , tuyến_giáp không to . Có những mụn nước rải_rác ở ngực , nhiều ở mông trái . chân trái .
+2 : Khám bộ_phận : .
+a ) Tuần_hoàn : , nhịp tim đều .
+b ) Hô_hấp : , phổi rải_rác có ran ẩm .
+c ) Tiêu_hóa : , Bụng mềm , gan lách không sờ chạm .
+d ) Thận : , chưa phát_hiện bất_thường .
+e ) Cơ_quan khác : .
+Thần_kinh : dấu thần_kinh định_vị ( âm_tính ) .
+Cơ : chưa phát_hiện bất_thường .
+Nội_tiết : chưa phát_hiện bất_thường .
+Tai mũi họng : chưa phát_hiện bất_thường .
+Răng_hàm mặt : chưa phát_hiện bất_thường .
+Mắt : chưa phát_hiện bất_thường .
+Tóm_tắt bệnh_án : , .
+Chẩn_đoán : , Viêm phổi - Tăng huyết_áp - Sỏi túi_mật - TD Viêm túi_mật - Bón - Lão_suy - Thoái_hóa khớp gối .
+Điều_trị : , nội_khoa ,
