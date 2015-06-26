@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace EMRCorefResol.Core
 {
-	public enum EntityType
+	interface IFeatureExtractor
 	{
-		Person,
-		Problem,
-		Treatment,
-		Test,
-		Pronoun
+		
 	}
 }

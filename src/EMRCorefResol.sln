@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMRCorefResol.Shared", "EMRCorefResol.IO\EMRCorefResol.Shared.csproj", "{66284726-8E94-4438-B366-F14B04874734}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMRCorefResol.Core", "EMRCorefResol.IO\EMRCorefResol.Core.csproj", "{66284726-8E94-4438-B366-F14B04874734}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

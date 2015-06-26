@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace EMRCorefResol.Core
 {
-	public enum EntityType
+	interface IInstance
 	{
-		Person,
-		Problem,
-		Treatment,
-		Test,
-		Pronoun
+		Concept Antecedent { get; }
+		Concept Anaphora { get; }
+		double[] GetFeatures(IFeatureExtractor extractor, string summaryContent);
 	}
 }

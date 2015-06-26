@@ -7,8 +7,8 @@
     <ProjectGuid>{66284726-8E94-4438-B366-F14B04874734}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EMRCorefResol.Shared</RootNamespace>
-    <AssemblyName>EMRCorefResol.Shared</AssemblyName>
+    <RootNamespace>EMRCorefResol.Core</RootNamespace>
+    <AssemblyName>EMRCorefResol.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,6 +41,8 @@
   <ItemGroup>
     <Compile Include="Concept.cs" />
     <Compile Include="EntityType.cs" />
+    <Compile Include="IFeatureExtractor.cs" />
+    <Compile Include="IInstance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Position.cs" />
   </ItemGroup>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EMRCorefResol.Shared
+namespace EMRCorefResol.Core
 {
 	public struct Position : IComparable, IComparable<Position>
 	{
