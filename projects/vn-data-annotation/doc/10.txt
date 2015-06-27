@@ -1,0 +1,21 @@
+Ngày nhập_viện : .
+12/08/2014 .
+Ngày xuất_viện : .
+14/08/2014 .
+Lý_do vào viện : , sốt cao .
+Bệnh_sử : , Trẻ sốt cao từ sáng nay , dùng hạ sốt không đỡ , ăn_uống kém , tối nay sốt cao , dùng hạ sốt không hạ - - > khám - - > nhập_viện .
+Tiền_sử : .
+Khám bệnh : .
+1 : Khám toàn_thân : , Trẻ tỉnh , vẻ mệt , da niêm hồng , môi khô , hạch ngoại biên không sờ chạm .
+2 : Khám bộ_phận : .
+a ) Tuần_hoàn : , Tim đều rõ .
+b ) Hô_hấp : , Thở đều , hai phổi trong .
+c ) Tiêu_hóa : , Bụng mềm , không chướng .
+d ) Thận : , Chưa thấy bất_thường .
+e ) Cơ_quan khác : .
+Thần_kinh : Bình_thường .
+Cơ : Bình_thường .
+Nội_tiết : Họng đỏ , .
+Tóm_tắt bệnh_án : , .
+Chẩn_đoán : , Sốt cao ngày 2 - TD Nhiễm siêu_vi .
+Điều_trị : , Nội_khoa ,

@@ -1,0 +1,21 @@
+Ngày nhập_viện : .
+28/02/2014 .
+Ngày xuất_viện : .
+01/03/2014 .
+Lý_do vào viện : , ói .
+Bệnh_sử : , ói nhiều lần ra dịch vàng , k sốt , ho nhiều .
+Tiền_sử : , viêm họng đã điều_trị cách nay 3 ngày .
+Khám bệnh : .
+1 : Khám toàn_thân : , bé tỉnh , hồng , mạch rõ chi ấm .
+2 : Khám bộ_phận : .
+a ) Tuần_hoàn : , tim đều rõ .
+b ) Hô_hấp : , phổi trong .
+c ) Tiêu_hóa : , bụng mềm , k đau , k chướng .
+d ) Thận : , bình_thường .
+e ) Cơ_quan khác : .
+Thần_kinh : cổ mềm .
+Cơ : bình_thường .
+Nội_tiết : họng đỏ nhẹ , .
+Tóm_tắt bệnh_án : , .
+Chẩn_đoán : , Rối_loạn tiêu_hoá .
+Điều_trị : , chống nôn ,

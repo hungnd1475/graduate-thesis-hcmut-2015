@@ -1,0 +1,20 @@
+Ngày nhập_viện : .
+05/04/2014 .
+Ngày xuất_viện : .
+08/04/2014 .
+Lý_do vào viện : , ói , tiêu_chảy .
+Bệnh_sử : , N1 : bé ói , tiêu_chảy nhiều lần có đàm k máu , k sốt .
+Tiền_sử : .
+Khám bệnh : .
+1 : Khám toàn_thân : , tỉnh , hồng , chi ấm , mạch rõ , k dấu mất nước .
+2 : Khám bộ_phận : .
+a ) Tuần_hoàn : , tim đều rõ .
+b ) Hô_hấp : , phổi trong .
+c ) Tiêu_hóa : , bụng mềm , k đau .
+d ) Thận : , bình_thường .
+e ) Cơ_quan khác : .
+Thần_kinh : cổ mềm .
+Cơ : bình_thường , , .
+Tóm_tắt bệnh_án : , .
+Chẩn_đoán : , Tiêu_chảy nhiễm_trùng - Mất nước nhẹ .
+Điều_trị : , bù dịch ,

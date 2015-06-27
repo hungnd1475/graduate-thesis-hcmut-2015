@@ -1,0 +1,24 @@
+Ngày nhập_viện : .
+23/07/2014 .
+Ngày xuất_viện : .
+26/07/2014 .
+Lý_do vào viện : , Chóng_mặt .
+Bệnh_sử : , Bệnh_nhân khai cách 02 ngày bệnh_nhân bị vỡ mụn_nhọt trên đầu , sau đó đến trạm y_tế địa_phương sơ_cứu khâu vết_thương . Hiện_tại , thấy chóng_mặt - - > vào viện .
+Tiền_sử : .
+Khám bệnh : .
+1 : Khám toàn_thân : , Tỉnh , da niêm bình_thường , tuyến_giáp không to , hạch ngoại biên không sờ thấy .
+2 : Khám bộ_phận : .
+a ) Tuần_hoàn : , T1 , T2 đều rõ , không có_tiếng bệnh_lý .
+b ) Hô_hấp : , Không khó thở , APB đều rõ 2 bên .
+c ) Tiêu_hóa : , Bụng mềm , không chướng , gan lách không to . THBH ( - ) .
+d ) Thận : , Chạm thận ( - ) , các điểm niệu_quản Ko đau .
+e ) Cơ_quan khác : .
+Thần_kinh : Vết_thương đầu + chóng_mặt , Tỉnh , ko có dấu thần_kinh khu_trú .
+Cơ : Vận_động các khớp bình_thường .
+Nội_tiết : Chưa phát_hiện bệnh_lý .
+Tai mũi họng : Chưa phát_hiện bệnh_lý .
+Răng_hàm mặt : Chưa phát_hiện bệnh_lý .
+Mắt : Chưa phát_hiện bệnh_lý .
+Tóm_tắt bệnh_án : , Bệnh_nhân nam 53 tuổi vào viện với lý_do : Bệnh_nhân khai cách 02 ngày bệnh_nhân bị vỡ mụn_nhọt trên đầu , sau đó đến trạm y_tế địa_phương sơ_cứu khâu vết_thương . Hiện_tại , thấy chóng_mặt - - > vào viện Chẩn_đoán : Vết_thương đầu + chóng_mặt , CT não : - Không thấy dập não , xuất_huyết tren phim - Gãy xương chính mũi , xương cánh mũi hai bên - Phù_nề phần_mềm vùng đỉnh ( P ) .
+Chẩn_đoán : , Vết_thương đầu + chóng_mặt .
+Điều_trị : , Nội_khoa , Toa về

@@ -1,0 +1,20 @@
+Ngày nhập_viện : .
+11/05/2014 .
+Ngày xuất_viện : .
+12/05/2014 .
+Lý_do vào viện : , ho , sốt .
+Bệnh_sử : , bé ho 15 ngày , hôm_qua bé sốt , ho nhiều hơn .
+Tiền_sử : .
+Khám bệnh : .
+1 : Khám toàn_thân : , bé tỉnh , môi hồng / khí trời , spo2 98% thở co lõm ngực 50l/ph .
+2 : Khám bộ_phận : .
+a ) Tuần_hoàn : , tim đều rõ .
+b ) Hô_hấp : , phổi ran ẩm , ngáy .
+c ) Tiêu_hóa : , bụng mềm .
+d ) Thận : , bình_thường .
+e ) Cơ_quan khác : .
+Thần_kinh : thóp phẳng .
+Cơ : bình_thường , , .
+Tóm_tắt bệnh_án : , .
+Chẩn_đoán : , Viêm phổi - Tăng huyết_áp - Sỏi túi_mật - TD Viêm túi_mật - Bón - Lão_suy - Thoái_hóa khớp gối .
+Điều_trị : , kháng_sinh ,

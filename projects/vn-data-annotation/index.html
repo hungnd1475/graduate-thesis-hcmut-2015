@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="lablerApp">
+<head>
+	<meta charset="UTF-8">
+	<meta charset="UTF-8">
+	<title>Label Tool</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/label.css">
+	<link href="css/pnotify.custom.min.css" rel="stylesheet">
+</head>
+<body id="wrap" ng-controller="emrList">
+	<nav class="navbar navbar-default">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Label Tool</a>
+			</div>
+	</nav>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="sidebar col-md-2">
+				<div class="input-group">
+					<input ng-model="query" class="form-control" placeholder="Search">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button">
+							<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+						</button>
+					</span>
+				</div>
+				<div class="file-list">
+					<h4>EMR List</h4>
+					<ul class="nav nav-list">
+						<li ng-repeat="file in files | filter:query">
+							<a href="" ng-click="getContent(file)">{{file}}</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="main col-md-10">
+				<div class="row">
+					<div class="col-md-2">
+						<div class="panel panel-default">
+							<div class="panel-heading clickable person">
+							<h3 class="panel-title">Person</h3>
+							</div>
+							<div class="panel-body" style="min-height:80px;">
+								Những chủ thể người hoặc nhóm người
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="panel panel-default">
+							<div class="panel-heading clickable problem">
+							<h3 class="panel-title">Problem</h3>
+							</div>
+							<div class="panel-body" style="min-height:90px;">
+								Những bất thường về sức khỏe
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="panel panel-default">
+							<div class="panel-heading clickable treatment">
+							<h3 class="panel-title">Treatment</h3>
+							</div>
+							<div class="panel-body" style="min-height:90px;">
+								Những thủ tục chữa trị
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="panel panel-default">
+							<div class="panel-heading clickable test">
+							<h3 class="panel-title">Test</h3>
+							</div>
+							<div class="panel-body" style="min-height:90px;">
+								Những thủ tục xét nghiệm
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="panel panel-default">
+							<div class="panel-heading clickable pronoun">
+							<h3 class="panel-title">Pronoun</h3>
+							</div>
+							<div class="panel-body" style="min-height:90px;">
+								Những đại từ tham chiếu tới 4 nhóm trên
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<button class="btn btn-primary" ng-click="postMention()">Update</button>
+				<button class="btn btn-danger" ng-click="clearAllMention()">Clear All</button>
+				<div class="row">
+					<div class="col-md-7">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">File {{filename}}</h3>
+							</div>
+							<div id="emr-doc" class="doc panel-body">
+								<div class="sentence" ng-repeat="line in content" ng-bind-html="line | unsafe"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-5">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+							<h3 class="panel-title">Mention List</h3>
+							</div>
+							<div id="mention" class="doc panel-body">
+								<div ng-repeat="mention in mentions">{{mention}}</div>
+							</div>
+						</div>						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="dialog" title="Select Label" style="display:none;">
+		<input type="radio" name="label" value="person" checked="checked">Person<br>
+		<input type="radio" name="label" value="problem">Problem<br>
+		<input type="radio" name="label" value="treatment">Treatment<br>
+		<input type="radio" name="label" value="test">Test<br>
+		<input type="radio" name="label" value="pronoun">Pronoun<br>
+		<input type="radio" name="label" value="clear">Clear<br>
+	</div> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+	<script src="js/pnotify.custom.min.js"></script>
+	<script src="js/controller.js"></script>
+	<script src="js/label.js"></script>
+</body>
+</html>

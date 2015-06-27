@@ -1,0 +1,56 @@
+.navbar{
+	margin-bottom: 0px;
+}
+.sidebar{
+	background-color: #f8f8f8;
+	border-color: #e7e7e7;
+	padding: 10px;
+}
+.file-list ul{
+	height: 80vh;
+	overflow-y: scroll;
+}
+.file-list li{
+	line-height: 35px;
+}
+.file-list ul li a{
+	padding: 0px;
+}
+.panel{
+	margin-top: 15px;
+}
+.doc.panel-body{
+	height: 55vh;
+	overflow-y: scroll;
+}
+.clickable{
+	cursor: pointer;
+}
+.problem{
+	background-color: #d73d32!important;
+	color: white!important;
+}
+.test{
+	background-color: #65b951!important;
+	color: white!important;
+}
+.treatment{
+	background-color: #901395!important;
+	color: white!important;
+}
+.person{
+	background-color: #3e5c76!important;
+	color: white!important;
+}
+.pronoun{
+	background-color: #a37e5c!important;
+	color: white!important;
+}
+.sentence .selected{
+	background-color: black;
+	border: 1px solid black;
+	color: white;
+	border-radius: 5px;
+	padding: 2px;
+	cursor: pointer;
+}

@@ -1,0 +1,21 @@
+Ngày nhập_viện : .
+28/07/2014 .
+Ngày xuất_viện : .
+07/08/2014 .
+Lý_do vào viện : , ho , khò_khè .
+Bệnh_sử : , Bé ho , khò_khè 3 ngày_nay , không sốt , ọc sữa - - > khám - - > nhập_viện .
+Tiền_sử : , Sinh mổ 38 tuần .
+Khám bệnh : .
+1 : Khám toàn_thân : , Bé tỉnh , da niêm vàng nhẹ , hạch ngoại_vi không sờ chạm .
+2 : Khám bộ_phận : .
+a ) Tuần_hoàn : .
+b ) Hô_hấp : , Ho nhiều , khò_khè , hai phổi ran ẩm .
+c ) Tiêu_hóa : , Bụng mềm , chướng nhẹ , tiêu phân vàng .
+d ) Thận : , Chưa thấy bất_thường .
+e ) Cơ_quan khác : .
+Thần_kinh : Bình_thường .
+Cơ : Bình_thường .
+Nội_tiết : Họng sạch , .
+Tóm_tắt bệnh_án : , .
+Chẩn_đoán : , Viêm phổi nặng / Vàng da / TD Nhiễm_trùng sơ_sinh .
+Điều_trị : , Thở oxy , Kháng_sinh , khí dung ventolin , men tiêu_hóa ,
