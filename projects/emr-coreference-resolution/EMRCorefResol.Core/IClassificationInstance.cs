@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace EMRCorefResol.Core
 {
-	interface IInstance
+	public interface IClassificationInstance
 	{
-		Concept Antecedent { get; }
-		Concept Anaphora { get; }
-		double[] GetFeatures(IFeatureExtractor extractor, string summaryContent);
+		double[] GetFeatures(IFeatureExtractor extractor, string emr);
 	}
 }
