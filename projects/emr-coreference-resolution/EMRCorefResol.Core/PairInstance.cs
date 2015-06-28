@@ -17,14 +17,14 @@ namespace EMRCorefResol.Core
 			this.Anaphora = anaphora;
 		}
 
-		public abstract double[] GetFeatures(IFeatureExtractor extractor, string emr);
+		public abstract IFeatureVector GetFeatures(IFeatureExtractor extractor, string emr);
 	}
 
 	public class PersonPair : PairInstance 
 	{
 		public PersonPair(Concept antecedent, Concept anaphora) : base(antecedent, anaphora) { }
 
-		public override double[] GetFeatures(IFeatureExtractor extractor, string emr)
+		public override IFeatureVector GetFeatures(IFeatureExtractor extractor, string emr)
 		{
 			return extractor.Extract(this, emr);
 		}
@@ -34,7 +34,7 @@ namespace EMRCorefResol.Core
 	{
 		public ProblemPair(Concept antecedent, Concept anaphora) : base(antecedent, anaphora) { }
 
-		public override double[] GetFeatures(IFeatureExtractor extractor, string emr)
+		public override IFeatureVector GetFeatures(IFeatureExtractor extractor, string emr)
 		{
 			return extractor.Extract(this, emr);
 		}
@@ -44,7 +44,7 @@ namespace EMRCorefResol.Core
 	{
 		public TreatmentPair(Concept antecedent, Concept anaphora) : base(antecedent, anaphora) { }
 
-		public override double[] GetFeatures(IFeatureExtractor extractor, string emr)
+		public override IFeatureVector GetFeatures(IFeatureExtractor extractor, string emr)
 		{
 			return extractor.Extract(this, emr);
 		}
@@ -54,7 +54,7 @@ namespace EMRCorefResol.Core
 	{
 		public TestPair(Concept antecedent, Concept anaphora) : base(antecedent, anaphora) { }
 
-		public override double[] GetFeatures(IFeatureExtractor extractor, string emr)
+		public override IFeatureVector GetFeatures(IFeatureExtractor extractor, string emr)
 		{
 			return extractor.Extract(this, emr);
 		}

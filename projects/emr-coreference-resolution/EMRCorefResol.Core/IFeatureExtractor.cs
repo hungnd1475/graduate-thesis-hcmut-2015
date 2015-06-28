@@ -8,10 +8,10 @@ namespace EMRCorefResol.Core
 {
 	public interface IFeatureExtractor
 	{
-		double[] Extract(PersonPair instance, string emr);
-		double[] Extract(ProblemPair instance, string emr);
-		double[] Extract(TreatmentPair instance, string emr);
-		double[] Extract(TestPair instance, string emr);
-		double[] Extract(PronounInstance instance, string emr);
+		IFeatureVector Extract(PersonPair instance, string emr);
+		IFeatureVector Extract(ProblemPair instance, string emr);
+		IFeatureVector Extract(TreatmentPair instance, string emr);
+		IFeatureVector Extract(TestPair instance, string emr);
+		IFeatureVector Extract(PronounInstance instance, string emr);
 	}
 }

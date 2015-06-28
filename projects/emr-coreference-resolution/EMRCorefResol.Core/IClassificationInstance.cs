@@ -8,6 +8,6 @@ namespace EMRCorefResol.Core
 {
 	public interface IClassificationInstance
 	{
-		double[] GetFeatures(IFeatureExtractor extractor, string emr);
+		IFeatureVector GetFeatures(IFeatureExtractor extractor, string emr);
 	}
 }

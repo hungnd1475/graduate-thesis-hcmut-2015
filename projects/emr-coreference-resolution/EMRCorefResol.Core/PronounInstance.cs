@@ -15,7 +15,7 @@ namespace EMRCorefResol.Core
 			this.Pronoun = pronoun;
 		}
 
-		public double[] GetFeatures(IFeatureExtractor extractor, string emr)
+		public IFeatureVector GetFeatures(IFeatureExtractor extractor, string emr)
 		{
 			return extractor.Extract(this, emr);
 		}
