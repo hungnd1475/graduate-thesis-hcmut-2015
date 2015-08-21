@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EMRCorefResol.IO
+namespace HCMUT.EMRCorefResol
 {
-    public class Class1
+    public interface IPreprocessor
     {
+        IIndexedEnumerable<IClasInstance> Process(EMR emr);
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EMRCorefResol.Core
+namespace HCMUT.EMRCorefResol
 {
-	public interface IClassificationInstance
+	public interface IClasInstance
 	{
 		IFeatureVector GetFeatures(IFeatureExtractor extractor, string emr);
 	}

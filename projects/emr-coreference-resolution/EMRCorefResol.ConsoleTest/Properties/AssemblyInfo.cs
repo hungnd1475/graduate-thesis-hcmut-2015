@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("EMRCorefResol.IO")]
+[assembly: AssemblyTitle("EMRCorefResol.ConsoleTest")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EMRCorefResol.IO")]
+[assembly: AssemblyProduct("EMRCorefResol.ConsoleTest")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a954c553-8f7d-45f6-b89a-dbe1bc2f06e6")]
+[assembly: Guid("6e75048b-fad4-4a0f-9b47-6704da6788b9")]
 
 // Version information for an assembly consists of the following four values:
 //

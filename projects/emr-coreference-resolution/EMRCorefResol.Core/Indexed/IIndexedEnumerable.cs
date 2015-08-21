@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol
 {
-    public interface IFeatureVector : IIndexedEnumerable<IFeature>
+    public interface IIndexedEnumerable<T> : IEnumerable<T>
     {
-        IFeature this[string name] { get; }
-        double[] ToDoubleArray();
+        T this[int index] { get; }
+
+        int Count { get; }
     }
 }
