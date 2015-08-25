@@ -84,7 +84,7 @@ namespace HCMUT.EMRCorefResol
 
         public override int GetHashCode()
         {
-            return HashCodeHelper.ComputeHashCode(new[] { Line, Column });
+            return HashCodeHelper.ComputeHashCode(Line, Column);
         }
     }
 }

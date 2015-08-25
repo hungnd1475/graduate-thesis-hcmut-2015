@@ -15,19 +15,19 @@ namespace HCMUT.EMRCorefResol
         /// <summary>
         /// The string representing the concept.
         /// </summary>
-        public string Lexicon { get; private set; }
+        public string Lexicon { get; }
         /// <summary>
         /// The beginning position of the concept.
         /// </summary>
-        public ConceptPosition Begin { get; private set; }
+        public ConceptPosition Begin { get; }
         /// <summary>
         /// The ending position of the concept.
         /// </summary>
-        public ConceptPosition End { get; private set; }
+        public ConceptPosition End { get; }
         /// <summary>
         /// The type of concept.
         /// </summary>
-        public ConceptType Type { get; private set; }
+        public ConceptType Type { get; set; }
 
         /// <summary>
         /// Initializes a <see cref="Concept"/> instance.
@@ -44,12 +44,15 @@ namespace HCMUT.EMRCorefResol
             this.Type = type;
         }
 
+        public Concept(string lexicon, ConceptPosition begin, ConceptPosition end)
+            : this(lexicon, begin, end, ConceptType.None)
+        { }
+
         public bool Equals(Concept other)
         {
             return string.Equals(Lexicon, other.Lexicon) &&
                 other.Begin.Equals(Begin) &&
-                other.End.Equals(End) &&
-                other.Type == Type;
+                other.End.Equals(End);
         }
 
         public override bool Equals(object obj)
@@ -60,17 +63,12 @@ namespace HCMUT.EMRCorefResol
 
         public override int GetHashCode()
         {
-            return HashCodeHelper.ComputeHashCode(new object[] { Lexicon, Begin, End, Type });
+            return HashCodeHelper.ComputeHashCode(Lexicon, Begin, End);
         }
 
         public override string ToString()
         {
-            return $"c=\"{Lexicon}\" {Begin}:{End}||t=\"{Type.ToString().ToLower()}\"";
-        }
-
-        public string ToString(bool includeType)
-        {
-            return includeType ? ToString() : $"c=\"{Lexicon}\" {Begin}:{End}";
+            return $"c=\"{Lexicon}\" {Begin}:{End}";
         }
     }
 }

@@ -21,7 +21,7 @@ namespace HCMUT.EMRCorefResol
 
         public override string ToString()
         {
-            return $"{Antecedent.ToString(false)}||{Anaphora.ToString(false)}||t=\"{Antecedent.Type.ToString().ToLower()}\"";
+            return $"{Antecedent}||{Anaphora}||t=\"{Antecedent.Type.ToString().ToLower()}\"";
         }
     }
 

@@ -17,7 +17,7 @@ namespace HCMUT.EMRCorefResol
 
         public IIndexedEnumerable<Concept> Concepts { get; }
 
-        public EMR(string emrFile, string conceptsFile)
+        public EMR(string emrFile, string conceptsFile, IDataReader dataReader)
         {
             var fs = new FileStream(emrFile, FileMode.Open);
             var sr = new StreamReader(fs);
@@ -31,17 +31,8 @@ namespace HCMUT.EMRCorefResol
             while (!sr.EndOfStream)
             {
                 var line = sr.ReadLine();
-                var matchConcept = ConceptPattern.Match(line);
-                var matchType = TypePattern.Match(line);
-
-                if (matchConcept.Success && matchType.Success)
-                {
-                    var c = matchConcept.Groups["c"].Value;
-                    var begin = ConceptPosition.Parse(matchConcept.Groups["begin"].Value);
-                    var end = ConceptPosition.Parse(matchConcept.Groups["end"].Value);
-                    var type = (ConceptType) Enum.Parse(typeof(ConceptType), matchType.Groups[1].Value, true);
-                    concepts.Add(new Concept(c, begin, end, type));
-                }
+                var c = dataReader.ReadSingle(line);
+                if (c != null) concepts.Add(c);
             }
             sr.Close();
 

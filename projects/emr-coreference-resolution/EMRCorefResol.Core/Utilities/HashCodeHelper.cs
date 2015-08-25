@@ -10,17 +10,17 @@ namespace HCMUT.EMRCorefResol.Utilities
     {
         public static int ComputeHashCode(params object[] values)
         {
-            return ComputeHashCode(37, 41, values);
+            return ComputeHashCode(Tuple.Create(37, 41), values);
         }
 
-        public static int ComputeHashCode(int prime1, int prime2, params object[] values)
+        public static int ComputeHashCode(Tuple<int, int> primes, params object[] values)
         {
             unchecked
             {
-                int hash = prime1;
+                int hash = primes.Item1;
                 foreach (var v in values)
                 {
-                    hash = hash * prime2 + v.GetHashCode();
+                    hash = hash * primes.Item2 + v.GetHashCode();
                 }
                 return hash;
             }

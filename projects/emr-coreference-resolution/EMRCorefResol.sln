@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMRCorefResol.Core", "EMRCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMRCorefResol.ConsoleTest", "EMRCorefResol.ConsoleTest\EMRCorefResol.ConsoleTest.csproj", "{6E75048B-FAD4-4A0F-9B47-6704DA6788B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMRCorefResol.Training.English", "EMRCorefResol.Training.English\EMRCorefResol.Training.English.csproj", "{431BA8EE-38D6-4AA1-97AF-8E94889AAECC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6E75048B-FAD4-4A0F-9B47-6704DA6788B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E75048B-FAD4-4A0F-9B47-6704DA6788B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E75048B-FAD4-4A0F-9B47-6704DA6788B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{431BA8EE-38D6-4AA1-97AF-8E94889AAECC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{431BA8EE-38D6-4AA1-97AF-8E94889AAECC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{431BA8EE-38D6-4AA1-97AF-8E94889AAECC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{431BA8EE-38D6-4AA1-97AF-8E94889AAECC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
