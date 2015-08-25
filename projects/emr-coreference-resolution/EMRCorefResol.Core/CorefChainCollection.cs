@@ -9,53 +9,40 @@ using System.IO;
 
 namespace HCMUT.EMRCorefResol
 {
-    public class CorefChainCollection : ICollection<CorefChain>, IEnumerable<CorefChain>
+    public class CorefChainCollection : IEnumerable<CorefChain>
     {
-        private readonly Collection<CorefChain> _chains = new Collection<CorefChain>();
-
-        public CorefChain this[int index]
-        {
-            get { return _chains[index]; }
-        }
+        private readonly ICollection<CorefChain> _chains;
 
         public int Count
         {
             get { return _chains.Count; }
         }
 
-        public bool IsReadOnly { get; private set; } = false;
-
         public CorefChainCollection(string chainsFile, IDataReader dataReader)
         {
             var fs = new FileStream(chainsFile, FileMode.Open);
             var sr = new StreamReader(fs);
+            _chains = new Collection<CorefChain>();
 
             while (!sr.EndOfStream)
             {
                 var line = sr.ReadLine();
                 var concepts = dataReader.ReadMultiple(line).OrderBy(c => c.Begin);
                 var type = dataReader.ReadType(line);
-                var chain = new CorefChain(concepts.First(), type);
-                foreach (var c in concepts)
-                {
-                    chain.Add(c);
-                }
+                var chain = new CorefChain(concepts, concepts.First(), type);
                 _chains.Add(chain);
             }
             sr.Close();
         }
 
-        public void Seal()
+        public CorefChainCollection(ICollection<CorefChain> chains)
         {
-            IsReadOnly = true;
+            _chains = chains;
         }
 
-        private void CheckOperation()
+        public CorefChainCollection(IList<CorefChain> chains)
         {
-            if (IsReadOnly)
-            {
-                throw new InvalidOperationException("The collection is currently read only.");
-            }
+            _chains = new Collection<CorefChain>(chains);
         }
 
         public CorefChain GetPatientChain()
@@ -74,6 +61,16 @@ namespace HCMUT.EMRCorefResol
             return result;
         }
 
+        public CorefChain FindChainContains(Concept concept)
+        {
+            foreach (var c in _chains)
+            {
+                if (c.Contains(concept))
+                    return c;
+            }
+            return null;
+        }
+
         #region Enumerator
 
         public IEnumerator<CorefChain> GetEnumerator()
@@ -84,38 +81,6 @@ namespace HCMUT.EMRCorefResol
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
-        }
-
-        #endregion
-
-        #region Collection
-
-        public void Add(CorefChain chain)
-        {
-            CheckOperation();
-            _chains.Add(chain);
-        }
-
-        public void Clear()
-        {
-            CheckOperation();
-            _chains.Clear();
-        }
-
-        public bool Contains(CorefChain chain)
-        {
-            return _chains.Contains(chain);
-        }
-
-        public void CopyTo(CorefChain[] array, int arrayIndex)
-        {
-            _chains.CopyTo(array, arrayIndex);
-        }
-
-        public bool Remove(CorefChain item)
-        {
-            CheckOperation();
-            return _chains.Remove(item);
         }
 
         #endregion

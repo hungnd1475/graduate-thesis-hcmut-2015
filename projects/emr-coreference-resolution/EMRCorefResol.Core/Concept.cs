@@ -68,7 +68,7 @@ namespace HCMUT.EMRCorefResol
 
         public override string ToString()
         {
-            return $"c=\"{Lexicon}\" {Begin}:{End}";
+            return $"c=\"{Lexicon}\" {Begin} {End}";
         }
     }
 }
