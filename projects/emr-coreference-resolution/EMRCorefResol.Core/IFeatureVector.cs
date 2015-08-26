@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol
 {
-    public interface IFeatureVector : IEnumerable<IFeature>
+    public interface IFeatureVector : IIndexedEnumerable<IFeature>
     {
         IFeature this[string name] { get; }
-        double ClassValue { get; }
+        double ClassValue { get; set; }
+        IIndexedEnumerable<string> FeatureNames { get; }
         double[] ToDoubleArray();
     }
 }

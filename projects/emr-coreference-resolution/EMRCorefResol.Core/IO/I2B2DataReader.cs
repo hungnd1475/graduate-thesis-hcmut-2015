@@ -10,9 +10,9 @@ namespace HCMUT.EMRCorefResol.IO
 {
     public class I2B2DataReader : IDataReader
     {
-        private static Regex ConceptPattern = new Regex("c=\"(?<c>.+)\" (?<begin>\\d+:\\d+) (?<end>\\d+:\\d+)");
-        private static Regex ConceptTypePattern = new Regex("t=\"(.+)\"");
-        private static Regex CorefTypePattern = new Regex("t=\"coref (.+)\"");
+        private static Regex ConceptPattern = new Regex("c=\"(?<c>[^|]+)\" (?<begin>\\d+:\\d+) (?<end>\\d+:\\d+)");
+        private static Regex ConceptTypePattern = new Regex("t=\"([^|]+)\"");
+        private static Regex CorefTypePattern = new Regex("t=\"coref ([^|]+)\"");
 
         public IEnumerable<Concept> ReadMultiple(string line)
         {
@@ -39,8 +39,7 @@ namespace HCMUT.EMRCorefResol.IO
         {
             var matchType = ConceptTypePattern.Match(line);
             var matchCoref = CorefTypePattern.Match(line);
-            return matchCoref.Success ? ConceptTypeHelper.Parse(matchCoref.Groups[1].Value, true) :
-                (matchType.Success ? ConceptTypeHelper.Parse(matchType.Groups[1].Value, true) : ConceptType.None);
+            return ReadFromMatch(matchCoref, matchType);
         }
 
         private Concept ReadFromMatch(Match matchConcept, Match matchCoref, Match matchType)
@@ -48,9 +47,15 @@ namespace HCMUT.EMRCorefResol.IO
             var c = matchConcept.Groups["c"].Value;
             var begin = ConceptPosition.Parse(matchConcept.Groups["begin"].Value);
             var end = ConceptPosition.Parse(matchConcept.Groups["end"].Value);
-            var type = matchCoref.Success ? ConceptTypeHelper.Parse(matchCoref.Groups[1].Value, true) :
-                (matchType.Success ? ConceptTypeHelper.Parse(matchType.Groups[1].Value, true) : ConceptType.None);
+            var type = ReadFromMatch(matchCoref, matchType);
             return new Concept(c, begin, end, type);
         }
+
+        private ConceptType ReadFromMatch(Match matchCoref, Match matchType)
+        {
+            return matchCoref.Success ? ConceptTypeHelper.Parse(matchCoref.Groups[1].Value, true) :
+                (matchType.Success ? ConceptTypeHelper.Parse(matchType.Groups[1].Value, true) : ConceptType.None);
+        }
+
     }
 }

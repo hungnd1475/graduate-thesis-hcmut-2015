@@ -39,7 +39,7 @@ namespace HCMUT.EMRCorefResol
         {
         }
 
-        public DefaultIndexedEnumerable(System.Collections.Generic.IEnumerable<T> sequence)
+        public DefaultIndexedEnumerable(IEnumerable<T> sequence)
             : this(sequence.ToList())
         {
         }

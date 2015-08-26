@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol
 {
-	public interface IFeatureExtractor
-	{
-		IFeatureVector Extract(PersonPair instance, string emr);
-		IFeatureVector Extract(ProblemPair instance, string emr);
-		IFeatureVector Extract(TreatmentPair instance, string emr);
-		IFeatureVector Extract(TestPair instance, string emr);
-		IFeatureVector Extract(SingleInstance instance, string emr);
-	}
+    public interface IFeatureExtractor
+    {
+        EMR EMR { get; }
+        IFeatureVector Extract(PersonPair instance);
+        IFeatureVector Extract(ProblemPair instance);
+        IFeatureVector Extract(TreatmentPair instance);
+        IFeatureVector Extract(TestPair instance);
+        IFeatureVector Extract(PronounInstance instance);
+        IFeatureVector Extract(PersonInstance instance);
+    }
 }

@@ -41,7 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EnglishTrainingFeatureExtractor.cs" />
-    <Compile Include="Features\PatientClassFeature.cs" />
+    <Compile Include="Features\PersonPair\PatientClassFeature.cs" />
+    <Compile Include="Features\PersonPair\PersonPairFeatures.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

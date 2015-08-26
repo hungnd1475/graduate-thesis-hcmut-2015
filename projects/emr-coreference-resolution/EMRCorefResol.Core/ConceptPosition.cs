@@ -17,7 +17,7 @@ namespace HCMUT.EMRCorefResol
         /// </summary>
         public int Line { get; private set; }
         /// <summary>
-        /// The letter index.
+        /// The column where concept appears.
         /// </summary>
         public int Column { get; private set; }
 
@@ -58,11 +58,20 @@ namespace HCMUT.EMRCorefResol
             throw new ArgumentNullException();
         }
 
+        /// <summary>
+        /// Gets the string represents the <see cref="ConceptPosition"/>.
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return $"{Line}:{Column}";
         }
 
+        /// <summary>
+        /// Parses a specified string to the corresponding <see cref="ConceptPosition"/>.
+        /// </summary>
+        /// <param name="s">The string represents a <see cref="ConceptPosition"/>, should be in the format [Line]:[Column]</param>
+        /// <returns></returns>
         public static ConceptPosition Parse(string s)
         {
             var p = s.Split(':');

@@ -32,9 +32,9 @@ namespace HCMUT.EMRCorefResol
         /// <summary>
         /// Initializes a <see cref="Concept"/> instance.
         /// </summary>
-        /// <param name="lexicon">The string.</param>
-        /// <param name="begin">The beginning position.</param>
-        /// <param name="end">The ending position.</param>
+        /// <param name="lexicon">The string represents the concept.</param>
+        /// <param name="begin">The begin position of the concept.</param>
+        /// <param name="end">The end position of the concept.</param>
         /// <param name="type">The concept type.</param>
         public Concept(string lexicon, ConceptPosition begin, ConceptPosition end, ConceptType type)
         {
@@ -44,10 +44,21 @@ namespace HCMUT.EMRCorefResol
             this.Type = type;
         }
 
+        /// <summary>
+        /// Initializes a <see cref="Concept"/> instance, with type set to <see cref="ConceptType.None"/>.
+        /// </summary>
+        /// <param name="lexicon">The string represents the concept.</param>
+        /// <param name="begin">The begin position of the concept.</param>
+        /// <param name="end">The end position of the concept.</param>
         public Concept(string lexicon, ConceptPosition begin, ConceptPosition end)
             : this(lexicon, begin, end, ConceptType.None)
         { }
 
+        /// <summary>
+        /// Checks equality with other <see cref="Concept"/> instance.
+        /// </summary>
+        /// <param name="other">The other <see cref="Concept"/> instance.</param>
+        /// <returns>True if equal, otherwise false.</returns>
         public bool Equals(Concept other)
         {
             return string.Equals(Lexicon, other.Lexicon) &&

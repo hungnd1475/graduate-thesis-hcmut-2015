@@ -7,12 +7,15 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol.ConsoleTest
 {
+    using Training.English;
+
     class Program
     {
         static void Main(string[] args)
         {
             //testPreprocessor();
-            testCorefChain();
+            //testCorefChain();
+            testFeatures();
             Console.ReadLine();
         }
 
@@ -38,6 +41,31 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
                 Console.WriteLine("----------------------------------------");
             }
             Console.WriteLine(chains.GetPatientChain());
+        }
+
+        static void testFeatures()
+        {
+            string emrFile = @"..\..\..\..\dataset\Task_1C\i2b2_Test\i2b2_Beth_Test\docs\clinical-3.txt";
+            string conceptsFile = @"..\..\..\..\dataset\Task_1C\i2b2_Test\i2b2_Beth_Test\concepts\clinical-3.txt.con";
+            string chainFile = @"..\..\..\..\dataset\Task_1C_Test_groundtruth\Tack_1C_to_be_released_10_02_2011\i2b2_Beth_Test\chains\clinical-3.txt.chains";
+
+            var reader = new I2B2DataReader();
+            var emr = new EMR(emrFile, conceptsFile, reader);
+            var chains = new CorefChainCollection(chainFile, reader);
+            var instances = new SimplePreprocessor().Process(emr);
+            var extractor = new EnglishTrainingFeatureExtractor(emr, chains);
+
+            foreach (var i in instances)
+            {
+                var f = i.GetFeatures(extractor);
+                if (f != null)
+                    Print(i, f);
+            }           
+        }
+
+        static void Print(IClasInstance i, IFeatureVector fVector)
+        {
+            Console.WriteLine($"{i}---{string.Join(" ", fVector.Select(f => $"{f.Name}:{f.Value}"))}");
         }
     }
 }

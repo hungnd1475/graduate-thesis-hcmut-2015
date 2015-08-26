@@ -6,31 +6,54 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol.Training.English
 {
+    using Features;
+
     public class EnglishTrainingFeatureExtractor : IFeatureExtractor
     {
-        public IFeatureVector Extract(TreatmentPair instance, string emr)
+        private readonly CorefChainCollection _groundTruth;
+
+        public EMR EMR { get; }
+
+        public EnglishTrainingFeatureExtractor(EMR emr, CorefChainCollection groundTruth)
         {
-            throw new NotImplementedException();
+            EMR = emr;
+            _groundTruth = groundTruth;
         }
 
-        public IFeatureVector Extract(SingleInstance instance, string emr)
+        public IFeatureVector Extract(PronounInstance instance)
         {
-            throw new NotImplementedException();
+            return null;
         }
 
-        public IFeatureVector Extract(TestPair instance, string emr)
+        public IFeatureVector Extract(PersonInstance instance)
         {
-            throw new NotImplementedException();
+            return null;
         }
 
-        public IFeatureVector Extract(ProblemPair instance, string emr)
+        public IFeatureVector Extract(TreatmentPair instance)
         {
-            throw new NotImplementedException();
+            return null;
         }
 
-        public IFeatureVector Extract(PersonPair instance, string emr)
+        public IFeatureVector Extract(SingleInstance instance)
         {
-            throw new NotImplementedException();
+            return null;
+        }
+
+        public IFeatureVector Extract(TestPair instance)
+        {
+            return null;
+        }
+
+        public IFeatureVector Extract(ProblemPair instance)
+        {
+            return null;
+        }
+
+        public IFeatureVector Extract(PersonPair instance)
+        {
+            var classValue = _groundTruth.IsCoref(instance) ? 1.0 : 0.0;
+            return new PersonPairFeatures(instance, _groundTruth, classValue);
         }
     }
 }

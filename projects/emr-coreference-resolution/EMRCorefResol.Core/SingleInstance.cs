@@ -15,7 +15,7 @@ namespace HCMUT.EMRCorefResol
             this.Concept = concept;
         }
 
-        public abstract IFeatureVector GetFeatures(IFeatureExtractor extractor, string emr);
+        public abstract IFeatureVector GetFeatures(IFeatureExtractor extractor);
 
         public override string ToString()
         {
@@ -29,9 +29,9 @@ namespace HCMUT.EMRCorefResol
             : base(pronoun)
         { }
 
-        public override IFeatureVector GetFeatures(IFeatureExtractor extractor, string emr)
+        public override IFeatureVector GetFeatures(IFeatureExtractor extractor)
         {
-            return extractor.Extract(this, emr);
+            return extractor.Extract(this);
         }
     }
 
@@ -41,9 +41,9 @@ namespace HCMUT.EMRCorefResol
             : base(person)
         { }
 
-        public override IFeatureVector GetFeatures(IFeatureExtractor extractor, string emr)
+        public override IFeatureVector GetFeatures(IFeatureExtractor extractor)
         {
-            return extractor.Extract(this, emr);
+            return extractor.Extract(this);
         }
     }
 }

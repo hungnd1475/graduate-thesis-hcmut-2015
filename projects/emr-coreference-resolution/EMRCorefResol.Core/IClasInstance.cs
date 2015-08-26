@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol
 {
-	public interface IClasInstance
-	{
-		IFeatureVector GetFeatures(IFeatureExtractor extractor, string emr);
-	}
+    /// <summary>
+    /// Represents a classification instance.
+    /// </summary>
+    public interface IClasInstance
+    {
+        /// <summary>
+        /// Extracts the feature vector from this instance.
+        /// </summary>
+        /// <param name="extractor">The extractor used to extract the features.</param>
+        /// <returns></returns>
+        IFeatureVector GetFeatures(IFeatureExtractor extractor);
+    }
 }

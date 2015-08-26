@@ -8,16 +8,16 @@ namespace HCMUT.EMRCorefResol
 {
     public abstract class PairInstance : IConceptPair, IClasInstance
     {
-        public Concept Antecedent { get; set; }
-        public Concept Anaphora { get; set; }
+        public Concept Antecedent { get; }
+        public Concept Anaphora { get; }
 
         public PairInstance(Concept antecedent, Concept anaphora)
         {
-            this.Antecedent = antecedent;
-            this.Anaphora = anaphora;
+            Antecedent = antecedent;
+            Anaphora = anaphora;
         }
 
-        public abstract IFeatureVector GetFeatures(IFeatureExtractor extractor, string emr);
+        public abstract IFeatureVector GetFeatures(IFeatureExtractor extractor);
 
         public override string ToString()
         {
@@ -29,9 +29,9 @@ namespace HCMUT.EMRCorefResol
     {
         public PersonPair(Concept antecedent, Concept anaphora) : base(antecedent, anaphora) { }
 
-        public override IFeatureVector GetFeatures(IFeatureExtractor extractor, string emr)
+        public override IFeatureVector GetFeatures(IFeatureExtractor extractor)
         {
-            return extractor.Extract(this, emr);
+            return extractor.Extract(this);
         }
     }
 
@@ -39,9 +39,9 @@ namespace HCMUT.EMRCorefResol
     {
         public ProblemPair(Concept antecedent, Concept anaphora) : base(antecedent, anaphora) { }
 
-        public override IFeatureVector GetFeatures(IFeatureExtractor extractor, string emr)
+        public override IFeatureVector GetFeatures(IFeatureExtractor extractor)
         {
-            return extractor.Extract(this, emr);
+            return extractor.Extract(this);
         }
     }
 
@@ -49,9 +49,9 @@ namespace HCMUT.EMRCorefResol
     {
         public TreatmentPair(Concept antecedent, Concept anaphora) : base(antecedent, anaphora) { }
 
-        public override IFeatureVector GetFeatures(IFeatureExtractor extractor, string emr)
+        public override IFeatureVector GetFeatures(IFeatureExtractor extractor)
         {
-            return extractor.Extract(this, emr);
+            return extractor.Extract(this);
         }
     }
 
@@ -59,9 +59,9 @@ namespace HCMUT.EMRCorefResol
     {
         public TestPair(Concept antecedent, Concept anaphora) : base(antecedent, anaphora) { }
 
-        public override IFeatureVector GetFeatures(IFeatureExtractor extractor, string emr)
+        public override IFeatureVector GetFeatures(IFeatureExtractor extractor)
         {
-            return extractor.Extract(this, emr);
+            return extractor.Extract(this);
         }
     }
 }
