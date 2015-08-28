@@ -5,9 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HCMUT.EMRCorefResol.Training.English.Features
+namespace HCMUT.EMRCorefResol
 {
-    class PersonPairFeatures : IFeatureVector
+    /// <summary>
+    /// Provides a base class for easy implementing <see cref="IFeatureVector"/> interface
+    /// using <see cref="Dictionary{TKey, TValue}"/> as internal implementation.
+    /// </summary>
+    public class FeatureVector : IFeatureVector
     {
         private readonly Dictionary<string, IFeature> _features = new Dictionary<string, IFeature>();
         private readonly List<string> _names = new List<string>();
@@ -34,18 +38,6 @@ namespace HCMUT.EMRCorefResol.Training.English.Features
             get { return _names.ToIndexedEnumerable(); }
         }
 
-        public PersonPairFeatures(PersonPair instance, CorefChainCollection groundTruth, double classValue)
-        {
-            AddFeature(new PatientClassFeature(instance, groundTruth));
-            ClassValue = classValue;
-        }
-
-        private void AddFeature(IFeature feature)
-        {
-            _features.Add(feature.Name, feature);
-            _names.Add(feature.Name);
-        }
-
         public IEnumerator<IFeature> GetEnumerator()
         {
             return _features.Values.GetEnumerator();
@@ -59,6 +51,12 @@ namespace HCMUT.EMRCorefResol.Training.English.Features
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
+        }
+
+        protected void AddFeature(IFeature f)
+        {
+            _features.Add(f.Name, f);
+            _names.Add(f.Name);
         }
     }
 }

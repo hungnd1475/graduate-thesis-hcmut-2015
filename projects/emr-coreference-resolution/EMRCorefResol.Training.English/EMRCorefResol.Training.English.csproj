@@ -42,7 +42,8 @@
   <ItemGroup>
     <Compile Include="EnglishTrainingFeatureExtractor.cs" />
     <Compile Include="Features\PersonPair\PatientClassFeature.cs" />
-    <Compile Include="Features\PersonPair\PersonPairFeatures.cs" />
+    <Compile Include="Features\PersonPairFeatures.cs" />
+    <Compile Include="Features\SentenceDistanceFeature.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

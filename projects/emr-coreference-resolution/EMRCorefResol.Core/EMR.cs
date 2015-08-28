@@ -21,7 +21,7 @@ namespace HCMUT.EMRCorefResol
         /// <summary>
         /// Gets the collection of concepts recognized from EMR.
         /// </summary>
-        public IIndexedEnumerable<Concept> Concepts { get; }
+        public ConceptCollection Concepts { get; }
 
         /// <summary>
         /// Initializes an <see cref="EMR"/> instance from raw content and concepts file.
@@ -36,19 +36,7 @@ namespace HCMUT.EMRCorefResol
             Content = sr.ReadToEnd();
             sr.Close();
 
-            fs = new FileStream(conceptsFile, FileMode.Open);
-            sr = new StreamReader(fs);
-            List<Concept> concepts = new List<Concept>();
-            
-            while (!sr.EndOfStream)
-            {
-                var line = sr.ReadLine();
-                var c = dataReader.ReadSingle(line);
-                if (c != null) concepts.Add(c);
-            }
-            sr.Close();
-
-            Concepts = concepts.OrderBy(c => c.Begin).ToIndexedEnumerable();
+            Concepts = new ConceptCollection(conceptsFile, dataReader);            
         }
     }
 }

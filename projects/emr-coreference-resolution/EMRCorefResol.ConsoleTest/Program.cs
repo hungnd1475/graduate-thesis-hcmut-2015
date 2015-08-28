@@ -15,8 +15,18 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
         {
             //testPreprocessor();
             //testCorefChain();
-            testFeatures();
+            //testFeatures();
+            testReadEMR();
             Console.ReadLine();
+        }
+
+        static EMR testReadEMR()
+        {
+            string emrFile = @"..\..\..\..\dataset\Task_1C\i2b2_Test\i2b2_Beth_Test\docs\clinical-3.txt";
+            string conceptsFile = @"..\..\..\..\dataset\Task_1C\i2b2_Test\i2b2_Beth_Test\concepts\clinical-3.txt.con";
+            var emr = new EMR(emrFile, conceptsFile, new I2B2DataReader());
+            Console.WriteLine(emr.Content);
+            return emr;
         }
 
         static void testPreprocessor()

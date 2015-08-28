@@ -8,16 +8,15 @@ namespace HCMUT.EMRCorefResol.Training.English
 {
     using Features;
 
-    public class EnglishTrainingFeatureExtractor : IFeatureExtractor
+    public class EnglishTrainingFeatureExtractor : ITrainingFeatureExtractor
     {
-        private readonly CorefChainCollection _groundTruth;
-
-        public EMR EMR { get; }
+        public EMR EMR { get; set; }
+        public CorefChainCollection GroundTruth { get; set; }
 
         public EnglishTrainingFeatureExtractor(EMR emr, CorefChainCollection groundTruth)
         {
             EMR = emr;
-            _groundTruth = groundTruth;
+            GroundTruth = groundTruth;
         }
 
         public IFeatureVector Extract(PronounInstance instance)
@@ -52,8 +51,8 @@ namespace HCMUT.EMRCorefResol.Training.English
 
         public IFeatureVector Extract(PersonPair instance)
         {
-            var classValue = _groundTruth.IsCoref(instance) ? 1.0 : 0.0;
-            return new PersonPairFeatures(instance, _groundTruth, classValue);
+            var classValue = GroundTruth.IsCoref(instance) ? 1.0 : 0.0;
+            return new PersonPairFeatures(instance, GroundTruth, classValue);
         }
     }
 }

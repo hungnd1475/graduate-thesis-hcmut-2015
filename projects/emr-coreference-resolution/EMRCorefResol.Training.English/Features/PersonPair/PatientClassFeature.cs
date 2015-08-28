@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol.Training.English.Features
 {
-    class PatientClassFeature : IFeature
+    class PatientClassFeature : Feature
     {
-        public string Name { get; } = "Patient-class";
-
-        public double Value { get; }
-
         public PatientClassFeature(PersonPair instance, CorefChainCollection groundTruth)
+            : base("Patient-Class")
         {
             var patientChain = groundTruth.GetPatientChain();
             Value = (patientChain.Contains(instance.Antecedent) && patientChain.Contains(instance.Anaphora)) ? 1.0 : 0.0;

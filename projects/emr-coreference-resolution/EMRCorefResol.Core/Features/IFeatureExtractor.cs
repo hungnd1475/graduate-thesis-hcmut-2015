@@ -8,7 +8,7 @@ namespace HCMUT.EMRCorefResol
 {
     public interface IFeatureExtractor
     {
-        EMR EMR { get; }
+        EMR EMR { get; set; }
         IFeatureVector Extract(PersonPair instance);
         IFeatureVector Extract(ProblemPair instance);
         IFeatureVector Extract(TreatmentPair instance);
