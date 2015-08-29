@@ -19,7 +19,7 @@ namespace HCMUT.EMRCorefResol
         /// <summary>
         /// The column where concept appears.
         /// </summary>
-        public int Column { get; private set; }
+        public int WordIndex { get; private set; }
 
         /// <summary>
         /// Initializes a <see cref="ConceptPosition"/> instance.
@@ -30,7 +30,7 @@ namespace HCMUT.EMRCorefResol
             : this()
         {
             this.Line = line;
-            this.Column = column;
+            this.WordIndex = column;
         }
 
         /// <summary>
@@ -42,7 +42,7 @@ namespace HCMUT.EMRCorefResol
         {
             if (this.Line == other.Line)
             {
-                return this.Column - other.Column;
+                return this.WordIndex - other.WordIndex;
             }
             else
             {
@@ -64,7 +64,7 @@ namespace HCMUT.EMRCorefResol
         /// <returns></returns>
         public override string ToString()
         {
-            return $"{Line}:{Column}";
+            return $"{Line}:{WordIndex}";
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace HCMUT.EMRCorefResol
 
         public override int GetHashCode()
         {
-            return HashCodeHelper.ComputeHashCode(Line, Column);
+            return HashCodeHelper.ComputeHashCode(Line, WordIndex);
         }
     }
 }

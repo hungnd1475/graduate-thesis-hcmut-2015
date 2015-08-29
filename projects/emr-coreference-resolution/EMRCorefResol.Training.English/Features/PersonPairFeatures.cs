@@ -9,9 +9,10 @@ namespace HCMUT.EMRCorefResol.Training.English.Features
 {
     class PersonPairFeatures : FeatureVector
     {
-        public PersonPairFeatures(PersonPair instance, CorefChainCollection groundTruth, double classValue)
+        public PersonPairFeatures(PersonPair instance, EMR emr, CorefChainCollection groundTruth, double classValue)
         {
             AddFeature(new PatientClassFeature(instance, groundTruth));
+            AddFeature(new SentenceDistanceFeature(instance, emr));
             ClassValue = classValue;
         }
     }

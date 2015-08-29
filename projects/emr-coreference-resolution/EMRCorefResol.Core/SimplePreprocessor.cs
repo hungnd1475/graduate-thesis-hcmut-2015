@@ -26,6 +26,11 @@ namespace HCMUT.EMRCorefResol
                         var ana = emr.Concepts[j];
                         if (ante.Type == ana.Type)
                         {
+                            if (ana.Begin.CompareTo(ante.Begin) < 0)
+                            {
+                                Swap(ref ante, ref ana);
+                            }
+
                             switch (ante.Type)
                             {
                                 case ConceptType.Person:
@@ -52,6 +57,13 @@ namespace HCMUT.EMRCorefResol
             }
 
             return instances.ToIndexedEnumerable();
+        }
+
+        private void Swap(ref Concept c1, ref Concept c2)
+        {
+            var t = c1;
+            c1 = c2;
+            c2 = t;
         }
     }
 }

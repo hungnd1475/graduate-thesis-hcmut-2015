@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 namespace HCMUT.EMRCorefResol
 {
     /// <summary>
-    /// Represents an EMR with entity recognized.
+    /// Represents an EMR with entities recognized.
     /// </summary>
     public class EMR
     {
@@ -37,6 +37,33 @@ namespace HCMUT.EMRCorefResol
             sr.Close();
 
             Concepts = new ConceptCollection(conceptsFile, dataReader);            
+        }
+
+        public int BeginIndexOf(Concept c)
+        {
+            int line = 1, index = 0, nextIndex = 0;
+            while (line < c.Begin.Line)
+            {
+                index = nextIndex;
+                nextIndex = Content.IndexOf(Environment.NewLine, nextIndex) + Environment.NewLine.Length;
+                line += 1;
+            }
+
+            int word = -1;
+            while (word < c.Begin.WordIndex)
+            {
+                index = nextIndex;
+                nextIndex = Content.IndexOf(' ', nextIndex) + 1;
+                word += 1;
+            }
+
+            return index;
+        }
+
+        public int EndIndexOf(Concept c)
+        {
+            var bIndex = BeginIndexOf(c);
+            return bIndex + c.Lexicon.Length - 1;
         }
     }
 }
