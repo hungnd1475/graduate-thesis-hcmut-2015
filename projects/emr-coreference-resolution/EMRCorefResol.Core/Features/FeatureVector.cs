@@ -11,7 +11,7 @@ namespace HCMUT.EMRCorefResol
     /// Provides a base class for easy implementing <see cref="IFeatureVector"/> interface
     /// using <see cref="Dictionary{TKey, TValue}"/> as internal implementation.
     /// </summary>
-    public class FeatureVector : IFeatureVector
+    public abstract class FeatureVector : IFeatureVector
     {
         private readonly Dictionary<string, IFeature> _features = new Dictionary<string, IFeature>();
         private readonly List<string> _names = new List<string>();

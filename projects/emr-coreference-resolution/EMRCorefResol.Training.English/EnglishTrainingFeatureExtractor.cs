@@ -34,11 +34,6 @@ namespace HCMUT.EMRCorefResol.Training.English
             return null;
         }
 
-        public IFeatureVector Extract(SingleInstance instance)
-        {
-            return null;
-        }
-
         public IFeatureVector Extract(TestPair instance)
         {
             return null;

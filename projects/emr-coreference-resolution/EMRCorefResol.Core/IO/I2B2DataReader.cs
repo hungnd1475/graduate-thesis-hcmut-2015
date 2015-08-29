@@ -22,7 +22,7 @@ namespace HCMUT.EMRCorefResol.IO
 
             while (matchConcept.Success)
             {
-                yield return ReadFromMatch(matchConcept, matchCorefType, matchType);
+                yield return ReadConcept(matchConcept, matchCorefType, matchType);
                 matchConcept = matchConcept.NextMatch();
             }
         }
@@ -32,30 +32,29 @@ namespace HCMUT.EMRCorefResol.IO
             var matchConcept = ConceptPattern.Match(line);
             var matchType = ConceptTypePattern.Match(line);
             var matchCoref = CorefTypePattern.Match(line);
-            return matchConcept.Success ? ReadFromMatch(matchConcept, matchCoref, matchType) : null;
+            return matchConcept.Success ? ReadConcept(matchConcept, matchCoref, matchType) : null;
         }
 
         public ConceptType ReadType(string line)
         {
             var matchType = ConceptTypePattern.Match(line);
             var matchCoref = CorefTypePattern.Match(line);
-            return ReadFromMatch(matchCoref, matchType);
+            return ReadType(matchCoref, matchType);
         }
 
-        private Concept ReadFromMatch(Match matchConcept, Match matchCoref, Match matchType)
+        private Concept ReadConcept(Match matchConcept, Match matchCoref, Match matchType)
         {
             var c = matchConcept.Groups["c"].Value;
             var begin = ConceptPosition.Parse(matchConcept.Groups["begin"].Value);
             var end = ConceptPosition.Parse(matchConcept.Groups["end"].Value);
-            var type = ReadFromMatch(matchCoref, matchType);
+            var type = ReadType(matchCoref, matchType);
             return new Concept(c, begin, end, type);
         }
 
-        private ConceptType ReadFromMatch(Match matchCoref, Match matchType)
+        private ConceptType ReadType(Match matchCoref, Match matchType)
         {
             return matchCoref.Success ? ConceptTypeHelper.Parse(matchCoref.Groups[1].Value, true) :
                 (matchType.Success ? ConceptTypeHelper.Parse(matchType.Groups[1].Value, true) : ConceptType.None);
         }
-
     }
 }

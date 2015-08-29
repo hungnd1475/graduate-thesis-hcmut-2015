@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol
 {
-    public class Feature : IFeature
+    public abstract class Feature : IFeature
     {
         public string Name { get; }
 

@@ -11,7 +11,7 @@ namespace HCMUT.EMRCorefResol.Training.English.Features
         public SentenceDistanceFeature(IConceptPair instance, EMR emr)
             : base("Sentence-Distance")
         {
-
+            
         }
     }
 }
