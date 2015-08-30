@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HCMUT.EMRCorefResol.Training.English.Features
+namespace HCMUT.EMRCorefResol.English.Features
 {
     class PatientClassFeature : Feature
     {

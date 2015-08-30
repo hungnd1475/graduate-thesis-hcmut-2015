@@ -39,6 +39,11 @@ namespace HCMUT.EMRCorefResol
             Concepts = new ConceptCollection(conceptsFile, dataReader);            
         }
 
+        /// <summary>
+        /// Calculates the first letter index of a specified concept in the raw content.
+        /// </summary>
+        /// <param name="c">The concept.</param>
+        /// <returns></returns>
         public int BeginIndexOf(Concept c)
         {
             int line = 1, index = 0, nextIndex = 0;
@@ -60,6 +65,11 @@ namespace HCMUT.EMRCorefResol
             return index;
         }
 
+        /// <summary>
+        /// Calculates the last letter index of a specified concept in the raw content.
+        /// </summary>
+        /// <param name="c"></param>
+        /// <returns></returns>
         public int EndIndexOf(Concept c)
         {
             var bIndex = BeginIndexOf(c);

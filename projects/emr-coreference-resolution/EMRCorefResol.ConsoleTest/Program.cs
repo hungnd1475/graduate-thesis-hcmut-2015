@@ -4,19 +4,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace HCMUT.EMRCorefResol.ConsoleTest
 {
-    using Training.English;
+    using English;
 
     class Program
     {
         static void Main(string[] args)
         {
+            var sw = new Stopwatch();
+            sw.Start();
+
             //testPreprocessor();
             //testCorefChain();
             testFeatures();
             //testReadEMR();
+
+            sw.Stop();
+            Console.WriteLine($"Execution time: {sw.ElapsedMilliseconds}ms");
             Console.ReadLine();
         }
 
@@ -25,14 +32,11 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             string emrFile = @"..\..\..\..\dataset\Task_1C\i2b2_Test\i2b2_Beth_Test\docs\clinical-3.txt";
             string conceptsFile = @"..\..\..\..\dataset\Task_1C\i2b2_Test\i2b2_Beth_Test\concepts\clinical-3.txt.con";
             var emr = new EMR(emrFile, conceptsFile, new I2B2DataReader());
-            Console.WriteLine(emr.Content);
-            Console.WriteLine(emr.Concepts[1]);
-
-            var bIndex = emr.BeginIndexOf(emr.Concepts[1]);
-            var eIndex = emr.EndIndexOf(emr.Concepts[1]);
-            Console.WriteLine(bIndex);
-            Console.WriteLine(eIndex);
-            Console.WriteLine(emr.Content.Substring(bIndex, eIndex - bIndex + 1));
+            
+            for (int i = 0; i < emr.Concepts.Count; i++)
+            {
+                Console.WriteLine($"{emr.Concepts[i]}||t={emr.Concepts[i].Type.ToString().ToLower()}");
+            }
             return emr;
         }
 
@@ -72,17 +76,19 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             var instances = new SimplePreprocessor().Process(emr);
             var extractor = new EnglishTrainingFeatureExtractor(emr, chains);
 
-            foreach (var i in instances)
+            Parallel.ForEach(instances, i =>
             {
                 var f = i.GetFeatures(extractor);
                 if (f != null)
+                {
                     Print(i, f);
-            }           
+                }
+            });
         }
 
         static void Print(IClasInstance i, IFeatureVector fVector)
         {
-            Console.WriteLine($"{i}---{string.Join(" ", fVector.Select(f => $"{f.Name}:{f.Value}"))}");
+            Console.WriteLine($"{i}\nClass-Value:{fVector.ClassValue} {string.Join(" ", fVector.Select(f => $"{f.Name}:{f.Value}"))}\n");
         }
     }
 }

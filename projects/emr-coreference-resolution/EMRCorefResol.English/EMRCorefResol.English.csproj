@@ -7,8 +7,8 @@
     <ProjectGuid>{431BA8EE-38D6-4AA1-97AF-8E94889AAECC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HCMUT.EMRCorefResol.Training.English</RootNamespace>
-    <AssemblyName>EMRCorefResol.Training.English</AssemblyName>
+    <RootNamespace>HCMUT.EMRCorefResol.English</RootNamespace>
+    <AssemblyName>EMRCorefResol.English</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,9 +41,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EnglishTrainingFeatureExtractor.cs" />
+    <Compile Include="Features\LevenshteinDistanceFeature.cs" />
+    <Compile Include="Features\MentionDistanceFeature.cs" />
     <Compile Include="Features\PersonPair\PatientClassFeature.cs" />
-    <Compile Include="Features\PersonPairFeatures.cs" />
+    <Compile Include="PersonPairFeatures.cs" />
     <Compile Include="Features\SentenceDistanceFeature.cs" />
+    <Compile Include="Features\StringMatchFeature.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

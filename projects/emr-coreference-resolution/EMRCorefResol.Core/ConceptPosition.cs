@@ -15,11 +15,11 @@ namespace HCMUT.EMRCorefResol
         /// <summary>
         /// The line where concept appears.
         /// </summary>
-        public int Line { get; private set; }
+        public int Line { get; }
         /// <summary>
         /// The column where concept appears.
         /// </summary>
-        public int WordIndex { get; private set; }
+        public int WordIndex { get; }
 
         /// <summary>
         /// Initializes a <see cref="ConceptPosition"/> instance.

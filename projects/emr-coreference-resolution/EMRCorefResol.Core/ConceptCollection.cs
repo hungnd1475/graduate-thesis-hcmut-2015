@@ -8,17 +8,18 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol
 {
+    /// <summary>
+    /// Represents a collection of concepts appear in an EMR
+    /// and guaranteed to be sorted by position in which they appears.
+    /// </summary>
     public class ConceptCollection : IIndexedEnumerable<Concept>
     {
-        private readonly Dictionary<ConceptPosition, Concept> _concepts = 
-            new Dictionary<ConceptPosition, Concept>();
-
-        private List<ConceptPosition> _positions = 
-            new List<ConceptPosition>();
+        private readonly SortedList<ConceptPosition, Concept> _concepts
+            = new SortedList<ConceptPosition, Concept>();
 
         public Concept this[int index]
         {
-            get { return _concepts[_positions[index]]; }
+            get { return _concepts.Values[index]; }
         }
 
         public Concept this[ConceptPosition begin]
@@ -43,10 +44,14 @@ namespace HCMUT.EMRCorefResol
                 if (c != null)
                 {
                     _concepts.Add(c.Begin, c);
-                    _positions.Add(c.Begin);
                 }
             }
             sr.Close();
+        }
+
+        public int IndexOf(Concept concept)
+        {
+            return _concepts.IndexOfValue(concept);
         }
 
         public IEnumerator<Concept> GetEnumerator()

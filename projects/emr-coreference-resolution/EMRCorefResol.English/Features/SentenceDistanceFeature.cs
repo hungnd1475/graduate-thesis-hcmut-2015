@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HCMUT.EMRCorefResol.Training.English.Features
+namespace HCMUT.EMRCorefResol.English.Features
 {
     class SentenceDistanceFeature : Feature
     {
@@ -14,21 +14,13 @@ namespace HCMUT.EMRCorefResol.Training.English.Features
             var begin = emr.EndIndexOf(instance.Antecedent);
             var end = emr.BeginIndexOf(instance.Anaphora);
             var s = emr.Content.Substring(begin + 1, end - begin - 1);
-
-            Value = 0;
             int index = 0;
 
             while (true)
             {
                 index = s.IndexOf(" .", index);
-                if (index >= 0)
-                {
-                    index += 2;
-                }
-                else
-                {
-                    break;
-                }
+                if (index >= 0) index += 2;
+                else break;
                 Value += 1;
             }
         }

@@ -4,10 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HCMUT.EMRCorefResol.Training.English
+namespace HCMUT.EMRCorefResol.English
 {
-    using Features;
-
     public class EnglishTrainingFeatureExtractor : ITrainingFeatureExtractor
     {
         public EMR EMR { get; set; }
