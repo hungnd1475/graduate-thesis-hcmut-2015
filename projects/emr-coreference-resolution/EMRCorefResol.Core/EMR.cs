@@ -38,42 +38,5 @@ namespace HCMUT.EMRCorefResol
 
             Concepts = new ConceptCollection(conceptsFile, dataReader);            
         }
-
-        /// <summary>
-        /// Calculates the first letter index of a specified concept in the raw content.
-        /// </summary>
-        /// <param name="c">The concept.</param>
-        /// <returns></returns>
-        public int BeginIndexOf(Concept c)
-        {
-            int line = 1, index = 0, nextIndex = 0;
-            while (line < c.Begin.Line)
-            {
-                index = nextIndex;
-                nextIndex = Content.IndexOf(Environment.NewLine, nextIndex) + Environment.NewLine.Length;
-                line += 1;
-            }
-
-            int word = -1;
-            while (word < c.Begin.WordIndex)
-            {
-                index = nextIndex;
-                nextIndex = Content.IndexOf(' ', nextIndex) + 1;
-                word += 1;
-            }
-
-            return index;
-        }
-
-        /// <summary>
-        /// Calculates the last letter index of a specified concept in the raw content.
-        /// </summary>
-        /// <param name="c"></param>
-        /// <returns></returns>
-        public int EndIndexOf(Concept c)
-        {
-            var bIndex = BeginIndexOf(c);
-            return bIndex + c.Lexicon.Length - 1;
-        }
     }
 }

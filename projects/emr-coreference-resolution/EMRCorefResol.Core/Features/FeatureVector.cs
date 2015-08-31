@@ -8,55 +8,43 @@ using System.Threading.Tasks;
 namespace HCMUT.EMRCorefResol
 {
     /// <summary>
-    /// Provides a base class for easy implementing <see cref="IFeatureVector"/> interface
-    /// using <see cref="Dictionary{TKey, TValue}"/> as internal implementation.
+    /// Provides a base class for easy implementing <see cref="IFeatureVector"/>.
     /// </summary>
     public abstract class FeatureVector : IFeatureVector
     {
-        private readonly Dictionary<string, IFeature> _features = new Dictionary<string, IFeature>();
-        private readonly List<string> _names = new List<string>();
+        private readonly IFeature[] _features;
 
         public IFeature this[int index]
         {
-            get { return _features[_names[index]]; }
-        }
-
-        public IFeature this[string name]
-        {
-            get { return _features[name]; }
+            get { return _features[index]; }
+            protected set { _features[index] = value; }
         }
 
         public double ClassValue { get; set; }
 
-        public int Count
+        public int Size
         {
-            get { return _features.Count; }
+            get { return _features.Length; }
         }
 
-        public IIndexedEnumerable<string> FeatureNames
+        public FeatureVector(int size)
         {
-            get { return _names.ToIndexedEnumerable(); }
+            _features = new IFeature[size];
         }
 
         public IEnumerator<IFeature> GetEnumerator()
         {
-            return _features.Values.GetEnumerator();
+            return _features.AsEnumerable().GetEnumerator();
         }
 
         public double[] ToDoubleArray()
         {
-            return _features.Values.Select(f => f.Value).ToArray();
+            return _features.Select(f => f.Value).ToArray();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
-        }
-
-        protected void AddFeature(IFeature f)
-        {
-            _features.Add(f.Name, f);
-            _names.Add(f.Name);
         }
     }
 }

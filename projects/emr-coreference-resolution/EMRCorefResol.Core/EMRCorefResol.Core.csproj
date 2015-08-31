@@ -65,6 +65,7 @@
     <Compile Include="SimplePreprocessor.cs" />
     <Compile Include="SingleInstance.cs" />
     <Compile Include="Utilities\ConceptTypeHelper.cs" />
+    <Compile Include="Utilities\EMRHelper.cs" />
     <Compile Include="Utilities\HashCodeHelper.cs" />
   </ItemGroup>
   <ItemGroup>

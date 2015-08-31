@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EnglishTrainingFeatureExtractor.cs" />
+    <Compile Include="Features\AppositionFeature.cs" />
     <Compile Include="Features\LevenshteinDistanceFeature.cs" />
     <Compile Include="Features\MentionDistanceFeature.cs" />
     <Compile Include="Features\PersonPair\PatientClassFeature.cs" />
