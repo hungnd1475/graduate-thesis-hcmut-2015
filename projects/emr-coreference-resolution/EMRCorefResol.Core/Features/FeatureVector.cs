@@ -28,8 +28,13 @@ namespace HCMUT.EMRCorefResol
         }
 
         public FeatureVector(int size)
+            : this(size, 0.0)
+        { }
+
+        public FeatureVector(int size, double classValue)
         {
             _features = new IFeature[size];
+            ClassValue = classValue;
         }
 
         public IEnumerator<IFeature> GetEnumerator()
