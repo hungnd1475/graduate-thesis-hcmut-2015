@@ -13,7 +13,7 @@ namespace HCMUT.EMRCorefResol.English.Features
         public AppositionFeature(IConceptPair instance, EMR emr, double mentionDistance)
             : base("Apposition")
         {
-            // checks if the two concept is in a same sentence and separated by a comma
+            // checks if the two concepts are in a same sentence and separated by a comma
             if (mentionDistance == 0)
             {
                 var s = emr.ContentBetween(instance.Antecedent, instance.Anaphora);
