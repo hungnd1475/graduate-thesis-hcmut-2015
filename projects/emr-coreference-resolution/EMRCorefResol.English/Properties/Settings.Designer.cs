@@ -25,27 +25,38 @@ namespace HCMUT.EMRCorefResol.English.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
-<ArrayOfString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
-  <string>dr</string>
-  <string>dr.</string>
-  <string>mr</string>
-  <string>ms</string>
-  <string>mrs</string>
-  <string>md</string>
-  <string>m.d.</string>
-  <string>m.d</string>
-  <string>,</string>
-  <string>m</string>
-  <string>m.</string>
-  <string>:</string>
-</ArrayOfString>")]
-        public global::System.Collections.Specialized.StringCollection PersonStopWords {
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
+            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
+            "tring>audiologist</string>\r\n  <string>allergist</string>\r\n  <string>andrologist<" +
+            "/string>\r\n  <string>anesthesiologist</string>\r\n  <string>cardiologist</string>\r\n" +
+            "  <string>cardiovascular surgeon</string>\r\n  <string>clinical neurophysiologis</" +
+            "string>\r\n  <string>dentist</string>\r\n  <string>dermatologist</string>\r\n  <string" +
+            ">dmergency doctors</string>\r\n  <string>endocrinologist</string>\r\n  <string>epide" +
+            "miologist</string>\r\n  <string>ent specialist</string>\r\n  <string>family practiti" +
+            "oner</string>\r\n  <string>gastroenterologist</string>\r\n  <string>gynecologist</st" +
+            "ring>\r\n  <string>general psychiatrist</string>\r\n  <string>hematologist</string>\r" +
+            "\n  <string>hepatologist</string>\r\n  <string>immunologist</string>\r\n  <string>inf" +
+            "ectious disease specialist</string>\r\n  <string>internal medicine specialist</str" +
+            "ing>\r\n  <string>internist</string>\r\n  <string>medical geneticist</string>\r\n  <st" +
+            "ring>microbiologist</string>\r\n  <string>neonatologist</string>\r\n  <string>nephro" +
+            "logists</string>\r\n  <string>neurologist</string>\r\n  <string>neurosurgeons</strin" +
+            "g>\r\n  <string>obstetrician</string>\r\n  <string>oncologist</string>\r\n  <string>op" +
+            "hthalmologist</string>\r\n  <string>orthodontist</string>\r\n  <string>orthopedic su" +
+            "rgeon</string>\r\n  <string>orthopedist</string>\r\n  <string>primatologist</string>" +
+            "\r\n  <string>pale pathologist</string>\r\n  <string>parasitologist</string>\r\n  <str" +
+            "ing>pathologist</string>\r\n  <string>pediatrician</string>\r\n  <string>plastic sur" +
+            "geon</string>\r\n  <string>physiologist</string>\r\n  <string>physiatrist</string>\r\n" +
+            "  <string>plastic surgeon</string>\r\n  <string>podiatrist</string>\r\n  <string>psy" +
+            "chiatrist</string>\r\n  <string>pulmonologist</string>\r\n  <string>radiologist</str" +
+            "ing>\r\n  <string>reproductive endocrinologist</string>\r\n  <string>rheumatologist<" +
+            "/string>\r\n  <string>surgeon</string>\r\n  <string>thoracic oncologist</string>\r\n  " +
+            "<string>urologist</string>\r\n  <string>veterinarian</string>\r\n</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection DoctorTitles {
             get {
-                return ((global::System.Collections.Specialized.StringCollection)(this["PersonStopWords"]));
+                return ((global::System.Collections.Specialized.StringCollection)(this["DoctorTitles"]));
             }
             set {
-                this["PersonStopWords"] = value;
+                this["DoctorTitles"] = value;
             }
         }
     }

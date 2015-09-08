@@ -2,21 +2,63 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="HCMUT.EMRCorefResol.English.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="PersonStopWords" Type="System.Collections.Specialized.StringCollection" Scope="User">
+    <Setting Name="DoctorTitles" Type="System.Collections.Specialized.StringCollection" Scope="User">
       <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;string&gt;dr&lt;/string&gt;
-  &lt;string&gt;dr.&lt;/string&gt;
-  &lt;string&gt;mr&lt;/string&gt;
-  &lt;string&gt;ms&lt;/string&gt;
-  &lt;string&gt;mrs&lt;/string&gt;
-  &lt;string&gt;md&lt;/string&gt;
-  &lt;string&gt;m.d.&lt;/string&gt;
-  &lt;string&gt;m.d&lt;/string&gt;
-  &lt;string&gt;,&lt;/string&gt;
-  &lt;string&gt;m&lt;/string&gt;
-  &lt;string&gt;m.&lt;/string&gt;
-  &lt;string&gt;:&lt;/string&gt;
+  &lt;string&gt;audiologist&lt;/string&gt;
+  &lt;string&gt;allergist&lt;/string&gt;
+  &lt;string&gt;andrologist&lt;/string&gt;
+  &lt;string&gt;anesthesiologist&lt;/string&gt;
+  &lt;string&gt;cardiologist&lt;/string&gt;
+  &lt;string&gt;cardiovascular surgeon&lt;/string&gt;
+  &lt;string&gt;clinical neurophysiologis&lt;/string&gt;
+  &lt;string&gt;dentist&lt;/string&gt;
+  &lt;string&gt;dermatologist&lt;/string&gt;
+  &lt;string&gt;dmergency doctors&lt;/string&gt;
+  &lt;string&gt;endocrinologist&lt;/string&gt;
+  &lt;string&gt;epidemiologist&lt;/string&gt;
+  &lt;string&gt;ent specialist&lt;/string&gt;
+  &lt;string&gt;family practitioner&lt;/string&gt;
+  &lt;string&gt;gastroenterologist&lt;/string&gt;
+  &lt;string&gt;gynecologist&lt;/string&gt;
+  &lt;string&gt;general psychiatrist&lt;/string&gt;
+  &lt;string&gt;hematologist&lt;/string&gt;
+  &lt;string&gt;hepatologist&lt;/string&gt;
+  &lt;string&gt;immunologist&lt;/string&gt;
+  &lt;string&gt;infectious disease specialist&lt;/string&gt;
+  &lt;string&gt;internal medicine specialist&lt;/string&gt;
+  &lt;string&gt;internist&lt;/string&gt;
+  &lt;string&gt;medical geneticist&lt;/string&gt;
+  &lt;string&gt;microbiologist&lt;/string&gt;
+  &lt;string&gt;neonatologist&lt;/string&gt;
+  &lt;string&gt;nephrologists&lt;/string&gt;
+  &lt;string&gt;neurologist&lt;/string&gt;
+  &lt;string&gt;neurosurgeons&lt;/string&gt;
+  &lt;string&gt;obstetrician&lt;/string&gt;
+  &lt;string&gt;oncologist&lt;/string&gt;
+  &lt;string&gt;ophthalmologist&lt;/string&gt;
+  &lt;string&gt;orthodontist&lt;/string&gt;
+  &lt;string&gt;orthopedic surgeon&lt;/string&gt;
+  &lt;string&gt;orthopedist&lt;/string&gt;
+  &lt;string&gt;primatologist&lt;/string&gt;
+  &lt;string&gt;pale pathologist&lt;/string&gt;
+  &lt;string&gt;parasitologist&lt;/string&gt;
+  &lt;string&gt;pathologist&lt;/string&gt;
+  &lt;string&gt;pediatrician&lt;/string&gt;
+  &lt;string&gt;plastic surgeon&lt;/string&gt;
+  &lt;string&gt;physiologist&lt;/string&gt;
+  &lt;string&gt;physiatrist&lt;/string&gt;
+  &lt;string&gt;plastic surgeon&lt;/string&gt;
+  &lt;string&gt;podiatrist&lt;/string&gt;
+  &lt;string&gt;psychiatrist&lt;/string&gt;
+  &lt;string&gt;pulmonologist&lt;/string&gt;
+  &lt;string&gt;radiologist&lt;/string&gt;
+  &lt;string&gt;reproductive endocrinologist&lt;/string&gt;
+  &lt;string&gt;rheumatologist&lt;/string&gt;
+  &lt;string&gt;surgeon&lt;/string&gt;
+  &lt;string&gt;thoracic oncologist&lt;/string&gt;
+  &lt;string&gt;urologist&lt;/string&gt;
+  &lt;string&gt;veterinarian&lt;/string&gt;
 &lt;/ArrayOfString&gt;</Value>
     </Setting>
   </Settings>
