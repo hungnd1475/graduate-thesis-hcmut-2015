@@ -12,7 +12,7 @@ namespace HCMUT.EMRCorefResol.English
     class PersonPairFeatures : FeatureVector
     {
         public PersonPairFeatures(PersonPair instance, EMR emr, CorefChainCollection groundTruth, double classValue)
-            : base(size: 6, classValue: classValue)
+            : base(size: 8, classValue: classValue)
         {
             this[0] = new PatientClassFeature(instance, groundTruth);
             this[1] = new SentenceDistanceFeature(instance, emr);
@@ -20,6 +20,8 @@ namespace HCMUT.EMRCorefResol.English
             this[3] = new StringMatchFeature(instance);
             this[4] = new LevenshteinDistanceFeature(instance);
             this[5] = new AppositionFeature(instance, emr, this[2].Value);
+            this[6] = new DoctorTitleMatchFeature(instance);
+            this[7] = new DoctorGeneralMatch(instance);
         }
     }
 }

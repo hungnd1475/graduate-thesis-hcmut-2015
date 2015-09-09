@@ -34,5 +34,11 @@ namespace HCMUT.EMRCorefResol
             Name = name;
             Value = initValue;
         }
+
+        public Feature(string name, Func<double> calculateValue)
+        {
+            Name = name;
+            Value = calculateValue();
+        }
     }
 }

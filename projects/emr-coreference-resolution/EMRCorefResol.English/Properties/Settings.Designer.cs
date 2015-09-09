@@ -59,5 +59,67 @@ namespace HCMUT.EMRCorefResol.English.Properties {
                 this["DoctorTitles"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
+            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
+            "tring>dr</string>\r\n  <string>d.r.</string>\r\n  <string>d.r</string>\r\n  <string>dd" +
+            "s</string>\r\n  <string>d.d.s.</string>\r\n  <string>d.d.s</string>\r\n  <string>dmd</" +
+            "string>\r\n  <string>d.m.d.</string>\r\n  <string>d.m.d</string>\r\n  <string>do</stri" +
+            "ng>\r\n  <string>d.o.</string>\r\n  <string>d.o</string>\r\n  <string>dpm</string>\r\n  " +
+            "<string>d.p.m.</string>\r\n  <string>d.p.m</string>\r\n  <string>faaem</string>\r\n  <" +
+            "string>f.a.a.e.m.</string>\r\n  <string>f.a.a.e.m</string>\r\n  <string>faafp</strin" +
+            "g>\r\n  <string>f.a.a.f.p.</string>\r\n  <string>f.a.a.f.p</string>\r\n  <string>facc<" +
+            "/string>\r\n  <string>f.a.c.c.</string>\r\n  <string>f.a.c.c</string>\r\n  <string>fac" +
+            "e</string>\r\n  <string>f.a.c.e.</string>\r\n  <string>f.a.c.e</string>\r\n  <string>f" +
+            "acep</string>\r\n  <string>f.a.c.e.p.</string>\r\n  <string>f.a.c.e.p</string>\r\n  <s" +
+            "tring>facg</string>\r\n  <string>f.a.c.g.</string>\r\n  <string>f.a.c.g</string>\r\n  " +
+            "<string>facfas</string>\r\n  <string>f.a.c.f.a.s.</string>\r\n  <string>f.a.c.f.a.s<" +
+            "/string>\r\n  <string>facog</string>\r\n  <string>f.a.c.o.g.</string>\r\n  <string>f.a" +
+            ".c.o.g</string>\r\n  <string>facos</string>\r\n  <string>f.a.c.o.s.</string>\r\n  <str" +
+            "ing>f.a.c.o.s</string>\r\n  <string>facp</string>\r\n  <string>f.a.c.p.</string>\r\n  " +
+            "<string>f.a.c.p</string>\r\n  <string>faccp</string>\r\n  <string>f.a.c.c.p.</string" +
+            ">\r\n  <string>f.a.c.c.p</string>\r\n  <string>facs</string>\r\n  <string>f.a.c.s.</st" +
+            "ring>\r\n  <string>f.a.c.s</string>\r\n  <string>fasps</string>\r\n  <string>f.a.s.p.s" +
+            ".</string>\r\n  <string>f.a.s.p.s</string>\r\n  <string>fhm</string>\r\n  <string>f.h." +
+            "m.</string>\r\n  <string>f.h.m</string>\r\n  <string>fics</string>\r\n  <string>f.i.c." +
+            "s.</string>\r\n  <string>f.i.c.s</string>\r\n  <string>fscai</string>\r\n  <string>f.s" +
+            ".c.a.i.</string>\r\n  <string>f.s.c.a.i</string>\r\n  <string>fsts</string>\r\n  <stri" +
+            "ng>f.s.t.s.</string>\r\n  <string>f.s.t.s</string>\r\n  <string>md</string>\r\n  <stri" +
+            "ng>m.d.</string>\r\n  <string>m.d</string>\r\n  <string>mph</string>\r\n  <string>m.p." +
+            "h.</string>\r\n  <string>m.p.h</string>\r\n  <string>np</string>\r\n  <string>n.p.</st" +
+            "ring>\r\n  <string>n.p</string>\r\n  <string>od</string>\r\n  <string>o.d.</string>\r\n " +
+            " <string>o.d</string>\r\n  <string>pa</string>\r\n  <string>p.a.</string>\r\n  <string" +
+            ">p.a</string>\r\n  <string>phd</string>\r\n  <string>ph.d.</string>\r\n  <string>ph.d<" +
+            "/string>\r\n</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection DoctorKeywords {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["DoctorKeywords"]));
+            }
+            set {
+                this["DoctorKeywords"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
+<ArrayOfString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
+  <string>doctor</string>
+  <string>pcp</string>
+  <string>author</string>
+  <string>dict</string>
+  <string>attend</string>
+  <string>provider</string>
+</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection GeneralDoctors {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["GeneralDoctors"]));
+            }
+            set {
+                this["GeneralDoctors"] = value;
+            }
+        }
     }
 }
