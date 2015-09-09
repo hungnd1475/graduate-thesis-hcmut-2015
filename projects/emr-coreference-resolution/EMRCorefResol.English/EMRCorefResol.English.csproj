@@ -56,7 +56,11 @@
     <Compile Include="Features\AppositionFeature.cs" />
     <Compile Include="Features\LevenshteinDistanceFeature.cs" />
     <Compile Include="Features\MentionDistanceFeature.cs" />
+    <Compile Include="Features\PersonPair\IInformationFeature.cs" />
+    <Compile Include="Features\PersonPair\NameMatchFeature.cs" />
     <Compile Include="Features\PersonPair\PatientClassFeature.cs" />
+    <Compile Include="Features\PersonPair\WeInformationFeature.cs" />
+    <Compile Include="Features\PersonPair\YouInformationFeature.cs" />
     <Compile Include="PersonPairFeatures.cs" />
     <Compile Include="Features\SentenceDistanceFeature.cs" />
     <Compile Include="Features\StringMatchFeature.cs" />
