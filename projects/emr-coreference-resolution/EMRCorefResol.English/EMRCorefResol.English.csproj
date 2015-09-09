@@ -30,14 +30,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LAIR.Collections">
-      <HintPath>..\Libs\LAIR.Collections.dll</HintPath>
+    <Reference Include="LAIR.Collections, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\wordnet\LAIR.Collections.dll</HintPath>
     </Reference>
-    <Reference Include="LAIR.Extensions">
-      <HintPath>..\Libs\LAIR.Extensions.dll</HintPath>
+    <Reference Include="LAIR.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\wordnet\LAIR.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="LAIR.IO">
-      <HintPath>..\Libs\LAIR.IO.dll</HintPath>
+    <Reference Include="LAIR.IO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\wordnet\LAIR.IO.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -55,7 +58,11 @@
     <Compile Include="Features\PersonPair\DoctorTitleMatchFeature.cs" />
     <Compile Include="Features\LevenshteinDistanceFeature.cs" />
     <Compile Include="Features\MentionDistanceFeature.cs" />
+    <Compile Include="Features\PersonPair\IInformationFeature.cs" />
+    <Compile Include="Features\PersonPair\NameMatchFeature.cs" />
     <Compile Include="Features\PersonPair\PatientClassFeature.cs" />
+    <Compile Include="Features\PersonPair\WeInformationFeature.cs" />
+    <Compile Include="Features\PersonPair\YouInformationFeature.cs" />
     <Compile Include="PersonPairFeatures.cs" />
     <Compile Include="Features\SentenceDistanceFeature.cs" />
     <Compile Include="Features\StringMatchFeature.cs" />
