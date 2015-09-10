@@ -44,6 +44,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,6 +61,7 @@
     <Compile Include="Features\MentionDistanceFeature.cs" />
     <Compile Include="Features\PersonPair\IInformationFeature.cs" />
     <Compile Include="Features\PersonPair\NameMatchFeature.cs" />
+    <Compile Include="Features\PersonPair\NumberFeature.cs" />
     <Compile Include="Features\PersonPair\PatientClassFeature.cs" />
     <Compile Include="Features\PersonPair\WeInformationFeature.cs" />
     <Compile Include="Features\PersonPair\YouInformationFeature.cs" />
