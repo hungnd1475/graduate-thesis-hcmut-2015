@@ -43,5 +43,10 @@ namespace HCMUT.EMRCorefResol.Utilities
             return length > 0 ? emr.Content.Substring(begin + 1, length)
                 : string.Empty;
         }
+
+        public static string ContentBetween(this EMR emr, IConceptPair pair)
+        {
+            return emr.ContentBetween(pair.Antecedent, pair.Anaphora);
+        }
     }
 }

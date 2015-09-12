@@ -33,7 +33,7 @@ namespace HCMUT.EMRCorefResol.English.Features
                 return;
             }*/
 
-            if(!ps.IsSingular(instance.Anaphora.Lexicon) && !ps.IsPlural(instance.Anaphora.Lexicon))
+            if (!ps.IsSingular(instance.Anaphora.Lexicon) && !ps.IsPlural(instance.Anaphora.Lexicon))
             {
                 Value = 2.0;
                 return;
@@ -58,7 +58,6 @@ namespace HCMUT.EMRCorefResol.English.Features
             }
 
             Value = 0.0;
-
         }
     }
 }

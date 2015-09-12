@@ -13,7 +13,7 @@ namespace HCMUT.EMRCorefResol.English.Features
         public SentenceDistanceFeature(IConceptPair instance, EMR emr)
             : base("Sentence-Distance")
         {
-            var s = emr.ContentBetween(instance.Antecedent, instance.Anaphora);
+            var s = emr.ContentBetween(instance);
             int index = 0;
 
             while (true)
