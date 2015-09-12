@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="EnglishTrainingFeatureExtractor.cs" />
     <Compile Include="Features\AppositionFeature.cs" />
+    <Compile Include="Features\PersonPair\AliasFeature.cs" />
     <Compile Include="Features\PersonPair\DoctorGeneralMatch.cs" />
     <Compile Include="Features\PersonPair\DoctorTitleMatchFeature.cs" />
     <Compile Include="Features\LevenshteinDistanceFeature.cs" />
