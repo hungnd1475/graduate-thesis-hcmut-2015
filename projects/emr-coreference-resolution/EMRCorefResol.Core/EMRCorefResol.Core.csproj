@@ -67,7 +67,6 @@
     <Compile Include="Utilities\ConceptTypeHelper.cs" />
     <Compile Include="Utilities\EMRHelper.cs" />
     <Compile Include="Utilities\HashCodeHelper.cs" />
-    <Compile Include="Utilities\KeywordCollection.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Features\Feature.cs" />
