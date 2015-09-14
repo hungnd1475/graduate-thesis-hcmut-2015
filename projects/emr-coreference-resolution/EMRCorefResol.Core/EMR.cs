@@ -38,5 +38,16 @@ namespace HCMUT.EMRCorefResol
 
             Concepts = new ConceptCollection(conceptsFile, dataReader);            
         }
+
+        public string getLine(int line)
+        {
+            var lines = Content.Split('\n');
+
+            if(line > lines.Count() - 1)
+            {
+                return null;
+            }
+            return lines[line-1];
+        }
     }
 }
