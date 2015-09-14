@@ -24,7 +24,7 @@ namespace HCMUT.EMRCorefResol.English
             {
                 classValue = (double)corefChain.Type;
             }
-            return new PronounFeatures(instance, EMR, GroundTruth, classValue); ;
+            return new PronounInstanceFeatures(instance, EMR, GroundTruth, classValue); ;
         }
 
         public IFeatureVector Extract(PersonInstance instance)

@@ -8,7 +8,7 @@ namespace HCMUT.EMRCorefResol
 {
     public class TrainingResult
     {
-        double CompleteTime { get; }
+        double CompletionTime { get; }
         IClassifier Classifier { get; }
     }
 }

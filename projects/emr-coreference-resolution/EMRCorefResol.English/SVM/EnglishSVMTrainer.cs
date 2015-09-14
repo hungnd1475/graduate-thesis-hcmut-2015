@@ -42,7 +42,9 @@ namespace HCMUT.EMRCorefResol.English.SVM
                     f.AddTo(problems);
             }
 
-            SVMProblemHelper.Save(problems.PersonPair, "D:\\personpair.prb");
+            Directory.CreateDirectory("Problems");
+            SVMProblemHelper.Save(problems.PersonPair, "Problems\\personpair.prb");
+            SVMProblemHelper.Save(problems.PronounInstance, "Problems\\pronouninstance.prb");
 
             return null;
         }
