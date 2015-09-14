@@ -10,6 +10,12 @@ namespace HCMUT.EMRCorefResol.English
         {
         }
 
+        /// <summary>
+        /// Create singleton for WordNetEngine
+        /// Usage:
+        ///     WordNetEngine wE = WordnetHelper.Instance;
+        ///     var syns = wE.GetSynSets("...", WordNetEngine.POS...);
+        /// </summary>
         public static WordNetEngine Instance
         {
             get
