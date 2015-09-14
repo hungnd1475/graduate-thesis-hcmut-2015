@@ -42,6 +42,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libs\wordnet\LAIR.IO.dll</HintPath>
     </Reference>
+    <Reference Include="OpenNLP">
+      <HintPath>..\Libs\sharpNLP\OpenNLP.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpEntropy">
+      <HintPath>..\Libs\sharpNLP\SharpEntropy.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity.Design" />
@@ -68,6 +74,7 @@
     <Compile Include="Features\PersonPair\YouInformationFeature.cs" />
     <Compile Include="Features\Pronoun\FirstNextMentionTypeFeature.cs" />
     <Compile Include="Features\Pronoun\FirstPreviousMentionTypeFeature.cs" />
+    <Compile Include="Features\Pronoun\PartOfSpeechFeature.cs" />
     <Compile Include="Features\Pronoun\SecondPreviousMentionTypeFeature.cs" />
     <Compile Include="PersonPairFeatures.cs" />
     <Compile Include="Features\SentenceDistanceFeature.cs" />
@@ -79,6 +86,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Utilities\SharpNLPHelper.cs" />
     <Compile Include="WordNet\SynSet.cs" />
     <Compile Include="WordNet\WordNetEngine.cs" />
     <Compile Include="Utilities\WordnetHelper.cs" />
