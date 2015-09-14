@@ -48,5 +48,16 @@ namespace HCMUT.EMRCorefResol
         {
             return emr.ContentBetween(pair.Antecedent, pair.Anaphora);
         }
+
+        public static string GetLine(this EMR emr, int lineNumber)
+        {
+            var lines = emr.Content.Split('\n');
+
+            if (lineNumber > lines.Count() - 1)
+            {
+                return null;
+            }
+            return lines[lineNumber - 1];
+        }
     }
 }

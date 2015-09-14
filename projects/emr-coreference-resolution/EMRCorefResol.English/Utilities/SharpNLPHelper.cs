@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 using OpenNLP.Tools.PosTagger;
 using OpenNLP.Tools.Tokenize;
 
-namespace HCMUT.EMRCorefResol.English.Utilities
+namespace HCMUT.EMRCorefResol.English
 {
     public sealed class SharpNLPHelper
     {
-        private static string modelsURL = @"../../libs/sharpNLP/Models/";
+        private static string modelsURL = @"../../../libs/sharpNLP/Models/";
 
         private static readonly EnglishMaximumEntropyPosTagger mPostTagger = new EnglishMaximumEntropyPosTagger(modelsURL + "EnglishPOS.nbin", modelsURL + "Parser/tagdict");
 

@@ -12,11 +12,13 @@ namespace HCMUT.EMRCorefResol.English
     class PronounInstanceFeatures : FeatureVector, ISVMTrainingFeatures
     {
         public PronounInstanceFeatures(PronounInstance instance, EMR emr, CorefChainCollection groundTruth, double classValue)
-            : base(size: 3, classValue: classValue)
+            : base(size: 5, classValue: classValue)
         {
             this[0] = new FirstPreviousMentionTypeFeature(instance, emr);
             this[1] = new SecondPreviousMentionTypeFeature(instance, emr);
             this[2] = new FirstNextMentionTypeFeature(instance, emr);
+            this[3] = new PartOfSpeechFeature(instance);
+            this[4] = new SemanticFeature(instance, emr);
         }
 
         public void AddTo(SVMProblems problems)

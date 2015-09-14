@@ -81,6 +81,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\Pronoun\SemanticFeature.cs" />
     <Compile Include="SVM\EnglishSVMTrainer.cs" />
     <Compile Include="SVM\SVMClassifier.cs" />
     <Compile Include="SVM\SVMNodeHelper.cs" />
