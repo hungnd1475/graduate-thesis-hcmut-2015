@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HCMUT.EMRCorefResol.Utilities
+namespace HCMUT.EMRCorefResol
 {
-    public static class EMRHelper
+    public static class EMRExtensions
     {
         public static int BeginIndexOf(this EMR emr, Concept c)
         {

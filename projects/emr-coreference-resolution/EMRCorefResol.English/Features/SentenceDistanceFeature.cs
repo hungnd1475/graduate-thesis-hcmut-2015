@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol.English.Features
 {
-    using Utilities;
-
     class SentenceDistanceFeature : Feature
     {
         public SentenceDistanceFeature(IConceptPair instance, EMR emr)

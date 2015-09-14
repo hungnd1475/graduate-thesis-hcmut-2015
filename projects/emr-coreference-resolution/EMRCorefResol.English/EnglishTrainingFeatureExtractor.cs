@@ -18,7 +18,13 @@ namespace HCMUT.EMRCorefResol.English
 
         public IFeatureVector Extract(PronounInstance instance)
         {
-            return null;
+            var corefChain = GroundTruth.FindChainContains(instance.Concept);
+            var classValue = 0.0;
+            if (corefChain!=null)
+            {
+                classValue = (double)corefChain.Type;
+            }
+            return new PronounFeatures(instance, EMR, GroundTruth, classValue); ;
         }
 
         public IFeatureVector Extract(PersonInstance instance)

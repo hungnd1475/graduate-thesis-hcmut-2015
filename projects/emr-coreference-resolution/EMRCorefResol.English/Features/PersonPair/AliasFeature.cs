@@ -15,12 +15,18 @@ namespace HCMUT.EMRCorefResol.English.Features
         public AliasFeature(PersonPair instance)
             : base("Alias")
         {
-            var ana = getDefinitions(instance.Anaphora.Lexicon);
-            var ante = getDefinitions(instance.Antecedent.Lexicon);
-            var asap = getDefinitions("asap");
-
-            Value = (ana.Contains(instance.Antecedent.Lexicon) || ante.Contains(instance.Anaphora.Lexicon)) ?
+            var ana = getAbbre(instance.Anaphora.Lexicon);
+            var ante = getAbbre(instance.Antecedent.Lexicon);
+            Value = (instance.Anaphora.Lexicon.Equals(ante) || instance.Antecedent.Lexicon.Equals(ana)) ?
                 1.0 : 0.0;
+        }
+
+        private string getAbbre(string raw)
+        {
+            var arr = raw.ToLower().Split(' ');
+            arr = arr.Select(i => i[0].ToString()).ToArray();
+
+            return String.Join("", arr);
         }
 
         private List<string> getDefinitions(string term)
