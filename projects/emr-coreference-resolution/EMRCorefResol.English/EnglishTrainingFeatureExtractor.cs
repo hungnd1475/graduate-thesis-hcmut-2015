@@ -11,10 +11,9 @@ namespace HCMUT.EMRCorefResol.English
         public EMR EMR { get; set; }
         public CorefChainCollection GroundTruth { get; set; }
 
-        public EnglishTrainingFeatureExtractor(EMR emr, CorefChainCollection groundTruth)
+        public EnglishTrainingFeatureExtractor()
         {
-            EMR = emr;
-            GroundTruth = groundTruth;
+
         }
 
         public IFeatureVector Extract(PronounInstance instance)

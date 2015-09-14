@@ -30,6 +30,24 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Output\Debug\x86\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,6 +65,7 @@
     <Compile Include="Features\FeatureVector.cs" />
     <Compile Include="EMR.cs" />
     <Compile Include="ConceptType.cs" />
+    <Compile Include="Classification\IClassifier.cs" />
     <Compile Include="IConceptPair.cs" />
     <Compile Include="IO\I2B2DataReader.cs" />
     <Compile Include="IO\IDataReader.cs" />
@@ -59,19 +78,21 @@
     <Compile Include="IPreprocessor.cs" />
     <Compile Include="ISingleConcept.cs" />
     <Compile Include="Features\ITrainingFeatureExtractor.cs" />
+    <Compile Include="Classification\ITrainer.cs" />
     <Compile Include="PairInstance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ConceptPosition.cs" />
     <Compile Include="SimplePreprocessor.cs" />
     <Compile Include="SingleInstance.cs" />
+    <Compile Include="Classification\TrainingResult.cs" />
     <Compile Include="Utilities\ConceptTypeHelper.cs" />
     <Compile Include="Utilities\EMRHelper.cs" />
     <Compile Include="Utilities\HashCodeHelper.cs" />
-    <Compile Include="Utilities\KeywordCollection.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Features\Feature.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

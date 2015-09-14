@@ -10,7 +10,7 @@ namespace HCMUT.EMRCorefResol
     {
         public IIndexedEnumerable<IClasInstance> Process(EMR emr)
         {
-            List<IClasInstance> instances = new List<IClasInstance>();
+            var instances = new List<IClasInstance>();
 
             for (int i = 0; i < emr.Concepts.Count; i++)
             {
