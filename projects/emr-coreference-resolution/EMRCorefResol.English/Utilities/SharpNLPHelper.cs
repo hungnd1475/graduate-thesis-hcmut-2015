@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using OpenNLP.Tools.PosTagger;
 using OpenNLP.Tools.Tokenize;
 
-namespace HCMUT.EMRCorefResol.English
+namespace HCMUT.EMRCorefResol.English.Utilities
 {
     public sealed class SharpNLPHelper
     {
