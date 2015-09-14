@@ -49,8 +49,9 @@ namespace HCMUT.EMRCorefResol.English
 
         public IFeatureVector Extract(PersonPair instance)
         {
-            var classValue = GroundTruth.IsCoref(instance) ? 1.0 : 0.0;
-            return new PersonPairFeatures(instance, EMR, GroundTruth, classValue);
+            //var classValue = GroundTruth.IsCoref(instance) ? 1.0 : 0.0;
+            //return new PersonPairFeatures(instance, EMR, GroundTruth, classValue);
+            return null;
         }
     }
 }
