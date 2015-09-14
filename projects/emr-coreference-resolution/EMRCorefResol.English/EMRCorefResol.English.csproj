@@ -66,9 +66,13 @@
     <Compile Include="Features\PersonPair\PatientClassFeature.cs" />
     <Compile Include="Features\PersonPair\WeInformationFeature.cs" />
     <Compile Include="Features\PersonPair\YouInformationFeature.cs" />
+    <Compile Include="Features\Pronoun\FirstNextMentionTypeFeature.cs" />
+    <Compile Include="Features\Pronoun\FirstPreviousMentionTypeFeature.cs" />
+    <Compile Include="Features\Pronoun\SecondPreviousMentionTypeFeature.cs" />
     <Compile Include="PersonPairFeatures.cs" />
     <Compile Include="Features\SentenceDistanceFeature.cs" />
     <Compile Include="Features\StringMatchFeature.cs" />
+    <Compile Include="PronounFeatures.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -93,6 +97,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -15,7 +15,7 @@ namespace HCMUT.EMRCorefResol
         /// <summary>
         /// Represents type of concepts that have to type (i.e. from coref chain)
         /// </summary>
-        None,
+        None = 0,
         /// <summary>
         /// Represents type of concepts that mention about person.
         /// </summary>
