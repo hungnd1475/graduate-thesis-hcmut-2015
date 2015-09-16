@@ -8,6 +8,8 @@ using LibSVMsharp.Helpers;
 
 namespace HCMUT.EMRCorefResol.English.SVM
 {
+    using Utilities;
+
     public class EnglishSVMTrainer : ITrainer
     {
         public TrainingResult TrainFromDir(string emrDir, string conDir, string chainDir,
@@ -19,6 +21,8 @@ namespace HCMUT.EMRCorefResol.English.SVM
         public TrainingResult TrainFromFile(string emrFile, string conFile, string chainFile,
             IDataReader dataReader, IPreprocessor preprocessor)
         {
+            Timer.Start();
+
             var emr = new EMR(emrFile, conFile, dataReader);
             var chains = new CorefChainCollection(chainFile, dataReader);
             var problems = new SVMProblems();
@@ -44,9 +48,11 @@ namespace HCMUT.EMRCorefResol.English.SVM
 
             Directory.CreateDirectory("Problems");
             SVMProblemHelper.Save(problems.PersonPair, "Problems\\personpair.prb");
-            SVMProblemHelper.Save(problems.PronounInstance, "Problems\\pronouninstance.prb");
+            //SVMProblemHelper.Save(problems.PronounInstance, "Problems\\pronouninstance.prb");
 
-            return null;
+
+            
+            return new TrainingResult(Timer.Stop(), new SVMClassifier());
         }
     }
 }

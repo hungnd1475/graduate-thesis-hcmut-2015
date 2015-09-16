@@ -26,7 +26,8 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             //testCorefChain();
             //testFeatures();
             //testReadEMR();
-            testTrainer();
+            //testTrainer();
+            testLoadClassifier();
 
             sw.Stop();
             Console.WriteLine($"Execution time: {sw.ElapsedMilliseconds}ms");
@@ -95,7 +96,17 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
         static void testTrainer()
         {
             var trainer = new EnglishSVMTrainer();
-            trainer.TrainFromFile(emrFile, conceptsFile, chainFile, new I2B2DataReader(), new SimplePreprocessor());
+            var result = trainer.TrainFromFile(emrFile, conceptsFile, chainFile, new I2B2DataReader(), new SimplePreprocessor());
+            Console.WriteLine($"Completion Time: {result.CompletionTime}ms");
+            var cs = new ClassifierSerializer();
+            cs.Serialize(result.Classifier, "test.cls");
+        }
+
+        static void testLoadClassifier()
+        {
+            var cs = new ClassifierSerializer();
+            var c = cs.Deserialize("test.cls");
+            Console.Write("test");
         }
 
         static void Print(IClasInstance i, IFeatureVector fVector)

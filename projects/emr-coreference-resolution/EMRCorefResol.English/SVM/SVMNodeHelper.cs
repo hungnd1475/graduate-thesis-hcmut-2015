@@ -13,7 +13,10 @@ namespace HCMUT.EMRCorefResol.English.SVM
         {
             var nodes = new SVMNode[f.Size];
             for (int i = 0; i < f.Size; i++)
-                nodes[i] = new SVMNode(i, f[i].Value);
+            {
+                if (f[i] != null)
+                    nodes[i] = new SVMNode(i, f[i].Value);
+            }
             return nodes;
         }
     }

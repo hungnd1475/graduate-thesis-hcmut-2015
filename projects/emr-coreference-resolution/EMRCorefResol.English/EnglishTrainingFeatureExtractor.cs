@@ -11,20 +11,12 @@ namespace HCMUT.EMRCorefResol.English
         public EMR EMR { get; set; }
         public CorefChainCollection GroundTruth { get; set; }
 
-        public EnglishTrainingFeatureExtractor()
-        {
-
-        }
-
         public IFeatureVector Extract(PronounInstance instance)
         {
-            var corefChain = GroundTruth.FindChainContains(instance.Concept);
-            var classValue = 0.0;
-            if (corefChain!=null)
-            {
-                classValue = (double)corefChain.Type;
-            }
-            return new PronounInstanceFeatures(instance, EMR, GroundTruth, classValue); ;
+            //var corefChain = GroundTruth.FindChainContains(instance.Concept);
+            //var classValue = corefChain != null ? (double)corefChain.Type : 0;
+            //return new PronounInstanceFeatures(instance, EMR, GroundTruth, classValue);
+            return null;
         }
 
         public IFeatureVector Extract(PersonInstance instance)

@@ -115,6 +115,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Utilities\SharpNLPHelper.cs" />
+    <Compile Include="Utilities\Timer.cs" />
     <Compile Include="WordNet\SynSet.cs" />
     <Compile Include="WordNet\WordNetEngine.cs" />
     <Compile Include="Utilities\WordnetHelper.cs" />

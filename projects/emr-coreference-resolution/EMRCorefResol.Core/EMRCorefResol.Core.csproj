@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classification\ClassifierSerializer.cs" />
     <Compile Include="Concept.cs" />
     <Compile Include="ConceptCollection.cs" />
     <Compile Include="CorefChain.cs" />
