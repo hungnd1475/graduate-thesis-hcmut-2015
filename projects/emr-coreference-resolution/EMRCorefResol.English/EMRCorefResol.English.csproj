@@ -81,7 +81,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\PersonPair\PatientClass\DepartmentKeywordFeature.cs" />
+    <Compile Include="Features\PersonPair\PatientClass\DoctorKeywordFeature.cs" />
+    <Compile Include="Features\PersonPair\PatientClass\DoctorTitleKeywordFeature.cs" />
+    <Compile Include="Features\PersonPair\PatientClass\GeneralDepartmentKeywordFeature.cs" />
+    <Compile Include="Features\PersonPair\PatientClass\GeneralDoctorKeywordFeature.cs" />
+    <Compile Include="Features\PersonPair\PatientClass\PatientKeywordFeature.cs" />
+    <Compile Include="Features\PersonPair\PatientClass\PronounIFeature.cs" />
+    <Compile Include="Features\PersonPair\PatientClass\PronounTheyFeature.cs" />
+    <Compile Include="Features\PersonPair\PatientClass\PronounWeFeature.cs" />
+    <Compile Include="Features\PersonPair\PatientClass\PronounYouFeature.cs" />
+    <Compile Include="Features\PersonPair\PatientClass\RelativeKeywordFeature.cs" />
     <Compile Include="Features\Pronoun\SemanticFeature.cs" />
+    <Compile Include="PatientClassFeatures.cs" />
     <Compile Include="SVM\EnglishSVMTrainer.cs" />
     <Compile Include="SVM\SVMClassifier.cs" />
     <Compile Include="SVM\SVMNodeHelper.cs" />
@@ -141,6 +153,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

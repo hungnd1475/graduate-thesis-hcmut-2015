@@ -25,5 +25,10 @@ namespace HCMUT.EMRCorefResol.English.SVM
         {
             PronounInstance.Add(f.ToSVMNodes(), f.ClassValue);
         }
+
+        public void Add(PatientClassFeatures p)
+        {
+            PersonInstance.Add(p.ToSVMNodes(), p.ClassValue);
+        }
     }
 }

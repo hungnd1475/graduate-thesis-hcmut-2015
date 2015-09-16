@@ -21,7 +21,9 @@ namespace HCMUT.EMRCorefResol.English
 
         public IFeatureVector Extract(PersonInstance instance)
         {
-            return null;
+            //TODO classValue
+            var classValue = 0.0;
+            return new PatientClassFeatures(instance, EMR, GroundTruth, classValue);
         }
 
         public IFeatureVector Extract(TreatmentPair instance)
