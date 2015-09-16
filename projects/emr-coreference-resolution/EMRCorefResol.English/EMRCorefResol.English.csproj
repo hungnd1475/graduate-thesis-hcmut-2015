@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Features\Pronoun\SemanticFeature.cs" />
+    <Compile Include="PatientClassFeatures.cs" />
     <Compile Include="SVM\EnglishSVMTrainer.cs" />
     <Compile Include="SVM\SVMClassifier.cs" />
     <Compile Include="SVM\SVMNodeHelper.cs" />
@@ -139,6 +140,9 @@
     <Content Include="libsvm.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Features\PersonPair\PatientClass\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
