@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace HCMUT.EMRCorefResol.English.Features.PersonPair.PatientClass
+namespace HCMUT.EMRCorefResol.English.Features
 {
     class RelativeKeywordFeature : Feature
     {

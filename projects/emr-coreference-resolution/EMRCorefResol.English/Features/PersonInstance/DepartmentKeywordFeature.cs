@@ -5,14 +5,14 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace HCMUT.EMRCorefResol.English.Features.PersonPair.PatientClass
+namespace HCMUT.EMRCorefResol.English.Features
 {
-    class GeneralDepartmentKeywordFeature : Feature
+    class DepartmentKeywordFeature : Feature
     {
-        public GeneralDepartmentKeywordFeature(PersonInstance instance)
-            : base("GeneralDepartment-Keyword")
+        public DepartmentKeywordFeature(PersonInstance instance)
+            : base("Department-Keyword")
         {
-            string[] stopWords = { "team", "service" };
+            string[] stopWords = { "anesthesiology", "electrophysiology" };
             foreach (string stopWord in stopWords)
             {
                 if (checkContain(instance.Concept.Lexicon.ToLower(), stopWord))

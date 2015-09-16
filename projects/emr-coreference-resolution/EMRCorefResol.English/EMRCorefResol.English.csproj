@@ -81,17 +81,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Features\PersonPair\PatientClass\DepartmentKeywordFeature.cs" />
-    <Compile Include="Features\PersonPair\PatientClass\DoctorKeywordFeature.cs" />
-    <Compile Include="Features\PersonPair\PatientClass\DoctorTitleKeywordFeature.cs" />
-    <Compile Include="Features\PersonPair\PatientClass\GeneralDepartmentKeywordFeature.cs" />
-    <Compile Include="Features\PersonPair\PatientClass\GeneralDoctorKeywordFeature.cs" />
-    <Compile Include="Features\PersonPair\PatientClass\PatientKeywordFeature.cs" />
-    <Compile Include="Features\PersonPair\PatientClass\PronounIFeature.cs" />
-    <Compile Include="Features\PersonPair\PatientClass\PronounTheyFeature.cs" />
-    <Compile Include="Features\PersonPair\PatientClass\PronounWeFeature.cs" />
-    <Compile Include="Features\PersonPair\PatientClass\PronounYouFeature.cs" />
-    <Compile Include="Features\PersonPair\PatientClass\RelativeKeywordFeature.cs" />
+    <Compile Include="Features\PersonInstance\DepartmentKeywordFeature.cs" />
+    <Compile Include="Features\PersonInstance\DoctorKeywordFeature.cs" />
+    <Compile Include="Features\PersonInstance\DoctorTitleKeywordFeature.cs" />
+    <Compile Include="Features\PersonInstance\GeneralDepartmentKeywordFeature.cs" />
+    <Compile Include="Features\PersonInstance\GeneralDoctorKeywordFeature.cs" />
+    <Compile Include="Features\PersonInstance\PatientKeywordFeature.cs" />
+    <Compile Include="Features\PersonInstance\PronounIFeature.cs" />
+    <Compile Include="Features\PersonInstance\PronounTheyFeature.cs" />
+    <Compile Include="Features\PersonInstance\PronounWeFeature.cs" />
+    <Compile Include="Features\PersonInstance\PronounYouFeature.cs" />
+    <Compile Include="Features\PersonInstance\RelativeKeywordFeature.cs" />
     <Compile Include="Features\Pronoun\SemanticFeature.cs" />
     <Compile Include="PatientClassFeatures.cs" />
     <Compile Include="SVM\EnglishSVMTrainer.cs" />
