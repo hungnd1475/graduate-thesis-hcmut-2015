@@ -12,9 +12,14 @@ namespace HCMUT.EMRCorefResol.English
     class PatientClassFeatures : FeatureVector, ISVMTrainingFeatures
     {
         public PatientClassFeatures(PersonInstance instance, EMR emr, CorefChainCollection groundTruth, double classValue)
-            : base(size: 0, classValue: classValue)
+            : base(size: 6, classValue: classValue)
         {
-
+            this[0] = new PronounIFeature(instance);
+            this[1] = new PronounYouFeature(instance);
+            this[2] = new PronounWeFeature(instance);
+            this[3] = new PronounTheyFeature(instance);
+            this[4] = new PatientKeywordFeature(instance);
+            this[5] = new DoctorKeywordFeature(instance);
         }
 
         public void AddTo(SVMProblems problems)
