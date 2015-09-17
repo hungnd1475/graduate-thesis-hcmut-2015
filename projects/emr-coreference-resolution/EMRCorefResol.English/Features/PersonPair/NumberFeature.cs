@@ -19,39 +19,42 @@ namespace HCMUT.EMRCorefResol.English.Features
             : base("Number-Information")
         {
             PluralizationService ps = PluralizationService.CreateService(CultureInfo.GetCultureInfo("en-us"));
-            //WordNetEngine _wordNetEngine = new WordNetEngine(@"..\..\libs\wordnet\wordnetdb", false);
 
-            string anaSingular = ps.Singularize(instance.Anaphora.Lexicon);
-            string anteSingular = ps.Singularize(instance.Antecedent.Lexicon);
+            string[] plural = { "we", "they" };
+            string[] single = { "i", "you", "he", "she", "it" };
 
-            /*Set<SynSet> anaSyns = _wordNetEngine.GetSynSets(anaSingular, WordNetEngine.POS.Noun);
-            Set<SynSet> anteSyns = _wordNetEngine.GetSynSets(anteSingular, WordNetEngine.POS.Noun);
+            bool anaIsPlural = plural.Contains(instance.Anaphora.Lexicon.ToLower()) ||
+                ps.IsPlural(instance.Anaphora.Lexicon.ToLower());
 
-            if(anaSyns.Count < 1 || anteSyns.Count < 1)
-            {
-                Value = 2.0;
-                return;
-            }*/
+            bool anteIsPlural = plural.Contains(instance.Antecedent.Lexicon.ToLower()) ||
+                ps.IsPlural(instance.Antecedent.Lexicon.ToLower());
 
-            if (!ps.IsSingular(instance.Anaphora.Lexicon) && !ps.IsPlural(instance.Anaphora.Lexicon))
+            bool anaIsSingular = single.Contains(instance.Anaphora.Lexicon.ToLower()) ||
+                ps.IsSingular(instance.Anaphora.Lexicon.ToLower());
+
+            bool anteIsSingular = single.Contains(instance.Antecedent.Lexicon.ToLower()) ||
+                ps.IsSingular(instance.Antecedent.Lexicon.ToLower());
+
+
+            if (!anteIsSingular && !anteIsPlural)
             {
                 Value = 2.0;
                 return;
             }
 
-            if (!ps.IsSingular(instance.Antecedent.Lexicon) && !ps.IsPlural(instance.Antecedent.Lexicon))
+            if (!anaIsSingular && !anaIsPlural)
             {
                 Value = 2.0;
                 return;
             }
 
-            if (ps.IsPlural(instance.Anaphora.Lexicon) && ps.IsPlural(instance.Antecedent.Lexicon))
+            if (anaIsPlural && anteIsPlural)
             {
                 Value = 1.0;
                 return;
             }
 
-            if (ps.IsSingular(instance.Anaphora.Lexicon) && ps.IsSingular(instance.Antecedent.Lexicon))
+            if (anaIsSingular && anteIsSingular)
             {
                 Value = 1.0;
                 return;
