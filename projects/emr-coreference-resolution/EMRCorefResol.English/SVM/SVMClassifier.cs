@@ -16,6 +16,9 @@ namespace HCMUT.EMRCorefResol.English.SVM
         private readonly SVMModel _personPairModel, _personInstanceModel,
             _pronounInstanceModel, _problemPairModel, _testPairModel, _treatmentPairModel;
 
+        private readonly SVMScalingFactor _personPairSF, _personInstanceSF,
+            _pronounInstanceSF, _problemPairSF, _testPairSF, _treatmentPairSF;
+
         public SVMClassifier(XmlReader reader, string dir)
         {
             test = reader.ReadElementContentAsString();
@@ -23,7 +26,10 @@ namespace HCMUT.EMRCorefResol.English.SVM
 
         internal SVMClassifier(SVMModel personPairModel, SVMModel personInstanceModel,
             SVMModel pronounInstanceModel, SVMModel problemPairModel,
-            SVMModel testPairModel, SVMModel treatmentPairModel)
+            SVMModel testPairModel, SVMModel treatmentPairModel,
+            SVMScalingFactor personPairSF, SVMScalingFactor personInstanceSF,
+            SVMScalingFactor pronounInstanceSF, SVMScalingFactor problemPairSF,
+            SVMScalingFactor testPairSF, SVMScalingFactor treatmentPairSF)
         {
             _personPairModel = personPairModel;
             _personInstanceModel = personInstanceModel;
@@ -31,12 +37,15 @@ namespace HCMUT.EMRCorefResol.English.SVM
             _problemPairModel = problemPairModel;
             _testPairModel = testPairModel;
             _treatmentPairModel = treatmentPairModel;
+
+            _personPairSF = personPairSF;
+
         }
 
         internal SVMClassifier() { }
 
         public double Classify(PersonInstance instance, IFeatureVector f)
-        {
+        {            
             throw new NotImplementedException();
         }
 

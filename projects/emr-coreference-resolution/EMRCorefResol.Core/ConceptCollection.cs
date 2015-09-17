@@ -14,17 +14,11 @@ namespace HCMUT.EMRCorefResol
     /// </summary>
     public class ConceptCollection : IIndexedEnumerable<Concept>
     {
-        private readonly SortedList<ConceptPosition, Concept> _concepts
-            = new SortedList<ConceptPosition, Concept>();
+        private readonly List<Concept> _concepts = new List<Concept>();
 
         public Concept this[int index]
         {
-            get { return _concepts.Values[index]; }
-        }
-
-        public Concept this[ConceptPosition begin]
-        {
-            get { return _concepts[begin]; }
+            get { return _concepts[index]; }
         }
 
         public int Count
@@ -43,20 +37,29 @@ namespace HCMUT.EMRCorefResol
                 var c = dataReader.ReadSingle(line);
                 if (c != null)
                 {
-                    _concepts.Add(c.Begin, c);
+                    _concepts.Add(c);
                 }
             }
+
+            _concepts.Sort(ConceptComparison);
+
             sr.Close();
+        }
+
+        private static int ConceptComparison(Concept c1, Concept c2)
+        {
+            var compareBegin = c1.Begin.CompareTo(c2.Begin);
+            return compareBegin != 0 ? compareBegin : c1.End.CompareTo(c2.End);
         }
 
         public int IndexOf(Concept concept)
         {
-            return _concepts.IndexOfValue(concept);
+            return _concepts.IndexOf(concept);
         }
 
         public IEnumerator<Concept> GetEnumerator()
         {
-            return _concepts.Values.GetEnumerator();
+            return _concepts.GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()

@@ -126,6 +126,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="SVM\SVMProblemScaler.cs" />
+    <Compile Include="SVM\SVMScalingFactor.cs" />
     <Compile Include="SVM\SVMTrainingResult.cs" />
     <Compile Include="Utilities\SharpNLPHelper.cs" />
     <Compile Include="Utilities\Timer.cs" />

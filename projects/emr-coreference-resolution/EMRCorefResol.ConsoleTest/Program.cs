@@ -25,9 +25,9 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             //testPreprocessor();
             //testCorefChain();
             //testFeatures();
-            //testReadEMR();
+            testReadEMR();
             //testTrainer();
-            testLoadClassifier();
+            //testLoadClassifier();
 
             sw.Stop();
             Console.WriteLine($"Execution time: {sw.ElapsedMilliseconds}ms");
