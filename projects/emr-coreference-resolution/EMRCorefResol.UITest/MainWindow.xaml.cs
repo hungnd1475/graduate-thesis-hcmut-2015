@@ -19,6 +19,7 @@ using HCMUT.EMRCorefResol;
 using ICSharpCode.AvalonEdit.Document;
 using System.Text.RegularExpressions;
 using ICSharpCode.AvalonEdit;
+using ICSharpCode.AvalonEdit.Editing;
 
 namespace EMRCorefResol.UITest
 {
@@ -214,6 +215,10 @@ namespace EMRCorefResol.UITest
             {
                 tabEMR.Header = emrFileName;
                 currentEMR = emr;
+
+                conceptSelectionInfo.IsSelected = false;
+                emrSelectionInfo.IsSelected = false;
+                chainSelectionInfo.IsSelected = false;
 
                 txtEMR.Document = new TextDocument(currentEMR.Content);
                 txtCons.Document = new TextDocument(cons);
