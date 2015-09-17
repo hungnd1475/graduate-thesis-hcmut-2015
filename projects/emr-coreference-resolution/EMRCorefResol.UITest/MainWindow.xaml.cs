@@ -37,9 +37,11 @@ namespace EMRCorefResol.UITest
         private EMR currentEMR;
         private Concept currentConcept = null;
 
-        private SelectionInfo conceptSelectionInfo = new SelectionInfo();
-        private SelectionInfo chainSelectionInfo = new SelectionInfo();
-        private SelectionInfo emrSelectionInfo = new SelectionInfo();
+        private SelectionInfo conceptSelectionInfo = new SelectionInfo(); // stores selection info on concepts text area
+        private SelectionInfo chainSelectionInfo = new SelectionInfo(); // stores selection info on chains text area
+        private SelectionInfo emrSelectionInfo = new SelectionInfo(); // stores selection info on emr text area
+
+        private bool conChainMouseDown = false;
 
         public MainWindow()
         {
@@ -56,23 +58,52 @@ namespace EMRCorefResol.UITest
                     Brushes.White));
 
             txtCons.ShowLineNumbers = true;
+            txtCons.TextArea.SelectionBrush = null;
+            txtCons.TextArea.SelectionBorder = null;
+            txtCons.TextArea.SelectionForeground = null;
             txtCons.TextArea.TextView.LineTransformers.Add(
                 new Highlighter(conceptSelectionInfo, new SolidColorBrush(Color.FromRgb(226, 230, 214)), null));
 
             txtChains.ShowLineNumbers = true;
             txtChains.WordWrap = true;
+            txtChains.TextArea.SelectionForeground = null;
+            txtChains.TextArea.SelectionBorder = null;
+            txtChains.TextArea.SelectionBrush = null;
             txtChains.TextArea.TextView.LineTransformers.Add(
                 new Highlighter(chainSelectionInfo, new SolidColorBrush(Color.FromRgb(226, 230, 214)), null));
 
             txtCons.TextArea.Caret.PositionChanged += txtCon_Caret_PositionChanged;
-            txtCons.PreviewMouseDoubleClick += txtCon_PreviewMouseDoubleClick;
+            txtCons.PreviewMouseDoubleClick += txtConChain_PreviewMouseDoubleClick;
+            txtCons.TextArea.PreviewMouseDown += txtConChain_TextArea_PreviewMouseDown;
+            txtCons.TextArea.PreviewMouseUp += txtConChain_TextArea_PreviewMouseUp;
 
             txtChains.TextArea.Caret.PositionChanged += txtChains_Caret_PositionChanged;
-            txtChains.PreviewMouseDoubleClick += txtCon_PreviewMouseDoubleClick;
+            txtChains.PreviewMouseDoubleClick += txtConChain_PreviewMouseDoubleClick;
+            txtChains.TextArea.PreviewMouseDown += txtConChain_TextArea_PreviewMouseDown;
+            txtChains.TextArea.PreviewMouseUp += txtConChain_TextArea_PreviewMouseUp;
         }
 
-        private void txtCon_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void txtConChain_TextArea_PreviewMouseUp(object sender, MouseButtonEventArgs e)
         {
+            var txt = sender as TextEditor;
+            if (txt != null && e.LeftButton == MouseButtonState.Released && conChainMouseDown)
+            {
+                txt.TextArea.ClearSelection();
+                conChainMouseDown = false;
+            }
+        }
+
+        private void txtConChain_TextArea_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            var txt = sender as TextEditor;
+            if (txt != null && e.LeftButton == MouseButtonState.Pressed)
+                conChainMouseDown = true;
+        }
+
+        private void txtConChain_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            // highlight the raw concept text in emr when it's double clicked on concepts or chains text area
+
             var oldSelection = emrSelectionInfo.Clone();
 
             if (currentEMR != null && currentConcept != null)
@@ -80,23 +111,30 @@ namespace EMRCorefResol.UITest
                 var beginIndex = currentEMR.BeginIndexOf(currentConcept);
                 var endIndex = currentEMR.EndIndexOf(currentConcept);
 
+                // scroll to the raw text
                 txtEMR.TextArea.Caret.Offset = beginIndex;
                 txtEMR.ScrollTo(txtEMR.TextArea.Caret.Line, txtEMR.TextArea.Caret.Column);
 
+                // store these values for the Highligher to work
                 emrSelectionInfo.IsSelected = true;
                 emrSelectionInfo.StartOffset = beginIndex;
                 emrSelectionInfo.EndOffset = endIndex + 1;
 
+                // trigger the redraw process to highlight the raw text
                 txtEMR.TextArea.TextView.Redraw(beginIndex, endIndex - beginIndex + 1);
                 e.Handled = true;
             }
             else
-            {
+            {                
                 emrSelectionInfo.IsSelected = false;
             }
 
             if (oldSelection.IsSelected)
             {
+                // if the old selection is highlighted, clear it
+                // the Highlighter will know because the old offsets will not fall between the start and end offset
+                // currently stored in the emrSelectionInfo field
+                // or the IsSelected property is false.
                 txtEMR.TextArea.TextView.Redraw(oldSelection.StartOffset,
                     oldSelection.EndOffset - oldSelection.StartOffset + 1);
             }
@@ -114,24 +152,29 @@ namespace EMRCorefResol.UITest
 
         private void highlightConcept(TextEditor txt, SelectionInfo selectionInfo)
         {
-            var offset = txt.CaretOffset;
-            if (selectionInfo.IsSelected && offset >= selectionInfo.StartOffset
-                && offset <= selectionInfo.EndOffset)
+            var caretOffset = txt.CaretOffset; // first get the caret offset
+            if (selectionInfo.IsSelected && caretOffset >= selectionInfo.StartOffset
+                && caretOffset <= selectionInfo.EndOffset)
             {
+                // if the caret lies on the current selection, do nothing
                 return;
             }
 
-            var location = txt.TextArea.Caret.Location;
-            var line = txt.Document.GetLineByOffset(offset);
-            var lineText = txt.Document.GetText(line.Offset, line.Length);
+            var location = txt.TextArea.Caret.Location; // mainly to get the caret column
+            var line = txt.Document.GetLineByOffset(caretOffset); // get the line info the caret currently lies on
+            var lineText = txt.Document.GetText(line.Offset, line.Length); // retrieve the line text
 
-            var startAt = location.Column;
-            var selected = string.Empty;
+            var startAt = location.Column; // we will start at the caret column
+            var selected = string.Empty; // stores the selected text (if any)
 
             var oldSelection = selectionInfo.Clone();
 
             if (!string.IsNullOrEmpty(lineText) && startAt >= 0 && startAt < lineText.Length)
             {
+                // we will travel from the current caret column to the start of the current line (i.e. 0)
+                // each time we go back, we check if there is a match with the concept pattern start at our column
+                // if there is, check if the caret lies within the match value, if it is store the value, 
+                // otherwise go back one char and repeat the above process until we reach the start of the line.
                 while (true)
                 {
                     var match = ConceptPattern.Match(lineText, startAt);
@@ -156,12 +199,15 @@ namespace EMRCorefResol.UITest
 
             if (!string.IsNullOrEmpty(selected))
             {
+                // if there is a selected value, parse it to a Concept instance
                 currentConcept = dataReader.ReadSingle(selected);
 
+                // store the value position
                 selectionInfo.StartOffset = line.Offset + startAt;
                 selectionInfo.EndOffset = selectionInfo.StartOffset + selected.Length;
                 selectionInfo.IsSelected = true;
 
+                // highlight it
                 txt.TextArea.TextView.Redraw(line.Offset + startAt, selected.Length);
             }
             else
@@ -171,6 +217,8 @@ namespace EMRCorefResol.UITest
 
                 if (emrSelectionInfo.IsSelected)
                 {
+                    // if there is no selected value but there is highlighted text on emr text area (the old one)
+                    // clear it
                     emrSelectionInfo.IsSelected = false;
                     txtEMR.TextArea.TextView.Redraw(emrSelectionInfo.StartOffset,
                         emrSelectionInfo.EndOffset - emrSelectionInfo.StartOffset + 1);
@@ -179,6 +227,7 @@ namespace EMRCorefResol.UITest
 
             if (oldSelection.IsSelected)
             {
+                // clear the old highlight on txt area
                 txt.TextArea.TextView.Redraw(oldSelection.StartOffset,
                     oldSelection.EndOffset - oldSelection.StartOffset);
             }
