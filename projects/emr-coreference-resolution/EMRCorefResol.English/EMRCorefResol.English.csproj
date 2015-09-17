@@ -126,6 +126,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="SVM\SVMTrainingResult.cs" />
     <Compile Include="Utilities\SharpNLPHelper.cs" />
     <Compile Include="Utilities\Timer.cs" />
     <Compile Include="WordNet\SynSet.cs" />

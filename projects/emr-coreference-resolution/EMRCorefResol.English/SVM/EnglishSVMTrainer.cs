@@ -10,15 +10,22 @@ namespace HCMUT.EMRCorefResol.English.SVM
 {
     using Utilities;
 
-    public class EnglishSVMTrainer : ITrainer
+    public class EnglishSVMTrainer : ITrainer<SVMTrainingResult>
     {
-        public TrainingResult TrainFromDir(string emrDir, string conDir, string chainDir,
+        public SVMTrainingResult TrainFromDir(string emrDir, string conDir, string chainDir,
             IDataReader dataReader, IPreprocessor preprocessor)
         {
             throw new NotImplementedException();
         }
 
-        public TrainingResult TrainFromFile(string emrFile, string conFile, string chainFile,
+        public Task<SVMTrainingResult> TrainFromDirAsync(string emrDir, string conDir, string chainDir, 
+            IDataReader dataReader, IPreprocessor preprocessor)
+        {
+            return Task.Run(() => TrainFromDir(emrDir, conDir, chainDir,
+                dataReader, preprocessor));
+        }
+
+        public SVMTrainingResult TrainFromFile(string emrFile, string conFile, string chainFile,
             IDataReader dataReader, IPreprocessor preprocessor)
         {
             Timer.Start();
@@ -49,10 +56,15 @@ namespace HCMUT.EMRCorefResol.English.SVM
             Directory.CreateDirectory("Problems");
             SVMProblemHelper.Save(problems.PersonPair, "Problems\\personpair.prb");
             //SVMProblemHelper.Save(problems.PronounInstance, "Problems\\pronouninstance.prb");
+                                    
+            return new SVMTrainingResult(Timer.Stop(), new SVMClassifier(), problems);
+        }
 
-
-            
-            return new TrainingResult(Timer.Stop(), new SVMClassifier());
+        public Task<SVMTrainingResult> TrainFromFileAsync(string emrFile, string conFile, string chainFile, 
+            IDataReader dataReader, IPreprocessor preprocessor)
+        {
+            return Task.Run(() => TrainFromFile(emrFile, conFile, chainFile,
+                dataReader, preprocessor));
         }
     }
 }

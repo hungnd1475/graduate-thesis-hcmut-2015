@@ -7,6 +7,11 @@ using System.Xml;
 
 namespace HCMUT.EMRCorefResol
 {
+    /// <summary>
+    /// Provides a common interface for classifiers.
+    /// A concrete implementation must contains a constructor that takes a <see cref="XmlReader"/> parameter
+    /// and a <see cref="string"/> parameter (in that order) for the <see cref="ClassifierSerializer"/> service to work properly.
+    /// </summary>
     public interface IClassifier
     {
         double Classify(PersonPair instance, IFeatureVector f);

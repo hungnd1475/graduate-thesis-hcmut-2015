@@ -9,9 +9,9 @@ using System.Xml.Serialization;
 
 namespace HCMUT.EMRCorefResol
 {
-    public class ClassifierSerializer
+    public static class ClassifierSerializer
     {
-        public void Serialize(IClassifier classifier, string path)
+        public static void Serialize(IClassifier classifier, string path)
         {
             var writer = new XmlTextWriter(path, Encoding.Unicode);
             writer.Formatting = Formatting.Indented;
@@ -25,7 +25,7 @@ namespace HCMUT.EMRCorefResol
             writer.Close();
         }
 
-        public IClassifier Deserialize(string path)
+        public static IClassifier Deserialize(string path)
         {
             using (var fs = new FileStream(path, FileMode.Open))
             {
@@ -45,7 +45,7 @@ namespace HCMUT.EMRCorefResol
             }
         }
 
-        private string GetDirectory(string filePath)
+        private static string GetDirectory(string filePath)
         {
             return Path.GetDirectoryName(Path.GetFullPath(filePath));
         }

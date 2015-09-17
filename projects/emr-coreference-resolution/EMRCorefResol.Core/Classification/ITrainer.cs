@@ -7,11 +7,18 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol
 {
-    public interface ITrainer
+    public interface ITrainer<T> where T : TrainingResult
     {
-        TrainingResult TrainFromFile(string emrFile, string conFile, string chainFile,
+        T TrainFromFile(string emrFile, string conFile, string chainFile,
             IDataReader dataReader, IPreprocessor preprocessor);
-        TrainingResult TrainFromDir(string emrDir, string conDir, string chainDir,
+
+        Task<T> TrainFromFileAsync(string emrFile, string conFile, string chainFile,
+            IDataReader dataReader, IPreprocessor preprocessor);
+
+        T TrainFromDir(string emrDir, string conDir, string chainDir,
+            IDataReader dataReader, IPreprocessor preprocessor);
+
+        Task<T> TrainFromDirAsync(string emrDir, string conDir, string chainDir,
             IDataReader dataReader, IPreprocessor preprocessor);
     }
 }

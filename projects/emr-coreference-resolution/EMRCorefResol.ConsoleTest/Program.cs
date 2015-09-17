@@ -98,14 +98,12 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             var trainer = new EnglishSVMTrainer();
             var result = trainer.TrainFromFile(emrFile, conceptsFile, chainFile, new I2B2DataReader(), new SimplePreprocessor());
             Console.WriteLine($"Completion Time: {result.CompletionTime}ms");
-            var cs = new ClassifierSerializer();
-            cs.Serialize(result.Classifier, "test.cls");
+            ClassifierSerializer.Serialize(result.Classifier, "test.cls");
         }
 
         static void testLoadClassifier()
         {
-            var cs = new ClassifierSerializer();
-            var c = cs.Deserialize("test.cls");
+            var c = ClassifierSerializer.Deserialize("test.cls");
             Console.Write("test");
         }
 
