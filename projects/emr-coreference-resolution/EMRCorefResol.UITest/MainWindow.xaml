@@ -30,9 +30,9 @@
             <TextBlock Text="Concepts: " Grid.Row="1" VerticalAlignment="Center"/>
             <TextBlock Text="Chains: " Grid.Row="2" VerticalAlignment="Center"/>
             
-            <TextBox Grid.Column="1" Grid.Row="0" Margin="5" x:Name="txtEMRPath"/>
-            <TextBox Grid.Column="1" Grid.Row="1" Margin="5" x:Name="txtConPath"/>
-            <TextBox Grid.Column="1" Grid.Row="2" Margin="5" x:Name="txtChainPath"/>
+            <TextBox Grid.Column="1" Grid.Row="0" Margin="5" x:Name="txtEMRPath" Height="21"/>
+            <TextBox Grid.Column="1" Grid.Row="1" Margin="5" x:Name="txtConPath" Height="21"/>
+            <TextBox Grid.Column="1" Grid.Row="2" Margin="5" x:Name="txtChainPath" Height="21"/>
             
             <Button Content="..." Width="20" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,4"
                     x:Name="btnEMR" Click="btnEMR_Click"/>
@@ -41,8 +41,11 @@
         </Grid>
 
         <StackPanel Grid.Row="1" HorizontalAlignment="Center" Orientation="Horizontal">
-            <Button Content="Previous" Width="60" Margin="0,0,5,0" x:Name="btnPrev" Click="btnPrev_Click"/>
-            <Button Content="Next" Width="60" x:Name="btnNext" Click="btnNext_Click" Margin="0,0,5,0"/>
+            <Button Content="Previous" Width="60" Margin="0,0,5,0" x:Name="btnPrev" Click="btnPrev_Click" Height="25"/>
+            <TextBlock x:Name="txtCurrentEMRIndex" Text="0" VerticalAlignment="Center"/>
+            <TextBlock Text=" of " VerticalAlignment="Center"/>
+            <TextBlock x:Name="txtTotalEMR" Text="0" Margin="0,0,5,0" VerticalAlignment="Center"/>
+            <Button Content="Next" Width="60" Height="25" x:Name="btnNext" Click="btnNext_Click" Margin="0,0,5,0"/>
         </StackPanel>
 
         <Grid Grid.Row="2" Margin="0,5,0,0">
@@ -53,15 +56,15 @@
             </Grid.ColumnDefinitions>
             <TabControl>
                 <TabItem Header="EMR" x:Name="tabEMR">
-                    <avalonEdit:TextEditor x:Name="txtEMR" FontFamily="Consolas" FontSize="15"/>
+                    <avalonEdit:TextEditor x:Name="txtEMR" FontFamily="Consolas" FontSize="15" IsReadOnly="True"/>
                 </TabItem>
             </TabControl>
             <TabControl Grid.Column="2">
                 <TabItem Header="Concepts">
-                    <avalonEdit:TextEditor x:Name="txtCons" FontFamily="Consolas" FontSize="15"/>
+                    <avalonEdit:TextEditor x:Name="txtCons" FontFamily="Consolas" FontSize="15" IsReadOnly="True"/>
                 </TabItem>
                 <TabItem Header="Chains">
-                    <avalonEdit:TextEditor x:Name="txtChains" FontFamily="Consolas" FontSize="15"/>
+                    <avalonEdit:TextEditor x:Name="txtChains" FontFamily="Consolas" FontSize="15" IsReadOnly="True"/>
                 </TabItem>
             </TabControl>
         </Grid>

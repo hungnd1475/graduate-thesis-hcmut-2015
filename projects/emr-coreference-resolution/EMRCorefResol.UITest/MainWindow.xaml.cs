@@ -81,6 +81,10 @@ namespace EMRCorefResol.UITest
             txtChains.PreviewMouseDoubleClick += txtConChain_PreviewMouseDoubleClick;
             txtChains.TextArea.PreviewMouseDown += txtConChain_TextArea_PreviewMouseDown;
             txtChains.TextArea.PreviewMouseUp += txtConChain_TextArea_PreviewMouseUp;
+
+            txtEMR.Document = new TextDocument();
+            txtCons.Document = new TextDocument();
+            txtChains.Document = new TextDocument();
         }
 
         private void txtConChain_TextArea_PreviewMouseUp(object sender, MouseButtonEventArgs e)
@@ -257,54 +261,37 @@ namespace EMRCorefResol.UITest
 
         private void OpenEMR(int offset)
         {
-            string emrFileName, cons, chains;
-            EMR emr;
-
-            if (OpenEMR(offset, out emrFileName, out emr, out cons, out chains))
-            {
-                tabEMR.Header = emrFileName;
-                currentEMR = emr;
-
-                conceptSelectionInfo.IsSelected = false;
-                emrSelectionInfo.IsSelected = false;
-                chainSelectionInfo.IsSelected = false;
-
-                txtEMR.Document = new TextDocument(currentEMR.Content);
-                txtCons.Document = new TextDocument(cons);
-                txtChains.Document = new TextDocument(chains);
-            }
-        }
-
-        private bool OpenEMR(int offset, out string emrFileName, out EMR emr, out string cons, out string chains)
-        {
             var nextEMRIndex = currentEMRIndex + offset;
 
             if (nextEMRIndex >= 0 && nextEMRIndex < emrFiles.Length)
             {
+                conceptSelectionInfo.IsSelected = false;
+                emrSelectionInfo.IsSelected = false;
+                chainSelectionInfo.IsSelected = false;
+
                 var emrPath = emrFiles[nextEMRIndex];
-                emrFileName = System.IO.Path.GetFileName(emrPath);
+                var emrFileName = System.IO.Path.GetFileName(emrPath);
                 var conPath = System.IO.Path.Combine(txtConPath.Text, emrFileName + ".con");
                 var chainPath = System.IO.Path.Combine(txtChainPath.Text, emrFileName + ".chains");
 
                 currentEMRIndex = nextEMRIndex;
-                emr = new EMR(emrPath, conPath, dataReader);
+                currentEMR = new EMR(emrPath, conPath, dataReader);
+                txtEMR.Document.Text = currentEMR.Content;
+                txtEMR.ScrollTo(1, 1);
 
                 var sr = new StreamReader(conPath);
-                cons = sr.ReadToEnd();
+                txtCons.Document.Text = sr.ReadToEnd();
+                txtCons.ScrollTo(1, 1);
                 sr.Close();
 
                 sr = new StreamReader(chainPath);
-                chains = sr.ReadToEnd();
+                txtChains.Document.Text = sr.ReadToEnd();
+                txtChains.ScrollTo(1, 1);
                 sr.Close();
 
-                return true;
+                txtCurrentEMRIndex.Text = $"{currentEMRIndex + 1}";
+                txtTotalEMR.Text = $"{emrFiles.Length}";
             }
-
-            emr = null;
-            emrFileName = string.Empty;
-            cons = string.Empty;
-            chains = string.Empty;
-            return false;
         }
 
         private void btnPrev_Click(object sender, RoutedEventArgs e)
