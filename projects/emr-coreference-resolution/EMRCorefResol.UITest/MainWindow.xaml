@@ -42,7 +42,9 @@
 
         <StackPanel Grid.Row="1" HorizontalAlignment="Center" Orientation="Horizontal">
             <Button Content="Previous" Width="60" Margin="0,0,5,0" x:Name="btnPrev" Click="btnPrev_Click" Height="25"/>
-            <TextBlock x:Name="txtCurrentEMRIndex" Text="0" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtCurrentEMRIndex" Text="0" VerticalAlignment="Center" MinWidth="30" TextAlignment="Right"
+                     LostFocus="txtCurrentEMRIndex_LostFocus" PreviewKeyDown="txtCurrentEMRIndex_KeyDown"
+                     GotKeyboardFocus="txtCurrentEMRIndex_GotKeyboardFocus"/>
             <TextBlock Text=" of " VerticalAlignment="Center"/>
             <TextBlock x:Name="txtTotalEMR" Text="0" Margin="0,0,5,0" VerticalAlignment="Center"/>
             <Button Content="Next" Width="60" Height="25" x:Name="btnNext" Click="btnNext_Click" Margin="0,0,5,0"/>

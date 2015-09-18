@@ -256,12 +256,15 @@ namespace EMRCorefResol.UITest
 
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
-            OpenEMR(1);
+            OpenEMR(currentEMRIndex + 1);
         }
 
-        private void OpenEMR(int offset)
+        private void OpenEMR(int index)
         {
-            var nextEMRIndex = currentEMRIndex + offset;
+            var nextEMRIndex = index;
+
+            if (emrFiles == null)
+                return;
 
             if (nextEMRIndex >= 0 && nextEMRIndex < emrFiles.Length)
             {
@@ -270,7 +273,7 @@ namespace EMRCorefResol.UITest
                 chainSelectionInfo.IsSelected = false;
 
                 var emrPath = emrFiles[nextEMRIndex];
-                var emrFileName = System.IO.Path.GetFileName(emrPath);
+                var emrFileName = tabEMR.Header = System.IO.Path.GetFileName(emrPath);
                 var conPath = System.IO.Path.Combine(txtConPath.Text, emrFileName + ".con");
                 var chainPath = System.IO.Path.Combine(txtChainPath.Text, emrFileName + ".chains");
 
@@ -289,14 +292,53 @@ namespace EMRCorefResol.UITest
                 txtChains.ScrollTo(1, 1);
                 sr.Close();
 
-                txtCurrentEMRIndex.Text = $"{currentEMRIndex + 1}";
-                txtTotalEMR.Text = $"{emrFiles.Length}";
+                btnPrev.IsEnabled = nextEMRIndex > 0;
+                btnNext.IsEnabled = nextEMRIndex < emrFiles.Length - 1;
             }
+
+            txtCurrentEMRIndex.Text = $"{currentEMRIndex + 1}";
+            txtTotalEMR.Text = $"{emrFiles.Length}";
         }
 
         private void btnPrev_Click(object sender, RoutedEventArgs e)
         {
-            OpenEMR(-1);
+            OpenEMR(currentEMRIndex - 1);
+        }
+
+        private void txtCurrentEMRIndex_LostFocus(object sender, RoutedEventArgs e)
+        {
+            int emrNumber;
+            if (int.TryParse(txtCurrentEMRIndex.Text, out emrNumber))
+            {
+                if (emrNumber - 1 != currentEMRIndex)
+                    OpenEMR(emrNumber - 1);
+            }
+            else
+            {
+                txtCurrentEMRIndex.Text = $"{currentEMRIndex + 1}";
+            }
+        }
+
+        private void txtCurrentEMRIndex_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                int emrNumber;
+                if (int.TryParse(txtCurrentEMRIndex.Text, out emrNumber))
+                {
+                    if (emrNumber - 1 != currentEMRIndex)
+                        OpenEMR(emrNumber - 1);
+                }
+                else
+                {
+                    txtCurrentEMRIndex.Text = $"{currentEMRIndex + 1}";
+                }
+            }
+        }
+
+        private void txtCurrentEMRIndex_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            txtCurrentEMRIndex.SelectAll();
         }
     }
 }
