@@ -104,7 +104,6 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
         static void testLoadClassifier()
         {
             var c = ClassifierSerializer.Deserialize("test.cls");
-            Console.Write("test");
         }
 
         static void Print(IClasInstance i, IFeatureVector fVector)
