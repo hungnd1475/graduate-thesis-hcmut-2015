@@ -92,6 +92,7 @@
     <Compile Include="Features\PersonInstance\PronounWeFeature.cs" />
     <Compile Include="Features\PersonInstance\PronounYouFeature.cs" />
     <Compile Include="Features\PersonInstance\RelativeKeywordFeature.cs" />
+    <Compile Include="Features\PersonPair\GenderFeature.cs" />
     <Compile Include="Features\Pronoun\SemanticFeature.cs" />
     <Compile Include="PatientClassFeatures.cs" />
     <Compile Include="SVM\EnglishSVMTrainer.cs" />
