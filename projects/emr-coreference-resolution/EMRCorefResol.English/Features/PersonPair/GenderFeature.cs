@@ -50,6 +50,12 @@ namespace HCMUT.EMRCorefResol.English.Features
                 return appeared;
             }
 
+            var fromDB = searchNameDB(name);
+            if(fromDB != 2)
+            {
+                return fromDB;
+            }
+
             return 2;
         }
 
@@ -99,6 +105,27 @@ namespace HCMUT.EMRCorefResol.English.Features
                     return keyword;
                 }
             }
+            return 2;
+        }
+
+        private int searchNameDB(string name)
+        {
+            foreach(string malName in SharpNLPHelper.MaleNames)
+            {
+                if (checkContain(name, malName))
+                {
+                    return 0;
+                }
+            }
+
+            foreach (string femName in SharpNLPHelper.FemalNames)
+            {
+                if (checkContain(name, femName))
+                {
+                    return 1;
+                }
+            }
+
             return 2;
         }
 
