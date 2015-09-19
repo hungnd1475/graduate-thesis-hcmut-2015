@@ -21,12 +21,12 @@ namespace HCMUT.EMRCorefResol.English.SVM
         }
 
         public Range NewRange { get; }
-        public Range[] OldRange { get; }
+        public Range[] FeatureRanges { get; }
 
-        public SVMScalingFactor(Range newRange, Range[] oldRange)
+        public SVMScalingFactor(Range newRange, Range[] featureRanges)
         {
             NewRange = newRange;
-            OldRange = oldRange;
+            FeatureRanges = featureRanges;
         }
     }
 }

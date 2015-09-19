@@ -12,8 +12,6 @@ namespace HCMUT.EMRCorefResol.English.SVM
 
     public class EnglishSVMTrainer : ITrainer<SVMTrainingResult>
     {
-        private static readonly SVMProblemScaler SCALER = new SVMProblemScaler();
-
         public SVMTrainingResult TrainFromDir(string emrDir, string conDir, string chainDir,
             IDataReader dataReader, IPreprocessor preprocessor)
         {
@@ -55,10 +53,9 @@ namespace HCMUT.EMRCorefResol.English.SVM
                     f.AddTo(problems);
             }
 
-            Directory.CreateDirectory("Problems");
-            var personPairSF = SCALER.Scale(problems.PersonPair, 0, 1);
-            SVMProblemHelper.Save(problems.PersonPair, "Problems\\personpair.prb");
-            //SVMProblemHelper.Save(problems.PronounInstance, "Problems\\pronouninstance.prb");
+            var dir = $"Problems\\{DateTime.Now.ToString("yyyyMMdd-Hmmss")}";
+            Directory.CreateDirectory(dir);
+            problems.Save(dir);                     
                         
             return new SVMTrainingResult(Timer.Stop(), new SVMClassifier(), problems);
         }

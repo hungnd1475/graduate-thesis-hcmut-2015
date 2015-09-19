@@ -9,9 +9,9 @@ namespace HCMUT.EMRCorefResol.English
     using Features;
     using SVM;
 
-    class PatientClassFeatures : FeatureVector, ISVMTrainingFeatures
+    class PersonInstanceFeatures : FeatureVector, ISVMTrainingFeatures
     {
-        public PatientClassFeatures(PersonInstance instance, EMR emr, CorefChainCollection groundTruth, double classValue)
+        public PersonInstanceFeatures(PersonInstance instance, EMR emr, CorefChainCollection groundTruth, double classValue)
             : base(size: 6, classValue: classValue)
         {
             this[0] = new PronounIFeature(instance);

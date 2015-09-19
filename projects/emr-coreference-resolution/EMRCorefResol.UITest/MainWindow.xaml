@@ -37,7 +37,8 @@
             <Button Content="..." Width="20" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,4"
                     x:Name="btnEMR" Click="btnEMR_Click"/>
             <Button Content="..." Width="20" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" x:Name="btnCon" Click="btnCon_Click"/>
-            <Button Content="..." Width="20" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" x:Name="btnChain"/>
+            <Button Content="..." Width="20" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" x:Name="btnChain"
+                    Click="btnChain_Click"/>
         </Grid>
 
         <StackPanel Grid.Row="1" HorizontalAlignment="Center" Orientation="Horizontal">

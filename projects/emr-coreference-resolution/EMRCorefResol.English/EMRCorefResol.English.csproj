@@ -93,10 +93,11 @@
     <Compile Include="Features\PersonInstance\PronounYouFeature.cs" />
     <Compile Include="Features\PersonInstance\RelativeKeywordFeature.cs" />
     <Compile Include="Features\Pronoun\SemanticFeature.cs" />
-    <Compile Include="PatientClassFeatures.cs" />
+    <Compile Include="PersonInstanceFeatures.cs" />
     <Compile Include="SVM\EnglishSVMTrainer.cs" />
+    <Compile Include="SVM\ISVMParamOptimizer.cs" />
     <Compile Include="SVM\SVMClassifier.cs" />
-    <Compile Include="SVM\SVMNodeHelper.cs" />
+    <Compile Include="SVM\Helpers.cs" />
     <Compile Include="EnglishTrainingFeatureExtractor.cs" />
     <Compile Include="Features\AppositionFeature.cs" />
     <Compile Include="Features\PersonPair\AliasFeature.cs" />
@@ -126,7 +127,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="SVM\SVMProblemScaler.cs" />
     <Compile Include="SVM\SVMScalingFactor.cs" />
     <Compile Include="SVM\SVMTrainingResult.cs" />
     <Compile Include="Utilities\SharpNLPHelper.cs" />
@@ -144,20 +144,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="LIBSVM_COPYRIGHT" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="libsvm.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>if $(PlatformName) == x86 xcopy "$(SolutionDir)Libs\LibSVM\x86\libsvm.dll" "$(TargetDir)libsvm.dll" /D /Y
+</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -25,8 +25,8 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             //testPreprocessor();
             //testCorefChain();
             //testFeatures();
-            testReadEMR();
-            //testTrainer();
+            //testReadEMR();
+            testTrainer();
             //testLoadClassifier();
 
             sw.Stop();

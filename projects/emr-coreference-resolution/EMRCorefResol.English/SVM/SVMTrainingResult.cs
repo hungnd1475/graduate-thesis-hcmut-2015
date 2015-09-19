@@ -20,8 +20,7 @@ namespace HCMUT.EMRCorefResol.English.SVM
 
         public void SaveProblems(string dir)
         {
-            SVMProblemHelper.Save(_problems.PersonPair, Path.Combine(dir, "personpair.prb"));
-            // TODO save other svm problems here
+            _problems.Save(dir);
         }
 
         public Task SaveProblemsAsync(string dir)

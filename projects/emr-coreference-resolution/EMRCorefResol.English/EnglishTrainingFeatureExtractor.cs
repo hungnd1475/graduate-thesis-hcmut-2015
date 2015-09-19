@@ -23,7 +23,7 @@ namespace HCMUT.EMRCorefResol.English
         {
             //TODO classValue
             var classValue = 0.0;
-            return new PatientClassFeatures(instance, EMR, GroundTruth, classValue);
+            return new PersonInstanceFeatures(instance, EMR, GroundTruth, classValue);
         }
 
         public IFeatureVector Extract(TreatmentPair instance)

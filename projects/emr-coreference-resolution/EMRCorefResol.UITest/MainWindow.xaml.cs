@@ -177,7 +177,7 @@ namespace EMRCorefResol.UITest
             {
                 // we will travel from the current caret column to the start of the current line (i.e. 0)
                 // each time we go back, we check if there is a match with the concept pattern start at our column
-                // if there is, check if the caret lies within the match value, if it is store the value, 
+                // if there is, check if the caret lies within the match value, if it is store the value and stop, 
                 // otherwise go back one char and repeat the above process until we reach the start of the line.
                 while (true)
                 {
@@ -187,8 +187,8 @@ namespace EMRCorefResol.UITest
                     {
                         var value = match.Value;
                         var beginIndex = lineText.IndexOf(value);
-                        var endIndex = beginIndex + value.Length - 1;
-                        if (beginIndex <= location.Column && endIndex >= location.Column)
+                        var endIndex = beginIndex + value.Length + 1;
+                        if (beginIndex < location.Column && endIndex >= location.Column)
                         {
                             selected = value;
                             break;
@@ -243,6 +243,14 @@ namespace EMRCorefResol.UITest
             {
                 txtEMRPath.Text = FolderDialog.SelectedPath;
                 emrFiles = Directory.GetFiles(txtEMRPath.Text);
+
+                currentEMRIndex = -1;
+                currentEMR = null;
+                currentConcept = null;
+
+                chainSelectionInfo.IsSelected = false;
+                conceptSelectionInfo.IsSelected = false;
+                emrSelectionInfo.IsSelected = false;
             }
         }
 
@@ -251,6 +259,14 @@ namespace EMRCorefResol.UITest
             if (FolderDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 txtConPath.Text = FolderDialog.SelectedPath;
+            }
+        }
+
+        private void btnChain_Click(object sender, RoutedEventArgs e)
+        {
+            if (FolderDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                txtChainPath.Text = FolderDialog.SelectedPath;
             }
         }
 

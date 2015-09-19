@@ -39,7 +39,11 @@ namespace HCMUT.EMRCorefResol.English.SVM
             _treatmentPairModel = treatmentPairModel;
 
             _personPairSF = personPairSF;
-
+            _personInstanceSF = personInstanceSF;
+            _pronounInstanceSF = pronounInstanceSF;
+            _problemPairSF = problemPairSF;
+            _testPairSF = testPairSF;
+            _treatmentPairSF = treatmentPairSF;
         }
 
         internal SVMClassifier() { }

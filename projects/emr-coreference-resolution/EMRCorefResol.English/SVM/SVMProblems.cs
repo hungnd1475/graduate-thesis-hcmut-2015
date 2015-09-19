@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LibSVMsharp;
+using LibSVMsharp.Helpers;
+using System.IO;
 
 namespace HCMUT.EMRCorefResol.English.SVM
 {
@@ -26,9 +28,14 @@ namespace HCMUT.EMRCorefResol.English.SVM
             PronounInstance.Add(f.ToSVMNodes(), f.ClassValue);
         }
 
-        public void Add(PatientClassFeatures p)
+        public void Add(PersonInstanceFeatures p)
         {
             PersonInstance.Add(p.ToSVMNodes(), p.ClassValue);
+        }
+
+        public void Save(string dirPath)
+        {
+            SVMProblemHelper.Save(PersonPair, Path.Combine(dirPath, "person-pair.prb"));
         }
     }
 }
