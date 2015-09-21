@@ -5,11 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using HCMUT.EMRCorefResol.Classification;
+using HCMUT.EMRCorefResol.Classification.LibSVM;
 
 namespace HCMUT.EMRCorefResol.ConsoleTest
 {
     using English;
-    using English.SVM;
 
     class Program
     {
@@ -27,7 +28,6 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             //testFeatures();
             //testReadEMR();
             testTrainer();
-            //testLoadClassifier();
 
             sw.Stop();
             Console.WriteLine($"Execution time: {sw.ElapsedMilliseconds}ms");
@@ -95,15 +95,8 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
         static void testTrainer()
         {
-            var trainer = new EnglishSVMTrainer();
-            var result = trainer.TrainFromFile(emrFile, conceptsFile, chainFile, new I2B2DataReader(), new SimplePreprocessor());
-            Console.WriteLine($"Completion Time: {result.CompletionTime}ms");
-            ClassifierSerializer.Serialize(result.Classifier, "test.cls");
-        }
-
-        static void testLoadClassifier()
-        {
-            var c = ClassifierSerializer.Deserialize("test.cls");
+            TrainingSystem.Instance.TrainOne(emrFile, conceptsFile, chainFile, new I2B2DataReader(),
+                new SimplePreprocessor(), new EnglishTrainingFeatureExtractor(), new LibSVMToolTrainer());
         }
 
         static void Print(IClasInstance i, IFeatureVector fVector)

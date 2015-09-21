@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace HCMUT.EMRCorefResol
+namespace HCMUT.EMRCorefResol.Classification
 {
     public static class ClassifierSerializer
     {
-        public static void Serialize(IClassifier classifier, string path)
+        public static void SerializeClassifier(object classifier, string path)
         {
             var writer = new XmlTextWriter(path, Encoding.Unicode);
             writer.Formatting = Formatting.Indented;
@@ -19,13 +19,13 @@ namespace HCMUT.EMRCorefResol
 
             writer.WriteStartElement("Classifier");
             writer.WriteAttributeString("Type", classifier.GetType().AssemblyQualifiedName);
-            classifier.WriteXml(writer, GetDirectory(path));
+            //classifier.WriteXml(writer, GetDirectory(path));
             writer.WriteEndElement();
             writer.Flush();
             writer.Close();
         }
 
-        public static IClassifier Deserialize(string path)
+        public static object DeserializeClassifier(string path)
         {
             using (var fs = new FileStream(path, FileMode.Open))
             {
@@ -38,10 +38,11 @@ namespace HCMUT.EMRCorefResol
                 var type = Type.GetType(reader["Type"]);
                 reader.ReadStartElement("Classifier");
 
-                var classifier = (IClassifier)Activator.CreateInstance(type, reader, path);
+                //var classifier = (IClassifier)Activator.CreateInstance(type, reader, path);
                 
                 reader.Close();
-                return classifier;
+                //return classifier;
+                return null;
             }
         }
 

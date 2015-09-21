@@ -9,18 +9,18 @@ namespace HCMUT.EMRCorefResol.English.Utilities
 {
     internal static class Timer
     {
-        private static readonly Stopwatch STOP_WATCH = new Stopwatch();
+        private static readonly Stopwatch StopWatch = new Stopwatch();
 
         public static void Start()
         {
-            STOP_WATCH.Start();
+            StopWatch.Start();
         }
 
         public static long Stop()
         {
-            STOP_WATCH.Stop();
-            var elapse = STOP_WATCH.ElapsedMilliseconds;
-            STOP_WATCH.Reset();
+            StopWatch.Stop();
+            var elapse = StopWatch.ElapsedMilliseconds;
+            StopWatch.Reset();
             return elapse;
         }
     }

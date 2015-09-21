@@ -40,11 +40,29 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <OutputPath>bin\x86\Release\</OutputPath>
+    <OutputPath>..\Output\Release\x86\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Output\Debug\x64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\Output\Release\x64\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
@@ -59,6 +77,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classification\ClassifierSerializer.cs" />
+    <Compile Include="Classification\ClasProblem.cs" />
+    <Compile Include="Classification\ClasProblemCreator.cs" />
+    <Compile Include="Classification\IClasProblemSerializer.cs" />
     <Compile Include="Concept.cs" />
     <Compile Include="ConceptCollection.cs" />
     <Compile Include="CorefChain.cs" />
@@ -83,9 +104,10 @@
     <Compile Include="PairInstance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ConceptPosition.cs" />
+    <Compile Include="TrainingSystem.cs" />
+    <Compile Include="Utilities\Range.cs" />
     <Compile Include="SimplePreprocessor.cs" />
     <Compile Include="SingleInstance.cs" />
-    <Compile Include="Classification\TrainingResult.cs" />
     <Compile Include="Utilities\ConceptTypeHelper.cs" />
     <Compile Include="Utilities\EMRExtensions.cs" />
     <Compile Include="Utilities\HashCodeHelper.cs" />

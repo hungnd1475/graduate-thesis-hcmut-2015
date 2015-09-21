@@ -5,20 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HCMUT.EMRCorefResol
+namespace HCMUT.EMRCorefResol.Classification
 {
-    public interface ITrainer<T> where T : TrainingResult
+    public interface ITrainer<TClassifier> 
+        where TClassifier : IClassifier
     {
-        T TrainFromFile(string emrFile, string conFile, string chainFile,
-            IDataReader dataReader, IPreprocessor preprocessor);
+        void Train<T>(ClasProblem problem) where T : IClasInstance;
+        void Train(Type instanceType, ClasProblem problem);
 
-        Task<T> TrainFromFileAsync(string emrFile, string conFile, string chainFile,
-            IDataReader dataReader, IPreprocessor preprocessor);
-
-        T TrainFromDir(string emrDir, string conDir, string chainDir,
-            IDataReader dataReader, IPreprocessor preprocessor);
-
-        Task<T> TrainFromDirAsync(string emrDir, string conDir, string chainDir,
-            IDataReader dataReader, IPreprocessor preprocessor);
+        TClassifier GetClassifier();
+        IClasProblemSerializer ProblemSerializer { get; }
     }
 }

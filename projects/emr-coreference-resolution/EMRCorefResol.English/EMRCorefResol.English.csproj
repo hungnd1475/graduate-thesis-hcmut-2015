@@ -39,11 +39,29 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <OutputPath>bin\x86\Release\</OutputPath>
+    <OutputPath>..\Output\Release\x86\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Output\Debug\x64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\Output\Release\x64\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
@@ -65,10 +83,6 @@
     </Reference>
     <Reference Include="SharpEntropy">
       <HintPath>..\Libs\sharpNLP\SharpEntropy.dll</HintPath>
-    </Reference>
-    <Reference Include="LibSVMsharp, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <HintPath>..\packages\LibSVMsharp.1.2.3\lib\net45\LibSVMsharp.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -95,10 +109,6 @@
     <Compile Include="Features\PersonPair\GenderFeature.cs" />
     <Compile Include="Features\Pronoun\SemanticFeature.cs" />
     <Compile Include="PersonInstanceFeatures.cs" />
-    <Compile Include="SVM\EnglishSVMTrainer.cs" />
-    <Compile Include="SVM\ISVMParamOptimizer.cs" />
-    <Compile Include="SVM\SVMClassifier.cs" />
-    <Compile Include="SVM\Helpers.cs" />
     <Compile Include="EnglishTrainingFeatureExtractor.cs" />
     <Compile Include="Features\AppositionFeature.cs" />
     <Compile Include="Features\PersonPair\AliasFeature.cs" />
@@ -116,20 +126,16 @@
     <Compile Include="Features\Pronoun\FirstPreviousMentionTypeFeature.cs" />
     <Compile Include="Features\Pronoun\PartOfSpeechFeature.cs" />
     <Compile Include="Features\Pronoun\SecondPreviousMentionTypeFeature.cs" />
-    <Compile Include="SVM\ISVMTrainingFeatures.cs" />
     <Compile Include="PersonPairFeatures.cs" />
     <Compile Include="Features\SentenceDistanceFeature.cs" />
     <Compile Include="Features\StringMatchFeature.cs" />
     <Compile Include="PronounInstanceFeatures.cs" />
-    <Compile Include="SVM\SVMProblems.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="SVM\SVMScalingFactor.cs" />
-    <Compile Include="SVM\SVMTrainingResult.cs" />
     <Compile Include="Utilities\SharpNLPHelper.cs" />
     <Compile Include="Utilities\Timer.cs" />
     <Compile Include="WordNet\SynSet.cs" />
@@ -145,7 +151,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -158,8 +163,8 @@
     </PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>if $(PlatformName) == x86 xcopy "$(SolutionDir)Libs\LibSVM\x86\libsvm.dll" "$(TargetDir)libsvm.dll" /D /Y
-</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

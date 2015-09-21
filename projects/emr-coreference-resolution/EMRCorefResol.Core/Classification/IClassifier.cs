@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace HCMUT.EMRCorefResol
+namespace HCMUT.EMRCorefResol.Classification
 {
     /// <summary>
     /// Provides a common interface for classifiers.
@@ -21,6 +21,11 @@ namespace HCMUT.EMRCorefResol
         double Classify(TestPair instance, IFeatureVector f);
         double Classify(PronounInstance instance, IFeatureVector f);
 
+        double[] Classify<T>(ClasProblem problem) where T : IClasInstance;
+        double[] Classify(Type instancetype, ClasProblem problem);
+
         void WriteXml(XmlWriter writer, string dir);
+
+        IClasProblemSerializer ProblemSerializer { get; }
     }
 }
