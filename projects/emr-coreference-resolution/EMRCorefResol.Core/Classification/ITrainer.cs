@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol.Classification
 {
-    public interface ITrainer<TClassifier> 
+    public interface ITrainer<out TClassifier> 
         where TClassifier : IClassifier
     {
         void Train<T>(ClasProblem problem) where T : IClasInstance;

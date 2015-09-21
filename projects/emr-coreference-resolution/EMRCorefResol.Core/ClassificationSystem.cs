@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HCMUT.EMRCorefResol.Classification;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,27 +8,14 @@ using static HCMUT.EMRCorefResol.Logging.LoggerFactory;
 
 namespace HCMUT.EMRCorefResol
 {
-    using Classification;
-
-    public class TrainingSystem
+    public class ClassificationSystem
     {
-        private static readonly List<Type> INSTANCE_TYPES =
-            new List<Type>()
-            {
-                typeof(PersonPair),
-                typeof(PersonInstance),
-                typeof(PronounInstance),
-                typeof(ProblemPair),
-                typeof(TestPair),
-                typeof(TreatmentPair)
-            };
+        public static ClassificationSystem Instance { get; } = new ClassificationSystem();
 
-        public static TrainingSystem Instance { get; } = new TrainingSystem();
+        private ClassificationSystem() { }
 
-        private TrainingSystem() { }
-
-        public void TrainOne(string emrPath, string conceptsPath, string chainsPath, IDataReader dataReader,
-            IPreprocessor preprocessor, ITrainingFeatureExtractor fExtractor, ITrainer<IClassifier> trainer) 
+        public void ClassifyOne(string emrPath, string conceptsPath, string chainsPath, IDataReader dataReader,
+            IPreprocessor preprocessor, ITrainingFeatureExtractor fExtractor, IClassifier classifier)
         {
             var emr = new EMR(emrPath, conceptsPath, dataReader);
             var chains = new CorefChainCollection(chainsPath, dataReader);
@@ -53,8 +41,8 @@ namespace HCMUT.EMRCorefResol
                     instances[i].AddTo(pCreator, fVector);
             }
 
-            GetLogger().Info("Training...");
-            trainer.Train<PersonPair>(pCreator.GetProblem<PersonPair>());
+            GetLogger().Info("Classifying...");
+            var target = classifier.Classify<PersonPair>(pCreator.GetProblem<PersonPair>());
         }
     }
 }

@@ -4,15 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.IO;
+using static HCMUT.EMRCorefResol.Logging.LoggerFactory;
 
 namespace HCMUT.EMRCorefResol.Classification.LibSVM
 {
     public class LibSVMToolClassifier : IClassifier
     {
-        internal readonly Dictionary<Type, string> SVMModels
+        private readonly Dictionary<Type, string> _svmModels
             = new Dictionary<Type, string>();
-        internal readonly Dictionary<Type, string> ScalingFactors
+        private readonly Dictionary<Type, string> _scalingFactors
             = new Dictionary<Type, string>();
+
+        internal LibSVMToolClassifier(Dictionary<Type, string> svmModels,
+            Dictionary<Type, string> scalingFactors)
+        {
+            _svmModels = svmModels;
+            _scalingFactors = scalingFactors;
+        }
 
         public IClasProblemSerializer ProblemSerializer
         {
@@ -51,12 +60,48 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
 
         public double[] Classify<T>(ClasProblem problem) where T : IClasInstance
         {
-            throw new NotImplementedException();
+            return Classify(typeof(T), problem);
         }
 
         public double[] Classify(Type instancetype, ClasProblem problem)
         {
-            throw new NotImplementedException();
+            var modelPath = _svmModels[instancetype];
+            var name = instancetype.Name;
+            var saveDir = Path.GetDirectoryName(modelPath);
+            var tmpDir = Path.Combine(saveDir, "tmp");
+
+            Directory.CreateDirectory(tmpDir);
+            var rawPrbPath = Path.Combine(tmpDir, $"{name}-clas.prb");
+            var scaledPrbPath = Path.Combine(tmpDir, $"{name}-clas.scaled");
+            var outputPath = Path.Combine(tmpDir, $"{name}-clas.out");
+            var sfPath = _scalingFactors[instancetype];
+
+            // save
+            ProblemSerializer.Save(problem, rawPrbPath);
+
+            // scale
+            LibSVMTools.RunSVMScale(sfPath, rawPrbPath, scaledPrbPath);
+
+            // predict
+            GetLogger().Info($"Classifying {name} problem...");
+            LibSVMTools.RunSVMPredict(scaledPrbPath, modelPath, outputPath);
+
+            var target = new List<double>();
+            var sr = new StreamReader(outputPath);
+            while (!sr.EndOfStream)
+            {
+                var s = sr.ReadLine();
+                double v;
+                if (double.TryParse(s, out v))
+                {
+                    target.Add(v);
+                }
+            }
+            sr.Close();
+
+            //Directory.Delete(tmpDir, true); <- run this to delete tmp path, commented for now for debugging purpose.
+
+            return target.ToArray();
         }
 
         public void WriteXml(XmlWriter writer, string dir)

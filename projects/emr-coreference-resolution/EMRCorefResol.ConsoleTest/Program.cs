@@ -7,16 +7,23 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using HCMUT.EMRCorefResol.Classification;
 using HCMUT.EMRCorefResol.Classification.LibSVM;
+using static HCMUT.EMRCorefResol.Logging.LoggerFactory;
 
 namespace HCMUT.EMRCorefResol.ConsoleTest
 {
     using English;
+    using System.IO;
 
     class Program
     {
         static string emrFile = @"..\..\..\..\..\dataset\Task_1C\i2b2_Test\i2b2_Beth_Test\docs\clinical-3.txt";
         static string conceptsFile = @"..\..\..\..\..\dataset\Task_1C\i2b2_Test\i2b2_Beth_Test\concepts\clinical-3.txt.con";
         static string chainFile = @"..\..\..\..\..\dataset\Task_1C_Test_groundtruth\Tack_1C_to_be_released_10_02_2011\i2b2_Beth_Test\chains\clinical-3.txt.chains";
+
+        static EMRCollection EMR_COLLECTION = new EMRCollection(
+            @"..\..\..\..\..\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train\docs",
+            @"..\..\..\..\..\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train\concepts",
+            @"..\..\..\..\..\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train\chains");
 
         static void Main(string[] args)
         {
@@ -95,8 +102,24 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
         static void testTrainer()
         {
-            TrainingSystem.Instance.TrainOne(emrFile, conceptsFile, chainFile, new I2B2DataReader(),
-                new SimplePreprocessor(), new EnglishTrainingFeatureExtractor(), new LibSVMToolTrainer());
+            var trainer = new LibSVMToolTrainer();
+            var dataReader = new I2B2DataReader();
+            var preprocessor = new SimplePreprocessor();
+            var fExtractor = new EnglishTrainingFeatureExtractor();
+
+            TrainingSystem.Instance.TrainOne(EMR_COLLECTION.GetEMRPath(0), EMR_COLLECTION.GetConceptsPath(0),
+                EMR_COLLECTION.GetChainsPath(0), dataReader, preprocessor, fExtractor, trainer);
+
+            var r = new Random();
+
+            for (int i = 1; i < 11; i++)
+            {
+                var index = r.Next(1, EMR_COLLECTION.Count - 1);
+                var emrPath = EMR_COLLECTION.GetEMRPath(index);
+                Console.WriteLine($"{Path.GetFileName(emrPath)}");
+                ClassificationSystem.Instance.ClassifyOne(emrPath, EMR_COLLECTION.GetConceptsPath(index),
+                    EMR_COLLECTION.GetChainsPath(index), dataReader, preprocessor, fExtractor, trainer.GetClassifier());
+            }
         }
 
         static void Print(IClasInstance i, IFeatureVector fVector)

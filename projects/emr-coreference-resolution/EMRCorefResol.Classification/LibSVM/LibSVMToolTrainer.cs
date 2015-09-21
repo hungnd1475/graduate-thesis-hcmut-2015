@@ -6,13 +6,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.IO;
+using static HCMUT.EMRCorefResol.Logging.LoggerFactory;
 
 namespace HCMUT.EMRCorefResol.Classification.LibSVM
 {
     public class LibSVMToolTrainer : ITrainer<LibSVMToolClassifier>
     {
-        private readonly LibSVMToolClassifier _classifier = new LibSVMToolClassifier();
-        private readonly string _saveDir = "SVM\\LibSVMTools";
+        private readonly LibSVMToolClassifier _classifier;
+        private readonly Dictionary<Type, string> _svmModels = new Dictionary<Type, string>();
+        private readonly Dictionary<Type, string> _scalingFactors = new Dictionary<Type, string>();
+
+        private readonly string _saveDir;
         private readonly string _problemDir, _modelDir;
 
         public LibSVMToolTrainer(string saveDir)
@@ -20,13 +24,14 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             _saveDir = saveDir;
             _problemDir = Path.Combine(_saveDir, "Problems");
             _modelDir = Path.Combine(_saveDir, "Models");
+
+            Directory.CreateDirectory(_problemDir);
+            Directory.CreateDirectory(_modelDir);
+
+            _classifier = new LibSVMToolClassifier(_svmModels, _scalingFactors);
         }
 
-        public LibSVMToolTrainer()
-        {
-            _problemDir = Path.Combine(_saveDir, "Problems");
-            _modelDir = Path.Combine(_saveDir, "Models");
-        }
+        public LibSVMToolTrainer() : this("Classification\\LibSVMTools") { }
 
         public IClasProblemSerializer ProblemSerializer
         {
@@ -41,47 +46,23 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
         public void Train(Type instanceType, ClasProblem problem)
         {
             var name = instanceType.Name;
-            Directory.CreateDirectory(_problemDir);
-            Directory.CreateDirectory(_modelDir);
 
-            var rawPrbPath = Path.Combine(_problemDir, $"{name}.prb");
-            var scaledPrbPath = Path.Combine(_problemDir, $"{name}.scaled");
+            var rawPrbPath = Path.Combine(_problemDir, $"{name}-training.prb");
+            var scaledPrbPath = Path.Combine(_problemDir, $"{name}-training.scaled");
             var sfPath = Path.Combine(_modelDir, $"{name}.sf");
             var modelPath = Path.Combine(_modelDir, $"{name}.model");
 
             ProblemSerializer.Save(problem, rawPrbPath);
 
             // scale
-            Console.WriteLine($"Scaling {name} problem...");
-            var pInfo = new ProcessStartInfo()
-            {
-                FileName = LibSVMTools.SVMScalePath,
-                Arguments = $"-l 0 -u 1 -s {sfPath} {rawPrbPath}",
-                RedirectStandardOutput = true,
-                CreateNoWindow = true,
-                UseShellExecute = false
-            };
-            var p = Process.Start(pInfo);
-
-            var sw = new StreamWriter(scaledPrbPath);
-            sw.Write(p.StandardOutput.ReadToEnd());
-            sw.Close();
+            LibSVMTools.RunSVMScale(0d, 1d, sfPath, rawPrbPath, scaledPrbPath);
 
             // train
-            Console.WriteLine($"Training {name} problem...");
-            pInfo = new ProcessStartInfo()
-            {
-                FileName = LibSVMTools.SVMTrainPath,
-                Arguments = $"-s 0 -t 2 {scaledPrbPath} {modelPath}",
-                UseShellExecute = false,
-                RedirectStandardOutput = true,
-                CreateNoWindow = true
-            };
-            p = Process.Start(pInfo);
-            p.WaitForExit();
+            GetLogger().Info($"Training {name} problem...");
+            LibSVMTools.RunSVMTrain(SVMType.C_SVC, SVMKernel.RBF, scaledPrbPath, modelPath);
 
-            _classifier.SVMModels.Add(instanceType, modelPath);
-            _classifier.ScalingFactors.Add(instanceType, sfPath);
+            _svmModels.Add(instanceType, modelPath);
+            _scalingFactors.Add(instanceType, sfPath);
         }
 
         public void Train<T>(ClasProblem problem) where T : IClasInstance
