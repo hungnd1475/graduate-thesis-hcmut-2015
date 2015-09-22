@@ -26,8 +26,9 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             //testCorefChain();
             //testFeatures();
             //testReadEMR();
-            testTrainer();
+            //testTrainer();
             //testLoadClassifier();
+            testService();
 
             sw.Stop();
             Console.WriteLine($"Execution time: {sw.ElapsedMilliseconds}ms");
@@ -104,6 +105,13 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
         static void testLoadClassifier()
         {
             var c = ClassifierSerializer.Deserialize("test.cls");
+        }
+
+        static void testService()
+        {
+            Console.WriteLine("Annie gender: " + Service.English.getGender("annie"));
+            Console.WriteLine(String.Join(" ", Service.English.getPOS("Annie goes to school")));
+            Console.WriteLine(Service.English.getSyns("table")[1]);
         }
 
         static void Print(IClasInstance i, IFeatureVector fVector)

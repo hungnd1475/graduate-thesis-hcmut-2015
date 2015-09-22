@@ -49,6 +49,10 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -83,6 +87,11 @@
     <Compile Include="PairInstance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ConceptPosition.cs" />
+    <Compile Include="Service\Models\CustomResponse.cs" />
+    <Compile Include="Service\English.cs" />
+    <Compile Include="Service\HttpUtil.cs" />
+    <Compile Include="Service\Models\Definition.cs" />
+    <Compile Include="Service\Models\WordType.cs" />
     <Compile Include="SimplePreprocessor.cs" />
     <Compile Include="SingleInstance.cs" />
     <Compile Include="Classification\TrainingResult.cs" />
@@ -93,7 +102,9 @@
   <ItemGroup>
     <Compile Include="Features\Feature.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

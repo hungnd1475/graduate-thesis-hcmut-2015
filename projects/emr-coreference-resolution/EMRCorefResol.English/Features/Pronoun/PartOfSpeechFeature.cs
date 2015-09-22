@@ -11,11 +11,10 @@ namespace HCMUT.EMRCorefResol.English.Features
         public PartOfSpeechFeature(PronounInstance instance)
             : base("Part-of-Speech")
         {
-            var tagger = SharpNLPHelper.TaggerInstance;
-            var POS = tagger.Tag(new string[] { instance.Concept.Lexicon });
+            var tagged = Service.English.getPOS(instance.Concept.Lexicon);
 
             Value = -1.0;
-            switch (POS[0])
+            switch (tagged[0].Split('/')[1])
             {
                 case "DT":
                     Value = 0.0;

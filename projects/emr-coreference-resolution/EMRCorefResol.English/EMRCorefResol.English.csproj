@@ -48,24 +48,6 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LAIR.Collections, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Libs\wordnet\LAIR.Collections.dll</HintPath>
-    </Reference>
-    <Reference Include="LAIR.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Libs\wordnet\LAIR.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="LAIR.IO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Libs\wordnet\LAIR.IO.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenNLP">
-      <HintPath>..\Libs\sharpNLP\OpenNLP.dll</HintPath>
-    </Reference>
-    <Reference Include="SharpEntropy">
-      <HintPath>..\Libs\sharpNLP\SharpEntropy.dll</HintPath>
-    </Reference>
     <Reference Include="LibSVMsharp, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
       <HintPath>..\packages\LibSVMsharp.1.2.3\lib\net45\LibSVMsharp.dll</HintPath>
       <Private>True</Private>
@@ -130,12 +112,7 @@
     </Compile>
     <Compile Include="SVM\SVMScalingFactor.cs" />
     <Compile Include="SVM\SVMTrainingResult.cs" />
-    <Compile Include="Utilities\SharpNLPHelper.cs" />
     <Compile Include="Utilities\Timer.cs" />
-    <Compile Include="WordNet\SynSet.cs" />
-    <Compile Include="WordNet\WordNetEngine.cs" />
-    <Compile Include="Utilities\WordnetHelper.cs" />
-    <Compile Include="WordNet\WordNetSimilarityModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EMRCorefResol.Core\EMRCorefResol.Core.csproj">
@@ -158,7 +135,7 @@
     </PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>if $(PlatformName) == x86 xcopy "$(SolutionDir)Libs\LibSVM\x86\libsvm.dll" "$(TargetDir)libsvm.dll" /D /Y
+    <PostBuildEvent>if $(PlatformName) == x86 xcopy "$(SolutionDir)Libs\LibSVM\x86\libsvm.dll" "$(TargetDir)" /D /Y
 </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

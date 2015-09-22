@@ -7,10 +7,6 @@ using System.Threading.Tasks;
 using System.Data.Entity.Design.PluralizationServices;
 using System.Globalization;
 
-using LAIR.Collections.Generic;
-using LAIR.ResourceAPIs.WordNet;
-using System.IO;
-
 namespace HCMUT.EMRCorefResol.English.Features
 {
     class NumberFeature : Feature
