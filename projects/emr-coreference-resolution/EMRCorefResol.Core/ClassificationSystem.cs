@@ -42,7 +42,7 @@ namespace HCMUT.EMRCorefResol
             }
 
             GetLogger().Info("Classifying...");
-            var target = classifier.Classify<PersonPair>(pCreator.GetProblem<PersonPair>());
+            classifier.Classify<PersonPair>(pCreator.GetProblem<PersonPair>());
         }
     }
 }

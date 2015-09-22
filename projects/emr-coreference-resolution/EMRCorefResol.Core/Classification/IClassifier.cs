@@ -9,7 +9,7 @@ namespace HCMUT.EMRCorefResol.Classification
 {
     /// <summary>
     /// Provides a common interface for classifiers.
-    /// A concrete implementation must contains a constructor that takes a <see cref="XmlReader"/> parameter
+    /// A concrete implementation must be a public class and must contain a constructor that takes a <see cref="XmlReader"/> parameter
     /// and a <see cref="string"/> parameter (in that order) for the <see cref="ClassifierSerializer"/> service to work properly.
     /// </summary>
     public interface IClassifier
@@ -22,7 +22,7 @@ namespace HCMUT.EMRCorefResol.Classification
         double Classify(PronounInstance instance, IFeatureVector f);
 
         double[] Classify<T>(ClasProblem problem) where T : IClasInstance;
-        double[] Classify(Type instancetype, ClasProblem problem);
+        double[] Classify(Type instanceType, ClasProblem problem);
 
         void WriteXml(XmlWriter writer, string dir);
 

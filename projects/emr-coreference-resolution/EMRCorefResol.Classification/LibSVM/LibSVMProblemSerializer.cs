@@ -7,7 +7,7 @@ using System.IO;
 
 namespace HCMUT.EMRCorefResol.Classification.LibSVM
 {
-    class LibSVMProblemSerializer : IClasProblemSerializer
+    public class LibSVMProblemSerializer : IClasProblemSerializer
     {
         public static LibSVMProblemSerializer Instance { get; } = new LibSVMProblemSerializer();
 
@@ -21,11 +21,11 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
         public void Save(ClasProblem problem, string filePath)
         {
             var sw = new StreamWriter(filePath);
-            sw.Write(string.Join(Environment.NewLine,
-                Enumerable.Range(0, problem.Size).Select(i =>
-                    $"{problem.Y[i]} {string.Join(" ", Enumerable.Range(0, problem.X[i].Size).Select(j => $"{j + 1}:{problem.X[i][j].Value}"))}"
-                ))
-            );
+            for (int i = 0; i < problem.Size; i++)
+            {
+                sw.WriteLine($"{problem.Y[i]} {string.Join(" ", Enumerable.Range(0, problem.X[i].Size).Select(j => $"{j + 1}:{problem.X[i][j].Value}"))}");
+            }
+            sw.Close();
         }
     }
 }

@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using HCMUT.EMRCorefResol.Classification;
 using HCMUT.EMRCorefResol.Classification.LibSVM;
-using static HCMUT.EMRCorefResol.Logging.LoggerFactory;
 
 namespace HCMUT.EMRCorefResol.ConsoleTest
 {
@@ -34,7 +33,8 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             //testCorefChain();
             //testFeatures();
             //testReadEMR();
-            testTrainer();
+            var path = testTrainer();
+            testClassifier(path);
 
             sw.Stop();
             Console.WriteLine($"Execution time: {sw.ElapsedMilliseconds}ms");
@@ -100,7 +100,7 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             }
         }
 
-        static void testTrainer()
+        static string testTrainer()
         {
             var trainer = new LibSVMToolTrainer();
             var dataReader = new I2B2DataReader();
@@ -110,15 +110,27 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             TrainingSystem.Instance.TrainOne(EMR_COLLECTION.GetEMRPath(0), EMR_COLLECTION.GetConceptsPath(0),
                 EMR_COLLECTION.GetChainsPath(0), dataReader, preprocessor, fExtractor, trainer);
 
-            var r = new Random();
+            var classifier = trainer.GetClassifier();
+            var path = Path.Combine(trainer.ModelsDir, "LibSVMTool.classifier");
+            ClassifierSerializer.Serialize(classifier, path);
+            return path;
+        }
 
+        static void testClassifier(string path)
+        {
+            var classifier = ClassifierSerializer.Deserialize(path);
+            var dataReader = new I2B2DataReader();
+            var preprocessor = new SimplePreprocessor();
+            var fExtractor = new EnglishTrainingFeatureExtractor();
+
+            var r = new Random();
             for (int i = 1; i < 11; i++)
             {
                 var index = r.Next(1, EMR_COLLECTION.Count - 1);
                 var emrPath = EMR_COLLECTION.GetEMRPath(index);
                 Console.WriteLine($"{Path.GetFileName(emrPath)}");
                 ClassificationSystem.Instance.ClassifyOne(emrPath, EMR_COLLECTION.GetConceptsPath(index),
-                    EMR_COLLECTION.GetChainsPath(index), dataReader, preprocessor, fExtractor, trainer.GetClassifier());
+                    EMR_COLLECTION.GetChainsPath(index), dataReader, preprocessor, fExtractor, classifier);
             }
         }
 

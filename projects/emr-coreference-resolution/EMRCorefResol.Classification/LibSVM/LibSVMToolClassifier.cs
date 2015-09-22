@@ -11,16 +11,18 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
 {
     public class LibSVMToolClassifier : IClassifier
     {
-        private readonly Dictionary<Type, string> _svmModels
-            = new Dictionary<Type, string>();
-        private readonly Dictionary<Type, string> _scalingFactors
-            = new Dictionary<Type, string>();
+        private readonly string _modelsDir;
 
-        internal LibSVMToolClassifier(Dictionary<Type, string> svmModels,
-            Dictionary<Type, string> scalingFactors)
+        public string ModelsDir { get { return _modelsDir; } }
+
+        internal LibSVMToolClassifier(string modelsDir)
         {
-            _svmModels = svmModels;
-            _scalingFactors = scalingFactors;
+            _modelsDir = modelsDir;
+        }
+
+        public LibSVMToolClassifier(XmlReader xmlReader, string dir)
+        {
+            _modelsDir = xmlReader.ReadElementContentAsString();
         }
 
         public IClasProblemSerializer ProblemSerializer
@@ -63,10 +65,10 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             return Classify(typeof(T), problem);
         }
 
-        public double[] Classify(Type instancetype, ClasProblem problem)
+        public double[] Classify(Type instanceType, ClasProblem problem)
         {
-            var modelPath = _svmModels[instancetype];
-            var name = instancetype.Name;
+            var name = instanceType.Name;
+            var modelPath = Path.Combine(_modelsDir, $"{name}.model");
             var saveDir = Path.GetDirectoryName(modelPath);
             var tmpDir = Path.Combine(saveDir, "tmp");
 
@@ -74,7 +76,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             var rawPrbPath = Path.Combine(tmpDir, $"{name}-clas.prb");
             var scaledPrbPath = Path.Combine(tmpDir, $"{name}-clas.scaled");
             var outputPath = Path.Combine(tmpDir, $"{name}-clas.out");
-            var sfPath = _scalingFactors[instancetype];
+            var sfPath = Path.Combine(_modelsDir, $"{name}.sf");
 
             // save
             ProblemSerializer.Save(problem, rawPrbPath);
@@ -86,27 +88,29 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             GetLogger().Info($"Classifying {name} problem...");
             LibSVMTools.RunSVMPredict(scaledPrbPath, modelPath, outputPath);
 
-            var target = new List<double>();
+            var target = new double[problem.Size];
             var sr = new StreamReader(outputPath);
-            while (!sr.EndOfStream)
+
+            for (int i = 0; !sr.EndOfStream && i < problem.Size; i++)
             {
                 var s = sr.ReadLine();
                 double v;
                 if (double.TryParse(s, out v))
                 {
-                    target.Add(v);
+                    target[i] = v;
                 }
             }
             sr.Close();
 
-            //Directory.Delete(tmpDir, true); <- run this to delete tmp path, commented for now for debugging purpose.
+            // TODO: run the line below to delete tmp path, commented for now for debugging purpose
+            //Directory.Delete(tmpDir, true); 
 
-            return target.ToArray();
+            return target;
         }
 
         public void WriteXml(XmlWriter writer, string dir)
         {
-            throw new NotImplementedException();
+            writer.WriteElementString("ModelsDir", _modelsDir);
         }
     }
 }

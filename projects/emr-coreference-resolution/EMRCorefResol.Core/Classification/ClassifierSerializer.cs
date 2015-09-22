@@ -11,7 +11,7 @@ namespace HCMUT.EMRCorefResol.Classification
 {
     public static class ClassifierSerializer
     {
-        public static void SerializeClassifier(object classifier, string path)
+        public static void Serialize(IClassifier classifier, string path)
         {
             var writer = new XmlTextWriter(path, Encoding.Unicode);
             writer.Formatting = Formatting.Indented;
@@ -19,13 +19,13 @@ namespace HCMUT.EMRCorefResol.Classification
 
             writer.WriteStartElement("Classifier");
             writer.WriteAttributeString("Type", classifier.GetType().AssemblyQualifiedName);
-            //classifier.WriteXml(writer, GetDirectory(path));
+            classifier.WriteXml(writer, GetDirectory(path));
             writer.WriteEndElement();
             writer.Flush();
             writer.Close();
         }
 
-        public static object DeserializeClassifier(string path)
+        public static IClassifier Deserialize(string path)
         {
             using (var fs = new FileStream(path, FileMode.Open))
             {
@@ -38,11 +38,10 @@ namespace HCMUT.EMRCorefResol.Classification
                 var type = Type.GetType(reader["Type"]);
                 reader.ReadStartElement("Classifier");
 
-                //var classifier = (IClassifier)Activator.CreateInstance(type, reader, path);
+                var classifier = (IClassifier)Activator.CreateInstance(type, reader, path);
                 
                 reader.Close();
-                //return classifier;
-                return null;
+                return classifier;
             }
         }
 

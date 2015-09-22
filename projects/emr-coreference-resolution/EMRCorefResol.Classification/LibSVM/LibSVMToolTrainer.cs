@@ -10,14 +10,14 @@ using static HCMUT.EMRCorefResol.Logging.LoggerFactory;
 
 namespace HCMUT.EMRCorefResol.Classification.LibSVM
 {
-    public class LibSVMToolTrainer : ITrainer<LibSVMToolClassifier>
+    public class LibSVMToolTrainer : ITrainer
     {
         private readonly LibSVMToolClassifier _classifier;
-        private readonly Dictionary<Type, string> _svmModels = new Dictionary<Type, string>();
-        private readonly Dictionary<Type, string> _scalingFactors = new Dictionary<Type, string>();
 
         private readonly string _saveDir;
         private readonly string _problemDir, _modelDir;
+
+        public string ModelsDir { get { return _modelDir; } }
 
         public LibSVMToolTrainer(string saveDir)
         {
@@ -28,7 +28,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             Directory.CreateDirectory(_problemDir);
             Directory.CreateDirectory(_modelDir);
 
-            _classifier = new LibSVMToolClassifier(_svmModels, _scalingFactors);
+            _classifier = new LibSVMToolClassifier(_modelDir);
         }
 
         public LibSVMToolTrainer() : this("Classification\\LibSVMTools") { }
@@ -38,7 +38,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             get { return LibSVMProblemSerializer.Instance; }
         }
 
-        public LibSVMToolClassifier GetClassifier()
+        public IClassifier GetClassifier()
         {
             return _classifier;
         }
@@ -60,9 +60,6 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             // train
             GetLogger().Info($"Training {name} problem...");
             LibSVMTools.RunSVMTrain(SVMType.C_SVC, SVMKernel.RBF, scaledPrbPath, modelPath);
-
-            _svmModels.Add(instanceType, modelPath);
-            _scalingFactors.Add(instanceType, sfPath);
         }
 
         public void Train<T>(ClasProblem problem) where T : IClasInstance

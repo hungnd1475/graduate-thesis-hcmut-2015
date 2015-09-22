@@ -27,7 +27,7 @@ namespace HCMUT.EMRCorefResol
         private TrainingSystem() { }
 
         public void TrainOne(string emrPath, string conceptsPath, string chainsPath, IDataReader dataReader,
-            IPreprocessor preprocessor, ITrainingFeatureExtractor fExtractor, ITrainer<IClassifier> trainer) 
+            IPreprocessor preprocessor, ITrainingFeatureExtractor fExtractor, ITrainer trainer) 
         {
             var emr = new EMR(emrPath, conceptsPath, dataReader);
             var chains = new CorefChainCollection(chainsPath, dataReader);
