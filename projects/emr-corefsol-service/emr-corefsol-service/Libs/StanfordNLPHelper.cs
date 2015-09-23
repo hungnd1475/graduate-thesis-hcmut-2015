@@ -23,6 +23,7 @@ namespace emr_corefsol_service.Libs
         {
             var props = new Properties();
             props.setProperty("annotators", "tokenize, ssplit, pos, gender");
+
             var curDir = Environment.CurrentDirectory;
             Directory.SetCurrentDirectory(modelsURL);
             pipeline = new StanfordCoreNLP(props);
@@ -53,7 +54,7 @@ namespace emr_corefsol_service.Libs
 
         public static string getGender(string name)
         {
-            Annotation document = new Annotation(name);
+            Annotation document = new Annotation(name.ToUpper());
             pipeline.annotate(document);
 
             ArrayList tokens = getTokens(document);
@@ -63,15 +64,16 @@ namespace emr_corefsol_service.Libs
                 return null;
             }
 
-            CoreLabel token = (CoreLabel)tokens.get(0);
-            var gender = token.get(typeof(MachineReadingAnnotations.GenderAnnotation));
-
-            if(gender == null || gender.ToString().Length < 1)
+            foreach(CoreLabel token in tokens)
             {
-                return "unknow";
+                var gender = token.get(typeof(MachineReadingAnnotations.GenderAnnotation));
+                if(gender != null)
+                {
+                    return gender.ToString().ToLower();
+                }
             }
 
-            return gender.ToString().ToLower();
+            return "unknow";
         }
 
         private static ArrayList getSentences(Annotation document)
