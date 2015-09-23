@@ -16,13 +16,14 @@ namespace emr_corefsol_service.Libs
 {
     public class StanfordNLPHelper
     {
-        private static readonly string modelsURL = HostingEnvironment.MapPath(@"~\app_data\libs\stanford-corenlp-3.5.2-models");
+        private static readonly string modelsURL = HostingEnvironment.MapPath(@"~\app_data\libs\StanfordNLP");
         private static readonly StanfordCoreNLP pipeline = null;
 
         static StanfordNLPHelper()
         {
             var props = new Properties();
             props.setProperty("annotators", "tokenize, ssplit, pos, gender");
+
             var curDir = Environment.CurrentDirectory;
             Directory.SetCurrentDirectory(modelsURL);
             pipeline = new StanfordCoreNLP(props);
@@ -53,7 +54,7 @@ namespace emr_corefsol_service.Libs
 
         public static string getGender(string name)
         {
-            Annotation document = new Annotation(name);
+            Annotation document = new Annotation(name.ToUpper());
             pipeline.annotate(document);
 
             ArrayList tokens = getTokens(document);
