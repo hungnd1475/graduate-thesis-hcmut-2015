@@ -25,4 +25,4 @@ $RECYCLE.BIN/
 *.user
 
 Libs file
-Models/
+libs/**/models/
