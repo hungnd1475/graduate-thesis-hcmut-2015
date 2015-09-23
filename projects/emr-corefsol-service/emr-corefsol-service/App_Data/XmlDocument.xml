@@ -481,18 +481,6 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
-        <member name="M:emr_corefsol_service.Controllers.NLPController.GetMaleNames">
-            <summary>
-            GET list of male's names
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:emr_corefsol_service.Controllers.NLPController.GetFemaleNames">
-            <summary>
-            GET list of female's names
-            </summary>
-            <returns></returns>
-        </member>
         <member name="M:emr_corefsol_service.Controllers.NLPController.GetPOS(System.String)">
             <summary>
             GET Gramma Part of Speech from term

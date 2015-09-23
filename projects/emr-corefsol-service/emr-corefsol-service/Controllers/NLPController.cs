@@ -18,26 +18,6 @@ namespace emr_corefsol_service.Controllers
     public class NLPController : ApiController
     {
         /// <summary>
-        /// GET list of male's names
-        /// </summary>
-        /// <returns></returns>
-        [ActionName("MaleNames")]
-        public CustomResponse GetMaleNames()
-        {
-            return new CustomResponse(true, Libs.SharpNLPHelper.GetMaleNames(), null);
-        }
-
-        /// <summary>
-        /// GET list of female's names
-        /// </summary>
-        /// <returns></returns>
-        [ActionName("FemaleNames")]
-        public CustomResponse GetFemaleNames()
-        {
-            return new CustomResponse(true, Libs.SharpNLPHelper.GetFemaleNames(), null); ;
-        }
-
-        /// <summary>
         /// GET Gramma Part of Speech from term
         /// </summary>
         /// <param name="term">Term or sentence to tag</param>
@@ -45,14 +25,14 @@ namespace emr_corefsol_service.Controllers
         [ActionName("POS")]
         public CustomResponse GetPOS(string term)
         {
-            if(term!=null && term.Length > 0)
+            var pos = Libs.StanfordNLPHelper.getPOS(term);
+
+            if (pos == null)
             {
-                var pos = Libs.SharpNLPHelper.getPOS(term);
-                return new CustomResponse(true, pos, null);
-            } else
-            {
-                return new CustomResponse(false, null, "No term submitted");
+                return new CustomResponse(false, null, "Cannot tokenize");
             }
+
+            return new CustomResponse(true, pos, null);
         }
 
         /// <summary>
@@ -68,7 +48,13 @@ namespace emr_corefsol_service.Controllers
                 return new CustomResponse(false, null, "No name submitted");
             }
 
-            var gender = Libs.SharpNLPHelper.getGender(name);
+            var gender = Libs.StanfordNLPHelper.getGender(name);
+
+            if (gender == null)
+            {
+                return new CustomResponse(false, null, "Cannot tokenize");
+            }
+
             return new CustomResponse(true, gender, null);
         }
     }
