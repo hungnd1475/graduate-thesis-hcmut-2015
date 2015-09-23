@@ -104,7 +104,6 @@
     <Compile Include="Indexed\IndexedEnumerableHelper.cs" />
     <Compile Include="IPreprocessor.cs" />
     <Compile Include="ISingleConcept.cs" />
-    <Compile Include="Features\ITrainingFeatureExtractor.cs" />
     <Compile Include="Classification\ITrainer.cs" />
     <Compile Include="Logging\ConsoleLogger.cs" />
     <Compile Include="Logging\ILogger.cs" />

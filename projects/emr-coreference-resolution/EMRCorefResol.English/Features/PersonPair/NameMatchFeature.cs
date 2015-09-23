@@ -10,7 +10,7 @@ namespace HCMUT.EMRCorefResol.English.Features
     class NameMatchFeature : Feature
     {
         public NameMatchFeature(PersonPair instance)
-            : base("Name-Match")
+            : base("Name-Match", new[] { 1d, 0d })
         {
             string anaphora = instance.Anaphora.Lexicon;
             string antecedent = instance.Antecedent.Lexicon;
@@ -18,7 +18,11 @@ namespace HCMUT.EMRCorefResol.English.Features
             anaphora = removeStopWords(anaphora);
             antecedent = removeStopWords(antecedent);
 
-            Value = checkContain(anaphora, antecedent) ? 1.0 : 0.0;
+            if (checkContain(anaphora, antecedent))
+            {
+                Value[0] = 0d;
+                Value[1] = 1d;
+            }
         }
 
         private string removeStopWords(string raw)

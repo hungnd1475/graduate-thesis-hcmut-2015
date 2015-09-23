@@ -26,7 +26,7 @@ namespace HCMUT.EMRCorefResol.English.Features
                     }
                 }
 
-                return (kw != null && anaLex.Contains(kw)) ? 1.0 : 0.0;
+                return (kw != null && anaLex.Contains(kw)) ? new[] { 0d, 1d } : new[] { 1d, 0d };
             })
         { }
     }

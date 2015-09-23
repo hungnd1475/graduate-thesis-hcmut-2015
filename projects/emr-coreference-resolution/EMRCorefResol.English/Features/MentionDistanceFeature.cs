@@ -11,13 +11,13 @@ namespace HCMUT.EMRCorefResol.English.Features
         public const string FeatureName = "Mention-Distance";
 
         public MentionDistanceFeature(IConceptPair pair, EMR emr)
-            : base(FeatureName)
+            : base(FeatureName, new[] { 0d })
         {
             var concepts = emr.Concepts;
             var i = concepts.IndexOf(pair.Antecedent);
             int j = i;
             for (; j < concepts.Count && !concepts[j].Equals(pair.Anaphora); j++) ;
-            Value = j - i - 1;
+            Value[0] = j - i - 1;
         }
     }
 }

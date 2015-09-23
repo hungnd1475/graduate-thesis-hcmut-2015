@@ -38,7 +38,9 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             //testTrainer();
             //testLoadClassifier();
             //testService();
-            testTrainManyEMR(10);
+            //var path = testTrainManyEMR(10);
+            testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", 1);
+            //testClassifier(path, 1);
 
             sw.Stop();
             Console.WriteLine($"Execution time: {sw.ElapsedMilliseconds}ms");
@@ -106,7 +108,7 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
         static string testTrainer()
         {
-            var trainer = new LibSVMToolTrainer();
+            var trainer = new LibSVMTrainer();
             var dataReader = new I2B2DataReader();
             var preprocessor = new SimplePreprocessor();
             var fExtractor = new EnglishTrainingFeatureExtractor();
@@ -120,9 +122,9 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             return path;
         }
 
-        static void testTrainManyEMR(int size)
+        static string testTrainManyEMR(int size)
         {
-            var trainer = new LibSVMToolTrainer();
+            var trainer = new LibSVMTrainer();
             var dataReader = new I2B2DataReader();
             var preprocessor = new SimplePreprocessor();
             var fExtractor = new EnglishTrainingFeatureExtractor();
@@ -130,18 +132,23 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             string[] emr, concepts, chains;
             EMR_COLLECTION.GetRandom(size, out emr, out concepts, out chains);
             TrainingSystem.Instance.TrainAll(emr, concepts, chains, dataReader, preprocessor, fExtractor, trainer);
+
+            var classifier = trainer.GetClassifier();
+            var path = Path.Combine(trainer.ModelsDir, "LibSVMTool.classifier");
+            ClassifierSerializer.Serialize(classifier, path);
+            return path;
         }
 
-        static void testClassifier(string path)
+        static void testClassifier(string classifierPath, int size)
         {
-            var classifier = ClassifierSerializer.Deserialize(path);
+            var classifier = ClassifierSerializer.Deserialize(classifierPath);
             var dataReader = new I2B2DataReader();
             var preprocessor = new SimplePreprocessor();
-            var fExtractor = new EnglishTrainingFeatureExtractor();
+            var fExtractor = new EnglishClasFeatureExtractor(classifier);
 
             var r = new Random();
-            for (int i = 1; i < 11; i++)
-        {
+            for (int i = 1; i <= size; i++)
+            {
                 var index = r.Next(1, EMR_COLLECTION.Count - 1);
                 var emrPath = EMR_COLLECTION.GetEMRPath(index);
                 Console.WriteLine($"{Path.GetFileName(emrPath)}");
@@ -153,7 +160,7 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
         static void testService()
         {
             Console.WriteLine("Annie gender: " + Service.English.getGender("annie"));
-            Console.WriteLine(String.Join(" ", Service.English.getPOS("Annie goes to school")));
+            Console.WriteLine(string.Join(" ", Service.English.getPOS("Annie goes to school")));
             Console.WriteLine(Service.English.getSyns("table")[1]);
         }
 

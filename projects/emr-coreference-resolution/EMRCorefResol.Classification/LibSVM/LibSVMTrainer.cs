@@ -10,16 +10,16 @@ using static HCMUT.EMRCorefResol.Logging.LoggerFactory;
 
 namespace HCMUT.EMRCorefResol.Classification.LibSVM
 {
-    public class LibSVMToolTrainer : ITrainer
+    public class LibSVMTrainer : ITrainer
     {
-        private readonly LibSVMToolClassifier _classifier;
+        private readonly LibSVMClassifier _classifier;
 
         private readonly string _saveDir;
         private readonly string _problemDir, _modelDir;
 
         public string ModelsDir { get { return _modelDir; } }
 
-        public LibSVMToolTrainer(string saveDir)
+        public LibSVMTrainer(string saveDir)
         {
             _saveDir = saveDir;
             _problemDir = Path.Combine(_saveDir, "Problems");
@@ -28,10 +28,10 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             Directory.CreateDirectory(_problemDir);
             Directory.CreateDirectory(_modelDir);
 
-            _classifier = new LibSVMToolClassifier(_modelDir);
+            _classifier = new LibSVMClassifier(_modelDir);
         }
 
-        public LibSVMToolTrainer() : this("Classification\\LibSVMTools") { }
+        public LibSVMTrainer() : this("Classification\\LibSVMTools") { }
 
         public IClasProblemSerializer ProblemSerializer
         {
@@ -55,11 +55,11 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             ProblemSerializer.Serialize(problem, rawPrbPath);
 
             // scale
-            LibSVMTools.RunSVMScale(0d, 1d, sfPath, rawPrbPath, scaledPrbPath);
+            LibSVM.RunSVMScale(0d, 1d, sfPath, rawPrbPath, scaledPrbPath);
 
             // train
             GetLogger().Info($"Training {name} problem...");
-            LibSVMTools.RunSVMTrain(SVMType.C_SVC, SVMKernel.RBF, scaledPrbPath, modelPath);
+            LibSVM.RunSVMTrain(SVMType.C_SVC, SVMKernel.RBF, scaledPrbPath, modelPath, true);
         }
 
         public void Train<T>(ClasProblem problem) where T : IClasInstance

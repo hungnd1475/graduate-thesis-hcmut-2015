@@ -10,7 +10,7 @@ namespace HCMUT.EMRCorefResol.English
 
     class PronounInstanceFeatures : FeatureVector
     {
-        public PronounInstanceFeatures(PronounInstance instance, EMR emr, CorefChainCollection groundTruth, double classValue)
+        public PronounInstanceFeatures(PronounInstance instance, EMR emr, double classValue)
             : base(size: 5, classValue: classValue)
         {
             this[0] = new FirstPreviousMentionTypeFeature(instance, emr);

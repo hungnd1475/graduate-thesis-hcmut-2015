@@ -21,34 +21,39 @@ namespace HCMUT.EMRCorefResol.Classification
             _problems.Add(typeof(TestPair), new ClasProblem());
         }
 
-        public void Add(PersonInstance instance, IFeatureVector fVector)
-        {
-            _problems[typeof(PersonInstance)].Add(fVector, fVector.ClassValue);
-        }
+        //public void Add(PersonInstance instance, IFeatureVector fVector)
+        //{
+        //    _problems[typeof(PersonInstance)].Add(fVector, fVector.ClassValue);
+        //}
 
-        public void Add(PersonPair instance, IFeatureVector fVector)
-        {
-            _problems[typeof(PersonPair)].Add(fVector, fVector.ClassValue);
-        }
+        //public void Add(PersonPair instance, IFeatureVector fVector)
+        //{
+        //    _problems[typeof(PersonPair)].Add(fVector, fVector.ClassValue);
+        //}
 
-        public void Add(ProblemPair instance, IFeatureVector fVector)
-        {
-            _problems[typeof(ProblemPair)].Add(fVector, fVector.ClassValue);
-        }
+        //public void Add(ProblemPair instance, IFeatureVector fVector)
+        //{
+        //    _problems[typeof(ProblemPair)].Add(fVector, fVector.ClassValue);
+        //}
 
-        public void Add(PronounInstance instance, IFeatureVector fVector)
-        {
-            _problems[typeof(PronounInstance)].Add(fVector, fVector.ClassValue);
-        }
+        //public void Add(PronounInstance instance, IFeatureVector fVector)
+        //{
+        //    _problems[typeof(PronounInstance)].Add(fVector, fVector.ClassValue);
+        //}
 
-        public void Add(TreatmentPair instance, IFeatureVector fVector)
-        {
-            _problems[typeof(TreatmentPair)].Add(fVector, fVector.ClassValue);
-        }
+        //public void Add(TreatmentPair instance, IFeatureVector fVector)
+        //{
+        //    _problems[typeof(TreatmentPair)].Add(fVector, fVector.ClassValue);
+        //}
 
-        public void Add(TestPair instance, IFeatureVector fVector)
+        //public void Add(TestPair instance, IFeatureVector fVector)
+        //{
+        //    _problems[typeof(TestPair)].Add(fVector, fVector.ClassValue);
+        //}
+
+        public void Add(IClasInstance instance, IFeatureVector fVector)
         {
-            _problems[typeof(TestPair)].Add(fVector, fVector.ClassValue);
+            _problems[instance.GetType()].Add(fVector, fVector.ClassValue);
         }
 
         public ClasProblem GetProblem<TInstance>() where TInstance : IClasInstance

@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HCMUT.EMRCorefResol.Classification;
+using HCMUT.EMRCorefResol.Utilities;
 
 namespace HCMUT.EMRCorefResol
 {
-    public abstract class SingleInstance : IClasInstance, ISingleConcept
+    public abstract class SingleInstance : IClasInstance, ISingleConcept, IEquatable<SingleInstance>
     {
         public Concept Concept { get; }
 
@@ -23,7 +24,22 @@ namespace HCMUT.EMRCorefResol
             return Concept.ToString();
         }
 
+        public override int GetHashCode()
+        {
+            return HashCodeHelper.ComputeHashCode(Concept);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as SingleInstance);
+        }
+
         public abstract void AddTo(ClasProblemCreator pCreator, IFeatureVector fVector);
+
+        public bool Equals(SingleInstance other)
+        {
+            return other == null ? false : Concept.Equals(other);
+        }
     }
 
     public class PronounInstance : SingleInstance

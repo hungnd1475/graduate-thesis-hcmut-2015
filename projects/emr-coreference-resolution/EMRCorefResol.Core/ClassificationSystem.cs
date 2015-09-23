@@ -15,7 +15,7 @@ namespace HCMUT.EMRCorefResol
         private ClassificationSystem() { }
 
         public void ClassifyOne(string emrPath, string conceptsPath, string chainsPath, IDataReader dataReader,
-            IPreprocessor preprocessor, ITrainingFeatureExtractor fExtractor, IClassifier classifier)
+            IPreprocessor preprocessor, IFeatureExtractor fExtractor, IClassifier classifier)
         {
             var emr = new EMR(emrPath, conceptsPath, dataReader);
             var chains = new CorefChainCollection(chainsPath, dataReader);
@@ -42,7 +42,11 @@ namespace HCMUT.EMRCorefResol
             }
 
             GetLogger().Info("Classifying...");
+            classifier.Classify<PersonInstance>(pCreator.GetProblem<PersonInstance>());
+
             classifier.Classify<PersonPair>(pCreator.GetProblem<PersonPair>());
+
+            classifier.Classify<PronounInstance>(pCreator.GetProblem<PronounInstance>());
         }
     }
 }

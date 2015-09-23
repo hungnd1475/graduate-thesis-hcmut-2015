@@ -9,11 +9,11 @@ namespace HCMUT.EMRCorefResol.English.Features
     class WeInformationFeature : Feature
     {
         public WeInformationFeature(PersonPair instance)
-            : base("We-Information")
+            : base("We-Information", new double[2])
         {
             Value = (string.Equals(instance.Anaphora.Lexicon.ToLower(), "we") &&
                     string.Equals(instance.Antecedent.Lexicon.ToLower(), "we")) ?
-                1.0 : 0.0;
+                new[] { 0d, 1d } : new[] { 1d, 0d };
         }
     }
 }

@@ -9,7 +9,7 @@ namespace HCMUT.EMRCorefResol.English.Features
     class SentenceDistanceFeature : Feature
     {
         public SentenceDistanceFeature(IConceptPair instance, EMR emr)
-            : base("Sentence-Distance")
+            : base("Sentence-Distance", new[] { 0d })
         {
             var s = emr.ContentBetween(instance);
             int index = 0;
@@ -19,7 +19,7 @@ namespace HCMUT.EMRCorefResol.English.Features
                 index = s.IndexOf(" .", index);
                 if (index >= 0) index += 2;
                 else break;
-                Value += 1;
+                Value[0] += 1;
             }
         }
     }

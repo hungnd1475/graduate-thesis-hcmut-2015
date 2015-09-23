@@ -8,11 +8,24 @@ namespace HCMUT.EMRCorefResol.English.Features
 {
     class PatientClassFeature : Feature
     {
-        public PatientClassFeature(PersonPair instance, CorefChainCollection groundTruth)
-            : base("Patient-Class")
+        public PatientClassFeature(PersonPair instance, IPatientDeterminer patientDeterminer)
+            : base("Patient-Class", new[] { 1d, 0d, 0d })
         {
-            var patientChain = groundTruth.GetPatientChain();
-            Value = (patientChain.Contains(instance.Antecedent) && patientChain.Contains(instance.Anaphora)) ? 1.0 : 0.0;
+            var anaIsPatient = patientDeterminer.IsPatient(instance.Anaphora);
+            var anteIsPatient = patientDeterminer.IsPatient(instance.Antecedent);
+
+            if (anaIsPatient == null || anteIsPatient == null)
+            {
+                Value[0] = 0d;
+                Value[1] = 0d;
+                Value[2] = 1d;
+            }
+            else if (anaIsPatient.Value && anteIsPatient.Value)
+            {
+                Value[0] = 0d;
+                Value[1] = 1d;
+                Value[2] = 0d;
+            }
         }
     }
 }

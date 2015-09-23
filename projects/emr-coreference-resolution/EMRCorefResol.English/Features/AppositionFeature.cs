@@ -11,7 +11,7 @@ namespace HCMUT.EMRCorefResol.English.Features
     class AppositionFeature : Feature
     {
         public AppositionFeature(IConceptPair instance, EMR emr, double mentionDistance)
-            : base("Apposition")
+            : base("Apposition", new[] { 1d, 0d })
         {
             // checks if the two concepts are in a same sentence and separated by a comma
             if (mentionDistance == 0)
@@ -20,7 +20,8 @@ namespace HCMUT.EMRCorefResol.English.Features
                 if (string.Equals(s, ",") || string.Equals(s, " , ") 
                     || string.Equals(s, " ,") || string.Equals(s, ", "))
                 {
-                    Value = 1.0;
+                    Value[0] = 0d;
+                    Value[1] = 1d;
                 }
             }
         }

@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HCMUT.EMRCorefResol
+namespace HCMUT.EMRCorefResol.English
 {
-    public interface IFeature
+    interface IPatientDeterminer
     {
-        string Name { get; }
-        double[] Value { get; }
+        bool? IsPatient(Concept concept);
     }
 }

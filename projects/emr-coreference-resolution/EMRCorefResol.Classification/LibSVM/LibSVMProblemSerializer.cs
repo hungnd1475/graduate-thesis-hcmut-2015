@@ -20,12 +20,13 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
 
         public void Serialize(ClasProblem problem, string filePath)
         {
-            var sw = new StreamWriter(filePath);
-            for (int i = 0; i < problem.Size; i++)
+            using (var sw = new StreamWriter(filePath))
             {
-                sw.WriteLine($"{problem.Y[i]} {string.Join(" ", Enumerable.Range(0, problem.X[i].Size).Select(j => $"{j + 1}:{problem.X[i][j].Value}"))}");
+                for (int i = 0; i < problem.Size; i++)
+                {
+                    sw.WriteLine($"{problem.Y[i]} {string.Join(" ", Enumerable.Range(0, problem.X[i].Length).Select(j => $"{j + 1}:{problem.X[i][j]}"))}");
+                }
             }
-            sw.Close();
         }
     }
 }

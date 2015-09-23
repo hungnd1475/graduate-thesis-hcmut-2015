@@ -8,7 +8,7 @@ namespace HCMUT.EMRCorefResol.Classification
 {
     public class ClasProblem
     {
-        public List<IFeatureVector> X { get; } = new List<IFeatureVector>();
+        public List<double[]> X { get; } = new List<double[]>();
 
         public List<double> Y { get; } = new List<double>();
 
@@ -16,7 +16,7 @@ namespace HCMUT.EMRCorefResol.Classification
 
         public void Add(IFeatureVector fVector, double classValue)
         {
-            X.Add(fVector);
+            X.Add(fVector.ToDoubleArray());
             Y.Add(classValue);
         }
     }

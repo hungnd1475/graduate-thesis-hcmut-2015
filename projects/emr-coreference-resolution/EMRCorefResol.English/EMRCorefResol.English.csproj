@@ -66,7 +66,6 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity.Design" />
@@ -78,6 +77,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FeatureExtractor\ClasPatientDeterminer.cs" />
+    <Compile Include="FeatureExtractor\EnglishClasFeatureExtractor.cs" />
     <Compile Include="Features\PersonInstance\DepartmentKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\DoctorKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\DoctorTitleKeywordFeature.cs" />
@@ -91,8 +92,10 @@
     <Compile Include="Features\PersonInstance\RelativeKeywordFeature.cs" />
     <Compile Include="Features\PersonPair\GenderFeature.cs" />
     <Compile Include="Features\Pronoun\SemanticFeature.cs" />
-    <Compile Include="PersonInstanceFeatures.cs" />
-    <Compile Include="EnglishTrainingFeatureExtractor.cs" />
+    <Compile Include="FeatureExtractor\GroundTruthPatientDeterminer.cs" />
+    <Compile Include="FeatureExtractor\IPatientDeterminer.cs" />
+    <Compile Include="FeatureVector\PersonInstanceFeatures.cs" />
+    <Compile Include="FeatureExtractor\EnglishTrainingFeatureExtractor.cs" />
     <Compile Include="Features\AppositionFeature.cs" />
     <Compile Include="Features\PersonPair\AliasFeature.cs" />
     <Compile Include="Features\PersonPair\DoctorGeneralMatch.cs" />
@@ -109,18 +112,16 @@
     <Compile Include="Features\Pronoun\FirstPreviousMentionTypeFeature.cs" />
     <Compile Include="Features\Pronoun\PartOfSpeechFeature.cs" />
     <Compile Include="Features\Pronoun\SecondPreviousMentionTypeFeature.cs" />
-    <Compile Include="PersonPairFeatures.cs" />
+    <Compile Include="FeatureVector\PersonPairFeatures.cs" />
     <Compile Include="Features\SentenceDistanceFeature.cs" />
     <Compile Include="Features\StringMatchFeature.cs" />
-    <Compile Include="PronounInstanceFeatures.cs" />
+    <Compile Include="FeatureVector\PronounInstanceFeatures.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    
-    <Compile Include="Utilities\Timer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EMRCorefResol.Core\EMRCorefResol.Core.csproj">
@@ -143,7 +144,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <PostBuildEvent>
-</PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

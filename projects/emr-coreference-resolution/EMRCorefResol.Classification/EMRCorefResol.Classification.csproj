@@ -76,11 +76,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LibSVM\LibSVMTools.cs" />
+    <Compile Include="LibSVM\Internal\Native\svm_model.cs" />
+    <Compile Include="LibSVM\Internal\Native\svm_node.cs" />
+    <Compile Include="LibSVM\Internal\Native\svm_parameter.cs" />
+    <Compile Include="LibSVM\Internal\Native\svm_problem.cs" />
+    <Compile Include="LibSVM\Internal\SVMNode.cs" />
+    <Compile Include="LibSVM\Internal\SVMParameter.cs" />
+    <Compile Include="LibSVM\Internal\SVMProblem.cs" />
+    <Compile Include="LibSVM\LibSVM.cs" />
+    <Compile Include="LibSVM\Internal\SVMModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LibSVM\LibSVMProblemSerializer.cs" />
-    <Compile Include="LibSVM\LibSVMToolClassifier.cs" />
-    <Compile Include="LibSVM\LibSVMToolTrainer.cs" />
+    <Compile Include="LibSVM\LibSVMClassifier.cs" />
+    <Compile Include="LibSVM\LibSVMTrainer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EMRCorefResol.Core\EMRCorefResol.Core.csproj">

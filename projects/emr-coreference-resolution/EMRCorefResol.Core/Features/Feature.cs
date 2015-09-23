@@ -13,15 +13,15 @@ namespace HCMUT.EMRCorefResol
     {
         public string Name { get; }
 
-        public double Value { get; protected set; }
+        public double[] Value { get; protected set; }
 
         /// <summary>
         /// Initializes a <see cref="Feature"/> instance with specified name
         /// and value set to 0.
         /// </summary>
         /// <param name="name">The name of the feature.</param>
-        public Feature(string name)
-            : this(name, 0)
+        public Feature(string name, int size)
+            : this(name, new double[size])
         { }
 
         /// <summary>
@@ -29,13 +29,13 @@ namespace HCMUT.EMRCorefResol
         /// </summary>
         /// <param name="name"></param>
         /// <param name="initValue"></param>
-        public Feature(string name, double initValue)
+        public Feature(string name, double[] initValue)
         {
             Name = name;
             Value = initValue;
         }
 
-        public Feature(string name, Func<double> calculateValue)
+        public Feature(string name, Func<double[]> calculateValue)
         {
             Name = name;
             Value = calculateValue();

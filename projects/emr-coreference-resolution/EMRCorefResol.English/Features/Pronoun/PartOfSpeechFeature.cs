@@ -13,17 +13,19 @@ namespace HCMUT.EMRCorefResol.English.Features
         {
             var tagged = Service.English.getPOS(instance.Concept.Lexicon);
 
-            Value = -1.0;
             switch (tagged[0].Split('/')[1])
             {
                 case "DT":
-                    Value = 0.0;
-                    break;
-                case "WDT":
                     Value = 1.0;
                     break;
-                case "PRP":
+                case "WDT":
                     Value = 2.0;
+                    break;
+                case "PRP":
+                    Value = 3.0;
+                    break;
+                default:
+                    Value = 0.0;
                     break;
             }
         }

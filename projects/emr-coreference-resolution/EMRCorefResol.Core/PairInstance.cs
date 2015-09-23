@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HCMUT.EMRCorefResol.Classification;
+using HCMUT.EMRCorefResol.Utilities;
 
 namespace HCMUT.EMRCorefResol
 {
-    public abstract class PairInstance : IConceptPair, IClasInstance
+    public abstract class PairInstance : IConceptPair, IClasInstance, IEquatable<PairInstance>
     {
         public Concept Antecedent { get; }
         public Concept Anaphora { get; }
@@ -25,7 +26,23 @@ namespace HCMUT.EMRCorefResol
             return $"{Antecedent}||{Anaphora}||t=\"{Antecedent.Type.ToString().ToLower()}\"";
         }
 
+        public override int GetHashCode()
+        {
+            return HashCodeHelper.ComputeHashCode(Antecedent, Anaphora);
+        }
+
         public abstract void AddTo(ClasProblemCreator pCreator, IFeatureVector fVector);
+
+        public bool Equals(PairInstance other)
+        {
+            return other == null ? false : 
+                Anaphora.Equals(other.Anaphora) && Antecedent.Equals(other.Antecedent);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as PairInstance);
+        }
     }
 
     public class PersonPair : PairInstance 

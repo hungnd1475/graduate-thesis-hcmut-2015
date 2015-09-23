@@ -15,14 +15,21 @@ namespace HCMUT.EMRCorefResol.Utilities
 
         public static int ComputeHashCode(Tuple<int, int> primes, params object[] values)
         {
-            unchecked
+            if (values.Length == 1)
             {
-                int hash = primes.Item1;
-                foreach (var v in values)
+                return values[0].GetHashCode();
+            }
+            else
+            {
+                unchecked
                 {
-                    hash = hash * primes.Item2 + v.GetHashCode();
+                    int hash = primes.Item1;
+                    foreach (var v in values)
+                    {
+                        hash = hash * primes.Item2 + v.GetHashCode();
+                    }
+                    return hash;
                 }
-                return hash;
             }
         }
     }

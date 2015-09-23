@@ -10,7 +10,7 @@ namespace HCMUT.EMRCorefResol.English
 
     class PersonInstanceFeatures : FeatureVector
     {
-        public PersonInstanceFeatures(PersonInstance instance, EMR emr, CorefChainCollection groundTruth, double classValue)
+        public PersonInstanceFeatures(PersonInstance instance, EMR emr, double classValue)
             : base(size: 6, classValue: classValue)
         {
             this[0] = new PronounIFeature(instance);

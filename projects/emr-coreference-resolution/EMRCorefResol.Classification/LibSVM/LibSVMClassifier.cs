@@ -6,21 +6,29 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.IO;
 using static HCMUT.EMRCorefResol.Logging.LoggerFactory;
+using HCMUT.EMRCorefResol.Classification.LibSVM.Internal;
 
 namespace HCMUT.EMRCorefResol.Classification.LibSVM
 {
-    public class LibSVMToolClassifier : IClassifier
+    public class LibSVMClassifier : IClassifier, IDisposable
     {
         private readonly string _modelsDir;
+        private readonly Dictionary<Concept, double> _cache
+            = new Dictionary<Concept, double>();
+
+        private readonly object _syncRoot = new object();
+
+        private readonly Dictionary<Type, SVMModel> _svmModels
+            = new Dictionary<Type, SVMModel>();
 
         public string ModelsDir { get { return _modelsDir; } }
 
-        internal LibSVMToolClassifier(string modelsDir)
+        internal LibSVMClassifier(string modelsDir)
         {
             _modelsDir = modelsDir;
         }
 
-        public LibSVMToolClassifier(XmlReader xmlReader, string dir)
+        public LibSVMClassifier(XmlReader xmlReader, string dir)
         {
             _modelsDir = xmlReader.ReadElementContentAsString();
         }
@@ -32,32 +40,39 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
 
         public double Classify(ProblemPair instance, IFeatureVector f)
         {
-            throw new NotImplementedException();
+            return ClassifyInternal(instance, f);
         }
 
         public double Classify(TestPair instance, IFeatureVector f)
         {
-            throw new NotImplementedException();
+            return ClassifyInternal(instance, f);
         }
 
         public double Classify(PronounInstance instance, IFeatureVector f)
         {
-            throw new NotImplementedException();
+            return ClassifyInternal(instance, f);
         }
 
         public double Classify(TreatmentPair instance, IFeatureVector f)
         {
-            throw new NotImplementedException();
+            return ClassifyInternal(instance, f);
         }
 
         public double Classify(PersonInstance instance, IFeatureVector f)
         {
-            throw new NotImplementedException();
+            lock (_syncRoot)
+            {
+                if (!_cache.ContainsKey(instance.Concept))
+                {
+                    _cache.Add(instance.Concept, ClassifyInternal(instance, f));
+                }
+            }
+            return _cache[instance.Concept];
         }
 
         public double Classify(PersonPair instance, IFeatureVector f)
         {
-            throw new NotImplementedException();
+            return ClassifyInternal(instance, f); ;
         }
 
         public double[] Classify<T>(ClasProblem problem) where T : IClasInstance
@@ -69,8 +84,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
         {
             var name = instanceType.Name;
             var modelPath = Path.Combine(_modelsDir, $"{name}.model");
-            var saveDir = Path.GetDirectoryName(modelPath);
-            var tmpDir = Path.Combine(saveDir, "tmp");
+            var tmpDir = Path.Combine(_modelsDir, "tmp");
 
             Directory.CreateDirectory(tmpDir);
             var rawPrbPath = Path.Combine(tmpDir, $"{name}-clas.prb");
@@ -82,11 +96,11 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             ProblemSerializer.Serialize(problem, rawPrbPath);
 
             // scale
-            LibSVMTools.RunSVMScale(sfPath, rawPrbPath, scaledPrbPath);
+            LibSVM.RunSVMScale(sfPath, rawPrbPath, scaledPrbPath);
 
             // predict
             GetLogger().Info($"Classifying {name} problem...");
-            LibSVMTools.RunSVMPredict(scaledPrbPath, modelPath, outputPath);
+            LibSVM.RunSVMPredict(scaledPrbPath, modelPath, outputPath, true);
 
             var target = new double[problem.Size];
             var sr = new StreamReader(outputPath);
@@ -103,14 +117,55 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             sr.Close();
 
             // TODO: run the line below to delete tmp path, commented for now for debugging purpose
-            //Directory.Delete(tmpDir, true); 
+            //Directory.Delete(tmpDir, true);
 
             return target;
+        }
+
+        private double ClassifyInternal(IClasInstance instance, IFeatureVector fVector)
+        {
+            var instanceType = instance.GetType();
+            var sfPath = Path.Combine(_modelsDir, $"{instanceType.Name}.sf");
+
+            var pCreator = new ClasProblemCreator();
+            pCreator.Add(instance, fVector);
+            var rawPrb = pCreator.GetProblem(instanceType);
+
+            string scaledPrbContent;
+            lock (_syncRoot)
+            {
+                var tmpPrbPath = Path.Combine(_modelsDir, $"{instanceType.Name}-tmp.prb");
+                ProblemSerializer.Serialize(rawPrb, tmpPrbPath);
+                scaledPrbContent = LibSVM.RunSVMScale(sfPath, tmpPrbPath);
+            }
+
+            var scaledPrb = LibSVM.ReadProblem(scaledPrbContent);
+            var svmModel = GetModel(instanceType);
+            return LibSVM.Predict(svmModel, scaledPrb.X[0]);
+        }
+
+        private SVMModel GetModel(Type instanceType)
+        {
+            lock (_syncRoot)
+            {
+                if (!_svmModels.ContainsKey(instanceType))
+                {
+                    var modelPath = Path.Combine(_modelsDir, $"{instanceType.Name}.model");
+                    var model = LibSVM.LoadModel(modelPath);
+                    _svmModels.Add(instanceType, model);
+                }
+            }
+            return _svmModels[instanceType];
         }
 
         public void WriteXml(XmlWriter writer, string dir)
         {
             writer.WriteElementString("ModelsDir", _modelsDir);
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
         }
     }
 }

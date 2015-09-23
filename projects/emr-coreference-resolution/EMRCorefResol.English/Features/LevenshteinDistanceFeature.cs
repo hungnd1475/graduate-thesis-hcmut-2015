@@ -29,7 +29,7 @@ namespace HCMUT.EMRCorefResol.English.Features
                     }
                 }
 
-                return lev[anteLex.Length, anaLex.Length];
+                return new double[] { lev[anteLex.Length, anaLex.Length] };
             })
         {
             //string anaLex = instance.Anaphora.Lexicon, anteLex = instance.Antecedent.Lexicon;

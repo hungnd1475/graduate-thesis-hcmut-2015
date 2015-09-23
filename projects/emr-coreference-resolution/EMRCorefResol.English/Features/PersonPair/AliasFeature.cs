@@ -13,12 +13,15 @@ namespace HCMUT.EMRCorefResol.English.Features
     class AliasFeature : Feature
     {
         public AliasFeature(PersonPair instance)
-            : base("Alias")
+            : base("Alias", new[] { 1d, 0d })
         {
             var ana = getAbbre(instance.Anaphora.Lexicon);
             var ante = getAbbre(instance.Antecedent.Lexicon);
-            Value = (instance.Anaphora.Lexicon.Equals(ante) || instance.Antecedent.Lexicon.Equals(ana)) ?
-                1.0 : 0.0;
+            if (instance.Anaphora.Lexicon.Equals(ante) || instance.Antecedent.Lexicon.Equals(ana))
+            {
+                Value[0] = 0d;
+                Value[1] = 1d;
+            }
         }
 
         private string getAbbre(string raw)

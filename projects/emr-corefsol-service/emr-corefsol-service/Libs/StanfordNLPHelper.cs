@@ -16,7 +16,7 @@ namespace emr_corefsol_service.Libs
 {
     public class StanfordNLPHelper
     {
-        private static readonly string modelsURL = HostingEnvironment.MapPath(@"~\app_data\libs\stanford-corenlp-3.5.2-models");
+        private static readonly string modelsURL = HostingEnvironment.MapPath(@"~\app_data\libs\StanfordNLP");
         private static readonly StanfordCoreNLP pipeline = null;
 
         static StanfordNLPHelper()
