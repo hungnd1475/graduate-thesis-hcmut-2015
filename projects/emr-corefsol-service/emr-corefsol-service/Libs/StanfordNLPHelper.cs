@@ -64,15 +64,16 @@ namespace emr_corefsol_service.Libs
                 return null;
             }
 
-            CoreLabel token = (CoreLabel)tokens.get(0);
-            var gender = token.get(typeof(MachineReadingAnnotations.GenderAnnotation));
-
-            if(gender == null || gender.ToString().Length < 1)
+            foreach(CoreLabel token in tokens)
             {
-                return "unknow";
+                var gender = token.get(typeof(MachineReadingAnnotations.GenderAnnotation));
+                if(gender != null)
+                {
+                    return gender.ToString().ToLower();
+                }
             }
 
-            return gender.ToString().ToLower();
+            return "unknow";
         }
 
         private static ArrayList getSentences(Annotation document)
