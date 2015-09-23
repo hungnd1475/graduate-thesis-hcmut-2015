@@ -66,24 +66,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LAIR.Collections, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Libs\wordnet\LAIR.Collections.dll</HintPath>
-    </Reference>
-    <Reference Include="LAIR.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Libs\wordnet\LAIR.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="LAIR.IO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Libs\wordnet\LAIR.IO.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenNLP">
-      <HintPath>..\Libs\sharpNLP\OpenNLP.dll</HintPath>
-    </Reference>
-    <Reference Include="SharpEntropy">
-      <HintPath>..\Libs\sharpNLP\SharpEntropy.dll</HintPath>
-    </Reference>
+    
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity.Design" />
@@ -136,12 +119,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Utilities\SharpNLPHelper.cs" />
+    
     <Compile Include="Utilities\Timer.cs" />
-    <Compile Include="WordNet\SynSet.cs" />
-    <Compile Include="WordNet\WordNetEngine.cs" />
-    <Compile Include="Utilities\WordnetHelper.cs" />
-    <Compile Include="WordNet\WordNetSimilarityModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EMRCorefResol.Core\EMRCorefResol.Core.csproj">
@@ -164,7 +143,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <PostBuildEvent>
-    </PostBuildEvent>
+</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

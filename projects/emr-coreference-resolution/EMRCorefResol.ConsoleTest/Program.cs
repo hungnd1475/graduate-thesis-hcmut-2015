@@ -35,6 +35,9 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             //testReadEMR();
             var path = testTrainer();
             testClassifier(path);
+            //testTrainer();
+            //testLoadClassifier();
+            //testService();
 
             sw.Stop();
             Console.WriteLine($"Execution time: {sw.ElapsedMilliseconds}ms");
@@ -125,13 +128,20 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
             var r = new Random();
             for (int i = 1; i < 11; i++)
-            {
+        {
                 var index = r.Next(1, EMR_COLLECTION.Count - 1);
                 var emrPath = EMR_COLLECTION.GetEMRPath(index);
                 Console.WriteLine($"{Path.GetFileName(emrPath)}");
                 ClassificationSystem.Instance.ClassifyOne(emrPath, EMR_COLLECTION.GetConceptsPath(index),
                     EMR_COLLECTION.GetChainsPath(index), dataReader, preprocessor, fExtractor, classifier);
             }
+        }
+
+        static void testService()
+        {
+            Console.WriteLine("Annie gender: " + Service.English.getGender("annie"));
+            Console.WriteLine(String.Join(" ", Service.English.getPOS("Annie goes to school")));
+            Console.WriteLine(Service.English.getSyns("table")[1]);
         }
 
         static void Print(IClasInstance i, IFeatureVector fVector)

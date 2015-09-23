@@ -13,10 +13,10 @@ namespace HCMUT.EMRCorefResol.English
 
         public IFeatureVector Extract(PronounInstance instance)
         {
-            //var corefChain = GroundTruth.FindChainContains(instance.Concept);
-            //var classValue = corefChain != null ? (double)corefChain.Type : 0;
-            //return new PronounInstanceFeatures(instance, EMR, GroundTruth, classValue);
-            return null;
+            var corefChain = GroundTruth.FindChainContains(instance.Concept);
+            var classValue = corefChain != null ? (double)corefChain.Type : 0;
+            return new PronounInstanceFeatures(instance, EMR, GroundTruth, classValue);
+            //return null;
         }
 
         public IFeatureVector Extract(PersonInstance instance)
