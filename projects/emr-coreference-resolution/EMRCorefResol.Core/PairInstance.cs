@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HCMUT.EMRCorefResol.Classification;
 
 namespace HCMUT.EMRCorefResol
 {
@@ -23,11 +24,18 @@ namespace HCMUT.EMRCorefResol
         {
             return $"{Antecedent}||{Anaphora}||t=\"{Antecedent.Type.ToString().ToLower()}\"";
         }
+
+        public abstract void AddTo(ClasProblemCreator pCreator, IFeatureVector fVector);
     }
 
     public class PersonPair : PairInstance 
     {
         public PersonPair(Concept antecedent, Concept anaphora) : base(antecedent, anaphora) { }
+
+        public override void AddTo(ClasProblemCreator pCreator, IFeatureVector fVector)
+        {
+            pCreator.Add(this, fVector);
+        }
 
         public override IFeatureVector GetFeatures(IFeatureExtractor extractor)
         {
@@ -39,6 +47,11 @@ namespace HCMUT.EMRCorefResol
     {
         public ProblemPair(Concept antecedent, Concept anaphora) : base(antecedent, anaphora) { }
 
+        public override void AddTo(ClasProblemCreator pCreator, IFeatureVector fVector)
+        {
+            pCreator.Add(this, fVector);
+        }
+
         public override IFeatureVector GetFeatures(IFeatureExtractor extractor)
         {
             return extractor.Extract(this);
@@ -49,6 +62,11 @@ namespace HCMUT.EMRCorefResol
     {
         public TreatmentPair(Concept antecedent, Concept anaphora) : base(antecedent, anaphora) { }
 
+        public override void AddTo(ClasProblemCreator pCreator, IFeatureVector fVector)
+        {
+            pCreator.Add(this, fVector);
+        }
+
         public override IFeatureVector GetFeatures(IFeatureExtractor extractor)
         {
             return extractor.Extract(this);
@@ -58,6 +76,11 @@ namespace HCMUT.EMRCorefResol
     public class TestPair : PairInstance 
     {
         public TestPair(Concept antecedent, Concept anaphora) : base(antecedent, anaphora) { }
+
+        public override void AddTo(ClasProblemCreator pCreator, IFeatureVector fVector)
+        {
+            pCreator.Add(this, fVector);
+        }
 
         public override IFeatureVector GetFeatures(IFeatureExtractor extractor)
         {

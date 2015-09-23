@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol
 {
+    using Classification;
+
     /// <summary>
     /// Represents a classification instance.
     /// </summary>
@@ -17,5 +19,7 @@ namespace HCMUT.EMRCorefResol
         /// <param name="extractor">The extractor used to extract the features.</param>
         /// <returns></returns>
         IFeatureVector GetFeatures(IFeatureExtractor extractor);
+
+        void AddTo(ClasProblemCreator pCreator, IFeatureVector fVector);
     }
 }

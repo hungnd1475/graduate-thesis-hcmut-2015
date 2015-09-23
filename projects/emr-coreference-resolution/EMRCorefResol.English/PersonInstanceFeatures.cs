@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 namespace HCMUT.EMRCorefResol.English
 {
     using Features;
-    using SVM;
 
-    class PersonInstanceFeatures : FeatureVector, ISVMTrainingFeatures
+    class PersonInstanceFeatures : FeatureVector
     {
         public PersonInstanceFeatures(PersonInstance instance, EMR emr, CorefChainCollection groundTruth, double classValue)
             : base(size: 6, classValue: classValue)
@@ -20,11 +19,6 @@ namespace HCMUT.EMRCorefResol.English
             this[3] = new PronounTheyFeature(instance);
             this[4] = new PatientKeywordFeature(instance);
             this[5] = new DoctorKeywordFeature(instance);
-        }
-
-        public void AddTo(SVMProblems problems)
-        {
-            problems.Add(this);
         }
     }
 }

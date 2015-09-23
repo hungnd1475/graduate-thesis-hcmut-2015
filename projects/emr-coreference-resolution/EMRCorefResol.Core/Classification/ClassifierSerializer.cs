@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace HCMUT.EMRCorefResol
+namespace HCMUT.EMRCorefResol.Classification
 {
     public static class ClassifierSerializer
     {
