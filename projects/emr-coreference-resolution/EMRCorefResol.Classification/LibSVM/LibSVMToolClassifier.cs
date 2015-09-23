@@ -79,7 +79,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             var sfPath = Path.Combine(_modelsDir, $"{name}.sf");
 
             // save
-            ProblemSerializer.Save(problem, rawPrbPath);
+            ProblemSerializer.Serialize(problem, rawPrbPath);
 
             // scale
             LibSVMTools.RunSVMScale(sfPath, rawPrbPath, scaledPrbPath);

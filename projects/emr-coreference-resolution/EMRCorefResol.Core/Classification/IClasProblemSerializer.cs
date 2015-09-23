@@ -8,7 +8,7 @@ namespace HCMUT.EMRCorefResol.Classification
 {
     public interface IClasProblemSerializer
     {
-        void Save(ClasProblem problem, string filePath);
-        ClasProblem Load(string filePath);
+        void Serialize(ClasProblem problem, string filePath);
+        ClasProblem Deserialize(string filePath);
     }
 }

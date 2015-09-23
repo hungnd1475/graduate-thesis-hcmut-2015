@@ -16,15 +16,13 @@ namespace HCMUT.EMRCorefResol.English
             var corefChain = GroundTruth.FindChainContains(instance.Concept);
             var classValue = corefChain != null ? (double)corefChain.Type : 0;
             return new PronounInstanceFeatures(instance, EMR, GroundTruth, classValue);
-            //return null;
         }
 
         public IFeatureVector Extract(PersonInstance instance)
         {
-            //TODO classValue
-            //var classValue = 0.0;
-            //return new PersonInstanceFeatures(instance, EMR, GroundTruth, classValue);
-            return null;
+            var patientChain = GroundTruth.GetPatientChain();
+            var classValue = patientChain != null ? (patientChain.Contains(instance.Concept) ? 1.0 : 0.0) : 2.0;
+            return new PersonInstanceFeatures(instance, EMR, GroundTruth, classValue);
         }
 
         public IFeatureVector Extract(TreatmentPair instance)

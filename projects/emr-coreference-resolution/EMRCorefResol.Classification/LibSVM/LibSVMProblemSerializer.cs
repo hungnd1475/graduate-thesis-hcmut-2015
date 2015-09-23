@@ -13,12 +13,12 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
 
         private LibSVMProblemSerializer() { }
 
-        public ClasProblem Load(string filePath)
+        public ClasProblem Deserialize(string filePath)
         {
             throw new NotImplementedException();
         }
 
-        public void Save(ClasProblem problem, string filePath)
+        public void Serialize(ClasProblem problem, string filePath)
         {
             var sw = new StreamWriter(filePath);
             for (int i = 0; i < problem.Size; i++)

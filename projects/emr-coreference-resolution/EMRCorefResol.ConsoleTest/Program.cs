@@ -33,11 +33,12 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             //testCorefChain();
             //testFeatures();
             //testReadEMR();
-            var path = testTrainer();
-            testClassifier(path);
+            //var path = testTrainer();
+            //testClassifier(path);
             //testTrainer();
             //testLoadClassifier();
             //testService();
+            testTrainManyEMR(10);
 
             sw.Stop();
             Console.WriteLine($"Execution time: {sw.ElapsedMilliseconds}ms");
@@ -117,6 +118,18 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             var path = Path.Combine(trainer.ModelsDir, "LibSVMTool.classifier");
             ClassifierSerializer.Serialize(classifier, path);
             return path;
+        }
+
+        static void testTrainManyEMR(int size)
+        {
+            var trainer = new LibSVMToolTrainer();
+            var dataReader = new I2B2DataReader();
+            var preprocessor = new SimplePreprocessor();
+            var fExtractor = new EnglishTrainingFeatureExtractor();
+
+            string[] emr, concepts, chains;
+            EMR_COLLECTION.GetRandom(size, out emr, out concepts, out chains);
+            TrainingSystem.Instance.TrainAll(emr, concepts, chains, dataReader, preprocessor, fExtractor, trainer);
         }
 
         static void testClassifier(string path)

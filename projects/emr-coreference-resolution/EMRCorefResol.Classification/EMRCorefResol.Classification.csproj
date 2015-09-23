@@ -91,9 +91,9 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>if $(PlatformName) == x86 (
-robocopy "$(SolutionDir)Libs\LibSVM\x86" "$(TargetDir)LibSVM" 
+   robocopy "$(SolutionDir)Libs\LibSVM\x86" "$(TargetDir)LibSVM" 
 ) else (
-if $(PlatformName) == x64 robocopy "$(SolutionDir)Libs\LibSVM\x64" "$(TargetDir)LibSVM"
+   if $(PlatformName) == x64 robocopy "$(SolutionDir)Libs\LibSVM\x64" "$(TargetDir)LibSVM"
 )
 set rce=%25errorlevel%25
 if not %25rce%25==1 exit %25rce%25 else exit 0</PostBuildEvent>

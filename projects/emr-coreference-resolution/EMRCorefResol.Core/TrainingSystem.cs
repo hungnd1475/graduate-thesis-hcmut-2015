@@ -8,6 +8,7 @@ using static HCMUT.EMRCorefResol.Logging.LoggerFactory;
 namespace HCMUT.EMRCorefResol
 {
     using Classification;
+    using System.IO;
 
     public class TrainingSystem
     {
@@ -54,7 +55,55 @@ namespace HCMUT.EMRCorefResol
             }
 
             GetLogger().Info("Training...");
+
             trainer.Train<PersonPair>(pCreator.GetProblem<PersonPair>());
+            trainer.Train<PersonInstance>(pCreator.GetProblem<PersonInstance>());
+            trainer.Train<PronounInstance>(pCreator.GetProblem<PronounInstance>());
+        }
+
+        public void TrainAll(string[] emrFiles, string[] conceptsFiles, string[] chainsFiles, IDataReader dataReader, 
+            IPreprocessor preprocessor, ITrainingFeatureExtractor fExtractor, ITrainer trainer)
+        {
+            var pCreator = new ClasProblemCreator();
+
+            for (int i = 0; i < emrFiles.Length; i++)
+            {
+                var emr = new EMR(emrFiles[i], conceptsFiles[i], dataReader);
+                var chains = new CorefChainCollection(chainsFiles[i], dataReader);
+
+                fExtractor.EMR = emr;
+                fExtractor.GroundTruth = chains;
+
+                var instances = preprocessor.Process(emr);
+                var features = new IFeatureVector[instances.Count];
+
+                GetLogger().Info(Path.GetFileName(emrFiles[i]));
+                GetLogger().Info("Extracting features...");
+
+                Parallel.For(0, instances.Count, k =>
+                {
+                    var t = instances[k];
+                    features[k] = t.GetFeatures(fExtractor);
+                });
+
+                for (int k = 0; k < features.Length; k++)
+                {
+                    var fVector = features[k];
+                    if (fVector != null)
+                        instances[k].AddTo(pCreator, fVector);
+                }
+            }
+
+            GetLogger().Info("Training...");
+
+            //trainer.Train<PersonPair>(pCreator.GetProblem<PersonPair>());
+            //trainer.Train<PersonInstance>(pCreator.GetProblem<PersonInstance>());
+            //trainer.Train<PronounInstance>(pCreator.GetProblem<PronounInstance>());
+
+            Directory.CreateDirectory("Problems");
+            trainer.ProblemSerializer.Serialize(pCreator.GetProblem<PersonPair>(), "Problems\\PersonPair.prb");
+            trainer.ProblemSerializer.Serialize(pCreator.GetProblem<PersonInstance>(), "Problems\\PersonInstance.prb");
+            trainer.ProblemSerializer.Serialize(pCreator.GetProblem<PronounInstance>(), "Problems\\PronounInstance.prb");
         }
     }
 }
