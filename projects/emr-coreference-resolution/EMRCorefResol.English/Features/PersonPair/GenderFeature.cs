@@ -10,23 +10,18 @@ namespace HCMUT.EMRCorefResol.English.Features
     class GenderFeature : Feature
     {
         public GenderFeature(PersonPair instance, EMR emr)
-            : base("Gender-Information", new[] { 1d, 0d, 0d })
+            : base("Gender-Information", 3, 0)
         {
             int anaGen = getGender(instance.Anaphora.Lexicon, emr);
             int anteGen = getGender(instance.Antecedent.Lexicon, emr);
 
             if (anaGen == 2 || anteGen == 2)
             {
-                Value[0] = 0d;
-                Value[1] = 0d;
-                Value[2] = 1d;
-                return;
+                SetCategoricalValue(2);
             }
             else if (anaGen == anteGen)
             {
-                Value[0] = 0d;
-                Value[1] = 1d;
-                Value[2] = 0d;
+                SetCategoricalValue(1);
             }
         }
 

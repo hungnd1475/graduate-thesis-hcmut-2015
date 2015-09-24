@@ -10,13 +10,14 @@ namespace HCMUT.EMRCorefResol.English.Features
     class PronounTheyFeature : Feature
     {
         public PronounTheyFeature(PersonInstance instance)
-            :base("Pronoun-They")
+            :base("Pronoun-They", 2, 0)
         {
-            Value = (checkContain(instance.Concept.Lexicon.ToLower(), "they") ||
+            var v = (checkContain(instance.Concept.Lexicon.ToLower(), "they") ||
                 checkContain(instance.Concept.Lexicon.ToLower(), "their") ||
                 checkContain(instance.Concept.Lexicon.ToLower(), "them") ||
                 checkContain(instance.Concept.Lexicon.ToLower(), "themselves")) ?
-                1.0 : 0.0;
+                1 : 0;
+            SetCategoricalValue(v);
         }
 
         private bool checkContain(string s1, string s2)

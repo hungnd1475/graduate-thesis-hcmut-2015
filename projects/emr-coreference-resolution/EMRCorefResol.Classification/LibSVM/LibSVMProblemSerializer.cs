@@ -24,7 +24,18 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             {
                 for (int i = 0; i < problem.Size; i++)
                 {
-                    sw.WriteLine($"{problem.Y[i]} {string.Join(" ", Enumerable.Range(0, problem.X[i].Length).Select(j => $"{j + 1}:{problem.X[i][j]}"))}");
+                    sw.Write($"{problem.Y[i]} ");
+                    int j = 1;
+
+                    var X = problem.X[i];
+                    for (int x = 0; x < X.Length; x++)
+                    {
+                        for (int xx = 0; xx < X[x].Length; xx++)
+                        {
+                            sw.Write($"{j++}:{X[x][xx]} ");
+                        }
+                    }
+                    sw.WriteLine();
                 }
             }
         }

@@ -10,18 +10,17 @@ namespace HCMUT.EMRCorefResol.English.Features
     class DepartmentKeywordFeature : Feature
     {
         public DepartmentKeywordFeature(PersonInstance instance)
-            : base("Department-Keyword")
+            : base("Department-Keyword", 2, 0)
         {
             string[] stopWords = { "anesthesiology", "electrophysiology" };
             foreach (string stopWord in stopWords)
             {
                 if (checkContain(instance.Concept.Lexicon.ToLower(), stopWord))
                 {
-                    Value = 1.0;
+                    SetCategoricalValue(1);
                     return;
                 }
             }
-            Value = 0.0;
         }
 
         private bool checkContain(string s1, string s2)

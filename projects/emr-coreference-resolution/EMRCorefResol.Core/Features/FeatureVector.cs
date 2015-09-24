@@ -43,17 +43,9 @@ namespace HCMUT.EMRCorefResol
             return _features.AsEnumerable().GetEnumerator();
         }
 
-        public double[] ToDoubleArray()
+        public double[][] ToDoubleArray()
         {
-            var result = new List<double>();
-            foreach (var f in _features)
-            {
-                for (int i = 0; i < f.Value.Length; i++)
-                {
-                    result.Add(f.Value[i]);
-                }
-            }
-            return result.ToArray();
+            return _features.Select(f => f.Value).ToArray();
         }
 
         IEnumerator IEnumerable.GetEnumerator()

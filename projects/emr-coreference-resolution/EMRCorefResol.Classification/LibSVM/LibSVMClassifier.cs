@@ -167,5 +167,10 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
         {
             throw new NotImplementedException();
         }
+
+        public void ClearCache()
+        {
+            _cache.Clear();
+        }
     }
 }

@@ -74,5 +74,10 @@ namespace HCMUT.EMRCorefResol.English
             var classValue = GroundTruth.IsCoref(instance) ? 1.0 : 0.0;
             return new PersonPairFeatures(instance, EMR, _patientDeterminer, classValue);
         }
+
+        public void ClearCache()
+        {
+            _personCache.Clear();
+        }
     }
 }

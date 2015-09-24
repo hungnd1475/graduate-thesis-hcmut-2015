@@ -10,13 +10,14 @@ namespace HCMUT.EMRCorefResol.English.Features
     class PronounIFeature : Feature
     {
         public PronounIFeature(PersonInstance instance)
-            : base("Prounoun-I")
+            : base("Prounoun-I", 2, 0)
         {
-            Value = (checkContain(instance.Concept.Lexicon.ToLower(), "i") ||
+            var v = (checkContain(instance.Concept.Lexicon.ToLower(), "i") ||
                 checkContain(instance.Concept.Lexicon.ToLower(), "me") ||
                 checkContain(instance.Concept.Lexicon.ToLower(), "my") ||
                 checkContain(instance.Concept.Lexicon.ToLower(), "myself")) ?
-                1.0 : 0.0;
+                1 : 0;
+            SetCategoricalValue(v);
         }
 
         private bool checkContain(string s1, string s2)

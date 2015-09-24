@@ -9,32 +9,32 @@ namespace HCMUT.EMRCorefResol.English.Features
     class FirstNextMentionTypeFeature : Feature
     {
         public FirstNextMentionTypeFeature(PronounInstance instance, EMR emr)
-            : base("FirstNext-MentionType")
+            : base("FirstNext-MentionType", 5, 4)
         {
             int index = emr.Concepts.IndexOf(instance.Concept);
 
-            if (index == emr.Concepts.Count-1)
+            if (index == emr.Concepts.Count - 1)
             {
-                Value = 4.0;
+                SetCategoricalValue(4);
                 return;
             }
 
             switch (emr.Concepts[index + 1].Type)
             {
                 case ConceptType.Person:
-                    Value = 0.0;
+                    SetCategoricalValue(0);
                     break;
                 case ConceptType.Problem:
-                    Value = 1.0;
+                    SetCategoricalValue(1);
                     break;
                 case ConceptType.Treatment:
-                    Value = 2.0;
+                    SetCategoricalValue(2);
                     break;
                 case ConceptType.Test:
-                    Value = 3.0;
+                    SetCategoricalValue(3);
                     break;
                 default:
-                    Value = 4.0;
+                    SetCategoricalValue(4);
                     break;
             }
         }

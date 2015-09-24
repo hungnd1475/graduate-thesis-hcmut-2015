@@ -11,17 +11,16 @@ namespace HCMUT.EMRCorefResol.English.Features
     class AppositionFeature : Feature
     {
         public AppositionFeature(IConceptPair instance, EMR emr, double mentionDistance)
-            : base("Apposition", new[] { 1d, 0d })
+            : base("Apposition", 2, 0)
         {
             // checks if the two concepts are in a same sentence and separated by a comma
-            if (mentionDistance == 0)
+            if (mentionDistance == 0d)
             {
                 var s = emr.ContentBetween(instance.Antecedent, instance.Anaphora);
                 if (string.Equals(s, ",") || string.Equals(s, " , ") 
                     || string.Equals(s, " ,") || string.Equals(s, ", "))
                 {
-                    Value[0] = 0d;
-                    Value[1] = 1d;
+                    SetCategoricalValue(1);
                 }
             }
         }

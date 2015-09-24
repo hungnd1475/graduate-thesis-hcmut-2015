@@ -9,12 +9,11 @@ namespace HCMUT.EMRCorefResol.English.Features
     class StringMatchFeature : Feature
     {
         public StringMatchFeature(IConceptPair instance)
-            : base("String-Match", new[] { 1d, 0d })
+            : base("String-Match", 2, 0)
         {
             if (string.Equals(instance.Anaphora.Lexicon, instance.Antecedent.Lexicon))
             {
-                Value[0] = 0d;
-                Value[1] = 1d;
+                SetCategoricalValue(1);
             }
         }
     }

@@ -10,10 +10,7 @@ namespace HCMUT.EMRCorefResol.English.Features
     class DoctorTitleMatchFeature : Feature
     {
         public DoctorTitleMatchFeature(PersonPair instance)
-            : base("DoctorTitle-Match", () => calculateValue(instance))
-        { }
-
-        private static double[] calculateValue(PersonPair instance)
+            : base("DoctorTitle-Match", 2)
         {
             string kw = null;
             var drTitles = Settings.Default.DoctorTitles;
@@ -27,7 +24,7 @@ namespace HCMUT.EMRCorefResol.English.Features
                 }
             }
 
-            return (kw != null && instance.Anaphora.Lexicon.ToLower().Contains(kw)) ? new[] { 0d, 1d } : new[] { 1d, 0d };
+            SetCategoricalValue((kw != null && instance.Anaphora.Lexicon.ToLower().Contains(kw)) ? 1 : 0);
         }
     }
 }

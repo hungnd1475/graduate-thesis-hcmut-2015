@@ -16,5 +16,6 @@ namespace HCMUT.EMRCorefResol
         IFeatureVector Extract(TestPair instance);
         IFeatureVector Extract(PronounInstance instance);
         IFeatureVector Extract(PersonInstance instance);
+        void ClearCache();
     }
 }

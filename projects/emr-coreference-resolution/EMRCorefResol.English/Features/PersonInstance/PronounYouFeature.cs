@@ -10,12 +10,13 @@ namespace HCMUT.EMRCorefResol.English.Features
     class PronounYouFeature : Feature
     {
         public PronounYouFeature(PersonInstance instance)
-            : base("Pronoun-You")
+            : base("Pronoun-You", 2, 0)
         {
-            Value = (checkContain(instance.Concept.Lexicon.ToLower(), "you") ||
+            var v = (checkContain(instance.Concept.Lexicon.ToLower(), "you") ||
                 checkContain(instance.Concept.Lexicon.ToLower(), "your") ||
                 checkContain(instance.Concept.Lexicon.ToLower(), "yourself")) ?
-                1.0 : 0.0;
+                1 : 0;
+            SetCategoricalValue(v);
         }
 
         private bool checkContain(string s1, string s2)

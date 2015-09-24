@@ -13,32 +13,99 @@ namespace HCMUT.EMRCorefResol
     {
         public string Name { get; }
 
-        public double[] Value { get; protected set; }
+        public double[] Value { get; }
+
+        private readonly bool _isCategorical = false;
 
         /// <summary>
-        /// Initializes a <see cref="Feature"/> instance with specified name
-        /// and value set to 0.
+        /// Initialize a categorical <see cref="Feature"/> instane with specified initial value.
         /// </summary>
-        /// <param name="name">The name of the feature.</param>
-        public Feature(string name, int size)
-            : this(name, new double[size])
-        { }
+        /// <param name="name"></param>
+        /// <param name="size"></param>
+        /// <param name="initValue"></param>
+        public Feature(string name, int size, int initValue)
+            : this(name, new double[size], true)
+        {
+            SetCategoricalValue(initValue);
+        }
 
         /// <summary>
-        /// Initializes a <see cref="Feature"/> instance with specified name and value.
+        /// Initialize a categorical <see cref="Feature"/> instane with initial value set to 0.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="size"></param>
+        public Feature(string name, int size)
+            : this(name, new double[size], true)
+        {
+            SetCategoricalValue(0);
+        }
+
+        /// <summary>
+        /// Initialize a continuous <see cref="Feature"/> instance with specified initial value.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="initValue"></param>
-        public Feature(string name, double[] initValue)
+        public Feature(string name, double initValue)
+            : this(name, new double[1], false)
         {
-            Name = name;
-            Value = initValue;
+            SetContinuousValue(initValue);
         }
 
-        public Feature(string name, Func<double[]> calculateValue)
+        /// <summary>
+        /// Initialize a continuous <see cref="Feature"/> instance with initial value set to 0.
+        /// </summary>
+        /// <param name="name"></param>
+        public Feature(string name)
+            : this(name, new double[1], false)
         {
+            SetContinuousValue(0d);
+        }
+
+        private Feature(string name, double[] initValue, bool isCategorical)
+        {
+            if (initValue.Length <= 0)
+            {
+                throw new ArgumentException("Value size must be greater than 0.");
+            }
+            else if (isCategorical && initValue.Length <= 1)
+            {
+                throw new ArgumentException("Value size for categorical feature must be at least 2.");
+            }
+
             Name = name;
-            Value = calculateValue();
+            Value = initValue;
+            _isCategorical = isCategorical;
+        }
+
+        protected void SetCategoricalValue(int value)
+        {
+            if (value >= 0 || value < Value.Length)
+            {
+                for (int i = 0; i < Value.Length; i++)
+                {
+                    Value[i] = i == value ? 1d : 0d;
+                }
+            }
+        }
+
+        protected void SetContinuousValue(double value)
+        {
+            Value[0] = value;
+        }
+
+        public int GetCategoricalValue()
+        {
+            for (int i = 0; i < Value.Length; i++)
+            {
+                if (Value[i] != 0)
+                    return i;
+            }
+            return 0;
+        }
+
+        public double GetContinuousValue()
+        {
+            return Value[0];
         }
     }
 }

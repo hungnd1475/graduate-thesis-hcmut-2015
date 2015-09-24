@@ -10,13 +10,14 @@ namespace HCMUT.EMRCorefResol.English.Features
     class PronounWeFeature : Feature
     {
         public PronounWeFeature(PersonInstance instance)
-            :base("Pronoun-We")
+            :base("Pronoun-We", 2, 0)
         {
-            Value = (checkContain(instance.Concept.Lexicon.ToLower(), "our") ||
+            var v = (checkContain(instance.Concept.Lexicon.ToLower(), "our") ||
                 checkContain(instance.Concept.Lexicon.ToLower(), "we") ||
                 checkContain(instance.Concept.Lexicon.ToLower(), "us") ||
                 checkContain(instance.Concept.Lexicon.ToLower(), "ourselves")) ?
-                1.0 : 0.0;
+                1 : 0;
+            SetCategoricalValue(v);
         }
 
         private bool checkContain(string s1, string s2)

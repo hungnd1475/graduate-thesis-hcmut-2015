@@ -8,7 +8,7 @@ namespace HCMUT.EMRCorefResol.Classification
 {
     public class ClasProblem
     {
-        public List<double[]> X { get; } = new List<double[]>();
+        public List<double[][]> X { get; } = new List<double[][]>();
 
         public List<double> Y { get; } = new List<double>();
 

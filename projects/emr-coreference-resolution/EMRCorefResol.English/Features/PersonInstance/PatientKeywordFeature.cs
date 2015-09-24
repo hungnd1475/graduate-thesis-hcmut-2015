@@ -10,18 +10,17 @@ namespace HCMUT.EMRCorefResol.English.Features
     class PatientKeywordFeature : Feature
     {
         public PatientKeywordFeature(PersonInstance instance)
-            : base("Patient-Keyword")
+            : base("Patient-Keyword", 2, 0)
         {
             string[] stopWords = { "mr", "mr.", "mrs", "mrs.", "ms", "ms.", "miss", "yo-", "y.o.", "y/o", "year-old", "-yo" };
             foreach(string stopWord in stopWords)
             {
                 if(checkContain(instance.Concept.Lexicon.ToLower(), stopWord))
                 {
-                    Value = 1.0;
+                    SetCategoricalValue(1);
                     return;
                 }
             }
-            Value = 0.0;
         }
 
         private bool checkContain(string s1, string s2)

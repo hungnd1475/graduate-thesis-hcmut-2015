@@ -14,6 +14,6 @@ namespace HCMUT.EMRCorefResol
         IFeature this[int index] { get; }
         int Size { get; }
         double ClassValue { get; set; }
-        double[] ToDoubleArray();
+        double[][] ToDoubleArray();
     }
 }

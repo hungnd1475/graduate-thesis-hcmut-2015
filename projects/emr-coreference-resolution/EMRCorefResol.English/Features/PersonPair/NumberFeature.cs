@@ -12,7 +12,7 @@ namespace HCMUT.EMRCorefResol.English.Features
     class NumberFeature : Feature
     {
         public NumberFeature(PersonPair instance)
-            : base("Number-Information", new[] { 1d, 0d, 0d })
+            : base("Number-Information", 3, 0)
         {
             PluralizationService ps = PluralizationService.CreateService(CultureInfo.GetCultureInfo("en-us"));
 
@@ -34,33 +34,25 @@ namespace HCMUT.EMRCorefResol.English.Features
 
             if (!anteIsSingular && !anteIsPlural)
             {
-                Value[0] = 0d;
-                Value[1] = 0d;
-                Value[2] = 1d;
+                SetCategoricalValue(2);
                 return;
             }
 
             if (!anaIsSingular && !anaIsPlural)
             {
-                Value[0] = 0d;
-                Value[1] = 0d;
-                Value[2] = 1d;
+                SetCategoricalValue(2);
                 return;
             }
 
             if (anaIsPlural && anteIsPlural)
             {
-                Value[0] = 0d;
-                Value[1] = 1d;
-                Value[2] = 0d;
+                SetCategoricalValue(1);
                 return;
             }
 
             if (anaIsSingular && anteIsSingular)
             {
-                Value[0] = 0d;
-                Value[1] = 1d;
-                Value[2] = 0d;
+                SetCategoricalValue(1);
                 return;
             }
         }

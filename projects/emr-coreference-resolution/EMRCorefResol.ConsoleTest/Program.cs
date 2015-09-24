@@ -38,8 +38,8 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             //testTrainer();
             //testLoadClassifier();
             //testService();
-            //var path = testTrainManyEMR(10);
-            testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", 1);
+            //var path = testTrainManyEMR(5);
+            testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", 10);
             //testClassifier(path, 1);
 
             sw.Stop();
@@ -154,6 +154,7 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
                 Console.WriteLine($"{Path.GetFileName(emrPath)}");
                 ClassificationSystem.Instance.ClassifyOne(emrPath, EMR_COLLECTION.GetConceptsPath(index),
                     EMR_COLLECTION.GetChainsPath(index), dataReader, preprocessor, fExtractor, classifier);
+                classifier.ClearCache();
             }
         }
 

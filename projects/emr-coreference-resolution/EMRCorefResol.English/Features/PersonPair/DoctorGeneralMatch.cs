@@ -10,24 +10,23 @@ namespace HCMUT.EMRCorefResol.English.Features
     class DoctorGeneralMatch : Feature
     {
         public DoctorGeneralMatch(PersonPair instance)
-            : base("Doctor-General-Match", () =>
+            : base("Doctor-General-Match", 2, 0)
+        {
+            var drGenerals = Settings.Default.GeneralDoctors;
+            var anteLex = instance.Antecedent.Lexicon.ToLower();
+            var anaLex = instance.Anaphora.Lexicon.ToLower();
+            string kw = null;
+
+            foreach (var dg in drGenerals)
             {
-                var drGenerals = Settings.Default.GeneralDoctors;
-                var anteLex = instance.Antecedent.Lexicon.ToLower();
-                var anaLex = instance.Anaphora.Lexicon.ToLower();
-                string kw = null;
-
-                foreach (var dg in drGenerals)
+                if (anteLex.Contains(dg))
                 {
-                    if (anteLex.Contains(dg))
-                    {
-                        kw = dg;
-                        break;
-                    }
+                    kw = dg;
+                    break;
                 }
+            }
 
-                return (kw != null && anaLex.Contains(kw)) ? new[] { 0d, 1d } : new[] { 1d, 0d };
-            })
-        { }
+            SetCategoricalValue((kw != null && anaLex.Contains(kw)) ? 1 : 0);
+        }
     }
 }

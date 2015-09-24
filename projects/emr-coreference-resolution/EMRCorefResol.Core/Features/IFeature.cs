@@ -10,5 +10,8 @@ namespace HCMUT.EMRCorefResol
     {
         string Name { get; }
         double[] Value { get; }
+
+        int GetCategoricalValue();
+        double GetContinuousValue();
     }
 }

@@ -9,23 +9,23 @@ namespace HCMUT.EMRCorefResol.English.Features
     class PartOfSpeechFeature : Feature
     {
         public PartOfSpeechFeature(PronounInstance instance)
-            : base("Part-of-Speech")
+            : base("Part-of-Speech", 4, 3)
         {
             var tagged = Service.English.getPOS(instance.Concept.Lexicon);
 
             switch (tagged[0].Split('/')[1])
             {
                 case "DT":
-                    Value = 1.0;
+                    SetCategoricalValue(0);
                     break;
                 case "WDT":
-                    Value = 2.0;
+                    SetCategoricalValue(1);
                     break;
                 case "PRP":
-                    Value = 3.0;
+                    SetCategoricalValue(2);
                     break;
                 default:
-                    Value = 0.0;
+                    SetCategoricalValue(3);
                     break;
             }
         }

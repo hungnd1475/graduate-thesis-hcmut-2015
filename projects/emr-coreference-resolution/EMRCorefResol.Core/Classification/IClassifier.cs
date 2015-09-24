@@ -27,5 +27,7 @@ namespace HCMUT.EMRCorefResol.Classification
         void WriteXml(XmlWriter writer, string dir);
 
         IClasProblemSerializer ProblemSerializer { get; }
+
+        void ClearCache();
     }
 }

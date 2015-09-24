@@ -10,18 +10,17 @@ namespace HCMUT.EMRCorefResol.English.Features
     class DoctorKeywordFeature : Feature
     {
         public DoctorKeywordFeature(PersonInstance instance)
-            :base("Doctor-Keyword")
+            :base("Doctor-Keyword", 2, 0)
         {
             string[] stopWords = { "dr", "dr.", "md", "m.d.", "m.d" };
             foreach (string stopWord in stopWords)
             {
                 if (checkContain(instance.Concept.Lexicon.ToLower(), stopWord))
                 {
-                    Value = 1.0;
+                    SetCategoricalValue(1);
                     return;
                 }
             }
-            Value = 0.0;
         }
 
         private bool checkContain(string s1, string s2)
