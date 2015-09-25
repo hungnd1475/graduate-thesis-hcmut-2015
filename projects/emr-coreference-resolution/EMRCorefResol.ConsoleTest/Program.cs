@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using HCMUT.EMRCorefResol.Classification;
 using HCMUT.EMRCorefResol.Classification.LibSVM;
+using HCMUT.EMRCorefResol.Utilities;
 using System.Threading;
 
 namespace HCMUT.EMRCorefResol.ConsoleTest
@@ -39,9 +40,10 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             //testTrainer();
             //testLoadClassifier();
             //testService();
-            var path = testTrainManyEMR(20);
+            //var path = testTrainManyEMR(20);
             //testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", 10);
             //testClassifier(path, 1);
+            testAhoCorasick();
 
             sw.Stop();
             Console.WriteLine($"Execution time: {sw.ElapsedMilliseconds}ms");
@@ -164,6 +166,15 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             Console.WriteLine("Annie gender: " + Service.English.getGender("annie"));
             Console.WriteLine(string.Join(" ", Service.English.getPOS("Annie goes to school")));
             Console.WriteLine(Service.English.getSyns("table")[1]);
+        }
+
+        static void testAhoCorasick()
+        {
+            var ac_kwd = new AhoCorasickKeywordDictionary("fast", "sofa", "so", "take", "son");
+            var rg_kwd = new RegexKeywordDictionary("fast", "sofa", "so", "take", "son");
+
+            var result = ac_kwd.Search("take fasta afast take afasta son", KWSearchOptions.None);
+            Console.WriteLine(string.Join(" ", result));
         }
 
         static void Print(IClasInstance i, IFeatureVector fVector)

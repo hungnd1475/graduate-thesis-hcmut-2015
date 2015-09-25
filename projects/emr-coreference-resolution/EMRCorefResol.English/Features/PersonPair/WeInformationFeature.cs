@@ -1,4 +1,4 @@
-﻿using HCMUT.EMRCorefResol.Keywords;
+﻿using HCMUT.EMRCorefResol.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ namespace HCMUT.EMRCorefResol.English.Features
     class WeInformationFeature : Feature
     {
         private static readonly IKeywordDictionary WE_KWD =
-            new RegexKeywordDictionary("we", "us", "our", "ours", "ourselves");
+            new AhoCorasickKeywordDictionary("we", "us", "our", "ours", "ourselves");
 
         public WeInformationFeature(PersonPair instance)
             : base("We-Information", 2, 0)
@@ -21,8 +21,8 @@ namespace HCMUT.EMRCorefResol.English.Features
             //    SetCategoricalValue(1);
             //}
 
-            if (WE_KWD.Match(instance.Antecedent.Lexicon, true) &&
-                WE_KWD.Match(instance.Anaphora.Lexicon, true))
+            if (WE_KWD.Match(instance.Antecedent.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord) &&
+                WE_KWD.Match(instance.Anaphora.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
             {
                 SetCategoricalValue(1);
             }
