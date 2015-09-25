@@ -39,6 +39,12 @@ namespace emr_corefsol_service.Libs
         public static string[] getPOS(string term)
         {
             var tokenized = mTokenizer.Tokenize(term);
+
+            if(tokenized == null)
+            {
+                return null;
+            }
+
             var POS = mPostTagger.Tag(tokenized);
 
             string[] res = new string[tokenized.Length];
