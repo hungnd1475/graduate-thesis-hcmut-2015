@@ -9,7 +9,7 @@ namespace HCMUT.EMRCorefResol.English.Features
     class PronounIndexFeature : Feature
     {
         public PronounIndexFeature(PronounInstance instance)
-            : base("Pronoun-Index")
+            : base("Pronoun-Index", 18, 0)
         {
             string[] pronounList = { "it", "they", "them", "that",
                 "which", "what", "who", "whom",
@@ -20,9 +20,6 @@ namespace HCMUT.EMRCorefResol.English.Features
             if (pronounList.Contains(instance.Concept.Lexicon.ToLower()))
             {
                 SetCategoricalValue(Array.IndexOf(pronounList, instance.Concept.Lexicon.ToLower()) + 1);
-            } else
-            {
-                SetCategoricalValue(0);
             }
         }
     }
