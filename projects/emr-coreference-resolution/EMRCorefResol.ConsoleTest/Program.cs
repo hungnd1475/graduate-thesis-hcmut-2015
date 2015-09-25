@@ -32,14 +32,14 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
             //testPreprocessor();
             //testCorefChain();
-            //testFeatures();
+            testFeatures();
             //testReadEMR();
             //var path = testTrainer();
             //testClassifier(path);
             //testTrainer();
             //testLoadClassifier();
             //testService();
-            var path = testTrainManyEMR(20);
+            //var path = testTrainManyEMR(20);
             //testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", 10);
             //testClassifier(path, 1);
 

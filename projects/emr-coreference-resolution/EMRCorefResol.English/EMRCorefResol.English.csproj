@@ -91,6 +91,7 @@
     <Compile Include="Features\PersonInstance\PronounYouFeature.cs" />
     <Compile Include="Features\PersonInstance\RelativeKeywordFeature.cs" />
     <Compile Include="Features\PersonPair\GenderFeature.cs" />
+    <Compile Include="Features\Pronoun\PronounIndexFeature.cs" />
     <Compile Include="Features\Pronoun\SemanticFeature.cs" />
     <Compile Include="FeatureExtractor\GroundTruthPatientDeterminer.cs" />
     <Compile Include="FeatureExtractor\IPatientDeterminer.cs" />
