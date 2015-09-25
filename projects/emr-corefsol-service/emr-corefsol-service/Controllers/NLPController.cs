@@ -25,7 +25,7 @@ namespace emr_corefsol_service.Controllers
         [ActionName("POS")]
         public CustomResponse GetPOS(string term)
         {
-            var pos = Libs.StanfordNLPHelper.getPOS(term);
+            var pos = Libs.OpenNLPHelper.getPOS(term);
 
             if (pos == null)
             {

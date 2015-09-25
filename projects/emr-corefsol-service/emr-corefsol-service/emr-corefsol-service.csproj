@@ -190,6 +190,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>App_Data\Libs\sharpNLP\OpenNLP.dll</HintPath>
     </Reference>
+    <Reference Include="opennlp-tools-1.6.0, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenNLP.NET.1.6.0\lib\opennlp-tools-1.6.0.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="opennlp-uima-1.6.0, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenNLP.NET.1.6.0\lib\opennlp-uima-1.6.0.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="SharpEntropy, Version=1.0.2529.39670, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>App_Data\Libs\sharpNLP\SharpEntropy.dll</HintPath>
@@ -365,6 +373,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Libs\OpenNLPHelper.cs" />
     <Compile Include="Libs\SharpNLPHelper.cs" />
     <Compile Include="Libs\StanfordNLPHelper.cs" />
     <Compile Include="Libs\WordNetHelper.cs" />

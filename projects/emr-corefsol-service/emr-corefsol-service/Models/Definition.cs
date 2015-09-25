@@ -21,7 +21,6 @@ namespace emr_corefsol_service.Models
 
         public Definition(SynSet s)
         {
-            Models.WordType type;
             switch (s.POS)
             {
                 case WordNetEngine.POS.None:
