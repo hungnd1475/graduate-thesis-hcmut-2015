@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using static HCMUT.EMRCorefResol.Logging.LoggerFactory;
 
 namespace HCMUT.EMRCorefResol
@@ -30,31 +31,10 @@ namespace HCMUT.EMRCorefResol
         public void TrainOne(string emrPath, string conceptsPath, string chainsPath, IDataReader dataReader,
             IPreprocessor preprocessor, IFeatureExtractor fExtractor, ITrainer trainer) 
         {
-            var emr = new EMR(emrPath, conceptsPath, dataReader);
-            var chains = new CorefChainCollection(chainsPath, dataReader);
             var pCreator = new ClasProblemCreator();
-
-            fExtractor.EMR = emr;
-            fExtractor.GroundTruth = chains;
-
-            var instances = preprocessor.Process(emr);
-            var features = new IFeatureVector[instances.Count];
-
-            GetLogger().Info("Extracting features...");
-            Parallel.For(0, instances.Count, k =>
-            {
-                var i = instances[k];
-                features[k] = i.GetFeatures(fExtractor);
-            });
-
-            for (int i = 0; i < features.Length; i++)
-            {
-                var fVector = features[i];
-                if (fVector != null)
-                    instances[i].AddTo(pCreator, fVector);
-            }
-
-            GetLogger().Info("Training...");
+            ExtractFeatures(emrPath, conceptsPath, chainsPath, dataReader,
+                    preprocessor, fExtractor, pCreator);
+            GetLogger().WriteInfo("Training...");
 
             trainer.Train<PersonPair>(pCreator.GetProblem<PersonPair>());
             trainer.Train<PersonInstance>(pCreator.GetProblem<PersonInstance>());
@@ -68,33 +48,11 @@ namespace HCMUT.EMRCorefResol
 
             for (int i = 0; i < emrFiles.Length; i++)
             {
-                GetLogger().Info(Path.GetFileName(emrFiles[i]));
-
-                var emr = new EMR(emrFiles[i], conceptsFiles[i], dataReader);
-                var chains = new CorefChainCollection(chainsFiles[i], dataReader);
-
-                fExtractor.EMR = emr;
-                fExtractor.GroundTruth = chains;
-
-                var instances = preprocessor.Process(emr);
-                var features = new IFeatureVector[instances.Count];
-
-                GetLogger().Info("Extracting features...");
-                Parallel.For(0, instances.Count, k =>
-                {
-                    var t = instances[k];
-                    features[k] = t.GetFeatures(fExtractor);
-                });
-
-                for (int k = 0; k < features.Length; k++)
-                {
-                    var fVector = features[k];
-                    if (fVector != null)
-                        instances[k].AddTo(pCreator, fVector);
-                }
+                ExtractFeatures(emrFiles[i], conceptsFiles[i], chainsFiles[i], dataReader,
+                    preprocessor, fExtractor, pCreator);
             }
 
-            GetLogger().Info("Training...");
+            GetLogger().WriteInfo("Training...");
 
             trainer.Train<PersonPair>(pCreator.GetProblem<PersonPair>());
             trainer.Train<PersonInstance>(pCreator.GetProblem<PersonInstance>());
@@ -104,6 +62,44 @@ namespace HCMUT.EMRCorefResol
             //trainer.ProblemSerializer.Serialize(pCreator.GetProblem<PersonPair>(), "Problems\\PersonPair.prb");
             //trainer.ProblemSerializer.Serialize(pCreator.GetProblem<PersonInstance>(), "Problems\\PersonInstance.prb");
             //trainer.ProblemSerializer.Serialize(pCreator.GetProblem<PronounInstance>(), "Problems\\PronounInstance.prb");
+        }
+
+        private void ExtractFeatures(string emrPath, string conceptsPath, string chainsPath, IDataReader dataReader,
+            IPreprocessor preprocessor, IFeatureExtractor fExtractor, ClasProblemCreator pCreator)
+        {
+            GetLogger().WriteInfo(Path.GetFileName(emrPath));
+
+            var emr = new EMR(emrPath, conceptsPath, dataReader);
+            var chains = new CorefChainCollection(chainsPath, dataReader);
+
+            fExtractor.EMR = emr;
+            fExtractor.GroundTruth = chains;
+
+            var instances = preprocessor.Process(emr);
+            var features = new IFeatureVector[instances.Count];
+            int nDone = 0, iCount = instances.Count;
+
+            GetLogger().WriteInfo($"Extracting features...");
+            Parallel.For(0, iCount, k =>
+            {
+                lock (emr)
+                {
+                    nDone += 1;
+                    GetLogger().UpdateInfo($"{nDone}/{iCount}");
+                }
+
+                var t = instances[k];
+                features[k] = t.GetFeatures(fExtractor);
+            });
+
+            GetLogger().WriteInfo("\n");
+
+            for (int k = 0; k < features.Length; k++)
+            {
+                var fVector = features[k];
+                if (fVector != null)
+                    instances[k].AddTo(pCreator, fVector);
+            }
         }
     }
 }

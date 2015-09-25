@@ -99,7 +99,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             LibSVM.RunSVMScale(sfPath, rawPrbPath, scaledPrbPath);
 
             // predict
-            GetLogger().Info($"Classifying {name} problem...");
+            GetLogger().WriteInfo($"Classifying {name} problem...");
             LibSVM.RunSVMPredict(scaledPrbPath, modelPath, outputPath, true);
 
             var target = new double[problem.Size];

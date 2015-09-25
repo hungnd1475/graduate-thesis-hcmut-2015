@@ -58,7 +58,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             LibSVM.RunSVMScale(0d, 1d, sfPath, rawPrbPath, scaledPrbPath);
 
             // train
-            GetLogger().Info($"Training {name} problem...");
+            GetLogger().WriteInfo($"Training {name} problem...");
             LibSVM.RunSVMTrain(SVMType.C_SVC, SVMKernel.RBF, scaledPrbPath, modelPath, true);
         }
 

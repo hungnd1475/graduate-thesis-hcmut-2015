@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using HCMUT.EMRCorefResol.Classification;
 using HCMUT.EMRCorefResol.Classification.LibSVM;
+using System.Threading;
 
 namespace HCMUT.EMRCorefResol.ConsoleTest
 {
@@ -38,8 +39,8 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             //testTrainer();
             //testLoadClassifier();
             //testService();
-            //var path = testTrainManyEMR(5);
-            testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", 10);
+            var path = testTrainManyEMR(20);
+            //testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", 10);
             //testClassifier(path, 1);
 
             sw.Stop();

@@ -102,7 +102,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             var output = p.StandardOutput.ReadToEnd();
             if (shouldLog)
             {
-                GetLogger().Info(output);
+                GetLogger().WriteInfo(output);
             }
         }
 
@@ -121,7 +121,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             var output = p.StandardOutput.ReadToEnd();
             if (shouldLog)
             {
-                GetLogger().Info(output);
+                GetLogger().WriteInfo(output);
             }
         }
 

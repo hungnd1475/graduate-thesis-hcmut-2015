@@ -105,6 +105,8 @@
     <Compile Include="IPreprocessor.cs" />
     <Compile Include="ISingleConcept.cs" />
     <Compile Include="Classification\ITrainer.cs" />
+    <Compile Include="Keywords\AhoCorasickKeywordDictionary.cs" />
+    <Compile Include="Keywords\RegexKeywordDictionary.cs" />
     <Compile Include="Logging\ConsoleLogger.cs" />
     <Compile Include="Logging\ILogger.cs" />
     <Compile Include="Logging\LoggerFactory.cs" />
@@ -119,6 +121,7 @@
     <Compile Include="TrainingSystem.cs" />
     <Compile Include="Utilities\Cache.cs" />
     <Compile Include="Utilities\EMRCollection.cs" />
+    <Compile Include="Keywords\IKeywordDictionary.cs" />
     <Compile Include="Utilities\Range.cs" />
     <Compile Include="SimplePreprocessor.cs" />
     <Compile Include="SingleInstance.cs" />
