@@ -33,7 +33,7 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
             //testPreprocessor();
             //testCorefChain();
-            //testFeatures();
+            testFeatures();
             //testReadEMR();
             //var path = testTrainer();
             //testClassifier(path);

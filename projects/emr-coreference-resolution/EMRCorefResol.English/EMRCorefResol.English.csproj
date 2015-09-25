@@ -84,6 +84,7 @@
     <Compile Include="Features\PersonInstance\DoctorTitleKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\GeneralDepartmentKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\GeneralDoctorKeywordFeature.cs" />
+    <Compile Include="Features\PersonInstance\NameFeature.cs" />
     <Compile Include="Features\PersonInstance\PatientKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\PronounIFeature.cs" />
     <Compile Include="Features\PersonInstance\PronounTheyFeature.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Features\PersonInstance\PronounYouFeature.cs" />
     <Compile Include="Features\PersonInstance\RelativeKeywordFeature.cs" />
     <Compile Include="Features\PersonPair\GenderFeature.cs" />
+    <Compile Include="Features\Pronoun\PronounIndexFeature.cs" />
     <Compile Include="Features\Pronoun\SemanticFeature.cs" />
     <Compile Include="FeatureExtractor\GroundTruthPatientDeterminer.cs" />
     <Compile Include="FeatureExtractor\IPatientDeterminer.cs" />
