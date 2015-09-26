@@ -8,10 +8,8 @@ namespace HCMUT.EMRCorefResol.English.Features
 {
     class MentionDistanceFeature : Feature
     {
-        public const string FeatureName = "Mention-Distance";
-
         public MentionDistanceFeature(IConceptPair pair, EMR emr)
-            : base(FeatureName)
+            : base("Mention-Distance")
         {
             var concepts = emr.Concepts;
             var i = concepts.IndexOf(pair.Antecedent);

@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol.Utilities
 {
-    public interface IKeywordDictionary : IEnumerable<string>
-    {
+    public interface IKeywordDictionary : IIndexedEnumerable<string>
+    { 
         bool Match(string s, KWSearchOptions options);
         string[] Search(string s, KWSearchOptions options);
+        int[] SearchIndices(string s, KWSearchOptions options);
     }
 
     [Flags]

@@ -10,22 +10,32 @@ namespace HCMUT.EMRCorefResol.Utilities
     public class AhoCorasickKeywordDictionary : IKeywordDictionary
     {
         private readonly TrieNode _root = new TrieNode();
-        private readonly string[] _kwList;
+        private readonly List<string> _kwList;
+
+        public int Count
+        {
+            get { return _kwList.Count; }
+        }
+
+        public string this[int index]
+        {
+            get { return _kwList[index]; }
+        }
 
         public AhoCorasickKeywordDictionary(params string[] keywords)
+            : this(keywords.AsEnumerable())
+        { }
+
+        public AhoCorasickKeywordDictionary(IEnumerable<string> keywords)
         {
-            _kwList = keywords;            
+            _kwList = new List<string>(keywords);
             BuildTree();
             BuildACAutomaton();
         }
 
-        public AhoCorasickKeywordDictionary(IEnumerable<string> keywords)
-            : this(keywords.ToArray())
-        { }
-
         private void BuildTree()
         {
-            for (int i = 0; i < _kwList.Length; i++)
+            for (int i = 0; i < _kwList.Count; i++)
             {
                 var kw = _kwList[i].ToLower();
                 var curNode = _root;
@@ -127,6 +137,12 @@ namespace HCMUT.EMRCorefResol.Utilities
 
         public string[] Search(string s, KWSearchOptions options)
         {
+            var indices = SearchIndices(s, options);
+            return indices.Select(i => _kwList[i]).ToArray();
+        }
+
+        public int[] SearchIndices(string s, KWSearchOptions options)
+        {
             var outIndices = new HashSet<int>();
 
             SearchWithAction(s, options, (i, node) =>
@@ -151,13 +167,7 @@ namespace HCMUT.EMRCorefResol.Utilities
                 return false;
             });
 
-            var result = new string[outIndices.Count];
-            var t = outIndices.GetEnumerator();
-            for (int i = 0; t.MoveNext() && i < result.Length; i++)
-            {
-                result[i] = _kwList[t.Current];
-            }
-            return result;
+            return outIndices.ToArray();
         }
 
         private void SearchWithAction(string s, KWSearchOptions option, Func<int, TrieNode, bool> processResult)

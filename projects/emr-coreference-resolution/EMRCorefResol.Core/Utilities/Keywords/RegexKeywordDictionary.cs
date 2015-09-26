@@ -20,6 +20,22 @@ namespace HCMUT.EMRCorefResol.Utilities
             _kwList = keywords;
         }
 
+        public string this[int index]
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public int Count
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         public IEnumerator<string> GetEnumerator()
         {
             return _kwList.GetEnumerator();
@@ -45,6 +61,11 @@ namespace HCMUT.EMRCorefResol.Utilities
                 return false;
             });
             return result.ToArray();
+        }
+
+        public int[] SearchIndices(string s, KWSearchOptions options)
+        {
+            throw new NotImplementedException();
         }
 
         IEnumerator IEnumerable.GetEnumerator()

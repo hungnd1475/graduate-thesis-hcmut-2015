@@ -170,10 +170,14 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
         static void testAhoCorasick()
         {
-            var ac_kwd = new AhoCorasickKeywordDictionary("fast", "sofa", "so", "take", "son");
-            var rg_kwd = new RegexKeywordDictionary("fast", "sofa", "so", "take", "son");
+            var ac_kwd = new AhoCorasickKeywordDictionary(
+                "it", "they", "them", "that",
+                "which", "what", "who", "whom",
+                "whose", "all", "any", "most",
+                "some", "this", "that", "these",
+                "those");
 
-            var result = ac_kwd.Search("take fasta afast take afasta son", KWSearchOptions.None);
+            var result = ac_kwd.Search("whose", KWSearchOptions.None);
             Console.WriteLine(string.Join(" ", result));
         }
 
