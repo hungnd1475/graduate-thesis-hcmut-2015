@@ -33,7 +33,7 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
             //testPreprocessor();
             //testCorefChain();
-            testFeatures();
+            //testFeatures();
             //testReadEMR();
             //var path = testTrainer();
             //testClassifier(path);
@@ -177,7 +177,7 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
                 "some", "this", "that", "these",
                 "those");
 
-            var result = ac_kwd.Search("whose", KWSearchOptions.None);
+            var result = ac_kwd.Search("whoseasdsa thEy dont know anything theseee", KWSearchOptions.WholeWord);
             Console.WriteLine(string.Join(" ", result));
         }
 

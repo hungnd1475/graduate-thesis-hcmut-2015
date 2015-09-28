@@ -10,42 +10,34 @@ using System.Web.Hosting;
 
 namespace emr_corefsol_service.Libs
 {
-    public class SharpNLPHelper
+    public class SharpNLPHelper : INLPHelper
     {
-        private static readonly string modelsURL = HostingEnvironment.MapPath(@"~\app_data\libs\sharpNLP\Models\");
+        private readonly string modelsURL = null;
+        private readonly EnglishMaximumEntropyPosTagger _postTagger = null;
+        private readonly EnglishMaximumEntropyTokenizer _tokenizer = null;
 
-        private static readonly EnglishMaximumEntropyPosTagger mPostTagger = new EnglishMaximumEntropyPosTagger(modelsURL + "EnglishPOS.nbin", modelsURL + "Parser/tagdict");
-        private static readonly EnglishMaximumEntropyTokenizer mTokenizer = new EnglishMaximumEntropyTokenizer(modelsURL + "EnglishTok.nbin");
-
-        private static readonly string[] femNames = null;
-        private static readonly string[] malNames = null;
-
-        static SharpNLPHelper()
+        public SharpNLPHelper(string rootPath)
         {
-            malNames = File.ReadAllLines(modelsURL + "Coref/gen.mal");
-            femNames = File.ReadAllLines(modelsURL + "Coref/gen.fem");
+            modelsURL = rootPath;
+            _postTagger = new EnglishMaximumEntropyPosTagger(modelsURL + "EnglishPOS.nbin", modelsURL + "Parser/tagdict");
+            _tokenizer = new EnglishMaximumEntropyTokenizer(modelsURL + "EnglishTok.nbin");
         }
 
-        public static string[] GetMaleNames()
+        public string[] tokenize(string term)
         {
-            return malNames;
+            return _tokenizer.Tokenize(term);
         }
 
-        public static string[] GetFemaleNames()
+        public string[] getPOS(string term)
         {
-            return femNames;
-        }
-
-        public static string[] getPOS(string term)
-        {
-            var tokenized = mTokenizer.Tokenize(term);
+            var tokenized = _tokenizer.Tokenize(term);
 
             if(tokenized == null)
             {
                 return null;
             }
 
-            var POS = mPostTagger.Tag(tokenized);
+            var POS = _postTagger.Tag(tokenized);
 
             string[] res = new string[tokenized.Length];
             for (int i = 0; i < tokenized.Length; i++)
@@ -54,29 +46,6 @@ namespace emr_corefsol_service.Libs
             }
 
             return res;
-        }
-
-        public static string getGender(string name)
-        {
-            var normName = name.ToLower();
-
-            foreach (string n in malNames)
-            {
-                if (Regex.IsMatch(normName, string.Format(@"\b{0}\b", Regex.Escape(n))))
-                {
-                    return "male";
-                }
-            }
-
-            foreach (string n in femNames)
-            {
-                if (Regex.IsMatch(normName, string.Format(@"\b{0}\b", Regex.Escape(n))))
-                {
-                    return "female";
-                }
-            }
-
-            return "unknow";
         }
     }
 }
