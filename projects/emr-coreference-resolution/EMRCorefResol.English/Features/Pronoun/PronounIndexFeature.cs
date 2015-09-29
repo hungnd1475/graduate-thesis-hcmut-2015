@@ -6,20 +6,17 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol.English.Features
 {
+    using Utilities;
     class PronounIndexFeature : Feature
     {
         public PronounIndexFeature(PronounInstance instance)
             : base("Pronoun-Index", 18, 0)
         {
-            string[] pronounList = { "it", "they", "them", "that",
-                "which", "what", "who", "whom",
-                "whose", "all", "any", "most",
-                "some", "this", "that", "these",
-                "those" };
-
-            if (pronounList.Contains(instance.Concept.Lexicon.ToLower()))
+            var searcher = KeywordService.Instance.PRONOUNS;
+            var index = searcher.SearchIndices(instance.Concept.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord)[0];
+            if(index >=0 && index <= 17)
             {
-                SetCategoricalValue(Array.IndexOf(pronounList, instance.Concept.Lexicon.ToLower()) + 1);
+                SetCategoricalValue(index + 1);
             }
         }
     }

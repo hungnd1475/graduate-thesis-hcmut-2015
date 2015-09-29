@@ -7,22 +7,17 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol.English.Features
 {
+    using Utilities;
     class YouInformationFeature : Feature
     {
-        private static IKeywordDictionary YOU_KWD = 
-            new AhoCorasickKeywordDictionary("you", "your", "yours", "yourself");
-
         public YouInformationFeature(PersonPair instance)
             : base("You-Information", 2, 0)
         {
-            //if ((string.Equals(instance.Anaphora.Lexicon.ToLower(), "you") &&
-            //        string.Equals(instance.Antecedent.Lexicon.ToLower(), "you")))
-            //{
-            //    SetCategoricalValue(1);
-            //}
-            
-            if (YOU_KWD.Match(instance.Antecedent.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord) && 
-                YOU_KWD.Match(instance.Anaphora.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
+            var kw_searcher = KeywordService.Instance.YOU_KEYWORDS;
+            var anaIsI = kw_searcher.Match(instance.Anaphora.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
+            var anteIsI = kw_searcher.Match(instance.Antecedent.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
+
+            if (anaIsI && anteIsI)
             {
                 SetCategoricalValue(1);
             }

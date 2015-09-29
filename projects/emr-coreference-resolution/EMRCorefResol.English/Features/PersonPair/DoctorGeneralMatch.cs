@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol.English.Features
 {
+    using Utilities;
     class DoctorGeneralMatch : Feature
     {
         public DoctorGeneralMatch(PersonPair instance)
             : base("Doctor-General-Match", 2, 0)
         {
-            var drGenerals = Settings.Default.GeneralDoctors;
+            /*var drGenerals = Settings.Default.GeneralDoctors;
             var anteLex = instance.Antecedent.Lexicon.ToLower();
             var anaLex = instance.Anaphora.Lexicon.ToLower();
             string kw = null;
@@ -26,7 +27,25 @@ namespace HCMUT.EMRCorefResol.English.Features
                 }
             }
 
-            SetCategoricalValue((kw != null && anaLex.Contains(kw)) ? 1 : 0);
+            SetCategoricalValue((kw != null && anaLex.Contains(kw)) ? 1 : 0);*/
+
+            var searcher = KeywordService.Instance.GENERAL_DOCTOR;
+            var kws = searcher.Search(instance.Anaphora.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
+            if(kws == null || kws.Length < 1)
+            {
+                SetCategoricalValue(0);
+                return;
+            }
+
+            searcher = new AhoCorasickKeywordDictionary(kws);
+            kws = searcher.Search(instance.Antecedent.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
+            if (kws == null || kws.Length < 1)
+            {
+                SetCategoricalValue(0);
+                return;
+            }
+
+            SetCategoricalValue(1);
         }
     }
 }

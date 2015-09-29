@@ -7,22 +7,17 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol.English.Features
 {
+    using Utilities;
     class WeInformationFeature : Feature
     {
-        private static readonly IKeywordDictionary WE_KWD =
-            new AhoCorasickKeywordDictionary("we", "us", "our", "ours", "ourselves");
-
         public WeInformationFeature(PersonPair instance)
             : base("We-Information", 2, 0)
         {
-            //if ((string.Equals(instance.Anaphora.Lexicon.ToLower(), "we") &&
-            //    string.Equals(instance.Antecedent.Lexicon.ToLower(), "we")))
-            //{
-            //    SetCategoricalValue(1);
-            //}
+            var kw_searcher = KeywordService.Instance.WE_KEYWORDS;
+            var anaIsWe = kw_searcher.Match(instance.Anaphora.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
+            var anteIsWe = kw_searcher.Match(instance.Antecedent.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
 
-            if (WE_KWD.Match(instance.Antecedent.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord) &&
-                WE_KWD.Match(instance.Anaphora.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
+            if (anaIsWe && anteIsWe)
             {
                 SetCategoricalValue(1);
             }
