@@ -19,7 +19,7 @@ namespace HCMUT.EMRCorefResol.English.Features
                 .ToArray();
             var rawName = string.Join(" ", rawNameArr);
 
-            var searcher = new AhoCorasickKeywordDictionary("general-titles.txt");
+            var searcher = KeywordService.Instance.GENERAL_TITLES;
             var name = searcher.RemoveKeywords(rawName, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase).Split(' ');
 
             if (Char.IsUpper(name.First()[0]) && Char.IsUpper(name.Last()[0]))

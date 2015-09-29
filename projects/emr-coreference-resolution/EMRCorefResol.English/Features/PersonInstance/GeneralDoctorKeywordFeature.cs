@@ -13,7 +13,7 @@ namespace HCMUT.EMRCorefResol.English.Features
         public GeneralDoctorKeywordFeature(PersonInstance instance)
             : base("GeneralDoctor-Keyword", 2, 0)
         {
-            var seacher = new AhoCorasickKeywordDictionary("general-doctor.txt");
+            var seacher = KeywordService.Instance.GENERAL_DOCTOR;
 
             if (seacher.Match(instance.Concept.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
             {

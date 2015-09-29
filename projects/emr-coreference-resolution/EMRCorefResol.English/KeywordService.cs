@@ -13,7 +13,7 @@ namespace HCMUT.EMRCorefResol.English
     {
         public static KeywordService Instance { get; private set; } = null;
 
-        private const string KWPath = "Keywords";
+        private const string KWPath = @"..\..\..\EMRCorefResol.English\Keywords";
 
         public IKeywordDictionary I_KEYWORDS { get; }
             = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "i.txt")));
@@ -37,13 +37,34 @@ namespace HCMUT.EMRCorefResol.English
             = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "doctors.txt")));
 
         public IKeywordDictionary GENERAL_DOCTOR { get; }
-            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "general-doctors.txt")));
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "general-doctor.txt")));
 
         public IKeywordDictionary PATIENT_KEYWORDS { get; }
             = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "patients.txt")));
 
         public IKeywordDictionary RELATIVES { get; }
             = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "relatives.txt")));
+
+        public IKeywordDictionary DEPARTMENT_KEYWORDS { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "department.txt")));
+
+        public IKeywordDictionary FEMALE_NAMES { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "female-names.txt")));
+
+        public IKeywordDictionary FEMALE_TITLES { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "female-titles.txt")));
+
+        public IKeywordDictionary MALE_NAMES { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "male-names.txt")));
+
+        public IKeywordDictionary MALE_TITLES { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "male-titles.txt")));
+
+        public IKeywordDictionary GENERAL_DEPARTMENT { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "general-department.txt")));
+
+        public IKeywordDictionary GENERAL_TITLES { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "general-titles.txt")));
 
         private KeywordService() { }
 

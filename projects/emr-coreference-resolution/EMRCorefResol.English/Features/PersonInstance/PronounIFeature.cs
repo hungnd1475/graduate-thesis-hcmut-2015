@@ -13,7 +13,7 @@ namespace HCMUT.EMRCorefResol.English.Features
         public PronounIFeature(PersonInstance instance)
             : base("Prounoun-I", 2, 0)
         {
-            var kw_searcher = new AhoCorasickKeywordDictionary("i.txt");
+            var kw_searcher = KeywordService.Instance.I_KEYWORDS;
             var exist = kw_searcher.Match(instance.Concept.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
 
             if (exist)

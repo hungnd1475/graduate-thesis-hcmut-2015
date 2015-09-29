@@ -26,6 +26,11 @@ namespace HCMUT.EMRCorefResol.English
             }
         }
 
+        public EnglishTrainingFeatureExtractor()
+        {
+            KeywordService.LoadKeywords();
+        }
+
         public IFeatureVector Extract(PronounInstance instance)
         {
             var corefChain = _groundTruth.FindChainContains(instance.Concept);

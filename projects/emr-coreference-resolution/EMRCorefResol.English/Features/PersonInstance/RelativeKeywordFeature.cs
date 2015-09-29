@@ -13,7 +13,7 @@ namespace HCMUT.EMRCorefResol.English.Features
         public RelativeKeywordFeature(PersonInstance instance)
             : base("Relative-Keyword", 2, 0)
         {
-            var kw_searcher = new AhoCorasickKeywordDictionary("relatives.txt");
+            var kw_searcher = KeywordService.Instance.RELATIVES;
             var exist = kw_searcher.Match(instance.Concept.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
 
             if (exist)

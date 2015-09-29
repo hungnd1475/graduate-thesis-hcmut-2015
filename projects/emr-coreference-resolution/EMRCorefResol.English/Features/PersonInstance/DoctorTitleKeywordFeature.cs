@@ -14,7 +14,7 @@ namespace HCMUT.EMRCorefResol.English.Features
         public DoctorTitleKeywordFeature(PersonInstance instance)
             : base("DoctorTitle-Keyword", 2, 0)
         {
-            var seacher = new AhoCorasickKeywordDictionary("doctor-titles.txt");
+            var seacher = KeywordService.Instance.DOCTOR_TITLES;
 
             if (seacher.Match(instance.Concept.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
             {

@@ -13,7 +13,7 @@ namespace HCMUT.EMRCorefResol.English.Features
         public GeneralDepartmentKeywordFeature(PersonInstance instance)
             : base("GeneralDepartment-Keyword", 2, 0)
         {
-            var searcher = new AhoCorasickKeywordDictionary("general-department.txt");
+            var searcher = KeywordService.Instance.GENERAL_DEPARTMENT;
             
             if(searcher.Match(instance.Concept.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
             {

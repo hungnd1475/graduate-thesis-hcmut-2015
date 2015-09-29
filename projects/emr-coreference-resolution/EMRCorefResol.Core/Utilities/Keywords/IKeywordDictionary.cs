@@ -11,6 +11,7 @@ namespace HCMUT.EMRCorefResol.Utilities
         bool Match(string s, KWSearchOptions options);
         string[] Search(string s, KWSearchOptions options);
         int[] SearchIndices(string s, KWSearchOptions options);
+        string RemoveKeywords(string s, KWSearchOptions options);
     }
 
     [Flags]

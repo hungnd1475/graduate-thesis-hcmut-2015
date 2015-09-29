@@ -11,7 +11,7 @@ namespace HCMUT.EMRCorefResol.Utilities
     /// <summary>
     /// DON'T USE THIS
     /// </summary>
-    public class RegexKeywordDictionary : IKeywordDictionary
+    public class RegexKeywordDictionary : IIndexedEnumerable<string>
     {
         private IEnumerable<string> _kwList;
 

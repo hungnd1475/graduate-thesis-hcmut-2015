@@ -13,7 +13,7 @@ namespace HCMUT.EMRCorefResol.English.Features
         public PatientKeywordFeature(PersonInstance instance)
             : base("Patient-Keyword", 2, 0)
         {
-            var kw_searcher = new AhoCorasickKeywordDictionary("patients.txt");
+            var kw_searcher = KeywordService.Instance.PATIENT_KEYWORDS;
             var exist = kw_searcher.Match(instance.Concept.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
 
             if (exist)

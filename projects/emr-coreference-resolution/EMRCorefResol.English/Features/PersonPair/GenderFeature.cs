@@ -52,14 +52,14 @@ namespace HCMUT.EMRCorefResol.English.Features
 
         private int containKeyword(string name)
         {
-            var searcher = new AhoCorasickKeywordDictionary("male-titles.txt");
+            var searcher = KeywordService.Instance.MALE_TITLES;
             if(searcher.Match(name, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
             {
                 return 0;
             }
 
-            searcher = new Utilities.AhoCorasickKeywordDictionary("female-titles.txt");
-            if(searcher.Match(name, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
+            searcher = KeywordService.Instance.FEMALE_TITLES;
+            if (searcher.Match(name, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
             {
                 return 1;
             }
@@ -95,14 +95,14 @@ namespace HCMUT.EMRCorefResol.English.Features
 
         private int getGender(string name)
         {
-            var searcher = new AhoCorasickKeywordDictionary("male-names.txt");
+            var searcher = KeywordService.Instance.MALE_NAMES;
             if(searcher.Match(name, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
             {
                 return 0;
             }
 
-            searcher = new AhoCorasickKeywordDictionary("female-names.txt");
-            if(searcher.Match(name, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
+            searcher = KeywordService.Instance.FEMALE_NAMES;
+            if (searcher.Match(name, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
             {
                 return 1;
             }

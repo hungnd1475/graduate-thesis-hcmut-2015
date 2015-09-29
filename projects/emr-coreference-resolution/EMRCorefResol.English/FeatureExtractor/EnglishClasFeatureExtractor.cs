@@ -23,6 +23,7 @@ namespace HCMUT.EMRCorefResol.English
         public EnglishClasFeatureExtractor(IClassifier classifier)
         {
             _patientDeterminer = new ClasPatientDeterminer(classifier, this);
+            KeywordService.LoadKeywords();
         }
 
         public IFeatureVector Extract(TestPair instance)

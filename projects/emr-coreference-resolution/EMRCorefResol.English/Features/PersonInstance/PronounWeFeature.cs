@@ -13,7 +13,7 @@ namespace HCMUT.EMRCorefResol.English.Features
         public PronounWeFeature(PersonInstance instance)
             :base("Pronoun-We", 2, 0)
         {
-            var kw_searcher = new AhoCorasickKeywordDictionary("we.txt");
+            var kw_searcher = KeywordService.Instance.WE_KEYWORDS;
             var exist = kw_searcher.Match(instance.Concept.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
 
             if (exist)
