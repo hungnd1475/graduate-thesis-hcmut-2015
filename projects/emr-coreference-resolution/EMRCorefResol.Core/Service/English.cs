@@ -12,35 +12,28 @@ namespace HCMUT.EMRCorefResol.Service
     {
         private const string API_URL = "http://localhost:8181/api/";
 
-        public static int getGender(string name)
+        public static string[] getPOS(string term)
         {
             HttpUtil http = new HttpUtil();
-            var url = API_URL + "nlp/gender?name=" + name;
+            var url = API_URL + "nlp/pos?term=" + term;
 
             CustomResponse res = http.get(url);
 
             if (!res.success)
             {
-                return 2;
+                return null;
             }
 
-            switch ((string)res.data)
-            {
-                case "male":
-                    return 0;
-                case "female":
-                    return 1;
-                case "unknow":
-                    return 2;
-                default:
-                    return 2;
-            }
+            return ((System.Collections.IEnumerable)res.data)
+              .Cast<object>()
+              .Select(x => x.ToString())
+              .ToArray();
         }
 
-        public static string[] getPOS(string term)
+        public static string[] getTokens(string term)
         {
             HttpUtil http = new HttpUtil();
-            var url = API_URL + "nlp/pos?term=" + term;
+            var url = API_URL + "nlp/token?term=" + term;
 
             CustomResponse res = http.get(url);
 

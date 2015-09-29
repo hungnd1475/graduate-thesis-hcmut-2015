@@ -33,14 +33,14 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
             //testPreprocessor();
             //testCorefChain();
-            testFeatures();
+            //testFeatures();
             //testReadEMR();
             //var path = testTrainer();
             //testClassifier(path);
             //testTrainer();
             //testLoadClassifier();
             //testService();
-            //var path = testTrainManyEMR(20);
+            var path = testTrainManyEMR(20);
             //testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", 10);
             //testClassifier(path, 1);
             //testAhoCorasick();
@@ -163,7 +163,6 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
         static void testService()
         {
-            Console.WriteLine("Annie gender: " + Service.English.getGender("annie"));
             Console.WriteLine(string.Join(" ", Service.English.getPOS("Annie goes to school")));
             Console.WriteLine(Service.English.getSyns("table")[1]);
         }

@@ -10,13 +10,13 @@ namespace HCMUT.EMRCorefResol.English.Features
     class PronounIndexFeature : Feature
     {
         public PronounIndexFeature(PronounInstance instance)
-            : base("Pronoun-Index", 18, 0)
+            : base("Pronoun-Index", 19, 0)
         {
             var searcher = KeywordService.Instance.PRONOUNS;
-            var index = searcher.SearchIndices(instance.Concept.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord)[0];
-            if(index >=0 && index <= 17)
+            var res = searcher.SearchIndices(instance.Concept.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord);
+            if(res.Length > 0 && res[0]>=0 && res[0] <=17)
             {
-                SetCategoricalValue(index + 1);
+                SetCategoricalValue(res[0] + 1);
             }
         }
     }

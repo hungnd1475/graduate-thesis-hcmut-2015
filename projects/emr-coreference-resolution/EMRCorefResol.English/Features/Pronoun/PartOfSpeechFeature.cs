@@ -13,6 +13,11 @@ namespace HCMUT.EMRCorefResol.English.Features
         {
             var tagged = Service.English.getPOS(instance.Concept.Lexicon);
 
+            if(tagged == null)
+            {
+                SetCategoricalValue(3);
+            }
+
             switch (tagged[0].Split('/')[1])
             {
                 case "DT":
