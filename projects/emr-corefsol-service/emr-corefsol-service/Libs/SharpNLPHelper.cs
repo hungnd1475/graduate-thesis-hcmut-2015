@@ -25,6 +25,10 @@ namespace emr_corefsol_service.Libs
 
         public string[] tokenize(string term)
         {
+            if (term==null)
+            {
+                return null;
+            }
             return _tokenizer.Tokenize(term);
         }
 

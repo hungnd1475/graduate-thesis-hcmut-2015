@@ -14,7 +14,7 @@ namespace HCMUT.EMRCorefResol.English.Features
             :base("Name-Feature", 2, 0)
         {
             var line = EMRExtensions.GetLine(emr, instance.Concept.Begin.Line);
-            var tokens = Service.English.getTokens(line);
+            var tokens = line.Replace("  ", " ").Split(' ');
 
             if (tokens == null)
             {
@@ -28,13 +28,13 @@ namespace HCMUT.EMRCorefResol.English.Features
 
             var searcher = KeywordService.Instance.GENERAL_TITLES;
             var name = searcher.RemoveKeywords(rawName, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
-            var nameArr = Service.English.getTokens(name);
 
-            if(nameArr == null)
+            if(name == null || name.Length < 1)
             {
                 return;
             }
 
+            var nameArr = name.Split(' ');
             if (Char.IsUpper(nameArr.First()[0]) && Char.IsUpper(nameArr.Last()[0]))
             {
                 SetCategoricalValue(1);
