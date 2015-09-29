@@ -197,7 +197,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
                     {
                         string[] temp = list[i].Split(':');
                         SVMNode node = new SVMNode();
-                        node.Index = System.Convert.ToInt32(temp[0].Trim());
+                        node.Index = Convert.ToInt32(temp[0].Trim());
                         node.Value = System.Convert.ToDouble(temp[1].Trim(), provider);
                         nodes.Add(node);
                     }

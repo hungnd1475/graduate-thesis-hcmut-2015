@@ -40,22 +40,22 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
 
         public double Classify(ProblemPair instance, IFeatureVector f)
         {
-            return ClassifyInternal(instance, f);
+            return ClassifyInstance(instance, f);
         }
 
         public double Classify(TestPair instance, IFeatureVector f)
         {
-            return ClassifyInternal(instance, f);
+            return ClassifyInstance(instance, f);
         }
 
         public double Classify(PronounInstance instance, IFeatureVector f)
         {
-            return ClassifyInternal(instance, f);
+            return ClassifyInstance(instance, f);
         }
 
         public double Classify(TreatmentPair instance, IFeatureVector f)
         {
-            return ClassifyInternal(instance, f);
+            return ClassifyInstance(instance, f);
         }
 
         public double Classify(PersonInstance instance, IFeatureVector f)
@@ -64,7 +64,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             {
                 if (!_cache.ContainsKey(instance.Concept))
                 {
-                    _cache.Add(instance.Concept, ClassifyInternal(instance, f));
+                    _cache.Add(instance.Concept, ClassifyInstance(instance, f));
                 }
             }
             return _cache[instance.Concept];
@@ -72,7 +72,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
 
         public double Classify(PersonPair instance, IFeatureVector f)
         {
-            return ClassifyInternal(instance, f); ;
+            return ClassifyInstance(instance, f); ;
         }
 
         public double[] Classify<T>(ClasProblem problem) where T : IClasInstance
@@ -122,7 +122,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             return target;
         }
 
-        private double ClassifyInternal(IClasInstance instance, IFeatureVector fVector)
+        private double ClassifyInstance(IClasInstance instance, IFeatureVector fVector)
         {
             var instanceType = instance.GetType();
             var sfPath = Path.Combine(_modelsDir, $"{instanceType.Name}.sf");
