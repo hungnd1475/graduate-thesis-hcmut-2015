@@ -14,7 +14,7 @@ namespace HCMUT.EMRCorefResol.English.Features
             :base("Name-Feature", 2, 0)
         {
             var line = EMRExtensions.GetLine(emr, instance.Concept.Begin.Line);
-            var tokens = line.Replace("  ", " ").Split(' ');
+            var tokens = line.Replace("  ", " ").Replace("\r", "").Split(' ');
 
             if (tokens == null)
             {
