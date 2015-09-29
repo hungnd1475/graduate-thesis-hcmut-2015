@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -7,25 +8,19 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol.English.Features
 {
+    using Utilities;
     class DepartmentKeywordFeature : Feature
     {
         public DepartmentKeywordFeature(PersonInstance instance)
             : base("Department-Keyword", 2, 0)
         {
-            string[] stopWords = { "anesthesiology", "electrophysiology" };
-            foreach (string stopWord in stopWords)
-            {
-                if (checkContain(instance.Concept.Lexicon.ToLower(), stopWord))
-                {
-                    SetCategoricalValue(1);
-                    return;
-                }
-            }
-        }
+            var kw_searcher = new AhoCorasickKeywordDictionary("department.txt");
+            var exist = kw_searcher.Match(instance.Concept.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
 
-        private bool checkContain(string s1, string s2)
-        {
-            return Regex.IsMatch(s1, string.Format(@"\b{0}\b", Regex.Escape(s2)));
+            if (exist)
+            {
+                SetCategoricalValue(1);
+            }
         }
     }
 }

@@ -15,17 +15,29 @@ using System.Text.RegularExpressions;
 
 namespace emr_corefsol_service.Controllers
 {
+    using Libs;
     public class NLPController : ApiController
     {
+        private readonly INLPHelper _helper = null;
+
+        public NLPController()
+        {
+            _helper = new OpenNLPHelper(HostingEnvironment.MapPath(@"~\app_data\libs\OpenNLP\"));
+            //_helper = new SharpNLPHelper(HostingEnvironment.MapPath(@"~\app_data\libs\sharpNLP\Models\"));
+            //_helper = new StanfordNLPHelper(HostingEnvironment.MapPath(@"~\app_data\libs\StanfordNLP"));
+        }
+
+
         /// <summary>
         /// GET Gramma Part of Speech from term
         /// </summary>
         /// <param name="term">Term or sentence to tag</param>
         /// <returns></returns>
+        /// 
         [ActionName("POS")]
         public CustomResponse GetPOS(string term)
         {
-            var pos = Libs.OpenNLPHelper.getPOS(term);
+            var pos = _helper.getPOS(term);
 
             if (pos == null)
             {
@@ -36,26 +48,21 @@ namespace emr_corefsol_service.Controllers
         }
 
         /// <summary>
-        /// GET Gender from name
+        /// GET Tokens from sentence
         /// </summary>
-        /// <param name="name">Name of person</param>
-        /// <returns>male/female/unknow</returns>
-        [ActionName("Gender")]
-        public CustomResponse GetGender(string name)
+        /// <param name="term">Sentence need to be tokenized</param>
+        /// <returns></returns>
+        [ActionName("Token")]
+        public CustomResponse GetTokens(string term)
         {
-            if(name==null || name.Length <= 0)
-            {
-                return new CustomResponse(false, null, "No name submitted");
-            }
+            var tokens = _helper.tokenize(term);
 
-            var gender = Libs.StanfordNLPHelper.getGender(name);
-
-            if (gender == null)
+            if(tokens == null)
             {
                 return new CustomResponse(false, null, "Cannot tokenize");
             }
 
-            return new CustomResponse(true, gender, null);
+            return new CustomResponse(true, tokens, null);
         }
     }
 }

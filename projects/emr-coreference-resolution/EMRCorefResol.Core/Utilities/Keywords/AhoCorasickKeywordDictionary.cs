@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol.Utilities
@@ -28,6 +30,15 @@ namespace HCMUT.EMRCorefResol.Utilities
 
         public AhoCorasickKeywordDictionary(IEnumerable<string> keywords)
         {
+            _kwList = new List<string>(keywords);
+            BuildTree();
+            BuildACAutomaton();
+        }
+
+        public AhoCorasickKeywordDictionary(string fileName)
+        {
+            var keywordRoot = @"..\..\..\EMRCorefResol.English\Keywords\";
+            var keywords = File.ReadAllLines(keywordRoot + fileName).AsEnumerable();
             _kwList = new List<string>(keywords);
             BuildTree();
             BuildACAutomaton();
@@ -168,6 +179,18 @@ namespace HCMUT.EMRCorefResol.Utilities
             });
 
             return outIndices.ToArray();
+        }
+
+        public string RemoveKeywords(string s, KWSearchOptions options)
+        {
+            var keywords = Search(s, options);
+
+            string pattern = options.HasFlag(KWSearchOptions.WholeWord) ? 
+                string.Join("|", keywords.Select(x => @"(^|\s)" + Regex.Escape(x) + @"(\s|$)")) :
+                string.Join("|", keywords.Select(x => Regex.Escape(x)));
+
+
+            return Regex.Replace(s, pattern, "", options.HasFlag(KWSearchOptions.IgnoreCase) ? RegexOptions.IgnoreCase : RegexOptions.None);
         }
 
         private void SearchWithAction(string s, KWSearchOptions option, Func<int, TrieNode, bool> processResult)

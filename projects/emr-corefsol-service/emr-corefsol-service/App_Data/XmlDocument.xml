@@ -487,13 +487,14 @@
             </summary>
             <param name="term">Term or sentence to tag</param>
             <returns></returns>
+            
         </member>
-        <member name="M:emr_corefsol_service.Controllers.NLPController.GetGender(System.String)">
+        <member name="M:emr_corefsol_service.Controllers.NLPController.GetTokens(System.String)">
             <summary>
-            GET Gender from name
+            GET Tokens from sentence
             </summary>
-            <param name="name">Name of person</param>
-            <returns>male/female/unknow</returns>
+            <param name="term">Sentence need to be tokenized</param>
+            <returns></returns>
         </member>
         <member name="M:emr_corefsol_service.Controllers.DictionaryController.GetSynsets(System.String)">
             <summary>

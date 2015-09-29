@@ -373,6 +373,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Libs\Interface\IDictionaryHelper.cs" />
+    <Compile Include="Libs\Interface\INLPHelper.cs" />
     <Compile Include="Libs\OpenNLPHelper.cs" />
     <Compile Include="Libs\SharpNLPHelper.cs" />
     <Compile Include="Libs\StanfordNLPHelper.cs" />

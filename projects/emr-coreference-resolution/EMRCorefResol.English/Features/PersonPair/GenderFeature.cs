@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol.English.Features
 {
+    using Utilities;
     class GenderFeature : Feature
     {
         public GenderFeature(PersonPair instance, EMR emr)
@@ -39,7 +41,7 @@ namespace HCMUT.EMRCorefResol.English.Features
                 return appeared;
             }
 
-            var fromDB = Service.English.getGender(name);
+            var fromDB = getGender(name);
             if(fromDB != 2)
             {
                 return fromDB;
@@ -50,22 +52,16 @@ namespace HCMUT.EMRCorefResol.English.Features
 
         private int containKeyword(string name)
         {
-            string[] male = { "mr", "mr.", "him", "his", "he" };
-            string[] female = { "ms", "ms.", "mrs", "mrs.", "her", "she" };
-            foreach (string m in male)
+            var searcher = new AhoCorasickKeywordDictionary("male-titles.txt");
+            if(searcher.Match(name, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
             {
-                if (checkContain(name, m))
-                {
-                    return 0;
-                }
+                return 0;
             }
 
-            foreach (string f in female)
+            searcher = new Utilities.AhoCorasickKeywordDictionary("female-titles.txt");
+            if(searcher.Match(name, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
             {
-                if (checkContain(name, f))
-                {
-                    return 1;
-                }
+                return 1;
             }
 
             return 2;
@@ -97,9 +93,21 @@ namespace HCMUT.EMRCorefResol.English.Features
             return 2;
         }
 
-        private bool checkContain(string s1, string s2)
+        private int getGender(string name)
         {
-            return Regex.IsMatch(s1, string.Format(@"\b{0}\b", Regex.Escape(s2)));
+            var searcher = new AhoCorasickKeywordDictionary("male-names.txt");
+            if(searcher.Match(name, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
+            {
+                return 0;
+            }
+
+            searcher = new AhoCorasickKeywordDictionary("female-names.txt");
+            if(searcher.Match(name, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
+            {
+                return 1;
+            }
+
+            return 2;
         }
     }
 }

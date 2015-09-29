@@ -14,13 +14,15 @@ using edu.stanford.nlp.ie.machinereading.structure;
 
 namespace emr_corefsol_service.Libs
 {
-    public class StanfordNLPHelper
+    public class StanfordNLPHelper : INLPHelper
     {
-        private static readonly string modelsURL = HostingEnvironment.MapPath(@"~\app_data\libs\StanfordNLP");
-        private static readonly StanfordCoreNLP pipeline = null;
+        private readonly string modelsURL = null;
+        private readonly StanfordCoreNLP pipeline = null;
 
-        static StanfordNLPHelper()
+        public StanfordNLPHelper(string rootPath)
         {
+            modelsURL = rootPath;
+
             var props = new Properties();
             props.setProperty("annotators", "tokenize, ssplit, pos, gender");
 
@@ -30,7 +32,7 @@ namespace emr_corefsol_service.Libs
             Directory.SetCurrentDirectory(curDir);
         }
 
-        public static List<string> getPOS(string term)
+        public string[] getPOS(string term)
         {
             Annotation document = new Annotation(term);
             pipeline.annotate(document);
@@ -49,10 +51,10 @@ namespace emr_corefsol_service.Libs
                 res.Add(item);
             }
 
-            return res;
+            return res.ToArray();
         }
 
-        public static string getGender(string name)
+        public string getGender(string name)
         {
             Annotation document = new Annotation(name.ToUpper());
             pipeline.annotate(document);
@@ -76,7 +78,27 @@ namespace emr_corefsol_service.Libs
             return "unknow";
         }
 
-        private static ArrayList getSentences(Annotation document)
+        public string[] tokenize(string term)
+        {
+            Annotation document = new Annotation(term);
+            pipeline.annotate(document);
+            ArrayList tokens = getTokens(document);
+
+            if(tokens == null)
+            {
+                return null;
+            }
+
+            List<string> res = new List<string>();
+            foreach(CoreLabel token in tokens)
+            {
+                res.Add(token.value());
+            }
+
+            return res.ToArray();
+        }
+
+        private ArrayList getSentences(Annotation document)
         {
             var sentences = document.get(typeof(CoreAnnotations.SentencesAnnotation));
             if(sentences == null)
@@ -87,7 +109,7 @@ namespace emr_corefsol_service.Libs
             return sentences as ArrayList;
         }
 
-        private static ArrayList getTokens(Annotation document)
+        private ArrayList getTokens(Annotation document)
         {
             var tokens = document.get(typeof(CoreAnnotations.TokensAnnotation));
             if(tokens == null)

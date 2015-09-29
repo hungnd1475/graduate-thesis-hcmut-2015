@@ -8,11 +8,19 @@ using System.IO;
 
 using emr_corefsol_service.Response;
 using emr_corefsol_service.Libs;
+using System.Web.Hosting;
 
 namespace emr_corefsol_service.Controllers
 {
     public class DictionaryController : ApiController
     {
+        private IDictionaryHelper _helper = null;
+
+        public DictionaryController()
+        {
+            _helper = new WordNetHelper(HostingEnvironment.MapPath(@"~\app_data\libs\wordnet\wordnetdb"));
+        }
+
         /// <summary>
         /// GET WordNet Synset of a word
         /// </summary>
@@ -23,7 +31,7 @@ namespace emr_corefsol_service.Controllers
         {
             if(term.Length > 0)
             {
-                var defs = WordNetHelper.getSynSets(term);
+                var defs = _helper.getSynSets(term);
                 return new CustomResponse(true, defs, null);
             } else
             {

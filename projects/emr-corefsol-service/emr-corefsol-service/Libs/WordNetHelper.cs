@@ -7,20 +7,22 @@ using System.Web.Hosting;
 
 namespace emr_corefsol_service.Libs
 {
-    public class WordNetHelper
+    public class WordNetHelper : IDictionaryHelper
     {
-        private static readonly string dbUrl = HostingEnvironment.MapPath(@"~\app_data\libs\wordnet\wordnetdb");
-        private static readonly WordNetEngine wEngine = new WordNetEngine(dbUrl, true);
-        private static readonly WordNetSimilarityModel wSimilarity = new WordNetSimilarityModel(wEngine);
+        private readonly string dbUrl = null;
+        private readonly WordNetEngine _wEngine = null;
+        private readonly WordNetSimilarityModel _wSimilarity = null;
 
-        static WordNetHelper()
+        public WordNetHelper(string rootPath)
         {
-
+            dbUrl = rootPath;
+            _wEngine = new WordNetEngine(dbUrl, true);
+            _wSimilarity = new WordNetSimilarityModel(_wEngine);
         }
 
-        public static Models.Definition[] getSynSets(string term)
+        public Models.Definition[] getSynSets(string term)
         {
-            var t = wEngine.GetSynSets(term);
+            var t = _wEngine.GetSynSets(term);
             Models.Definition[] res = new Models.Definition[t.Count];
 
             int i = 0;

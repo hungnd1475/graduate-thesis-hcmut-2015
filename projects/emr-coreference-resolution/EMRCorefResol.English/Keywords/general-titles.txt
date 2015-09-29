@@ -110,3 +110,9 @@ phd
 phd.
 ph.d.
 ph.d
+ms
+ms.
+mrs
+mrs.
+mr
+mr.

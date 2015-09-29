@@ -10,14 +10,16 @@ using java.io;
 
 namespace emr_corefsol_service.Libs
 {
-    public class OpenNLPHelper
+    public class OpenNLPHelper : INLPHelper
     {
-        private static string modelsRoot = HostingEnvironment.MapPath(@"~\app_data\libs\OpenNLP\");
-        private static POSTaggerME _tagger = null;
-        private static TokenizerME _tokenizer = null;
+        private string modelsRoot = null;
+        private POSTaggerME _tagger = null;
+        private TokenizerME _tokenizer = null;
 
-        static OpenNLPHelper()
+        public OpenNLPHelper(string rootPath)
         {
+            modelsRoot = rootPath;
+
             var posModel = new POSModel(new File(modelsRoot + "en-pos-maxent.bin"));
             _tagger = new POSTaggerME(posModel);
 
@@ -25,7 +27,12 @@ namespace emr_corefsol_service.Libs
             _tokenizer = new TokenizerME(tokModel);
         }
 
-        public static string[] getPOS(string term)
+        public string[] tokenize(string term)
+        {
+            return _tokenizer.tokenize(term);
+        }
+
+        public string[] getPOS(string term)
         {
             var tokens = _tokenizer.tokenize(term);
 
