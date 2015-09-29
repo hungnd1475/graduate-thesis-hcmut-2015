@@ -11,7 +11,7 @@ namespace HCMUT.EMRCorefResol.Utilities
     /// <summary>
     /// DON'T USE THIS
     /// </summary>
-    public class RegexKeywordDictionary : IIndexedEnumerable<string>
+    public class RegexKeywordDictionary : IKeywordDictionary
     {
         private IEnumerable<string> _kwList;
 
@@ -64,6 +64,11 @@ namespace HCMUT.EMRCorefResol.Utilities
         }
 
         public int[] SearchIndices(string s, KWSearchOptions options)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string RemoveKeywords(string s, KWSearchOptions options)
         {
             throw new NotImplementedException();
         }
