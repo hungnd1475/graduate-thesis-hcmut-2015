@@ -21,6 +21,9 @@ namespace HCMUT.EMRCorefResol.English
         public IKeywordDictionary YOU_KEYWORDS { get; }
             = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "you.txt")));
 
+        public IKeywordDictionary HESHE_KEYWORDS { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "heshe.txt")));
+
         public IKeywordDictionary WE_KEYWORDS { get; }
             = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "we.txt")));
 

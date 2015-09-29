@@ -86,6 +86,7 @@
     <Compile Include="Features\PersonInstance\GeneralDoctorKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\NameFeature.cs" />
     <Compile Include="Features\PersonInstance\PatientKeywordFeature.cs" />
+    <Compile Include="Features\PersonInstance\PronounHeSheFeature.cs" />
     <Compile Include="Features\PersonInstance\PronounIFeature.cs" />
     <Compile Include="Features\PersonInstance\PronounTheyFeature.cs" />
     <Compile Include="Features\PersonInstance\PronounWeFeature.cs" />
@@ -149,6 +150,7 @@
     <Content Include="Keywords\general-department.txt" />
     <Content Include="Keywords\general-doctor.txt" />
     <Content Include="Keywords\general-titles.txt" />
+    <Content Include="Keywords\heshe.txt" />
     <Content Include="Keywords\i.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
