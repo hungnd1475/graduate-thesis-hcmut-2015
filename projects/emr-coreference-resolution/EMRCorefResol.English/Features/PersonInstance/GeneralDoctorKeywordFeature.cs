@@ -7,25 +7,18 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol.English.Features
 {
+    using Utilities;
     class GeneralDoctorKeywordFeature : Feature
     {
         public GeneralDoctorKeywordFeature(PersonInstance instance)
             : base("GeneralDoctor-Keyword", 2, 0)
         {
-            string[] stopWords = { "doctor", "pcp", "author", "dict", "attend", "provider" };
-            foreach (string stopWord in stopWords)
-            {
-                if (checkContain(instance.Concept.Lexicon.ToLower(), stopWord))
-                {
-                    SetCategoricalValue(1);
-                    return;
-                }
-            }
-        }
+            var seacher = new AhoCorasickKeywordDictionary("general-doctor.txt");
 
-        private bool checkContain(string s1, string s2)
-        {
-            return Regex.IsMatch(s1, string.Format(@"\b{0}\b", Regex.Escape(s2)));
+            if (seacher.Match(instance.Concept.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
+            {
+                SetCategoricalValue(1);
+            }
         }
     }
 }

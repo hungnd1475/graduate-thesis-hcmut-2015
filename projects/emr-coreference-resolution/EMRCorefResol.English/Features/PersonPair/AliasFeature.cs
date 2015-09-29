@@ -17,7 +17,8 @@ namespace HCMUT.EMRCorefResol.English.Features
         {
             var ana = getAbbre(instance.Anaphora.Lexicon);
             var ante = getAbbre(instance.Antecedent.Lexicon);
-            if (instance.Anaphora.Lexicon.Equals(ante) || instance.Antecedent.Lexicon.Equals(ana))
+            if (instance.Anaphora.Lexicon.Equals(ante, StringComparison.InvariantCultureIgnoreCase) ||
+                instance.Antecedent.Lexicon.Equals(ana, StringComparison.InvariantCultureIgnoreCase))
             {
                 SetCategoricalValue(1);
             }

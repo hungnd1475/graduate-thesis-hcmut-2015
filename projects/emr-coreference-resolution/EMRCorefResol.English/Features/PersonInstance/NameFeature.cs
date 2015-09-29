@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol.English.Features
 {
+    using System.Text.RegularExpressions;
+    using Utilities;
     class NameFeature : Feature
     {
         public NameFeature(PersonInstance instance, EMR emr)
@@ -15,35 +17,15 @@ namespace HCMUT.EMRCorefResol.English.Features
             var rawNameArr = line.Skip(instance.Concept.Begin.WordIndex)
                 .Take(instance.Concept.End.WordIndex - instance.Concept.Begin.WordIndex + 1)
                 .ToArray();
+            var rawName = string.Join(" ", rawNameArr);
 
-            var nameArr = removeStopWords(string.Join(" ", rawNameArr)).Split(' ');
+            var searcher = new AhoCorasickKeywordDictionary("general-titles.txt");
+            var name = searcher.RemoveKeywords(rawName, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase).Split(' ');
 
-            if(Char.IsUpper(nameArr.First()[0]) && Char.IsUpper(nameArr.Last()[0]))
+            if (Char.IsUpper(name.First()[0]) && Char.IsUpper(name.Last()[0]))
             {
                 SetCategoricalValue(1);
             }
-
-            int x = 1 + 1;
-        }
-
-        private string removeStopWords(string raw)
-        {
-            string[] stopwords = { "mr", "mr.", "mrs", "mrs.", "ms", "ms.", "dr", "dr.",
-                                   "md", "m.d", "m.d.", "md.",
-                                   "phd", "phd.", "prof", "prof."
-                                };
-
-            string[] nameArr = raw.ToLower().Split(' ');
-
-            List<string> tmp = new List<string>();
-            for (int i = 0; i < nameArr.Length; i++)
-            {
-                if (!stopwords.Contains(nameArr[i]))
-                {
-                    tmp.Add(nameArr[i].Replace("'", "").Replace("\"", "").Replace(":", ""));
-                }
-            }
-            return String.Join(" ", tmp);
         }
     }
 }

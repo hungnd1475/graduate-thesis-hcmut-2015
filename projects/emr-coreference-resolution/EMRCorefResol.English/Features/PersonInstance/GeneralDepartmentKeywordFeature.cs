@@ -7,25 +7,18 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol.English.Features
 {
+    using Utilities;
     class GeneralDepartmentKeywordFeature : Feature
     {
         public GeneralDepartmentKeywordFeature(PersonInstance instance)
             : base("GeneralDepartment-Keyword", 2, 0)
         {
-            string[] stopWords = { "team", "service" };
-            foreach (string stopWord in stopWords)
+            var searcher = new AhoCorasickKeywordDictionary("general-department.txt");
+            
+            if(searcher.Match(instance.Concept.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
             {
-                if (checkContain(instance.Concept.Lexicon.ToLower(), stopWord))
-                {
-                    SetCategoricalValue(1);
-                    return;
-                }
+                SetCategoricalValue(1);
             }
-        }
-
-        private bool checkContain(string s1, string s2)
-        {
-            return Regex.IsMatch(s1, string.Format(@"\b{0}\b", Regex.Escape(s2)));
         }
     }
 }

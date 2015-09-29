@@ -33,7 +33,7 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
             //testPreprocessor();
             //testCorefChain();
-            //testFeatures();
+            testFeatures();
             //testReadEMR();
             //var path = testTrainer();
             //testClassifier(path);
@@ -43,7 +43,7 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             //var path = testTrainManyEMR(20);
             //testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", 10);
             //testClassifier(path, 1);
-            testAhoCorasick();
+            //testAhoCorasick();
 
             sw.Stop();
             Console.WriteLine($"Execution time: {sw.ElapsedMilliseconds}ms");
@@ -170,14 +170,9 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
         static void testAhoCorasick()
         {
-            var ac_kwd = new AhoCorasickKeywordDictionary(
-                "it", "they", "them", "that",
-                "which", "what", "who", "whom",
-                "whose", "all", "any", "most",
-                "some", "this", "that", "these",
-                "those");
+            var ac_kwd = new AhoCorasickKeywordDictionary("general-titles.txt");
 
-            var result = ac_kwd.Search("whoseasdsa thEy dont know anything theseee", KWSearchOptions.WholeWord);
+            var result = ac_kwd.Search("Dr mr. Ruby von der Smith", KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
             Console.WriteLine(string.Join(" ", result));
         }
 

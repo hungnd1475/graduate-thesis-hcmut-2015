@@ -141,12 +141,19 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Keywords\department.txt" />
     <Content Include="Keywords\doctors.txt" />
     <Content Include="Keywords\doctor-titles.txt" />
+    <Content Include="Keywords\female-names.txt" />
+    <Content Include="Keywords\female-titles.txt" />
+    <Content Include="Keywords\general-department.txt" />
     <Content Include="Keywords\general-doctor.txt" />
+    <Content Include="Keywords\general-titles.txt" />
     <Content Include="Keywords\i.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Keywords\male-names.txt" />
+    <Content Include="Keywords\male-titles.txt" />
     <Content Include="Keywords\patients.txt" />
     <Content Include="Keywords\pronouns.txt" />
     <Content Include="Keywords\relatives.txt" />
