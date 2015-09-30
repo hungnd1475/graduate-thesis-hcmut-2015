@@ -93,6 +93,7 @@
     <Compile Include="Features\PersonInstance\PronounYouFeature.cs" />
     <Compile Include="Features\PersonInstance\RelativeKeywordFeature.cs" />
     <Compile Include="Features\PersonPair\GenderFeature.cs" />
+    <Compile Include="Features\WhoFeatures.cs" />
     <Compile Include="Features\Pronoun\FirstNextMentionDistanceFeature.cs" />
     <Compile Include="Features\Pronoun\FirstPreviousMentionDistanceFeature.cs" />
     <Compile Include="Features\Pronoun\PronounIndexFeature.cs" />
