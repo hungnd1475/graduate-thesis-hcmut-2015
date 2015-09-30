@@ -69,6 +69,9 @@ namespace HCMUT.EMRCorefResol.English
         public IKeywordDictionary GENERAL_TITLES { get; }
             = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "general-titles.txt")));
 
+        public IKeywordDictionary SIGN_INFORMATION { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "sign-information.txt")));
+
         private KeywordService() { }
 
         private static IEnumerable<string> ReadKWFile(string filePath)
