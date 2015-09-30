@@ -26,13 +26,22 @@ namespace HCMUT.EMRCorefResol
 
             var instances = preprocessor.Process(emr);
             var features = new IFeatureVector[instances.Count];
+            int nDone = 0, iCount = instances.Count;
 
             GetLogger().WriteInfo("Extracting features...");
-            Parallel.For(0, instances.Count, k =>
+            Parallel.For(0, iCount, k =>
             {
+                lock (emr)
+                {
+                    nDone += 1;
+                    GetLogger().UpdateInfo($"{nDone}/{iCount}");
+                }
+
                 var i = instances[k];
                 features[k] = i.GetFeatures(fExtractor);
             });
+
+            GetLogger().WriteInfo("\n");
 
             for (int i = 0; i < features.Length; i++)
             {
@@ -41,7 +50,6 @@ namespace HCMUT.EMRCorefResol
                     instances[i].AddTo(pCreator, fVector);
             }
 
-            GetLogger().WriteInfo("Classifying...");
             classifier.Classify<PersonInstance>(pCreator.GetProblem<PersonInstance>());
 
             classifier.Classify<PersonPair>(pCreator.GetProblem<PersonPair>());

@@ -79,7 +79,7 @@ namespace HCMUT.EMRCorefResol
             var features = new IFeatureVector[instances.Count];
             int nDone = 0, iCount = instances.Count;
 
-            GetLogger().WriteInfo($"Extracting features...");
+            GetLogger().WriteInfo("Extracting features...");
             Parallel.For(0, iCount, k =>
             {
                 lock (emr)
