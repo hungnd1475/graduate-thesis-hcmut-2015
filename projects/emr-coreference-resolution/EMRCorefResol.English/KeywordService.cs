@@ -78,6 +78,9 @@ namespace HCMUT.EMRCorefResol.English
         public IKeywordDictionary PERSON_PRONOUN { get; }
             = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "person-pronoun.txt")));
 
+        public IKeywordDictionary NLINE_KEYWORD { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "nline-keywords.txt")));
+
         private KeywordService() { }
 
         private static IEnumerable<string> ReadKWFile(string filePath)

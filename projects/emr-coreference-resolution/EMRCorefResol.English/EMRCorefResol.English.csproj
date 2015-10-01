@@ -79,8 +79,9 @@
   <ItemGroup>
     <Compile Include="FeatureExtractor\ClasPatientDeterminer.cs" />
     <Compile Include="FeatureExtractor\EnglishClasFeatureExtractor.cs" />
-    <Compile Include="Features\PersonInstance\DepartmentKeywordFeature.cs" />
+    <Compile Include="Features\DepartmentKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\DoctorKeywordFeature.cs" />
+    <Compile Include="Features\PersonInstance\DoctorLastNLineFeature.cs" />
     <Compile Include="Features\PersonInstance\DoctorTitleKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\GeneralDepartmentKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\GeneralDoctorKeywordFeature.cs" />
@@ -163,6 +164,7 @@
     </Content>
     <Content Include="Keywords\male-names.txt" />
     <Content Include="Keywords\male-titles.txt" />
+    <Content Include="Keywords\nline-keywords.txt" />
     <Content Include="Keywords\patients.txt" />
     <Content Include="Keywords\person-pronoun.txt" />
     <Content Include="Keywords\pronouns.txt" />
