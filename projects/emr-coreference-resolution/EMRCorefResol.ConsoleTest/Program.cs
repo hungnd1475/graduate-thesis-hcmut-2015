@@ -171,7 +171,7 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
         {
             var ac_kwd = new AhoCorasickKeywordDictionary(new string[] { ",", ".", "'", "\"", "/", "\\" });
 
-            var result = ac_kwd.Search("mr. vuong anh tuan , md", KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
+            var result = ac_kwd.SearchKeywords("mr. vuong anh tuan , md", KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
             Console.WriteLine(string.Join(" ", result));
         }
 

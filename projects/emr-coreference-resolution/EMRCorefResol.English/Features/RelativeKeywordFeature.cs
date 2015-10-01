@@ -26,8 +26,8 @@ namespace HCMUT.EMRCorefResol.English.Features
             :base("Relative-Keyword", 2, 0)
         {
             var searcher = KeywordService.Instance.RELATIVES;
-            var key1 = searcher.Search(instance.Anaphora.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord);
-            var key2 = searcher.Search(instance.Antecedent.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord);
+            var key1 = searcher.SearchKeywords(instance.Anaphora.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord);
+            var key2 = searcher.SearchKeywords(instance.Antecedent.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord);
 
             if(key1.Intersect(key2).Count() > 0)
             {
