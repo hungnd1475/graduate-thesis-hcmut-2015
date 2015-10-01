@@ -20,7 +20,7 @@ namespace HCMUT.EMRCorefResol.English
             this[3] = new StringMatchFeature(instance);
             this[4] = new LevenshteinDistanceFeature(instance);
             this[5] = new AppositionFeature(instance, emr, this[2].GetContinuousValue());
-            this[6] = new NameMatchFeature(instance);
+            this[6] = new NameMatchFeature(instance, emr);
             this[7] = new IInformationFeature(instance);
             this[8] = new YouInformationFeature(instance);
             this[9] = new WeInformationFeature(instance);
