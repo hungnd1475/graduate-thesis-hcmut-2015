@@ -11,56 +11,29 @@ namespace HCMUT.EMRCorefResol.English.Features
         public WhoFeatures(PersonPair instance, EMR emr)
             :base("Who", 2, 0)
         {
-            var anaIndex = emr.Concepts.IndexOf(instance.Anaphora);
-            var anteIndex = emr.Concepts.IndexOf(instance.Antecedent);
+            var whoAna = new WhoFeatures(new PersonInstance(instance.Anaphora), emr);
+            var whoAnte = new WhoFeatures(new PersonInstance(instance.Antecedent), emr);
 
-            //Set 2 flag equals false
-            var anaFlag = false;
-            var anteFlag = false;
-
-            foreach(Concept c in emr.Concepts)
+            if(whoAna.Value[1] == 1 && whoAnte.Value[1] == 1)
             {
-                //No concept before anaphoro and contains anaphora
-                if(emr.Concepts.IndexOf(c) > anaIndex && !anaFlag)
-                {
-                    return;
-                }
-
-                //No concept before antecedent and contains antecedent
-                if (emr.Concepts.IndexOf(c) > anteIndex && !anteFlag)
-                {
-                    return;
-                }
-
-                //Exist concept before anaphora and contains anaphora
-                if (c.Lexicon.Contains(instance.Anaphora.Lexicon) || instance.Anaphora.Lexicon.Contains(c.Lexicon))
-                {
-                    anaFlag = true;
-                }
-
-                //Exist concept before antecedent and contains antecedent
-                if (c.Lexicon.Contains(instance.Antecedent.Lexicon) || instance.Antecedent.Lexicon.Contains(c.Lexicon))
-                {
-                    anteFlag = true;
-                }
-
-                //If both exist then setValue and return
-                if(anteFlag && anaFlag)
-                {
-                    SetCategoricalValue(1);
-                    return;
-                }
+                SetCategoricalValue(1);
             }
         }
 
         public WhoFeatures(PersonInstance instance, EMR emr)
             :base("Who", 2, 0)
         {
+            var isName = new NameFeature(instance, emr);
+            if(isName.Value[0] == 1)
+            {
+                return;
+            }
+
             var index = emr.Concepts.IndexOf(instance.Concept);
 
             foreach(Concept c in emr.Concepts)
             {
-                if(emr.Concepts.IndexOf(c) > index)
+                if(emr.Concepts.IndexOf(c) >= index)
                 {
                     return;
                 }
