@@ -22,5 +22,18 @@ namespace HCMUT.EMRCorefResol.English.Features
                 SetCategoricalValue(1);
             }
         }
+
+        public DepartmentKeywordFeature(PersonPair instance)
+            :base("Department-Keyword", 2, 0)
+        {
+            var searcher = KeywordService.Instance.DEPARTMENT_KEYWORDS;
+            var key1 = searcher.Search(instance.Anaphora.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord);
+            var key2 = searcher.Search(instance.Antecedent.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord);
+
+            if (key1.Intersect(key2).Count() > 0)
+            {
+                SetCategoricalValue(1);
+            }
+        }
     }
 }
