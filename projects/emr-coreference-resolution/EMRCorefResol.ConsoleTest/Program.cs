@@ -37,13 +37,13 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             //testReadEMR();
             //var path = testTrainer();
             //testClassifier(path);
-            //testTrainer();
+            testTrainer();
             //testLoadClassifier();
             //testService();
             //var path = testTrainManyEMR(20);
             //testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", 20);
             //testClassifier(path, 1);
-            testAhoCorasick();
+            //testAhoCorasick();
 
             sw.Stop();
             Console.WriteLine($"Execution time: {sw.ElapsedMilliseconds}ms");
@@ -169,9 +169,9 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
         static void testAhoCorasick()
         {
-            var ac_kwd = new AhoCorasickKeywordDictionary("doctors.txt");
+            var ac_kwd = new AhoCorasickKeywordDictionary(new string[] { ",", ".", "'", "\"", "/", "\\" });
 
-            var result = ac_kwd.SearchKeywords("dr. elizabeth gs vega", KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
+            var result = ac_kwd.Search("mr. vuong anh tuan , md", KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
             Console.WriteLine(string.Join(" ", result));
         }
 

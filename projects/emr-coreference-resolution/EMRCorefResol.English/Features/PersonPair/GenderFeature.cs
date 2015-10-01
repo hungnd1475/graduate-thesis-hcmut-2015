@@ -52,6 +52,18 @@ namespace HCMUT.EMRCorefResol.English.Features
 
         private int containKeyword(string name)
         {
+            var s = new AhoCorasickKeywordDictionary(new string[] { "father", "brother", "he", "him", "himself", "husband", "son", "uncle", "nephew", "dad" });
+            if (s.Match(name, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
+            {
+                return 0;
+            }
+
+            s = new AhoCorasickKeywordDictionary(new string[] { "mother", "sister", "she", "her", "herself", "wife", "daughter", "aunt", "niece", "mom" });
+            if (s.Match(name, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
+            {
+                return 0;
+            }
+
             var searcher = KeywordService.Instance.MALE_TITLES;
             if(searcher.Match(name, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
             {

@@ -69,6 +69,18 @@ namespace HCMUT.EMRCorefResol.English
         public IKeywordDictionary GENERAL_TITLES { get; }
             = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "general-titles.txt")));
 
+        public IKeywordDictionary SIGN_INFORMATION { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "sign-information.txt")));
+
+        public IKeywordDictionary TWIN_TRIPLET { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "twin-triplet.txt")));
+
+        public IKeywordDictionary PERSON_PRONOUN { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "person-pronoun.txt")));
+
+        public IKeywordDictionary NLINE_KEYWORD { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "nline-keywords.txt")));
+
         private KeywordService() { }
 
         private static IEnumerable<string> ReadKWFile(string filePath)

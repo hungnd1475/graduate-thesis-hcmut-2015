@@ -17,3 +17,5 @@ aunt
 nephew
 niece
 cousin
+dad
+mom

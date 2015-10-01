@@ -14,6 +14,12 @@ namespace HCMUT.EMRCorefResol.English.Features
             :base("Name-Feature", 2, 0)
         {
             var line = EMRExtensions.GetLine(emr, instance.Concept.Begin.Line);
+            if(instance.Concept.Lexicon.Split(' ').Length == 1 &&
+                line.ToLower().IndexOf(instance.Concept.Lexicon) == 0)
+            {
+                return;
+            }
+
             var tokens = line.Replace("  ", " ").Replace("\r", "").Split(' ');
 
             if (tokens == null)
@@ -28,8 +34,10 @@ namespace HCMUT.EMRCorefResol.English.Features
 
             var searcher = KeywordService.Instance.GENERAL_TITLES;
             var name = searcher.RemoveKeywords(rawName, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
+            searcher = new AhoCorasickKeywordDictionary(new string[] { ",", ".", "'", "\"", "/", "\\" });
+            name = searcher.RemoveKeywords(name, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
 
-            if(name == null || name.Length < 1)
+            if (name == null || name.Length < 1)
             {
                 return;
             }
