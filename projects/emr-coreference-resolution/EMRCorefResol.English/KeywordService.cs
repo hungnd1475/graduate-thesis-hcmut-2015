@@ -75,6 +75,9 @@ namespace HCMUT.EMRCorefResol.English
         public IKeywordDictionary TWIN_TRIPLET { get; }
             = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "twin-triplet.txt")));
 
+        public IKeywordDictionary PERSON_PRONOUN { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "person-pronoun.txt")));
+
         private KeywordService() { }
 
         private static IEnumerable<string> ReadKWFile(string filePath)

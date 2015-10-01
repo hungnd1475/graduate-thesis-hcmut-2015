@@ -94,6 +94,7 @@
     <Compile Include="Features\PersonInstance\RelativeKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\SignedInformationFeature.cs" />
     <Compile Include="Features\PersonPair\GenderFeature.cs" />
+    <Compile Include="Features\PersonPair\PronounMatchFeature.cs" />
     <Compile Include="Features\TwinTripletFeature.cs" />
     <Compile Include="Features\WhoFeatures.cs" />
     <Compile Include="Features\Pronoun\FirstNextMentionDistanceFeature.cs" />
@@ -163,6 +164,7 @@
     <Content Include="Keywords\male-names.txt" />
     <Content Include="Keywords\male-titles.txt" />
     <Content Include="Keywords\patients.txt" />
+    <Content Include="Keywords\person-pronoun.txt" />
     <Content Include="Keywords\pronouns.txt" />
     <Content Include="Keywords\relatives.txt" />
     <Content Include="Keywords\sign-information.txt" />

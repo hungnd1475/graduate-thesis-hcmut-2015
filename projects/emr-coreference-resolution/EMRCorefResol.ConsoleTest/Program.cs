@@ -37,11 +37,11 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             //testReadEMR();
             //var path = testTrainer();
             //testClassifier(path);
-            //testTrainer();
+            testTrainer();
             //testLoadClassifier();
             //testService();
             //var path = testTrainManyEMR(20);
-            testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", 20);
+            //testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", 20);
             //testClassifier(path, 1);
             //testAhoCorasick();
 
@@ -169,9 +169,9 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
         static void testAhoCorasick()
         {
-            var ac_kwd = new AhoCorasickKeywordDictionary("twin-triplet.txt");
+            var ac_kwd = new AhoCorasickKeywordDictionary(new string[] { ",", ".", "'", "\"", "/", "\\" });
 
-            var result = ac_kwd.Search("twin #1", KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
+            var result = ac_kwd.Search("mr. vuong anh tuan , md", KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
             Console.WriteLine(string.Join(" ", result));
         }
 
