@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol.English.Features
 {
+    /// <summary>
+    /// Concept is a name and appeared before in EMR
+    /// </summary>
     class WhoFeatures : Feature
     {
         public WhoFeatures(PersonPair instance, EMR emr)

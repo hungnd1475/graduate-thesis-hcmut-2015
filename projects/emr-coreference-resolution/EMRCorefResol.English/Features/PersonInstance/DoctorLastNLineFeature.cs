@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 namespace HCMUT.EMRCorefResol.English.Features
 {
     using Utilities;
+    /// <summary>
+    /// Read EMR up-side-down until keyword found
+    /// If concept is Doctor and belong to n last line
+    /// </summary>
     class DoctorLastNLineFeature : Feature
     {
         public DoctorLastNLineFeature(PersonInstance instance, EMR emr)
