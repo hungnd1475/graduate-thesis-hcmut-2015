@@ -12,7 +12,7 @@ namespace HCMUT.EMRCorefResol.English
     class PersonPairFeatures : FeatureVector
     {
         public PersonPairFeatures(PersonPair instance, EMR emr, IPatientDeterminer patientDeterminer, double classValue)
-            : base(size: 16, classValue: classValue)
+            : base(size: 17, classValue: classValue)
         {
             this[0] = new PatientClassFeature(instance, patientDeterminer);
             this[1] = new SentenceDistanceFeature(instance, emr);
@@ -30,6 +30,7 @@ namespace HCMUT.EMRCorefResol.English
             this[13] = new AliasFeature(instance);
             this[14] = new GenderFeature(instance, emr);
             this[15] = new WhoFeatures(instance, emr);
+            this[16] = new TwinTripletFeature(instance);
         }
     }
 }

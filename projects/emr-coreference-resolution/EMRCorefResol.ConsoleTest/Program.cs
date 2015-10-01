@@ -169,9 +169,9 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
         static void testAhoCorasick()
         {
-            var ac_kwd = new AhoCorasickKeywordDictionary("general-titles.txt");
+            var ac_kwd = new AhoCorasickKeywordDictionary("twin-triplet.txt");
 
-            var result = ac_kwd.Search("Dr mr. Ruby von der Smith", KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
+            var result = ac_kwd.Search("twin #1", KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
             Console.WriteLine(string.Join(" ", result));
         }
 

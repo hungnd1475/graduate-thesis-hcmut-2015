@@ -72,6 +72,9 @@ namespace HCMUT.EMRCorefResol.English
         public IKeywordDictionary SIGN_INFORMATION { get; }
             = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "sign-information.txt")));
 
+        public IKeywordDictionary TWIN_TRIPLET { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "twin-triplet.txt")));
+
         private KeywordService() { }
 
         private static IEnumerable<string> ReadKWFile(string filePath)
