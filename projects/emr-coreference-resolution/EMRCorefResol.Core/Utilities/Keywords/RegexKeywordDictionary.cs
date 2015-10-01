@@ -52,7 +52,7 @@ namespace HCMUT.EMRCorefResol.Utilities
             return found;
         }
 
-        public string[] Search(string s, KWSearchOptions options)
+        public string[] SearchKeywords(string s, KWSearchOptions options)
         {
             var result = new List<string>();
             SearchWithAction(s, options, (kw) =>
@@ -94,6 +94,11 @@ namespace HCMUT.EMRCorefResol.Utilities
                         return;
                 }
             }
+        }
+
+        public int[] SearchDictionaryIndices(string s, KWSearchOptions options)
+        {
+            throw new NotImplementedException();
         }
     }
 }

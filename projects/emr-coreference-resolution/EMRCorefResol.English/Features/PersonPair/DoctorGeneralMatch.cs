@@ -30,7 +30,7 @@ namespace HCMUT.EMRCorefResol.English.Features
             SetCategoricalValue((kw != null && anaLex.Contains(kw)) ? 1 : 0);*/
 
             var searcher = KeywordService.Instance.GENERAL_DOCTOR;
-            var kws = searcher.Search(instance.Anaphora.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
+            var kws = searcher.SearchKeywords(instance.Anaphora.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
             if(kws == null || kws.Length < 1)
             {
                 SetCategoricalValue(0);
@@ -38,7 +38,7 @@ namespace HCMUT.EMRCorefResol.English.Features
             }
 
             searcher = new AhoCorasickKeywordDictionary(kws);
-            kws = searcher.Search(instance.Antecedent.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
+            kws = searcher.SearchKeywords(instance.Antecedent.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
             if (kws == null || kws.Length < 1)
             {
                 SetCategoricalValue(0);

@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Windows.Forms;
+using WinForms = System.Windows.Forms;
 using System.IO;
 using HCMUT.EMRCorefResol.IO;
 using HCMUT.EMRCorefResol;
@@ -20,6 +20,8 @@ using ICSharpCode.AvalonEdit.Document;
 using System.Text.RegularExpressions;
 using ICSharpCode.AvalonEdit;
 using ICSharpCode.AvalonEdit.Editing;
+using IOPath = System.IO.Path;
+using HCMUT.EMRCorefResol.English;
 
 namespace EMRCorefResol.UITest
 {
@@ -29,17 +31,22 @@ namespace EMRCorefResol.UITest
     public partial class MainWindow : Window
     {
         private static Regex ConceptPattern = new Regex("c=\"[^|]+\" \\d+:\\d+ \\d+:\\d+");
-        private readonly FolderBrowserDialog FolderDialog = new FolderBrowserDialog();
-        private string[] emrFiles;
+        private readonly WinForms.FolderBrowserDialog FolderDialog = new WinForms.FolderBrowserDialog();
 
         private int currentEMRIndex = -1;
         private IDataReader dataReader = new I2B2DataReader();
-        private EMR currentEMR;
+        private EMR currentEMR = null;
         private Concept currentConcept = null;
 
         private SelectionInfo conceptSelectionInfo = new SelectionInfo(); // stores selection info on concepts text area
         private SelectionInfo chainSelectionInfo = new SelectionInfo(); // stores selection info on chains text area
         private SelectionInfo emrSelectionInfo = new SelectionInfo(); // stores selection info on emr text area
+        private SelectionInfo featuresSelectionInfo = new SelectionInfo();
+
+        private EMRCollection emrCollection = new EMRCollection(
+            @"..\..\..\..\..\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train\docs",
+            @"..\..\..\..\..\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train\concepts",
+            @"..\..\..\..\..\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train\chains");
 
         private bool conChainMouseDown = false;
 
@@ -47,14 +54,15 @@ namespace EMRCorefResol.UITest
         {
             InitializeComponent();
 
-            txtEMRPath.Text = @"..\..\..\..\..\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train\docs";
-            txtConPath.Text = @"..\..\..\..\..\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train\concepts";
-            txtChainPath.Text = @"..\..\..\..\..\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train\chains";
-            emrFiles = Directory.GetFiles(txtEMRPath.Text);
+            txtEMRPath.Text = @"..\..\..\..\..\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train";
+            emrCollection = new EMRCollection(
+                IOPath.Combine(txtEMRPath.Text, "docs"),
+                IOPath.Combine(txtEMRPath.Text, "concepts"),
+                IOPath.Combine(txtEMRPath.Text, "chains"));
 
             txtEMR.ShowLineNumbers = true;
             txtEMR.TextArea.TextView.LineTransformers.Add(
-                new Highlighter(emrSelectionInfo, new SolidColorBrush(Color.FromRgb(112, 183, 255)),
+                new SelectionHighlighter(emrSelectionInfo, new SolidColorBrush(Color.FromRgb(112, 183, 255)),
                     Brushes.White));
 
             txtCons.ShowLineNumbers = true;
@@ -62,7 +70,7 @@ namespace EMRCorefResol.UITest
             txtCons.TextArea.SelectionBorder = null;
             txtCons.TextArea.SelectionForeground = null;
             txtCons.TextArea.TextView.LineTransformers.Add(
-                new Highlighter(conceptSelectionInfo, new SolidColorBrush(Color.FromRgb(226, 230, 214)), null));
+                new SelectionHighlighter(conceptSelectionInfo, new SolidColorBrush(Color.FromRgb(226, 230, 214)), null));
 
             txtChains.ShowLineNumbers = true;
             txtChains.WordWrap = true;
@@ -70,24 +78,36 @@ namespace EMRCorefResol.UITest
             txtChains.TextArea.SelectionBorder = null;
             txtChains.TextArea.SelectionBrush = null;
             txtChains.TextArea.TextView.LineTransformers.Add(
-                new Highlighter(chainSelectionInfo, new SolidColorBrush(Color.FromRgb(226, 230, 214)), null));
+                new SelectionHighlighter(chainSelectionInfo, new SolidColorBrush(Color.FromRgb(226, 230, 214)), null));
+
+            txtFeatures.ShowLineNumbers = true;
+            txtFeatures.TextArea.SelectionBrush = null;
+            txtFeatures.TextArea.SelectionBorder = null;
+            txtFeatures.TextArea.SelectionForeground = null;
+            txtFeatures.TextArea.TextView.LineTransformers.Add(
+                new SelectionHighlighter(featuresSelectionInfo, new SolidColorBrush(Color.FromRgb(226, 230, 214)), null));
 
             txtCons.TextArea.Caret.PositionChanged += txtCon_Caret_PositionChanged;
-            txtCons.PreviewMouseDoubleClick += txtConChain_PreviewMouseDoubleClick;
-            txtCons.TextArea.PreviewMouseDown += txtConChain_TextArea_PreviewMouseDown;
-            txtCons.TextArea.PreviewMouseUp += txtConChain_TextArea_PreviewMouseUp;
+            txtCons.PreviewMouseDoubleClick += txt_PreviewMouseDoubleClick;
+            txtCons.TextArea.PreviewMouseDown += txt_TextArea_PreviewMouseDown;
+            txtCons.TextArea.PreviewMouseUp += txt_TextArea_PreviewMouseUp;
 
             txtChains.TextArea.Caret.PositionChanged += txtChains_Caret_PositionChanged;
-            txtChains.PreviewMouseDoubleClick += txtConChain_PreviewMouseDoubleClick;
-            txtChains.TextArea.PreviewMouseDown += txtConChain_TextArea_PreviewMouseDown;
-            txtChains.TextArea.PreviewMouseUp += txtConChain_TextArea_PreviewMouseUp;
+            txtChains.PreviewMouseDoubleClick += txt_PreviewMouseDoubleClick;
+            txtChains.TextArea.PreviewMouseDown += txt_TextArea_PreviewMouseDown;
+            txtChains.TextArea.PreviewMouseUp += txt_TextArea_PreviewMouseUp;
+
+            txtFeatures.TextArea.Caret.PositionChanged += txtFeatures_Caret_PositionChanged;
+            txtFeatures.PreviewMouseDoubleClick += txt_PreviewMouseDoubleClick;
+            txtFeatures.TextArea.PreviewMouseDown += txt_TextArea_PreviewMouseDown;
+            txtFeatures.TextArea.PreviewMouseUp += txt_TextArea_PreviewMouseUp;
 
             txtEMR.Document = new TextDocument();
             txtCons.Document = new TextDocument();
             txtChains.Document = new TextDocument();
         }
 
-        private void txtConChain_TextArea_PreviewMouseUp(object sender, MouseButtonEventArgs e)
+        private void txt_TextArea_PreviewMouseUp(object sender, MouseButtonEventArgs e)
         {
             var txt = sender as TextEditor;
             if (txt != null && e.LeftButton == MouseButtonState.Released && conChainMouseDown)
@@ -97,14 +117,14 @@ namespace EMRCorefResol.UITest
             }
         }
 
-        private void txtConChain_TextArea_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        private void txt_TextArea_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
             var txt = sender as TextEditor;
             if (txt != null && e.LeftButton == MouseButtonState.Pressed)
                 conChainMouseDown = true;
         }
 
-        private void txtConChain_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void txt_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             // highlight the raw concept text in emr when it's double clicked on concepts or chains text area
 
@@ -129,7 +149,7 @@ namespace EMRCorefResol.UITest
                 e.Handled = true;
             }
             else
-            {                
+            {
                 emrSelectionInfo.IsSelected = false;
             }
 
@@ -152,6 +172,11 @@ namespace EMRCorefResol.UITest
         private void txtChains_Caret_PositionChanged(object sender, EventArgs e)
         {
             highlightConcept(txtChains, chainSelectionInfo);
+        }
+
+        private void txtFeatures_Caret_PositionChanged(object sender, EventArgs e)
+        {
+            highlightConcept(txtFeatures, featuresSelectionInfo);
         }
 
         private void highlightConcept(TextEditor txt, SelectionInfo selectionInfo)
@@ -226,7 +251,7 @@ namespace EMRCorefResol.UITest
                     emrSelectionInfo.IsSelected = false;
                     txtEMR.TextArea.TextView.Redraw(emrSelectionInfo.StartOffset,
                         emrSelectionInfo.EndOffset - emrSelectionInfo.StartOffset + 1);
-                }                
+                }
             }
 
             if (oldSelection.IsSelected)
@@ -237,12 +262,15 @@ namespace EMRCorefResol.UITest
             }
         }
 
-        private void btnEMR_Click(object sender, RoutedEventArgs e)
+        private void btnEMRPath_Click(object sender, RoutedEventArgs e)
         {
             if (FolderDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 txtEMRPath.Text = FolderDialog.SelectedPath;
-                emrFiles = Directory.GetFiles(txtEMRPath.Text);
+                emrCollection = new EMRCollection(
+                    IOPath.Combine(txtEMRPath.Text, "docs"),
+                    IOPath.Combine(txtEMRPath.Text, "concepts"),
+                    IOPath.Combine(txtEMRPath.Text, "chains"));
 
                 currentEMRIndex = -1;
                 currentEMR = null;
@@ -251,22 +279,6 @@ namespace EMRCorefResol.UITest
                 chainSelectionInfo.IsSelected = false;
                 conceptSelectionInfo.IsSelected = false;
                 emrSelectionInfo.IsSelected = false;
-            }
-        }
-
-        private void btnCon_Click(object sender, RoutedEventArgs e)
-        {
-            if (FolderDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                txtConPath.Text = FolderDialog.SelectedPath;
-            }
-        }
-
-        private void btnChain_Click(object sender, RoutedEventArgs e)
-        {
-            if (FolderDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                txtChainPath.Text = FolderDialog.SelectedPath;
             }
         }
 
@@ -279,41 +291,57 @@ namespace EMRCorefResol.UITest
         {
             var nextEMRIndex = index;
 
-            if (emrFiles == null)
+            if (emrCollection == null)
                 return;
 
-            if (nextEMRIndex >= 0 && nextEMRIndex < emrFiles.Length)
+            StreamReader sr = null;
+
+            try
             {
-                conceptSelectionInfo.IsSelected = false;
-                emrSelectionInfo.IsSelected = false;
-                chainSelectionInfo.IsSelected = false;
+                if (nextEMRIndex >= 0 && nextEMRIndex < emrCollection.Count)
+                {
+                    conceptSelectionInfo.IsSelected = false;
+                    emrSelectionInfo.IsSelected = false;
+                    chainSelectionInfo.IsSelected = false;
 
-                var emrPath = emrFiles[nextEMRIndex];
-                var emrFileName = tabEMR.Header = System.IO.Path.GetFileName(emrPath);
-                var conPath = System.IO.Path.Combine(txtConPath.Text, emrFileName + ".con");
-                var chainPath = System.IO.Path.Combine(txtChainPath.Text, emrFileName + ".chains");
+                    var emrPath = emrCollection.GetEMRPath(nextEMRIndex);
+                    var emrFileName = tabEMR.Header = IOPath.GetFileName(emrPath);
+                    var conPath = emrCollection.GetConceptsPath(nextEMRIndex);
+                    var chainPath = emrCollection.GetChainsPath(nextEMRIndex);
 
-                currentEMRIndex = nextEMRIndex;
-                currentEMR = new EMR(emrPath, conPath, dataReader);
-                txtEMR.Document.Text = currentEMR.Content;
-                txtEMR.ScrollTo(1, 1);
+                    currentEMRIndex = nextEMRIndex;
+                    currentEMR = new EMR(emrPath, conPath, dataReader);
+                    txtEMR.Document.Text = currentEMR.Content;
+                    txtEMR.ScrollTo(1, 1);
 
-                var sr = new StreamReader(conPath);
-                txtCons.Document.Text = sr.ReadToEnd();
-                txtCons.ScrollTo(1, 1);
-                sr.Close();
+                    sr = new StreamReader(conPath);
+                    txtCons.Document.Text = sr.ReadToEnd();
+                    txtCons.ScrollTo(1, 1);
+                    sr.Close();
 
-                sr = new StreamReader(chainPath);
-                txtChains.Document.Text = sr.ReadToEnd();
-                txtChains.ScrollTo(1, 1);
-                sr.Close();
+                    sr = new StreamReader(chainPath);
+                    txtChains.Document.Text = sr.ReadToEnd();
+                    txtChains.ScrollTo(1, 1);
+                    sr.Close();
 
-                btnPrev.IsEnabled = nextEMRIndex > 0;
-                btnNext.IsEnabled = nextEMRIndex < emrFiles.Length - 1;
+                    btnPrev.IsEnabled = nextEMRIndex > 0;
+                    btnNext.IsEnabled = nextEMRIndex < emrCollection.Count - 1;
+                    btnExtract.IsEnabled = nextEMRIndex >= 0 && nextEMRIndex <= emrCollection.Count - 1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message}\nStack trace:\n{ex.StackTrace}", 
+                    "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            finally
+            {
+                if (sr != null)
+                    sr.Close();
             }
 
             txtCurrentEMRIndex.Text = $"{currentEMRIndex + 1}";
-            txtTotalEMR.Text = $"{emrFiles.Length}";
+            txtTotalEMR.Text = $"{emrCollection.Count}";
         }
 
         private void btnPrev_Click(object sender, RoutedEventArgs e)
@@ -355,6 +383,41 @@ namespace EMRCorefResol.UITest
         private void txtCurrentEMRIndex_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
             txtCurrentEMRIndex.SelectAll();
+        }
+
+        private void btnExtract_Click(object sender, RoutedEventArgs e)
+        {            
+            if (currentEMR != null)
+            {
+                var conceptsPath = emrCollection.GetConceptsPath(currentEMRIndex);
+                var chainsPath = emrCollection.GetChainsPath(currentEMRIndex);
+
+                var reader = new I2B2DataReader();
+                var emr = currentEMR;
+                var chains = new CorefChainCollection(chainsPath, reader);
+                var instances = new SimplePreprocessor().Process(emr);
+
+                var extractor = new EnglishTrainingFeatureExtractor();
+                extractor.EMR = emr;
+                extractor.GroundTruth = chains;
+
+                var features = new IFeatureVector[instances.Count];
+
+                Parallel.For(0, instances.Count, k =>
+                {
+                    var i = instances[k];
+                    features[k] = i.GetFeatures(extractor);
+                });
+
+                for (int i = 0; i < instances.Count; i++)
+                {
+                    var fv = features[i];
+                    if (fv != null)
+                    {
+                        txtFeatures.AppendText($"{instances[i]}\nClass-Value:{fv.ClassValue} {string.Join(" ", fv.Select(f => f.ToString()))}\n\n");
+                    }
+                }
+            }
         }
     }
 }

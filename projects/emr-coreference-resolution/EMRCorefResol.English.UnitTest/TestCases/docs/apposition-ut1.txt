@@ -1,0 +1,5 @@
+﻿A , B
+C , D
+E , x F
+E x , F
+x1 E , x2 F

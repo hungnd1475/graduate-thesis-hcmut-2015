@@ -140,19 +140,48 @@ namespace HCMUT.EMRCorefResol.Utilities
                 {
                     found = true;
                 }
-                return true;
+                return found;
             });
 
             return found;
         }
 
-        public string[] Search(string s, KWSearchOptions options)
+        public string[] SearchKeywords(string s, KWSearchOptions options)
         {
-            var indices = SearchIndices(s, options);
+            var indices = SearchDictionaryIndices(s, options);
             return indices.Select(i => _kwList[i]).ToArray();
         }
 
         public int[] SearchIndices(string s, KWSearchOptions options)
+        {
+            var outIndices = new HashSet<int>();
+
+            SearchWithAction(s, options, (i, node) =>
+            {
+                if (options.HasFlag(KWSearchOptions.WholeWord))
+                {
+                    if (i == s.Length - 1 || s[i + 1] == ' ')
+                    {
+                        foreach (var kwi in node.KWIndices)
+                        {
+                            var kw = _kwList[kwi];
+                            var bIndex = i - kw.Length;
+                            if (bIndex < 0 || s[bIndex] == ' ')
+                                outIndices.Add(bIndex + 1);
+                        }
+                    }
+                }
+                else
+                {
+                    outIndices.UnionWith(node.KWIndices.Select(kwi => i - _kwList[kwi].Length + 1));
+                }
+                return false;
+            });
+
+            return outIndices.ToArray();
+        }
+
+        public int[] SearchDictionaryIndices(string s, KWSearchOptions options)
         {
             var outIndices = new HashSet<int>();
 
@@ -183,7 +212,7 @@ namespace HCMUT.EMRCorefResol.Utilities
 
         public string RemoveKeywords(string s, KWSearchOptions options)
         {
-            var keywords = Search(s, options);
+            var keywords = SearchKeywords(s, options);
 
             string pattern = options.HasFlag(KWSearchOptions.WholeWord) ? 
                 string.Join("|", keywords.Select(x => @"(^|\s)" + Regex.Escape(x) + @"(\s|$)")) :

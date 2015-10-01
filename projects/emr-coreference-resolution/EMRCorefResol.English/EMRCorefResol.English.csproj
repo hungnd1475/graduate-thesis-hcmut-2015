@@ -145,26 +145,60 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Keywords\department.txt" />
-    <Content Include="Keywords\doctors.txt" />
-    <Content Include="Keywords\doctor-titles.txt" />
-    <Content Include="Keywords\female-names.txt" />
-    <Content Include="Keywords\female-titles.txt" />
-    <Content Include="Keywords\general-department.txt" />
-    <Content Include="Keywords\general-doctor.txt" />
-    <Content Include="Keywords\general-titles.txt" />
-    <Content Include="Keywords\heshe.txt" />
+    <Content Include="Keywords\department.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\doctors.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\doctor-titles.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\female-names.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\female-titles.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\general-department.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\general-doctor.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\general-titles.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\heshe.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Keywords\i.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Keywords\male-names.txt" />
-    <Content Include="Keywords\male-titles.txt" />
-    <Content Include="Keywords\patients.txt" />
-    <Content Include="Keywords\pronouns.txt" />
-    <Content Include="Keywords\relatives.txt" />
-    <Content Include="Keywords\they.txt" />
-    <Content Include="Keywords\we.txt" />
-    <Content Include="Keywords\you.txt" />
+    <Content Include="Keywords\male-names.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\male-titles.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\patients.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\pronouns.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\relatives.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\they.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\we.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\you.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

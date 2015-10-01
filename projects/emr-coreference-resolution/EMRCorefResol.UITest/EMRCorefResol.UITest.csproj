@@ -76,6 +76,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="SelectableTextEditor.cs" />
     <Compile Include="SelectionInfo.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -85,7 +86,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Highlighter.cs" />
+    <Compile Include="SelectionHighlighter.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -123,6 +124,10 @@
     <ProjectReference Include="..\EMRCorefResol.Core\EMRCorefResol.Core.csproj">
       <Project>{66284726-8e94-4438-b366-f14b04874734}</Project>
       <Name>EMRCorefResol.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EMRCorefResol.English\EMRCorefResol.English.csproj">
+      <Project>{431ba8ee-38d6-4aa1-97af-8e94889aaecc}</Project>
+      <Name>EMRCorefResol.English</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

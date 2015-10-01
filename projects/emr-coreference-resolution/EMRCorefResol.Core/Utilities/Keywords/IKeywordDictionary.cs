@@ -9,8 +9,9 @@ namespace HCMUT.EMRCorefResol.Utilities
     public interface IKeywordDictionary : IIndexedEnumerable<string>
     { 
         bool Match(string s, KWSearchOptions options);
-        string[] Search(string s, KWSearchOptions options);
+        string[] SearchKeywords(string s, KWSearchOptions options);
         int[] SearchIndices(string s, KWSearchOptions options);
+        int[] SearchDictionaryIndices(string s, KWSearchOptions options);
         string RemoveKeywords(string s, KWSearchOptions options);
     }
 

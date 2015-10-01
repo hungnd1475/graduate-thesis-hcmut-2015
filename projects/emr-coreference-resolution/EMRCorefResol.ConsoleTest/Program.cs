@@ -41,9 +41,9 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             //testLoadClassifier();
             //testService();
             //var path = testTrainManyEMR(20);
-            testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", 20);
+            //testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", 20);
             //testClassifier(path, 1);
-            //testAhoCorasick();
+            testAhoCorasick();
 
             sw.Stop();
             Console.WriteLine($"Execution time: {sw.ElapsedMilliseconds}ms");
@@ -169,9 +169,9 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
         static void testAhoCorasick()
         {
-            var ac_kwd = new AhoCorasickKeywordDictionary("general-titles.txt");
+            var ac_kwd = new AhoCorasickKeywordDictionary("doctors.txt");
 
-            var result = ac_kwd.Search("Dr mr. Ruby von der Smith", KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
+            var result = ac_kwd.SearchKeywords("dr. elizabeth gs vega", KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
             Console.WriteLine(string.Join(" ", result));
         }
 

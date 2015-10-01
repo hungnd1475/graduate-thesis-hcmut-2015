@@ -8,13 +8,13 @@ using System.Windows.Media;
 
 namespace EMRCorefResol.UITest
 {
-    class Highlighter : ColorizingTransformer
+    class SelectionHighlighter : ColorizingTransformer
     {
         private readonly SelectionInfo _info;
         private readonly Brush _bgBrush = null;
         private readonly Brush _fgBrush = null;
 
-        public Highlighter(SelectionInfo info, Brush bgBrush, Brush fgBrush)
+        public SelectionHighlighter(SelectionInfo info, Brush bgBrush, Brush fgBrush)
         {
             _info = info;
             _bgBrush = bgBrush;

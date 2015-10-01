@@ -107,5 +107,11 @@ namespace HCMUT.EMRCorefResol
         {
             return Value[0];
         }
+
+        public override string ToString()
+        {
+            var value = _isCategorical ? GetCategoricalValue() : GetContinuousValue();
+            return $"{Name}:{value}";
+        }
     }
 }
