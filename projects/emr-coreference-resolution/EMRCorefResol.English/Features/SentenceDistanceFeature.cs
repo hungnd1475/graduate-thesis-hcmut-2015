@@ -11,19 +11,8 @@ namespace HCMUT.EMRCorefResol.English.Features
         public SentenceDistanceFeature(IConceptPair instance, EMR emr)
             : base("Sentence-Distance")
         {
-            var s = emr.ContentBetween(instance);
-            int index = 0;
-            var v = 0d;
-
-            while (true)
-            {
-                index = s.IndexOf(" .", index);
-                if (index >= 0) index += 2;
-                else break;
-                v += 1;
-            }
-
-            SetContinuousValue(v);
+            var distance = instance.Anaphora.Begin.Line - instance.Antecedent.Begin.Line;
+            SetContinuousValue(distance);
         }
     }
 }
