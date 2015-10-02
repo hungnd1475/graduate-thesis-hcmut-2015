@@ -22,6 +22,7 @@ using ICSharpCode.AvalonEdit;
 using ICSharpCode.AvalonEdit.Editing;
 using IOPath = System.IO.Path;
 using HCMUT.EMRCorefResol.English;
+using ICSharpCode.AvalonEdit.Search;
 
 namespace EMRCorefResol.UITest
 {
@@ -61,6 +62,8 @@ namespace EMRCorefResol.UITest
                 IOPath.Combine(txtEMRPath.Text, "chains"));
 
             txtEMR.ShowLineNumbers = true;
+            txtEMR.TextArea.SelectionCornerRadius = 0;
+            txtEMR.TextArea.SelectionBorder = null;
             txtEMR.TextArea.TextView.LineTransformers.Add(
                 new SelectionHighlighter(emrSelectionInfo, new SolidColorBrush(Color.FromRgb(112, 183, 255)),
                     Brushes.White));
@@ -81,9 +84,11 @@ namespace EMRCorefResol.UITest
                 new SelectionHighlighter(chainSelectionInfo, new SolidColorBrush(Color.FromRgb(226, 230, 214)), null));
 
             txtFeatures.ShowLineNumbers = true;
-            txtFeatures.TextArea.SelectionBrush = null;
+            txtFeatures.WordWrap = true;
+            //txtFeatures.TextArea.SelectionBrush = null;
             txtFeatures.TextArea.SelectionBorder = null;
-            txtFeatures.TextArea.SelectionForeground = null;
+            //txtFeatures.TextArea.SelectionForeground = null;
+            txtFeatures.TextArea.SelectionCornerRadius = 0;
             txtFeatures.TextArea.TextView.LineTransformers.Add(
                 new SelectionHighlighter(featuresSelectionInfo, new SolidColorBrush(Color.FromRgb(226, 230, 214)), null));
 
@@ -99,8 +104,13 @@ namespace EMRCorefResol.UITest
 
             txtFeatures.TextArea.Caret.PositionChanged += txtFeatures_Caret_PositionChanged;
             txtFeatures.PreviewMouseDoubleClick += txt_PreviewMouseDoubleClick;
-            txtFeatures.TextArea.PreviewMouseDown += txt_TextArea_PreviewMouseDown;
-            txtFeatures.TextArea.PreviewMouseUp += txt_TextArea_PreviewMouseUp;
+            //txtFeatures.TextArea.PreviewMouseDown += txt_TextArea_PreviewMouseDown;
+            //txtFeatures.TextArea.PreviewMouseUp += txt_TextArea_PreviewMouseUp;
+
+            SearchPanel.Install(txtEMR.TextArea);
+            SearchPanel.Install(txtCons.TextArea);
+            SearchPanel.Install(txtChains.TextArea);
+            SearchPanel.Install(txtFeatures.TextArea);
 
             txtEMR.Document = new TextDocument();
             txtCons.Document = new TextDocument();
