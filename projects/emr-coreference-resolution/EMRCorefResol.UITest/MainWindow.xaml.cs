@@ -395,7 +395,7 @@ namespace EMRCorefResol.UITest
             txtCurrentEMRIndex.SelectAll();
         }
 
-        private void btnExtract_Click(object sender, RoutedEventArgs e)
+        private async void btnExtract_Click(object sender, RoutedEventArgs e)
         {            
             if (currentEMR != null)
             {
@@ -411,14 +411,12 @@ namespace EMRCorefResol.UITest
                 extractor.EMR = emr;
                 extractor.GroundTruth = chains;
 
-                var features = new IFeatureVector[instances.Count];
+                tab.SelectedIndex = 2;
+                txtFeatures.Text = "Extracting...";
 
-                Parallel.For(0, instances.Count, k =>
-                {
-                    var i = instances[k];
-                    features[k] = i.GetFeatures(extractor);
-                });
+                var features = await ExtractFeatures(instances, extractor);
 
+                txtFeatures.Text = "";
                 for (int i = 0; i < instances.Count; i++)
                 {
                     var fv = features[i];
@@ -428,6 +426,23 @@ namespace EMRCorefResol.UITest
                     }
                 }
             }
+        }
+
+        private static Task<IFeatureVector[]> ExtractFeatures(IIndexedEnumerable<IClasInstance> instances, 
+            IFeatureExtractor fExtractor)
+        {
+            return Task.Run(() =>
+            {
+                var features = new IFeatureVector[instances.Count];
+
+                Parallel.For(0, instances.Count, k =>
+                {
+                    var i = instances[k];
+                    features[k] = i.GetFeatures(fExtractor);
+                });
+
+                return features;
+            });
         }
     }
 }
