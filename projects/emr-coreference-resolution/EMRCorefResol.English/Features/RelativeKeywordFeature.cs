@@ -10,7 +10,7 @@ namespace HCMUT.EMRCorefResol.English.Features
     using Utilities;
     class RelativeKeywordFeature : Feature
     {
-        public RelativeKeywordFeature(PersonInstance instance)
+        public RelativeKeywordFeature(ISingleConcept instance)
             : base("Relative-Keyword", 2, 0)
         {
             var kw_searcher = KeywordService.Instance.RELATIVES;
@@ -22,7 +22,7 @@ namespace HCMUT.EMRCorefResol.English.Features
             }
         }
 
-        public RelativeKeywordFeature(PersonPair instance)
+        public RelativeKeywordFeature(IConceptPair instance)
             :base("Relative-Keyword", 2, 0)
         {
             var searcher = KeywordService.Instance.RELATIVES;

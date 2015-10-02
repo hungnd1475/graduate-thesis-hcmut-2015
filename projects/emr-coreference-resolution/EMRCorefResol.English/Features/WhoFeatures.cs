@@ -11,7 +11,7 @@ namespace HCMUT.EMRCorefResol.English.Features
     /// </summary>
     class WhoFeatures : Feature
     {
-        public WhoFeatures(PersonPair instance, EMR emr)
+        public WhoFeatures(IConceptPair instance, EMR emr)
             :base("Who", 2, 0)
         {
             var whoAna = new WhoFeatures(new PersonInstance(instance.Anaphora), emr);
@@ -23,10 +23,10 @@ namespace HCMUT.EMRCorefResol.English.Features
             }
         }
 
-        public WhoFeatures(PersonInstance instance, EMR emr)
+        public WhoFeatures(ISingleConcept instance, EMR emr)
             :base("Who", 2, 0)
         {
-            var isName = new NameFeature(instance, emr);
+            var isName = new NameFeature((PersonInstance)instance, emr);
             if(isName.Value[0] == 1)
             {
                 return;

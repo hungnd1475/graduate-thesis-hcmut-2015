@@ -11,7 +11,7 @@ namespace HCMUT.EMRCorefResol.English.Features
     using Utilities;
     class DepartmentKeywordFeature : Feature
     {
-        public DepartmentKeywordFeature(PersonInstance instance)
+        public DepartmentKeywordFeature(ISingleConcept instance)
             : base("Department-Keyword", 2, 0)
         {
             var kw_searcher = KeywordService.Instance.DEPARTMENT_KEYWORDS;
@@ -23,7 +23,7 @@ namespace HCMUT.EMRCorefResol.English.Features
             }
         }
 
-        public DepartmentKeywordFeature(PersonPair instance)
+        public DepartmentKeywordFeature(IConceptPair instance)
             :base("Department-Keyword", 2, 0)
         {
             var searcher = KeywordService.Instance.DEPARTMENT_KEYWORDS;

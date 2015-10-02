@@ -9,7 +9,7 @@ namespace HCMUT.EMRCorefResol.English.Features
     using Utilities;
     class TwinTripletFeature : Feature
     {
-        public TwinTripletFeature(PersonPair instance)
+        public TwinTripletFeature(IConceptPair instance)
             : base("Twin-Triplet", 2, 0)
         {
             var searcher = KeywordService.Instance.TWIN_TRIPLET;
@@ -23,7 +23,7 @@ namespace HCMUT.EMRCorefResol.English.Features
             }
         }
 
-        public TwinTripletFeature(PersonInstance instance)
+        public TwinTripletFeature(ISingleConcept instance)
             : base("Twin-Triplet", 2, 0)
         {
             var searcher = KeywordService.Instance.TWIN_TRIPLET;
