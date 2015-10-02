@@ -11,7 +11,7 @@ namespace HCMUT.EMRCorefResol.English
     class PersonInstanceFeatures : FeatureVector
     {
         public PersonInstanceFeatures(PersonInstance instance, EMR emr, double classValue)
-            : base(size: 12, classValue: classValue)
+            : base(size: 13, classValue: classValue)
         {
             this[0] = new PronounIFeature(instance);
             this[1] = new PronounYouFeature(instance);
@@ -25,6 +25,7 @@ namespace HCMUT.EMRCorefResol.English
             this[9] = new SignedInformationFeature(instance, emr);
             this[10] = new TwinTripletFeature(instance);
             this[11] = new DoctorLastNLineFeature(instance, emr);
+            this[12] = new PreceededNonPatientFeature(instance, emr);
         }
     }
 }

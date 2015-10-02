@@ -87,6 +87,7 @@
     <Compile Include="Features\PersonInstance\GeneralDoctorKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\NameFeature.cs" />
     <Compile Include="Features\PersonInstance\PatientKeywordFeature.cs" />
+    <Compile Include="Features\PersonInstance\PreceededNonPatientFeature.cs" />
     <Compile Include="Features\PersonInstance\PronounHeSheFeature.cs" />
     <Compile Include="Features\PersonInstance\PronounIFeature.cs" />
     <Compile Include="Features\PersonInstance\PronounTheyFeature.cs" />
