@@ -11,6 +11,7 @@ namespace HCMUT.EMRCorefResol
     {
         private readonly string[] _emrPaths;
         private readonly string _conceptsDir, _chainsDir;
+        private readonly Random _rand = new Random();
 
         public int Count { get { return _emrPaths.Length; } }
 
@@ -38,6 +39,30 @@ namespace HCMUT.EMRCorefResol
             var emrPath = _emrPaths[index];
             var emrFileName = Path.GetFileName(emrPath);
             return Path.Combine(_chainsDir, emrFileName + ".chains");
+        }
+
+        public void GetRandom(int size, out string[] emrPaths, out string[] conceptsPaths, out string[] chainsPaths)
+        {
+            emrPaths = new string[size];
+            conceptsPaths = new string[size];
+            chainsPaths = new string[size];
+
+            var indices = new HashSet<int>();
+            int k;
+
+            for (int i = 0; i < size; i++)
+            {
+                do
+                {
+                    k = _rand.Next(0, Count - 1);
+                }
+                while (indices.Contains(k));
+
+                indices.Add(k);
+                emrPaths[i] = GetEMRPath(k);
+                conceptsPaths[i] = GetConceptsPath(k);
+                chainsPaths[i] = GetChainsPath(k);
+            }
         }
     }
 }

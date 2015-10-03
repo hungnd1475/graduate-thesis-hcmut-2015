@@ -18,7 +18,7 @@ namespace emr_corefsol_service.Controllers
 
         public DictionaryController()
         {
-            _helper = new WordNetHelper(HostingEnvironment.MapPath(@"~\app_data\libs\wordnet\wordnetdb"));
+            _helper = new WordNetHelper(HostingEnvironment.MapPath(@"~\app_data\models\wordnet"));
         }
 
         /// <summary>

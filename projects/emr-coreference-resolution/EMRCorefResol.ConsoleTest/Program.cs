@@ -40,12 +40,17 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             //testTrainer();
             //testLoadClassifier();
             //testService();
-            //var path = testTrainManyEMR(20);
-            testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", 20);
+            var path = testTrainManyEMR(20);
+            //testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", 20);
             //testClassifier(path, 1);
             //testAhoCorasick();
 
+            //var classifier = testTrainAllEMR();
+            //ClassifierSerializer.Serialize(classifier, @"Classification\LibSVMTools\Models\LibSVMTool.classifier");
+            //testClassifier(classifier, 20);
+
             sw.Stop();
+
             Console.WriteLine($"Execution time: {sw.ElapsedMilliseconds}ms");
             Console.ReadLine();
         }
@@ -116,6 +121,7 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             var preprocessor = new SimplePreprocessor();
             var fExtractor = new EnglishTrainingFeatureExtractor();
 
+            Console.WriteLine("\n====Training====\n");
             TrainingSystem.Instance.TrainOne(EMR_COLLECTION.GetEMRPath(0), EMR_COLLECTION.GetConceptsPath(0),
                 EMR_COLLECTION.GetChainsPath(0), dataReader, preprocessor, fExtractor, trainer);
 
@@ -127,7 +133,11 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
         static string testTrainManyEMR(int size)
         {
-            var trainer = new LibSVMTrainer();
+            var trainer = new LibSVMTrainer(
+                new GridSearchConfig(
+                    Range.Create(-5d, 15d), 2, // c range and step
+                    Range.Create(-15d, 3d), 2)); // gamma range and step
+
             var dataReader = new I2B2DataReader();
             var preprocessor = new SimplePreprocessor();
             var fExtractor = new EnglishTrainingFeatureExtractor();
@@ -145,18 +155,23 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
         static void testClassifier(string classifierPath, int size)
         {
             var classifier = ClassifierSerializer.Deserialize(classifierPath);
+            testClassifier(classifier, size);
+        }
+
+        static void testClassifier(IClassifier classifier, int size)
+        {
             var dataReader = new I2B2DataReader();
             var preprocessor = new SimplePreprocessor();
             var fExtractor = new EnglishClasFeatureExtractor(classifier);
 
-            var r = new Random();
-            for (int i = 1; i <= size; i++)
+            string[] emrPaths, conceptsPaths, chainsPaths;
+            EMR_COLLECTION.GetRandom(size, out emrPaths, out conceptsPaths, out chainsPaths);
+
+            Console.WriteLine("\n====Testing Classifier====\n");
+            for (int i = 0; i < size; i++)
             {
-                var index = r.Next(1, EMR_COLLECTION.Count - 1);
-                var emrPath = EMR_COLLECTION.GetEMRPath(index);
-                Console.WriteLine($"{Path.GetFileName(emrPath)}");
-                ClassificationSystem.Instance.ClassifyOne(emrPath, EMR_COLLECTION.GetConceptsPath(index),
-                    EMR_COLLECTION.GetChainsPath(index), dataReader, preprocessor, fExtractor, classifier);
+                ClassificationSystem.Instance.ClassifyOne(emrPaths[i], conceptsPaths[i], chainsPaths[i],
+                    dataReader, preprocessor, fExtractor, classifier);
                 classifier.ClearCache();
             }
         }
@@ -178,6 +193,17 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
         static void Print(IClasInstance i, IFeatureVector fVector)
         {
             Console.WriteLine($"{i}\nClass-Value:{fVector.ClassValue} {string.Join(" ", fVector.Select(f => $"{f.Name}:{f.Value}"))}\n");
+        }
+
+        static IClassifier testTrainAllEMR()
+        {
+            var trainer = new LibSVMTrainer();
+            var dataReader = new I2B2DataReader();
+            var preprocessor = new SimplePreprocessor();
+            var fExtractor = new EnglishTrainingFeatureExtractor();
+
+            TrainingSystem.Instance.TrainAll(EMR_COLLECTION, dataReader, preprocessor, fExtractor, trainer);
+            return trainer.GetClassifier();
         }
     }
 }

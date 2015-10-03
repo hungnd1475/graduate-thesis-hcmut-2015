@@ -1,6 +1,7 @@
 ﻿using HCMUT.EMRCorefResol.Classification;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,8 @@ namespace HCMUT.EMRCorefResol
         public void ClassifyOne(string emrPath, string conceptsPath, string chainsPath, IDataReader dataReader,
             IPreprocessor preprocessor, IFeatureExtractor fExtractor, IClassifier classifier)
         {
+            GetLogger().WriteInfo(Path.GetFileName(emrPath));
+
             var emr = new EMR(emrPath, conceptsPath, dataReader);
             var chains = new CorefChainCollection(chainsPath, dataReader);
             var pCreator = new ClasProblemCreator();
@@ -29,6 +32,7 @@ namespace HCMUT.EMRCorefResol
             int nDone = 0, iCount = instances.Count;
 
             GetLogger().WriteInfo("Extracting features...");
+
             Parallel.For(0, iCount, k =>
             {
                 lock (emr)

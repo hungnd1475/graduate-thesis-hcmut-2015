@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,6 +36,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>App_Data/XmlDocument.xml</DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+    <IncludeIisSettings>true</IncludeIisSettings>
+    <ExcludeGeneratedDebugSymbol>false</ExcludeGeneratedDebugSymbol>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -175,11 +179,11 @@
     </Reference>
     <Reference Include="LAIR.Collections, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>App_Data\Libs\wordnet\LAIR.Collections.dll</HintPath>
+      <HintPath>..\libs\WordNet\LAIR.Collections.dll</HintPath>
     </Reference>
     <Reference Include="LAIR.ResourceAPIs.WordNet, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>App_Data\Libs\wordnet\LAIR.ResourceAPIs.WordNet.dll</HintPath>
+      <HintPath>..\libs\WordNet\LAIR.ResourceAPIs.WordNet.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
@@ -188,7 +192,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="OpenNLP, Version=1.0.2529.39671, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>App_Data\Libs\sharpNLP\OpenNLP.dll</HintPath>
+      <HintPath>..\libs\SharpNLP\OpenNLP.dll</HintPath>
     </Reference>
     <Reference Include="opennlp-tools-1.6.0, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\OpenNLP.NET.1.6.0\lib\opennlp-tools-1.6.0.dll</HintPath>
@@ -200,7 +204,7 @@
     </Reference>
     <Reference Include="SharpEntropy, Version=1.0.2529.39670, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>App_Data\Libs\sharpNLP\SharpEntropy.dll</HintPath>
+      <HintPath>..\libs\SharpNLP\SharpEntropy.dll</HintPath>
     </Reference>
     <Reference Include="stanford-corenlp-3.5.2, Version=3.5.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Stanford.NLP.CoreNLP.3.5.2\lib\stanford-corenlp-3.5.2.dll</HintPath>
@@ -208,15 +212,15 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
@@ -268,6 +272,7 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
@@ -391,6 +396,21 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\dcoref\animate.unigrams.txt" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\dcoref\demonyms.txt" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\dcoref\female.unigrams.txt" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\dcoref\inanimate.unigrams.txt" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\dcoref\male.unigrams.txt" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\dcoref\namegender.combine.txt" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\dcoref\ne.signatures.txt" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\dcoref\neutral.unigrams.txt" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\dcoref\plural.unigrams.txt" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\dcoref\singular.unigrams.txt" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\dcoref\state-abbreviations.txt" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\sutime\defs.sutime.txt" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\sutime\english.holidays.sutime.txt" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\sutime\english.sutime.txt" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\sutime\jollyday\Holidays_sutime.xml" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -418,6 +438,74 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="App_Data\Models\OpenNLP\en-chunker.bin" />
+    <Content Include="App_Data\Models\OpenNLP\en-ner-date.bin" />
+    <Content Include="App_Data\Models\OpenNLP\en-ner-location.bin" />
+    <Content Include="App_Data\Models\OpenNLP\en-ner-money.bin" />
+    <Content Include="App_Data\Models\OpenNLP\en-ner-organization.bin" />
+    <Content Include="App_Data\Models\OpenNLP\en-ner-percentage.bin" />
+    <Content Include="App_Data\Models\OpenNLP\en-ner-person.bin" />
+    <Content Include="App_Data\Models\OpenNLP\en-ner-time.bin" />
+    <Content Include="App_Data\Models\OpenNLP\en-parser-chunking.bin" />
+    <Content Include="App_Data\Models\OpenNLP\en-pos-maxent.bin" />
+    <Content Include="App_Data\Models\OpenNLP\en-pos-perceptron.bin" />
+    <Content Include="App_Data\Models\OpenNLP\en-sent.bin" />
+    <Content Include="App_Data\Models\OpenNLP\en-token.bin" />
+    <Content Include="App_Data\Models\SharpNLP\EnglishChunk.nbin" />
+    <Content Include="App_Data\Models\SharpNLP\EnglishPOS.nbin" />
+    <Content Include="App_Data\Models\SharpNLP\EnglishSD.nbin" />
+    <Content Include="App_Data\Models\SharpNLP\EnglishTok.nbin" />
+    <Content Include="App_Data\Models\StanfordNLP\META_INF\MANIFEST.MF" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\pipeline\StanfordCoreNLP.properties" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\dcoref\coref.properties" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\dcoref\coref.dict1.tsv" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\dcoref\coref.dict2.tsv" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\dcoref\coref.dict3.tsv" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\dcoref\coref.dict4.tsv" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\dcoref\countries" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\dcoref\gender.data.gz" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\dcoref\gender.map.ser.gz" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\dcoref\singleton.predictor.ser" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\dcoref\statesandprovinces" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\gender\first_name_map_small" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\gender\first_name_map_small.bak" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\lexparser\englishPCFG.ser.gz" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\lexparser\englishRNN.ser.gz" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\ner\english.all.3class.distsim.crf.ser.gz" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\ner\english.all.3class.distsim.prop" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\ner\english.conll.4class.distsim.crf.ser.gz" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\ner\english.conll.4class.distsim.prop" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\ner\english.muc.7class.distsim.crf.ser.gz" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\ner\english.muc.7class.distsim.prop" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\parser\nndep\CTB_CoNLL_params.txt.gz" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\parser\nndep\english_SD.gz" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\parser\nndep\english_UD.gz" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\parser\nndep\PTB_CoNLL_params.txt.gz" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\parser\nndep\wsj_SD.gz" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\pos-tagger\english-left3words\english-left3words-distsim.tagger" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\pos-tagger\english-left3words\english-left3words-distsim.tagger.props" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\pos-tagger\english-bidirectional\english-bidirectional-distsim.tagger" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\pos-tagger\english-bidirectional\english-bidirectional-distsim.tagger.props" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\regexner\type_map_clean" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\sentiment\sentiment.binary.ser.gz" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\sentiment\sentiment.ser.gz" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\supervised_relation_extractor\roth_relation_model_pipelineNER.ser" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\truecase\MixDisambiguation.list" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\truecase\truecasing.fast.caseless.prop" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\truecase\truecasing.fast.caseless.qn.ser.gz" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\truecase\truecasing.fast.prop" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\truecase\truecasing.fast.qn.ser.gz" />
+    <Content Include="App_Data\Models\StanfordNLP\edu\stanford\nlp\models\upos\ENUniversalPOS.tsurgeon" />
+    <Content Include="App_Data\Models\WordNet\.sorted_for_dot_net" />
+    <Content Include="App_Data\Models\WordNet\data.adj" />
+    <Content Include="App_Data\Models\WordNet\data.adv" />
+    <Content Include="App_Data\Models\WordNet\data.noun" />
+    <Content Include="App_Data\Models\WordNet\data.verb" />
+    <Content Include="App_Data\Models\WordNet\index.adj" />
+    <Content Include="App_Data\Models\WordNet\index.adv" />
+    <Content Include="App_Data\Models\WordNet\index.noun" />
+    <Content Include="App_Data\Models\WordNet\index.sense" />
+    <Content Include="App_Data\Models\WordNet\index.verb" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -445,9 +533,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

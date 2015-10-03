@@ -13,7 +13,7 @@ namespace HCMUT.EMRCorefResol.English.Features
         public DoctorTitleMatchFeature(PersonPair instance)
             : base("DoctorTitle-Match", 2)
         {
-            var searcher = KeywordService.Instance.DOCTOR_KEYWORDS;
+            var searcher = KeywordService.Instance.DOCTOR_TITLES;
             var kws1 = searcher.SearchKeywords(instance.Anaphora.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
             if (kws1 == null || kws1.Length < 1)
             {

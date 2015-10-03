@@ -76,6 +76,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LibSVM\GridSearchConfig.cs" />
     <Compile Include="LibSVM\Internal\Native\svm_model.cs" />
     <Compile Include="LibSVM\Internal\Native\svm_node.cs" />
     <Compile Include="LibSVM\Internal\Native\svm_parameter.cs" />

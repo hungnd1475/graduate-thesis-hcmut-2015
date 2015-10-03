@@ -23,6 +23,3 @@ $RECYCLE.BIN/
 /src/EMRCorefResol.IO/obj/Debug
 *.suo
 *.user
-
-Libs file
-libs/**/models/

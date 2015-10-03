@@ -119,7 +119,6 @@
     <Compile Include="Service\ServiceModels\Definition.cs" />
     <Compile Include="Service\ServiceModels\WordType.cs" />
     <Compile Include="TrainingSystem.cs" />
-    <Compile Include="Utilities\Cache.cs" />
     <Compile Include="Utilities\EMRCollection.cs" />
     <Compile Include="Utilities\Keywords\IKeywordDictionary.cs" />
     <Compile Include="Utilities\Range.cs" />

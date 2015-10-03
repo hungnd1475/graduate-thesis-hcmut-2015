@@ -9,6 +9,7 @@ using static HCMUT.EMRCorefResol.Logging.LoggerFactory;
 using System.Runtime.InteropServices;
 using HCMUT.EMRCorefResol.Classification.LibSVM.Internal;
 using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace HCMUT.EMRCorefResol.Classification.LibSVM
 {
@@ -29,6 +30,9 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
         SIGMOID = 3
     }
 
+    [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+    public delegate void LibSVMPrintFunction([In, MarshalAs(UnmanagedType.LPStr)] string s);
+
     static class LibSVM
     {
         public const string ToolsPath = "LibSVM";
@@ -36,6 +40,8 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
         public const string SVMScalePath = ToolsPath + "\\svm-scale.exe";
         public const string SVMPredictPath = ToolsPath + "\\svm-predict.exe";
         public const string DllPath = ToolsPath + "\\libsvm.dll";
+
+        private static readonly Regex CVOutputPattern = new Regex("Cross Validation Accuracy = (?<a>[\\w\\W]+)%\n");
 
         public static void RunSVMScale(double lower, double upper, string sfPath, string dataPath, string scaledDataPath)
         {
@@ -53,6 +59,22 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             {
                 sw.Write(p.StandardOutput.ReadToEnd());
             }
+        }
+
+        public static string RunSVMScale(double lower, double upper, string sfPath, string dataPath)
+        {
+            var pInfo = new ProcessStartInfo()
+            {
+                FileName = SVMScalePath,
+                Arguments = $"-l {lower} -u {upper} -s {sfPath} {dataPath}",
+                RedirectStandardOutput = true,
+                CreateNoWindow = true,
+                UseShellExecute = false
+            };
+
+            var p = Process.Start(pInfo);
+            var output = p.StandardOutput.ReadToEnd();
+            return output;
         }
 
         public static void RunSVMScale(string sfPath, string dataPath, string scaledDataPath)
@@ -93,6 +115,44 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             {
                 FileName = SVMTrainPath,
                 Arguments = $"-s {type} -t {kernel} {dataPath} {modelPath}",
+                UseShellExecute = false,
+                RedirectStandardOutput = true,
+                CreateNoWindow = true
+            };
+
+            var p = Process.Start(pInfo);
+            var output = p.StandardOutput.ReadToEnd();
+            if (shouldLog)
+            {
+                GetLogger().WriteInfo(output);
+            }
+        }
+
+        public static void RunSVMTrainRBFKernel(double cost, double gamma, string dataPath, string modelPath, bool shouldLog)
+        {
+            var pInfo = new ProcessStartInfo()
+            {
+                FileName = SVMTrainPath,
+                Arguments = $"-s {SVMType.C_SVC} -t {SVMKernel.RBF} -c {cost} -g {gamma} {dataPath} {modelPath}",
+                UseShellExecute = false,
+                RedirectStandardOutput = true,
+                CreateNoWindow = true
+            };
+
+            var p = Process.Start(pInfo);
+            var output = p.StandardOutput.ReadToEnd();
+            if (shouldLog)
+            {
+                GetLogger().WriteInfo(output);
+            }
+        }
+
+        public static void RunSVMTrainRBFKernel(string dataPath, string modelPath, bool shouldLog)
+        {
+            var pInfo = new ProcessStartInfo()
+            {
+                FileName = SVMTrainPath,
+                Arguments = $"-s {SVMType.C_SVC} -t {SVMKernel.RBF} {dataPath} {modelPath}",
                 UseShellExecute = false,
                 RedirectStandardOutput = true,
                 CreateNoWindow = true
@@ -174,18 +234,22 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             return result;
         }
 
-        public static SVMProblem ReadProblem(string content)
+        public static SVMProblem ReadProblem(string content, int? maxLine)
         {
             NumberFormatInfo provider = new NumberFormatInfo();
             provider.NumberDecimalSeparator = ".";
 
             SVMProblem problem = new SVMProblem();
+            int readLine = 0;
+
             using (var sr = new StringReader(content))
             {
                 while (true)
                 {
                     string line = sr.ReadLine();
-                    if (line == null)
+                    readLine += 1;
+
+                    if (line == null || (maxLine != null && readLine > maxLine))
                         break;
 
                     string[] list = line.Trim().Split(' ');
@@ -209,6 +273,33 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             return problem;
         }
 
+        public static double[] RBFKernelCrossValidation(double cost, double gammar, int nFolds, SVMProblem problem)
+        {
+            var parameter = new SVMParameter()
+            {
+                Type = SVMType.C_SVC,
+                Kernel = SVMKernel.RBF,
+                C = cost,
+                Gamma = gammar
+            };
+
+            IntPtr ptr_target = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(double)) * problem.Length);
+            IntPtr ptr_problem = SVMProblem.Allocate(problem);
+            IntPtr ptr_parameter = SVMParameter.Allocate(parameter);
+
+            CrossValidation(ptr_problem, ptr_parameter, nFolds, ptr_target);
+
+            var target = new double[problem.Length];
+            Marshal.Copy(ptr_target, target, 0, target.Length);
+
+            SVMProblem.Free(ptr_problem);
+            SVMParameter.Free(ptr_parameter);
+            Marshal.FreeHGlobal(ptr_target);
+            ptr_target = IntPtr.Zero;
+
+            return target;
+        }
+
         /// <param name="modelPath">string</param>
         /// <returns></returns>
         [DllImport(DllPath, CallingConvention = CallingConvention.Cdecl, EntryPoint = "svm_load_model")]
@@ -223,5 +314,18 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
         /// <param name="model">svm_model</param>
         [DllImport(DllPath, CallingConvention = CallingConvention.Cdecl, EntryPoint = "svm_free_model_content")]
         private static extern void FreeModelContent(IntPtr model);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="prob">SVMProblem</param>
+        /// <param name="param">SVMParameter</param>
+        /// <param name="nr_fold">int</param>
+        /// <param name="target">double[]</param>
+        [DllImport(DllPath, CallingConvention = CallingConvention.Cdecl, EntryPoint = "svm_cross_validation")]
+        private static extern void CrossValidation(IntPtr prob, IntPtr param, int nr_fold, IntPtr target);
+
+        [DllImport(DllPath, CallingConvention = CallingConvention.Cdecl, EntryPoint = "svm_set_print_string_function")]
+        public static extern void SetPrintStringFunction([MarshalAs(UnmanagedType.FunctionPtr)] LibSVMPrintFunction func);
     }
 }

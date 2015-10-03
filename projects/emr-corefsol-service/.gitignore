@@ -1,12 +1,10 @@
-# ASP.NET ignore
-**/App_Data/Libs
-
+﻿# ASP.NET ignore
+**/App_Data/Models/OpenNLP
 ###################
 # compiled source #
 ###################
 *.com
 *.class
-*.dll
 *.exe
 *.pdb
 *.dll.config
@@ -17,6 +15,7 @@
 !/packages/*/lib/*/*.dll
 # Include dlls if they're in the CommonReferences directory
 !*CommonReferences/*.dll
+# Include dlls in the libs directory
 ####################
 # VS Upgrade stuff #
 ####################
@@ -72,7 +71,6 @@ packages
 NuGet.exe
 _[Ss]cripts
 *.exe
-*.dll
 *.nupkg
 *.ncrunchsolution
 *.dot[Cc]over

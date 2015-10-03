@@ -22,9 +22,9 @@ namespace emr_corefsol_service.Controllers
 
         public NLPController()
         {
-            _helper = new OpenNLPHelper(HostingEnvironment.MapPath(@"~\app_data\libs\OpenNLP\"));
-            //_helper = new SharpNLPHelper(HostingEnvironment.MapPath(@"~\app_data\libs\sharpNLP\Models\"));
-            //_helper = new StanfordNLPHelper(HostingEnvironment.MapPath(@"~\app_data\libs\StanfordNLP"));
+            _helper = new OpenNLPHelper(HostingEnvironment.MapPath(@"~\app_data\models\OpenNLP\"));
+            //_helper = new SharpNLPHelper(HostingEnvironment.MapPath(@"~\app_data\models\sharpNLP\"));
+            //_helper = new StanfordNLPHelper(HostingEnvironment.MapPath(@"~\app_data\models\StanfordNLP\"));
         }
 
 
