@@ -13,37 +13,28 @@ namespace HCMUT.EMRCorefResol.English.Features
         public DoctorTitleMatchFeature(PersonPair instance)
             : base("DoctorTitle-Match", 2)
         {
-            /*string kw = null;
-            var drTitles = Settings.Default.DoctorTitles;
-
-            foreach (var tt in drTitles)
-            {
-                if (instance.Antecedent.Lexicon.ToLower().Contains(tt))
-                {
-                    kw = tt;
-                    break;
-                }
-            }
-
-            SetCategoricalValue((kw != null && instance.Anaphora.Lexicon.ToLower().Contains(kw)) ? 1 : 0);*/
-
-            var searcher = KeywordService.Instance.DOCTOR_TITLES;
-            var kws = searcher.SearchKeywords(instance.Anaphora.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
-            if (kws == null || kws.Length < 1)
+            var searcher = KeywordService.Instance.DOCTOR_KEYWORDS;
+            var kws1 = searcher.SearchKeywords(instance.Anaphora.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
+            if (kws1 == null || kws1.Length < 1)
             {
                 SetCategoricalValue(0);
                 return;
             }
 
-            searcher = new AhoCorasickKeywordDictionary(kws);
-            kws = searcher.SearchKeywords(instance.Antecedent.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
-            if (kws == null || kws.Length < 1)
+            var kws2 = searcher.SearchKeywords(instance.Antecedent.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
+            if (kws2 == null || kws2.Length < 1)
             {
                 SetCategoricalValue(0);
                 return;
             }
 
-            SetCategoricalValue(1);
+            kws1 = kws1.Select(x => x.Replace(".", "")).ToArray();
+            kws2 = kws2.Select(x => x.Replace(".", "")).ToArray();
+
+            if (kws1.Intersect(kws2).Count() > 0)
+            {
+                SetCategoricalValue(1);
+            }
         }
     }
 }

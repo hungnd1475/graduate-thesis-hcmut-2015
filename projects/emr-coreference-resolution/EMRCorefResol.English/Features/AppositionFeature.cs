@@ -24,5 +24,30 @@ namespace HCMUT.EMRCorefResol.English.Features
                 }
             }
         }
+
+        public AppositionFeature(ISingleConcept instance, EMR emr)
+            :base("Apposition", 2, 0)
+        {
+            if(instance.Concept.Begin.WordIndex == 0)
+            {
+                return;
+            }
+
+            var line = EMRExtensions.GetLine(emr, instance.Concept.Begin.Line);
+            var tokens = line.Replace("  ", " ").Replace("\r", "").Split(' ');
+
+            if(instance.Concept.End.WordIndex >= tokens.Length - 1)
+            {
+                return;
+            }
+
+            var preceeded = tokens[instance.Concept.Begin.WordIndex - 1];
+            var followup = tokens[instance.Concept.End.WordIndex + 1];
+
+            if(preceeded.Equals(",") && followup.Equals(","))
+            {
+                SetCategoricalValue(1);
+            }
+        }
     }
 }
