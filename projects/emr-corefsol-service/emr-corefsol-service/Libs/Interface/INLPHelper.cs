@@ -10,5 +10,6 @@ namespace emr_corefsol_service.Libs
     {
         string[] POSTag(string term);
         string[] Tokenize(string term);
+        string[] Chunk(string term);
     }
 }

@@ -23,6 +23,11 @@ namespace emr_corefsol_service.Libs
             _tokenizer = new EnglishMaximumEntropyTokenizer(modelsURL + "EnglishTok.nbin");
         }
 
+        public string[] Chunk(string term)
+        {
+            throw new NotImplementedException();
+        }
+
         public string[] Tokenize(string term)
         {
             if (term==null)
