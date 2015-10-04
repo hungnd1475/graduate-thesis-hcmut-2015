@@ -43,7 +43,7 @@ namespace emr_corefsol_service.Libs
             string[] res = new string[tokens.Length];
             for(int i=0; i<tokens.Length; i++)
             {
-                res[i] = tokens[i] + "/" + chunks[i];
+                res[i] = tokens[i] + "|" + chunks[i];
             }
 
             return res;
@@ -80,7 +80,7 @@ namespace emr_corefsol_service.Libs
             string[] res = new string[tokens.Length];
             for (int i = 0; i < tokens.Length; i++)
             {
-                res[i] = tokens[i] + "/" + tags[i];
+                res[i] = tokens[i] + "|" + tags[i];
             }
 
             return res;

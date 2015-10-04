@@ -18,7 +18,7 @@ namespace HCMUT.EMRCorefResol.English.Features
             if (instance.Concept.End.WordIndex < chunks.Length -1)
             {
                 var nextChunk = chunks[instance.Concept.Begin.WordIndex + 1];
-                var tags = nextChunk.Split('/')[1].Split('-');
+                var tags = nextChunk.Split('|')[1].Split('-');
                 if (!tags[0].Equals("O", StringComparison.InvariantCultureIgnoreCase))
                 {
                     var index = getChunkIndex(tags[1]);

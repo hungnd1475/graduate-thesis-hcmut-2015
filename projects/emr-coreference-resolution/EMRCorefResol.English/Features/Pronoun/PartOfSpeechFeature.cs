@@ -15,7 +15,7 @@ namespace HCMUT.EMRCorefResol.English.Features
 
             if (tagged != null)
             {
-                switch (tagged[0].Split('/')[1])
+                switch (tagged[0].Split('|')[1])
                 {
                     case "DT":
                         SetCategoricalValue(0);
