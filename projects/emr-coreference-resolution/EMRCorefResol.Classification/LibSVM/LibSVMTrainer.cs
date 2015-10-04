@@ -69,13 +69,13 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             var scaledData = LibSVM.RunSVMScale(0d, 1d, sfPath, rawPrbPath);
 
             // optimize parameter for rbf kernel
-            GetLogger().WriteInfo($"Performing grid search on {name} problem...");
+            GetLogger().WriteInfo($"Performing grid search on {name} problem ({problem.Size} instances)...");
 
             double cost = 1, gamma = 1d / problem.X[0].Length;
             double accuracy = -1d;
             if (_gridSearchConfig != null)
             {
-                accuracy = RBFParameterOptimizer.Optimize(_gridSearchConfig, 5, scaledData, problem.Y.ToArray(), out cost, out gamma);
+                accuracy = RBFParameterOptimizer.Optimize(_gridSearchConfig, 5, scaledData, out cost, out gamma);
             }
 
             using (var sr = new StreamWriter(scaledPrbPath))
@@ -106,9 +106,9 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
 
         private static class RBFParameterOptimizer
         {
-            private const int PROBLEM_MAX_LENGTH = 80000;
+            private const int PROBLEM_MAX_LENGTH = 10000;
 
-            public static double Optimize(GridSearchConfig config, int nfold, string data, double[] y, out double cost, out double gamma)
+            public static double Optimize(GridSearchConfig config, int nfold, string data, out double cost, out double gamma)
             {
                 LibSVM.SetPrintStringFunction(new LibSVMPrintFunction(DummyPrint));
                 var allProblem = LibSVM.ReadProblem(data, null);
@@ -129,8 +129,8 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
                 if (bestAcc != null)
                 {
                     var bestRegionConfig = new GridSearchConfig(
-                        Range.Create(bestAcc.Cost - 2, bestAcc.Cost + 2), 0.25d,
-                        Range.Create(bestAcc.Gamma - 2, bestAcc.Gamma + 2), 0.25d);
+                        Range.Create(bestAcc.Cost - 1, bestAcc.Cost + 1), 0.25d,
+                        Range.Create(bestAcc.Gamma - 1, bestAcc.Gamma + 1), 0.25d);
 
                     var accInfos = Search(bestRegionConfig, nfold, allProblem);
                     bestAcc = FindBest(accInfos);
@@ -139,7 +139,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
                     {
                         cost = bestAcc.Cost;
                         gamma = bestAcc.Gamma;
-                        return (double)bestAcc.CorrectCount / y.Length;
+                        return (double)bestAcc.CorrectCount / allProblem.Length;
                     }
                 }
 
@@ -151,11 +151,16 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             private static AccuracyInfo[] Search(GridSearchConfig config, int nfold, SVMProblem problem)
             {
                 var accInfos = CreateGrid(config);
+                GetLogger().WriteInfo("Entering parallel grid search operation...");
+
                 Parallel.For(0, accInfos.Length, (i) =>
                 {
                     var a = accInfos[i];
                     var target = LibSVM.RBFKernelCrossValidation(Math.Pow(2, a.Cost), Math.Pow(2, a.Gamma), nfold, problem);
-                    a.CorrectCount = Enumerable.Range(0, target.Length).Where(k => target[k] == problem.Y[k]).Count();
+                    a.CorrectCount = Enumerable.Range(0, target.Length).Aggregate(0, (count, k) =>
+                    {
+                        return target[k] == problem.Y[k] ? count + 1 : count;
+                    });
                 });
                 return accInfos;
             }

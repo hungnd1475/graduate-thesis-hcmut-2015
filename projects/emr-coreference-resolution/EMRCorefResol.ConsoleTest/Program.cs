@@ -40,8 +40,8 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             //testTrainer();
             //testLoadClassifier();
             //testService();
-            //var path = testTrainManyEMR(10);
-            testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", 20);
+            var path = testTrainManyEMR(20);
+            //testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", 20);
             //testClassifier(path, 1);
             //testAhoCorasick();
 
@@ -135,8 +135,8 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
         {
             var trainer = new LibSVMTrainer(
                 new GridSearchConfig(
-                    Range.Create(-5d, 15d), 2, // c range and step
-                    Range.Create(-15d, 3d), 2)); // gamma range and step
+                    Range.Create(-5d, 5d), 2, // c range and step
+                    Range.Create(-5d, 5d), 2)); // gamma range and step
 
             var dataReader = new I2B2DataReader();
             var preprocessor = new SimplePreprocessor();
