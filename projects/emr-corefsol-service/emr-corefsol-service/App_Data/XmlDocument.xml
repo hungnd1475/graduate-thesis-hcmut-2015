@@ -503,17 +503,17 @@
             <param name="term">Lookup term</param>
             <returns></returns>
         </member>
-        <member name="P:emr_corefsol_service.Response.CustomResponse.success">
+        <member name="P:emr_corefsol_service.Response.CustomResponse.IsSuccess">
             <summary>
             Success or Fail
             </summary>
         </member>
-        <member name="P:emr_corefsol_service.Response.CustomResponse.data">
+        <member name="P:emr_corefsol_service.Response.CustomResponse.Data">
             <summary>
             Data return from action
             </summary>
         </member>
-        <member name="P:emr_corefsol_service.Response.CustomResponse.message">
+        <member name="P:emr_corefsol_service.Response.CustomResponse.Message">
             <summary>
             Error message if fail
             </summary>

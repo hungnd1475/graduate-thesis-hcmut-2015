@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Web;
 using Newtonsoft.Json;
 
 namespace HCMUT.EMRCorefResol.Service
@@ -15,7 +15,7 @@ namespace HCMUT.EMRCorefResol.Service
 
         public static string[] POSTag(string term)
         {
-            var url = API_URL + "nlp/pos?term=" + term;
+            var url = API_URL + "nlp/pos?term=" + HttpUtility.UrlEncode(term);
             var res = _http.Request(url);
 
             if (!res.IsSuccess)
@@ -31,7 +31,7 @@ namespace HCMUT.EMRCorefResol.Service
 
         public static string[] Tokenize(string term)
         {
-            var url = API_URL + "nlp/token?term=" + term;
+            var url = API_URL + "nlp/token?term=" + HttpUtility.UrlEncode(term);
             var res = _http.Request(url);
 
             if (!res.IsSuccess)
@@ -47,7 +47,7 @@ namespace HCMUT.EMRCorefResol.Service
 
         public static Definition[] GetSyncSets(string term)
         {
-            var url = API_URL + "dictionary/synsets?term=" + term;
+            var url = API_URL + "dictionary/synsets?term=" + HttpUtility.UrlEncode(term);
             var res = _http.Request(url);
 
             if (!res.IsSuccess)
@@ -61,7 +61,7 @@ namespace HCMUT.EMRCorefResol.Service
 
         public static string[] getChunks(string term)
         {
-            var url = API_URL + "nlp/chunk?term=" + term;
+            var url = API_URL + "nlp/chunk?term=" + HttpUtility.UrlEncode(term);
             var res = _http.Request(url);
 
             if (!res.IsSuccess)
