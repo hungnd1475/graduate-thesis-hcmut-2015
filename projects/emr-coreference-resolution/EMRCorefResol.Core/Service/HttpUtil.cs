@@ -11,13 +11,15 @@ namespace HCMUT.EMRCorefResol.Service
 {
     public class HttpUtil
     {
-        public CustomResponse get(string url)
+        public CustomResponse Request(string url)
         {
-            WebRequest request = WebRequest.Create(url);
-            Stream s = request.GetResponse().GetResponseStream();
-            StreamReader r = new StreamReader(s);
-            var res = r.ReadToEnd();
-            return JsonConvert.DeserializeObject<CustomResponse>(res);
+            var request = WebRequest.Create(url);
+            var s = request.GetResponse().GetResponseStream();
+            using (var r = new StreamReader(s))
+            {
+                var res = r.ReadToEnd();
+                return JsonConvert.DeserializeObject<CustomResponse>(res);
+            }
         }
     }
 }

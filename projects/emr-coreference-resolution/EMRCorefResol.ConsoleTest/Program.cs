@@ -178,8 +178,8 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
         static void testService()
         {
-            Console.WriteLine(string.Join(" ", Service.English.getPOS("Annie goes to school")));
-            Console.WriteLine(Service.English.getSyns("table")[1]);
+            Console.WriteLine(string.Join(" ", Service.English.POSTag("Annie goes to school")));
+            Console.WriteLine(Service.English.GetSyncSets("table")[1]);
         }
 
         static void testAhoCorasick()

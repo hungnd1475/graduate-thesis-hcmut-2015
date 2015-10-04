@@ -11,56 +11,51 @@ namespace HCMUT.EMRCorefResol.Service
     public static class English
     {
         private const string API_URL = "http://localhost:8181/api/";
+        private static readonly HttpUtil _http = new HttpUtil();
 
-        public static string[] getPOS(string term)
+        public static string[] POSTag(string term)
         {
-            HttpUtil http = new HttpUtil();
             var url = API_URL + "nlp/pos?term=" + term;
+            var res = _http.Request(url);
 
-            CustomResponse res = http.get(url);
-
-            if (!res.success)
+            if (!res.IsSuccess)
             {
                 return null;
             }
 
-            return ((System.Collections.IEnumerable)res.data)
+            return ((System.Collections.IEnumerable)res.Data)
               .Cast<object>()
               .Select(x => x.ToString())
               .ToArray();
         }
 
-        public static string[] getTokens(string term)
+        public static string[] Tokenize(string term)
         {
-            HttpUtil http = new HttpUtil();
             var url = API_URL + "nlp/token?term=" + term;
+            var res = _http.Request(url);
 
-            CustomResponse res = http.get(url);
-
-            if (!res.success)
+            if (!res.IsSuccess)
             {
                 return null;
             }
 
-            return ((System.Collections.IEnumerable)res.data)
+            return ((System.Collections.IEnumerable)res.Data)
               .Cast<object>()
               .Select(x => x.ToString())
               .ToArray();
         }
 
-        public static Definition[] getSyns(string term)
+        public static Definition[] GetSyncSets(string term)
         {
-            HttpUtil http = new HttpUtil();
             var url = API_URL + "dictionary/synsets?term=" + term;
+            var res = _http.Request(url);
 
-            CustomResponse res = http.get(url);
-
-            if (!res.success)
+            if (!res.IsSuccess)
             {
                 return null;
             }
 
-            var json = res.data.ToString();
+            var json = res.Data.ToString();
             return JsonConvert.DeserializeObject<Definition[]>(json);
         }
     }

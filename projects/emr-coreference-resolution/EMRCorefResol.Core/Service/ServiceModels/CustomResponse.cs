@@ -8,8 +8,8 @@ namespace HCMUT.EMRCorefResol.Service
 {
     public class CustomResponse
     {
-        public bool success { get; set; }
-        public Object data { get; set; }
-        public string message { get; set; }
+        public bool IsSuccess { get; set; }
+        public object Data { get; set; }
+        public string Message { get; set; }
     }
 }

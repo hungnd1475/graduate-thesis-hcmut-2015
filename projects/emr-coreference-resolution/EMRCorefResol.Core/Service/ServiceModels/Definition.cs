@@ -8,18 +8,20 @@ namespace HCMUT.EMRCorefResol.Service
 {
     public class Definition
     {
-        public WordType pos;
-        public string Gloss;
-        public string[] Words;
+        public WordType POS { get; }
+        public string Gloss { get; }
+        public string[] Words { get; }
+
         public Definition(WordType p, string g, string[] w)
         {
-            pos = p;
+            POS = p;
             Gloss = g;
             Words = w;
         }
+
         public override string ToString()
         {
-            return "(" + pos + "): " + Gloss;
+            return "(" + POS + "): " + Gloss;
         }
     }
 }

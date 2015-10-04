@@ -10,23 +10,23 @@ namespace emr_corefsol_service.Response
         /// <summary>
         /// Success or Fail
         /// </summary>
-        public bool success { get; set; }
+        public bool IsSuccess { get; set; }
 
         /// <summary>
         /// Data return from action
         /// </summary>
-        public Object data { get; set; }
+        public object Data { get; set; }
 
         /// <summary>
         /// Error message if fail
         /// </summary>
-        public string message { get; set; }
+        public string Message { get; set; }
 
-        public CustomResponse(bool s, Object d, string m)
+        public CustomResponse(bool s, object d, string m)
         {
-            success = s;
-            data = d;
-            message = m;
+            IsSuccess = s;
+            Data = d;
+            Message = m;
         }
     }
 }

@@ -11,27 +11,25 @@ namespace HCMUT.EMRCorefResol.English.Features
         public PartOfSpeechFeature(PronounInstance instance)
             : base("Part-of-Speech", 4, 3)
         {
-            var tagged = Service.English.getPOS(instance.Concept.Lexicon);
+            var tagged = Service.English.POSTag(instance.Concept.Lexicon);
 
-            if(tagged == null)
+            if (tagged != null)
             {
-                SetCategoricalValue(3);
-            }
-
-            switch (tagged[0].Split('/')[1])
-            {
-                case "DT":
-                    SetCategoricalValue(0);
-                    break;
-                case "WDT":
-                    SetCategoricalValue(1);
-                    break;
-                case "PRP":
-                    SetCategoricalValue(2);
-                    break;
-                default:
-                    SetCategoricalValue(3);
-                    break;
+                switch (tagged[0].Split('/')[1])
+                {
+                    case "DT":
+                        SetCategoricalValue(0);
+                        break;
+                    case "WDT":
+                        SetCategoricalValue(1);
+                        break;
+                    case "PRP":
+                        SetCategoricalValue(2);
+                        break;
+                    default:
+                        SetCategoricalValue(3);
+                        break;
+                }
             }
         }
     }
