@@ -23,7 +23,7 @@ namespace emr_corefsol_service.Libs
             _tokenizer = new EnglishMaximumEntropyTokenizer(modelsURL + "EnglishTok.nbin");
         }
 
-        public string[] tokenize(string term)
+        public string[] Tokenize(string term)
         {
             if (term==null)
             {
@@ -32,7 +32,7 @@ namespace emr_corefsol_service.Libs
             return _tokenizer.Tokenize(term);
         }
 
-        public string[] getPOS(string term)
+        public string[] POSTag(string term)
         {
             var tokenized = _tokenizer.Tokenize(term);
 

@@ -32,7 +32,7 @@ namespace emr_corefsol_service.Libs
             Directory.SetCurrentDirectory(curDir);
         }
 
-        public string[] getPOS(string term)
+        public string[] POSTag(string term)
         {
             Annotation document = new Annotation(term);
             pipeline.annotate(document);
@@ -78,7 +78,7 @@ namespace emr_corefsol_service.Libs
             return "unknow";
         }
 
-        public string[] tokenize(string term)
+        public string[] Tokenize(string term)
         {
             Annotation document = new Annotation(term);
             pipeline.annotate(document);

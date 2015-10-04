@@ -8,7 +8,7 @@ namespace emr_corefsol_service.Libs
 {
     interface INLPHelper
     {
-        string[] getPOS(string term);
-        string[] tokenize(string term);
+        string[] POSTag(string term);
+        string[] Tokenize(string term);
     }
 }

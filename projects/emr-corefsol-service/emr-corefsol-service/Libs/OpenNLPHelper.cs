@@ -12,46 +12,42 @@ namespace emr_corefsol_service.Libs
 {
     public class OpenNLPHelper : INLPHelper
     {
-        private string modelsRoot = null;
-        private POSTaggerME _tagger = null;
-        private TokenizerME _tokenizer = null;
+        private readonly POSModel _POSModel;
+        private readonly TokenizerModel _tokenizerModel;
 
         public OpenNLPHelper(string rootPath)
         {
-            modelsRoot = rootPath;
-
-            var posModel = new POSModel(new File(modelsRoot + "en-pos-maxent.bin"));
-            _tagger = new POSTaggerME(posModel);
-
-            var tokModel = new TokenizerModel(new File(modelsRoot + "en-token.bin"));
-            _tokenizer = new TokenizerME(tokModel);
+            _POSModel = new POSModel(new File(rootPath + "en-pos-maxent.bin"));
+            _tokenizerModel = new TokenizerModel(new File(rootPath + "en-token.bin"));
         }
 
-        public string[] tokenize(string term)
+        public string[] Tokenize(string term)
         {
             if (term == null)
             {
                 return null;
             }
 
-            return _tokenizer.tokenize(term);
+            var tokenizer = new TokenizerME(_tokenizerModel);
+            return tokenizer.tokenize(term);
         }
 
-        public string[] getPOS(string term)
+        public string[] POSTag(string term)
         {
             if (term == null)
             {
                 return null;
             }
 
-            var tokens = _tokenizer.tokenize(term);
+            var tokens = Tokenize(term);
 
-            if(tokens == null)
+            if (tokens == null)
             {
                 return null;
             }
 
-            var tags = _tagger.tag(tokens);
+            var tagger = new POSTaggerME(_POSModel);
+            var tags = tagger.tag(tokens);
 
             string[] res = new string[tokens.Length];
             for (int i = 0; i < tokens.Length; i++)

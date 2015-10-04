@@ -18,15 +18,12 @@ namespace emr_corefsol_service.Controllers
     using Libs;
     public class NLPController : ApiController
     {
-        private readonly INLPHelper _helper = null;
+        private static readonly INLPHelper NLP_HELPER;
 
-        public NLPController()
+        static NLPController()
         {
-            _helper = new OpenNLPHelper(HostingEnvironment.MapPath(@"~\app_data\models\OpenNLP\"));
-            //_helper = new SharpNLPHelper(HostingEnvironment.MapPath(@"~\app_data\models\sharpNLP\"));
-            //_helper = new StanfordNLPHelper(HostingEnvironment.MapPath(@"~\app_data\models\StanfordNLP\"));
+            NLP_HELPER = new OpenNLPHelper(HostingEnvironment.MapPath(@"~\app_data\models\OpenNLP\"));
         }
-
 
         /// <summary>
         /// GET Gramma Part of Speech from term
@@ -37,7 +34,7 @@ namespace emr_corefsol_service.Controllers
         [ActionName("POS")]
         public CustomResponse GetPOS(string term)
         {
-            var pos = _helper.getPOS(term);
+            var pos = NLP_HELPER.POSTag(term);
 
             if (pos == null)
             {
@@ -55,7 +52,7 @@ namespace emr_corefsol_service.Controllers
         [ActionName("Token")]
         public CustomResponse GetTokens(string term)
         {
-            var tokens = _helper.tokenize(term);
+            var tokens = NLP_HELPER.Tokenize(term);
 
             if(tokens == null)
             {
