@@ -61,17 +61,15 @@ namespace HCMUT.EMRCorefResol.Service
 
         public static string[] getChunks(string term)
         {
-            HttpUtil http = new HttpUtil();
             var url = API_URL + "nlp/chunk?term=" + term;
+            var res = _http.Request(url);
 
-            CustomResponse res = http.get(url);
-
-            if (!res.success)
+            if (!res.IsSuccess)
             {
                 return null;
             }
 
-            return ((System.Collections.IEnumerable)res.data)
+            return ((System.Collections.IEnumerable)res.Data)
               .Cast<object>()
               .Select(x => x.ToString())
               .ToArray();
