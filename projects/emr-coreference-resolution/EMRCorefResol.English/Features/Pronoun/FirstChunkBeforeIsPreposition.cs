@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol.English.Features
 {
+    /// <summary>
+    /// Set value = 1 if 1st chunk before is preposition (PP in chunking)
+    /// </summary>
     class FirstChunkBeforeIsPreposition : Feature
     {
         public FirstChunkBeforeIsPreposition(FirstChunkBeforeMention feature)

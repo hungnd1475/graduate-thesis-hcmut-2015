@@ -26,7 +26,7 @@ namespace HCMUT.EMRCorefResol.English
             this[9] = new WeInformationFeature(instance);
             this[10] = new DoctorTitleMatchFeature(instance);
             this[11] = new DoctorGeneralMatch(instance);
-            this[12] = new NumberFeature(instance);
+            this[12] = new NumberFeature(instance, emr);
             this[13] = new AliasFeature(instance);
             this[14] = new GenderFeature(instance, emr);
             this[15] = new WhoFeatures(instance, emr);

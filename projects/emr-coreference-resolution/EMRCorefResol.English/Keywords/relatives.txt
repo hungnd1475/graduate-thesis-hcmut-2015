@@ -3,6 +3,7 @@ wife
 spouse
 father
 mother
+parent
 parents
 son
 daughter
@@ -10,7 +11,9 @@ child
 children
 brother
 sister
+sibling
 siblings
+twin
 twins
 uncle
 aunt

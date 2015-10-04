@@ -61,7 +61,7 @@ namespace HCMUT.EMRCorefResol.English.Features
             s = new AhoCorasickKeywordDictionary(new string[] { "mother", "sister", "she", "her", "herself", "wife", "daughter", "aunt", "niece", "mom" });
             if (s.Match(name, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
             {
-                return 0;
+                return 1;
             }
 
             var searcher = KeywordService.Instance.MALE_TITLES;
@@ -107,14 +107,23 @@ namespace HCMUT.EMRCorefResol.English.Features
 
         private int getGender(string name)
         {
-            var searcher = KeywordService.Instance.MALE_NAMES;
-            if(searcher.Match(name, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
+            var searcher = KeywordService.Instance.DOCTOR_KEYWORDS;
+            var nameNormal = searcher.RemoveKeywords(name, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord);
+
+            if(Service.English.Tokenize(nameNormal) == null)
+            {
+                return 2;
+            }
+            nameNormal = Service.English.Tokenize(nameNormal)[0];
+
+            searcher = KeywordService.Instance.MALE_NAMES;
+            if(searcher.Match(nameNormal, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
             {
                 return 0;
             }
 
             searcher = KeywordService.Instance.FEMALE_NAMES;
-            if (searcher.Match(name, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
+            if (searcher.Match(nameNormal, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
             {
                 return 1;
             }
