@@ -61,7 +61,7 @@ namespace HCMUT.EMRCorefResol.English.Features
             s = new AhoCorasickKeywordDictionary(new string[] { "mother", "sister", "she", "her", "herself", "wife", "daughter", "aunt", "niece", "mom" });
             if (s.Match(name, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
             {
-                return 0;
+                return 1;
             }
 
             var searcher = KeywordService.Instance.MALE_TITLES;

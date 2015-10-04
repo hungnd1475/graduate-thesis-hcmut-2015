@@ -9,52 +9,85 @@ using System.Globalization;
 
 namespace HCMUT.EMRCorefResol.English.Features
 {
+    using Utilities;
     class NumberFeature : Feature
     {
-        public NumberFeature(PersonPair instance)
-            : base("Number-Information", 3, 0)
+        /// <summary>
+        /// Set value = 0 if not both are singular or plural
+        /// Set value = 1 if both are singular or plural
+        /// Set value = 2 if one is undefine
+        /// </summary>
+        /// <param name="instance"></param>
+        /// <param name="emr"></param>
+        public NumberFeature(PersonPair instance, EMR emr)
+            : base("Number-Information", 3, 2)
         {
-            PluralizationService ps = PluralizationService.CreateService(CultureInfo.GetCultureInfo("en-us"));
+            var anaForm = getForm(instance.Anaphora, emr);
+            var anteForm = getForm(instance.Antecedent, emr);
 
-            string[] plural = { "we", "they" };
-            string[] single = { "i", "you", "he", "she", "it" };
-
-            bool anaIsPlural = plural.Contains(instance.Anaphora.Lexicon.ToLower()) ||
-                ps.IsPlural(instance.Anaphora.Lexicon.ToLower());
-
-            bool anteIsPlural = plural.Contains(instance.Antecedent.Lexicon.ToLower()) ||
-                ps.IsPlural(instance.Antecedent.Lexicon.ToLower());
-
-            bool anaIsSingular = single.Contains(instance.Anaphora.Lexicon.ToLower()) ||
-                ps.IsSingular(instance.Anaphora.Lexicon.ToLower());
-
-            bool anteIsSingular = single.Contains(instance.Antecedent.Lexicon.ToLower()) ||
-                ps.IsSingular(instance.Antecedent.Lexicon.ToLower());
-
-
-            if (!anteIsSingular && !anteIsPlural)
+            if(anteForm == 2 || anaForm == 2)
             {
-                SetCategoricalValue(2);
                 return;
             }
 
-            if (!anaIsSingular && !anaIsPlural)
-            {
-                SetCategoricalValue(2);
-                return;
-            }
-
-            if (anaIsPlural && anteIsPlural)
+            if(anaForm == 0 && anteForm == 0)
             {
                 SetCategoricalValue(1);
                 return;
             }
 
-            if (anaIsSingular && anteIsSingular)
+            if (anaForm == 1 && anteForm == 1)
             {
                 SetCategoricalValue(1);
                 return;
             }
+
+            SetCategoricalValue(0);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="c"></param>
+        /// <param name="emr"></param>
+        /// <returns>
+        /// 0 if singular
+        /// 1 if plural
+        /// 2 if undefined
+        /// </returns>
+        private int getForm(Concept c, EMR emr)
+        {
+            var single = new AhoCorasickKeywordDictionary(new string[] { "i", "my", "you", "your", "he", "his", "she", "her", "patient" });
+            var relative = KeywordService.Instance.RELATIVES;
+            var isName = new NameFeature(new PersonInstance(c), emr);
+
+            if(single.Match(c.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord) ||
+                relative.Match(c.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord) ||
+                isName.GetCategoricalValue() == 1)
+            {
+                return 0;
+            }
+
+            var plural = new AhoCorasickKeywordDictionary(new string[] { "we", "they" });
+            if(plural.Match(c.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
+            {
+                return 1;
+            }
+
+            var pos = Service.English.POSTag(c.Lexicon);
+            if (pos != null)
+            {
+                var tag = pos[0].Split('|')[1];
+                if(tag.Equals("NN", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    return 0;
+                } else if (tag.Equals("NNS", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    return 1;
+                }
+            }
+
+            return 2;
         }
     }
 }
