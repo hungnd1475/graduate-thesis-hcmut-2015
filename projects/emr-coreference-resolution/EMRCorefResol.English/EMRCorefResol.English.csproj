@@ -96,6 +96,7 @@
     <Compile Include="Features\FirstChunkAfterMention.cs" />
     <Compile Include="Features\Pronoun\FirstChunkBeforeIsPreposition.cs" />
     <Compile Include="Features\FirstChunkBeforeMention.cs" />
+    <Compile Include="Features\Pronoun\FirstNextChunkIsVerb.cs" />
     <Compile Include="Features\RelativeKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\SignedInformationFeature.cs" />
     <Compile Include="Features\PersonPair\GenderFeature.cs" />
