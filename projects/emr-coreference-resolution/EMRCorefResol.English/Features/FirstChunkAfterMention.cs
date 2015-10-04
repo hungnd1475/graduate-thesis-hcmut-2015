@@ -8,7 +8,7 @@ namespace HCMUT.EMRCorefResol.English.Features
 {
     class FirstChunkAfterMention : Feature
     {
-        public FirstChunkAfterMention(PronounInstance instance, EMR emr)
+        public FirstChunkAfterMention(ISingleConcept instance, EMR emr)
             :base("First-ChunkAfter", 9, 0)
         {
             var line = EMRExtensions.GetLine(emr, instance.Concept.Begin.Line);

@@ -93,9 +93,9 @@
     <Compile Include="Features\PersonInstance\PronounTheyFeature.cs" />
     <Compile Include="Features\PersonInstance\PronounWeFeature.cs" />
     <Compile Include="Features\PersonInstance\PronounYouFeature.cs" />
-    <Compile Include="Features\Pronoun\FirstChunkAfterMention.cs" />
+    <Compile Include="Features\FirstChunkAfterMention.cs" />
     <Compile Include="Features\Pronoun\FirstChunkBeforeIsPreposition.cs" />
-    <Compile Include="Features\Pronoun\FirstChunkBeforeMention.cs" />
+    <Compile Include="Features\FirstChunkBeforeMention.cs" />
     <Compile Include="Features\RelativeKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\SignedInformationFeature.cs" />
     <Compile Include="Features\PersonPair\GenderFeature.cs" />
