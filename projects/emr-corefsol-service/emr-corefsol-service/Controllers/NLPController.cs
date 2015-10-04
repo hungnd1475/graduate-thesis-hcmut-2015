@@ -61,5 +61,18 @@ namespace emr_corefsol_service.Controllers
 
             return new CustomResponse(true, tokens, null);
         }
+
+        [ActionName("Chunk")]
+        public CustomResponse GetChunks(string term)
+        {
+            var chunks = NLP_HELPER.Chunk(term);
+
+            if (chunks == null)
+            {
+                return new CustomResponse(false, null, "Cannot tokenize");
+            }
+
+            return new CustomResponse(true, chunks, null);
+        }
     }
 }

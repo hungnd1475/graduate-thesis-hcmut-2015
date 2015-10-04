@@ -58,5 +58,23 @@ namespace HCMUT.EMRCorefResol.Service
             var json = res.Data.ToString();
             return JsonConvert.DeserializeObject<Definition[]>(json);
         }
+
+        public static string[] getChunks(string term)
+        {
+            HttpUtil http = new HttpUtil();
+            var url = API_URL + "nlp/chunk?term=" + term;
+
+            CustomResponse res = http.get(url);
+
+            if (!res.success)
+            {
+                return null;
+            }
+
+            return ((System.Collections.IEnumerable)res.data)
+              .Cast<object>()
+              .Select(x => x.ToString())
+              .ToArray();
+        }
     }
 }

@@ -98,6 +98,11 @@ namespace emr_corefsol_service.Libs
             return res.ToArray();
         }
 
+        public string[] Chunk(string term)
+        {
+            throw new NotImplementedException();
+        }
+
         private ArrayList getSentences(Annotation document)
         {
             var sentences = document.get(typeof(CoreAnnotations.SentencesAnnotation));
