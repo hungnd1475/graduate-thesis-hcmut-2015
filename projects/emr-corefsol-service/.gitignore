@@ -1,5 +1,4 @@
 ﻿# ASP.NET ignore
-**/App_Data/Models/OpenNLP
 ###################
 # compiled source #
 ###################
