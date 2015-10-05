@@ -25,7 +25,7 @@ namespace HCMUT.EMRCorefResol.English.Features
         {
             var line = EMRExtensions.GetLine(emr, instance.Concept.Begin.Line);
 
-            var chunks = Service.English.getChunks(line);
+            var chunks = Service.English.GetChunks(line);
 
             if (instance.Concept.End.WordIndex < chunks.Length - 1)
             {

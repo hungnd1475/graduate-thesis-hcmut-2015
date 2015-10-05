@@ -62,6 +62,11 @@ namespace emr_corefsol_service.Controllers
             return new CustomResponse(true, tokens, null);
         }
 
+        /// <summary>
+        /// Get Chunking from sentence
+        /// </summary>
+        /// <param name="term">Sentence need to be chunked</param>
+        /// <returns></returns>
         [ActionName("Chunk")]
         public CustomResponse GetChunks(string term)
         {
