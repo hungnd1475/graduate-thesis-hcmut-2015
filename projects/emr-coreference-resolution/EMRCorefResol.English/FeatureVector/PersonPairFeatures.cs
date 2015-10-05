@@ -15,7 +15,7 @@ namespace HCMUT.EMRCorefResol.English
             : base(size: 20, classValue: classValue)
         {
             this[0] = new PatientClassFeature(instance, patientDeterminer);
-            this[1] = new SentenceDistanceFeature(instance, emr);
+            this[1] = new SentenceDistanceFeature(instance);
             this[2] = new MentionDistanceFeature(instance, emr);
             this[3] = new StringMatchFeature(instance);
             this[4] = new LevenshteinDistanceFeature(instance);

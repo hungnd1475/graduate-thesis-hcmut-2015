@@ -8,7 +8,7 @@ namespace HCMUT.EMRCorefResol.English.Features
 {
     class SentenceDistanceFeature : Feature
     {
-        public SentenceDistanceFeature(IConceptPair instance, EMR emr)
+        public SentenceDistanceFeature(IConceptPair instance)
             : base("Sentence-Distance")
         {
             //var s = emr.ContentBetween(instance);

@@ -28,7 +28,9 @@ namespace HCMUT.EMRCorefResol.English
 
         public IFeatureVector Extract(TestPair instance)
         {
-            return null;
+            var classValue = GroundTruth.IsCoref(instance) ? 1.0 : 0.0;
+            return new TestPairFeatures(instance, EMR, classValue);
+            //return null;
         }
 
         public IFeatureVector Extract(PersonInstance instance)
@@ -62,12 +64,16 @@ namespace HCMUT.EMRCorefResol.English
 
         public IFeatureVector Extract(TreatmentPair instance)
         {
-            return null;
+            var classValue = GroundTruth.IsCoref(instance) ? 1.0 : 0.0;
+            return new TreatmentPairFeatures(instance, EMR, classValue);
+            //return null;
         }
 
         public IFeatureVector Extract(ProblemPair instance)
         {
-            return null;
+            var classValue = GroundTruth.IsCoref(instance) ? 1.0 : 0.0;
+            return new ProblemPairFeatures(instance, EMR, classValue);
+            //return null;
         }
 
         public IFeatureVector Extract(PersonPair instance)

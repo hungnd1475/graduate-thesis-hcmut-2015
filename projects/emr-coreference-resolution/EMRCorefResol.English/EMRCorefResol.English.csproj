@@ -131,7 +131,10 @@
     <Compile Include="FeatureVector\PersonPairFeatures.cs" />
     <Compile Include="Features\SentenceDistanceFeature.cs" />
     <Compile Include="Features\StringMatchFeature.cs" />
+    <Compile Include="FeatureVector\ProblemPairFeatures.cs" />
     <Compile Include="FeatureVector\PronounInstanceFeatures.cs" />
+    <Compile Include="FeatureVector\TestPairFeatures.cs" />
+    <Compile Include="FeatureVector\TreatmentPairFeatures.cs" />
     <Compile Include="KeywordService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
