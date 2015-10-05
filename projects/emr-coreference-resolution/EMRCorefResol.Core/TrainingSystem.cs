@@ -57,11 +57,6 @@ namespace HCMUT.EMRCorefResol
             trainer.Train<PersonPair>(pCreator.GetProblem<PersonPair>());
             trainer.Train<PersonInstance>(pCreator.GetProblem<PersonInstance>());
             trainer.Train<PronounInstance>(pCreator.GetProblem<PronounInstance>());
-
-            //Directory.CreateDirectory("Problems");
-            //trainer.ProblemSerializer.Serialize(pCreator.GetProblem<PersonPair>(), "Problems\\PersonPair.prb");
-            //trainer.ProblemSerializer.Serialize(pCreator.GetProblem<PersonInstance>(), "Problems\\PersonInstance.prb");
-            //trainer.ProblemSerializer.Serialize(pCreator.GetProblem<PronounInstance>(), "Problems\\PronounInstance.prb");
         }
 
         public void TrainAll(EMRCollection emrCollection, IDataReader dataReader, IPreprocessor preprocessor,

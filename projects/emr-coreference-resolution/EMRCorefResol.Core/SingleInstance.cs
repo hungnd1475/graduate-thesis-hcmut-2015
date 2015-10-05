@@ -21,7 +21,7 @@ namespace HCMUT.EMRCorefResol
 
         public override string ToString()
         {
-            return Concept.ToString();
+            return $"{Concept.ToString()}||t=\"{Concept.Type.ToString().ToLower()}";
         }
 
         public override int GetHashCode()

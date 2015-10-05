@@ -26,6 +26,11 @@ namespace HCMUT.EMRCorefResol.English
             }
         }
 
+        public bool NeedGroundTruth
+        {
+            get { return true; }
+        }
+
         public EnglishTrainingFeatureExtractor()
         {
             KeywordService.LoadKeywords();

@@ -90,6 +90,7 @@
     <Compile Include="ConceptCollection.cs" />
     <Compile Include="CorefChain.cs" />
     <Compile Include="CorefChainCollection.cs" />
+    <Compile Include="FeatureExtractingSystem.cs" />
     <Compile Include="Features\FeatureVector.cs" />
     <Compile Include="EMR.cs" />
     <Compile Include="ConceptType.cs" />

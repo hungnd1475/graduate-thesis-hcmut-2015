@@ -9,6 +9,7 @@ using HCMUT.EMRCorefResol.Classification;
 using HCMUT.EMRCorefResol.Classification.LibSVM;
 using HCMUT.EMRCorefResol.Utilities;
 using System.Threading;
+using Fclp;
 
 namespace HCMUT.EMRCorefResol.ConsoleTest
 {
@@ -40,8 +41,8 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             //testTrainer();
             //testLoadClassifier();
             //testService();
-            var path = testTrainManyEMR(20);
-            //testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", 20);
+            //var path = testTrainManyEMR(50);
+            testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", EMR_COLLECTION);
             //testClassifier(path, 1);
             //testAhoCorasick();
 
@@ -135,8 +136,8 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
         {
             var trainer = new LibSVMTrainer(
                 new GridSearchConfig(
-                    Range.Create(-5d, 5d), 2, // c range and step
-                    Range.Create(-5d, 5d), 2)); // gamma range and step
+                    Range.Create(-5d, 9d), 2, // c range and step
+                    Range.Create(-9d, 3d), 2)); // gamma range and step
 
             var dataReader = new I2B2DataReader();
             var preprocessor = new SimplePreprocessor();
@@ -173,6 +174,42 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
                 ClassificationSystem.Instance.ClassifyOne(emrPaths[i], conceptsPaths[i], chainsPaths[i],
                     dataReader, preprocessor, fExtractor, classifier);
                 classifier.ClearCache();
+            }
+        }
+
+        static void testClassifier(string classifierPath, EMRCollection emrColl)
+        {
+            var classifier = ClassifierSerializer.Deserialize(classifierPath);
+            testClassifier(classifier, emrColl);
+        }
+
+        static void testClassifier(IClassifier classifier, EMRCollection emrColl)
+        {
+            var dataReader = new I2B2DataReader();
+            var preprocessor = new SimplePreprocessor();
+            var fExtractor = new EnglishClasFeatureExtractor(classifier);
+            int emrIndex = 0;
+
+            while (true)
+            {
+                ClassificationSystem.Instance.ClassifyOne(emrColl.GetEMRPath(emrIndex),
+                    emrColl.GetConceptsPath(emrIndex), emrColl.GetChainsPath(emrIndex),
+                    dataReader, preprocessor, fExtractor, classifier);
+                classifier.ClearCache();
+
+                Console.Write("Do you want to continue classifying next emr? (Y/N) ");
+                var ans = string.Empty;
+                while (string.IsNullOrEmpty(ans) || (!string.Equals(ans, "y") &&
+                    !string.Equals(ans, "n")))
+                {
+                    ans = Console.ReadLine();
+                    ans = ans.Trim().ToLower();
+                }
+
+                if (ans == "N" || ans == "n")
+                    break;
+
+                emrIndex += 1;
             }
         }
 

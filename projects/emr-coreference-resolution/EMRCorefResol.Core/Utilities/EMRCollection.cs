@@ -15,12 +15,22 @@ namespace HCMUT.EMRCorefResol
 
         public int Count { get { return _emrPaths.Length; } }
 
+        public bool HasGroundTruth { get; }
+
         public EMRCollection(string emrDir, string conceptsDir, string chainsDir)
         {
             _emrPaths = Directory.GetFiles(emrDir);
             _conceptsDir = conceptsDir;
             _chainsDir = chainsDir;
+
+            HasGroundTruth = Directory.Exists(_chainsDir);
         }
+
+        public EMRCollection(string dir)
+            : this(Path.Combine(dir, "docs"),
+                  Path.Combine(dir, "concepts"),
+                  Path.Combine(dir, "chains"))
+        { }
 
         public string GetEMRPath(int index)
         {
@@ -50,7 +60,7 @@ namespace HCMUT.EMRCorefResol
             var indices = new HashSet<int>();
             int k;
 
-            for (int i = 0; i < size; i++)
+            for (int i = 0; i < size && i < Count; i++)
             {
                 do
                 {

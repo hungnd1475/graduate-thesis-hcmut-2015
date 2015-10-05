@@ -87,15 +87,15 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             // train
             if (accuracy != -1d)
             {
-                GetLogger().WriteInfo($"Grid search best result: a={accuracy * 100}% at c={cost} g={gamma}");
+                GetLogger().WriteInfo($"Grid search result: a={accuracy * 100}% at c={cost} g={gamma}");
                 GetLogger().WriteInfo($"Training {name} problem using the above parameters...");
-                LibSVM.RunSVMTrainRBFKernel(Math.Pow(2, cost), Math.Pow(2, gamma), scaledPrbPath, modelPath, true);
+                LibSVM.RunSVMTrainRBFKernel(Math.Pow(2, cost), Math.Pow(2, gamma), scaledPrbPath, modelPath, false);
             }
             else
             {
                 GetLogger().WriteInfo("Grid search failed!");
                 GetLogger().WriteInfo($"Training {name} problem using default parameters...");
-                LibSVM.RunSVMTrainRBFKernel(scaledPrbPath, modelPath, true);
+                LibSVM.RunSVMTrainRBFKernel(scaledPrbPath, modelPath, false);
             }
         }
 
@@ -114,6 +114,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
                 var allProblem = LibSVM.ReadProblem(data, null);
                 AccuracyInfo bestAcc = null;
 
+                GetLogger().WriteInfo("Entering first phase of grid search operation...");
                 if (allProblem.Length > PROBLEM_MAX_LENGTH)
                 {
                     var subProblem = LibSVM.ReadProblem(data, PROBLEM_MAX_LENGTH);
@@ -128,9 +129,12 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
 
                 if (bestAcc != null)
                 {
+                    GetLogger().WriteInfo($"Best region: c={bestAcc.Cost} g={bestAcc.Gamma}");
+                    GetLogger().WriteInfo("Entering second phase of grid search operation...");
+
                     var bestRegionConfig = new GridSearchConfig(
-                        Range.Create(bestAcc.Cost - 1, bestAcc.Cost + 1), 0.25d,
-                        Range.Create(bestAcc.Gamma - 1, bestAcc.Gamma + 1), 0.25d);
+                        Range.Create(bestAcc.Cost - 0.5, bestAcc.Cost + 0.5), 0.25d,
+                        Range.Create(bestAcc.Gamma - 0.5, bestAcc.Gamma + 0.5), 0.25d);
 
                     var accInfos = Search(bestRegionConfig, nfold, allProblem);
                     bestAcc = FindBest(accInfos);
@@ -151,8 +155,6 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             private static AccuracyInfo[] Search(GridSearchConfig config, int nfold, SVMProblem problem)
             {
                 var accInfos = CreateGrid(config);
-                GetLogger().WriteInfo("Entering parallel grid search operation...");
-
                 Parallel.For(0, accInfos.Length, (i) =>
                 {
                     var a = accInfos[i];

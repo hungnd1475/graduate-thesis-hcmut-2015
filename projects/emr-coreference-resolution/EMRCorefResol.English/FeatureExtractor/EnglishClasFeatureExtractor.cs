@@ -13,6 +13,11 @@ namespace HCMUT.EMRCorefResol.English
 
         public CorefChainCollection GroundTruth { get; set; }
 
+        public bool NeedGroundTruth
+        {
+            get { return false; }
+        }
+
         private readonly IPatientDeterminer _patientDeterminer;
 
         private readonly Dictionary<Concept, IFeatureVector> _personCache
