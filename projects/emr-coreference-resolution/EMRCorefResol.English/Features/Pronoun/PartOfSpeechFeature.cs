@@ -18,16 +18,16 @@ namespace HCMUT.EMRCorefResol.English.Features
                 switch (tagged[0].Split('|')[1])
                 {
                     case "DT":
-                        SetCategoricalValue(0);
-                        break;
-                    case "WDT":
                         SetCategoricalValue(1);
                         break;
-                    case "PRP":
+                    case "WDT":
                         SetCategoricalValue(2);
                         break;
-                    default:
+                    case "PRP":
                         SetCategoricalValue(3);
+                        break;
+                    default:
+                        SetCategoricalValue(0);
                         break;
                 }
             }
