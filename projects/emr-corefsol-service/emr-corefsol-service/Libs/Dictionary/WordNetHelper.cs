@@ -22,17 +22,24 @@ namespace emr_corefsol_service.Libs
 
         public Models.Definition[] getSynSets(string term)
         {
-            var t = _wEngine.GetSynSets(term);
-            Models.Definition[] res = new Models.Definition[t.Count];
-
-            int i = 0;
-            foreach (SynSet s in t)
+            try
             {
-                res[i] = new Models.Definition(s);
-                i++;
-            }
+                var t = _wEngine.GetSynSets(term);
+                Models.Definition[] res = new Models.Definition[t.Count];
 
-            return res;
+                int i = 0;
+                foreach (SynSet s in t)
+                {
+                    res[i] = new Models.Definition(s);
+                    i++;
+                }
+
+                return res;
+            }
+            catch(Exception e)
+            {
+                return null;
+            }
         }
     }
 }

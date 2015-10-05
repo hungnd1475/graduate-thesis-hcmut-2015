@@ -496,11 +496,25 @@
             <param name="term">Sentence need to be tokenized</param>
             <returns></returns>
         </member>
+        <member name="M:emr_corefsol_service.Controllers.NLPController.GetChunks(System.String)">
+            <summary>
+            Get Chunking from sentence
+            </summary>
+            <param name="term">Sentence need to be chunked</param>
+            <returns></returns>
+        </member>
         <member name="M:emr_corefsol_service.Controllers.DictionaryController.GetSynsets(System.String)">
             <summary>
             GET WordNet Synset of a word
             </summary>
             <param name="term">Lookup term</param>
+            <returns></returns>
+        </member>
+        <member name="M:emr_corefsol_service.Controllers.WikiController.GetPage(System.String)">
+            <summary>
+            Get en.wikipedia page from input term
+            </summary>
+            <param name="term">Search string</param>
             <returns></returns>
         </member>
         <member name="P:emr_corefsol_service.Response.CustomResponse.IsSuccess">

@@ -59,7 +59,7 @@ namespace HCMUT.EMRCorefResol.Service
             return JsonConvert.DeserializeObject<Definition[]>(json);
         }
 
-        public static string[] getChunks(string term)
+        public static string[] GetChunks(string term)
         {
             var url = API_URL + "nlp/chunk?term=" + HttpUtility.UrlEncode(term);
             var res = _http.Request(url);
@@ -73,6 +73,19 @@ namespace HCMUT.EMRCorefResol.Service
               .Cast<object>()
               .Select(x => x.ToString())
               .ToArray();
+        }
+
+        public static string GetWikiPage(string term)
+        {
+            var url = API_URL + "wiki/page?term=" + HttpUtility.UrlEncode(term);
+            var res = _http.Request(url);
+
+            if (!res.IsSuccess)
+            {
+                return null;
+            }
+
+            return (string)res.Data;
         }
     }
 }
