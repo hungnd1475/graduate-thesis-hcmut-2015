@@ -81,6 +81,9 @@ namespace HCMUT.EMRCorefResol.English
         public IKeywordDictionary NLINE_KEYWORD { get; }
             = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "nline-keywords.txt")));
 
+        public IKeywordDictionary POSITION_KEYWORD { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "position-keywords.txt")));
+
         private KeywordService() { }
 
         private static IEnumerable<string> ReadKWFile(string filePath)

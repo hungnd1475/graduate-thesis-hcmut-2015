@@ -42,9 +42,9 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             //testLoadClassifier();
             //testService();
             //var path = testTrainManyEMR(50);
-            testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", EMR_COLLECTION);
+            //testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", EMR_COLLECTION);
             //testClassifier(path, 1);
-            //testAhoCorasick();
+            testAhoCorasick();
 
             //var classifier = testTrainAllEMR();
             //ClassifierSerializer.Serialize(classifier, @"Classification\LibSVMTools\Models\LibSVMTool.classifier");
@@ -221,10 +221,10 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
         static void testAhoCorasick()
         {
-            var ac_kwd = new AhoCorasickKeywordDictionary(new string[] { ",", ".", "'", "\"", "/", "\\" });
-
-            var result = ac_kwd.SearchKeywords("mr. vuong anh tuan , md", KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
-            Console.WriteLine(string.Join(" ", result));
+            var ac_kw = new AhoCorasickKeywordDictionary(new string[] { "left", "right", "lower", "upper", "left upper", "right upper" });
+            var res = ac_kw.SearchDictionaryIndices("The right upper extremity was positive for abrasions.", KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord);
+            var max = res.Max();
+            int x = 1 + 1;
         }
 
         static void Print(IClasInstance i, IFeatureVector fVector)
