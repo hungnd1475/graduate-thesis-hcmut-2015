@@ -517,6 +517,13 @@
             <param name="term">Search string</param>
             <returns></returns>
         </member>
+        <member name="M:emr_corefsol_service.Controllers.WikiController.GetBoldName(System.String)">
+            <summary>
+            Get boldname from page
+            </summary>
+            <param name="term">Page title</param>
+            <returns></returns>
+        </member>
         <member name="P:emr_corefsol_service.Response.CustomResponse.IsSuccess">
             <summary>
             Success or Fail

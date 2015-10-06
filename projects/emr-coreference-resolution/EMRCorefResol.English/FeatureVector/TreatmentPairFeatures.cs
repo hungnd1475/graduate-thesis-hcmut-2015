@@ -14,7 +14,8 @@ namespace HCMUT.EMRCorefResol.English
             :base(size:2, classValue: classValue)
         {
             this[0] = new SentenceDistanceFeature(instance);
-            this[1] = new WikiMatchFeature(instance);
+            //this[1] = new WikiMatchFeature(instance);
+            this[1] = new WikiBoldNameMatchFeature(instance);
         }
     }
 }

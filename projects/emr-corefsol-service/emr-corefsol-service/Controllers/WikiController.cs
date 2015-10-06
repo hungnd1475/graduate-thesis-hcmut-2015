@@ -35,5 +35,23 @@ namespace emr_corefsol_service.Controllers
 
             return new CustomResponse(true, page, null);
         }
+
+        /// <summary>
+        /// Get boldname from page
+        /// </summary>
+        /// <param name="term">Page title</param>
+        /// <returns></returns>
+        [ActionName("BoldName")]
+        public CustomResponse GetBoldName(string page)
+        {
+            var boldName = WIKI_HELPER.GetBoldName(page);
+
+            if (boldName == null)
+            {
+                return new CustomResponse(false, null, "Error finding bold name");
+            }
+
+            return new CustomResponse(true, boldName, null);
+        }
     }
 }
