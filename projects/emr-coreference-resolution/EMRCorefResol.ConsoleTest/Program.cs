@@ -246,31 +246,7 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
         static void testWikiExtractor()
         {
-            var dataReader = new I2B2DataReader();
-
-            Parallel.For(0, EMR_COLLECTION.Count, k => {
-                var emr = new EMR(EMR_COLLECTION.GetEMRPath(k),
-                    EMR_COLLECTION.GetConceptsPath(k),
-                    dataReader);
-                var filename = "file_" + k + ".txt";
-                ExtractWikiPage(emr, filename);
-            });
-        }
-
-        private static void ExtractWikiPage(EMR emr, string filename)
-        {
-            var _write_to_file = "";
-
-            foreach (Concept c in emr.Concepts)
-            {
-                if (c.Type == ConceptType.Problem || c.Type == ConceptType.Treatment || c.Type == ConceptType.Test)
-                {
-                    var page = Service.English.GetWikiPage(c.Lexicon);
-                    _write_to_file += c.Lexicon + "|" + page + Environment.NewLine;
-                }
-            }
-
-            File.WriteAllText(@"C:\Users\Hp\Desktop\wiki\" + filename, _write_to_file);
+            var data = Service.English.GetAllWikiInformation("head trauma");
         }
     }
 }

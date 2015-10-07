@@ -8,10 +8,12 @@ using Newtonsoft.Json;
 
 namespace HCMUT.EMRCorefResol.Service
 {
+    using Utilities;
     public static class English
     {
         private const string API_URL = "http://localhost:8181/api/";
         private static readonly HttpUtil _http = new HttpUtil();
+        private static ICache<string, WikiData> _wikiCache;
 
         public static string[] POSTag(string term)
         {
@@ -22,6 +24,8 @@ namespace HCMUT.EMRCorefResol.Service
             {
                 return null;
             }
+
+            _wikiCache = new UnlimitedCache<string, WikiData>();
 
             return ((System.Collections.IEnumerable)res.Data)
               .Cast<object>()
@@ -102,6 +106,22 @@ namespace HCMUT.EMRCorefResol.Service
               .Cast<object>()
               .Select(x => x.ToString())
               .ToArray();
+        }
+
+        public static WikiData GetAllWikiInformation(string term)
+        {
+            return _wikiCache.GetValue(term, (string search_term) =>
+            {
+                var url = API_URL + "wiki/information?term=" + HttpUtility.UrlEncode(term);
+                var res = _http.Request(url);
+
+                if (!res.IsSuccess)
+                {
+                    return null;
+                }
+
+                return JsonConvert.DeserializeObject<WikiData>(res.Data.ToString());
+            });
         }
     }
 }
