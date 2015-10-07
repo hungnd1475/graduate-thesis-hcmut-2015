@@ -94,6 +94,7 @@
     <Compile Include="Features\PersonInstance\PronounWeFeature.cs" />
     <Compile Include="Features\PersonInstance\PronounYouFeature.cs" />
     <Compile Include="Features\FirstChunkAfterMention.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\IndicatorFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\PositionFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\WikiBoldNameMatchFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\WikiMatchFeature.cs" />
@@ -191,6 +192,7 @@
     <Content Include="Keywords\i.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Keywords\indicator-keywords.txt" />
     <Content Include="Keywords\male-names.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

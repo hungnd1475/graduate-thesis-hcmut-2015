@@ -406,6 +406,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Definition.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\WikiData.cs" />
     <Compile Include="Models\WordType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />

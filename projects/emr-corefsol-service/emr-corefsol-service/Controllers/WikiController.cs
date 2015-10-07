@@ -19,7 +19,7 @@ namespace emr_corefsol_service.Controllers
         }
 
         /// <summary>
-        /// Get en.wikipedia page from input term
+        /// Get wikipedia page from input term
         /// </summary>
         /// <param name="term">Search string</param>
         /// <returns></returns>
@@ -52,6 +52,24 @@ namespace emr_corefsol_service.Controllers
             }
 
             return new CustomResponse(true, boldName, null);
+        }
+
+        /// <summary>
+        /// Get all wikipedia information (content page title, links, bold name)
+        /// </summary>
+        /// <param name="term">Search string</param>
+        /// <returns></returns>
+        [ActionName("Information")]
+        public CustomResponse GetWikiInformation(string term)
+        {
+            var data = WIKI_HELPER.GetWikiInformation(term);
+
+            if(data == null)
+            {
+                return new CustomResponse(false, null, "Error getting Wiki information");
+            }
+
+            return new CustomResponse(true, data, null);
         }
     }
 }

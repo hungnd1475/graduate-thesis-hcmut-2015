@@ -11,9 +11,10 @@ namespace HCMUT.EMRCorefResol.English
     class TestPairFeatures : FeatureVector
     {
         public TestPairFeatures(TestPair instance, EMR emr, double classValue)
-            :base(size:1, classValue: classValue)
+            :base(size:2, classValue: classValue)
         {
             this[0] = new SentenceDistanceFeature(instance);
+            this[1] = new IndicatorFeature(instance);
             //this[1] = new WikiMatchFeature(instance);
         }
     }

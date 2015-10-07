@@ -44,7 +44,8 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             //var path = testTrainManyEMR(50);
             //testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", EMR_COLLECTION);
             //testClassifier(path, 1);
-            testAhoCorasick();
+            //testAhoCorasick();
+            testWikiExtractor();
 
             //var classifier = testTrainAllEMR();
             //ClassifierSerializer.Serialize(classifier, @"Classification\LibSVMTools\Models\LibSVMTool.classifier");
@@ -241,6 +242,35 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
             TrainingSystem.Instance.TrainAll(EMR_COLLECTION, dataReader, preprocessor, fExtractor, trainer);
             return trainer.GetClassifier();
+        }
+
+        static void testWikiExtractor()
+        {
+            var dataReader = new I2B2DataReader();
+
+            Parallel.For(0, EMR_COLLECTION.Count, k => {
+                var emr = new EMR(EMR_COLLECTION.GetEMRPath(k),
+                    EMR_COLLECTION.GetConceptsPath(k),
+                    dataReader);
+                var filename = "file_" + k + ".txt";
+                ExtractWikiPage(emr, filename);
+            });
+        }
+
+        private static void ExtractWikiPage(EMR emr, string filename)
+        {
+            var _write_to_file = "";
+
+            foreach (Concept c in emr.Concepts)
+            {
+                if (c.Type == ConceptType.Problem || c.Type == ConceptType.Treatment || c.Type == ConceptType.Test)
+                {
+                    var page = Service.English.GetWikiPage(c.Lexicon);
+                    _write_to_file += c.Lexicon + "|" + page + Environment.NewLine;
+                }
+            }
+
+            File.WriteAllText(@"C:\Users\Hp\Desktop\wiki\" + filename, _write_to_file);
         }
     }
 }
