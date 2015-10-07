@@ -41,7 +41,7 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             //testTrainer();
             //testLoadClassifier();
             //testService();
-            //var path = testTrainManyEMR(50);
+            var path = testTrainManyEMR(2);
             testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", EMR_COLLECTION);
             //testClassifier(path, 1);
             //testAhoCorasick();

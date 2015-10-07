@@ -15,7 +15,7 @@ namespace HCMUT.EMRCorefResol
     public class CorefChainCollection : IEnumerable<CorefChain>
     {
         private readonly ICollection<CorefChain> _chains;
-
+ 
         /// <summary>
         /// Gets the total number of chains in the collection.
         /// </summary>

@@ -33,9 +33,9 @@ namespace HCMUT.EMRCorefResol.English
 
         public IFeatureVector Extract(TestPair instance)
         {
-            var classValue = GroundTruth.IsCoref(instance) ? 1.0 : 0.0;
-            return new TestPairFeatures(instance, EMR, classValue);
-            //return null;
+            //var classValue = GroundTruth.IsCoref(instance) ? 1.0 : 0.0;
+            //return new TestPairFeatures(instance, EMR, classValue);
+            return null;
         }
 
         public IFeatureVector Extract(PersonInstance instance)
@@ -48,7 +48,7 @@ namespace HCMUT.EMRCorefResol.English
                     if (GroundTruth != null)
                     {
                         var patientChain = GroundTruth.GetPatientChain();
-                        classValue = patientChain != null ? (patientChain.Contains(instance.Concept) ? 1.0 : 0.0) : 2.0;
+                        classValue = patientChain != null ? (patientChain.Contains(instance.Concept) ? 1 : -1) : -1;
                     }
                     _personCache.Add(instance.Concept, new PersonInstanceFeatures(instance, EMR, classValue));
                 }
@@ -69,21 +69,21 @@ namespace HCMUT.EMRCorefResol.English
 
         public IFeatureVector Extract(TreatmentPair instance)
         {
-            var classValue = GroundTruth.IsCoref(instance) ? 1.0 : 0.0;
-            return new TreatmentPairFeatures(instance, EMR, classValue);
-            //return null;
+            //var classValue = GroundTruth.IsCoref(instance) ? 1.0 : 0.0;
+            //return new TreatmentPairFeatures(instance, EMR, classValue);
+            return null;
         }
 
         public IFeatureVector Extract(ProblemPair instance)
         {
-            var classValue = GroundTruth.IsCoref(instance) ? 1.0 : 0.0;
-            return new ProblemPairFeatures(instance, EMR, classValue);
-            //return null;
+            //var classValue = GroundTruth.IsCoref(instance) ? 1.0 : 0.0;
+            //return new ProblemPairFeatures(instance, EMR, classValue);
+            return null;
         }
 
         public IFeatureVector Extract(PersonPair instance)
         {
-            var classValue = GroundTruth.IsCoref(instance) ? 1.0 : 0.0;
+            var classValue = GroundTruth.IsCoref(instance) ? 1 : -1;
             return new PersonPairFeatures(instance, EMR, _patientDeterminer, classValue);
         }
 
