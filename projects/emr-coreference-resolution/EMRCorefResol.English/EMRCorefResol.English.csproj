@@ -94,6 +94,7 @@
     <Compile Include="Features\PersonInstance\PronounWeFeature.cs" />
     <Compile Include="Features\PersonInstance\PronounYouFeature.cs" />
     <Compile Include="Features\FirstChunkAfterMention.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\WikiBoldNameMatchFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\WikiMatchFeature.cs" />
     <Compile Include="Features\Pronoun\FirstChunkBeforeIsPreposition.cs" />
     <Compile Include="Features\FirstChunkBeforeMention.cs" />

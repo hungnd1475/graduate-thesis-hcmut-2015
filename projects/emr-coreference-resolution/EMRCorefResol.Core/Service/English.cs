@@ -87,5 +87,21 @@ namespace HCMUT.EMRCorefResol.Service
 
             return (string)res.Data;
         }
+
+        public static string[] GetWikiBoldName(string page)
+        {
+            var url = API_URL + "wiki/boldname?page=" + HttpUtility.UrlEncode(page);
+            var res = _http.Request(url);
+
+            if (!res.IsSuccess)
+            {
+                return null;
+            }
+
+            return ((System.Collections.IEnumerable)res.Data)
+              .Cast<object>()
+              .Select(x => x.ToString())
+              .ToArray();
+        }
     }
 }

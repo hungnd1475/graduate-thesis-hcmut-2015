@@ -5,6 +5,8 @@ using System.Web;
 
 using LinqToWiki.Generated;
 using LinqToWiki.Download;
+using System.Text.RegularExpressions;
+
 namespace emr_corefsol_service.Libs
 {
     public class WikiHelper
@@ -23,10 +25,48 @@ namespace emr_corefsol_service.Libs
                 var page = _wiki.Query.search(term)
                 .Select(p => p.title)
                 .ToEnumerable()
-                .FirstOrDefault()
-                .ToLower();
+                .FirstOrDefault();
 
                 return page;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
+        public string[] GetBoldName(string term)
+        {
+            try
+            {
+                var page = _wiki.Query.search(term)
+                .Select(p => p.title)
+                .ToEnumerable()
+                .FirstOrDefault();
+
+                if (page == null || page.Length <= 0)
+                {
+                    return null;
+                }
+
+                var text = _wiki.CreateTitlesSource(page)
+                    .Select(
+                        p => p.revisions()
+                                .Where(r => r.section == "0")
+                                .Select(r => r.value)
+                                .ToEnumerable().FirstOrDefault()
+                    )
+                    .ToEnumerable().FirstOrDefault();
+
+                var pattern = "\'\'\'(.*?)\'\'\'";
+
+                List<string> res = new List<string>();
+                foreach(Match m in Regex.Matches(text, pattern))
+                {
+                    res.Add(m.Groups[1].Value);
+                }
+
+                return res.ToArray();
             }
             catch (Exception e)
             {
