@@ -36,7 +36,7 @@ namespace emr_corefsol_service.Libs
                     (
                         term,
                         p.info.title,
-                        p.links().Select(l => l.title).ToList(),
+                        //p.links().Select(l => l.title).ToList(),
                         p.revisions()
                                 .Where(r => r.section == "0")
                                 .Select(r => r.value)

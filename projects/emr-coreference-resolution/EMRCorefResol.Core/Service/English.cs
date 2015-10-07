@@ -15,6 +15,11 @@ namespace HCMUT.EMRCorefResol.Service
         private static readonly HttpUtil _http = new HttpUtil();
         private static ICache<string, WikiData> _wikiCache;
 
+        static English()
+        {
+            _wikiCache = new UnlimitedCache<string, WikiData>();
+        }
+
         public static string[] POSTag(string term)
         {
             var url = API_URL + "nlp/pos?term=" + HttpUtility.UrlEncode(term);
@@ -24,8 +29,6 @@ namespace HCMUT.EMRCorefResol.Service
             {
                 return null;
             }
-
-            _wikiCache = new UnlimitedCache<string, WikiData>();
 
             return ((System.Collections.IEnumerable)res.Data)
               .Cast<object>()
@@ -112,7 +115,7 @@ namespace HCMUT.EMRCorefResol.Service
         {
             return _wikiCache.GetValue(term, (string search_term) =>
             {
-                var url = API_URL + "wiki/information?term=" + HttpUtility.UrlEncode(term);
+                var url = API_URL + "wiki/information?term=" + HttpUtility.UrlEncode(search_term);
                 var res = _http.Request(url);
 
                 if (!res.IsSuccess)

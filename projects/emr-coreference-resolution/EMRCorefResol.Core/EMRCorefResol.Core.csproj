@@ -107,6 +107,7 @@
     <Compile Include="IPreprocessor.cs" />
     <Compile Include="ISingleConcept.cs" />
     <Compile Include="Classification\ITrainer.cs" />
+    <Compile Include="Service\ServiceModels\WikiData.cs" />
     <Compile Include="Utilities\Caches\ICache.cs" />
     <Compile Include="Utilities\Caches\UnlimitedCache.cs" />
     <Compile Include="Utilities\Keywords\AhoCorasickKeywordDictionary.cs" />

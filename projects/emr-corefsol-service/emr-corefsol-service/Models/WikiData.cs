@@ -10,14 +10,14 @@ namespace emr_corefsol_service.Models
     {
         public string term;
         public string title;
-        public List<string> links;
+        //public List<string> links;
         public List<string> bolds = new List<string>();
 
-        public WikiData(string s, string t, List<string> l, string c)
+        public WikiData(string s, string t, /*List<string> l,*/ string c)
         {
             term = s;
             title = t;
-            links = l;
+            //links = l;
 
             var pattern = "\'\'\'(.*?)\'\'\'";
             foreach (Match m in Regex.Matches(c, pattern))

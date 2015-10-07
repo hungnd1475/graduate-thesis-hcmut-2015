@@ -12,14 +12,19 @@ namespace HCMUT.EMRCorefResol.Service
         public string term;
         public string title;
         public string[] links;
-        public string[] bolds;
+        //public string[] bolds;
 
-        public WikiData(string s, string t, string[] l, string[] c)
+        public WikiData()
+        {
+
+        }
+
+        public WikiData(string s, string t, string[] l/*, string[] c*/)
         {
             term = s;
             title = t;
             links = l;
-            bolds = c;
+            //bolds = c;
         }
     }
 }

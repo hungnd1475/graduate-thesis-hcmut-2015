@@ -15,6 +15,7 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 {
     using English;
     using System.IO;
+    using System.Xml.Serialization;
 
     class Program
     {
@@ -246,7 +247,26 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
         static void testWikiExtractor()
         {
-            var data = Service.English.GetAllWikiInformation("head trauma");
+            Parallel.For(0, EMR_COLLECTION.Count, (k) =>
+            {
+                var dataReader = new I2B2DataReader();
+                var emr = new EMR(EMR_COLLECTION.GetEMRPath(k),
+                    EMR_COLLECTION.GetConceptsPath(k), dataReader);
+
+                List<Service.WikiData> listWikiData = new List<Service.WikiData>();
+                foreach(Concept c in emr.Concepts)
+                {
+                    if(c.Type == ConceptType.Problem || c.Type == ConceptType.Test || c.Type == ConceptType.Treatment)
+                    {
+                        Service.WikiData data = Service.English.GetAllWikiInformation(c.Lexicon);
+                        listWikiData.Add(data);
+                    }
+                }
+
+                XmlSerializer xsSubmit = new XmlSerializer(typeof(List<Service.WikiData>));
+                FileStream fs = new FileStream(@"C:\Users\Hp\Desktop\wiki\file_" + k + ".txt", FileMode.Create);
+                xsSubmit.Serialize(fs, listWikiData);
+            });
         }
     }
 }
