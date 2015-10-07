@@ -107,6 +107,8 @@
     <Compile Include="IPreprocessor.cs" />
     <Compile Include="ISingleConcept.cs" />
     <Compile Include="Classification\ITrainer.cs" />
+    <Compile Include="Utilities\Caches\ICache.cs" />
+    <Compile Include="Utilities\Caches\UnlimitedCache.cs" />
     <Compile Include="Utilities\Keywords\AhoCorasickKeywordDictionary.cs" />
     <Compile Include="Utilities\Keywords\RegexKeywordDictionary.cs" />
     <Compile Include="Logging\ConsoleLogger.cs" />
