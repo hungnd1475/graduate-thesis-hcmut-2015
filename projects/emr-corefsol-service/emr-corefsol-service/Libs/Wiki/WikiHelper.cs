@@ -7,6 +7,9 @@ using LinqToWiki.Generated;
 using LinqToWiki.Download;
 using System.Text.RegularExpressions;
 
+using MySql.Data.MySqlClient;
+using System.Web.Configuration;
+
 namespace emr_corefsol_service.Libs
 {
     public class WikiHelper
@@ -22,16 +25,20 @@ namespace emr_corefsol_service.Libs
         {
             try
             {
-                var page = (from s in _wiki.Query.search(term)
-                            select new { s.title })
-                         .ToEnumerable().FirstOrDefault();
+                var sql = @"SELECT * from `wiki_titles` where `title` = '" + term.Replace(' ', '_') + "'";
+                var pages = Models.DatabaseQuery.Query(sql);
 
-                if (page == null)
+                if (pages == null)
                 {
                     return null;
                 }
 
-                var data = _wiki.CreateTitlesSource(page.title)
+                /*var page = _wiki.Query.search(term)
+                .Select(p => p.title)
+                .ToEnumerable()
+                .FirstOrDefault();*/
+
+                var data = _wiki.CreateTitlesSource(pages[0])
                     .Select(p => new Models.WikiData
                     (
                         term,

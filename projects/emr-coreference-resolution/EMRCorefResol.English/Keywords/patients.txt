@@ -11,3 +11,7 @@ y/o
 year-old
 -yo
 patient
+pt
+pt.
+p.t
+p.t.

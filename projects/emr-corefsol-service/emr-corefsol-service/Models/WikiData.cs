@@ -10,19 +10,39 @@ namespace emr_corefsol_service.Models
     {
         public string term;
         public string title;
-        //public List<string> links;
+        public List<string> links = new List<string>();
         public List<string> bolds = new List<string>();
 
-        public WikiData(string s, string t, /*List<string> l,*/ string c)
+        public WikiData(string s, string t, string c)
         {
             term = s;
             title = t;
-            //links = l;
-
-            var pattern = "\'\'\'(.*?)\'\'\'";
-            foreach (Match m in Regex.Matches(c, pattern))
+            if (c.Contains(@"#REDIRECT") || c.Contains(@"#redirect") || c.Contains(@"#Redirect"))
             {
-                bolds.Add(m.Groups[1].Value);
+                Match m = Regex.Match(c, @"\[\[(.*?)\]\]");
+                title = m.Groups[1].Value;
+            }
+
+            var boldPattern = "\'\'\'(.*?)\'\'\'";
+            foreach (Match m in Regex.Matches(c, boldPattern))
+            {
+                var value = m.Groups[1].Value;
+
+                Match m2 = Regex.Match(value, @"\[\[(.*?)\]\]");
+                if (m2.Success)
+                {
+                    bolds.Add(m2.Groups[1].Value);
+                } else
+                {
+                    bolds.Add(value);
+                }
+            }
+
+            var linkPattnen = @"\[\[(.*?)\]\]";
+            foreach (Match m in Regex.Matches(c, linkPattnen))
+            {
+                var value = m.Groups[1].Value;
+                links.Add(value.Split('|')[0]);
             }
         }
     }
