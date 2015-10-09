@@ -96,6 +96,7 @@
     <Compile Include="Features\FirstChunkAfterMention.cs" />
     <Compile Include="Features\ProblemTreatmentTest\IndicatorFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\PositionFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\WikiAnchorLinkFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\WikiBoldNameMatchFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\WikiMatchFeature.cs" />
     <Compile Include="Features\Pronoun\FirstChunkBeforeIsPreposition.cs" />
