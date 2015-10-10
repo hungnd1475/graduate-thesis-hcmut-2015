@@ -39,14 +39,14 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             //testReadEMR();
             //var path = testTrainer();
             //testClassifier(path);
-            //testTrainer();
+            testTrainer();
             //testLoadClassifier();
             //testService();
             //var path = testTrainManyEMR(50);
             //testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", EMR_COLLECTION);
             //testClassifier(path, 1);
             //testAhoCorasick();
-            testWikiExtractor();
+            //testWikiExtractor();
 
             //var classifier = testTrainAllEMR();
             //ClassifierSerializer.Serialize(classifier, @"Classification\LibSVMTools\Models\LibSVMTool.classifier");

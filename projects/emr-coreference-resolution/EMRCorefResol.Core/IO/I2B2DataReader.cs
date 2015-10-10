@@ -42,6 +42,39 @@ namespace HCMUT.EMRCorefResol.IO
             return ReadType(matchCoref, matchType);
         }
 
+        public List<EMRSection> ReadSection(string EMRContent)
+        {
+            var sections = new List<EMRSection>();
+            var lines = EMRContent.Replace("\r", "").Split('\n');
+
+            var content = "";
+            var title = "";
+            var begin = 1;
+            var end = 1;
+            for(int i=0; i<lines.Length; i++)
+            {
+                var line = lines[i];
+                if(line.Length == 0 || (char.IsUpper(line[0]) && line[line.Length -1]== ':'))
+                {
+                    if(content.Length == 0 && title.Length == 0)
+                    {
+                        continue;
+                    }
+
+                    var section = new EMRSection(title, content, begin, end);
+                    sections.Add(section);
+                    title = line;
+                    begin = i+1;
+                    content = "";
+                    continue;
+                }
+                content += line + "\n";
+                end = i+1;
+            }
+
+            return sections;
+        }
+
         private Concept ReadConcept(Match matchConcept, Match matchCoref, Match matchType)
         {
             var c = matchConcept.Groups["c"].Value;

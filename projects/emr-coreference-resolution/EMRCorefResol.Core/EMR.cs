@@ -24,6 +24,11 @@ namespace HCMUT.EMRCorefResol
         public ConceptCollection Concepts { get; }
 
         /// <summary>
+        /// Gets the sections from EMR content
+        /// </summary>
+        public EMRSectionCollection Sections { get; }
+
+        /// <summary>
         /// Initializes an <see cref="EMR"/> instance from raw content and concepts file.
         /// </summary>
         /// <param name="emrFile">The path to the content file.</param>
@@ -36,7 +41,8 @@ namespace HCMUT.EMRCorefResol
             Content = sr.ReadToEnd();
             sr.Close();
 
-            Concepts = new ConceptCollection(conceptsFile, dataReader);            
+            Concepts = new ConceptCollection(conceptsFile, dataReader);
+            Sections = new EMRSectionCollection(Content, dataReader);
         }
     }
 }

@@ -17,8 +17,8 @@ namespace HCMUT.EMRCorefResol.English
             WikiData anteWiki = English.GetAllWikiInformation(instance.Antecedent.Lexicon);
 
             this[0] = new SentenceDistanceFeature(instance);
-            this[1] = new WikiMatchFeature(anaWiki, anteWiki);
-            this[2] = new PositionFeature(instance, emr);
+            this[1] = new PositionFeature(instance, emr);
+            this[2] = new SectionFeature(instance, emr);
         }
     }
 }

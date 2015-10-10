@@ -15,7 +15,6 @@ namespace HCMUT.EMRCorefResol.English
         {
             this[0] = new SentenceDistanceFeature(instance);
             this[1] = new IndicatorFeature(instance);
-            //this[1] = new WikiMatchFeature(instance);
         }
     }
 }
