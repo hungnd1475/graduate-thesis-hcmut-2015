@@ -99,6 +99,7 @@
     <Compile Include="Features\ProblemTreatmentTest\WikiAnchorLinkFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\WikiBoldNameMatchFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\WikiMatchFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\WordNetMatchFeature.cs" />
     <Compile Include="Features\Pronoun\FirstChunkBeforeIsPreposition.cs" />
     <Compile Include="Features\FirstChunkBeforeMention.cs" />
     <Compile Include="Features\Pronoun\FirstNextChunkIsVerb.cs" />
