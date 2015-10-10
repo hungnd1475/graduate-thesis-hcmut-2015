@@ -65,7 +65,7 @@ namespace HCMUT.EMRCorefResol
             for(int i=0; i<emr.Sections.Count; i++)
             {
                 var section = emr.Sections[i];
-                if(section.Begin < c.Begin.Line && section.End > c.End.Line)
+                if(section.Begin <= c.Begin.Line && section.End >= c.End.Line)
                 {
                     return i + 1;
                 }
