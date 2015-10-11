@@ -54,22 +54,27 @@ namespace HCMUT.EMRCorefResol.IO
             for(int i=0; i<lines.Length; i++)
             {
                 var line = lines[i];
-                if(line.Length == 0 || (char.IsUpper(line[0]) && line[line.Length -1]== ':'))
+                if(line.Length > 0 && char.IsUpper(line[0]) && line[line.Length -1]== ':')
                 {
-                    if(content.Length == 0 && title.Length == 0)
-                    {
-                        continue;
-                    }
-
-                    var section = new EMRSection(title, content, begin, end);
-                    sections.Add(section);
                     title = line;
-                    begin = i+1;
-                    content = "";
-                    continue;
+                    begin = i + 1;
+
+                    while (true)
+                    {
+                        i++;
+                        var nextLine = lines[i];
+                        if (i == lines.Length -1 || (nextLine.Length > 0 && char.IsUpper(nextLine[0]) && nextLine[nextLine.Length - 1] == ':'))
+                        {
+                            i--;
+                            end = i + 1;
+                            var section = new EMRSection(title, content, begin, end);
+                            sections.Add(section);
+                            content = "";
+                            break;
+                        }
+                        content += nextLine + "\n";
+                    }
                 }
-                content += line + "\n";
-                end = i+1;
             }
 
             return sections;
