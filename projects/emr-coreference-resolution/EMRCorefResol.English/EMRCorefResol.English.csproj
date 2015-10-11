@@ -221,6 +221,7 @@
     <Content Include="Keywords\sign-information.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Keywords\modifier-keywords.txt" />
     <Content Include="Keywords\they.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

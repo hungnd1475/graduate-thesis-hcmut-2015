@@ -10,7 +10,7 @@ namespace HCMUT.EMRCorefResol.English.Features
     class PositionFeature : Feature
     {
         public PositionFeature(IConceptPair instance, EMR emr)
-            :base("Position-Feature", 2, 0)
+            :base("Position-Feature", 3, 2)
         {
             var anaLine = emr.GetLine(instance.Anaphora.Begin.Line);
             var anaPos = GetPosition(instance.Anaphora, anaLine);
@@ -23,6 +23,9 @@ namespace HCMUT.EMRCorefResol.English.Features
             if(anaPos == antePos)
             {
                 SetCategoricalValue(1);
+            } else
+            {
+                SetCategoricalValue(0);
             }
         }
 
