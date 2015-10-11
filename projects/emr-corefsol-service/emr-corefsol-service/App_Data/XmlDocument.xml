@@ -498,9 +498,16 @@
         </member>
         <member name="M:emr_corefsol_service.Controllers.NLPController.GetChunks(System.String)">
             <summary>
-            Get Chunking from sentence
+            GET Chunking from sentence
             </summary>
             <param name="term">Sentence need to be chunked</param>
+            <returns></returns>
+        </member>
+        <member name="M:emr_corefsol_service.Controllers.NLPController.GetHeadNoun(System.String)">
+            <summary>
+            GET Head noun from sentence or noun phrase
+            </summary>
+            <param name="term">Sentence or noun phrase</param>
             <returns></returns>
         </member>
         <member name="M:emr_corefsol_service.Controllers.DictionaryController.GetSynsets(System.String)">
@@ -512,7 +519,7 @@
         </member>
         <member name="M:emr_corefsol_service.Controllers.WikiController.GetPage(System.String)">
             <summary>
-            Get wikipedia page from input term
+            GET wikipedia page from input term
             </summary>
             <param name="term">Search string</param>
             <returns></returns>

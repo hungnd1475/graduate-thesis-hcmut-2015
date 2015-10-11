@@ -19,7 +19,7 @@ namespace emr_corefsol_service.Controllers
         }
 
         /// <summary>
-        /// Get wikipedia page from input term
+        /// GET wikipedia page from input term
         /// </summary>
         /// <param name="term">Search string</param>
         /// <returns></returns>

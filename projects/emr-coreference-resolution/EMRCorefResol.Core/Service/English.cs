@@ -126,5 +126,18 @@ namespace HCMUT.EMRCorefResol.Service
                 return JsonConvert.DeserializeObject<WikiData>(res.Data.ToString());
             });
         }
+
+        public static string GetHeadNoun(string term)
+        {
+            var url = API_URL + "nlp/headnoun?term=" + HttpUtility.UrlEncode(term);
+            var res = _http.Request(url);
+
+            if (!res.IsSuccess)
+            {
+                return null;
+            }
+
+            return (string)res.Data;
+        }
     }
 }

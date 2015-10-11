@@ -63,7 +63,7 @@ namespace emr_corefsol_service.Controllers
         }
 
         /// <summary>
-        /// Get Chunking from sentence
+        /// GET Chunking from sentence
         /// </summary>
         /// <param name="term">Sentence need to be chunked</param>
         /// <returns></returns>
@@ -78,6 +78,24 @@ namespace emr_corefsol_service.Controllers
             }
 
             return new CustomResponse(true, chunks, null);
+        }
+
+        /// <summary>
+        /// GET Head noun from sentence or noun phrase
+        /// </summary>
+        /// <param name="term">Sentence or noun phrase</param>
+        /// <returns></returns>
+        [ActionName("HeadNoun")]
+        public CustomResponse GetHeadNoun(string term)
+        {
+            var headnoun = NLP_HELPER.HeadNoun(term);
+
+            if (headnoun == null)
+            {
+                return new CustomResponse(false, null, "Cannot tokenize");
+            }
+
+            return new CustomResponse(true, headnoun, null);
         }
     }
 }

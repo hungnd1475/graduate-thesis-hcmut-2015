@@ -6,9 +6,11 @@ using System.Web;
 using opennlp.tools.postag;
 using opennlp.tools.tokenize;
 using opennlp.tools.chunker;
+using opennlp.tools.parser;
 
 using System.Web.Hosting;
 using java.io;
+using opennlp.tools.cmdline.parser;
 
 namespace emr_corefsol_service.Libs
 {
@@ -17,12 +19,14 @@ namespace emr_corefsol_service.Libs
         private readonly POSModel _POSModel;
         private readonly TokenizerModel _tokenizerModel;
         private readonly ChunkerModel _chunkerModel;
+        private readonly ParserModel _parserModel;
 
         public OpenNLPHelper(string rootPath)
         {
             _POSModel = new POSModel(new File(rootPath + "en-pos-maxent.bin"));
             _tokenizerModel = new TokenizerModel(new File(rootPath + "en-token.bin"));
             _chunkerModel = new ChunkerModel(new File(rootPath + "en-chunker.bin"));
+            _parserModel = new ParserModel(new File(rootPath + "en-parser-chunking.bin"));
         }
 
         public string[] Chunk(string term)
@@ -83,6 +87,39 @@ namespace emr_corefsol_service.Libs
             catch(Exception e)
             {
                 return null;
+            }
+        }
+
+        public string HeadNoun(string term)
+        {
+            try
+            {
+                var parser = ParserFactory.create(_parserModel);
+                Parse[] topParses = ParserTool.parseLine(term, parser, 1);
+
+                List<Parse> nounPhrase = new List<Parse>();
+                foreach (Parse p in topParses)
+                {
+                    GetNounPhrase(p, ref nounPhrase);
+                }
+
+                return nounPhrase[0].getHead().ToString();
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
+        private void GetNounPhrase(Parse p, ref List<Parse> list)
+        {
+            if (p.getType().Equals("NP") || p.getType().Equals("."))
+            {
+                list.Add(p);
+            }
+            foreach (Parse child in p.getChildren())
+            {
+                GetNounPhrase(child, ref list);
             }
         }
     }
