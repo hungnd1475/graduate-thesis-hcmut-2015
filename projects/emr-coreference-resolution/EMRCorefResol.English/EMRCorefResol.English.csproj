@@ -79,6 +79,7 @@
   <ItemGroup>
     <Compile Include="FeatureExtractor\ClasPatientDeterminer.cs" />
     <Compile Include="FeatureExtractor\EnglishClasFeatureExtractor.cs" />
+    <Compile Include="Features\ContainFeature.cs" />
     <Compile Include="Features\DepartmentKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\DoctorKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\DoctorLastNLineFeature.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="Features\PersonInstance\PronounYouFeature.cs" />
     <Compile Include="Features\FirstChunkAfterMention.cs" />
     <Compile Include="Features\ProblemTreatmentTest\IndicatorFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\ModifierFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\PositionFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\SectionFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\WikiAnchorLinkFeature.cs" />
@@ -108,6 +110,7 @@
     <Compile Include="Features\PersonInstance\SignedInformationFeature.cs" />
     <Compile Include="Features\PersonPair\GenderFeature.cs" />
     <Compile Include="Features\PersonPair\PronounMatchFeature.cs" />
+    <Compile Include="Features\SubstringFeature.cs" />
     <Compile Include="Features\TwinTripletFeature.cs" />
     <Compile Include="Features\WhoFeatures.cs" />
     <Compile Include="Features\Pronoun\FirstNextMentionDistanceFeature.cs" />
@@ -120,7 +123,7 @@
     <Compile Include="FeatureVector\PersonInstanceFeatures.cs" />
     <Compile Include="FeatureExtractor\EnglishTrainingFeatureExtractor.cs" />
     <Compile Include="Features\AppositionFeature.cs" />
-    <Compile Include="Features\PersonPair\AliasFeature.cs" />
+    <Compile Include="Features\AliasFeature.cs" />
     <Compile Include="Features\PersonPair\DoctorGeneralMatch.cs" />
     <Compile Include="Features\PersonPair\DoctorTitleMatchFeature.cs" />
     <Compile Include="Features\LevenshteinDistanceFeature.cs" />
