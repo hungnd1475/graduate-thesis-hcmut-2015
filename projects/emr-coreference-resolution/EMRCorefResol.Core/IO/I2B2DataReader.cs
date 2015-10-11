@@ -59,6 +59,7 @@ namespace HCMUT.EMRCorefResol.IO
                     title = line;
                     begin = i + 1;
 
+                    //Read section content until find a new section title
                     while (true)
                     {
                         i++;
