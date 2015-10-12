@@ -72,5 +72,37 @@ namespace HCMUT.EMRCorefResol.Core.Console
                     throw new ArgumentException();
             }
         }
+
+        public static Type SelectInstanceType(Instance instanceType)
+        {
+            switch (instanceType)
+            {
+                case Instance.PersonInstance:
+                    return typeof(PersonInstance);
+                case Instance.PersonPair:
+                    return typeof(PersonPair);
+                case Instance.ProblemPair:
+                    return typeof(ProblemPair);
+                case Instance.PronounInstance:
+                    return typeof(PronounInstance);
+                case Instance.TestPair:
+                    return typeof(TestPair);
+                case Instance.TreatmentPair:
+                    return typeof(TreatmentPair);
+                default:
+                    throw new ArgumentException("instanceType");
+            }
+        }
+
+        public static ITrainer SelectTrainer(ClasMethod method, string outDir)
+        {
+            switch (method)
+            {
+                case ClasMethod.LibSVM:
+                    return new LibSVMTrainer(outDir);
+                default:
+                    throw new ArgumentException("method");
+            }
+        }
     }
 }

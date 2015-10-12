@@ -9,10 +9,10 @@ namespace HCMUT.EMRCorefResol.Classification
 {
     public interface ITrainer 
     {
-        void Train<T>(ClasProblem problem) where T : IClasInstance;
-        void Train(Type instanceType, ClasProblem problem);
-        void Train<T>(string problemPath) where T : IClasInstance;
-        void Train(Type instanceType, string problemPath);
+        void Train<T>(ClasProblem problem, GenericConfig config) where T : IClasInstance;
+        void Train(Type instanceType, ClasProblem problem, GenericConfig config);
+        void Train<T>(string problemPath, GenericConfig config) where T : IClasInstance;
+        void Train(Type instanceType, string problemPath, GenericConfig config);
 
         IClassifier GetClassifier();
         IClasProblemSerializer ProblemSerializer { get; }

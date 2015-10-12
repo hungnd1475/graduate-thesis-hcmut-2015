@@ -9,7 +9,7 @@ using HCMUT.EMRCorefResol.Classification.LibSVM.Internal;
 
 namespace HCMUT.EMRCorefResol.Classification.LibSVM
 {
-    public class LibSVMClassifier : IClassifier, IDisposable
+    public class LibSVMClassifier : IClassifier
     {
         private readonly string _modelsDir;
         private readonly Dictionary<Concept, ClasResult> _cache
@@ -153,11 +153,6 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
                 }
             }
             return _svmModels[instanceType];
-        }
-
-        public void Dispose()
-        {
-            throw new NotImplementedException();
         }
 
         public void ClearCache()

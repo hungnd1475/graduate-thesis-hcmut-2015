@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassificationSystem.cs" />
+    <Compile Include="Classification\ClasConfig.cs" />
     <Compile Include="Classification\ClasResult.cs" />
     <Compile Include="Classification\ClassifierSerializer.cs" />
     <Compile Include="Classification\ClasProblem.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="Classification\IClasProblemSerializer.cs" />
     <Compile Include="Concept.cs" />
     <Compile Include="ConceptCollection.cs" />
+    <Compile Include="Utilities\GenericConfig.cs" />
     <Compile Include="CorefChain.cs" />
     <Compile Include="CorefChainCollection.cs" />
     <Compile Include="FeatureExtractingSystem.cs" />

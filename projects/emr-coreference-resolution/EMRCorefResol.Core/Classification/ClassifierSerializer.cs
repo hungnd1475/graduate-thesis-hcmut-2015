@@ -18,11 +18,8 @@ namespace HCMUT.EMRCorefResol.Classification
             writer.Indentation = 2;
 
             writer.WriteStartElement("Classifier");
-
             writer.WriteAttributeString("Type", classifier.GetType().AssemblyQualifiedName);
-
             writer.WriteElementString("ModelsDir", classifier.ModelsDir);
-
             writer.WriteEndElement();
 
             writer.Flush();
@@ -48,16 +45,6 @@ namespace HCMUT.EMRCorefResol.Classification
                 reader.Close();
                 return classifier;
             }
-        }
-
-        public static IClassifier Deserialize(object modelPath)
-        {
-            throw new NotImplementedException();
-        }
-
-        private static string GetDirectory(string filePath)
-        {
-            return Path.GetDirectoryName(Path.GetFullPath(filePath));
         }
     }
 }

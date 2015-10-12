@@ -30,38 +30,39 @@ namespace HCMUT.EMRCorefResol
         private TrainingSystem() { }
 
         public void TrainOne(string emrPath, string conceptsPath, string chainsPath, IDataReader dataReader,
-            IPreprocessor preprocessor, IFeatureExtractor fExtractor, ITrainer trainer)
+            IPreprocessor preprocessor, IFeatureExtractor fExtractor, ITrainer trainer, ClasConfig configs)
         {
             var pCollection = new ClasProblemCollection();
             _fExtractSystem.ExtractOne(emrPath, conceptsPath, chainsPath, dataReader, preprocessor,
                 fExtractor, pCollection);
-            Train(trainer, pCollection);           
+            Train(trainer, pCollection, configs);           
         }
 
         public void TrainAll(string[] emrFiles, string[] conceptsFiles, string[] chainsFiles, IDataReader dataReader,
-            IPreprocessor preprocessor, IFeatureExtractor fExtractor, ITrainer trainer)
+            IPreprocessor preprocessor, IFeatureExtractor fExtractor, ITrainer trainer, ClasConfig configs)
         {
             var pCollection = new ClasProblemCollection();
             _fExtractSystem.ExtractAll(emrFiles, conceptsFiles, chainsFiles, dataReader,
                 preprocessor, fExtractor, pCollection);
-            Train(trainer, pCollection);            
+            Train(trainer, pCollection, configs);            
         }
 
         public void TrainCollection(EMRCollection emrCollection, IDataReader dataReader, IPreprocessor preprocessor,
-            IFeatureExtractor fExtractor, ITrainer trainer)
+            IFeatureExtractor fExtractor, ITrainer trainer, ClasConfig configs)
         {
             var pCollection = new ClasProblemCollection();
             _fExtractSystem.ExtractCollection(emrCollection, dataReader, preprocessor,
                 fExtractor, pCollection);
-            Train(trainer, pCollection);            
+            Train(trainer, pCollection, configs);            
         }
 
-        private void Train(ITrainer trainer, ClasProblemCollection pCollection)
+        private void Train(ITrainer trainer, ClasProblemCollection pCollection, ClasConfig configs)
         {
             Console.WriteLine("Training...");
-            trainer.Train<PersonPair>(pCollection.GetProblem<PersonPair>());
-            trainer.Train<PersonInstance>(pCollection.GetProblem<PersonInstance>());
-            trainer.Train<PronounInstance>(pCollection.GetProblem<PronounInstance>());
+
+            trainer.Train<PersonPair>(pCollection.GetProblem<PersonPair>(), configs.GetConfig<PersonPair>());
+            trainer.Train<PersonInstance>(pCollection.GetProblem<PersonInstance>(), configs.GetConfig<PersonInstance>());
+            trainer.Train<PronounInstance>(pCollection.GetProblem<PronounInstance>(), configs.GetConfig<PronounInstance>());
         }
     }
 }

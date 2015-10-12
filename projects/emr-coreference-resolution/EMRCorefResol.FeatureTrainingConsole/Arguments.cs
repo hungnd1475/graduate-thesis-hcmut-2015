@@ -14,8 +14,7 @@ namespace HCMUT.EMRCorefResol.FeatureTrainingConsole
         public Instance Instance { get; set; }
         public string OutputDir { get; set; }
 
-        public string CostRange { get; set; } // for LibSVM only
-        public string GammaRange { get; set; } // for LibSVM only
-        public bool SearchBestRegion { get; set; }
+        public double Cost { get; set; } // for LibSVM only
+        public double Gamma { get; set; } // for LibSVM only
     }
 }

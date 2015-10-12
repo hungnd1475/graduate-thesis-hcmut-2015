@@ -16,15 +16,11 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
 
         private readonly string _saveDir;
         private readonly string _problemDir, _modelDir;
-        private readonly GridSearchConfig _gridSearchConfig = null;
-        private readonly RBFKernelParameterOptimizer _rbfOptimizer
-            = new RBFKernelParameterOptimizer();
 
         public string ModelsDir { get { return _modelDir; } }
 
-        public LibSVMTrainer(string saveDir, GridSearchConfig gridSearchConfig)
+        public LibSVMTrainer(string saveDir)
         {
-            _gridSearchConfig = gridSearchConfig;
             _saveDir = saveDir;
             _problemDir = Path.Combine(_saveDir, "Problems");
             _modelDir = Path.Combine(_saveDir, "Models");
@@ -35,15 +31,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             _classifier = new LibSVMClassifier(_modelDir);
         }
 
-        public LibSVMTrainer(GridSearchConfig gridSearchConfig)
-            : this("Classification\\LibSVMTools", gridSearchConfig)
-        { }
-
-        public LibSVMTrainer(string saveDir)
-            : this(saveDir, null)
-        { }
-
-        public LibSVMTrainer() : this("Classification\\LibSVMTools") { }
+        public LibSVMTrainer() : this(string.Empty) { }
 
         public IClasProblemSerializer ProblemSerializer
         {
@@ -55,30 +43,30 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             return _classifier;
         }
 
-        public void Train(Type instanceType, ClasProblem problem)
+        public void Train(Type instanceType, ClasProblem problem, GenericConfig config)
         {
             var name = instanceType.Name;
-            var rawPrbPath = Path.Combine(_problemDir, $"{name}-training.prb");
+            var rawPrbPath = Path.Combine(_problemDir, $"{name}-Train.prb");
             ProblemSerializer.Serialize(problem, rawPrbPath);
-            Train(instanceType, rawPrbPath);
+            Train(instanceType, rawPrbPath, config);
         }
 
-        public void Train<T>(ClasProblem problem) where T : IClasInstance
+        public void Train<T>(ClasProblem problem, GenericConfig config) where T : IClasInstance
         {
-            Train(typeof(T), problem);
+            Train(typeof(T), problem, config);
         }
 
-        public void Train<T>(string problemPath) where T : IClasInstance
+        public void Train<T>(string problemPath, GenericConfig config) where T : IClasInstance
         {
-            Train(typeof(T), problemPath);
+            Train(typeof(T), problemPath, config);
         }
 
-        public void Train(Type instanceType, string problemPath)
+        public void Train(Type instanceType, string problemPath, GenericConfig config)
         {
             var name = instanceType.Name;
             Console.WriteLine($"Preparing training {name} problem...");
 
-            var scaledPrbPath = Path.Combine(_problemDir, $"{name}-training.scaled");
+            var scaledPrbPath = Path.Combine(_problemDir, $"{name}-Train.scaled");
             var sfPath = Path.Combine(_modelDir, $"{name}.sf");
             var modelPath = Path.Combine(_modelDir, $"{name}.model");
 
@@ -92,7 +80,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             CalcWeights(problem, out labels, out weights);
             Console.WriteLine("Cost weights: " +
                 $"{string.Join(" ", Enumerable.Range(0, labels.Length).Select(i => $"{labels[i]}:{weights[i]}"))}");
-
+            
             var svmParam = new SVMParameter()
             {
                 Type = SVMType.C_SVC,
@@ -103,31 +91,27 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
                 Shrinking = false
             };
 
-            if (_gridSearchConfig != null)
             {
-                // optimize parameter for rbf kernel
-                Console.WriteLine($"Performing grid search ({problem.Length} instances)...");
+                double cost, gamma;
 
-                double cost = 1, gamma = 1d / problem.X[0].Length;
-                double accuracy = -1d;
-
-                if (_rbfOptimizer.Optimize(_gridSearchConfig, problem, 3, out cost, out gamma, out accuracy))
+                if (config != null)
                 {
-                    Console.WriteLine($"Grid search result: a={accuracy * 100}% at c={cost} g={gamma}");
-                    Console.WriteLine("Training using the above parameters...");
+                    if (config.TryGetConfig(LibSVMConfig.Cost, out gamma))
+                    {
+                        svmParam.Gamma = gamma;
+                    }
 
-                    svmParam.C = Math.Pow(2, cost);
-                    svmParam.Gamma = Math.Pow(2, gamma);
+                    if (config.TryGetConfig(LibSVMConfig.Gamma, out cost))
+                    {
+                        svmParam.C = cost;
+                    }
+
+                    Console.WriteLine($"Training using parameters: c={cost}, g={gamma}...");
                 }
                 else
                 {
-                    Console.WriteLine("Grid search failed!");
-                    Console.WriteLine("Training using default parameters...");
+                    Console.WriteLine($"Training using default parameter...");
                 }
-            }
-            else
-            {
-                Console.WriteLine("Training using default parameters...");
             }
 
             problem = null;
