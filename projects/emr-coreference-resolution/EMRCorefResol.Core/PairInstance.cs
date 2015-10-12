@@ -31,7 +31,7 @@ namespace HCMUT.EMRCorefResol
             return HashCodeHelper.ComputeHashCode(Antecedent, Anaphora);
         }
 
-        public abstract void AddTo(ClasProblemCreator pCreator, IFeatureVector fVector);
+        public abstract void AddTo(ClasProblemCollection pCreator, IFeatureVector fVector);
 
         public bool Equals(PairInstance other)
         {
@@ -49,7 +49,7 @@ namespace HCMUT.EMRCorefResol
     {
         public PersonPair(Concept antecedent, Concept anaphora) : base(antecedent, anaphora) { }
 
-        public override void AddTo(ClasProblemCreator pCreator, IFeatureVector fVector)
+        public override void AddTo(ClasProblemCollection pCreator, IFeatureVector fVector)
         {
             pCreator.Add(this, fVector);
         }
@@ -64,7 +64,7 @@ namespace HCMUT.EMRCorefResol
     {
         public ProblemPair(Concept antecedent, Concept anaphora) : base(antecedent, anaphora) { }
 
-        public override void AddTo(ClasProblemCreator pCreator, IFeatureVector fVector)
+        public override void AddTo(ClasProblemCollection pCreator, IFeatureVector fVector)
         {
             pCreator.Add(this, fVector);
         }
@@ -79,7 +79,7 @@ namespace HCMUT.EMRCorefResol
     {
         public TreatmentPair(Concept antecedent, Concept anaphora) : base(antecedent, anaphora) { }
 
-        public override void AddTo(ClasProblemCreator pCreator, IFeatureVector fVector)
+        public override void AddTo(ClasProblemCollection pCreator, IFeatureVector fVector)
         {
             pCreator.Add(this, fVector);
         }
@@ -94,7 +94,7 @@ namespace HCMUT.EMRCorefResol
     {
         public TestPair(Concept antecedent, Concept anaphora) : base(antecedent, anaphora) { }
 
-        public override void AddTo(ClasProblemCreator pCreator, IFeatureVector fVector)
+        public override void AddTo(ClasProblemCollection pCreator, IFeatureVector fVector)
         {
             pCreator.Add(this, fVector);
         }

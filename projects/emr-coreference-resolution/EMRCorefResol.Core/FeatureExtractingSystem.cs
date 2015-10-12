@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HCMUT.EMRCorefResol.Classification;
-using static HCMUT.EMRCorefResol.Logging.LoggerFactory;
 using System.IO;
 
 namespace HCMUT.EMRCorefResol
@@ -16,13 +15,13 @@ namespace HCMUT.EMRCorefResol
         private FeatureExtractingSystem() { }
 
         public void ExtractOne(string emrPath, string conceptsPath, string chainsPath, IDataReader dataReader,
-            IPreprocessor preprocessor, IFeatureExtractor fExtractor, ClasProblemCreator pCreator)
+            IPreprocessor preprocessor, IFeatureExtractor fExtractor, ClasProblemCollection pCreator)
         {
             var gtExists = File.Exists(chainsPath);
             if (fExtractor.NeedGroundTruth && !gtExists)
                 throw new ArgumentException("The feature extractor needs ground truth to operate properly.");
 
-            GetLogger().WriteInfo(Path.GetFileName(emrPath));
+            Console.WriteLine(Path.GetFileName(emrPath));
 
             var emr = new EMR(emrPath, conceptsPath, dataReader);
             var chains = gtExists ? new CorefChainCollection(chainsPath, dataReader) : null;
@@ -34,20 +33,22 @@ namespace HCMUT.EMRCorefResol
             var features = new IFeatureVector[instances.Count];
             int nDone = 0, iCount = instances.Count;
 
-            GetLogger().WriteInfo("Extracting features...");
+            Console.WriteLine("Extracting features...");
+
             Parallel.For(0, iCount, k =>
             {
                 lock (emr)
                 {
                     nDone += 1;
-                    GetLogger().UpdateInfo($"{nDone}/{iCount}");
+                    Console.SetCursorPosition(0, Console.CursorTop);
+                    Console.WriteLine($"{nDone}/{iCount}");
                 }
 
                 var t = instances[k];
                 features[k] = t.GetFeatures(fExtractor);
             });
 
-            GetLogger().WriteInfo("\n");
+            Console.WriteLine();
 
             for (int k = 0; k < features.Length; k++)
             {
@@ -58,7 +59,7 @@ namespace HCMUT.EMRCorefResol
         }
 
         public void ExtractAll(string[] emrPaths, string[] conceptsPaths, string[] chainsPaths, IDataReader dataReader,
-            IPreprocessor preprocessor, IFeatureExtractor fExtractor, ClasProblemCreator pCreator)
+            IPreprocessor preprocessor, IFeatureExtractor fExtractor, ClasProblemCollection pCreator)
         {
             for (int i = 0; i < emrPaths.Length; i++)
             {
@@ -68,7 +69,7 @@ namespace HCMUT.EMRCorefResol
         }
 
         public void ExtractCollection(EMRCollection emrColl, IDataReader dataReader,
-            IPreprocessor preprocessor, IFeatureExtractor fExtractor, ClasProblemCreator pCreator)
+            IPreprocessor preprocessor, IFeatureExtractor fExtractor, ClasProblemCollection pCreator)
         {
             for (int i = 0; i < emrColl.Count; i++)
             {
@@ -78,7 +79,7 @@ namespace HCMUT.EMRCorefResol
         }
 
         public void ExtractCollections(IEnumerable<EMRCollection> emrColls, IDataReader dataReader,
-            IPreprocessor preprocessor, IFeatureExtractor fExtractor, ClasProblemCreator pCreator)
+            IPreprocessor preprocessor, IFeatureExtractor fExtractor, ClasProblemCollection pCreator)
         {
             foreach (var ec in emrColls)
             {

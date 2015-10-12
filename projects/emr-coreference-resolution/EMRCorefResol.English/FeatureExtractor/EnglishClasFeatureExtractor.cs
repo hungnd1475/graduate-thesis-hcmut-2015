@@ -47,8 +47,9 @@ namespace HCMUT.EMRCorefResol.English
                     var classValue = -1d;
                     if (GroundTruth != null)
                     {
-                        var patientChain = GroundTruth.GetPatientChain();
-                        classValue = patientChain != null ? (patientChain.Contains(instance.Concept) ? 1 : -1) : -1;
+                        var patientChain = GroundTruth.GetPatientChain(KeywordService.Instance.PATIENT_KEYWORDS,
+                            KeywordService.Instance.RELATIVES);
+                        classValue = patientChain != null ? (patientChain.Contains(instance.Concept) ? 1 : 0) : 0;
                     }
                     _personCache.Add(instance.Concept, new PersonInstanceFeatures(instance, EMR, classValue));
                 }
@@ -83,7 +84,7 @@ namespace HCMUT.EMRCorefResol.English
 
         public IFeatureVector Extract(PersonPair instance)
         {
-            var classValue = GroundTruth.IsCoref(instance) ? 1 : -1;
+            var classValue = GroundTruth.IsCoref(instance) ? 1 : 0;
             return new PersonPairFeatures(instance, EMR, _patientDeterminer, classValue);
         }
 

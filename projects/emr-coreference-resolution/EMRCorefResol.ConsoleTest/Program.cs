@@ -41,13 +41,13 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             //testTrainer();
             //testLoadClassifier();
             //testService();
-            var path = testTrainManyEMR(2);
-            testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", EMR_COLLECTION);
+            //var path = testTrainManyEMR(5);
+            //testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", EMR_COLLECTION);
             //testClassifier(path, 1);
-            //testAhoCorasick();
+            //testAhoCorasick();            
 
-            //var classifier = testTrainAllEMR();
-            //ClassifierSerializer.Serialize(classifier, @"Classification\LibSVMTools\Models\LibSVMTool.classifier");
+            var classifier = testTrainAllEMR();
+            ClassifierSerializer.Serialize(classifier, @"Classification\LibSVMTools\Models\LibSVMTool.classifier");
             //testClassifier(classifier, 20);
 
             sw.Stop();
@@ -85,7 +85,7 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
                 Console.WriteLine(c);
                 Console.WriteLine("----------------------------------------");
             }
-            Console.WriteLine(chains.GetPatientChain());
+            //Console.WriteLine(chains.GetPatientChain());
         }
 
         static void testFeatures()
@@ -136,8 +136,9 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
         {
             var trainer = new LibSVMTrainer(
                 new GridSearchConfig(
-                    Range.Create(-5d, 9d), 2, // c range and step
-                    Range.Create(-9d, 3d), 2)); // gamma range and step
+                    Range.Create(-5d, 5d), 2, // c range and step
+                    Range.Create(-6d, 4d), 2, // gamma range and step
+                    true)); 
 
             var dataReader = new I2B2DataReader();
             var preprocessor = new SimplePreprocessor();
@@ -234,12 +235,17 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
         static IClassifier testTrainAllEMR()
         {
-            var trainer = new LibSVMTrainer();
+            var trainer = new LibSVMTrainer(
+                new GridSearchConfig(
+                    Range.Create(-5d, 5d), 2, // c range and step
+                    Range.Create(-9d, 3d), 2, // gamma range and step
+                    true)); 
+
             var dataReader = new I2B2DataReader();
             var preprocessor = new SimplePreprocessor();
             var fExtractor = new EnglishTrainingFeatureExtractor();
 
-            TrainingSystem.Instance.TrainAll(EMR_COLLECTION, dataReader, preprocessor, fExtractor, trainer);
+            TrainingSystem.Instance.TrainCollection(EMR_COLLECTION, dataReader, preprocessor, fExtractor, trainer);
             return trainer.GetClassifier();
         }
     }

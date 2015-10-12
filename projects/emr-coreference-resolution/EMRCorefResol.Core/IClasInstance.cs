@@ -20,6 +20,6 @@ namespace HCMUT.EMRCorefResol
         /// <returns></returns>
         IFeatureVector GetFeatures(IFeatureExtractor extractor);
 
-        void AddTo(ClasProblemCreator pCreator, IFeatureVector fVector);
+        void AddTo(ClasProblemCollection pCreator, IFeatureVector fVector);
     }
 }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using HCMUT.EMRCorefResol.Utilities;
 
 namespace HCMUT.EMRCorefResol
 {
@@ -15,6 +16,9 @@ namespace HCMUT.EMRCorefResol
     public class CorefChainCollection : IEnumerable<CorefChain>
     {
         private readonly ICollection<CorefChain> _chains;
+        private CorefChain _patientChain;
+        private readonly object _lockObj = new object();
+        private bool _searchedForPt = false;
  
         /// <summary>
         /// Gets the total number of chains in the collection.
@@ -68,20 +72,40 @@ namespace HCMUT.EMRCorefResol
         /// Gets the <see cref="CorefChain"/> about the patient of the EMR.
         /// </summary>
         /// <returns></returns>
-        public CorefChain GetPatientChain()
+        public CorefChain GetPatientChain(IKeywordDictionary patientKW, IKeywordDictionary relativeKW)
         {
-            CorefChain result = null;
-            foreach (var c in _chains)
+            lock (_lockObj)
             {
-                if (c.Type == ConceptType.Person)
+                if (!_searchedForPt)
                 {
-                    if (result == null || c.Count > result.Count)
-                    {
-                        result = c;
-                    }
+                    var t = GetPatientChainByKW(patientKW);
+                    _patientChain = t != null ? t : GetPatientChainByLength(relativeKW);
+                    _searchedForPt = true;
                 }
             }
-            return result;
+            return _patientChain;
+        }
+
+        private CorefChain GetPatientChainByKW(IKeywordDictionary patientKW)
+        {
+            return _chains.FirstOrDefault(ch =>
+                ch.Type == ConceptType.Person &&
+                ch.Any(c => patientKW.Match(c.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
+            );
+        }
+
+        private CorefChain GetPatientChainByLength(IKeywordDictionary relativeKW)
+        {
+            CorefChain r = null;
+            foreach (var ch in _chains)
+            {
+                if (ch.Type == ConceptType.Person && !ch.Any(c => relativeKW.Match(c.Lexicon, KWSearchOptions.WholeWord)))
+                {
+                    if (r == null || r.Count < ch.Count)
+                        r = ch;
+                }
+            }
+            return r;
         }
 
         /// <summary>

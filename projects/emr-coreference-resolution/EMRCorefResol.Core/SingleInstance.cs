@@ -34,7 +34,7 @@ namespace HCMUT.EMRCorefResol
             return Equals(obj as SingleInstance);
         }
 
-        public abstract void AddTo(ClasProblemCreator pCreator, IFeatureVector fVector);
+        public abstract void AddTo(ClasProblemCollection pCreator, IFeatureVector fVector);
 
         public bool Equals(SingleInstance other)
         {
@@ -48,7 +48,7 @@ namespace HCMUT.EMRCorefResol
             : base(pronoun)
         { }
 
-        public override void AddTo(ClasProblemCreator pCreator, IFeatureVector fVector)
+        public override void AddTo(ClasProblemCollection pCreator, IFeatureVector fVector)
         {
             pCreator.Add(this, fVector);
         }
@@ -65,7 +65,7 @@ namespace HCMUT.EMRCorefResol
             : base(person)
         { }
 
-        public override void AddTo(ClasProblemCreator pCreator, IFeatureVector fVector)
+        public override void AddTo(ClasProblemCollection pCreator, IFeatureVector fVector)
         {
             pCreator.Add(this, fVector);
         }

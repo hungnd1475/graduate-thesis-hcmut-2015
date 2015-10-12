@@ -8,10 +8,11 @@
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>HCMUT.EMRCorefResol.FeatureConsole</RootNamespace>
-    <AssemblyName>emrcr-fextract</AssemblyName>
+    <AssemblyName>feat-extract</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -103,10 +103,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arguments.cs" />
-    <Compile Include="DataFormat.cs" />
-    <Compile Include="Language.cs" />
-    <Compile Include="Mode.cs" />
-    <Compile Include="OutputFormat.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -127,17 +123,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EMRCorefResol.Classification\EMRCorefResol.Classification.csproj">
-      <Project>{34b8ae46-9ab3-43b2-935d-1e8a8815fb04}</Project>
-      <Name>EMRCorefResol.Classification</Name>
+    <ProjectReference Include="..\EMRCorefResol.Core.Console\EMRCorefResol.Core.Console.csproj">
+      <Project>{07c83ae4-8579-4fdb-b2c3-d1a0f6ee668c}</Project>
+      <Name>EMRCorefResol.Core.Console</Name>
     </ProjectReference>
     <ProjectReference Include="..\EMRCorefResol.Core\EMRCorefResol.Core.csproj">
       <Project>{66284726-8e94-4438-b366-f14b04874734}</Project>
       <Name>EMRCorefResol.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EMRCorefResol.English\EMRCorefResol.English.csproj">
-      <Project>{431ba8ee-38d6-4aa1-97af-8e94889aaecc}</Project>
-      <Name>EMRCorefResol.English</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

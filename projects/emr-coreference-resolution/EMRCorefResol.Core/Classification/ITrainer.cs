@@ -11,6 +11,8 @@ namespace HCMUT.EMRCorefResol.Classification
     {
         void Train<T>(ClasProblem problem) where T : IClasInstance;
         void Train(Type instanceType, ClasProblem problem);
+        void Train<T>(string problemPath) where T : IClasInstance;
+        void Train(Type instanceType, string problemPath);
 
         IClassifier GetClassifier();
         IClasProblemSerializer ProblemSerializer { get; }

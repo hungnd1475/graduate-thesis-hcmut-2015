@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.IO;
-using static HCMUT.EMRCorefResol.Logging.LoggerFactory;
 using HCMUT.EMRCorefResol.Classification.LibSVM.Internal;
 
 namespace HCMUT.EMRCorefResol.Classification.LibSVM
@@ -13,8 +12,8 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
     public class LibSVMClassifier : IClassifier, IDisposable
     {
         private readonly string _modelsDir;
-        private readonly Dictionary<Concept, double> _cache
-            = new Dictionary<Concept, double>();
+        private readonly Dictionary<Concept, ClasResult> _cache
+            = new Dictionary<Concept, ClasResult>();
 
         private readonly object _syncRoot = new object();
 
@@ -23,14 +22,9 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
 
         public string ModelsDir { get { return _modelsDir; } }
 
-        internal LibSVMClassifier(string modelsDir)
+        public LibSVMClassifier(string modelsDir)
         {
             _modelsDir = modelsDir;
-        }
-
-        public LibSVMClassifier(XmlReader xmlReader, string dir)
-        {
-            _modelsDir = xmlReader.ReadElementContentAsString();
         }
 
         public IClasProblemSerializer ProblemSerializer
@@ -38,27 +32,27 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             get { return LibSVMProblemSerializer.Instance; }
         }
 
-        public double Classify(ProblemPair instance, IFeatureVector f)
+        public ClasResult Classify(ProblemPair instance, IFeatureVector f)
         {
             return ClassifyInstance(instance, f);
         }
 
-        public double Classify(TestPair instance, IFeatureVector f)
+        public ClasResult Classify(TestPair instance, IFeatureVector f)
         {
             return ClassifyInstance(instance, f);
         }
 
-        public double Classify(PronounInstance instance, IFeatureVector f)
+        public ClasResult Classify(PronounInstance instance, IFeatureVector f)
         {
             return ClassifyInstance(instance, f);
         }
 
-        public double Classify(TreatmentPair instance, IFeatureVector f)
+        public ClasResult Classify(TreatmentPair instance, IFeatureVector f)
         {
             return ClassifyInstance(instance, f);
         }
 
-        public double Classify(PersonInstance instance, IFeatureVector f)
+        public ClasResult Classify(PersonInstance instance, IFeatureVector f)
         {
             lock (_syncRoot)
             {
@@ -70,7 +64,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             return _cache[instance.Concept];
         }
 
-        public double Classify(PersonPair instance, IFeatureVector f)
+        public ClasResult Classify(PersonPair instance, IFeatureVector f)
         {
             return ClassifyInstance(instance, f); ;
         }
@@ -99,8 +93,8 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             LibSVM.RunSVMScale(sfPath, rawPrbPath, scaledPrbPath);
 
             // predict
-            GetLogger().WriteInfo($"Classifying {name} problem...");
-            LibSVM.RunSVMPredict(scaledPrbPath, modelPath, outputPath, true);
+            Console.WriteLine($"Classifying {name} problem...");
+            LibSVM.RunSVMPredict(scaledPrbPath, modelPath, outputPath);
 
             var target = new double[problem.Size];
             var sr = new StreamReader(outputPath);
@@ -122,12 +116,12 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             return target;
         }
 
-        private double ClassifyInstance(IClasInstance instance, IFeatureVector fVector)
+        private ClasResult ClassifyInstance(IClasInstance instance, IFeatureVector fVector)
         {
             var instanceType = instance.GetType();
             var sfPath = Path.Combine(_modelsDir, $"{instanceType.Name}.sf");
 
-            var pCreator = new ClasProblemCreator();
+            var pCreator = new ClasProblemCollection();
             pCreator.Add(instance, fVector);
             var rawPrb = pCreator.GetProblem(instanceType);
 
@@ -141,7 +135,10 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
 
             var scaledPrb = LibSVM.ReadProblem(scaledPrbContent, null);
             var svmModel = GetModel(instanceType);
-            return LibSVM.Predict(svmModel, scaledPrb.X[0]);
+
+            double confidence, label;
+            label = LibSVM.Predict(svmModel, scaledPrb.X[0], out confidence);
+            return new ClasResult(label, confidence);
         }
 
         private SVMModel GetModel(Type instanceType)
@@ -156,11 +153,6 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
                 }
             }
             return _svmModels[instanceType];
-        }
-
-        public void WriteXml(XmlWriter writer, string dir)
-        {
-            writer.WriteElementString("ModelsDir", _modelsDir);
         }
 
         public void Dispose()

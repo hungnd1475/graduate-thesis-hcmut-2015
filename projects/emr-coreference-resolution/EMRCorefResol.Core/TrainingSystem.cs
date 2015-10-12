@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
-using static HCMUT.EMRCorefResol.Logging.LoggerFactory;
 
 namespace HCMUT.EMRCorefResol
 {
@@ -26,93 +25,43 @@ namespace HCMUT.EMRCorefResol
 
         public static TrainingSystem Instance { get; } = new TrainingSystem();
 
+        private readonly FeatureExtractingSystem _fExtractSystem = FeatureExtractingSystem.Instance;
+
         private TrainingSystem() { }
 
         public void TrainOne(string emrPath, string conceptsPath, string chainsPath, IDataReader dataReader,
             IPreprocessor preprocessor, IFeatureExtractor fExtractor, ITrainer trainer)
         {
-            var pCreator = new ClasProblemCreator();
-            ExtractFeatures(emrPath, conceptsPath, chainsPath, dataReader,
-                    preprocessor, fExtractor, pCreator);
-            GetLogger().WriteInfo("Training...");
-
-            trainer.Train<PersonPair>(pCreator.GetProblem<PersonPair>());
-            trainer.Train<PersonInstance>(pCreator.GetProblem<PersonInstance>());
-            trainer.Train<PronounInstance>(pCreator.GetProblem<PronounInstance>());
+            var pCollection = new ClasProblemCollection();
+            _fExtractSystem.ExtractOne(emrPath, conceptsPath, chainsPath, dataReader, preprocessor,
+                fExtractor, pCollection);
+            Train(trainer, pCollection);           
         }
 
         public void TrainAll(string[] emrFiles, string[] conceptsFiles, string[] chainsFiles, IDataReader dataReader,
             IPreprocessor preprocessor, IFeatureExtractor fExtractor, ITrainer trainer)
         {
-            var pCreator = new ClasProblemCreator();
-
-            for (int i = 0; i < emrFiles.Length; i++)
-            {
-                ExtractFeatures(emrFiles[i], conceptsFiles[i], chainsFiles[i], dataReader,
-                    preprocessor, fExtractor, pCreator);
-            }
-
-            GetLogger().WriteInfo("Training...");
-
-            trainer.Train<PersonPair>(pCreator.GetProblem<PersonPair>());
-            trainer.Train<PersonInstance>(pCreator.GetProblem<PersonInstance>());
-            trainer.Train<PronounInstance>(pCreator.GetProblem<PronounInstance>());
+            var pCollection = new ClasProblemCollection();
+            _fExtractSystem.ExtractAll(emrFiles, conceptsFiles, chainsFiles, dataReader,
+                preprocessor, fExtractor, pCollection);
+            Train(trainer, pCollection);            
         }
 
-        public void TrainAll(EMRCollection emrCollection, IDataReader dataReader, IPreprocessor preprocessor,
+        public void TrainCollection(EMRCollection emrCollection, IDataReader dataReader, IPreprocessor preprocessor,
             IFeatureExtractor fExtractor, ITrainer trainer)
         {
-            var pCreator = new ClasProblemCreator();
-
-            for (int i = 0; i < emrCollection.Count; i++)
-            {
-                ExtractFeatures(emrCollection.GetEMRPath(i), emrCollection.GetConceptsPath(i), emrCollection.GetChainsPath(i),
-                    dataReader, preprocessor, fExtractor, pCreator);
-            }
-
-            GetLogger().WriteInfo("Training...");
-
-            trainer.Train<PersonPair>(pCreator.GetProblem<PersonPair>());
-            trainer.Train<PersonInstance>(pCreator.GetProblem<PersonInstance>());
-            trainer.Train<PronounInstance>(pCreator.GetProblem<PronounInstance>());
+            var pCollection = new ClasProblemCollection();
+            _fExtractSystem.ExtractCollection(emrCollection, dataReader, preprocessor,
+                fExtractor, pCollection);
+            Train(trainer, pCollection);            
         }
 
-        private void ExtractFeatures(string emrPath, string conceptsPath, string chainsPath, IDataReader dataReader,
-            IPreprocessor preprocessor, IFeatureExtractor fExtractor, ClasProblemCreator pCreator)
+        private void Train(ITrainer trainer, ClasProblemCollection pCollection)
         {
-            GetLogger().WriteInfo(Path.GetFileName(emrPath));
-
-            var emr = new EMR(emrPath, conceptsPath, dataReader);
-            var chains = new CorefChainCollection(chainsPath, dataReader);
-
-            fExtractor.EMR = emr;
-            fExtractor.GroundTruth = chains;
-
-            var instances = preprocessor.Process(emr);
-            var features = new IFeatureVector[instances.Count];
-            int nDone = 0, iCount = instances.Count;
-
-            GetLogger().WriteInfo("Extracting features...");
-            Parallel.For(0, iCount, k =>
-            {
-                lock (emr)
-                {
-                    nDone += 1;
-                    GetLogger().UpdateInfo($"{nDone}/{iCount}");
-                }
-
-                var t = instances[k];
-                features[k] = t.GetFeatures(fExtractor);
-            });
-
-            GetLogger().WriteInfo("\n");
-
-            for (int k = 0; k < features.Length; k++)
-            {
-                var fVector = features[k];
-                if (fVector != null)
-                    instances[k].AddTo(pCreator, fVector);
-            }
+            Console.WriteLine("Training...");
+            trainer.Train<PersonPair>(pCollection.GetProblem<PersonPair>());
+            trainer.Train<PersonInstance>(pCollection.GetProblem<PersonInstance>());
+            trainer.Train<PronounInstance>(pCollection.GetProblem<PronounInstance>());
         }
     }
 }

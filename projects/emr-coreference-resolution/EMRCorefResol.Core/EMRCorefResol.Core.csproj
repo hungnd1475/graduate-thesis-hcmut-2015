@@ -82,9 +82,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassificationSystem.cs" />
+    <Compile Include="Classification\ClasResult.cs" />
     <Compile Include="Classification\ClassifierSerializer.cs" />
     <Compile Include="Classification\ClasProblem.cs" />
-    <Compile Include="Classification\ClasProblemCreator.cs" />
+    <Compile Include="Classification\ClasProblemCollection.cs" />
     <Compile Include="Classification\IClasProblemSerializer.cs" />
     <Compile Include="Concept.cs" />
     <Compile Include="ConceptCollection.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="EMR.cs" />
     <Compile Include="ConceptType.cs" />
     <Compile Include="Classification\IClassifier.cs" />
+    <Compile Include="ICorefResolver.cs" />
     <Compile Include="IConceptPair.cs" />
     <Compile Include="IO\I2B2DataReader.cs" />
     <Compile Include="IO\IDataReader.cs" />
@@ -107,11 +109,12 @@
     <Compile Include="IPreprocessor.cs" />
     <Compile Include="ISingleConcept.cs" />
     <Compile Include="Classification\ITrainer.cs" />
+    <Compile Include="Logging\FileLogger.cs" />
+    <Compile Include="Logging\Logger.cs" />
     <Compile Include="Utilities\Keywords\AhoCorasickKeywordDictionary.cs" />
     <Compile Include="Utilities\Keywords\RegexKeywordDictionary.cs" />
     <Compile Include="Logging\ConsoleLogger.cs" />
     <Compile Include="Logging\ILogger.cs" />
-    <Compile Include="Logging\LoggerFactory.cs" />
     <Compile Include="PairInstance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ConceptPosition.cs" />

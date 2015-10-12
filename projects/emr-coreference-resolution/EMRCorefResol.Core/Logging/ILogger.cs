@@ -8,11 +8,6 @@ namespace HCMUT.EMRCorefResol.Logging
 {
     public interface ILogger
     {
-        void WriteInfo(string s);
-        void WriteDebug(string s);
-        void WriteError(string s);
-
-        void WriteInfo(string s, bool newLine);
-        void UpdateInfo(string s);
+        void Log(string s);
     }
 }

@@ -9,37 +9,9 @@ namespace HCMUT.EMRCorefResol.Logging
 {
     class ConsoleLogger : ILogger
     {
-        public void UpdateInfo(string s)
+        public void Log(string s)
         {
-            Console.SetCursorPosition(0, Console.CursorTop);
-            WriteInfo(s, false);
-        }
-
-        public void WriteDebug(string s)
-        {
-            SysDebug.WriteLine(s);
-        }
-
-        public void WriteError(string s)
-        {
-            Console.Error.WriteLine(s);
-        }
-
-        public void WriteInfo(string s)
-        {
-            WriteInfo(s, true);
-        }
-
-        public void WriteInfo(string s, bool newLine)
-        {
-            if (newLine)
-            {
-                Console.WriteLine(s);
-            }
-            else
-            {
-                Console.Write(s);
-            }
+            Console.WriteLine(s);
         }
     }
 }

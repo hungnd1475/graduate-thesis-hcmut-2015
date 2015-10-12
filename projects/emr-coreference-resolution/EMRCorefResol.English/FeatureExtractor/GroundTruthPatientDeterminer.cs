@@ -17,15 +17,9 @@ namespace HCMUT.EMRCorefResol.English
 
         public bool? IsPatient(Concept concept)
         {
-            var patientChain = _groundTruth.GetPatientChain();
-            if (patientChain == null)
-            {
-                return null;
-            }
-            else
-            {
-                return patientChain.Contains(concept);
-            }
+            var patientChain = _groundTruth.GetPatientChain(KeywordService.Instance.PATIENT_KEYWORDS,
+                KeywordService.Instance.RELATIVES);
+            return patientChain?.Contains(concept);
         }
     }
 }

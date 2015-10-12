@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HCMUT.EMRCorefResol.FeatureConsole
+namespace HCMUT.EMRCorefResol.Core.Console
 {
-    enum OutputFormat
+    public enum ClasMethod
     {
         LibSVM = 1
     }

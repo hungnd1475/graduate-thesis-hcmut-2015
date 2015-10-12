@@ -53,25 +53,41 @@ namespace HCMUT.EMRCorefResol
 
         public void GetRandom(int size, out string[] emrPaths, out string[] conceptsPaths, out string[] chainsPaths)
         {
-            emrPaths = new string[size];
-            conceptsPaths = new string[size];
-            chainsPaths = new string[size];
-
-            var indices = new HashSet<int>();
-            int k;
-
-            for (int i = 0; i < size && i < Count; i++)
+            if (size > Count)
             {
-                do
-                {
-                    k = _rand.Next(0, Count - 1);
-                }
-                while (indices.Contains(k));
+                emrPaths = new string[Count];
+                conceptsPaths = new string[Count];
+                chainsPaths = new string[Count];
 
-                indices.Add(k);
-                emrPaths[i] = GetEMRPath(k);
-                conceptsPaths[i] = GetConceptsPath(k);
-                chainsPaths[i] = GetChainsPath(k);
+                for (int i = 0; i < Count; i++)
+                {
+                    emrPaths[i] = GetEMRPath(i);
+                    conceptsPaths[i] = GetConceptsPath(i);
+                    chainsPaths[i] = GetChainsPath(i);
+                }
+            }
+            else
+            {
+                emrPaths = new string[size];
+                conceptsPaths = new string[size];
+                chainsPaths = new string[size];
+
+                var indices = new HashSet<int>();
+                int k;
+
+                for (int i = 0; i < size; i++)
+                {
+                    do
+                    {
+                        k = _rand.Next(0, Count - 1);
+                    }
+                    while (indices.Contains(k));
+
+                    indices.Add(k);
+                    emrPaths[i] = GetEMRPath(k);
+                    conceptsPaths[i] = GetConceptsPath(k);
+                    chainsPaths[i] = GetChainsPath(k);
+                }
             }
         }
     }

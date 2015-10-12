@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.IO;
-using static HCMUT.EMRCorefResol.Logging.LoggerFactory;
 using HCMUT.EMRCorefResol.Classification.LibSVM.Internal;
 
 namespace HCMUT.EMRCorefResol.Classification.LibSVM
@@ -18,6 +17,8 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
         private readonly string _saveDir;
         private readonly string _problemDir, _modelDir;
         private readonly GridSearchConfig _gridSearchConfig = null;
+        private readonly RBFKernelParameterOptimizer _rbfOptimizer
+            = new RBFKernelParameterOptimizer();
 
         public string ModelsDir { get { return _modelDir; } }
 
@@ -57,46 +58,9 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
         public void Train(Type instanceType, ClasProblem problem)
         {
             var name = instanceType.Name;
-
             var rawPrbPath = Path.Combine(_problemDir, $"{name}-training.prb");
-            var scaledPrbPath = Path.Combine(_problemDir, $"{name}-training.scaled");
-            var sfPath = Path.Combine(_modelDir, $"{name}.sf");
-            var modelPath = Path.Combine(_modelDir, $"{name}.model");
-
             ProblemSerializer.Serialize(problem, rawPrbPath);
-
-            // scale
-            var scaledData = LibSVM.RunSVMScale(0d, 1d, sfPath, rawPrbPath);
-
-            // optimize parameter for rbf kernel
-            GetLogger().WriteInfo($"Performing grid search on {name} problem ({problem.Size} instances)...");
-
-            double cost = 1, gamma = 1d / problem.X[0].Length;
-            double accuracy = -1d;
-            if (_gridSearchConfig != null)
-            {
-                accuracy = RBFParameterOptimizer.Optimize(_gridSearchConfig, 5, scaledData, out cost, out gamma);
-            }
-
-            using (var sr = new StreamWriter(scaledPrbPath))
-            {
-                sr.Write(scaledData);
-                scaledData = string.Empty;
-            }
-
-            // train
-            if (accuracy != -1d)
-            {
-                GetLogger().WriteInfo($"Grid search result: a={accuracy * 100}% at c={cost} g={gamma}");
-                GetLogger().WriteInfo($"Training {name} problem using the above parameters...");
-                LibSVM.RunSVMTrainRBFKernel(Math.Pow(2, cost), Math.Pow(2, gamma), scaledPrbPath, modelPath, false);
-            }
-            else
-            {
-                GetLogger().WriteInfo("Grid search failed!");
-                GetLogger().WriteInfo($"Training {name} problem using default parameters...");
-                LibSVM.RunSVMTrainRBFKernel(scaledPrbPath, modelPath, false);
-            }
+            Train(instanceType, rawPrbPath);
         }
 
         public void Train<T>(ClasProblem problem) where T : IClasInstance
@@ -104,117 +68,99 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             Train(typeof(T), problem);
         }
 
-        private static class RBFParameterOptimizer
+        public void Train<T>(string problemPath) where T : IClasInstance
         {
-            private const int PROBLEM_MAX_LENGTH = 10000;
+            Train(typeof(T), problemPath);
+        }
 
-            public static double Optimize(GridSearchConfig config, int nfold, string data, out double cost, out double gamma)
+        public void Train(Type instanceType, string problemPath)
+        {
+            var name = instanceType.Name;
+            Console.WriteLine($"Preparing training {name} problem...");
+
+            var scaledPrbPath = Path.Combine(_problemDir, $"{name}-training.scaled");
+            var sfPath = Path.Combine(_modelDir, $"{name}.sf");
+            var modelPath = Path.Combine(_modelDir, $"{name}.model");
+
+            // scale
+            Console.WriteLine("Scaling problem...");
+            var scaledData = LibSVM.RunSVMScale(0d, 1d, sfPath, problemPath);
+            var problem = LibSVM.ReadProblem(scaledData, null);
+
+            Console.WriteLine("Calculating cost weights...");
+            int[] labels; double[] weights;
+            CalcWeights(problem, out labels, out weights);
+            Console.WriteLine("Cost weights: " +
+                $"{string.Join(" ", Enumerable.Range(0, labels.Length).Select(i => $"{labels[i]}:{weights[i]}"))}");
+
+            var svmParam = new SVMParameter()
             {
-                LibSVM.SetPrintStringFunction(new LibSVMPrintFunction(DummyPrint));
-                var allProblem = LibSVM.ReadProblem(data, null);
-                AccuracyInfo bestAcc = null;
+                Type = SVMType.C_SVC,
+                Kernel = SVMKernel.RBF,
+                C = 1,
+                Gamma = 1d / problem.X[0].Length,
+                Probability = true,
+                Shrinking = false
+            };
 
-                GetLogger().WriteInfo("Entering first phase of grid search operation...");
-                if (allProblem.Length > PROBLEM_MAX_LENGTH)
+            if (_gridSearchConfig != null)
+            {
+                // optimize parameter for rbf kernel
+                Console.WriteLine($"Performing grid search ({problem.Length} instances)...");
+
+                double cost = 1, gamma = 1d / problem.X[0].Length;
+                double accuracy = -1d;
+
+                if (_rbfOptimizer.Optimize(_gridSearchConfig, problem, 3, out cost, out gamma, out accuracy))
                 {
-                    var subProblem = LibSVM.ReadProblem(data, PROBLEM_MAX_LENGTH);
-                    var accInfos = Search(config, nfold, subProblem);
-                    bestAcc = FindBest(accInfos);
+                    Console.WriteLine($"Grid search result: a={accuracy * 100}% at c={cost} g={gamma}");
+                    Console.WriteLine("Training using the above parameters...");
+
+                    svmParam.C = Math.Pow(2, cost);
+                    svmParam.Gamma = Math.Pow(2, gamma);
                 }
                 else
                 {
-                    var accInfos = Search(config, nfold, allProblem);
-                    bestAcc = FindBest(accInfos);
+                    Console.WriteLine("Grid search failed!");
+                    Console.WriteLine("Training using default parameters...");
                 }
+            }
+            else
+            {
+                Console.WriteLine("Training using default parameters...");
+            }
 
-                if (bestAcc != null)
+            problem = null;
+            using (var sr = new StreamWriter(scaledPrbPath))
+            {
+                sr.Write(scaledData);
+                scaledData = string.Empty;
+            }
+
+            // train
+            LibSVM.RunSVMTrain(svmParam, scaledPrbPath, modelPath, false);
+            Console.WriteLine("Done!");
+        }
+
+        private static void CalcWeights(SVMProblem problem, out int[] labels, out double[] weights)
+        {
+            var classCounts = new Dictionary<int, int>();
+            foreach (var y in problem.Y)
+            {
+                var yInt = (int)y;
+                if (!classCounts.ContainsKey(yInt))
                 {
-                    GetLogger().WriteInfo($"Best region: c={bestAcc.Cost} g={bestAcc.Gamma}");
-                    GetLogger().WriteInfo("Entering second phase of grid search operation...");
-
-                    var bestRegionConfig = new GridSearchConfig(
-                        Range.Create(bestAcc.Cost - 0.5, bestAcc.Cost + 0.5), 0.25d,
-                        Range.Create(bestAcc.Gamma - 0.5, bestAcc.Gamma + 0.5), 0.25d);
-
-                    var accInfos = Search(bestRegionConfig, nfold, allProblem);
-                    bestAcc = FindBest(accInfos);
-
-                    if (bestAcc != null)
-                    {
-                        cost = bestAcc.Cost;
-                        gamma = bestAcc.Gamma;
-                        return (double)bestAcc.CorrectCount / allProblem.Length;
-                    }
+                    classCounts.Add(yInt, 0);
                 }
-
-                cost = -1d;
-                gamma = -1d;
-                return -1d;
-            }
-
-            private static AccuracyInfo[] Search(GridSearchConfig config, int nfold, SVMProblem problem)
-            {
-                var accInfos = CreateGrid(config);
-                Parallel.For(0, accInfos.Length, (i) =>
+                else
                 {
-                    var a = accInfos[i];
-                    var target = LibSVM.RBFKernelCrossValidation(Math.Pow(2, a.Cost), Math.Pow(2, a.Gamma), nfold, problem);
-                    a.CorrectCount = Enumerable.Range(0, target.Length).Aggregate(0, (count, k) =>
-                    {
-                        return target[k] == problem.Y[k] ? count + 1 : count;
-                    });
-                });
-                return accInfos;
-            }
-
-            private static AccuracyInfo[] CreateGrid(GridSearchConfig config)
-            {
-                var cCount = (int)((config.CostRange.Max - config.CostRange.Min) / config.CostStep + 1);
-                var gCount = (int)((config.GammaRange.Max - config.GammaRange.Min) / config.GammaStep + 1);
-                var accInfo = new AccuracyInfo[cCount * gCount];
-                int i = 0;
-
-                for (var c = config.CostRange.Min; c <= config.CostRange.Max; c += config.CostStep)
-                {
-                    for (var g = config.GammaRange.Min; g <= config.GammaRange.Max; g += config.GammaStep)
-                    {
-                        accInfo[i++] = new AccuracyInfo()
-                        {
-                            Cost = c,
-                            Gamma = g,
-                            CorrectCount = 0
-                        };
-                    }
+                    classCounts[yInt] += 1;
                 }
-
-                return accInfo;
             }
 
-            private static AccuracyInfo FindBest(AccuracyInfo[] accInfos)
-            {
-                AccuracyInfo bestAcc = null;
-                for (int i = 0; i < accInfos.Length; i++)
-                {
-                    var a = accInfos[i];
-                    if (bestAcc == null || bestAcc.CorrectCount < a.CorrectCount)
-                    {
-                        bestAcc = a;
-                    }
-                }
-                return bestAcc;
-            }
-
-            private static void DummyPrint(string s)
-            {
-                // do nothing
-            }
-
-            class AccuracyInfo
-            {
-                public double Cost { get; set; }
-                public double Gamma { get; set; }
-                public int CorrectCount { get; set; }
-            }
+            var maxCount = classCounts.Values.Aggregate(int.MinValue, (max, count) => max < count ? count : max);
+            labels = classCounts.Keys.ToArray();
+            weights = classCounts.Values.Select(count => (double)maxCount / count).ToArray();
         }
     }
 }

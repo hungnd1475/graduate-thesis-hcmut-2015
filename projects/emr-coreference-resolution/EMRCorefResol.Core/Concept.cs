@@ -10,7 +10,7 @@ namespace HCMUT.EMRCorefResol
     /// <summary>
     /// Represents a concept in an EMR.
     /// </summary>
-    public class Concept : IEquatable<Concept>
+    public class Concept : IEquatable<Concept>, IComparable<Concept>, IComparable
     {
         /// <summary>
         /// The string representing the concept.
@@ -80,6 +80,20 @@ namespace HCMUT.EMRCorefResol
         public override string ToString()
         {
             return $"c=\"{Lexicon}\" {Begin} {End}";
+        }
+
+        public int CompareTo(Concept other)
+        {
+            if (other == null)
+                throw new ArgumentNullException("other");
+
+            var compareBegin = Begin.CompareTo(other.Begin);
+            return compareBegin != 0 ? compareBegin : End.CompareTo(other.End);
+        }
+
+        public int CompareTo(object obj)
+        {
+            return CompareTo(obj as Concept);
         }
     }
 }

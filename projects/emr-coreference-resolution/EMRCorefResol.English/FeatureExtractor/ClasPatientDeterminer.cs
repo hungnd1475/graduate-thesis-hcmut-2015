@@ -22,7 +22,7 @@ namespace HCMUT.EMRCorefResol.English
         {
             var instance = new PersonInstance(concept);
             var fVector = _fExtractor.Extract(instance);
-            var r = _classifier.Classify(instance, fVector);
+            var r = _classifier.Classify(instance, fVector).Class;
             return r == 0d ? false : (r == 1d ? true : (bool?)null);
         }
     }

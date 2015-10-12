@@ -5,10 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Fclp;
 using HCMUT.EMRCorefResol.Classification;
-using HCMUT.EMRCorefResol.IO;
-using HCMUT.EMRCorefResol.English;
 using System.IO;
-using HCMUT.EMRCorefResol.Classification.LibSVM;
+using HCMUT.EMRCorefResol.Core.Console;
 
 namespace HCMUT.EMRCorefResol.FeatureConsole
 {
@@ -27,7 +25,7 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
             }
 
             var argsResult = argsParser.Object;
-            var emrCollections = argsResult.EMRPaths.Select(ep => new EMRCollection(ep));
+            var emrCollections = argsResult.EMRDirs.Split(';').Select(ep => new EMRCollection(ep));
 
             if (argsResult.Mode != Mode.Classify && emrCollections.Any(e => !e.HasGroundTruth))
             {
@@ -36,16 +34,17 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
                 return;
             }
 
-            if (argsResult.Mode != Mode.Train && !File.Exists(argsResult.ModelPath))
+            if (argsResult.Mode != Mode.Train && !Directory.Exists(argsResult.ModelsDir))
             {
                 Console.Write("Model file must be specified in Test or Classify mode.");
                 Console.ReadLine();
                 return;
             }
 
-            var pCreator = new ClasProblemCreator();
-            var dataReader = CreateDataReader(argsResult);
-            var fExtractor = CreateFeatureExtractor(argsResult);
+            var pCreator = new ClasProblemCollection();
+            var dataReader = APISelector.SelectDataReader(argsResult.EMRFormat);
+            var fExtractor = APISelector.SelectFeatureExtractor(argsResult.Language, argsResult.Mode, 
+                argsResult.ClasMethod, argsResult.ModelsDir);
             var preprocessor = new SimplePreprocessor();
 
             if (argsResult.Random > 0)
@@ -62,7 +61,9 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
                     fExtractor, pCreator);
             }
 
-            var serializer = GetProbSerializer(argsResult);
+            var serializer = APISelector.SelectProblemSerializer(argsResult.ClasMethod);
+            Directory.CreateDirectory(argsResult.OutDir);
+
             serializer.Serialize(pCreator.GetProblem<PersonPair>(), Path.Combine(argsResult.OutDir, "PersonPair.prb"));
             serializer.Serialize(pCreator.GetProblem<PersonInstance>(), Path.Combine(argsResult.OutDir, "PersonInstance.prb"));
             serializer.Serialize(pCreator.GetProblem<PronounInstance>(), Path.Combine(argsResult.OutDir, "PronounInstance.prb"));
@@ -72,9 +73,13 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
         {
             var p = new FluentCommandLineParser<Arguments>();
 
-            p.Setup(arg => arg.EMRPaths)
+            p.Setup(arg => arg.EMRDirs)
                 .As('e', "emr")
                 .Required();
+
+            p.Setup(arg => arg.EMRFormat)
+                .As('f', "emrformat")
+                .SetDefault(EMRFormat.I2B2);
 
             p.Setup(arg => arg.Language)
                 .As('l', "language")
@@ -88,69 +93,19 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
                 .As('o', "outdir")
                 .Required();
 
-            p.Setup(arg => arg.OutputFormat)
-                .As('f', "outformat")
-                .SetDefault(OutputFormat.LibSVM);
+            p.Setup(arg => arg.ClasMethod)
+                .As('c', "clasmethod")
+                .SetDefault(ClasMethod.LibSVM);
 
             p.Setup(arg => arg.Random)
                 .As('r', "random")
                 .SetDefault(0);
 
-            p.Setup(arg => arg.ModelPath)
-                .As('d', "model")
+            p.Setup(arg => arg.ModelsDir)
+                .As('d', "models")
                 .SetDefault(null);
 
             return p;
-        }
-
-        static IDataReader CreateDataReader(Arguments args)
-        {
-            switch (args.DataFormat)
-            {
-                case DataFormat.I2B2:
-                    return new I2B2DataReader();
-                default:
-                    throw new ArgumentException("Cannot create an instance of IDataReader based on dataFormat value.");
-            }
-        }
-
-        static IFeatureExtractor CreateFeatureExtractor(Arguments args)
-        {
-            if (args.Mode == Mode.Train)
-            {
-                switch (args.Language)
-                {
-                    case Language.English:
-                        return new EnglishTrainingFeatureExtractor();
-                    case Language.Vietnamese:
-                        throw new NotImplementedException();
-                    default:
-                        throw new ArgumentException();
-                }
-            }
-            else
-            {
-                switch (args.Language)
-                {
-                    case Language.English:
-                        return new EnglishClasFeatureExtractor(ClassifierSerializer.Deserialize(args.ModelPath));
-                    case Language.Vietnamese:
-                        throw new NotImplementedException();
-                    default:
-                        throw new ArgumentException();
-                }
-            }
-        }
-
-        static IClasProblemSerializer GetProbSerializer(Arguments args)
-        {
-            switch (args.OutputFormat)
-            {
-                case OutputFormat.LibSVM:
-                    return LibSVMProblemSerializer.Instance;
-                default:
-                    throw new ArgumentException();
-            }
         }
     }
 }

@@ -5,11 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using HCMUT.EMRCorefResol.Utilities;
 using System.IO;
-using static HCMUT.EMRCorefResol.Logging.LoggerFactory;
 
 namespace HCMUT.EMRCorefResol.English
 {
-    class KeywordService
+    public class KeywordService
     {
         public static KeywordService Instance { get; private set; } = null;
 
@@ -98,7 +97,7 @@ namespace HCMUT.EMRCorefResol.English
         {
             if (Instance == null)
             {
-                GetLogger().WriteInfo("Loading keywords...");
+                Console.WriteLine("Loading keywords...");
                 Instance = new KeywordService();
             }
         }

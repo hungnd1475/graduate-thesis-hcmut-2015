@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HCMUT.EMRCorefResol.FeatureConsole
+namespace HCMUT.EMRCorefResol.Core.Console
 {
-    enum DataFormat
+    public enum Language
     {
-        I2B2 = 1
+        English = 1,
+        Vietnamese
     }
 }

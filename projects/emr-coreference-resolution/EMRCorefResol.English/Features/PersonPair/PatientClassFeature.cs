@@ -17,7 +17,7 @@ namespace HCMUT.EMRCorefResol.English.Features
             if (anaIsPatient == null || anteIsPatient == null)
             {
                 // unknown
-                SetCategoricalValue(2);
+                SetCategoricalValue(0);
             }
             else if (anaIsPatient.Value && anteIsPatient.Value)
             {
