@@ -145,9 +145,6 @@
       <Name>EMRCorefResol.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <Content Include="Keywords\department.txt">
