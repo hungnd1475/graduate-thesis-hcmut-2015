@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using HCMUT.EMRCorefResol.English.Properties;
 
 namespace HCMUT.EMRCorefResol.English.Features
 {

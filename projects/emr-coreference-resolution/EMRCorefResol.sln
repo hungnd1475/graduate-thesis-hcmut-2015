@@ -23,8 +23,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMRCorefResol.FeatureTraini
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMRCorefResol.RBFOptimizingConsole", "EMRCorefResol.RBFOptimizingConsole\EMRCorefResol.RBFOptimizingConsole.csproj", "{F7D14E36-8861-4F0A-9014-A2F9C1994963}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LibSVM", "LibSVM", "{907717AC-4D3A-4C67-AA51-2475A6C250EB}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
