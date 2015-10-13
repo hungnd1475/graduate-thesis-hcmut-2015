@@ -95,6 +95,7 @@
     <Compile Include="Features\PersonInstance\PronounWeFeature.cs" />
     <Compile Include="Features\PersonInstance\PronounYouFeature.cs" />
     <Compile Include="Features\FirstChunkAfterMention.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\ArticleFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\HeadNounFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\IndicatorFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\ModifierFeature.cs" />
