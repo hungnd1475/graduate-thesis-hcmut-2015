@@ -28,6 +28,8 @@ namespace HCMUT.EMRCorefResol
         /// </summary>
         public EMRSectionCollection Sections { get; }
 
+        public string Path { get; }
+
         /// <summary>
         /// Initializes an <see cref="EMR"/> instance from raw content and concepts file.
         /// </summary>
@@ -36,6 +38,8 @@ namespace HCMUT.EMRCorefResol
         /// <param name="dataReader">The reader that can read the concepts from concepts file.</param>
         public EMR(string emrFile, string conceptsFile, IDataReader dataReader)
         {
+            Path = emrFile;
+
             var fs = new FileStream(emrFile, FileMode.Open);
             var sr = new StreamReader(fs);
             Content = sr.ReadToEnd();

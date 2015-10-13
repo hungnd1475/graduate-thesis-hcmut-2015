@@ -13,8 +13,8 @@ namespace HCMUT.EMRCorefResol.English
         public ProblemPairFeatures(ProblemPair instance, EMR emr, double classValue)
             : base(size: 3, classValue: classValue)
         {
-            WikiData anaWiki = English.GetAllWikiInformation(instance.Anaphora.Lexicon);
-            WikiData anteWiki = English.GetAllWikiInformation(instance.Antecedent.Lexicon);
+            //WikiData anaWiki = English.GetAllWikiInformation(instance.Anaphora.Lexicon);
+            //WikiData anteWiki = English.GetAllWikiInformation(instance.Antecedent.Lexicon);
 
             this[0] = new SentenceDistanceFeature(instance);
             this[1] = new PositionFeature(instance, emr);

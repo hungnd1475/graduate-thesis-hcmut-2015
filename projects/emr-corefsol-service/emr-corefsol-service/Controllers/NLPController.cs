@@ -92,7 +92,7 @@ namespace emr_corefsol_service.Controllers
 
             if (headnoun == null)
             {
-                return new CustomResponse(false, null, "Cannot tokenize");
+                return new CustomResponse(false, null, "Cannot get Head Noun");
             }
 
             return new CustomResponse(true, headnoun, null);

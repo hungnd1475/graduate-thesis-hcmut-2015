@@ -139,5 +139,18 @@ namespace HCMUT.EMRCorefResol.Service
 
             return (string)res.Data;
         }
+
+        public static string GetTemporalValue(string emrPath, string line)
+        {
+            var url = API_URL + "extractor/temporal?path=" + HttpUtility.UrlEncode(emrPath) + "&line=" + HttpUtility.UrlEncode(line);
+            var res = _http.Request(url);
+
+            if (!res.IsSuccess)
+            {
+                return null;
+            }
+
+            return (string)res.Data;
+        }
     }
 }
