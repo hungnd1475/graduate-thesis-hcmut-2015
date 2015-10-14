@@ -11,6 +11,8 @@ namespace HCMUT.EMRCorefResol.CorefResolvers
     {
         public CorefChainCollection Resolve(EMR emr, IFeatureExtractor fExtractor, IClassifier classifier)
         {
+            //Console.WriteLine("Resolving...");
+
             fExtractor.EMR = emr;
             var concepts = emr.Concepts.ToList();
             var chains = new List<HashSet<Concept>>();
@@ -18,6 +20,7 @@ namespace HCMUT.EMRCorefResol.CorefResolvers
             for (int i = concepts.Count - 1; i >= 0; i--)
             {
                 var ana = concepts[i];
+                //Console.Write($"{ana}||t=\"{ana.Type.ToString().ToLower()}\" ");
 
                 if (ana.Type != ConceptType.Pronoun)
                 {
@@ -32,28 +35,45 @@ namespace HCMUT.EMRCorefResol.CorefResolvers
 
                         var r = Classify(ante, ana, fExtractor, classifier);
 
-                        if (r.Class == 1d)
+                        if (r != null && r.Class == 1d)
                         {
-                            if (bestResult == null || (r != null && bestResult.Confidence < r.Confidence))
+                            if (bestResult == null || bestResult.Confidence < r.Confidence)
                             {
                                 bestResult = r;
                                 bestAnte = ante;
-                            }
+                            }                            
                         }
                     }
                     
                     if (bestResult != null && bestAnte != null)
                     {
-                        var ch = chains.FirstOrDefault(t => t.Contains(ana) || t.Contains(bestAnte));
-                        if (ch == null)
+                        //Console.Write($"-> {bestAnte}:{bestResult.Confidence}");
+
+                        var containedChains = chains.Where(c => c.Contains(bestAnte) || c.Contains(ana)).ToArray();
+                        if (containedChains.Length == 0)
                         {
-                            ch = new HashSet<Concept>();
+                            var ch = new HashSet<Concept>() { ana, bestAnte };
                             chains.Add(ch);
                         }
+                        else if (containedChains.Length == 1)
+                        {
+                            var ch = containedChains[0];
+                            ch.Add(ana);
+                            ch.Add(bestAnte);
+                        }
+                        else
+                        {
+                            var unionChain = new HashSet<Concept>();
+                            foreach (var ch in containedChains)
+                            {
+                                chains.Remove(ch);
+                                unionChain.UnionWith(ch);
+                            }
+                            chains.Add(unionChain);
+                        }
+                    }
 
-                        ch.Add(ana);
-                        ch.Add(bestAnte);
-                    }                    
+                    //Console.WriteLine();     
                 }
             }
 

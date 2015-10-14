@@ -93,10 +93,14 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
         {
             var pInfo = CreateProcess(SVMTrainPath, CreateSVMTrainArgs(param, dataPath, modelPath));
             var p = Process.Start(pInfo);
-            var output = p.StandardOutput.ReadToEnd();
+
             if (shouldLog)
             {
-                Logger.Current.Log(output);
+                while (!p.StandardOutput.EndOfStream)
+                {
+                    var c = (char)p.StandardOutput.Read();
+                    Console.Write(c);
+                }
             }
         }
 
@@ -193,7 +197,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             return label;
         }
 
-        public static SVMProblem ReadProblem(string content, int? maxLine)
+        public static SVMProblem ReadProblem(string content)
         {
             NumberFormatInfo provider = new NumberFormatInfo();
             provider.NumberDecimalSeparator = ".";
@@ -208,7 +212,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
                     string line = sr.ReadLine();
                     readLine += 1;
 
-                    if (line == null || (maxLine != null && readLine > maxLine))
+                    if (line == null)
                         break;
 
                     string[] list = line.Trim().Split(' ');
@@ -304,13 +308,13 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             /// <param name="values">double[]</param>
             [DllImport(DllPath, CallingConvention = CallingConvention.Cdecl, EntryPoint = "svm_predict_values")]
             public static extern double PredictValues(IntPtr model, IntPtr x, IntPtr values);
-            
+
             /// <param name="model">svm_model</param>
             /// <param name="x">svm_node[]</param>
             /// <param name="probs">double[]</param>
             [DllImport(DllPath, CallingConvention = CallingConvention.Cdecl, EntryPoint = "svm_predict_probability")]
             public static extern double PredictProbability(IntPtr model, IntPtr x, IntPtr probs);
-            
+
             /// <param name="model">svm_model</param>
             /// <returns></returns>
             [DllImport(DllPath, CallingConvention = CallingConvention.Cdecl, EntryPoint = "svm_check_probability_model")]

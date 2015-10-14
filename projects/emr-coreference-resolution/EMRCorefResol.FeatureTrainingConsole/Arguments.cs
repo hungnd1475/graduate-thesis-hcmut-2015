@@ -13,8 +13,10 @@ namespace HCMUT.EMRCorefResol.FeatureTrainingConsole
         public ClasMethod ClasMethod { get; set; }
         public Instance Instance { get; set; }
         public string OutputDir { get; set; }
-
+        
         public double Cost { get; set; } // for LibSVM only
         public double Gamma { get; set; } // for LibSVM only
+        public int ApplyWeights { get; set; } // for LibSVM only
+        public int ShouldLog { get; set; } // for LibSVM only
     }
 }

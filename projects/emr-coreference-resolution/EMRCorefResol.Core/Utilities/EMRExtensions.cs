@@ -59,5 +59,11 @@ namespace HCMUT.EMRCorefResol
             }
             return lines[lineNumber - 1];
         }
+
+        public static Concept GetPrevConcept(this EMR emr, Concept c)
+        {
+            var index = emr.Concepts.IndexOf(c);
+            return (index > 0) ? emr.Concepts[index - 1] : null;
+        }
     }
 }

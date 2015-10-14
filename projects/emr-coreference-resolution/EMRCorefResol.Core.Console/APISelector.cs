@@ -7,6 +7,7 @@ using HCMUT.EMRCorefResol.Classification;
 using HCMUT.EMRCorefResol.IO;
 using HCMUT.EMRCorefResol.English;
 using HCMUT.EMRCorefResol.Classification.LibSVM;
+using HCMUT.EMRCorefResol.CorefResolvers;
 
 namespace HCMUT.EMRCorefResol.Core.Console
 {
@@ -100,6 +101,17 @@ namespace HCMUT.EMRCorefResol.Core.Console
             {
                 case ClasMethod.LibSVM:
                     return new LibSVMTrainer(outDir);
+                default:
+                    throw new ArgumentException("method");
+            }
+        }
+
+        public static ICorefResolver SelectResolver(ResolMethod method)
+        {
+            switch (method)
+            {
+                case ResolMethod.BestFirst:
+                    return new BestFirstResolver();
                 default:
                     throw new ArgumentException("method");
             }

@@ -12,39 +12,37 @@ namespace HCMUT.EMRCorefResol.English.Features
     class WhoFeatures : Feature
     {
         public WhoFeatures(IConceptPair instance, EMR emr)
-            :base("Who", 2, 0)
+            : base("Who", 2, 0)
         {
-            var whoAna = new WhoFeatures(new PersonInstance(instance.Anaphora), emr);
-            var whoAnte = new WhoFeatures(new PersonInstance(instance.Antecedent), emr);
+            var s = emr.ContentBetween(instance);
 
-            if(whoAna.Value[1] == 1 && whoAnte.Value[1] == 1)
+            if (string.Equals(s, " : "))
+            {
+                SetCategoricalValue(1);
+            }
+            else if (string.Equals(instance.Anaphora.Lexicon, "who") 
+                && (string.Equals(s, " ") || string.Equals(s, " , ")))
             {
                 SetCategoricalValue(1);
             }
         }
 
         public WhoFeatures(ISingleConcept instance, EMR emr)
-            :base("Who", 2, 0)
+            : base("Who", 2, 0)
         {
-            var isName = new NameFeature((PersonInstance)instance, emr);
-            if(isName.Value[0] == 1)
+            var con = instance.Concept;
+            var prevCon = emr.GetPrevConcept(con);
+            if (prevCon != null && prevCon.Type == con.Type)
             {
-                return;
-            }
-
-            var index = emr.Concepts.IndexOf(instance.Concept);
-
-            foreach(Concept c in emr.Concepts)
-            {
-                if(emr.Concepts.IndexOf(c) >= index)
-                {
-                    return;
-                }
-
-                if (c.Lexicon.Contains(instance.Concept.Lexicon) || instance.Concept.Lexicon.Contains(c.Lexicon))
+                var s = emr.ContentBetween(prevCon, con);
+                if (string.Equals(s, " : "))
                 {
                     SetCategoricalValue(1);
-                    return;
+                }
+                else if (string.Equals(instance.Concept.Lexicon, "who")
+                    && (string.Equals(s, " ") || string.Equals(s, " , ")))
+                {
+                    SetCategoricalValue(1);
                 }
             }
         }

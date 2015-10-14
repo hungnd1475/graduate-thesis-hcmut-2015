@@ -12,16 +12,25 @@ namespace HCMUT.EMRCorefResol.English.Features
         public PronounMatchFeature(PersonPair instance, EMR emr)
             :base("Pronoun-Match", 2, 0)
         {
-            var searcher = KeywordService.Instance.PERSON_PRONOUN;
-            if(!searcher.Match(instance.Anaphora.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord) ||
-                !searcher.Match(instance.Antecedent.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
-            {
-                return;
-            }
+            var kw = KeywordService.Instance.PERSON_PRONOUN;
+            //if(!kw.Match(instance.Anaphora.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord) ||
+            //    !kw.Match(instance.Antecedent.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
+            //{
+            //    return;
+            //}
 
-            if(appearBefore(instance.Anaphora, emr) && appearBefore(instance.Antecedent, emr))
+            //if(appearBefore(instance.Anaphora, emr) && appearBefore(instance.Antecedent, emr))
+            //{
+            //    SetCategoricalValue(1);
+            //}
+
+            if (kw.Match(instance.Anaphora.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
             {
-                SetCategoricalValue(1);
+                var s = emr.ContentBetween(instance);
+                if (string.Equals(s, " ") || string.Equals(s, " , "))
+                {
+                    SetCategoricalValue(1);
+                }
             }
         }
 

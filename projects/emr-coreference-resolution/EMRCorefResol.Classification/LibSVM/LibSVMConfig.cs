@@ -10,5 +10,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
     {
         public const string Cost = "cost";
         public const string Gamma = "gamma";
+        public const string ShouldLog = "shouldlog";
+        public const string ApplyWeights = "apply-weights";
     }
 }

@@ -17,5 +17,6 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
         public ClasMethod ClasMethod { get; set; }
         public string ModelsDir { get; set; }
         public int Random { get; set; }
+        public bool DoScale { get; set; }
     }
 }

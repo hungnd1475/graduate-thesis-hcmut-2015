@@ -20,6 +20,31 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
 
         public void Serialize(ClasProblem problem, string filePath)
         {
+            Serialize(problem, filePath, false);
+        }
+
+        public void Serialize(ClasProblem problem, string filePath, bool doScale)
+        {
+            var fileName = Path.GetFileNameWithoutExtension(filePath);
+            var dirName = Path.GetDirectoryName(filePath);
+
+            if (doScale)
+            {
+                var tmpPath = Path.Combine(dirName, fileName + ".prb.tmp");
+                SerializeInternal(problem, tmpPath);
+
+                var sfPath = Path.Combine(dirName, fileName + ".sf");
+                LibSVM.RunSVMScale(0d, 1d, sfPath, tmpPath, filePath);
+                File.Delete(tmpPath);
+            }
+            else
+            {
+                SerializeInternal(problem, filePath);
+            }
+        }
+
+        private void SerializeInternal(ClasProblem problem, string filePath)
+        {
             using (var sw = new StreamWriter(filePath))
             {
                 for (int i = 0; i < problem.Size; i++)

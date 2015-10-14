@@ -12,10 +12,10 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] rawArgs)
         {
-            var argsParser = PrepareArgsParser(args);
-            var parseResult = argsParser.Parse(args);
+            var argsParser = PrepareParser();
+            var parseResult = argsParser.Parse(rawArgs);
 
             if (parseResult.HasErrors)
             {
@@ -24,17 +24,17 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
                 return;
             }
 
-            var argsResult = argsParser.Object;
-            var emrCollections = argsResult.EMRDirs.Split(';').Select(ep => new EMRCollection(ep));
+            var args = argsParser.Object;
+            var emrCollections = args.EMRDirs.Split('|').Select(ep => new EMRCollection(ep));
 
-            if (argsResult.Mode != Mode.Classify && emrCollections.Any(e => !e.HasGroundTruth))
+            if (args.Mode != Mode.Classify && emrCollections.Any(e => !e.HasGroundTruth))
             {
                 Console.Write("EMR paths must contain chains directories in Train or Test mode");
                 Console.ReadLine();
                 return;
             }
 
-            if (argsResult.Mode != Mode.Train && !Directory.Exists(argsResult.ModelsDir))
+            if (args.Mode != Mode.Train && !Directory.Exists(args.ModelsDir))
             {
                 Console.Write("Model file must be specified in Test or Classify mode.");
                 Console.ReadLine();
@@ -42,16 +42,16 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
             }
 
             var pCreator = new ClasProblemCollection();
-            var dataReader = APISelector.SelectDataReader(argsResult.EMRFormat);
-            var fExtractor = APISelector.SelectFeatureExtractor(argsResult.Language, argsResult.Mode, 
-                argsResult.ClasMethod, argsResult.ModelsDir);
+            var dataReader = APISelector.SelectDataReader(args.EMRFormat);
+            var fExtractor = APISelector.SelectFeatureExtractor(args.Language, args.Mode, 
+                args.ClasMethod, args.ModelsDir);
             var preprocessor = new SimplePreprocessor();
 
-            if (argsResult.Random > 0)
+            if (args.Random > 0)
             {
                 // TODO: refine this
                 string[] emrPaths, conceptsPaths, chainsPaths;
-                emrCollections.First().GetRandom(argsResult.Random, out emrPaths, out conceptsPaths, out chainsPaths);
+                emrCollections.First().GetRandom(args.Random, out emrPaths, out conceptsPaths, out chainsPaths);
                 FeatureExtractingSystem.Instance.ExtractAll(emrPaths, conceptsPaths, chainsPaths, dataReader,
                     preprocessor, fExtractor, pCreator);
             }
@@ -61,15 +61,16 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
                     fExtractor, pCreator);
             }
 
-            var serializer = APISelector.SelectProblemSerializer(argsResult.ClasMethod);
-            Directory.CreateDirectory(argsResult.OutDir);
+            var serializer = APISelector.SelectProblemSerializer(args.ClasMethod);
+            Directory.CreateDirectory(args.OutDir);
 
-            serializer.Serialize(pCreator.GetProblem<PersonPair>(), Path.Combine(argsResult.OutDir, "PersonPair.prb"));
-            serializer.Serialize(pCreator.GetProblem<PersonInstance>(), Path.Combine(argsResult.OutDir, "PersonInstance.prb"));
-            serializer.Serialize(pCreator.GetProblem<PronounInstance>(), Path.Combine(argsResult.OutDir, "PronounInstance.prb"));
+            Console.WriteLine("Serializing...");
+            serializer.Serialize(pCreator.GetProblem<PersonPair>(), Path.Combine(args.OutDir, "PersonPair.prb"), args.DoScale);
+            serializer.Serialize(pCreator.GetProblem<PersonInstance>(), Path.Combine(args.OutDir, "PersonInstance.prb"), args.DoScale);
+            serializer.Serialize(pCreator.GetProblem<PronounInstance>(), Path.Combine(args.OutDir, "PronounInstance.prb"), args.DoScale);
         }
 
-        static FluentCommandLineParser<Arguments> PrepareArgsParser(string[] args)
+        static FluentCommandLineParser<Arguments> PrepareParser()
         {
             var p = new FluentCommandLineParser<Arguments>();
 
@@ -104,6 +105,10 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
             p.Setup(arg => arg.ModelsDir)
                 .As('d', "models")
                 .SetDefault(null);
+
+            p.Setup(a => a.DoScale)
+                .As('s', "scale")
+                .SetDefault(true);
 
             return p;
         }

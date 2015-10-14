@@ -60,9 +60,9 @@ namespace HCMUT.EMRCorefResol
         {
             Console.WriteLine("Training...");
 
-            trainer.Train<PersonPair>(pCollection.GetProblem<PersonPair>(), configs.GetConfig<PersonPair>());
-            trainer.Train<PersonInstance>(pCollection.GetProblem<PersonInstance>(), configs.GetConfig<PersonInstance>());
-            trainer.Train<PronounInstance>(pCollection.GetProblem<PronounInstance>(), configs.GetConfig<PronounInstance>());
+            trainer.Train<PersonPair>(pCollection.GetProblem<PersonPair>(), configs?.GetConfig<PersonPair>());
+            trainer.Train<PersonInstance>(pCollection.GetProblem<PersonInstance>(), configs?.GetConfig<PersonInstance>());
+            trainer.Train<PronounInstance>(pCollection.GetProblem<PronounInstance>(), configs?.GetConfig<PronounInstance>());
         }
     }
 }

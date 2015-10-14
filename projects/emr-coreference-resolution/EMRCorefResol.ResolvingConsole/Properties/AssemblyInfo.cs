@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("EMRCR.FeatureTrainer")]
+[assembly: AssemblyTitle("EMRCR.Resolver")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EMRCR.FeatureTrainer")]
+[assembly: AssemblyProduct("EMRCR.Resolver")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("79a6be34-e23b-4d15-912b-6024cdeecc0b")]
+[assembly: Guid("9abe9b92-880a-4ecc-8491-bf351ff1f2f3")]
 
 // Version information for an assembly consists of the following four values:
 //

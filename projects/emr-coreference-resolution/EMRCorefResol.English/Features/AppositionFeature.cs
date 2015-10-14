@@ -13,12 +13,13 @@ namespace HCMUT.EMRCorefResol.English.Features
         public AppositionFeature(IConceptPair instance, EMR emr, double mentionDistance)
             : base("Apposition", 2, 0)
         {
-            // checks if the two concepts are in a same sentence and separated by a comma
+            // checks if the two concepts are in a same sentence and separated by a comma or a space
             if (mentionDistance == 0d)
             {
                 var s = emr.ContentBetween(instance.Antecedent, instance.Anaphora);
-                if (string.Equals(s, ",") || string.Equals(s, " , ") 
-                    || string.Equals(s, " ,") || string.Equals(s, ", "))
+                if (string.Equals(s, ",") || string.Equals(s, " , ")
+                    || string.Equals(s, " ,") || string.Equals(s, ", ")
+                    || string.Equals(s, " "))
                 {
                     SetCategoricalValue(1);
                 }
@@ -26,27 +27,19 @@ namespace HCMUT.EMRCorefResol.English.Features
         }
 
         public AppositionFeature(ISingleConcept instance, EMR emr)
-            :base("Apposition", 2, 0)
+            : base("Apposition", 2, 0)
         {
-            if(instance.Concept.Begin.WordIndex == 0)
+            var con = instance.Concept;
+            var prevCon = emr.GetPrevConcept(con);
+            if (prevCon != null && prevCon.Type == con.Type)
             {
-                return;
-            }
-
-            var line = EMRExtensions.GetLine(emr, instance.Concept.Begin.Line);
-            var tokens = line.Replace("  ", " ").Replace("\r", "").Split(' ');
-
-            if(instance.Concept.End.WordIndex >= tokens.Length - 1)
-            {
-                return;
-            }
-
-            var preceeded = tokens[instance.Concept.Begin.WordIndex - 1];
-            var followup = tokens[instance.Concept.End.WordIndex + 1];
-
-            if(preceeded.Equals(",") && followup.Equals(","))
-            {
-                SetCategoricalValue(1);
+                var s = emr.ContentBetween(prevCon, con);
+                if (string.Equals(s, ",") || string.Equals(s, " , ")
+                    || string.Equals(s, " ,") || string.Equals(s, ", ")
+                    || string.Equals(s, " "))
+                {
+                    SetCategoricalValue(1);
+                }
             }
         }
     }

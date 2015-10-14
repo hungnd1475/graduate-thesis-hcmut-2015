@@ -16,7 +16,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             out double cost, out double gamma, out double accuracy)
         {
             var content = File.ReadAllText(problemPath);
-            var problem = LibSVM.ReadProblem(content, null);
+            var problem = LibSVM.ReadProblem(content);
             content = null;
 
             return Optimize(config, problem, nfold, out cost, out gamma, out accuracy);
@@ -41,7 +41,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
 
             if (bestAcc != null)
             {
-                info = $"Best region: Log2C={bestAcc.Cost}, Log2G={bestAcc.Gamma}, Accuracy: {bestAcc.Accuracy}\n";
+                info = $"Best region: Log2C={bestAcc.Cost}, Log2G={bestAcc.Gamma}, Accuracy: {bestAcc.Accuracy * 100:N3}%\n";
                 Console.WriteLine(info);
                 Logger.Current.Log(info);
 
@@ -101,20 +101,20 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
         private AccuracyInfo[] Search(GridSearchConfig config, SVMProblem problem, int nfold)
         {
             var accInfos = CreateGrid(config);
-            int[] labels; double[] weights;
-            LibSVM.CalcWeights(problem, out labels, out weights);
+            //int[] labels; double[] weights;
+            //LibSVM.CalcWeights(problem, out labels, out weights);
 
             Parallel.For(0, accInfos.Length, (i) =>
             {
                 var a = accInfos[i];
-                var param = CreateParameter(Math.Pow(2, a.Cost), Math.Pow(2, a.Gamma), labels, weights);
+                var param = CreateParameter(Math.Pow(2, a.Cost), Math.Pow(2, a.Gamma), null, null);
                 var target = LibSVM.CrossValidation(param, problem, nfold);
                 a.Accuracy = Enumerable.Range(0, target.Length).Aggregate(0, (count, k) =>
                 {
                     return target[k] == problem.Y[k] ? count + 1 : count;
                 });
                 a.Accuracy /= problem.Length;
-                Logger.Current.Log($"Log2C = {a.Cost}  \tLog2G = {a.Gamma}  \tAccuracy = {a.Accuracy * 100}%");
+                Logger.Current.Log($"Log2C = {a.Cost,6}\tLog2G = {a.Gamma,6}\tAccuracy = {a.Accuracy * 100:N3}%");
             });
 
             return accInfos;
@@ -128,7 +128,8 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
                 Kernel = SVMKernel.RBF,
                 C = cost,
                 Gamma = gamma,
-                Shrinking = false
+                Shrinking = false,
+                Probability = false
             };
         }
 

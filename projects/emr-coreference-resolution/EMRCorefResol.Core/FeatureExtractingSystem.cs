@@ -41,7 +41,7 @@ namespace HCMUT.EMRCorefResol
                 {
                     nDone += 1;
                     Console.SetCursorPosition(0, Console.CursorTop);
-                    Console.WriteLine($"{nDone}/{iCount}");
+                    Console.Write($"{nDone}/{iCount}");
                 }
 
                 var t = instances[k];

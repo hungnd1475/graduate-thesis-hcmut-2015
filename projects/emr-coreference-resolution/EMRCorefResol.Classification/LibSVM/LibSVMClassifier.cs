@@ -133,7 +133,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
                 scaledPrbContent = LibSVM.RunSVMScale(sfPath, tmpPrbPath);
             }
 
-            var scaledPrb = LibSVM.ReadProblem(scaledPrbContent, null);
+            var scaledPrb = LibSVM.ReadProblem(scaledPrbContent);
             var svmModel = GetModel(instanceType);
 
             double confidence, label;

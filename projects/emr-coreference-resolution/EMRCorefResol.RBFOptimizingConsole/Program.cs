@@ -42,7 +42,7 @@ namespace HCMUT.EMRCorefResol.RBFOptimizingConsole
             double cost, gamma, accuracy;
             new RBFKernelParameterOptimizer().Optimize(config, args.DataPath, args.NFold, out cost, out gamma, out accuracy);
 
-            Logger.Current.Log($"Result: Log2C={cost}, Log2G={gamma}, Accuracy={accuracy * 100}%");
+            Logger.Current.Log($"Result: Log2C={cost}, Log2G={gamma}, Accuracy={accuracy * 100:N3}%");
             Console.WriteLine("Done! See log file for details.");
         }
 

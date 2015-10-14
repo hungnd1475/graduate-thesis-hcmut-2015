@@ -13,22 +13,14 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
     public class LibSVMTrainer : ITrainer
     {
         private readonly LibSVMClassifier _classifier;
-
         private readonly string _saveDir;
-        private readonly string _problemDir, _modelDir;
 
-        public string ModelsDir { get { return _modelDir; } }
+        public string ModelsDir { get { return _saveDir; } }
 
         public LibSVMTrainer(string saveDir)
         {
             _saveDir = saveDir;
-            _problemDir = Path.Combine(_saveDir, "Problems");
-            _modelDir = Path.Combine(_saveDir, "Models");
-
-            Directory.CreateDirectory(_problemDir);
-            Directory.CreateDirectory(_modelDir);
-
-            _classifier = new LibSVMClassifier(_modelDir);
+            _classifier = new LibSVMClassifier(_saveDir);
         }
 
         public LibSVMTrainer() : this(string.Empty) { }
@@ -46,9 +38,11 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
         public void Train(Type instanceType, ClasProblem problem, GenericConfig config)
         {
             var name = instanceType.Name;
-            var rawPrbPath = Path.Combine(_problemDir, $"{name}-Train.prb");
-            ProblemSerializer.Serialize(problem, rawPrbPath);
-            Train(instanceType, rawPrbPath, config);
+            var prbPath = Path.Combine(_saveDir, $"{name}.prb");
+            ProblemSerializer.Serialize(problem, prbPath, true);
+            problem = null;
+
+            Train(instanceType, prbPath, config);
         }
 
         public void Train<T>(ClasProblem problem, GenericConfig config) where T : IClasInstance
@@ -66,18 +60,25 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             var name = instanceType.Name;
             Console.WriteLine($"Preparing training {name} problem...");
 
-            var scaledPrbPath = Path.Combine(_problemDir, $"{name}-Train.scaled");
-            var sfPath = Path.Combine(_modelDir, $"{name}.sf");
-            var modelPath = Path.Combine(_modelDir, $"{name}.model");
+            //var scaledPrbPath = Path.Combine(_problemDir, $"{name}-Train.scaled");
+            //var sfPath = Path.Combine(_modelDir, $"{name}.sf");
+            var modelPath = Path.Combine(_saveDir, $"{name}.model");
 
             // scale
-            Console.WriteLine("Scaling problem...");
-            var scaledData = LibSVM.RunSVMScale(0d, 1d, sfPath, problemPath);
-            var problem = LibSVM.ReadProblem(scaledData, null);
+            //Console.WriteLine("Scaling problem...");
+            //var scaledData = LibSVM.RunSVMScale(0d, 1d, sfPath, problemPath);
+            var data = File.ReadAllText(problemPath);
+            var problem = LibSVM.ReadProblem(data);
+
+            if (problem.Length <= 0)
+            {
+                Console.WriteLine("Problem contains no instances.");
+                return;
+            }
 
             Console.WriteLine("Calculating cost weights...");
             int[] labels; double[] weights;
-            CalcWeights(problem, out labels, out weights);
+            LibSVM.CalcWeights(problem, out labels, out weights);
             Console.WriteLine("Cost weights: " +
                 $"{string.Join(" ", Enumerable.Range(0, labels.Length).Select(i => $"{labels[i]}:{weights[i]}"))}");
             
@@ -91,60 +92,50 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
                 Shrinking = false
             };
 
+            bool applyWeights = false;
+            if (config != null)
             {
-                double cost, gamma;
+                config.TryGetConfig(LibSVMConfig.ApplyWeights, out applyWeights);
+            }
+
+            if (applyWeights)
+            {
+                Console.WriteLine("Applying the above weights...");
+                svmParam.WeightLabels = labels;
+                svmParam.Weights = weights;
+            }
+
+            {
+                double cost = -1, gamma = -1;
 
                 if (config != null)
                 {
-                    if (config.TryGetConfig(LibSVMConfig.Cost, out gamma))
+                    if (config.TryGetConfig(LibSVMConfig.Gamma, out gamma))
                     {
                         svmParam.Gamma = gamma;
                     }
 
-                    if (config.TryGetConfig(LibSVMConfig.Gamma, out cost))
+                    if (config.TryGetConfig(LibSVMConfig.Cost, out cost))
                     {
                         svmParam.C = cost;
                     }
-
-                    Console.WriteLine($"Training using parameters: c={cost}, g={gamma}...");
-                }
-                else
-                {
-                    Console.WriteLine($"Training using default parameter...");
                 }
             }
-
+                                                
+            //File.WriteAllText(scaledPrbPath, scaledData);
+            data = null;
             problem = null;
-            using (var sr = new StreamWriter(scaledPrbPath))
-            {
-                sr.Write(scaledData);
-                scaledData = string.Empty;
-            }
 
             // train
-            LibSVM.RunSVMTrain(svmParam, scaledPrbPath, modelPath, false);
-            Console.WriteLine("Done!");
-        }
-
-        private static void CalcWeights(SVMProblem problem, out int[] labels, out double[] weights)
-        {
-            var classCounts = new Dictionary<int, int>();
-            foreach (var y in problem.Y)
+            bool shouldLog = false;
+            if (config != null)
             {
-                var yInt = (int)y;
-                if (!classCounts.ContainsKey(yInt))
-                {
-                    classCounts.Add(yInt, 0);
-                }
-                else
-                {
-                    classCounts[yInt] += 1;
-                }
+                config.TryGetConfig(LibSVMConfig.ShouldLog, out shouldLog);
             }
 
-            var maxCount = classCounts.Values.Aggregate(int.MinValue, (max, count) => max < count ? count : max);
-            labels = classCounts.Keys.ToArray();
-            weights = classCounts.Values.Select(count => (double)maxCount / count).ToArray();
+            Console.WriteLine($"Training using parameters: c={svmParam.C}, g={svmParam.Gamma}...");
+            LibSVM.RunSVMTrain(svmParam, problemPath, modelPath, shouldLog);
+            Console.WriteLine("Done!");
         }
     }
 }
