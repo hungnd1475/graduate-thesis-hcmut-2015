@@ -28,11 +28,11 @@ namespace HCMUT.EMRCorefResol
 
         private TrainingSystem() { }
 
-        public void TrainOne(string emrPath, string conceptsPath, string chainsPath, IDataReader dataReader,
+        public void TrainOne(string emrPath, string conceptsPath, string chainsPath, string medicationsPath, IDataReader dataReader,
             IPreprocessor preprocessor, IFeatureExtractor fExtractor, ITrainer trainer)
         {
             var pCreator = new ClasProblemCreator();
-            ExtractFeatures(emrPath, conceptsPath, chainsPath, dataReader,
+            ExtractFeatures(emrPath, conceptsPath, chainsPath, medicationsPath, dataReader,
                     preprocessor, fExtractor, pCreator);
             GetLogger().WriteInfo("Training...");
 
@@ -41,14 +41,14 @@ namespace HCMUT.EMRCorefResol
             trainer.Train<PronounInstance>(pCreator.GetProblem<PronounInstance>());
         }
 
-        public void TrainAll(string[] emrFiles, string[] conceptsFiles, string[] chainsFiles, IDataReader dataReader,
+        public void TrainAll(string[] emrFiles, string[] conceptsFiles, string[] chainsFiles, string[] medicationsFiles, IDataReader dataReader,
             IPreprocessor preprocessor, IFeatureExtractor fExtractor, ITrainer trainer)
         {
             var pCreator = new ClasProblemCreator();
 
             for (int i = 0; i < emrFiles.Length; i++)
             {
-                ExtractFeatures(emrFiles[i], conceptsFiles[i], chainsFiles[i], dataReader,
+                ExtractFeatures(emrFiles[i], conceptsFiles[i], chainsFiles[i], medicationsFiles[i], dataReader,
                     preprocessor, fExtractor, pCreator);
             }
 
@@ -66,7 +66,7 @@ namespace HCMUT.EMRCorefResol
 
             for (int i = 0; i < emrCollection.Count; i++)
             {
-                ExtractFeatures(emrCollection.GetEMRPath(i), emrCollection.GetConceptsPath(i), emrCollection.GetChainsPath(i),
+                ExtractFeatures(emrCollection.GetEMRPath(i), emrCollection.GetConceptsPath(i), emrCollection.GetChainsPath(i), emrCollection.GetMedicationsPath(i),
                     dataReader, preprocessor, fExtractor, pCreator);
             }
 
@@ -77,12 +77,12 @@ namespace HCMUT.EMRCorefResol
             trainer.Train<PronounInstance>(pCreator.GetProblem<PronounInstance>());
         }
 
-        private void ExtractFeatures(string emrPath, string conceptsPath, string chainsPath, IDataReader dataReader,
+        private void ExtractFeatures(string emrPath, string conceptsPath, string medicationsPath, string chainsPath, IDataReader dataReader,
             IPreprocessor preprocessor, IFeatureExtractor fExtractor, ClasProblemCreator pCreator)
         {
             GetLogger().WriteInfo(Path.GetFileName(emrPath));
 
-            var emr = new EMR(emrPath, conceptsPath, dataReader);
+            var emr = new EMR(emrPath, conceptsPath, medicationsPath, dataReader);
             var chains = new CorefChainCollection(chainsPath, dataReader);
 
             fExtractor.EMR = emr;

@@ -15,7 +15,7 @@ namespace HCMUT.EMRCorefResol
 
         private FeatureExtractingSystem() { }
 
-        public void ExtractOne(string emrPath, string conceptsPath, string chainsPath, IDataReader dataReader,
+        public void ExtractOne(string emrPath, string conceptsPath, string chainsPath, string medicationsPath, IDataReader dataReader,
             IPreprocessor preprocessor, IFeatureExtractor fExtractor, ClasProblemCreator pCreator)
         {
             var gtExists = File.Exists(chainsPath);
@@ -24,7 +24,7 @@ namespace HCMUT.EMRCorefResol
 
             GetLogger().WriteInfo(Path.GetFileName(emrPath));
 
-            var emr = new EMR(emrPath, conceptsPath, dataReader);
+            var emr = new EMR(emrPath, conceptsPath, medicationsPath, dataReader);
             var chains = gtExists ? new CorefChainCollection(chainsPath, dataReader) : null;
 
             fExtractor.EMR = emr;
@@ -57,12 +57,12 @@ namespace HCMUT.EMRCorefResol
             }
         }
 
-        public void ExtractAll(string[] emrPaths, string[] conceptsPaths, string[] chainsPaths, IDataReader dataReader,
+        public void ExtractAll(string[] emrPaths, string[] conceptsPaths, string[] chainsPaths, string[] medicationsPaths, IDataReader dataReader,
             IPreprocessor preprocessor, IFeatureExtractor fExtractor, ClasProblemCreator pCreator)
         {
             for (int i = 0; i < emrPaths.Length; i++)
             {
-                ExtractOne(emrPaths[i], conceptsPaths[i], chainsPaths[i], dataReader,
+                ExtractOne(emrPaths[i], conceptsPaths[i], chainsPaths[i], medicationsPaths[i], dataReader,
                     preprocessor, fExtractor, pCreator);
             }
         }
@@ -72,7 +72,7 @@ namespace HCMUT.EMRCorefResol
         {
             for (int i = 0; i < emrColl.Count; i++)
             {
-                ExtractOne(emrColl.GetEMRPath(i), emrColl.GetConceptsPath(i), emrColl.GetChainsPath(i),
+                ExtractOne(emrColl.GetEMRPath(i), emrColl.GetConceptsPath(i), emrColl.GetChainsPath(i), emrColl.GetMedicationsPath(i),
                     dataReader, preprocessor, fExtractor, pCreator);
             }
         }

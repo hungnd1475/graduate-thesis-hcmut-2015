@@ -39,5 +39,8 @@ namespace HCMUT.EMRCorefResol
         /// <param name="EMRContent">The whole content of an EMR</param>
         /// <returns></returns>
         List<EMRSection> ReadSection(string EMRContent);
+
+
+        MedicationInfo ReadMedInfoLine(string line);
     }
 }

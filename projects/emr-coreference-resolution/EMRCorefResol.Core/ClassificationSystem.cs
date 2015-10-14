@@ -15,12 +15,12 @@ namespace HCMUT.EMRCorefResol
 
         private ClassificationSystem() { }
 
-        public void ClassifyOne(string emrPath, string conceptsPath, string chainsPath, IDataReader dataReader,
+        public void ClassifyOne(string emrPath, string conceptsPath, string chainsPath, string medicationsPath, IDataReader dataReader,
             IPreprocessor preprocessor, IFeatureExtractor fExtractor, IClassifier classifier)
         {
             GetLogger().WriteInfo(Path.GetFileName(emrPath));
 
-            var emr = new EMR(emrPath, conceptsPath, dataReader);
+            var emr = new EMR(emrPath, conceptsPath, medicationsPath, dataReader);
             var chains = new CorefChainCollection(chainsPath, dataReader);
             var pCreator = new ClasProblemCreator();
 
