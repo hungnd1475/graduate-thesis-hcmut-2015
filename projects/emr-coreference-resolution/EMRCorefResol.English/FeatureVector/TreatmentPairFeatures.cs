@@ -11,10 +11,10 @@ namespace HCMUT.EMRCorefResol.English
     class TreatmentPairFeatures : FeatureVector
     {
         public TreatmentPairFeatures(TreatmentPair instance, EMR emr, double classValue)
-            :base(size:1, classValue: classValue)
+            :base(size:2, classValue: classValue)
         {
             this[0] = new SentenceDistanceFeature(instance);
-            //this[1] = new TemporalFeature(instance, emr);
+            this[1] = new TemporalFeature(instance, emr);
         }
     }
 }

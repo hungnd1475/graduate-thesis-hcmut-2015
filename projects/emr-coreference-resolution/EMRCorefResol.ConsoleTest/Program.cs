@@ -39,9 +39,9 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             //testReadEMR();
             //var path = testTrainer();
             //testClassifier(path);
-            testTrainer();
+            //testTrainer();
             //testLoadClassifier();
-            //testService();
+            testService();
             //var path = testTrainManyEMR(50);
             //testClassifier(@"Classification\LibSVMTools\Models\LibSVMTool.classifier", EMR_COLLECTION);
             //testClassifier(path, 1);
@@ -217,8 +217,8 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
         static void testService()
         {
-            Console.WriteLine(string.Join(" ", Service.English.POSTag("Annie goes to school")));
-            Console.WriteLine(Service.English.GetSyncSets("table")[1]);
+            var res = Service.English.GetTemporalValue(@"E:\graduate-thesis-hcmut-2015\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train\docs\clinical-103.txt", @"He was discharged home on post-op day #6 in stable condition with a foley catheter and leg bag .");
+            Console.WriteLine(res);
         }
 
         static void testAhoCorasick()

@@ -17,9 +17,7 @@ namespace emr_corefsol_service.Controllers
 
         static ExtractorController()
         {
-            var pythonLib = HostingEnvironment.MapPath(@"~\Lib");
-            var pyEngine = new PythonExcuter(pythonLib);
-            TEMPORAL_HELPER = new TemporalHelper(pyEngine);
+            TEMPORAL_HELPER = new TemporalHelper();
         }
 
         /// <summary>
@@ -32,10 +30,11 @@ namespace emr_corefsol_service.Controllers
         public CustomResponse GetTemporalDate(string path, string line)
         {
             var date = TEMPORAL_HELPER.GetTemporalValue(path, line);
+            //var date = TEMPORAL_HELPER.GetTemporalValue("E:\\graduate-thesis-hcmut-2015\\dataset\\i2b2_Beth_Train_Release.tar\\i2b2_Beth_Train\\Beth_Train\\docs\\clinical-103.txt", "His central line and chest tubes were removed on post-op day #2 and was transferred to the floor in stable condition .\r");
 
             if (date == null)
             {
-                return new CustomResponse(false, null, "Cannot tokenize");
+                return new CustomResponse(false, null, "Cannot get Temporal value");
             }
 
             return new CustomResponse(true, date, null);

@@ -10,7 +10,6 @@ namespace emr_corefsol_service.Libs
     using Utilities;
     public class TemporalHelper
     {
-        private PythonExcuter _excuter = null;
         private List<Regex> _inferred = null;
         private List<Regex> _explicit = null;
         private string year_re = @"[12][0-9][0-9][0-9]";
@@ -18,12 +17,11 @@ namespace emr_corefsol_service.Libs
         private string day_re = @"[0123][0-9]";
         private string delimiter = @"[\\/-]";
 
-        public TemporalHelper(PythonExcuter e)
-        {
-            _excuter = e;
-            var normaliser = HostingEnvironment.MapPath(@"~\app_data\tools\Clinical-norma\normaliser.py");
-            _excuter.SetScriptFile(normaliser);
+        private string pythonLib = HostingEnvironment.MapPath(@"~\Lib");
+        private string normaliser = HostingEnvironment.MapPath(@"~\app_data\tools\Clinical-norma\normaliser.py");
 
+        public TemporalHelper()
+        {
             _inferred = new List<Regex>();
             _inferred.Add(new Regex(@"(?:the |her |his |their )?(?:post-|post|day)? ?(?:pod|operative|op|hospital|hsp|day|hd)(?:ly)? ?(?:day |night |afternoon )? ?(?:number|num\.?|#)? ?([0-9][0-9]*)"));
             _inferred.Add(new Regex(@"(?:the |her |his |their )?([0-9][0-9]*)(?:st|nd|rd|th)? (?:post-|post|day)? ?(?:pod|operative|op|hospital|hsp|day|hd)(?:ly)? (?:day|night|afternoon)?"));
@@ -63,7 +61,7 @@ namespace emr_corefsol_service.Libs
             }
             catch(Exception e)
             {
-                return null;
+                return e.Message;
             }
         }
 
@@ -87,7 +85,10 @@ namespace emr_corefsol_service.Libs
                 var match = r.Match(line);
                 if (match.Success)
                 {
-                    _excuter.Excute(new string[] { "normaliser.py", emrPath, match.Value });
+                    var options = new string[] { "normaliser.py", emrPath, match.Value };
+                    var _excuter = new PythonExcuter(pythonLib, normaliser, options);
+
+                    _excuter.Excute();
                     dynamic result = _excuter.GetVariable("res");
 
                     if (result == null)

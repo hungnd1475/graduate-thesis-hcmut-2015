@@ -14,10 +14,12 @@ namespace HCMUT.EMRCorefResol.Service
         private const string API_URL = "http://localhost:8181/api/";
         private static readonly HttpUtil _http = new HttpUtil();
         private static ICache<string, WikiData> _wikiCache;
+        private static ICache<string, string> _temporalCache;
 
         static English()
         {
             _wikiCache = new UnlimitedCache<string, WikiData>();
+            _temporalCache = new UnlimitedCache<string, string>();
         }
 
         public static string[] POSTag(string term)
@@ -142,15 +144,18 @@ namespace HCMUT.EMRCorefResol.Service
 
         public static string GetTemporalValue(string emrPath, string line)
         {
-            var url = API_URL + "extractor/temporal?path=" + HttpUtility.UrlEncode(emrPath) + "&line=" + HttpUtility.UrlEncode(line);
-            var res = _http.Request(url);
-
-            if (!res.IsSuccess)
+            return _temporalCache.GetValue(line, (string input_line) =>
             {
-                return null;
-            }
+                var url = API_URL + "extractor/temporal?path=" + HttpUtility.UrlEncode(emrPath) + "&line=" + HttpUtility.UrlEncode(line);
+                var res = _http.Request(url);
 
-            return (string)res.Data;
+                if (!res.IsSuccess)
+                {
+                    return null;
+                }
+
+                return (string)res.Data;
+            });
         }
     }
 }

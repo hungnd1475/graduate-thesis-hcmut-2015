@@ -19,10 +19,13 @@ namespace emr_corefsol_service.Utilities
         private ScriptScope scope = null;
         private PythonCompilerOptions pco = null;
         private ScriptSource script = null;
-        public PythonExcuter(string python_lib_path)
+        public PythonExcuter(string python_lib_path, string pyFile, string[] options)
         {
             pyEngine = Python.CreateEngine();
-            scope = pyEngine.CreateScope();
+            pyEngine.GetSysModule().SetVariable("argv", options);
+            scope = pyEngine.Runtime.CreateScope();
+
+            script = pyEngine.CreateScriptSourceFromFile(pyFile, Encoding.UTF8, SourceCodeKind.File);
 
             pco = (PythonCompilerOptions)pyEngine.GetCompilerOptions(scope);
             pco.ModuleName = "__main__";
@@ -30,34 +33,13 @@ namespace emr_corefsol_service.Utilities
 
             var paths = pyEngine.GetSearchPaths();
             paths.Add(python_lib_path);
-            pyEngine.SetSearchPaths(paths);
-        }
-
-        public void SetScriptFile(string pyFile)
-        {
-            script = pyEngine.CreateScriptSourceFromFile(pyFile, Encoding.UTF8, SourceCodeKind.File);
-
-            var paths = pyEngine.GetSearchPaths();
             var file_directory = new FileInfo(pyFile).Directory.FullName;
             paths.Add(file_directory);
             pyEngine.SetSearchPaths(paths);
         }
-
-        public void Excute(string pyFile, string[] options)
+        
+        public void Excute()
         {
-            SetScriptFile(pyFile);
-            pyEngine.GetSysModule().SetVariable("argv", options);
-            script.Compile(pco).Execute(scope);
-        }
-
-        public void Excute(string[] options)
-        {
-            if(script == null)
-            {
-                return;
-            }
-
-            pyEngine.GetSysModule().SetVariable("argv", options);
             script.Compile(pco).Execute(scope);
         }
 
