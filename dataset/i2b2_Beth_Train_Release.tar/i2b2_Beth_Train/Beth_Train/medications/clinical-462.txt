@@ -1,0 +1,2 @@
+13	Prenatal screens were O+ , antibody negative , hepatitis surface antigen negative , rapid plasma reagin nonreactive , rubella immune , group B strep positive .|rubella[522,529]||||||||||1022799|1022799|rubella
+71	On his previous admission , Terrance received hepatitis B vaccine on 2018-05-09 .|hepatitis B vaccine[3474,3493]||||||||||816236|816236|hepatitis b vaccine

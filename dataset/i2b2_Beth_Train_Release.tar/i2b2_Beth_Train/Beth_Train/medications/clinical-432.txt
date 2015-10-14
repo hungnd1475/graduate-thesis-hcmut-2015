@@ -1,0 +1,2 @@
+52	1. Oxycodone-Acetaminophen 5-325 mg Tablet Sig : 1-2 Tablets PO Q4-6H ( every 4 to 6 hours ) as needed .|Oxycodone - Acetaminophen[2105,2128]||Tablet[2138,2144]|5 - 325mg[2129,2137]|1 - 2 Tablets[2151,2162]|PO[2163,2165]|Q4 - 6 H[2166,2171]||as needed[2195,2204]|C0717368|214183|214183|oxycodone-acetaminophen
+54	2. Metoprolol Tartrate 25 mg Tablet Sig : 0.5 Tablet PO BID ( 2 times a day ) .|Metoprolol Tartrate[2250,2269]||Tablet[2276,2282]|25mg[2270,2275]|0.5 Tablet[2289,2299]|PO[2300,2302]|BID[2303,2306]|||C1359886|866924|6918|metoprolol

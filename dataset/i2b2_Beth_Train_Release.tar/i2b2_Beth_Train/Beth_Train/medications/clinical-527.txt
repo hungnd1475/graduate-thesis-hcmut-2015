@@ -1,0 +1,49 @@
+15	, MSSA bacteremia , acute interstitial nephritis secondary to oxacillin , and RLL pna .|oxacillin[688,697]|||||||||C0029983|7773|7773|oxacillin
+20	He was given D50 , but continued to have progressive respiratory failure , was therefore intubated and transferred to the Austen Riggs Center where he was noted to have multifocal pneumonia and bacteremia with enterobacter and MSSA .|D50[1188,1191]||||||||||||
+33	RRR , no m/r/g|m / r[2034,2037]||||||||||7916|7916|m / r
+84	ENTEROBACTER CLOACAE|ENTEROBACTER CLOACAE[4599,4619]|||||||||C0085484|1491010|1491010|enterobacter cloacae
+85	IV catheter tip 2017-02-05:|IV catheter[4620,4631]||||||||||227839|227839|iv catheter
+86	STAPHYLOCOCCUS , COAGULASE NEGATIVE sensitive to vanc|vanc[4697,4701]||||||||||||
+88	ENTEROBACTER CLOACAE|ENTEROBACTER CLOACAE[4721,4741]|||||||||C0085484|1491010|1491010|enterobacter cloacae
+98	He was extubated a few days later and transferred back to the floor where his pulm status improved dramatically with lasix and continued nebulizer treatments .|lasix[5631,5636]|||||||||C0699992|202991|4603|furosemide
+101	ABG ( 7.42 / 38 / 88 ) was performed , 80 mg lasix was given and the patietn had foley placed and had good urine output and good mentation .|lasix[5975,5980]|||80mg[5969,5974]||||||C1599049|566621|4603|furosemide
+106	He was continued on meropenem , started on BiPAP and aggressively suctioned in an attempt to avoid intubation .|meropenem[6357,6366]|||||||||C0066005|29561|29561|meropenem
+110	After endotracheal intubation , MAPs were maintained between 70 and 90 , dilantin was dose to maintain an appropriate level .|dilantin[7073,7081]||||||||||202740|8183|phenytoin
+112	Mannitol 75 mg iv x 1 then 50 gm iv tid was begun to maintain serum osm > 320 and Na > 147 .|osm[7282,7285]||||||||||||
+112	Mannitol 75 mg iv x 1 then 50 gm iv tid was begun to maintain serum osm > 320 and Na > 147 .|Mannitol[7214,7222]|||50gm[7241,7246]||iv[7229,7231]|tid[7250,7253]|||C0987552|316229|6628|mannitol
+112	Mannitol 75 mg iv x 1 then 50 gm iv tid was begun to maintain serum osm > 320 and Na > 147 .|Mannitol[7214,7222]|||75mg[7223,7228]||iv[7247,7249]|x 1[7232,7235]|||C0978343|311450|6628|mannitol
+112	Mannitol 75 mg iv x 1 then 50 gm iv tid was begun to maintain serum osm > 320 and Na > 147 .|Na[7296,7298]||||||||||56501|56501|na m-fluorphosphate
+116	The patient was terminally extubated on a morphine drip and ativan titrated for agonal breathing and discomfort ; scopolamine was used as an adjunct to control secretions and appeared comfortable when he died at 12:27 pm on 2017-03-04 .|morphine[7728,7736]|||||drip[7737,7741]||||C0026549|7052|7052|morphine
+116	The patient was terminally extubated on a morphine drip and ativan titrated for agonal breathing and discomfort ; scopolamine was used as an adjunct to control secretions and appeared comfortable when he died at 12:27 pm on 2017-03-04 .|ativan[7746,7752]|||||||||C0699194|202479|6470|lorazepam
+116	The patient was terminally extubated on a morphine drip and ativan titrated for agonal breathing and discomfort ; scopolamine was used as an adjunct to control secretions and appeared comfortable when he died at 12:27 pm on 2017-03-04 .|scopolamine[7800,7811]|||||||||C0036442|9601|9601|scopolamine
+120	and PICC tip and sputum growing enterobacter cloacae .|enterobacter cloacae[8145,8165]|||||||||C0085484|1491010|1491010|enterobacter cloacae
+121	The PICC was d/c 'ed and pt was continued on vancomycin ( for course of 6 weeks ) and meropenem was added on 02-09 ( for 3 week course ).|vancomycin[8213,8223]|||||||6 weeks[8240,8247]||C0042313|11124|11124|vancomycin
+121	The PICC was d/c 'ed and pt was continued on vancomycin ( for course of 6 weeks ) and meropenem was added on 02-09 ( for 3 week course ).|meropenem[8254,8263]|||||||3 week[8289,8295]||C0066005|29561|29561|meropenem
+123	Pt finished the 3 week course of meropenem while in house and was discharged to rehab on day 34/42 of the vancomycin .|meropenem[8358,8367]|||||||3 week[8341,8347]||C0066005|29561|29561|meropenem
+123	Pt finished the 3 week course of meropenem while in house and was discharged to rehab on day 34/42 of the vancomycin .|vancomycin[8431,8441]|||||||||C0042313|11124|11124|vancomycin
+125	Pt received oxacillin during his prior hospitalization and had AIN from this medication .|oxacillin[8465,8474]|||||||||C0029983|7773|7773|oxacillin
+126	On this admission he was continued on prednisone taper .|prednisone[8581,8591]|||||||||C0032952|8640|8640|prednisone
+127	Fluoroquinolones and other renal toxins were avoided .|Fluoroquinolones[8600,8616]||||||||||287913|287913|fluoroquinolones
+129	Before the patient acutely decompensated as above , the plan was for steroid taper : 60 mg x 10 days ( already completed ) , 40 mg x 14 d ( already completed ) , 20 mg x 14 d ( now day 11-24 ) , 10 mg x 10 d , 5 mg x 10 d .|steroid[8804,8811]|||60mg[8820,8825]|||x 14[8866,8870]|10 days[8828,8835]|||10072|10072|steroid
+131	on abx , podiatry following , changed vac q3 days .|abx[9068,9071]||||||q3 days[9107,9114]||||||
+132	5) Encephalopathy : It was unclear why the pt 's mental status initially did not improve more quickly after all sedatives were removed and he was extubated .|sedatives[9229,9238]|||||||||C1875740|691770|691770|sedatives
+133	His MS waxed and waned for many days and uremia vs. failure to clear sedatives were considered ( although pt was making urine and LFT 's are wnl ).|sedatives[9344,9353]|||||||||C1875740|691770|691770|sedatives
+141	Albumin was very low and pt had significant edema likely 03-15 this .|Albumin[10020,10027]|||||||||C0001924|433|433|albumin
+145	He was managed with Metoprolol , Hydralazine , and Amlodipine .|Metoprolol[10335,10345]|||||||||C0025859|6918|6918|metoprolol
+145	He was managed with Metoprolol , Hydralazine , and Amlodipine .|Hydralazine[10348,10359]|||||||||C0020223|5470|5470|hydralazine
+145	He was managed with Metoprolol , Hydralazine , and Amlodipine .|Amlodipine[10366,10376]|||||||||C0051696|17767|17767|amlodipine
+146	Near discharge his BP was controlled with Metoprolol only .|Metoprolol[10421,10431]|||||||||C0025859|6918|6918|metoprolol
+148	This was felt to be likely 03-15 intravascular volume depletion since the pt 's albumin was so low and he was third spacing all of his fluid .|albumin[10594,10601]|||||||||C0001924|433|433|albumin
+149	He was volume resuscitated and managed with D5W and lasix as well as receving FW boluses with his NG tube feeds .|D5W[10701,10704]||||||||||222934|222934|5% Dextrose in Water
+149	He was volume resuscitated and managed with D5W and lasix as well as receving FW boluses with his NG tube feeds .|lasix[10709,10714]|||||NG[10755,10757]||||C0699992|202991|4603|furosemide
+157	He expressed interest in taking an anti-depressant for a short time while he was recovering and was started on Celexa .|Celexa[11406,11412]||||||||||215928|2556|citalopram
+158	Medications on Admission : vancomycin 1g IV q48|vancomycin[11442,11452]|||||IV[11456,11458]|q48[11459,11462]|||C0042313|11124|11124|vancomycin
+159	MVI|MVI[11463,11466]|||||||||C1966765|747667|747667|Multivitamin Injection
+160	Neurontin 300 qd|Neurontin[11467,11476]|||300[11477,11480]|||qd[11481,11483]|||C1596319|563878|25480|gabapentin
+161	RISS|RISS[11484,11488]||||||||||||
+162	Prednisone taper 60 qd|Prednisone[11489,11499]||||||qd[11509,11511]|||C0032952|8640|8640|prednisone
+163	Prilosec 20 qd|Prilosec[11512,11520]|||20[11521,11523]|||qd[11524,11526]|||C1602242|541245|7646|omeprazole
+164	Metoprolol 25 bid|Metoprolol[11527,11537]|||25[11538,11540]|||bid[11541,11544]|||C1127547|331561|6918|metoprolol
+165	Lantus 480 qd|Lantus[11545,11551]|||480[11552,11555]|||qd[11556,11558]||||261551|274783|insulin glargine,hum.rec.anlog
+166	Calcium Carbonate tid with meals|Calcium Carbonate[11559,11576]||||||tid[11577,11580]|||C0006681|1897|1897|calcium (as carbonate)
+172	Acute Interstitial Nephritis ( Oxacillin )|Oxacillin[11775,11784]|||||||||C0029983|7773|7773|oxacillin

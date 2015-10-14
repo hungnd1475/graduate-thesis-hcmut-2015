@@ -1,0 +1,52 @@
+31	Synthroid , Prilosec 20 mg p.o. , Fioricet , Celebrex .|Synthroid[1917,1926]||||||||||224920|10582|levothyroxine
+31	Synthroid , Prilosec 20 mg p.o. , Fioricet , Celebrex .|Prilosec[1929,1937]|||20mg[1938,1943]||p.o.[1944,1948]||||C1602242|541245|7646|omeprazole
+31	Synthroid , Prilosec 20 mg p.o. , Fioricet , Celebrex .|Fioricet[1951,1959]||||||||||175184|161|paracetamol
+31	Synthroid , Prilosec 20 mg p.o. , Fioricet , Celebrex .|Celebrex[1962,1970]||||||||||215927|140587|celecoxib
+39	She does use herbal remedies including Primrose oil , Siberian ginseng , and has a history of use of wallerian root .|Primrose oil[2267,2279]|||||||||C0138395|55097|55097|primrose oil
+39	She does use herbal remedies including Primrose oil , Siberian ginseng , and has a history of use of wallerian root .|remedies[2248,2256]||||||||||||
+39	She does use herbal remedies including Primrose oil , Siberian ginseng , and has a history of use of wallerian root .|Siberian ginseng[2282,2298]||||||||||319812|319812|siberian ginseng extract
+69	However , the patient was started on an aspirin as well as a beta blocker , and a rule out myocardial infarction protocol was initiated .|beta blocker[4209,4221]||||||||||401870|401870|beta blocker
+69	However , the patient was started on an aspirin as well as a beta blocker , and a rule out myocardial infarction protocol was initiated .|aspirin[4188,4195]|||||||||C0004057|1191|1191|acetylsalicylic acid
+70	A stress thallium was planned for the day following admission .|thallium[4295,4303]|||||||||C0039738|1311633|1311633|thallium
+81	Her acute bradycardic event was felt likely secondary to her new beta blocker in conjunction with a vagal response .|beta blocker[5325,5337]||||||||||401870|401870|beta blocker
+82	It was determined to stop the beta blocker , and atropine was placed at the bedside .|beta blocker[5407,5419]||||||||||401870|401870|beta blocker
+82	It was determined to stop the beta blocker , and atropine was placed at the bedside .|atropine[5426,5434]|||||bedside[5453,5460]||||C0004259|1223|1223|atropine
+90	It was recommended that the patient begin anticoagulation given the severity of her pulmonary hypertension .|anticoagulation[6378,6393]||||||||||1024413|1024413|anticoagulation
+93	A pharmacologic pulmonary vasodilator challenge was performed with a positive response .|vasodilator[6654,6665]||||||||||11146|11146|vasodilator
+98	Collagen vascular disease could not be definitively ruled out ; however , given the patient 's lack of connective tissue disorder stigmata it was thought to be less likely , and the patient 's human immunodeficiency virus test was negative .|Collagen[7213,7221]|||||||||C0009325|2714|2714|collagen
+100	Consideration was given to treating the patient with a course of calcium channel blocker ; however , given the patient 's poor response to Lopressor , it was determined that this would not be optimal treatment for the patient 's pulmonary hypertension .|calcium channel blocker[7625,7648]|||||||||C2757014|986242|986242|calcium channel blocker
+100	Consideration was given to treating the patient with a course of calcium channel blocker ; however , given the patient 's poor response to Lopressor , it was determined that this would not be optimal treatment for the patient 's pulmonary hypertension .|Lopressor[7699,7708]|||||||||C0700776|203344|6918|metoprolol
+101	Therefore , her insurance company was contacted regarding the potential of Flolan as a treatment .|Flolan[7889,7895]|||||||||C0949409|114221|8814|epoprostenol
+102	Plans were made for placement of a Hickman catheter and initiation of Flolan treatment .|Flolan[7983,7989]|||||||||C0949409|114221|8814|epoprostenol
+110	Given the patient 's persistent hypotensive episodes , and decreased urine output , she was transferred back to the Medical Intensive Care Unit for management prior to initiation of Flolan therapy .|Flolan[9141,9147]|||||||||C0949409|114221|8814|epoprostenol
+111	On 12-08 , the Hickman catheter was placed in preparation of Flolan administration .|Flolan[9219,9225]|||||||||C0949409|114221|8814|epoprostenol
+116	The patient continued to be followed by the Electrophysiology Service , who determined that the patient was demonstrating severe vasal sensitivity with bradycardia necessitating pacemaker placement .|vasal[9897,9902]||||||||||||
+118	Because the patient 's pulmonary pressures responded so well to adenosine during right heart catheterization , it was thought that the patient would be a good candidate for Flolan therapy .|adenosine[10107,10116]|||||||||C0001443|296|296|adenosine
+118	Because the patient 's pulmonary pressures responded so well to adenosine during right heart catheterization , it was thought that the patient would be a good candidate for Flolan therapy .|Flolan[10216,10222]|||||||||C0949409|114221|8814|epoprostenol
+119	Flolan was initiated on 12-08 at 5 nanograms per kilogram per minute .|Flolan[10233,10239]||||||per minute[10291,10301]|||C0949409|114221|8814|epoprostenol
+120	The patient was monitored for symptoms of Flolan therapy including nausea , vomiting , first bite jaw claudication , or hypotension .|Flolan[10346,10352]|||||||||C0949409|114221|8814|epoprostenol
+121	Over the course of the hospital stay the patient 's Flolan dose was titrated to receive maximum benefit without precipitating symptoms of Flolan overdose .|Flolan[10490,10496]|||||||||C0949409|114221|8814|epoprostenol
+121	Over the course of the hospital stay the patient 's Flolan dose was titrated to receive maximum benefit without precipitating symptoms of Flolan overdose .|Flolan[10576,10582]|||||||||C0949409|114221|8814|epoprostenol
+122	The patient was felt to be stable on her current Flolan dose and was therefore transferred back to the floor .|Flolan[10643,10649]|||||||||C0949409|114221|8814|epoprostenol
+131	Over the course of the next few days the patient became more accustomed to her Flolan , and Flolan teaching was continued .|Flolan[11594,11600]|||||||||C0949409|114221|8814|epoprostenol
+132	She continued to have occasional episodes of dizziness , shortness of breath , and hypotension whenever the alarm sounded suggesting that the Flolan bag needed to be changed .|Flolan[11768,11774]|||||||||C0949409|114221|8814|epoprostenol
+137	At the time of discharge , the patient was tolerating her Flolan therapy well .|Flolan[12235,12241]|||||||||C0949409|114221|8814|epoprostenol
+139	She was set up with a primary pulmonary hypertension support group , and home services were arranged to help her in the initiation of Flolan therapy .|Flolan[12548,12554]|||||||||C0949409|114221|8814|epoprostenol
+146	Therefore , the patient was started on levofloxacin therapy to complete a 10 - day course .|levofloxacin[13244,13256]|||||||||C0282386|82122|82122|levofloxacin
+147	Following initiation of the antibiotic the patient 's white blood cell count quickly came down , and she remained afebrile .|antibiotic[13325,13335]||||||||||896|896|antibiotic
+149	She will complete two more days of Levaquin therapy as an outpatient .|Levaquin[13596,13604]|||||||two more days[13579,13592]|||217992|82122|levofloxacin
+156	She was continued on Protonix over the course of her hospital stay and had no further gastrointestinal issues .|Protonix[14091,14099]|||||||||C0876139|261624|40790|pantoprazole
+166	She was continued on her regular Synthroid dose .|Synthroid[14739,14748]||||||||||224920|10582|levothyroxine
+170	9. FLOLAN ADMINISTRATION :|FLOLAN[14859,14865]|||||||||C0949409|114221|8814|epoprostenol
+171	At the time of discharge , the patient was tolerating a Flolan dose of 5 nanograms per kilogram per minute .|Flolan[14939,14945]||||||per minute[14979,14989]|||C0949409|114221|8814|epoprostenol
+183	Schwartz in the Clinic on Monday , 12-22 , at 2:30 p.m. to check her INR and digoxin level .|digoxin[15556,15563]||||||Monday[15505,15511]|||C0012265|3407|3407|digoxin
+187	1. Coumadin 2 mg p.o. q.6h.|Coumadin[15735,15743]|||2mg[15744,15748]||p.o.[15749,15753]|q.6h.[15754,15759]|||C0710782|855304|11289|warfarin
+188	2. Tylenol No. 3 one to two tablets p.o. q.4h. p.r.n. for pain .|Tylenol[15763,15770]||||one to two tablets[15777,15795]|p.o.[15796,15800]|q.4h.[15801,15806]||p.r.n.[15807,15813]|C1243075|369070|161|paracetamol
+189	3. Digoxin 0.125 mg p.o. q.d.|Digoxin[15828,15835]|||0.125mg[15836,15844]||p.o.[15845,15849]|q.d.[15850,15854]||||197604|3407|digoxin
+190	4. Levofloxacin 500 mg p.o. t.i.d. times two days .|Levofloxacin[15858,15870]|||500mg[15871,15877]||p.o.[15878,15882]|t.i.d.[15883,15889]|||C0693579|199885|82122|levofloxacin
+191	5. Protonix 40 mg p.o. q.d.|Protonix[15910,15918]|||40mg[15919,15924]||p.o.[15925,15929]|q.d.[15930,15934]||||763308|40790|pantoprazole
+192	6. Tylenol 650 mg p.o. q.4-6h.|Tylenol[15938,15945]|||650mg[15946,15952]||p.o.[15953,15957]|q.4 - 6h[15958,15964]|||C1739190|646457|161|paracetamol
+194	7. Synthroid 125 mcg p.o. q.d.|Synthroid[15996,16005]|||125mcg[16006,16013]||p.o.[16014,16018]|q.d.[16019,16023]||||966191|10582|levothyroxine
+195	8. Colace 100 mg p.o. q.d.|Colace[16027,16033]|||100mg[16034,16040]||p.o.[16041,16045]|q.d.[16046,16050]|||C0711644|1247756|82003|docusate
+196	9. Lactulose 30 cc p.o. q.6h. p.r.n. for constipation .|Lactulose[16054,16063]|||30[16064,16066]||p.o.[16070,16074]|q.6h.[16075,16080]||p.r.n.[16081,16087]|C1298316|391937|6218|lactulose
+197	10. Flolan 5 nanograms per kilograms per minute , continuous infusion .|Flolan[16111,16117]|||5[16118,16119]|||per minute[16144,16154]|||C0949409|114221|8814|epoprostenol
