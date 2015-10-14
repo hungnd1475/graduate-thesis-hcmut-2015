@@ -61,7 +61,7 @@ namespace emr_corefsol_service.Libs
             }
             catch(Exception e)
             {
-                return e.Message;
+                return null;
             }
         }
 
