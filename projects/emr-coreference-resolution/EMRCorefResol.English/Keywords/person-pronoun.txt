@@ -42,3 +42,6 @@ niece
 cousin
 dad
 mom
+who
+whom
+whose
