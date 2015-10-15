@@ -29,14 +29,14 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
 
             if (args.Mode != Mode.Classify && emrCollections.Any(e => !e.HasGroundTruth))
             {
-                Console.Write("EMR paths must contain chains directories in Train or Test mode");
+                Console.Write("EMR paths must contain chains directories in Train or Test mode.");
                 Console.ReadLine();
                 return;
             }
 
             if (args.Mode != Mode.Train && !Directory.Exists(args.ModelsDir))
             {
-                Console.Write("Model file must be specified in Test or Classify mode.");
+                Console.Write("Models directory must be specified in Test or Classify mode.");
                 Console.ReadLine();
                 return;
             }

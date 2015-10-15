@@ -155,21 +155,8 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
 
         public static double Predict(SVMModel model, SVMNode[] x)
         {
-            IntPtr ptr_model = SVMModel.Allocate(model);
-
-            if (ptr_model == IntPtr.Zero)
-                throw new ArgumentNullException("model");
-
-            List<SVMNode> nodes = x.Select(a => a.Clone()).ToList();
-            nodes.Add(new SVMNode(-1, 0));
-            IntPtr ptr_nodes = SVMNode.Allocate(nodes.ToArray());
-
-            double result = NativeLibSVM.Predict(ptr_model, ptr_nodes);
-
-            SVMNode.Free(ptr_nodes);
-            SVMModel.Free(ptr_model);
-
-            return result;
+            double confidence;
+            return Predict(model, x, out confidence);
         }
 
         public static double Predict(SVMModel model, SVMNode[] x, out double confidence)
@@ -201,16 +188,13 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
         {
             NumberFormatInfo provider = new NumberFormatInfo();
             provider.NumberDecimalSeparator = ".";
-
             SVMProblem problem = new SVMProblem();
-            int readLine = 0;
 
             using (var sr = new StringReader(content))
             {
                 while (true)
                 {
                     string line = sr.ReadLine();
-                    readLine += 1;
 
                     if (line == null)
                         break;

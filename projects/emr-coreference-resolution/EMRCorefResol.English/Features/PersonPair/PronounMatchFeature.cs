@@ -13,13 +13,14 @@ namespace HCMUT.EMRCorefResol.English.Features
             :base("Pronoun-Match", 2, 0)
         {
             var kw = KeywordService.Instance.PERSON_PRONOUN;
-            //if(!kw.Match(instance.Anaphora.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord) ||
+
+            //if (!kw.Match(instance.Anaphora.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord) ||
             //    !kw.Match(instance.Antecedent.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
             //{
             //    return;
             //}
 
-            //if(appearBefore(instance.Anaphora, emr) && appearBefore(instance.Antecedent, emr))
+            //if (appearBefore(instance.Anaphora, emr) && appearBefore(instance.Antecedent, emr))
             //{
             //    SetCategoricalValue(1);
             //}
@@ -30,6 +31,13 @@ namespace HCMUT.EMRCorefResol.English.Features
                 if (string.Equals(s, " ") || string.Equals(s, " , "))
                 {
                     SetCategoricalValue(1);
+                }
+                else if (kw.Match(instance.Antecedent.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
+                {
+                    if (appearBefore(instance.Anaphora, emr) && appearBefore(instance.Antecedent, emr))
+                    {
+                        SetCategoricalValue(1);
+                    }
                 }
             }
         }

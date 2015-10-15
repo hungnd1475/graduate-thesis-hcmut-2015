@@ -58,7 +58,6 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
         public void Train(Type instanceType, string problemPath, GenericConfig config)
         {
             var name = instanceType.Name;
-            Console.WriteLine($"Preparing training {name} problem...");
 
             //var scaledPrbPath = Path.Combine(_problemDir, $"{name}-Train.scaled");
             //var sfPath = Path.Combine(_modelDir, $"{name}.sf");
@@ -67,6 +66,8 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             // scale
             //Console.WriteLine("Scaling problem...");
             //var scaledData = LibSVM.RunSVMScale(0d, 1d, sfPath, problemPath);
+
+            Console.WriteLine("Reading problems...");
             var data = File.ReadAllText(problemPath);
             var problem = LibSVM.ReadProblem(data);
 
