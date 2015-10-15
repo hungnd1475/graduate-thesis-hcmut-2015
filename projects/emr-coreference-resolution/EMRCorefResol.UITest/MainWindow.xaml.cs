@@ -117,6 +117,8 @@ namespace EMRCorefResol.UITest
             txtEMR.Document = new TextDocument();
             txtCons.Document = new TextDocument();
             txtChains.Document = new TextDocument();
+
+            
         }
 
         private void txt_TextArea_PreviewMouseUp(object sender, MouseButtonEventArgs e)

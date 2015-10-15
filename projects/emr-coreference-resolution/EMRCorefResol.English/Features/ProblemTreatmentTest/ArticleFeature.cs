@@ -10,7 +10,7 @@ namespace HCMUT.EMRCorefResol.English.Features
     class ArticleFeature : Feature
     {
         public ArticleFeature(IConceptPair instance)
-            :base("Article-Feature", 0)
+            :base("Article-Feature")
         {
             var anaIndex = GetArticleWordIndex(instance.Anaphora.Lexicon);
             var anteIndex = GetArticleWordIndex(instance.Antecedent.Lexicon);

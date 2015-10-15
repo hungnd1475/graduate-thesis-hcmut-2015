@@ -33,7 +33,6 @@ namespace HCMUT.EMRCorefResol.English
             this[13] = new DurationFeature(anteMedicationInfo, anteMedicationInfo);
             this[14] = new TemporalFeature(instance, emr);
             this[15] = new SectionFeature(instance, emr);
-
         }
 
         private MedicationInfo GetMedicationInfo(Concept c, EMR emr)
