@@ -28,8 +28,6 @@ namespace HCMUT.EMRCorefResol
         /// </summary>
         public EMRSectionCollection Sections { get; }
 
-        public MedicationInfoCollection Medications { get; }
-
         public string Path { get; }
 
         /// <summary>
@@ -38,7 +36,7 @@ namespace HCMUT.EMRCorefResol
         /// <param name="emrFile">The path to the content file.</param>
         /// <param name="conceptsFile">The path to the concepts file.</param>
         /// <param name="dataReader">The reader that can read the concepts from concepts file.</param>
-        public EMR(string emrFile, string conceptsFile, string medicationsFile, IDataReader dataReader)
+        public EMR(string emrFile, string conceptsFile, IDataReader dataReader)
         {
             Path = emrFile;
 
@@ -49,7 +47,6 @@ namespace HCMUT.EMRCorefResol
 
             Concepts = new ConceptCollection(conceptsFile, dataReader);
             Sections = new EMRSectionCollection(Content, dataReader);
-            Medications = new MedicationInfoCollection(medicationsFile, dataReader);
         }
     }
 }

@@ -323,10 +323,9 @@ namespace EMRCorefResol.UITest
                     var emrFileName = tabEMR.Header = IOPath.GetFileName(emrPath);
                     var conPath = emrCollection.GetConceptsPath(nextEMRIndex);
                     var chainPath = emrCollection.GetChainsPath(nextEMRIndex);
-                    var medicationPath = emrCollection.GetMedicationsPath(nextEMRIndex);
 
                     currentEMRIndex = nextEMRIndex;
-                    currentEMR = new EMR(emrPath, conPath, medicationPath, dataReader);
+                    currentEMR = new EMR(emrPath, conPath, dataReader);
                     txtEMR.Document.Text = currentEMR.Content;
                     txtEMR.ScrollTo(1, 1);
 

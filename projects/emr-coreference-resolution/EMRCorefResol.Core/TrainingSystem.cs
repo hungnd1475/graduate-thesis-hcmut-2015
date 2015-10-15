@@ -29,20 +29,20 @@ namespace HCMUT.EMRCorefResol
 
         private TrainingSystem() { }
 
-        public void TrainOne(string emrPath, string conceptsPath, string chainsPath, string medicationsPath, IDataReader dataReader,
+        public void TrainOne(string emrPath, string conceptsPath, string chainsPath, IDataReader dataReader,
             IPreprocessor preprocessor, IFeatureExtractor fExtractor, ITrainer trainer, ClasConfig configs)
         {
             var pCollection = new ClasProblemCollection();
-            _fExtractSystem.ExtractOne(emrPath, conceptsPath, chainsPath, medicationsPath, dataReader, preprocessor,
+            _fExtractSystem.ExtractOne(emrPath, conceptsPath, chainsPath, dataReader, preprocessor,
                 fExtractor, pCollection);
             Train(trainer, pCollection, configs);
         }
 
-        public void TrainAll(string[] emrFiles, string[] conceptsFiles, string[] chainsFiles, string[] medicationsFiles, IDataReader dataReader,
+        public void TrainAll(string[] emrFiles, string[] conceptsFiles, string[] chainsFiles, IDataReader dataReader,
             IPreprocessor preprocessor, IFeatureExtractor fExtractor, ITrainer trainer, ClasConfig configs)
         {
             var pCollection = new ClasProblemCollection();
-            _fExtractSystem.ExtractAll(emrFiles, conceptsFiles, chainsFiles, medicationsFiles, dataReader,
+            _fExtractSystem.ExtractAll(emrFiles, conceptsFiles, chainsFiles, dataReader,
                 preprocessor, fExtractor, pCollection);
             Train(trainer, pCollection, configs);
         }

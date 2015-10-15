@@ -60,14 +60,13 @@ namespace HCMUT.EMRCorefResol
             return Path.Combine(_medicationsDir, emrFileName);
         }
 
-        public void GetRandom(int size, out string[] emrPaths, out string[] conceptsPaths, out string[] chainsPaths, out string[] medicationsPaths)
+        public void GetRandom(int size, out string[] emrPaths, out string[] conceptsPaths, out string[] chainsPaths)
         {
             if (size > Count)
             {
                 emrPaths = new string[Count];
                 conceptsPaths = new string[Count];
                 chainsPaths = new string[Count];
-                medicationsPaths = new string[Count];
 
                 for (int i = 0; i < Count; i++)
                 {
@@ -81,7 +80,6 @@ namespace HCMUT.EMRCorefResol
                 emrPaths = new string[size];
                 conceptsPaths = new string[size];
                 chainsPaths = new string[size];
-                medicationsPaths = new string[size];
 
                 var indices = new HashSet<int>();
                 int k;
@@ -98,7 +96,6 @@ namespace HCMUT.EMRCorefResol
                     emrPaths[i] = GetEMRPath(k);
                     conceptsPaths[i] = GetConceptsPath(k);
                     chainsPaths[i] = GetChainsPath(k);
-                    medicationsPaths[i] = GetMedicationsPath(k);
                 }
             }
         }

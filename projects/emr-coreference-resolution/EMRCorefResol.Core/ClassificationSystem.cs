@@ -17,11 +17,11 @@ namespace HCMUT.EMRCorefResol
 
         private ClassificationSystem() { }
 
-        public void ClassifyOne(string emrPath, string conceptsPath, string chainsPath, string medicationsPath, IDataReader dataReader,
+        public void ClassifyOne(string emrPath, string conceptsPath, string chainsPath, IDataReader dataReader,
             IPreprocessor preprocessor, IFeatureExtractor fExtractor, IClassifier classifier)
         {
             var pCreator = new ClasProblemCollection();
-            _fExtractingSystem.ExtractOne(emrPath, conceptsPath, chainsPath, medicationsPath, dataReader,
+            _fExtractingSystem.ExtractOne(emrPath, conceptsPath, chainsPath, dataReader,
                 preprocessor, fExtractor, pCreator);
 
             Console.WriteLine("Classifying...");

@@ -48,7 +48,7 @@ namespace HCMUT.EMRCorefResol.ResolvingConsole
                 var dir = args.EMRDir;
                 var emrFile = Path.Combine(dir, "docs", $"{args.EMRName}.txt");
                 var conceptsFile = Path.Combine(dir, "concepts", $"{args.EMRName}.txt.con");
-                var chains = Resolve(emrFile, conceptsFile, "MED", dataReader, resolver, fExtractor, classifier);
+                var chains = Resolve(emrFile, conceptsFile, dataReader, resolver, fExtractor, classifier);
                 File.WriteAllText(Path.Combine(args.OutputDir, $"{args.EMRName}.txt.chains"), string.Join(Environment.NewLine, chains));
                 Console.WriteLine("Done.");
             }
@@ -62,7 +62,7 @@ namespace HCMUT.EMRCorefResol.ResolvingConsole
                     Console.WriteLine($"Resolving {emrName}...");
 
                     var conceptsFile = emrCollection.GetConceptsPath(i);
-                    var chains = Resolve(emrFile, conceptsFile, "MED", dataReader, resolver, fExtractor, classifier);
+                    var chains = Resolve(emrFile, conceptsFile, dataReader, resolver, fExtractor, classifier);
                     File.WriteAllText(Path.Combine(args.OutputDir, $"{emrName}.chains"), 
                         string.Join(Environment.NewLine, chains));
                     Console.WriteLine("Done.");
@@ -121,10 +121,10 @@ namespace HCMUT.EMRCorefResol.ResolvingConsole
             return p;
         }
 
-        static CorefChainCollection Resolve(string emrFile, string conceptsFile, string medPath, IDataReader dataReader,
+        static CorefChainCollection Resolve(string emrFile, string conceptsFile, IDataReader dataReader,
             ICorefResolver resolver, IFeatureExtractor fExtractor, IClassifier classifier)
         {
-            var emr = new EMR(emrFile, conceptsFile, medPath, dataReader);
+            var emr = new EMR(emrFile, conceptsFile, dataReader);
             return resolver.Resolve(emr, fExtractor, classifier);
         }
     }

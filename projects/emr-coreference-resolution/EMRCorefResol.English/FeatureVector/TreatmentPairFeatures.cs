@@ -11,10 +11,10 @@ namespace HCMUT.EMRCorefResol.English
     class TreatmentPairFeatures : FeatureVector
     {
         public TreatmentPairFeatures(TreatmentPair instance, EMR emr, double classValue)
-            :base(size:16, classValue: classValue)
+            :base(size:12, classValue: classValue)
         {
-            var anaMedicationInfo = GetMedicationInfo(instance.Anaphora, emr);
-            var anteMedicationInfo = GetMedicationInfo(instance.Antecedent, emr);
+            //var anaMedicationInfo = GetMedicationInfo(instance.Anaphora, emr);
+            //var anteMedicationInfo = GetMedicationInfo(instance.Antecedent, emr);
 
             this[0] = new WordNetMatchFeature(instance);
             this[1] = new SentenceDistanceFeature(instance);
@@ -27,15 +27,16 @@ namespace HCMUT.EMRCorefResol.English
             this[8] = new StringMatchFeature(instance);
 
             this[9] = new PositionFeature(instance, emr);
-            this[10] = new DrugFeature(anaMedicationInfo, anteMedicationInfo);
+            this[10] = new TemporalFeature(instance, emr);
+            this[11] = new SectionFeature(instance, emr);
+
+            /*this[10] = new DrugFeature(anaMedicationInfo, anteMedicationInfo);
             this[11] = new DosageFeature(anaMedicationInfo, anteMedicationInfo);
             this[12] = new FrequencyFeature(anaMedicationInfo, anteMedicationInfo);
-            this[13] = new DurationFeature(anteMedicationInfo, anteMedicationInfo);
-            this[14] = new TemporalFeature(instance, emr);
-            this[15] = new SectionFeature(instance, emr);
+            this[13] = new DurationFeature(anteMedicationInfo, anteMedicationInfo);*/
         }
 
-        private MedicationInfo GetMedicationInfo(Concept c, EMR emr)
+        /*private MedicationInfo GetMedicationInfo(Concept c, EMR emr)
         {
             var line = emr.GetLine(c.Begin.Line);
 
@@ -52,6 +53,6 @@ namespace HCMUT.EMRCorefResol.English
             }
 
             return null;
-        }
+        }*/
     }
 }
