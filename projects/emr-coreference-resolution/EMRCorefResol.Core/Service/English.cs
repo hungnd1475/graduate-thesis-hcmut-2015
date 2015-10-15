@@ -22,6 +22,12 @@ namespace HCMUT.EMRCorefResol.Service
             _temporalCache = new UnlimitedCache<string, string>();
         }
 
+        public static void ClearCache()
+        {
+            _wikiCache.Clear();
+            _temporalCache.Clear();
+        }
+
         public static string[] POSTag(string term)
         {
             var url = API_URL + "nlp/pos?term=" + HttpUtility.UrlEncode(term);

@@ -80,6 +80,7 @@
     <Compile Include="FeatureExtractor\ClasPatientDeterminer.cs" />
     <Compile Include="FeatureExtractor\EnglishClasFeatureExtractor.cs" />
     <Compile Include="Features\ContainFeature.cs" />
+    <Compile Include="Features\CosineDistanceFeature.cs" />
     <Compile Include="Features\DepartmentKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\DoctorKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\DoctorLastNLineFeature.cs" />
@@ -96,6 +97,10 @@
     <Compile Include="Features\PersonInstance\PronounYouFeature.cs" />
     <Compile Include="Features\FirstChunkAfterMention.cs" />
     <Compile Include="Features\ProblemTreatmentTest\ArticleFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\DosageFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\DrugFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\DurationFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\FrequencyFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\HeadNounFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\IndicatorFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\ModifierFeature.cs" />
