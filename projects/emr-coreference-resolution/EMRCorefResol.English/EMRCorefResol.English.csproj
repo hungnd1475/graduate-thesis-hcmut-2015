@@ -79,6 +79,7 @@
   <ItemGroup>
     <Compile Include="FeatureExtractor\ClasPatientDeterminer.cs" />
     <Compile Include="FeatureExtractor\EnglishClasFeatureExtractor.cs" />
+    <Compile Include="Features\CapitolMatchFeature.cs" />
     <Compile Include="Features\ContainFeature.cs" />
     <Compile Include="Features\CosineDistanceFeature.cs" />
     <Compile Include="Features\DepartmentKeywordFeature.cs" />

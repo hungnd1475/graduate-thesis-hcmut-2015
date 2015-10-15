@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HCMUT.EMRCorefResol.English.Features.ProblemTreatmentTest
+namespace HCMUT.EMRCorefResol.English.Features
 {
     using Utilities;
     class ArticleFeature : Feature
