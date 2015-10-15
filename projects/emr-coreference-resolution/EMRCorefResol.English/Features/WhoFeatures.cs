@@ -16,12 +16,12 @@ namespace HCMUT.EMRCorefResol.English.Features
         {
             var s = emr.ContentBetween(instance);
 
-            if (string.Equals(s, " : "))
+            if (string.Equals(s.Trim(), ":"))
             {
                 SetCategoricalValue(1);
             }
             else if (string.Equals(instance.Anaphora.Lexicon, "who") 
-                && (string.Equals(s, " ") || string.Equals(s, " , ")))
+                && (string.Equals(s, " ") || string.Equals(s.Trim(), ",")))
             {
                 SetCategoricalValue(1);
             }
@@ -35,12 +35,12 @@ namespace HCMUT.EMRCorefResol.English.Features
             if (prevCon != null && prevCon.Type == con.Type)
             {
                 var s = emr.ContentBetween(prevCon, con);
-                if (string.Equals(s, " : "))
+                if (string.Equals(s.Trim(), ":"))
                 {
                     SetCategoricalValue(1);
                 }
                 else if (string.Equals(instance.Concept.Lexicon, "who")
-                    && (string.Equals(s, " ") || string.Equals(s, " , ")))
+                    && (string.Equals(s, " ") || string.Equals(s.Trim(), ",")))
                 {
                     SetCategoricalValue(1);
                 }

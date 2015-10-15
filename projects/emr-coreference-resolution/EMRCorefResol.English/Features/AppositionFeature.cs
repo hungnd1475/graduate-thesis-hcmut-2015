@@ -17,9 +17,7 @@ namespace HCMUT.EMRCorefResol.English.Features
             if (mentionDistance == 0d)
             {
                 var s = emr.ContentBetween(instance.Antecedent, instance.Anaphora);
-                if (string.Equals(s, ",") || string.Equals(s, " , ")
-                    || string.Equals(s, " ,") || string.Equals(s, ", ")
-                    || string.Equals(s, " "))
+                if (string.Equals(s.Trim(), ","))
                 {
                     SetCategoricalValue(1);
                 }
@@ -34,9 +32,7 @@ namespace HCMUT.EMRCorefResol.English.Features
             if (prevCon != null && prevCon.Type == con.Type)
             {
                 var s = emr.ContentBetween(prevCon, con);
-                if (string.Equals(s, ",") || string.Equals(s, " , ")
-                    || string.Equals(s, " ,") || string.Equals(s, ", ")
-                    || string.Equals(s, " "))
+                if (string.Equals(s.Trim(), ","))
                 {
                     SetCategoricalValue(1);
                 }
