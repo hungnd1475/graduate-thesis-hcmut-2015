@@ -12,7 +12,7 @@ namespace HCMUT.EMRCorefResol.English.Features
 {
     class AliasFeature : Feature
     {
-        public AliasFeature(PersonPair instance)
+        public AliasFeature(IConceptPair instance)
             : base("Alias", 2, 0)
         {
             var ana = getAbbre(instance.Anaphora.Lexicon);

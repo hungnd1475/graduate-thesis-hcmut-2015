@@ -29,14 +29,14 @@ namespace emr_corefsol_service.Controllers
         [ActionName("Synsets")]
         public CustomResponse GetSynsets(string term)
         {
-            if(term.Length > 0)
+            var defs = _helper.getSynSets(term);
+
+            if(defs == null)
             {
-                var defs = _helper.getSynSets(term);
-                return new CustomResponse(true, defs, null);
-            } else
-            {
-                return new CustomResponse(false, null, "No term submitted");
+                return new CustomResponse(false, null, "No definition found");
             }
+
+            return new CustomResponse(true, defs, null);
         }
     }
 }

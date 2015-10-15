@@ -50,9 +50,9 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
             if (args.Random > 0)
             {
                 // TODO: refine this
-                string[] emrPaths, conceptsPaths, chainsPaths;
-                emrCollections.First().GetRandom(args.Random, out emrPaths, out conceptsPaths, out chainsPaths);
-                FeatureExtractingSystem.Instance.ExtractAll(emrPaths, conceptsPaths, chainsPaths, dataReader,
+                string[] emrPaths, conceptsPaths, chainsPaths, medicationsPaths;
+                emrCollections.First().GetRandom(args.Random, out emrPaths, out conceptsPaths, out chainsPaths, out medicationsPaths);
+                FeatureExtractingSystem.Instance.ExtractAll(emrPaths, conceptsPaths, chainsPaths, medicationsPaths, dataReader,
                     preprocessor, fExtractor, pCreator);
             }
             else

@@ -1,0 +1,25 @@
+10	The patient had undergone treatment with interferon and Ribavirin .|interferon[322,332]|||||||||C0021747|5886|5886|interferon
+10	The patient had undergone treatment with interferon and Ribavirin .|Ribavirin[337,346]|||||||||C0035525|9344|9344|ribavirin
+25	1. Miconazole nitrate powder tid prn for groin rash .|Miconazole nitrate powder[1137,1162]||||||tid[1163,1166]||prn[1167,1170]||311696|311696|miconazole nitrate powder
+26	2. Protonix 40 mg po bid .|Protonix[1191,1199]|||40mg[1200,1205]||po[1206,1208]|bid[1209,1212]||||763308|40790|pantoprazole
+27	3. Lactulose 30 ml tid ( titrated to 4 to 5 bowel movements qd ) .|Lactulose[1218,1227]|||30ml[1228,1233]|||tid[1234,1237]|||C1298316|391937|6218|lactulose
+28	4. Vancomycin 1 gm IV bid .|Vancomycin[1285,1295]|||1gm[1296,1300]||IV[1301,1303]|bid[1304,1307]|||null|997839|11124|vancomycin
+33	The patient had also used cocaine in the past , but had also stopped in 1996 .|cocaine[1559,1566]|||||||||C0009170|2653|2653|cocaine
+41	The patient was continued on vancomycin therapy for his previously diagnosed Methicillin resistant , coagulase negative Staph bacteremia .|vancomycin[2433,2443]|||||||||C0042313|11124|11124|vancomycin
+54	The patient was on a Lasix drip to aid in diuresis , and was ultimately converted to oral Lasix on postop day 1 .|Lasix[3719,3724]|||||drip[3725,3729]||||C0699992|202991|4603|furosemide
+54	The patient was on a Lasix drip to aid in diuresis , and was ultimately converted to oral Lasix on postop day 1 .|Lasix[3788,3793]|||||oral[3783,3787]||||C3229626|1175647|4603|furosemide
+56	The patient required 2 units of fresh frozen plasma on the night following surgery , and 1 unit of platelets on postop day 1 , but otherwise required no blood products following the liver transplant .|fresh frozen plasma[3892,3911]||||||||||4563|4563|fresh frozen plasma
+59	The patient was advanced per protocol to an immunosuppressive regimen of prednisone , Neoral , and CellCept .|prednisone[4296,4306]|||||||||C0032952|8640|8640|prednisone
+59	The patient was advanced per protocol to an immunosuppressive regimen of prednisone , Neoral , and CellCept .|immunosuppressive[4267,4284]||||||||||5748|5748|immunosuppressive
+59	The patient was advanced per protocol to an immunosuppressive regimen of prednisone , Neoral , and CellCept .|Neoral[4309,4315]|||||||||C0699605|202817|3008|ciclosporin
+70	1. Bactrim single strength 1 tablet po qd .|Bactrim single strength[5141,5164]||||1 tablet[5165,5173]|po[5174,5176]|qd[5177,5179]|||C1243250|369244|10180|sulfamethoxazole
+71	2. Protonix 40 mg po qd .|Protonix[5185,5193]|||40mg[5194,5199]||po[5200,5202]|qd[5203,5205]||||763308|40790|pantoprazole
+72	3. Metoprolol 25 mg po bid .|Metoprolol[5211,5221]|||25mg[5222,5227]||po[5228,5230]|bid[5231,5234]|||null|866924|6918|metoprolol
+73	4. Fluconazole 200 mg po qd .|Fluconazole[5240,5251]|||200mg[5252,5258]||po[5259,5261]|qd[5262,5264]|||C0688877|197700|4450|fluconazole
+74	5. CellCept 1 gm po bid .|CellCept[5270,5278]|||1gm[5279,5283]||po[5284,5286]|bid[5287,5290]|||C3220448|1166215|68149|mycophenolate mofetil
+75	6. Prednisone 20 mg po qd .|Prednisone[5296,5306]|||20mg[5307,5312]||po[5313,5315]|qd[5316,5318]|||C1966072|746836|8640|prednisone
+76	7. Dilaudid prn .|Dilaudid[5324,5332]||||||||prn[5333,5336]||224913|3423|hydromorphone
+77	8. Neoral 500 mg po bid .|Neoral[5342,5348]|||500mg[5349,5355]||po[5356,5358]|bid[5359,5362]|||C3235512|1181673|3008|ciclosporin
+78	9. Valcyte 450 mg po qod .|Valcyte[5368,5375]|||450mg[5376,5382]||po[5383,5385]|qod[5386,5389]|||C0939181|284587|275891|valganciclovir
+79	10. Lasix 40 mg bid x 21 days .|Lasix[5396,5401]|||40mg[5402,5407]|||bid[5408,5411]|||C1597894|565458|4603|furosemide
+80	11. Colace 100 mg po bid .|Colace[5428,5434]|||100mg[5435,5441]||po[5442,5444]|bid[5445,5448]|||C0711644|1247756|82003|docusate

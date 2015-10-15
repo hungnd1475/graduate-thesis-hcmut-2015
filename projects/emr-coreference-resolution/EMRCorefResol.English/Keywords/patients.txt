@@ -13,3 +13,5 @@ year-old
 patient
 pt
 pt.
+p.t
+p.t.

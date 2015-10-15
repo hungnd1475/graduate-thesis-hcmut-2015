@@ -60,6 +60,19 @@ namespace HCMUT.EMRCorefResol
             return lines[lineNumber - 1];
         }
 
+        public static int GetSectionIndex(this EMR emr, Concept c)
+        {
+            for(int i=0; i<emr.Sections.Count; i++)
+            {
+                var section = emr.Sections[i];
+                if(section.Begin <= c.Begin.Line && section.End >= c.End.Line)
+                {
+                    return i + 1;
+                }
+            }
+            return 0;
+        }
+
         public static Concept GetPrevConcept(this EMR emr, Concept c)
         {
             var index = emr.Concepts.IndexOf(c);

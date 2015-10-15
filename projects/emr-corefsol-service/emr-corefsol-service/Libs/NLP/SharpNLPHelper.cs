@@ -28,6 +28,11 @@ namespace emr_corefsol_service.Libs
             throw new NotImplementedException();
         }
 
+        public string HeadNoun(string term)
+        {
+            throw new NotImplementedException();
+        }
+
         public string[] Tokenize(string term)
         {
             if (term==null)

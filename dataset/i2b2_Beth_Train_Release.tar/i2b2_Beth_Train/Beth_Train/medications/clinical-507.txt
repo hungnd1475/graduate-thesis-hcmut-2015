@@ -1,0 +1,2 @@
+10	Please hold dose of warfarin on the night of the 16 , and please recheck INR on 2016-11-16 and dose warfarin appropriately for INR of 2 to 2.5.|warfarin[220,228]|||||||||C0043031|11289|11289|warfarin
+10	Please hold dose of warfarin on the night of the 16 , and please recheck INR on 2016-11-16 and dose warfarin appropriately for INR of 2 to 2.5.|warfarin[300,308]|||||||||C0043031|11289|11289|warfarin

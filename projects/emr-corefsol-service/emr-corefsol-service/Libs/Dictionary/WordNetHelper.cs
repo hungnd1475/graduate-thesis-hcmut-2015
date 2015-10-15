@@ -11,13 +11,13 @@ namespace emr_corefsol_service.Libs
     {
         private readonly string dbUrl = null;
         private readonly WordNetEngine _wEngine = null;
-        private readonly WordNetSimilarityModel _wSimilarity = null;
+        //private readonly WordNetSimilarityModel _wSimilarity = null;
 
         public WordNetHelper(string rootPath)
         {
             dbUrl = rootPath;
-            _wEngine = new WordNetEngine(dbUrl, true);
-            _wSimilarity = new WordNetSimilarityModel(_wEngine);
+            _wEngine = new WordNetEngine(dbUrl, false);
+            //_wSimilarity = new WordNetSimilarityModel(_wEngine);
         }
 
         public Models.Definition[] getSynSets(string term)
@@ -25,6 +25,11 @@ namespace emr_corefsol_service.Libs
             try
             {
                 var t = _wEngine.GetSynSets(term);
+                if(t.Count <= 0)
+                {
+                    return null;
+                }
+
                 Models.Definition[] res = new Models.Definition[t.Count];
 
                 int i = 0;
@@ -38,6 +43,7 @@ namespace emr_corefsol_service.Libs
             }
             catch(Exception e)
             {
+                int x = 1 + 1;
                 return null;
             }
         }

@@ -1,0 +1,10 @@
+7	TRAUMA SER|SER[108,111]||||||||||72257|72257|interferon beta-1b
+15	He was resuscitated with Crystalloid and remained hemodynamically stable .|Crystalloid[693,704]||||||||||||
+25	Admission laboratories included a hematocrit of 43.3 and white blood cell count of 25.2 , normal electrolytes and amylase of 98 .|amylase[1300,1307]|||||||||C0002712|743|743|diastase
+52	He does of BuSpar , Trazodone and Haldol were continued and were adjusted by Psychiatry .|BuSpar[3356,3362]|||||||||C0600122|154990|1827|buspirone
+52	He does of BuSpar , Trazodone and Haldol were continued and were adjusted by Psychiatry .|Trazodone[3365,3374]|||||||||C0040805|10737|10737|trazodone
+52	He does of BuSpar , Trazodone and Haldol were continued and were adjusted by Psychiatry .|Haldol[3379,3385]|||||||||C0591585|151839|5093|haloperidol
+65	1. Percocet , one p.o. q. four hours p.r.n. pain .|Percocet[4087,4095]|||||p.o.[4102,4106]||four hours[4110,4120]|p.r.n.[4121,4127]|C3239003|1185228|161|paracetamol
+66	2. Haldol 1 mg p.o. q. four to six hours p.r.n. agitation .|Haldol[4138,4144]|||1mg[4145,4149]||p.o.[4150,4154]|||p.r.n.[4176,4182]|C0706861|205882|5093|haloperidol
+67	3. Trazodone 50 mg p.o. q. h.s.|Trazodone[4198,4207]|||50mg[4208,4213]||p.o.[4214,4218]|h.s.[4222,4226]|||C0980799|856377|10737|trazodone
+68	4. Droperidol 1.5 to 2.5 mg p.r.n. agitation .|Droperidol[4230,4240]|||1.5 to 2.5mg[4241,4254]|||||p.r.n.[4255,4261]|C0013136|3648|3648|droperidol

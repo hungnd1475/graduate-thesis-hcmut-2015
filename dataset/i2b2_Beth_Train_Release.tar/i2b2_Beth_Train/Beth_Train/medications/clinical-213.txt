@@ -1,0 +1,27 @@
+17	History of Present Illness : 46 - yo-man w/ active cocaine use presents w/ LE edema .|cocaine[294,301]|||||||||C0009170|2653|2653|cocaine
+22	He does admit to cocaine use last night .|cocaine[701,708]|||||||||C0009170|2653|2653|cocaine
+27	He was treated w/ ASA 325 mg , lasix 10 mg IV , and hydralazine 10 mg IV x 2 .|ASA[936,939]|||325mg[940,946]|||||||1050241|1191|acetylsalicylic acid
+27	He was treated w/ ASA 325 mg , lasix 10 mg IV , and hydralazine 10 mg IV x 2 .|lasix[949,954]|||10mg[955,960]||IV[961,963]||||C0697308|200814|4603|furosemide
+27	He was treated w/ ASA 325 mg , lasix 10 mg IV , and hydralazine 10 mg IV x 2 .|hydralazine[970,981]|||10mg[982,987]||IV[988,990]|x 2[991,994]|||C2747225|905198|5470|hydralazine
+28	He responded well to lasix w/ good UOP , but diastolic BP remained elevated at 170 , prompting initiation of nitroprusside gtt .|lasix[1018,1023]|||||||||C0699992|202991|4603|furosemide
+28	He responded well to lasix w/ good UOP , but diastolic BP remained elevated at 170 , prompting initiation of nitroprusside gtt .|nitroprusside[1106,1119]|||||||||C0028193|7476|7476|nitroprusside
+33	Snorts cocaine 1-2 times monthly .|cocaine[1350,1357]|||||||||C0009170|2653|2653|cocaine
+77	Brief Hospital Course : 46 - yo-man w/ cocaine abuse presents w/ LE edema and DOE likely from diastolic heart failure in the setting of cocaine use complicated by hypertensive urgency .|cocaine[3988,3995]|||||||||C0009170|2653|2653|cocaine
+77	Brief Hospital Course : 46 - yo-man w/ cocaine abuse presents w/ LE edema and DOE likely from diastolic heart failure in the setting of cocaine use complicated by hypertensive urgency .|cocaine[4085,4092]|||||||||C0009170|2653|2653|cocaine
+79	BP 230/170 on presentation , most likely from chronic HTN exacerbated by cocaine use .|cocaine[4231,4238]|||||||||C0009170|2653|2653|cocaine
+81	The patient was started on labetalol and Lisinopril .|labetalol[4386,4395]|||||||||C0022860|6185|6185|labetalol
+81	The patient was started on labetalol and Lisinopril .|Lisinopril[4400,4410]|||||||||C0065374|29046|29046|lisinopril
+85	It is hoped with good blood pressure control and use of an ACE-I with follow up in addition to cocaine abstaining will improved his cardiac function .|cocaine[4721,4728]|||||||||C0009170|2653|2653|cocaine
+85	It is hoped with good blood pressure control and use of an ACE-I with follow up in addition to cocaine abstaining will improved his cardiac function .|ACE[4685,4688]||||||||||836|836|ace
+87	discharged on ACE-I .|ACE[4928,4931]||||||||||836|836|ace
+92	1. Aspirin 325 mg Tablet Sig : One ( 1 ) Tablet PO DAILY ( Daily ).|Aspirin[5210,5217]||Tablet[5225,5231]|325mg[5218,5224]||PO[5255,5257]|DAILY[5258,5263]|||C0714615|212033|1191|acetylsalicylic acid
+93	2. Hydrochlorothiazide 25 mg Tablet Sig : One ( 1 ) Tablet PO DAILY ( Daily ).|Hydrochlorothiazide[5278,5297]||Tablet[5304,5310]|25mg[5298,5303]||PO[5334,5336]|DAILY[5337,5342]|||C0977518|310798|5487|hydrochlorothiazide
+95	3. Labetalol 200 mg Tablet Sig : Two ( 2 ) Tablet PO BID ( 2 times a day ).|Labetalol[5395,5404]||Tablet[5412,5418]|200mg[5405,5411]||PO[5442,5444]|BID[5445,5448]||||896762|6185|labetalol
+97	4. Lisinopril 20 mg Tablet Sig : One ( 1 ) Tablet PO DAILY ( Daily ).|Lisinopril[5510,5520]||Tablet[5527,5533]|20mg[5521,5526]||PO[5557,5559]|DAILY[5560,5565]|||C0981556|314077|29046|lisinopril
+105	- mild transaminitis likely 03-25 etoh and cocaine abuse|cocaine[5750,5757]|||||||||C0009170|2653|2653|cocaine
+106	- cocaine abuse|cocaine[5766,5773]|||||||||C0009170|2653|2653|cocaine
+113	1. Lisinopril 20 mg daily|Lisinopril[6010,6020]|||20mg[6021,6026]|||daily[6027,6032]|||C0987219|316153|29046|lisinopril
+114	2. HCTZ 25 mg daily|HCTZ[6036,6040]|||25mg[6041,6046]|||daily[6047,6052]||||310798|5487|hydrochlorothiazide
+115	3. Labetalol 400 mg bid|Labetalol[6056,6065]|||400mg[6066,6072]|||bid[6073,6076]|||C2732120|896982|6185|labetalol
+116	4. ASA 162mg daily|ASA[6080,6083]|||162mg[6084,6089]|||daily[6090,6095]|||C0783453|243686|1191|acetylsalicylic acid
+120	It is also very important that you abstain from cocaine use .|cocaine[6388,6395]|||||||||C0009170|2653|2653|cocaine

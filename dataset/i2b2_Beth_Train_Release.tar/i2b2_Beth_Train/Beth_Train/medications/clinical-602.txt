@@ -1,0 +1,28 @@
+10	His throat pain began 2 to 3 days prior to admission , initially treated with ibuprofen , seen in an outside hospital emergency room day prior to admission where he received IV penicillin and was sent home .|ibuprofen[414,423]|||||||2 to 3 days[358,369]||C0020740|5640|5640|ibuprofen
+10	His throat pain began 2 to 3 days prior to admission , initially treated with ibuprofen , seen in an outside hospital emergency room day prior to admission where he received IV penicillin and was sent home .|penicillin[513,523]|||||IV[510,512]|||||7986|7986|penicillin
+11	In clinic today , the patient desaturated to low 90 s with ambulation and also had complaints of progressive swelling " like my throat is going to close up " with increasing drooling , unable to swallow the HIV medications .|close up[691,699]|||||swallow[739,746]||||C2946173|1038952|9873|sodium fluoride
+15	He currently notes improvement in his throat pain after some Decadron and clindamycin .|Decadron[1046,1054]||||||||||227682|3264|dexamethasone
+15	He currently notes improvement in his throat pain after some Decadron and clindamycin .|clindamycin[1059,1070]|||||||||C0008947|2582|2582|clindamycin
+20	He believes he is up-to-date on all his vaccines .|vaccines[1385,1393]|||||||||C0042210|11094|11094|vaccines
+36	1. Atazanavir 300 mg q.d.|Atazanavir[1916,1926]|||300mg[1927,1933]|||q.d.[1934,1938]|||C1812845|664740|343047|atazanavir
+37	2. Ritonavir 100 mg q.d.|Ritonavir[1942,1951]|||100mg[1952,1958]|||q.d.[1959,1963]|||C0992889|317488|85762|ritonavir
+38	3. Tenofovir 300 mg q.d.|Tenofovir[1967,1976]|||300mg[1977,1983]|||q.d.[1984,1988]|||C1576947|393334|300195|tenofovir disoproxil
+39	4. Didanosine 250 mg q.d.|Didanosine[1992,2002]|||250mg[2003,2009]|||q.d .[2010,2014]|||C1126588|330816|3364|didanosine
+80	He was followed by the CMED CSRU Service and was started on IV Decadron initially in addition to IV Unasyn , which he tolerated well .|Unasyn[3971,3977]|||||IV[3931,3933]||||C0971675|57773|733|ampicillin
+80	He was followed by the CMED CSRU Service and was started on IV Decadron initially in addition to IV Unasyn , which he tolerated well .|Decadron[3934,3942]|||||IV[3968,3970]|||||227682|3264|dexamethasone
+83	The patient was stable for transfer to the floor , was treated with over 72 hours of IV Unasyn , and then transitioned to oral regimen of Augmentin to be continued as an outpatient .|Unasyn[4219,4225]|||||IV[4216,4218]||72 hours[4204,4212]||C0971675|57773|733|ampicillin
+83	The patient was stable for transfer to the floor , was treated with over 72 hours of IV Unasyn , and then transitioned to oral regimen of Augmentin to be continued as an outpatient .|Augmentin[4269,4278]|||||oral[4253,4257]||||C3228324|1174307|723|amoxicillin
+84	Eventually , his IV steroids were transitioned to a p.o. steroid taper , which he tolerated well , and was discharged on a steroid taper also with CMED CSRU follow-up as an outpatient .|steroid[4371,4378]|||||p.o.[4366,4370]|||||10072|10072|steroid
+84	Eventually , his IV steroids were transitioned to a p.o. steroid taper , which he tolerated well , and was discharged on a steroid taper also with CMED CSRU follow-up as an outpatient .|steroids[4334,4342]|||||IV[4331,4333]|||||10072|10072|steroids
+84	Eventually , his IV steroids were transitioned to a p.o. steroid taper , which he tolerated well , and was discharged on a steroid taper also with CMED CSRU follow-up as an outpatient .|steroid[4437,4444]||||||||||10072|10072|steroid
+88	He remained afebrile during the course of his stay after transfer to the floor and per CMED CSRU was to be discharged on a 2-week course of Augmentin with follow-up with Dr.|Augmentin[5037,5046]|||||||||C0591132|151392|723|amoxicillin
+89	Thibodeau in 2 weeks ' time in addition to a Medrol Dosepak .|Medrol Dosepak[5116,5130]|||||||2 weeks[5084,5091]|||93263|93263|medrol dosepak
+99	1. Menthol - Cetylpyridinium lozenges 1 as needed .|Cetylpyridinium[5533,5548]||||||||as needed[5560,5569]|C0007906|2286|2286|cetylpyridinium
+99	1. Menthol - Cetylpyridinium lozenges 1 as needed .|Menthol[5523,5530]|||||||||C0025368|6750|6750|menthol
+100	2. Tenofovir 300 mg p.o. q.d.|Tenofovir[5575,5584]|||300mg[5585,5591]||p.o.[5592,5596]|q.d.[5597,5601]||||349251|300195|tenofovir disoproxil
+101	3. Didanosine 250 mg p.o. q.d.|Didanosine[5605,5615]|||250mg[5616,5622]||p.o.[5623,5627]|q.d.[5628,5632]|||C1126588|330816|3364|didanosine
+102	4. Atazanavir 300 mg p.o. q.d.|Atazanavir[5636,5646]|||300mg[5647,5653]||p.o.[5654,5658]|q.d.[5659,5663]|||C1812846|664741|343047|atazanavir
+103	5. Ritonavir 100 mg p.o. q.d.|Ritonavir[5667,5676]|||100mg[5677,5683]||p.o.[5684,5688]|q.d.[5689,5693]|||C2741195|900575|85762|ritonavir
+104	6. Calcium carbonate 500 mg p.o. q.d.|Calcium carbonate[5697,5714]|||500mg[5715,5721]||p.o.[5722,5726]|q.d.[5727,5731]|||C0994837|318076|1897|calcium (as carbonate)
+105	7. Methylprednisolone 4 mg tablets per taper regimen .|Methylprednisolone[5735,5753]||tablets[5759,5766]|4mg[5754,5758]||||||C0873969|259966|6902|methylprednisolone
+108	He was also discharged on Augmentin XR 1000 mg / 62.5 mg sustained release 1 tablet q. 12h .|Augmentin XR[6203,6215]||sustained release[6234,6251]|1000 mg / 62.5 mg[6216,6233]|1 tablet[6252,6260]||q. 12 h[6261,6267]||||353427|353427|augmentin xr

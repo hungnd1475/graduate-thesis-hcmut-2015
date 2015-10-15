@@ -1,0 +1,2 @@
+20	On postoperative day number one , he was administered 1 mg Coumadin per protocol as well as on the operative day 1 mg of Coumadin .|Coumadin[713,721]|||1mg[708,712]||||||C0710781|855290|11289|warfarin
+20	On postoperative day number one , he was administered 1 mg Coumadin per protocol as well as on the operative day 1 mg of Coumadin .|Coumadin[775,783]|||1mg[767,771]||||||C0710781|855290|11289|warfarin

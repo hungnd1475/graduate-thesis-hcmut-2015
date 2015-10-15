@@ -1,0 +1,12 @@
+11	She has had continuing vaginal discharge , and was diagnosed with bacterial vaginosis one day prior to admission , and was given a prescription for Flagyl .|Flagyl[526,532]||vaginal[401,408]|||||one day[464,471]|||202866|6922|metronidazole
+24	Lupron x three months prior to embolization .|Lupron[1427,1433]|||||||three months[1436,1448]||C0886797|203852|42375|leuprolide (obsolete)
+34	Flagyl .|Flagyl[1875,1881]||||||||||202866|6922|metronidazole
+48	The patient was admitted and was initially started on intravenous ampicillin , gentamicin and clindamycin .|ampicillin[2782,2792]|||||intravenous[2770,2781]||||C0002680|733|733|ampicillin
+48	The patient was admitted and was initially started on intravenous ampicillin , gentamicin and clindamycin .|gentamicin[2795,2805]|||||||||C0017436|662411|662411|gentamicins
+48	The patient was admitted and was initially started on intravenous ampicillin , gentamicin and clindamycin .|clindamycin[2810,2821]|||||||||C0008947|2582|2582|clindamycin
+54	Further identification revealed staphylococcus coag-negative , which was sensitive to gentamicin and clindamycin .|gentamicin[3265,3275]|||||||||C0017436|662411|662411|gentamicins
+54	Further identification revealed staphylococcus coag-negative , which was sensitive to gentamicin and clindamycin .|clindamycin[3280,3291]|||||||||C0008947|2582|2582|clindamycin
+58	At this time , an Infectious Disease consult was obtained , and the recommendation was to discontinue the ampicillin , gentamicin and clindamycin , and start her on intravenous Unasyn .|ampicillin[3634,3644]|||||||||C0002680|733|733|ampicillin
+58	At this time , an Infectious Disease consult was obtained , and the recommendation was to discontinue the ampicillin , gentamicin and clindamycin , and start her on intravenous Unasyn .|gentamicin[3647,3657]|||||||||C0017436|662411|662411|gentamicins
+58	At this time , an Infectious Disease consult was obtained , and the recommendation was to discontinue the ampicillin , gentamicin and clindamycin , and start her on intravenous Unasyn .|clindamycin[3662,3673]|||||||||C0008947|2582|2582|clindamycin
+58	At this time , an Infectious Disease consult was obtained , and the recommendation was to discontinue the ampicillin , gentamicin and clindamycin , and start her on intravenous Unasyn .|Unasyn[3705,3711]|||||intravenous[3693,3704]||||C0971675|57773|733|ampicillin

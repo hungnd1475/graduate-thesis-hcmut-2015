@@ -47,7 +47,8 @@ namespace EMRCorefResol.UITest
         private EMRCollection emrCollection = new EMRCollection(
             @"..\..\..\..\..\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train\docs",
             @"..\..\..\..\..\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train\concepts",
-            @"..\..\..\..\..\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train\chains");
+            @"..\..\..\..\..\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train\chains",
+            @"..\..\..\..\..\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train\medications");
 
         private bool conChainMouseDown = false;
 
@@ -59,7 +60,8 @@ namespace EMRCorefResol.UITest
             emrCollection = new EMRCollection(
                 IOPath.Combine(txtEMRPath.Text, "docs"),
                 IOPath.Combine(txtEMRPath.Text, "concepts"),
-                IOPath.Combine(txtEMRPath.Text, "chains"));
+                IOPath.Combine(txtEMRPath.Text, "chains"),
+                IOPath.Combine(txtEMRPath.Text, "medications"));
 
             txtEMR.ShowLineNumbers = true;
             txtEMR.TextArea.SelectionCornerRadius = 0;
@@ -115,6 +117,8 @@ namespace EMRCorefResol.UITest
             txtEMR.Document = new TextDocument();
             txtCons.Document = new TextDocument();
             txtChains.Document = new TextDocument();
+
+            
         }
 
         private void txt_TextArea_PreviewMouseUp(object sender, MouseButtonEventArgs e)
@@ -280,7 +284,8 @@ namespace EMRCorefResol.UITest
                 emrCollection = new EMRCollection(
                     IOPath.Combine(txtEMRPath.Text, "docs"),
                     IOPath.Combine(txtEMRPath.Text, "concepts"),
-                    IOPath.Combine(txtEMRPath.Text, "chains"));
+                    IOPath.Combine(txtEMRPath.Text, "chains"),
+                    IOPath.Combine(txtEMRPath.Text, "medications"));
 
                 currentEMRIndex = -1;
                 currentEMR = null;
@@ -318,9 +323,10 @@ namespace EMRCorefResol.UITest
                     var emrFileName = tabEMR.Header = IOPath.GetFileName(emrPath);
                     var conPath = emrCollection.GetConceptsPath(nextEMRIndex);
                     var chainPath = emrCollection.GetChainsPath(nextEMRIndex);
+                    var medicationPath = emrCollection.GetMedicationsPath(nextEMRIndex);
 
                     currentEMRIndex = nextEMRIndex;
-                    currentEMR = new EMR(emrPath, conPath, dataReader);
+                    currentEMR = new EMR(emrPath, conPath, medicationPath, dataReader);
                     txtEMR.Document.Text = currentEMR.Content;
                     txtEMR.ScrollTo(1, 1);
 

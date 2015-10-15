@@ -1,0 +1,1 @@
+23	Pyridium 200 mg po three times a day for UTI symptoms x 2 days .|Pyridium[668,676]|||200mg[677,683]||po[684,686]|three times a day[687,704]|||C0708862|1094122|8120|phenazopyridine

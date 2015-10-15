@@ -32,5 +32,15 @@ namespace HCMUT.EMRCorefResol
         /// <param name="line">The line contains the <see cref="ConceptType"/> to read.</param>
         /// <returns></returns>
         ConceptType ReadType(string line);
+
+        /// <summary>
+        /// Reads <see cref="EMRSection"/> from EMR content
+        /// </summary>
+        /// <param name="EMRContent">The whole content of an EMR</param>
+        /// <returns></returns>
+        List<EMRSection> ReadSection(string EMRContent);
+
+
+        MedicationInfo ReadMedInfoLine(string line);
     }
 }

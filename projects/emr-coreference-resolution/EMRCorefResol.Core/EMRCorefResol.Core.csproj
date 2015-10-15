@@ -93,6 +93,8 @@
     <Compile Include="Utilities\GenericConfig.cs" />
     <Compile Include="CorefChain.cs" />
     <Compile Include="CorefChainCollection.cs" />
+    <Compile Include="EMRSection.cs" />
+    <Compile Include="EMRSectionCollection.cs" />
     <Compile Include="FeatureExtractingSystem.cs" />
     <Compile Include="Features\FeatureVector.cs" />
     <Compile Include="EMR.cs" />
@@ -111,6 +113,11 @@
     <Compile Include="IPreprocessor.cs" />
     <Compile Include="ISingleConcept.cs" />
     <Compile Include="Classification\ITrainer.cs" />
+    <Compile Include="MedicationInfo.cs" />
+    <Compile Include="MedicationInfoCollection.cs" />
+    <Compile Include="Service\ServiceModels\WikiData.cs" />
+    <Compile Include="Utilities\Caches\ICache.cs" />
+    <Compile Include="Utilities\Caches\UnlimitedCache.cs" />
     <Compile Include="Logging\FileLogger.cs" />
     <Compile Include="Logging\Logger.cs" />
     <Compile Include="Utilities\Keywords\AhoCorasickKeywordDictionary.cs" />

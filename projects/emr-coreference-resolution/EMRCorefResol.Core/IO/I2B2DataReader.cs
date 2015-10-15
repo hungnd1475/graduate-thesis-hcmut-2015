@@ -42,6 +42,68 @@ namespace HCMUT.EMRCorefResol.IO
             return ReadType(matchCoref, matchType);
         }
 
+        public MedicationInfo ReadMedInfoLine(string line)
+        {
+            var info_arr = line.Split('|');
+
+            var line_info = info_arr[0].Split('\t');
+            int line_index = 0;
+            int.TryParse(line_info[0], out line_index);
+            var line_value = line_info[1];
+
+            var regex = @"\[(.*?)\]";
+            var drug = Regex.Replace(info_arr[1], regex, "");
+            var form = Regex.Replace(info_arr[3], regex, "");
+            var strength = Regex.Replace(info_arr[4], regex, "");
+            var dose = Regex.Replace(info_arr[5], regex, "");
+            var route = Regex.Replace(info_arr[6], regex, "");
+            var freq = Regex.Replace(info_arr[7], regex, "");
+            var duration = Regex.Replace(info_arr[8], regex, "");
+            var neccessity = Regex.Replace(info_arr[9], regex, "");
+
+            return new MedicationInfo(line_index, line_value, drug, form, strength, dose, route,
+                freq, duration, neccessity);
+        }
+
+        public List<EMRSection> ReadSection(string EMRContent)
+        {
+            var sections = new List<EMRSection>();
+            var lines = EMRContent.Replace("\r", "").Split('\n');
+
+            var content = "";
+            var title = "";
+            var begin = 1;
+            var end = 1;
+            for(int i=0; i<lines.Length; i++)
+            {
+                var line = lines[i];
+                if(line.Length > 0 && char.IsUpper(line[0]) && line[line.Length -1]== ':')
+                {
+                    title = line;
+                    begin = i + 1;
+
+                    //Read section content until find a new section title
+                    while (true)
+                    {
+                        i++;
+                        var nextLine = lines[i];
+                        if (i == lines.Length -1 || (nextLine.Length > 0 && char.IsUpper(nextLine[0]) && nextLine[nextLine.Length - 1] == ':'))
+                        {
+                            i--;
+                            end = i + 1;
+                            var section = new EMRSection(title, content, begin, end);
+                            sections.Add(section);
+                            content = "";
+                            break;
+                        }
+                        content += nextLine + "\n";
+                    }
+                }
+            }
+
+            return sections;
+        }
+
         private Concept ReadConcept(Match matchConcept, Match matchCoref, Match matchType)
         {
             var c = matchConcept.Groups["c"].Value;

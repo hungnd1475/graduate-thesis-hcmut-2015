@@ -23,15 +23,15 @@ namespace HCMUT.EMRCorefResol.English.Features
             }
 
 
-            var lines = emr.Content.Split('\n');
-            var reversed = lines.Reverse().ToArray();
+            var sections = emr.Sections;
+            var reversed = sections.Reverse().ToArray();
             var searcher = KeywordService.Instance.NLINE_KEYWORD;
             int n = 0;
             for(int i=0; i<reversed.Length; i++)
             {
-                if(searcher.Match(reversed[i], KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
+                if(searcher.Match(reversed[i].Title, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
                 {
-                    n = reversed.Length - i;
+                    n = reversed[i].Begin;
                     break;
                 }
             }

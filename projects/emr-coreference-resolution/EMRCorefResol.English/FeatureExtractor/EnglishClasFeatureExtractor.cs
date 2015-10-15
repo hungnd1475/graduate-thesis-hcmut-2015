@@ -1,4 +1,5 @@
 ﻿using HCMUT.EMRCorefResol.Classification;
+using HCMUT.EMRCorefResol.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,10 +21,13 @@ namespace HCMUT.EMRCorefResol.English
 
         private readonly IPatientDeterminer _patientDeterminer;
 
-        private readonly Dictionary<Concept, IFeatureVector> _personCache
-            = new Dictionary<Concept, IFeatureVector>();
+        //private readonly Dictionary<Concept, IFeatureVector> _personCache
+        //    = new Dictionary<Concept, IFeatureVector>();
 
-        private readonly object _syncRoot = new object();
+        //private readonly object _syncRoot = new object();
+
+        private readonly ICache<Concept, IFeatureVector> _personCache
+            = new UnlimitedCache<Concept, IFeatureVector>();
 
         public EnglishClasFeatureExtractor(IClassifier classifier)
         {
@@ -40,9 +44,22 @@ namespace HCMUT.EMRCorefResol.English
 
         public IFeatureVector Extract(PersonInstance instance)
         {
-            lock (_syncRoot)
-            {
-                if (!_personCache.ContainsKey(instance.Concept))
+            //lock (_syncRoot)
+            //{
+            //    if (!_personCache.ContainsKey(instance.Concept))
+            //    {
+            //        var classValue = -1d;
+            //        if (GroundTruth != null)
+            //        {
+            //            var patientChain = GroundTruth.GetPatientChain();
+            //            classValue = patientChain != null ? (patientChain.Contains(instance.Concept) ? 1.0 : 0.0) : 2.0;
+            //        }
+            //        _personCache.Add(instance.Concept, new PersonInstanceFeatures(instance, EMR, classValue));
+            //    }
+            //}
+            //return _personCache[instance.Concept];
+
+            return _personCache.GetValue(instance.Concept, (c) =>
                 {
                     var classValue = -1d;
                     if (GroundTruth != null)
@@ -51,10 +68,11 @@ namespace HCMUT.EMRCorefResol.English
                             KeywordService.Instance.RELATIVES);
                         classValue = patientChain != null ? (patientChain.Contains(instance.Concept) ? 1 : 0) : 0;
                     }
-                    _personCache.Add(instance.Concept, new PersonInstanceFeatures(instance, EMR, classValue));
+                    return new PersonInstanceFeatures(instance, EMR, classValue);
                 }
-            }
-            return _personCache[instance.Concept];
+            
+                
+            );
         }
 
         public IFeatureVector Extract(PronounInstance instance)

@@ -24,19 +24,32 @@ namespace HCMUT.EMRCorefResol
         public ConceptCollection Concepts { get; }
 
         /// <summary>
+        /// Gets the sections from EMR content
+        /// </summary>
+        public EMRSectionCollection Sections { get; }
+
+        public MedicationInfoCollection Medications { get; }
+
+        public string Path { get; }
+
+        /// <summary>
         /// Initializes an <see cref="EMR"/> instance from raw content and concepts file.
         /// </summary>
         /// <param name="emrFile">The path to the content file.</param>
         /// <param name="conceptsFile">The path to the concepts file.</param>
         /// <param name="dataReader">The reader that can read the concepts from concepts file.</param>
-        public EMR(string emrFile, string conceptsFile, IDataReader dataReader)
+        public EMR(string emrFile, string conceptsFile, string medicationsFile, IDataReader dataReader)
         {
+            Path = emrFile;
+
             var fs = new FileStream(emrFile, FileMode.Open);
             var sr = new StreamReader(fs);
             Content = sr.ReadToEnd();
             sr.Close();
 
-            Concepts = new ConceptCollection(conceptsFile, dataReader);            
+            Concepts = new ConceptCollection(conceptsFile, dataReader);
+            Sections = new EMRSectionCollection(Content, dataReader);
+            Medications = new MedicationInfoCollection(medicationsFile, dataReader);
         }
     }
 }

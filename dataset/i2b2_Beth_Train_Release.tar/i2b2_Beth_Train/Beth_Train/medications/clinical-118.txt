@@ -1,0 +1,7 @@
+39	On day of life #1 , caffeine was started .|caffeine[2035,2043]|||||||||C0006644|1886|1886|caffeine
+41	Caffeine was discontinued on day of life #19 .|Caffeine[2105,2113]|||||||||C0006644|1886|1886|caffeine
+46	She began enteral feeds on day of life #2 advancing to mother 's breastmilk 30 with ProMod at 150 cc / kg / day .|ProMod[2557,2563]|||||||||C1875700|693503|693503|promod
+55	The baby received no blood products .|blood products[3058,3072]||||||||||126145|126145|blood products
+78	5. Immunizations received - Hepatitis B vaccine given 2009-01-22 .|Hepatitis B vaccine[4441,4460]||||||||||816236|816236|hepatitis b vaccine
+80	Synagis respiratory syncytial virus prophylaxis should be considered from October through April for infants who meet any of the following three criteria -|Synagis[4511,4518]|||||||||C0723567|220141|194279|palivizumab
+85	Vetrano probably does not need Synagis at least until her sibling is discharged from the hospital .|Synagis[5041,5048]|||||||||C0723567|220141|194279|palivizumab

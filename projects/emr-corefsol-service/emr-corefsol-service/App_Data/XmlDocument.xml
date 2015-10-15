@@ -498,9 +498,16 @@
         </member>
         <member name="M:emr_corefsol_service.Controllers.NLPController.GetChunks(System.String)">
             <summary>
-            Get Chunking from sentence
+            GET Chunking from sentence
             </summary>
             <param name="term">Sentence need to be chunked</param>
+            <returns></returns>
+        </member>
+        <member name="M:emr_corefsol_service.Controllers.NLPController.GetHeadNoun(System.String)">
+            <summary>
+            GET Head noun from sentence or noun phrase
+            </summary>
+            <param name="term">Sentence or noun phrase</param>
             <returns></returns>
         </member>
         <member name="M:emr_corefsol_service.Controllers.DictionaryController.GetSynsets(System.String)">
@@ -510,9 +517,31 @@
             <param name="term">Lookup term</param>
             <returns></returns>
         </member>
+        <member name="M:emr_corefsol_service.Controllers.ExtractorController.GetTemporalDate(System.String,System.String)">
+            <summary>
+            Get Temporal Value from line
+            </summary>
+            <param name="path">Path to EMR file</param>
+            <param name="line">Line to extract data</param>
+            <returns></returns>
+        </member>
         <member name="M:emr_corefsol_service.Controllers.WikiController.GetPage(System.String)">
             <summary>
-            Get en.wikipedia page from input term
+            GET wikipedia page from input term
+            </summary>
+            <param name="term">Search string</param>
+            <returns></returns>
+        </member>
+        <member name="M:emr_corefsol_service.Controllers.WikiController.GetBoldName(System.String)">
+            <summary>
+            Get boldname from page
+            </summary>
+            <param name="term">Page title</param>
+            <returns></returns>
+        </member>
+        <member name="M:emr_corefsol_service.Controllers.WikiController.GetWikiInformation(System.String)">
+            <summary>
+            Get all wikipedia information (content page title, links, bold name)
             </summary>
             <param name="term">Search string</param>
             <returns></returns>

@@ -103,6 +103,11 @@ namespace emr_corefsol_service.Libs
             throw new NotImplementedException();
         }
 
+        public string HeadNoun(string term)
+        {
+            throw new NotImplementedException();
+        }
+
         private ArrayList getSentences(Annotation document)
         {
             var sentences = document.get(typeof(CoreAnnotations.SentencesAnnotation));

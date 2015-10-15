@@ -1,0 +1,25 @@
+34	1. Lovenox 1 mg per kilogram subcutaneously b.i.d.|Lovenox[2016,2023]|||1mg[2024,2028]||subcutaneously[2042,2056]|b.i.d.[2057,2063]||||854253|67108|enoxaparin
+35	2. Aspirin 81 mg p.o. q.d.|Aspirin[2067,2074]|||81mg[2075,2080]||p.o.[2081,2085]|q.d.[2086,2090]||||252857|1191|acetylsalicylic acid
+36	3. Lopressor 50 mg p.o. b.i.d.|Lopressor[2094,2103]|||50mg[2104,2109]||p.o.[2110,2114]|b.i.d.[2115,2121]|||C0708591|866516|6918|metoprolol
+37	4. Lansoprazole 30 mg p.o. q.d.|Lansoprazole[2125,2137]|||30mg[2138,2143]||p.o.[2144,2148]|q.d.[2149,2153]|||null|1603846|17128|lansoprazole
+38	5. Regular insulin sliding scale .|Regular insulin[2157,2172]|||sliding scale[2173,2186]|||||||5856|5856|insulin regular
+39	6. Captopril 6.25 mg q.i.d.|Captopril[2192,2201]|||6.25mg[2202,2209]|||q.i.d.[2210,2216]|||C1127135|331279|1998|captopril
+40	7. Lasix drip at 2 per hour .|Lasix[2220,2225]|||||drip[2226,2230]|per hour[2236,2244]|||C0699992|202991|4603|furosemide
+41	8. Versed drip .|Versed[2250,2256]|||||drip[2257,2261]||||C0042553|11177|6960|midazolam
+67	He was treated with a full course of Zosyn .|Zosyn[3771,3776]|||||||||C0250482|74170|8339|piperacillin
+84	At the time of discharge , he was on a stable antihypertensive regimen appropriate for someone with a decreased ejection fraction .|antihypertensive regimen[4664,4688]||||||||||968|968|antihypertensive regimen
+109	Carla Solan .|Solan[6263,6268]||||||||||||
+129	5. Central line culture positive for coagulase - negative Staphylococcus aureus , status post a 14 day treatment with vancomycin and removal of the line .|vancomycin[7631,7641]|||||||14 day[7609,7615]||C0042313|11124|11124|vancomycin
+131	1. Methylphenidate 5 mg p.o. q.d.|Methylphenidate[7698,7713]|||5mg[7714,7718]||p.o.[7719,7723]|q.d.[7724,7728]||||1091497|6901|methylphenidate
+132	2. Lasix 40 mg p.o. b.i.d.|Lasix[7732,7737]|||40mg[7738,7743]||p.o.[7744,7748]|b.i.d.[7749,7755]|||C0697300|200809|4603|furosemide
+133	3. Captopril 50 mg p.o. t.i.d.|Captopril[7759,7768]|||50mg[7769,7774]||p.o.[7775,7779]|t.i.d.[7780,7786]|||C0975229|308964|1998|captopril
+134	4. Glyburide 10 mg p.o. b.i.d.|Glyburide[7790,7799]|||10mg[7800,7805]||p.o.[7806,7810]|b.i.d.[7811,7817]|||C1246383|372333|4815|glibenclamide
+135	5. Miconazole powder 2% , apply q.i.d. p.r.n.|Miconazole powder[7821,7838]||||||q.i.d.[7850,7856]||p.r.n.[7857,7863]||241654|241654|miconazole powder
+136	6. Paxil 20 mg p.o. q.d.|Paxil[7867,7872]|||20mg[7873,7878]||p.o.[7879,7883]|q.d.[7884,7888]|||C0708673|207349|32937|paroxetine
+137	7. Albuterol nebulizer solution one nebulizer q. four hours .|Albuterol[7892,7901]|||||||four hours[7938,7948]||C0001927|435|435|salbutamol
+138	8. Metoprolol 100 mg p.o. t.i.d.|Metoprolol[7954,7964]|||100mg[7965,7971]||p.o.[7972,7976]|t.i.d.[7977,7983]||||866511|6918|metoprolol
+139	9. Heparin 5,000 units subcutaneously q. 12 hours .|Heparin[7987,7994]|||5 , 000[7995,8000]||subcutaneously[8007,8021]|q. 12 hours[8022,8033]||||1361615|235473|heparin,porcine
+140	10. Amlodipine 5 mg p.o. b.i.d.|Amlodipine[8040,8050]|||5mg[8051,8055]||p.o.[8056,8060]|b.i.d.[8061,8067]||||197361|17767|amlodipine
+141	11. Percocet one to two tablets p.o. q. four hours p.r.n. pain .|Percocet[8072,8080]||||one to two tablets[8081,8099]|p.o.[8100,8104]||four hours[8108,8118]|p.r.n.[8119,8125]||1049650|161|paracetamol
+142	12. Colace 100 mg p.o. b.i.d.|Colace[8137,8143]|||100mg[8144,8150]||p.o.[8151,8155]|b.i.d.[8156,8162]|||C0711644|1247756|82003|docusate
+143	13. Aspirin 325 mg p.o. q.d.|Aspirin[8167,8174]|||325mg[8175,8181]||p.o.[8182,8186]|q.d.[8187,8191]||||1050241|1191|acetylsalicylic acid

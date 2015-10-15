@@ -5,6 +5,11 @@ using System.Web;
 
 using LinqToWiki.Generated;
 using LinqToWiki.Download;
+using System.Text.RegularExpressions;
+
+using MySql.Data.MySqlClient;
+using System.Web.Configuration;
+
 namespace emr_corefsol_service.Libs
 {
     public class WikiHelper
@@ -16,6 +21,46 @@ namespace emr_corefsol_service.Libs
             _wiki = new Wiki("EMRCorefSol", "en.wikipedia.org", "/w/api.php");
         }
 
+        public Models.WikiData GetWikiInformation(string term)
+        {
+            try
+            {
+                var sql = @"SELECT * from `wiki_titles` where `title` = '" + term.Replace(' ', '_') + "'";
+                var pages = Models.DatabaseQuery.Query(sql);
+
+                if (pages == null)
+                {
+                    return null;
+                }
+
+                /*var page = _wiki.Query.search(term)
+                .Select(p => p.title)
+                .ToEnumerable()
+                .FirstOrDefault();*/
+
+                var data = _wiki.CreateTitlesSource(pages[0])
+                    .Select(p => new Models.WikiData
+                    (
+                        term,
+                        p.info.title,
+                        //p.links().Select(l => l.title).ToList(),
+                        p.revisions()
+                                .Where(r => r.section == "0")
+                                .Select(r => r.value)
+                                .ToEnumerable()
+                                .FirstOrDefault()
+                    ))
+                    .ToEnumerable()
+                    .FirstOrDefault();
+
+                return data;
+            }
+            catch(Exception e)
+            {
+                return null;
+            }
+        }
+
         public string GetPageTitle(string term)
         {
             try
@@ -23,10 +68,48 @@ namespace emr_corefsol_service.Libs
                 var page = _wiki.Query.search(term)
                 .Select(p => p.title)
                 .ToEnumerable()
-                .FirstOrDefault()
-                .ToLower();
+                .FirstOrDefault();
 
                 return page;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
+        public string[] GetBoldName(string term)
+        {
+            try
+            {
+                var page = _wiki.Query.search(term)
+                .Select(p => p.title)
+                .ToEnumerable()
+                .FirstOrDefault();
+
+                if (page == null || page.Length <= 0)
+                {
+                    return null;
+                }
+
+                var text = _wiki.CreateTitlesSource(page)
+                    .Select(
+                        p => p.revisions()
+                                .Where(r => r.section == "0")
+                                .Select(r => r.value)
+                                .ToEnumerable().FirstOrDefault()
+                    )
+                    .ToEnumerable().FirstOrDefault();
+
+                var pattern = "\'\'\'(.*?)\'\'\'";
+
+                List<string> res = new List<string>();
+                foreach(Match m in Regex.Matches(text, pattern))
+                {
+                    res.Add(m.Groups[1].Value);
+                }
+
+                return res.ToArray();
             }
             catch (Exception e)
             {

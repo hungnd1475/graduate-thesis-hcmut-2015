@@ -29,22 +29,22 @@ namespace HCMUT.EMRCorefResol
 
         private TrainingSystem() { }
 
-        public void TrainOne(string emrPath, string conceptsPath, string chainsPath, IDataReader dataReader,
+        public void TrainOne(string emrPath, string conceptsPath, string chainsPath, string medicationsPath, IDataReader dataReader,
             IPreprocessor preprocessor, IFeatureExtractor fExtractor, ITrainer trainer, ClasConfig configs)
         {
             var pCollection = new ClasProblemCollection();
-            _fExtractSystem.ExtractOne(emrPath, conceptsPath, chainsPath, dataReader, preprocessor,
+            _fExtractSystem.ExtractOne(emrPath, conceptsPath, chainsPath, medicationsPath, dataReader, preprocessor,
                 fExtractor, pCollection);
-            Train(trainer, pCollection, configs);           
+            Train(trainer, pCollection, configs);
         }
 
-        public void TrainAll(string[] emrFiles, string[] conceptsFiles, string[] chainsFiles, IDataReader dataReader,
+        public void TrainAll(string[] emrFiles, string[] conceptsFiles, string[] chainsFiles, string[] medicationsFiles, IDataReader dataReader,
             IPreprocessor preprocessor, IFeatureExtractor fExtractor, ITrainer trainer, ClasConfig configs)
         {
             var pCollection = new ClasProblemCollection();
-            _fExtractSystem.ExtractAll(emrFiles, conceptsFiles, chainsFiles, dataReader,
+            _fExtractSystem.ExtractAll(emrFiles, conceptsFiles, chainsFiles, medicationsFiles, dataReader,
                 preprocessor, fExtractor, pCollection);
-            Train(trainer, pCollection, configs);            
+            Train(trainer, pCollection, configs);
         }
 
         public void TrainCollection(EMRCollection emrCollection, IDataReader dataReader, IPreprocessor preprocessor,
@@ -53,7 +53,7 @@ namespace HCMUT.EMRCorefResol
             var pCollection = new ClasProblemCollection();
             _fExtractSystem.ExtractCollection(emrCollection, dataReader, preprocessor,
                 fExtractor, pCollection);
-            Train(trainer, pCollection, configs);            
+            Train(trainer, pCollection, configs);
         }
 
         private void Train(ITrainer trainer, ClasProblemCollection pCollection, ClasConfig configs)
