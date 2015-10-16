@@ -155,6 +155,7 @@
     <Compile Include="FeatureVector\TestPairFeatures.cs" />
     <Compile Include="FeatureVector\TreatmentPairFeatures.cs" />
     <Compile Include="KeywordService.cs" />
+    <Compile Include="MedicationInformation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
