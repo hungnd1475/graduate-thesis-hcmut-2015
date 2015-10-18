@@ -13,7 +13,7 @@ namespace HCMUT.EMRCorefResol.English.Features
             : base("Pronoun-Index", 20, 0)
         {
             var searcher = KeywordService.Instance.PRONOUNS;
-            var res = searcher.SearchDictionaryIndices(instance.Concept.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord);
+            var res = searcher.SearchDictionaryIndices(instance.Concept.Lexicon, KWSearchOptions.WholeWordIngoreCase);
             if (res.Length > 0 && res[0] >= 0 && res[0] <= 18)
             {
                 SetCategoricalValue(res[0] + 1);

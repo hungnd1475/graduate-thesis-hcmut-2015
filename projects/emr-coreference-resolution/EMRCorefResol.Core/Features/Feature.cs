@@ -15,7 +15,7 @@ namespace HCMUT.EMRCorefResol
 
         public double[] Value { get; }
 
-        private readonly bool _isCategorical = false;
+        public bool IsCategorical { get; }
 
         /// <summary>
         /// Initialize a categorical <see cref="Feature"/> instane with specified initial value.
@@ -74,7 +74,7 @@ namespace HCMUT.EMRCorefResol
 
             Name = name;
             Value = initValue;
-            _isCategorical = isCategorical;
+            IsCategorical = isCategorical;
         }
 
         protected void SetCategoricalValue(int value)
@@ -110,7 +110,7 @@ namespace HCMUT.EMRCorefResol
 
         public override string ToString()
         {
-            var value = _isCategorical ? GetCategoricalValue() : GetContinuousValue();
+            var value = IsCategorical ? GetCategoricalValue() : GetContinuousValue();
             return $"{Name}:{value}";
         }
     }

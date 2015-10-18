@@ -21,5 +21,6 @@ namespace HCMUT.EMRCorefResol.Utilities
         None = 0,
         IgnoreCase = 1,
         WholeWord = 2,
+        WholeWordIngoreCase = IgnoreCase | WholeWord
     }
 }
