@@ -16,18 +16,22 @@ namespace HCMUT.EMRCorefResol.Service
         private static ICache<string, WikiData> _wikiCache;
         private static ICache<string, string> _temporalCache;
         private static ICache<EMR, int> _mostGenderCache;
+        private static ICache<string, Definition[]> _wordnetCache;
 
         static English()
         {
             _wikiCache = new UnlimitedCache<string, WikiData>();
             _temporalCache = new UnlimitedCache<string, string>();
             _mostGenderCache = new UnlimitedCache<EMR, int>();
+            _wordnetCache = new UnlimitedCache<string, Definition[]>();
         }
 
         public static void ClearCache()
         {
             _wikiCache.Clear();
             _temporalCache.Clear();
+            _mostGenderCache.Clear();
+            _wordnetCache.Clear();
         }
 
         public static string[] POSTag(string term)
@@ -64,16 +68,19 @@ namespace HCMUT.EMRCorefResol.Service
 
         public static Definition[] GetSyncSets(string term)
         {
-            var url = API_URL + "dictionary/synsets?term=" + HttpUtility.UrlEncode(term);
-            var res = _http.Request(url);
-
-            if (!res.IsSuccess)
+            return _wordnetCache.GetValue(term, (string search_term) =>
             {
-                return null;
-            }
+                var url = API_URL + "dictionary/synsets?term=" + HttpUtility.UrlEncode(search_term);
+                var res = _http.Request(url);
 
-            var json = res.Data.ToString();
-            return JsonConvert.DeserializeObject<Definition[]>(json);
+                if (!res.IsSuccess)
+                {
+                    return null;
+                }
+
+                var json = res.Data.ToString();
+                return JsonConvert.DeserializeObject<Definition[]>(json);
+            });
         }
 
         public static string[] GetChunks(string term)
