@@ -66,6 +66,10 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentCommandLineParser, Version=1.4.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentCommandLineParser.1.4.3\lib\net35\FluentCommandLineParser.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -77,6 +81,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="APISelector.cs" />
+    <Compile Include="DescHelpOption.cs" />
+    <Compile Include="Descriptions.cs" />
     <Compile Include="EMRFormat.cs" />
     <Compile Include="FeatureFormat.cs" />
     <Compile Include="Instance.cs" />
@@ -102,6 +108,9 @@
       <Project>{431ba8ee-38d6-4aa1-97af-8e94889aaecc}</Project>
       <Name>EMRCorefResol.English</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

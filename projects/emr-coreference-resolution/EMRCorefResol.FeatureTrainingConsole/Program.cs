@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Fclp;
+using Fclp.Internals;
 using HCMUT.EMRCorefResol.Core.Console;
 using System.IO;
 using HCMUT.EMRCorefResol.Classification;
 using HCMUT.EMRCorefResol.Classification.LibSVM;
+using Fclp.Internals.Parsing;
 
 namespace HCMUT.EMRCorefResol.FeatureTrainingConsole
 {
@@ -21,6 +23,10 @@ namespace HCMUT.EMRCorefResol.FeatureTrainingConsole
             if (parseResult.HasErrors)
             {
                 Console.WriteLine(parseResult.ErrorText);
+                return;
+            }
+            else if (parseResult.HelpCalled)
+            {
                 return;
             }
 
@@ -67,37 +73,48 @@ namespace HCMUT.EMRCorefResol.FeatureTrainingConsole
         {
             var p = new FluentCommandLineParser<Arguments>();
 
+            p.SetupHelp("-?", "--help");
+            p.HelpOption = new DescHelpOption();
+
             p.Setup(a => a.FeaturePath)
                 .As('d', "data")
-                .Required();
+                .Required()
+                .WithDescription("Set data file path (required).");
 
             p.Setup(a => a.ClasMethod)
                 .As('m', "clasmethod")
-                .SetDefault(ClasMethod.LibSVM);
+                .SetDefault(ClasMethod.LibSVM)
+                .WithDescription(Descriptions.ClasMethod("1"));
 
             p.Setup(a => a.Instance)
                 .As('i', "instance")
-                .Required();
+                .Required()
+                .WithDescription(Descriptions.Instance(null));
 
             p.Setup(a => a.Gamma)
                 .As('g', "gamma")
-                .SetDefault(0);
+                .SetDefault(0)
+                .WithDescription("Set parameter gamma for kernel function (LibSVM only, default 1/num_features).");
 
             p.Setup(a => a.Cost)
                 .As('c', "cost")
-                .SetDefault(0);
+                .SetDefault(0)
+                .WithDescription("Set parameter C (LibSVM only, default 1).");
 
             p.Setup(a => a.OutputDir)
                 .As('o', "outdir")
-                .Required();
+                .Required()
+                .WithDescription("Set output directory path (required).");
 
             p.Setup(a => a.ShouldLog)
                 .As('l', "log")
-                .SetDefault(-1);
+                .SetDefault(-1)
+                .WithDescription("Whether the console should print log (default 0).");
 
             p.Setup(a => a.ApplyWeights)
                 .As('w', "weights")
-                .SetDefault(-1);
+                .SetDefault(-1)
+                .WithDescription("Whether the trainer should apply class weights (LibSVM only, default 0).");
 
             return p;
         }
