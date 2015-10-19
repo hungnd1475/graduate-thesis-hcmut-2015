@@ -1,0 +1,11 @@
+15	At that time she was admitted and received a full course of betamethasone at 24 weeks and remained in house until delivery .|betamethasone[802,815]|||||||24 weeks[819,827]||C0005308|1514|1514|betamethasone
+33	Infant was intubated on day of life two for increased respiratory distress and received one dose of surfactant .|surfactant[2170,2180]||||||||||10260|10260|surfactants
+36	Caffeine citrate was started on day of life six and was discontinued on 05-23 ( day of life 18 ).|Caffeine citrate[2351,2367]|||||||||C0054436|20033|20033|caffeine citrated
+42	Infant was initially nothing by mouth receiving 80 cc per kilogram per day of D10W intravenously .|D10W[2781,2785]|||||by mouth[2732,2740]|per day[2770,2777]||||||
+46	Infant was advanced to maximum caloric density of breast milk or premature Enfamil 26 calories per ounce with ProMod by day of life 11 .|ProMod[3207,3213]|||||||||C1875700|693503|693503|promod
+51	On day of life 25 , calcium 10.1 , phosphorus 6.9 , alkaline phosphatase 341 .|calcium[3552,3559]|||10.1[3560,3564]||||||C0006675|1895|1895|calcium
+63	The infant received 48 hours of ampicillin and gentamicin for rule out sepsis .|ampicillin[4403,4413]|||||||48 hours[4391,4399]||C0002680|733|733|ampicillin
+63	The infant received 48 hours of ampicillin and gentamicin for rule out sepsis .|gentamicin[4418,4428]|||||||||C0017436|662411|662411|gentamicins
+90	Ferrous sulfate 25 mg per ml , 2 mg per kilogram per day .|Ferrous sulfate[5891,5906]|||25mg[5907,5912]|||per day[5940,5947]|||C1369080|439595|24942|ferrous gluconate
+95	Immunizations , the infant received hepatitis B vaccine on 2016-06-02 .|hepatitis B vaccine[6164,6183]||||||||||816236|816236|hepatitis b vaccine
+96	Immunizations recommended , Synagis RSV prophylaxis should be considered from October through April for infants who meet any of the following three criteria , born at less then 32 weeks , born between 32 and 35 weeks with two of three of the following , day care during RSV season , smoker on the household|Synagis[6228,6235]|||||||32 weeks[6377,6385]||C0723567|220141|194279|palivizumab

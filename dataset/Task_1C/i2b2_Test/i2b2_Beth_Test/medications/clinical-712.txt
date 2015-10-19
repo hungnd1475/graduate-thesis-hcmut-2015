@@ -1,0 +1,6 @@
+63	FLUIDS , ELECTROLYTES AND NUTRITION : The infant was started on IV fluids on admission to the CMED .|IV fluids[3348,3357]||||||||||390001|390001|iv fluids
+78	Ampicillin and gentamycin were initiated on admission and an LP was done due to the clinical issues of respiratory distress and fever on admission to the CMED .|Ampicillin[4181,4191]|||||||||C0002680|733|733|ampicillin
+79	CSF showed white count of 7 , reds 4 , protein 119 , glucose 69 .|CSF[4342,4345]||||||||||40209|40209|csf
+80	The infant was treated for 7 days of presumed pneumonia with ampicillin and gentamycin .|ampicillin[4469,4479]|||||||7 days[4435,4441]||C0002680|733|733|ampicillin
+98	4. Immunizations received : Hepatitis B vaccine was given on  2015-04-25 .|Hepatitis B vaccine[5378,5397]||||||||||816236|816236|hepatitis b vaccine
+100	6. Synagis RSV prophylaxis should be considered from November through March for infants who meet any of the following three criteria .|Synagis[5459,5466]|||||||||C0723567|220141|194279|palivizumab

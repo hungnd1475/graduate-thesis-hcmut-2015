@@ -1,0 +1,6 @@
+33	Aspirin one per day which the patient quit taking two weeks prior to admission .|Aspirin[1845,1852]||||one[1853,1856]||per day[1857,1864]|two weeks[1895,1904]||C0004057|1191|1191|acetylsalicylic acid
+71	She remained afebrile throughout her admission tolerating a regular diet by post-operative day two and was discharged on June 6 , 1993 with Percocet for pain .|Percocet[4091,4099]|||||||||C0086787|42844|161|paracetamol
+75	Percocet one to two tablets p.o. q.4-6h.|Percocet[4219,4227]||||one to two tablets[4228,4246]|p.o.[4247,4251]|q.4 - 6h[4252,4258]||||1049650|161|paracetamol
+76	p.r.n. , Iron Sulfate 325 mg p.o. b.i.d. , Colace 100 mg b.i.d. , and one Aspirin q.d.|Iron Sulfate[4269,4281]|||325mg[4282,4288]||p.o.[4289,4293]|b.i.d.[4294,4300]||p.r.n.[4260,4266]||310325|24947|ferrous sulfate
+76	p.r.n. , Iron Sulfate 325 mg p.o. b.i.d. , Colace 100 mg b.i.d. , and one Aspirin q.d.|Colace[4303,4309]|||100mg[4310,4316]|||b.i.d.[4317,4323]||||1247755|82003|docusate
+76	p.r.n. , Iron Sulfate 325 mg p.o. b.i.d. , Colace 100 mg b.i.d. , and one Aspirin q.d.|Aspirin[4334,4341]||||||q.d .[4342,4346]|||C0004057|1191|1191|acetylsalicylic acid

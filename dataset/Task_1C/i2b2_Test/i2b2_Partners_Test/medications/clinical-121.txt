@@ -1,0 +1,48 @@
+26	Cardiovascular stable , significant hypertension was noted on 9/7/93 at 5:10 a.m. and therefore 10 cc&apos;s per kilo albumin was given .|albumin[1735,1742]|||||||||C0001924|433|433|albumin
+27	The patient was admitted was started on clear fluids , tolerated , with D5 normal saline plus 40 mEq per liter of KCL at a rate of 50 cc &apos;s per hour for 9 hours .|normal saline[1830,1843]|||40mEq per liter[1849,1865]||||||C0445115|125464|125464|normal saline
+27	The patient was admitted was started on clear fluids , tolerated , with D5 normal saline plus 40 mEq per liter of KCL at a rate of 50 cc &apos;s per hour for 9 hours .|KCL[1869,1872]||||||per hour[1900,1908]|9 hours[1913,1920]||C0981677|891453|8591|potassium chloride
+29	Sodium and potassium at this time were 128/1.5 .|Sodium[1952,1958]|||||||||C0037473|9853|9853|sodium
+29	Sodium and potassium at this time were 128/1.5 .|potassium[1963,1972]|||||||||C0032821|8588|8588|potassium
+34	On 9/6/93 , 22:00 , fluids were changed to D5 normal saline plus 40 KCL and 40 K phosphate at 75 cc &apos;s per hour .|normal saline[2450,2463]|||||||||C0445115|125464|125464|normal saline
+34	On 9/6/93 , 22:00 , fluids were changed to D5 normal saline plus 40 KCL and 40 K phosphate at 75 cc &apos;s per hour .|KCL[2472,2475]|||||||||C0981677|891453|8591|potassium chloride
+34	On 9/6/93 , 22:00 , fluids were changed to D5 normal saline plus 40 KCL and 40 K phosphate at 75 cc &apos;s per hour .|KCL[2450,2463]||||||per hour[2512,2520]|||C0981677|891453|8591|potassium chloride
+38	At this time , sodium was 147 , potassium 2.6 , total sodium given during the first 24 hours 20 mEq per kilo per day .|sodium[2861,2867]|||2.6[2849,2852]||||||C0037473|9853|9853|sodium
+39	On 9/7/93 at 4:00 a.m. , albumin bolus 5% 10 cc&apos;s per kilo was given , a total of 120 cc&apos;s , electrolytes were sodium 155 , potassium 3.1 .|albumin[2951,2958]|||||||||C0001924|433|433|albumin
+40	At 9/7/93 at 5:00 a.m. , sodium bicarbonate given 60 mEq , calcium bolus 10 cc&apos;s given .|sodium bicarbonate[3101,3119]|||||||||C0074722|36676|36676|sodium bicarb (obsolete)
+40	At 9/7/93 at 5:00 a.m. , sodium bicarbonate given 60 mEq , calcium bolus 10 cc&apos;s given .|calcium[3135,3142]|||||||||C0006675|1895|1895|calcium
+41	On 9/7 , 5:30 a.m. , D5 quarter normal saline , and 40 of K phosphate at 100 cc&apos;s per hour was given .|normal saline[3202,3215]|||||||||C0445115|125464|125464|normal saline
+42	The patient was taking PO initially until 9/6/93 at 17:45 .|at 17[3327,3332]|||||PO[3301,3303]|||||6904|6904|methyltestosterone
+46	Normal neurologic exam on admission , then lethargic on 9/6/93 at 17:45 , then patient became unresponsive , areflexic and limp at 9/6/93 , at 17:45 to 22:00 .|at 17[3637,3642]||||||||||6904|6904|methyltestosterone
+46	Normal neurologic exam on admission , then lethargic on 9/6/93 at 17:45 , then patient became unresponsive , areflexic and limp at 9/6/93 , at 17:45 to 22:00 .|at 17[3714,3719]||||||||||6904|6904|methyltestosterone
+49	Valium was given at 9/7/93 , 00:02 .|Valium[3842,3848]|||||||||C0699187|202472|3322|diazepam
+50	IV ampicillin , chloramphenicol , ceftriaxone , and culture were sent .|ampicillin[3882,3892]|||||IV[3879,3881]||||C0002680|733|733|ampicillin
+50	IV ampicillin , chloramphenicol , ceftriaxone , and culture were sent .|chloramphenicol[3895,3910]|||||||||C0008168|2348|2348|chloramphenicol
+50	IV ampicillin , chloramphenicol , ceftriaxone , and culture were sent .|ceftriaxone[3913,3924]|||||||||C0007561|2193|2193|ceftriaxone
+54	A second intravenous was started and given normal saline bolus , change in intravenous fluids to D5 water with 80 mEq of bicarbonate , plus 40 mEq of KCL at 45 cc&apos;s per hour , bicarbonate given 2 mEq per kilo , attempted to start dopa for poor perfusion but worsening perfusion .|normal saline[4256,4269]|||||intravenous[4222,4233]||||C0445115|125464|125464|normal saline
+54	A second intravenous was started and given normal saline bolus , change in intravenous fluids to D5 water with 80 mEq of bicarbonate , plus 40 mEq of KCL at 45 cc&apos;s per hour , bicarbonate given 2 mEq per kilo , attempted to start dopa for poor perfusion but worsening perfusion .|KCL[4363,4366]|||40mEq[4353,4359]||||||C0981677|891453|8591|potassium chloride
+54	A second intravenous was started and given normal saline bolus , change in intravenous fluids to D5 water with 80 mEq of bicarbonate , plus 40 mEq of KCL at 45 cc&apos;s per hour , bicarbonate given 2 mEq per kilo , attempted to start dopa for poor perfusion but worsening perfusion .|dopa[4448,4452]||||||||||3627|3627|Dopamine
+55	Therefore , dopa was stopped .|dopa[4510,4514]||||||||||3627|3627|Dopamine
+56	Total volume given as bolus 50 cc&apos;s per kilo , sodium bicarbonate at 2 mEq per kilo was given .|sodium bicarbonate[4581,4599]|||||||||C0074722|36676|36676|sodium bicarb (obsolete)
+58	Phenobarbital and Dilantin given for seizure control .|Phenobarbital[4686,4699]|||||||||C0031412|8134|8134|phenobarbital
+58	Phenobarbital and Dilantin given for seizure control .|Dilantin[4704,4712]||||||||||202740|8183|phenytoin
+59	Electrolytes before departure for Fairm of Ijordcompmac Hospital was a sodium of 176 , potassium 2.5 , chloride 140 , bicarbonate 14 , calcium 7.2 , magnesium 2.7 .|calcium[4876,4883]|||7.2[4884,4887]||||||C0006675|1895|1895|calcium
+59	Electrolytes before departure for Fairm of Ijordcompmac Hospital was a sodium of 176 , potassium 2.5 , chloride 140 , bicarbonate 14 , calcium 7.2 , magnesium 2.7 .|magnesium[4890,4899]|||2.7[4900,4903]||||||C0024467|6574|6574|magnesium
+79	Dopamine and epinephrine given for cardiovascular support .|Dopamine[6075,6083]|||||||||C0013030|3628|3628|dopamine
+79	Dopamine and epinephrine given for cardiovascular support .|epinephrine[6088,6099]|||||||||C0014563|3992|3992|epinephrine
+83	Fluids of D5 water with 30 mEq of sodium acetate per liter , 30 ml per liter of phosphate , and 30 mEq of K acetate per liter at 90 cc&apos;s per hour was given .|sodium acetate[6394,6408]|||30ml[6421,6426]||||||C0142785|56443|56443|sodium acet (obsolete)
+83	Fluids of D5 water with 30 mEq of sodium acetate per liter , 30 ml per liter of phosphate , and 30 mEq of K acetate per liter at 90 cc&apos;s per hour was given .|acetate[6468,6475]|||30mEq[6456,6462]||||||C0000975|164|164|acetate salt
+85	Pediatric Nephrology recommended on 9/7/93 , 5:50 p.m. , 10 cc &apos;s per kilo of 150 mEq of sodium bicarbonate per liter , ( 1.5 mEq per kilo bicarbonate , one dose of Lasix and volume as needed ) .|sodium bicarbonate[6717,6735]|||150mEq[6706,6713]|||||||1100574|36676|sodium bicarb (obsolete)
+85	Pediatric Nephrology recommended on 9/7/93 , 5:50 p.m. , 10 cc &apos;s per kilo of 150 mEq of sodium bicarbonate per liter , ( 1.5 mEq per kilo bicarbonate , one dose of Lasix and volume as needed ) .|Lasix[6793,6798]||||||||as needed[6810,6819]|C0699992|202991|4603|furosemide
+86	The patient required multiple boluses of albumin for hypotension , patient also required multiple boluses of calcium because of hypocalcemia and hypotension .|albumin[6865,6872]|||||||||C0001924|433|433|albumin
+86	The patient required multiple boluses of albumin for hypotension , patient also required multiple boluses of calcium because of hypocalcemia and hypotension .|calcium[6933,6940]|||||||||C0006675|1895|1895|calcium
+87	Magnesium 2.0 mEq per liter , phosphate 8 mg / dl .|Magnesium[6983,6992]|||2.0mEq per liter[6993,7010]||||||C0024467|6574|6574|magnesium
+91	Albumin was 4.9 .|Albumin[7069,7076]|||||||||C0001924|433|433|albumin
+92	Globulin was 1.6 , uric acid was 6.5 , alkaline phosphatase 150 , SGPT 11 , SGOT 85 , LDH 524 , CK 152 , NH3 81 .|uric acid[7106,7115]||||||||||1427088|1427088|uric acid
+99	Fibrinogen 211 .|Fibrinogen[7452,7462]|||211[7463,7466]||||||C0016006|4385|4385|fibrinogen
+105	Patient did not receive sedation or muscle relaxant since admission to the Pediatric Intensive Care Unit .|muscle relaxant[7801,7816]||||||||||1028434|1028434|muscle relaxant
+106	Phenobarbital levels were 31.4 , 30.2 , and 50 .|Phenobarbital[7872,7885]|||||||||C0031412|8134|8134|phenobarbital
+107	Dilantin level was 22.6 , 20.2 , 20 .|Dilantin[7921,7929]||||||||||202740|8183|phenytoin
+121	Ampicillin and chloramphenicol were given at Noughwell Entanbon Health , and ceftriaxone was given at Fairm of Ijordcompmac Hospital .|Ampicillin[8990,9000]|||||||||C0002680|733|733|ampicillin
+121	Ampicillin and chloramphenicol were given at Noughwell Entanbon Health , and ceftriaxone was given at Fairm of Ijordcompmac Hospital .|chloramphenicol[9005,9020]|||||||||C0008168|2348|2348|chloramphenicol
+121	Ampicillin and chloramphenicol were given at Noughwell Entanbon Health , and ceftriaxone was given at Fairm of Ijordcompmac Hospital .|ceftriaxone[9067,9078]|||||||||C0007561|2193|2193|ceftriaxone
+122	Acyclovir was started , also considering the varicella at 120 mg intravenously every 8 hours .|Acyclovir[9125,9134]|||120mg[9183,9189]||intravenously[9190,9203]|every 8 hours[9204,9217]||||248108|281|acyclovir

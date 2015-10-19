@@ -1,0 +1,4 @@
+13	She takes 14 units of NPH insulin twice a day supplementing with a sliding scale .|NPH insulin[519,530]|||sliding scale[564,577]|||a day[537,542]||||5865|5865|insulin isophane nph
+22	She received induction therapy with thymoglobulin intraoperative and postoperatively for five days .|thymoglobulin[1066,1079]|||||||five days[1119,1128]||C0730920|225741|107044|rabbit anti-human t-lymphocyte globulin
+23	She was kept on a similar immunosuppressive regimen as with her kidney transplant .|immunosuppressive[1157,1174]||||||||||5748|5748|immunosuppressive
+35	In addition , she will take Valganciclovir for three months posttransplant .|Valganciclovir[1828,1842]|||||||three months[1847,1859]||C0909381|275891|275891|valganciclovir

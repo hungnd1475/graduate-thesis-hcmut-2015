@@ -1,0 +1,7 @@
+29	Glucotrol 10 q.a.m. and vitamins|Glucotrol[1332,1341]|||10[1342,1344]|||q.a.m.[1345,1351]|||C1599146|566720|4821|glipizide
+29	Glucotrol 10 q.a.m. and vitamins|vitamins[1356,1364]|||||||||C0042890|11262|11262|vitamins
+33	No ethanol use , remote pipe smoking use which he discontinued 20 years ago , no illicit drug use .|illicit drug[1533,1545]|||||||20 years[1515,1523]|||3683|3683|illicit drug
+43	The patient received two units of packed red blood cells and the hematocrit rose to 30 the following day .|packed red blood cells[2128,2150]||||||||||834201|834201|packed red blood cells
+50	Iron 300 mg p.o. t.i.d. , Glucotrol , Acel 10 mg p.o. q.d. , and Bactrim SS 1 tablet p.o. b.i.d.|Iron 300[2596,2604]|||||p.o.[2608,2612]|t.i.d.[2613,2619]|||C0721122|217788|217788|iron 300
+50	Iron 300 mg p.o. t.i.d. , Glucotrol , Acel 10 mg p.o. q.d. , and Bactrim SS 1 tablet p.o. b.i.d.|Glucotrol[2622,2631]|||10mg[2639,2644]||p.o.[2645,2649]|q.d.[2650,2654]|||C0706783|205830|4821|glipizide
+50	Iron 300 mg p.o. t.i.d. , Glucotrol , Acel 10 mg p.o. q.d. , and Bactrim SS 1 tablet p.o. b.i.d.|Bactrim SS[2661,2671]||||1 tablet[2672,2680]|p.o.[2681,2685]|b.i.d[2686,2691]|||C1243250|369244|10180|sulfamethoxazole

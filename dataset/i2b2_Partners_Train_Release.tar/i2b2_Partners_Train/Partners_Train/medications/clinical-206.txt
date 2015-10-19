@@ -1,0 +1,7 @@
+15	Ativan 1 mg or Trilafon 4 mg q 4 hours prn nausea , Carafate one gram q.i.d.|Ativan[450,456]|||1mg[457,461]||||||C1596161|563720|6470|lorazepam
+15	Ativan 1 mg or Trilafon 4 mg q 4 hours prn nausea , Carafate one gram q.i.d.|Trilafon[465,473]|||4mg[474,478]|||q 4 hours[479,488]||prn[489,492]|C1600666|568250|8076|perphenazine
+15	Ativan 1 mg or Trilafon 4 mg q 4 hours prn nausea , Carafate one gram q.i.d.|Carafate[502,510]|||onegram[511,519]|||q.i.d[520,525]|||C0740160|227743|10156|sucralfate
+36	The patient was hydrated well and given Adriamycin 27 mg and DTIC 450 mg daily for four days .|Adriamycin[1403,1413]|||27mg[1414,1419]||||||C0085752|42512|3639|doxorubicin
+36	The patient was hydrated well and given Adriamycin 27 mg and DTIC 450 mg daily for four days .|DTIC[1424,1428]|||450mg[1429,1435]|||daily[1436,1441]|four days[1446,1455]|||3098|3098|dacarbazine
+37	He also got ifosfamide 3.6 grams a day with mesna .|mesna[1502,1507]||||||a day[1491,1496]|||C0000294|44|44|mesna
+37	He also got ifosfamide 3.6 grams a day with mesna .|ifosfamide[1470,1480]|||3.6grams[1481,1490]||||||C0020823|5657|5657|ifosfamide

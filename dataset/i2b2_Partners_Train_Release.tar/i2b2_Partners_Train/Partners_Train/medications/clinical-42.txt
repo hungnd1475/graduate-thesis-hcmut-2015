@@ -1,0 +1,13 @@
+20	Ecotrin 1 tablet PO qd , Captopril 6.25 mg PO tid , K-Dur 20 mEq.|Ecotrin[622,629]||||1 tablet[630,638]|PO[639,641]|qd[642,644]|||C1243829|369814|1191|acetylsalicylic acid
+20	Ecotrin 1 tablet PO qd , Captopril 6.25 mg PO tid , K-Dur 20 mEq.|Captopril[647,656]|||6.25mg[657,664]||PO[665,667]|tid[668,671]|||C0788625|247516|1998|captopril
+20	Ecotrin 1 tablet PO qd , Captopril 6.25 mg PO tid , K-Dur 20 mEq.|K - Dur 20[674,682]|||||||||C0721178|217841|8591|potassium chloride
+21	PO qd , Lasix 20 mg PO qd , Isordil 10 mg PO tid , Sinemet 1/2 tablet PO bid , Symmetrel 100 mg PO bid , Parloder 2.5mg PO qd .|Lasix[696,701]|||||PO[688,690]|qd[691,693]|||C3229626|1175647|4603|furosemide
+21	PO qd , Lasix 20 mg PO qd , Isordil 10 mg PO tid , Sinemet 1/2 tablet PO bid , Symmetrel 100 mg PO bid , Parloder 2.5mg PO qd .|Isordil[716,723]|||10mg[724,729]||PO[730,732]|tid[733,736]|||C0306495|793865|6058|isosorbide dinitrate
+21	PO qd , Lasix 20 mg PO qd , Isordil 10 mg PO tid , Sinemet 1/2 tablet PO bid , Symmetrel 100 mg PO bid , Parloder 2.5mg PO qd .|Sinemet[739,746]||||2 tablet[749,757]|PO[758,760]|bid[761,764]||||724602|2019|carbidopa
+21	PO qd , Lasix 20 mg PO qd , Isordil 10 mg PO tid , Sinemet 1/2 tablet PO bid , Symmetrel 100 mg PO bid , Parloder 2.5mg PO qd .|Symmetrel[767,776]|||2.5mg[802,807]||PO[784,786]|qd[811,813]|||C3239285|1185510|620|amantadine
+21	PO qd , Lasix 20 mg PO qd , Isordil 10 mg PO tid , Sinemet 1/2 tablet PO bid , Symmetrel 100 mg PO bid , Parloder 2.5mg PO qd .|Symmetrel[767,776]|||100mg[777,783]||PO[808,810]|bid[787,790]|||C0716370|849396|620|amantadine
+31	She developed congestive heart failure and required pressor support .|pressor[1853,1860]||||||||||||
+32	She underwent cardiac catheterization on 8-15-93 and was found to have a left ventricular end diastolic pressure of 28 millimeters of mercury .|mercury[2005,2012]|||||||||C0025424|6769|6769|mercury (elemental)
+46	The blood pressure was 120/70 millimeters of mercury .|mercury[3019,3026]|||||||||C0025424|6769|6769|mercury (elemental)
+65	The patient was maintained on intravenous heparin .|heparin[4185,4192]|||||intravenous[4173,4184]||||C0019134|235473|235473|heparin,porcine
+70	She was maintained on intravenous heparin and was brought back to the cardiac catheterization laboratory on 08-18-93 for a relook coronary angiography .|heparin[4776,4783]|||||intravenous[4764,4775]||||C0019134|235473|235473|heparin,porcine

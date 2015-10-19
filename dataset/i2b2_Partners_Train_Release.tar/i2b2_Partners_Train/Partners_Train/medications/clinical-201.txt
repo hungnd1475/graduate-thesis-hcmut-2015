@@ -1,0 +1,19 @@
+35	Prilosec , 20 mg.|Prilosec[1297,1305]|||20mg[1308,1313]||||||C1602242|541245|7646|omeprazole
+36	PO q.day ; Singulair .|Singulair[1326,1335]|||||PO[1315,1317]|q.day[1318,1323]|||C3237513|1183693|88249|montelukast
+56	He was started on Coumadin for DVT prophylaxis and Ancef for routine antimicrobial coverage .|Coumadin[2505,2513]|||||||||C0699129|202421|11289|warfarin
+56	He was started on Coumadin for DVT prophylaxis and Ancef for routine antimicrobial coverage .|Ancef[2538,2543]|||||||||C0700926|203483|2180|cefazolin
+72	Folic acid , 1 mg.|Folic acid[3383,3393]|||1mg[3396,3400]||||||C0986175|315966|4511|folic acid
+73	PO q.d.; multivitamin , one capsule PO q.day ; ferrous sulfate , 325 mg.|multivitamin[3411,3423]|||||PO[3402,3404]|q.d.[3405,3409]||||89905|89905|multiple vitamins
+73	PO q.d.; multivitamin , one capsule PO q.day ; ferrous sulfate , 325 mg.|ferrous sulfate[3449,3464]|||325mg[3467,3473]||||||C1125139|329760|24947|ferrous sulfate
+75	Colace , 100 mg.|Colace[3486,3492]|||100mg[3495,3501]|||||||1247755|82003|docusate
+77	Tylenol , 650 mg.|Tylenol[3514,3521]|||650mg[3524,3530]||||||C1739190|646457|161|paracetamol
+79	Milk of Magnesia , 30 ml.|Milk of Magnesia[3561,3577]|||30ml[3580,3585]||||||C0591789|152039|152039|milk of magnesia
+81	Coumadin , 2.5 mg.|Coumadin[3620,3628]|||2.5mg[3631,3637]||||||C2709910|855313|11289|warfarin
+83	Percocet 5/325 mg. s , one to two tablets PO q.4 to 6 hours p.r.n. pain ;|Percocet 5 / 325[3680,3694]||||one to two tablets[3703,3721]|PO[3722,3724]|q.4[3725,3728]|6 hours[3732,3739]|p.r.n.[3740,3746]||1049640|161|paracetamol
+84	Singulair , 10 mg.|Singulair[3754,3763]|||10mg[3766,3771]||||||C1597856|565420|88249|montelukast
+86	Nexium , 10 mg.|Nexium[3784,3790]|||10mg[3793,3798]||||||C2343719|861570|283742|esomeprazole
+88	Metamucil instant mix , one teaspoon PO q.day ;|Metamucil[3811,3820]||||one teaspoon[3835,3847]|PO[3848,3850]|q.day[3851,3856]|||C3239409|1185636|8928|psyllium
+89	Peri-Colace , two capsules PO b.i.d.; Dulcolax , 10 mg.|Peri - Colace[3859,3870]||capsules[3877,3885]|||PO[3886,3888]|b.i.d.[3889,3895]|||C3239588|1185819|66870|casanthranol
+89	Peri-Colace , two capsules PO b.i.d.; Dulcolax , 10 mg.|Dulcolax[3897,3905]|||10mg[3908,3913]||||||C1604398|570190|1596|bisacodyl
+97	He should be on Coumadin for anticoagulation for three weeks from the date of surgery with twice weekly blood draws for INR with a goal of 1.5 to 2.0 .|Coumadin[4319,4327]|||||||||C0699129|202421|11289|warfarin
+97	He should be on Coumadin for anticoagulation for three weeks from the date of surgery with twice weekly blood draws for INR with a goal of 1.5 to 2.0 .|anticoagulation[4332,4347]||||||twice weekly[4394,4406]|three weeks[4352,4363]|||1024413|1024413|anticoagulation

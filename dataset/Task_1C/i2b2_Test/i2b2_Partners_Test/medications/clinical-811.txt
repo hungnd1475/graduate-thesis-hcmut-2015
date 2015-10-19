@@ -1,0 +1,11 @@
+23	FOLATE ( FOLIC ACID ) 1 MG PO QD ZANTAC ( RANITIDINE HCL ) 150 MG PO BID MVI THERAPEUTIC W / MINERALS ( THERAP VITS / MINERALS ) 1 TAB PO QD THIAMINE HCL 100 MG PO QD|THIAMINE HCL[617,629]|||100MG[630,636]||PO[503,505]|QD[506,508]||||313323|10454|thiamine (vit b1)
+23	FOLATE ( FOLIC ACID ) 1 MG PO QD ZANTAC ( RANITIDINE HCL ) 150 MG PO BID MVI THERAPEUTIC W / MINERALS ( THERAP VITS / MINERALS ) 1 TAB PO QD THIAMINE HCL 100 MG PO QD|MVI[549,552]||||1 TAB[605,610]|PO[542,544]|QD[614,616]|||C1966765|747667|747667|Multivitamin Injection
+23	FOLATE ( FOLIC ACID ) 1 MG PO QD ZANTAC ( RANITIDINE HCL ) 150 MG PO BID MVI THERAPEUTIC W / MINERALS ( THERAP VITS / MINERALS ) 1 TAB PO QD THIAMINE HCL 100 MG PO QD|ZANTAC ( RANITIDINE HCL )[509,534]|||150MG[535,541]||PO[611,613]|QD[640,642]||||827189|9143|ranitidine
+23	FOLATE ( FOLIC ACID ) 1 MG PO QD ZANTAC ( RANITIDINE HCL ) 150 MG PO BID MVI THERAPEUTIC W / MINERALS ( THERAP VITS / MINERALS ) 1 TAB PO QD THIAMINE HCL 100 MG PO QD|FOLATE ( FOLIC ACID )[476,497]|||1MG[498,502]||PO[637,639]|||||310410|4511|folic acid
+36	BRIEF RESUME OF HOSPITAL COURSE : 32 y / o woman with h / o anxiety and depression and prior suicide attempt presents with TCA and celexa overdose , tremulous / light-headed , felt better post charcoal .|celexa[1216,1222]||||||||||215928|2556|citalopram
+36	BRIEF RESUME OF HOSPITAL COURSE : 32 y / o woman with h / o anxiety and depression and prior suicide attempt presents with TCA and celexa overdose , tremulous / light-headed , felt better post charcoal .|charcoal[1278,1286]|||||||||C0007955|2296|2296|charcoal
+37	No EKG changes , marijuana in urine , HCO3 22 .|marijuana[1306,1315]|||||||||C0024808|6650|6650|marijuana
+37	No EKG changes , marijuana in urine , HCO3 22 .|HCO3[1327,1331]|||22[1332,1334]|||||||||
+40	3/7 -- repeat HCO3 24 and 26 without bicarb drip .|HCO3[1469,1473]|||24[1474,1476]|||||||||
+40	3/7 -- repeat HCO3 24 and 26 without bicarb drip .|bicarb[1492,1498]|||||drip[1499,1503]|||||36676|36676|sodium bicarb (obsolete)
+44	OF NOTE , Nortriptyline level came back as 43 ( SUBTHERAPEUTIC -- NORMAL 50-150 ) .|Nortriptyline[1626,1639]|||||||||C0028420|7531|7531|nortriptyline

@@ -1,0 +1,1 @@
+15	The patient presented with a chief complaint of IV FLUIDS .|IV FLUIDS[402,411]||||||||||390001|390001|iv fluids

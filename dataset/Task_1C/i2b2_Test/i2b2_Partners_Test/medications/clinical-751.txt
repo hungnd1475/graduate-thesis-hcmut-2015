@@ -1,0 +1,42 @@
+33	In August of 1996 while the patient was at Retelk County Medical Center for replacement of her knees bilaterally , and on preoperative evaluation she was noted to have a high calcium and therefore the surgery was canceled .|calcium[1305,1312]|||||||||C0006675|1895|1895|calcium
+44	Jude &apos;s mechanical valve and has been on Coumadin since then ,|Coumadin[1988,1996]|||||||||C0699129|202421|11289|warfarin
+62	1. Lopid 600 mg PO b.i.d. ,|Lopid[2729,2734]|||600mg[2735,2741]||PO[2742,2744]|b.i.d.[2745,2751]|||C0706672|205751|4719|gemfibrozil
+63	2. K-Dur 20 mg PO q.day ,|K - Dur 20[2757,2765]|||||PO[2769,2771]|q.day[2772,2777]|||C3222069|1167898|8591|potassium chloride
+64	3. Lasix 40 mg PO q.day ,|Lasix[2783,2788]|||40mg[2789,2794]||PO[2795,2797]|q.day[2798,2803]|||C0697300|200809|4603|furosemide
+65	4. Coumadin 2.5 mg PO q.day which was last taken two days prior to admission ,|Coumadin[2809,2817]|||2.5mg[2818,2824]||PO[2825,2827]|q.day[2828,2833]|two days[2855,2863]||C0710783|855314|11289|warfarin
+66	5. Norvasc 500 mg PO q.day ,|Norvasc[2888,2895]|||500mg[2896,2902]||PO[2903,2905]|q.day[2906,2911]|||C3239502|1185732|17767|amlodipine
+67	6. Digoxin .25 mg PO q.day ,|Digoxin[2917,2924]|||.25mg[2925,2931]||PO[2932,2934]|q.day[2935,2940]|||C0360696|1151521|3407|digoxin
+68	7. Lopressor 50 mg PO b.i.d. ,|Lopressor[2946,2955]|||50mg[2956,2961]||PO[2962,2964]|b.i.d.[2965,2971]|||C0708591|866516|6918|metoprolol
+69	8. Glucotrol 10 XL qam ,|Glucotrol[2977,2986]|||10[2987,2989]|||qam[2993,2996]|||C1599146|566720|4821|glipizide
+70	9. Timoptic 0.5% b.i.d. to both eyes ,|Timoptic[3002,3010]|||0.5[3011,3014]|||b.i.d.[3016,3022]||||10601|10600|timolol
+71	10. Pilocarpine gel qhs to both eyes .|Pilocarpine[3042,3053]||||||qhs[3058,3061]|||C0031923|8328|8328|pilocarpine
+97	Admission white blood count 4.3 , hematocrit 31.0 , electrolytes were all within normal limits , glucose 218 , prothrombin time on admission was 15.1 with INR of 1.5 , partial thromboplastin time 23.3 .|prothrombin[4424,4435]||||||||||8872|8872|factor ii (prothrombin)
+100	Impression was that this was an 83-year-old female with cardiac history , dyspnea on exertion , increased calcium and hyperparathyroidism who presents for parathyroidectomy .|calcium[4791,4798]|||||||||C0006675|1895|1895|calcium
+106	The plan was to start her on heparin and Coumadin and discontinue her heparin when her Coumadin levels became therapeutic as judged by the prothrombin time / INR .|heparin[5350,5357]|||||||||C0019134|235473|235473|heparin,porcine
+106	The plan was to start her on heparin and Coumadin and discontinue her heparin when her Coumadin levels became therapeutic as judged by the prothrombin time / INR .|Coumadin[5362,5370]|||||||||C0699129|202421|11289|warfarin
+106	The plan was to start her on heparin and Coumadin and discontinue her heparin when her Coumadin levels became therapeutic as judged by the prothrombin time / INR .|prothrombin[5460,5471]||||||||||8872|8872|factor ii (prothrombin)
+106	The plan was to start her on heparin and Coumadin and discontinue her heparin when her Coumadin levels became therapeutic as judged by the prothrombin time / INR .|Coumadin[5408,5416]|||||||||C0699129|202421|11289|warfarin
+106	The plan was to start her on heparin and Coumadin and discontinue her heparin when her Coumadin levels became therapeutic as judged by the prothrombin time / INR .|heparin[5391,5398]|||||||||C0019134|235473|235473|heparin,porcine
+110	An ionized calcium was drawn which was low at 1.0 .|calcium[5765,5772]|||||||||C0006675|1895|1895|calcium
+111	As a result , the patient was started on Os-Cal 250 mg PO q.i.d.|Os - Cal[5847,5853]|||250mg[5854,5860]||PO[5861,5863]|q.i.d[5864,5869]|||null|218957|605420|
+112	On postoperative day number three , her ionized calcium was 1.06 and her Os-Cal was increased to 500 q.i.d.|calcium[5919,5926]|||||||||C0006675|1895|1895|calcium
+112	On postoperative day number three , her ionized calcium was 1.06 and her Os-Cal was increased to 500 q.i.d.|Os - Cal[5944,5950]||||||q.i.d[5972,5977]||||605420|605420|os-cal
+113	However , her ionized calcium decreased to 0.97 and she was given one amp of calcium gluconate .|calcium[6001,6008]|||||||||C0006675|1895|1895|calcium
+113	However , her ionized calcium decreased to 0.97 and she was given one amp of calcium gluconate .|calcium gluconate[6056,6073]|||||||||C0006699|1908|1908|calcium gluconate
+114	On postoperative day number five , the patient felt fine and had an INR of 1.9 with a prothrombin time of 16.6 .|prothrombin[6162,6173]||||||||||8872|8872|factor ii (prothrombin)
+115	Her calcium was 8.5 , albumin 3.6 , and phosphate 4.5 .|calcium[6193,6200]|||||||||C0006675|1895|1895|calcium
+115	Her calcium was 8.5 , albumin 3.6 , and phosphate 4.5 .|albumin[6211,6218]|||3.6[6219,6222]||||||C0001924|433|433|albumin
+116	She had had no further episodes of tingling in her fingers after the initial episode which had prompted us originally to draw the ionized calcium .|calcium[6383,6390]|||||||||C0006675|1895|1895|calcium
+120	1. Coumadin 5 mg PO q.day , then she will follow up with her primary care physician and decide the dosage thereafter ,|Coumadin[6455,6463]|||5mg[6464,6468]||PO[6469,6471]|q.day[6472,6477]|||C0710780|855334|11289|warfarin
+121	2. Lopid 600 mg PO b.i.d. ,|Lopid[6574,6579]|||600mg[6580,6586]||PO[6587,6589]|b.i.d.[6590,6596]|||C0706672|205751|4719|gemfibrozil
+122	3. K-Dur 20 mg PO q.day ,|K - Dur 20[6602,6610]|||||PO[6614,6616]|q.day[6617,6622]|||C3222069|1167898|8591|potassium chloride
+123	4. Os-Cal 500 mg PO q.i.d. ,|Os - Cal 500[6628,6638]|||||PO[6642,6644]|q.i.d.[6645,6651]||||605421|605421|os-cal 500
+124	5. Rocaltrol 0.25 mg PO b.i.d. ,|Rocaltrol[6657,6666]|||0.25mg[6667,6674]||PO[6675,6677]|b.i.d.[6678,6684]|||C0710679|209006|1894|calcitriol
+125	6. Lasix 40 mg PO q.day ,|Lasix[6690,6695]|||40mg[6696,6701]||PO[6702,6704]|q.day[6705,6710]|||C0697300|200809|4603|furosemide
+126	7. Norvasc 5 mg PO q.day ,|Norvasc[6716,6723]|||5mg[6724,6728]||PO[6729,6731]|q.day[6732,6737]|||C0715406|212549|17767|amlodipine
+127	8. Digoxin .25 mg PO q.day ,|Digoxin[6743,6750]|||.25mg[6751,6757]||PO[6758,6760]|q.day[6761,6766]|||C0360696|1151521|3407|digoxin
+128	9. Lopressor 50 mg PO b.i.d. ,|Lopressor[6772,6781]|||50mg[6782,6787]||PO[6788,6790]|b.i.d.[6791,6797]|||C0708591|866516|6918|metoprolol
+129	10. Glucotrol 10 mg qam .|Glucotrol[6804,6813]|||10mg[6814,6819]|||qam[6820,6823]|||C1599146|566720|4821|glipizide
+133	In addition , she is to follow up with her primary care physician to check her prothrombin time / INR as well as calcium , albumin and phosphate levels .|calcium[7027,7034]|||||||||C0006675|1895|1895|calcium
+133	In addition , she is to follow up with her primary care physician to check her prothrombin time / INR as well as calcium , albumin and phosphate levels .|prothrombin[6993,7004]||||||||||8872|8872|factor ii (prothrombin)
+133	In addition , she is to follow up with her primary care physician to check her prothrombin time / INR as well as calcium , albumin and phosphate levels .|albumin[7037,7044]|||||||||C0001924|433|433|albumin

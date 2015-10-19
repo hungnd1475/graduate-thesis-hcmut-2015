@@ -1,0 +1,47 @@
+19	Franklin is a 34 - year-old woman with Bipolar disorder and group home resident who by way of EMS for apparent alprazolam overdose .|alprazolam[438,448]|||||||||C0002333|596|596|alprazolam
+19	Franklin is a 34 - year-old woman with Bipolar disorder and group home resident who by way of EMS for apparent alprazolam overdose .|EMS[421,424]||||||||||||
+22	She was promptly intubated for airway protection and in order to administer charcoal .|charcoal[645,653]|||||||||C0007955|2296|2296|charcoal
+24	Group home states that patient " may have taken too many Xanax .|Xanax[831,836]|||||||||C0699034|202363|596|alprazolam
+32	5. Chronic constipation from laxative abuse .|laxative[1205,1213]||||||||||81973|81973|laxative
+34	Denies any recent use of EtOH or illicit drugs .|illicit drugs[1272,1285]|||||||||C3653345|1431777|1431777|illicit drugs
+35	Per OMR , h/o sporadic marijuana use .|marijuana[1311,1320]|||||||||C0024808|6650|6650|marijuana
+56	Cor :|Cor[2176,2179]||||||||||1026934|1026934|cor
+70	ASA - NEG ETHANOL - NEG ACETMNPHN - NEG bnzodzpn - NEG barbitrt - NEG tricyclic - POS 2014-04-23 07:56 AM|ASA[2658,2661]|||||||||C1740879|667904|9525|salicylic acid
+71	LITHIUM - LESS THAN 2014-04-23 07:56 AM|LITHIUM[2764,2771]|||||||||C0023870|6448|6448|lithium
+72	DIGOXIN -< 0.2 * 2014-04-23 07:56 AM|DIGOXIN[2804,2811]|||||||||C0012265|3407|3407|digoxin
+73	GLUCOSE - 116 * UREA N - 14 CREAT - 1.0 SODIUM - 137 POTASSIUM - 4.5 CHLORIDE - 105 TOTAL CO2 - 20 * ANION GAP - 17 2014-04-23 07:56 AM|POTASSIUM[2894,2903]|||||||||C0032821|8588|8588|potassium
+73	GLUCOSE - 116 * UREA N - 14 CREAT - 1.0 SODIUM - 137 POTASSIUM - 4.5 CHLORIDE - 105 TOTAL CO2 - 20 * ANION GAP - 17 2014-04-23 07:56 AM|SODIUM[2881,2887]|||||||||C0037473|9853|9853|sodium
+73	GLUCOSE - 116 * UREA N - 14 CREAT - 1.0 SODIUM - 137 POTASSIUM - 4.5 CHLORIDE - 105 TOTAL CO2 - 20 * ANION GAP - 17 2014-04-23 07:56 AM|UREA[2857,2861]|||||||||C0041942|11002|11002|urea
+74	CALCIUM - 9.7 PHOSPHATE - 3.7 MAGNESIUM - 2.1 2014-04-23 07:56 AM|MAGNESIUM[3007,3016]|||||||||C0024467|6574|6574|magnesium
+74	CALCIUM - 9.7 PHOSPHATE - 3.7 MAGNESIUM - 2.1 2014-04-23 07:56 AM|CALCIUM[2977,2984]|||||||||C0006675|1895|1895|calcium
+76	LIPASE - 66 * 2014-04-23 08:00 AM URINE|LIPASE[3139,3145]|||||||||C0023764|6406|6406|lipase
+77	BLOOD - NEG NITRITE - NEG PROTEIN - NEG GLUCOSE - NEG KETONE - TR BILIRUBIN - NEG UROBILNGN - NEG PH - 6.5 LEUK - NEG 2014-04-23 08:13 AM URINE bnzodzpn - POS barbitrt - NEG opiates - NEG cocaine - NEG amphetmn - NEG mthdone - NEG 2014-04-23 01:38 PM|cocaine[3367,3374]|||||||||C0009170|2653|2653|cocaine
+89	Patient was intubated in John for airway protection and administation of charcoal .|charcoal[3874,3882]|||||||||C0007955|2296|2296|charcoal
+93	Patient was started on heparin drip and bilateral lower extremeties were done which were negative for DVT .|heparin[4122,4129]|||||drip[4130,4134]||||C0019134|235473|235473|heparin,porcine
+98	Patient was gradually put back on her outpatient xanax dose of 1 mg qid and clozaril was restarted .|xanax[4613,4618]|||1mg[4627,4631]|||qid[4632,4635]|||C1608037|573847|596|alprazolam
+98	Patient was gradually put back on her outpatient xanax dose of 1 mg qid and clozaril was restarted .|clozaril[4640,4648]|||||||||C0733560|216102|2626|clozapine
+105	Patient was put on coumadin that was bridged with lovenox unti lINR theraputic 01-23 .|lovenox[5242,5249]|||||||||C0728963|225036|67108|enoxaparin
+105	Patient was put on coumadin that was bridged with lovenox unti lINR theraputic 01-23 .|coumadin[5211,5219]|||||||||C0699129|202421|11289|warfarin
+107	While on the floor patient 's urinalysis suggestive of UTI and was put on 6 day course of levofloxacin .|levofloxacin[5449,5461]|||||||6 day[5433,5438]||C0282386|82122|82122|levofloxacin
+109	Propanolol XL 80 mg qd|Propanolol[5491,5501]|||80mg[5505,5510]|||qd[5511,5513]|||C2710426|856578|8787|propranolol
+111	Lamictal 100 mg po bid|Lamictal[5537,5545]|||100mg[5546,5552]||po[5553,5555]|bid[5556,5559]|||C0355698|105018|28439|lamotrigine
+112	Alprazolam 1 mg po qid|Alprazolam[5560,5570]|||1mg[5571,5575]||po[5576,5578]|qid[5579,5582]||||485414|596|alprazolam
+113	Senna|Senna[5583,5588]|||||||||C0074332|36387|36387|sennosides
+115	Clomipramine 100 mg po qhs|Clomipramine[5613,5625]|||100mg[5626,5632]||po[5633,5635]|qhs[5636,5639]|||C3207859|1153374|2597|clomipramine
+117	Clozapine 300 mg po qhs|Clozapine[5665,5674]|||300mg[5675,5681]||po[5682,5684]|qhs[5685,5688]|||C0975757|309376|2626|clozapine
+118	Folate 1 mg po qd|Folate[5689,5695]|||1mg[5696,5700]||po[5701,5703]|qd[5704,5706]||||310410|4511|folic acid
+119	Multivitamin|Multivitamin[5707,5719]||||||||||89905|89905|multiple vitamins
+121	1. Acetaminophen 325 mg Tablet Sig : 1-2 Tablets PO Q4-6H ( every 4 to 6 hours ) as needed .|Acetaminophen[5747,5760]||Tablet[5768,5774]|325mg[5761,5767]|1 - 2 Tablets[5781,5792]|PO[5793,5795]|Q4 - 6 H[5796,5801]||as needed[5825,5834]||313782|161|paracetamol
+122	2. Lamotrigine 100 mg Tablet Sig : One ( 1 ) Tablet PO BID ( 2 times a day ) .|Lamotrigine[5840,5851]||Tablet[5859,5865]|100mg[5852,5858]||PO[5889,5891]|BID[5892,5895]|||C0691061|198427|28439|lamotrigine
+123	3. Pantoprazole Sodium 40 mg Tablet , Delayed Release ( E.C. ) Sig : One ( 1 ) Tablet , Delayed Release ( E.C. ) PO Q24H ( every 24 hours ) .|Pantoprazole Sodium[5919,5938]||Tablet[5945,5951]|40mg[5939,5944]||PO[6029,6031]|Q24H[6032,6036]|||C0981697|314200|40790|pantoprazole
+124	4. Folic Acid 1 mg Tablet Sig : One ( 1 ) Tablet PO DAILY ( Daily ) .|Folic Acid[6061,6071]||Tablet[6077,6083]|1mg[6072,6076]||PO[6107,6109]|DAILY[6110,6115]|||C0977010|310410|4511|folic acid
+125	5. Multivitamin Capsule Sig : One ( 1 ) Cap PO DAILY ( Daily ) .|Multivitamin[6131,6143]||Capsule[6144,6151]|||PO[6172,6174]|DAILY[6175,6180]||||89905|89905|multiple vitamins
+126	6. Senna 8.6 mg Tablet Sig : One ( 1 ) Tablet PO BID ( 2 times a day ) .|Senna[6196,6201]||Tablet[6209,6215]|8.6mg[6202,6208]||PO[6239,6241]|BID[6242,6245]||||312935|36387|sennosides
+127	7. Clozapine 25 mg Tablet Sig : One ( 1 ) Tablet PO HS ( at bedtime ) .|Clozapine[6269,6278]||Tablet[6285,6291]|25mg[6279,6284]||PO[6315,6317]|HS[6318,6320]|||C0688393|197536|2626|clozapine
+128	8. Warfarin Sodium 3 mg Tablet Sig : One ( 1 ) Tablet PO at bedtime .|Warfarin Sodium[6341,6356]||Tablet[6362,6368]|3mg[6357,6361]||PO[6392,6394]|at bedtime[6395,6405]|||C0981794|855318|11289|warfarin
+129	9. Docusate Sodium 100 mg Capsule Sig : One ( 1 ) Capsule PO BID ( 2 times a day ) .|Docusate Sodium[6411,6426]||Capsule[6434,6441]|100mg[6427,6433]||PO[6466,6468]|BID[6469,6472]||||1115005|82003|docusate
+130	10. Trazodone HCl 100 mg Tablet Sig : Two ( 2 ) Tablet PO HS ( at bedtime ) as needed .|Trazodone HCl[6497,6510]||Tablet[6518,6524]|100mg[6511,6517]||PO[6548,6550]|HS[6551,6553]||as needed[6569,6578]||856373|82112|trazodone hydrochloride
+131	11. Alprazolam 1 mg Tablet Sig : One ( 1 ) Tablet PO QID ( 4 times a day ) .|Alprazolam[6585,6595]||Tablet[6601,6607]|1mg[6596,6600]||PO[6631,6633]|QID[6634,6637]|||C0687816|197321|596|alprazolam
+132	12. Levofloxacin 500 mg Tablet Sig : One ( 1 ) Tablet PO Q24H ( every 24 hours ) for 3 days .|Levofloxacin[6662,6674]||Tablet[6682,6688]|500mg[6675,6681]||PO[6712,6714]|Q24H[6715,6719]|3 days[6743,6749]||C0693579|199885|82122|levofloxacin
+133	13. Bisacodyl 5 mg Tablet , Delayed Release ( E.C. ) Sig : Two ( 2 ) Tablet , Delayed Release ( E.C. ) PO DAILY ( Daily ) as needed .|Bisacodyl[6756,6765]||Tablet[6771,6777]|5mg[6766,6770]||PO[6855,6857]|DAILY[6858,6863]||as needed[6874,6883]|C0974988|308753|1596|bisacodyl
+144	Please continue to take coumadin as directed by your doctors until told to stop for clots found in your lungs .|coumadin[7260,7268]|||||||||C0699129|202421|11289|warfarin

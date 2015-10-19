@@ -1,0 +1,31 @@
+41	However he was transferred to the Medical Intensive Care Unit where he received continuous respiratory therapy in theway of Albuterol nebulizers as well as nasal oxygen , intravenous steroids and intravenous antibiotics .|Albuterol[2558,2567]||nebulizers[2568,2578]|||||||C0001927|435|435|salbutamol
+41	However he was transferred to the Medical Intensive Care Unit where he received continuous respiratory therapy in theway of Albuterol nebulizers as well as nasal oxygen , intravenous steroids and intravenous antibiotics .|steroids[2617,2625]|||||intravenous[2605,2616]|||||10072|10072|steroids
+52	1. Ativan 1 mg po twice a day .|Ativan[3297,3303]|||1mg[3304,3308]||po[3309,3311]|a day[3318,3323]|||C0355054|104719|6470|lorazepam
+53	2. Trusopt 1 gtt left eye three times a day .|Trusopt[3329,3336]||||1 gtt[3337,3342]||three times a day[3352,3369]|||C0592218|152463|60207|dorzolamide
+54	3. Xalatan 0.005% one gtt left eye qhs .|Xalatan[3375,3382]|||0.005[3383,3388]|one gtt[3390,3397]||qhs[3407,3410]|||C0593887|153159|43611|latanoprost
+55	4. Brimonidine 1 gtt left eye three times a day .|Brimonidine[3416,3427]||||1 gtt[3428,3433]||three times a day[3443,3460]|||C2719892|861203|134615|brimonidine
+56	5. Combivent 3 puffs four times per day .|Combivent[3466,3475]||||3 puffs[3476,3483]||four times per day[3484,3502]|||C0591282|151539|435|salbutamol
+57	6. Aerobid three puffs twice a day .|Aerobid[3508,3515]||||three puffs[3516,3527]||a day[3534,3539]|||C0718284|215045|25120|flunisolide
+58	7. Sorbitol 30 cc every other day .|Sorbitol[3545,3553]|||30[3554,3556]|||every other day[3560,3575]|||C0990338|316724|9945|sorbitol
+82	During that period of time he received nebulizer treatments with Albuterol .|Albuterol[5123,5132]|||||||||C0001927|435|435|salbutamol
+83	He was also started on intravenous Ticarcillin for possible gram negative pneumonia .|Ticarcillin[5170,5181]|||||intravenous[5158,5169]||||C0040193|10591|10591|ticarcillin
+84	He was diuresed with intravenous Lasix to which he responded with at lease a 2L urine output on the first day and 1.5L the second day .|Lasix[5254,5259]|||||intravenous[5242,5253]||||C0699992|202991|4603|furosemide
+86	This consisted of continued nebulizer treatments as well as intravenous antibiotics and intravenous Solu-Medrol .|Solu - Medrol[5602,5613]|||||intravenous[5562,5573]|||||203856|6902|methylprednisolone
+90	The antibiotic chosen was Levaquin 500 mg 1 tab per day .|Levaquin[5964,5972]|||500mg[5973,5979]|1 tab[5980,5985]||per day[5986,5993]|||C1606347|572149|82122|levofloxacin
+90	The antibiotic chosen was Levaquin 500 mg 1 tab per day .|antibiotic[5942,5952]||||||||||896|896|antibiotic
+92	The Ticarcillin was stopped after two days when it was felt that he did not have a serious pneumonia .|Ticarcillin[6066,6077]|||||||two days[6096,6104]||C0040193|10591|10591|ticarcillin
+95	The patient &apos;s major improvement came after the first two days with brisk diuresis with Lasix .|Lasix[6488,6493]|||||||two days[6454,6462]||C0699992|202991|4603|furosemide
+96	While in the Oaksgekesser/ Memorial Hospital the patient on 4/4/99 complained of mild epigastric discomfort because he was put in Cimetidine while in the Intensive Care Unit for prophylaxis against peptic ulcer disease .|Cimetidine[6626,6636]|||||||||C0008783|2541|2541|cimetidine
+97	The patient was upgraded to Prilosec 20 mg per day for possible treatment of gastritis or gastroesophageal reflux disease .|Prilosec[6745,6753]|||20mg[6754,6759]|||per day[6760,6767]|||C1602242|541245|7646|omeprazole
+99	The patient &apos;s abdominal pain should be followed over the next week or so in case it does not respond to Prilosec .|Prilosec[7037,7045]|||||||||C0700777|203345|7646|omeprazole
+109	1. Albuterol 2.5 mg in 2.5 normal saline q4h .|normal saline[7982,7995]|||2.5mg[7968,7974]|||q4h[7996,7999]|||C0445115|125464|125464|normal saline
+109	1. Albuterol 2.5 mg in 2.5 normal saline q4h .|Albuterol[7958,7967]|||||||||C0001927|435|435|salbutamol
+110	2. Heparin 5000 units subcutaneously twice a day .|Heparin[8005,8012]|||5000[8013,8017]||subcutaneously[8024,8038]|a day[8045,8050]||||1361615|235473|heparin,porcine
+111	3. Ativan .5 mg twice a day .|Ativan[8056,8062]|||.5mg[8063,8068]|||a day[8075,8080]|||C0699194|202479|6470|lorazepam
+113	5. Levaquin 500 mg per day to be continued until 4/12/99 .|Levaquin[8118,8126]|||500mg[8127,8133]|||per day[8134,8141]|||C1606347|572149|82122|levofloxacin
+114	6. Lasix 40 mg per day .|Lasix[8177,8182]|||40mg[8183,8188]|||per day[8189,8196]|||C1597894|565458|4603|furosemide
+115	7. Prednisone 40 mg per day to be tapered over two weeks .|Prednisone[8202,8212]|||40mg[8213,8218]|||per day[8219,8226]|two weeks[8246,8255]||C1382730|451144|8640|prednisone
+116	8. Xalatan eyedrops 1 gtt in left eye per day .|Xalatan[8261,8268]||||1 gtt[8278,8283]||per day[8296,8303]|||C0593887|153159|43611|latanoprost
+117	9. Alphagan 1 gtt in left eye three times a day .|Alphagan[8309,8317]||||1 gtt[8318,8323]||three times a day[8336,8353]|||C2719893|861205|134615|brimonidine
+118	10. Trusopt 1gtt in left eye three times a day .|Trusopt[8360,8367]||||||three times a day[8385,8402]|||C0592218|152463|60207|dorzolamide
+119	11. Prilosec 20 mg per day .|Prilosec[8409,8417]|||20mg[8418,8423]|||per day[8424,8431]|||C1602242|541245|7646|omeprazole

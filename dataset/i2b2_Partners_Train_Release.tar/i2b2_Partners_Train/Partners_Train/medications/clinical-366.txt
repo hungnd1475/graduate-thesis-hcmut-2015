@@ -1,0 +1,6 @@
+23	Medications on admission were Coumadin , Digoxin Synthroid , Lopressor and Zantac .|Coumadin[828,836]|||||||||C0699129|202421|11289|warfarin
+23	Medications on admission were Coumadin , Digoxin Synthroid , Lopressor and Zantac .|Synthroid[847,856]||||||||||224920|10582|levothyroxine
+23	Medications on admission were Coumadin , Digoxin Synthroid , Lopressor and Zantac .|Digoxin[839,846]|||||||||C0012265|3407|3407|digoxin
+23	Medications on admission were Coumadin , Digoxin Synthroid , Lopressor and Zantac .|Lopressor[859,868]|||||||||C0700776|203344|6918|metoprolol
+23	Medications on admission were Coumadin , Digoxin Synthroid , Lopressor and Zantac .|Zantac[873,879]|||||||||C0592278|152523|9143|ranitidine
+29	The family at that point considering the multiple system involvement of her diseases , decided to make the patient DNR and withdraw care .|DNR[1537,1540]||||||||||||

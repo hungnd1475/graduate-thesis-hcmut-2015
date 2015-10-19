@@ -1,0 +1,29 @@
+23	ECASA ( ASPIRIN ENTERIC COATED ) 81 MG PO QD LEVOXYL ( LEVOTHYROXINE SODIUM ) 25 MCG PO QD SYNAREL ( NAFARELIN ACETATE ) 1 PUFF NA BID NITROGLYCERIN 1/150 ( 0.4 MG ) 1 TAB SL Q5MIN X 3 doses PRN Chest Pain MULTIVITAMIN THERAPEUTIC ( THERAPEUTIC MULTIVI .|ECASA ( ASPIRIN ENTERIC COATED )[481,513]|||81MG[514,519]||PO[520,522]|QD[523,525]||||308416|1191|acetylsalicylic acid
+23	ECASA ( ASPIRIN ENTERIC COATED ) 81 MG PO QD LEVOXYL ( LEVOTHYROXINE SODIUM ) 25 MCG PO QD SYNAREL ( NAFARELIN ACETATE ) 1 PUFF NA BID NITROGLYCERIN 1/150 ( 0.4 MG ) 1 TAB SL Q5MIN X 3 doses PRN Chest Pain MULTIVITAMIN THERAPEUTIC ( THERAPEUTIC MULTIVI .|LEVOXYL ( LEVOTHYROXINE SODIUM )[526,558]|||25MCG[559,565]||PO[566,568]|QD[569,571]|||C0707542|966157|10582|levothyroxine
+23	ECASA ( ASPIRIN ENTERIC COATED ) 81 MG PO QD LEVOXYL ( LEVOTHYROXINE SODIUM ) 25 MCG PO QD SYNAREL ( NAFARELIN ACETATE ) 1 PUFF NA BID NITROGLYCERIN 1/150 ( 0.4 MG ) 1 TAB SL Q5MIN X 3 doses PRN Chest Pain MULTIVITAMIN THERAPEUTIC ( THERAPEUTIC MULTIVI .|SYNAREL ( NAFARELIN ACETATE )[572,601]||||1 PUFF[602,608]|||||C1602421|853486|28656|nafarelin (obsolete)
+23	ECASA ( ASPIRIN ENTERIC COATED ) 81 MG PO QD LEVOXYL ( LEVOTHYROXINE SODIUM ) 25 MCG PO QD SYNAREL ( NAFARELIN ACETATE ) 1 PUFF NA BID NITROGLYCERIN 1/150 ( 0.4 MG ) 1 TAB SL Q5MIN X 3 doses PRN Chest Pain MULTIVITAMIN THERAPEUTIC ( THERAPEUTIC MULTIVI .|NITROGLYCERIN 1 / 150 ( 0.4 MG )[616,646]||||1 TAB[647,652]|||||null|198039|4917|glyceryl trinitrate
+23	ECASA ( ASPIRIN ENTERIC COATED ) 81 MG PO QD LEVOXYL ( LEVOTHYROXINE SODIUM ) 25 MCG PO QD SYNAREL ( NAFARELIN ACETATE ) 1 PUFF NA BID NITROGLYCERIN 1/150 ( 0.4 MG ) 1 TAB SL Q5MIN X 3 doses PRN Chest Pain MULTIVITAMIN THERAPEUTIC ( THERAPEUTIC MULTIVI .|NA[609,611]||||||BID[612,615]||||56501|56501|na m-fluorphosphate
+23	ECASA ( ASPIRIN ENTERIC COATED ) 81 MG PO QD LEVOXYL ( LEVOTHYROXINE SODIUM ) 25 MCG PO QD SYNAREL ( NAFARELIN ACETATE ) 1 PUFF NA BID NITROGLYCERIN 1/150 ( 0.4 MG ) 1 TAB SL Q5MIN X 3 doses PRN Chest Pain MULTIVITAMIN THERAPEUTIC ( THERAPEUTIC MULTIVI .|NITROGLYCERIN 1 / 150 ( 0.4 MG )[481,513]||||1 TAB[481,513]|SL[653,655]|Q5MIN[656,661]||PRN[672,675]||198039|4917|glyceryl trinitrate
+28	SIMVASTATIN and NIACIN , VIT .|SIMVASTATIN[864,875]|||||||||C0074554|36567|36567|simvastatin
+28	SIMVASTATIN and NIACIN , VIT .|NIACIN[880,886]|||||||||C0027996|7393|7393|nicotinic acid
+29	B-3 Reason for override : ok TOPROL XL ( METOPROLOL ( SUST.|METOPROLOL[936,946]|||||||||C0025859|6918|6918|metoprolol
+29	B-3 Reason for override : ok TOPROL XL ( METOPROLOL ( SUST.|TOPROL XL[924,933]|||||||||C2723006|865575|6918|metoprolol
+33	Number of Doses Required ( approximate ) : 8 PLAVIX ( CLOPIDOGREL ) 75 MG PO QD LIPITOR ( ATORVASTATIN ) 40 MG PO QD|LIPITOR ( ATORVASTATIN )[1144,1168]|||40MG[1169,1174]||PO[1138,1140]|QD[1141,1143]||||617320|83367|atorvastatin
+33	Number of Doses Required ( approximate ) : 8 PLAVIX ( CLOPIDOGREL ) 75 MG PO QD LIPITOR ( ATORVASTATIN ) 40 MG PO QD|PLAVIX ( CLOPIDOGREL )[1109,1131]|||75MG[1132,1137]||PO[1175,1177]|||||213169|32968|clopidogrel
+37	NIACIN , VIT .|NIACIN[1266,1272]|||||||||C0027996|7393|7393|nicotinic acid
+38	B-3 and ATORVASTATIN CALCIUM|ATORVASTATIN CALCIUM[1289,1309]|||||||||C0286650|83366|83366|atorvastatin calcium
+48	LEUPROLIDE ADMIT DIAGNOSIS :|LEUPROLIDE[1523,1533]|||||||||C0085272|42375|42375|leuprolide (obsolete)
+64	CP / burning lasted several hours and was relieved after she received Maalox , lidocaine , and NTG in the ED .|Maalox[2900,2906]|||||||several hours[2850,2863]||C0065461|29115|612|aluminium hydroxide
+64	CP / burning lasted several hours and was relieved after she received Maalox , lidocaine , and NTG in the ED .|lidocaine[2909,2918]|||||||||C0023660|6387|6387|lidocaine (obsolete)
+64	CP / burning lasted several hours and was relieved after she received Maalox , lidocaine , and NTG in the ED .|NTG[2925,2928]||||||||||198040|4917|glyceryl trinitrate
+65	She reports compliance with her ASA + plavix .|plavix[2979,2985]|||||||||C0633084|174742|32968|clopidogrel
+65	She reports compliance with her ASA + plavix .|ASA[2973,2976]|||||||||C1740879|667904|9525|salicylic acid
+70	CTAB. nl s1s2 , reg , no m / r. no chest tenderness .|m / r.[3200,3206]||||||||||7916|7916|m / r.
+79	cont asa , statin , plavix , bblkr .|asa[3545,3548]|||||||||C1740879|667904|9525|salicylic acid
+79	cont asa , statin , plavix , bblkr .|statin[3551,3557]||||||||||||
+79	cont asa , statin , plavix , bblkr .|plavix[3560,3566]|||||||||C0633084|174742|32968|clopidogrel
+81	EF 55% and inf / post HK .|inf[3613,3616]||||||||||860484|860484|inf formula,sp.met,lac fr,iron
+83	2. ENDO : continue levoxyl for hypothyroidism , synarel for endometriosis .|levoxyl[3686,3693]|||||||||C0721346|218002|10582|levothyroxine
+83	2. ENDO : continue levoxyl for hypothyroidism , synarel for endometriosis .|synarel[3715,3722]||||||||||53524|28656|nafarelin (obsolete)
+84	3. MSK : cervical spondylosis , tylenol for pain .|tylenol[3775,3782]||||||||||202433|161|paracetamol
+85	4. GI : h / o GERD- nexium .|nexium[3814,3820]||||||||||284799|283742|esomeprazole

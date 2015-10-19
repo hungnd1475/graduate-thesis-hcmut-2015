@@ -1,0 +1,7 @@
+22	The patient was discharged after one week on iron sulfate .|iron sulfate[1232,1244]|||||||one week[1220,1228]|||24947|24947|ferrous sulfate
+24	He went to Sondi Memorial where he ruled out for myocardial infarction and was found to have a left lower lobe infiltrate / pneumonia , started on cefuroxime .|cefuroxime[1595,1605]|||||||||C0007562|2194|2194|cefuroxime
+25	His respiratory condition continued to deteriorate despite aggressive chest physical therapy for possible blood , given Lasix for congestive heart failure , became hypotensive , hypoxic and intubated .|Lasix[1728,1733]|||||||||C0699992|202991|4603|furosemide
+26	The patient was found to have expanding pulmonary infiltrates on chest x-ray , developed acute renal insufficiency with minimal urine output , less than 10 cc an hour , started on dopamine for hemodynamic instability .|dopamine[1990,1998]|||||||||C0013030|3628|3628|dopamine
+32	At the Oaksgekesser/ Memorial Hospital he was quite hypotensive , requiring dopamine at 1,000 , Levo at 12 .|dopamine[2789,2797]|||||||||C0013030|3628|3628|dopamine
+32	At the Oaksgekesser/ Memorial Hospital he was quite hypotensive , requiring dopamine at 1,000 , Levo at 12 .|Levo[2809,2813]||||||||||877015|877015|levoleucovorin
+34	A urinalysis was obtained which showed blood , urine sediment was active with positive dysmorphic cells , red cell casts , and 1+ albumin with mild protein uria .|albumin[3168,3175]|||||||||C0001924|433|433|albumin

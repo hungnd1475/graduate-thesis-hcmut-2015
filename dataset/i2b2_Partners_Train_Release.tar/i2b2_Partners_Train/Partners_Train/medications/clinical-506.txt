@@ -1,0 +1,12 @@
+21	LOPRESSOR ( METOPROLOL TARTRATE ) 12.5 MG PO BID|LOPRESSOR ( METOPROLOL TARTRATE )[452,485]|||12.5MG[486,493]||PO[494,496]|BID[497,500]|||C0708591|866516|6918|metoprolol
+24	ENALAPRIL MALEATE 20|ENALAPRIL MALEATE[588,605]|||20[606,608]||||||C2718823|858809|3827|enalapril
+50	Put on NTG drip without relief .|NTG[1610,1613]|||||drip[1614,1618]|||||198040|4917|glyceryl trinitrate
+51	Pain 2/10 persisted , relieved by MSO4 .|MSO4[1670,1674]||||||||||||
+61	Captopril and nitropaste to control pressure .|Captopril[2053,2062]|||||||||C0006938|1998|1998|captopril
+62	MSO4 for CP .|MSO4[2100,2104]||||||||||||
+67	- Pt placed on captopril 25 tid , lopressor 12.5 BID and NTG paste SS , achieving normal BP w / in 5 hrs of adm to floor .|captopril[2265,2274]|||25[2275,2277]|||tid[2278,2281]|||C0984502|315561|1998|captopril
+67	- Pt placed on captopril 25 tid , lopressor 12.5 BID and NTG paste SS , achieving normal BP w / in 5 hrs of adm to floor .|lopressor[2284,2293]|||12.5[2294,2298]|||BID[2299,2302]|||C0700776|203344|6918|metoprolol
+67	- Pt placed on captopril 25 tid , lopressor 12.5 BID and NTG paste SS , achieving normal BP w / in 5 hrs of adm to floor .|NTG[2307,2310]|||||||5 hrs[2349,2354]|||198040|4917|glyceryl trinitrate
+71	- controlled on captopril + lopressor to 110-130s ; NTG paste causing 30 pt drop so d / c&apos;d .|lopressor[2558,2567]|||||||||C0700776|203344|6918|metoprolol
+71	- controlled on captopril + lopressor to 110-130s ; NTG paste causing 30 pt drop so d / c&apos;d .|captopril[2546,2555]|||||||||C0006938|1998|1998|captopril
+71	- controlled on captopril + lopressor to 110-130s ; NTG paste causing 30 pt drop so d / c&apos;d .|NTG[2582,2585]||||||||||198040|4917|glyceryl trinitrate

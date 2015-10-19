@@ -1,0 +1,25 @@
+17	Metoprolol 50 mg PO bid , Isordil 20 mg PO tid , enteric coated aspirin 1 PO qd .|Metoprolol[568,578]|||50mg[579,584]||PO[585,587]|bid[588,591]||||866514|6918|metoprolol
+17	Metoprolol 50 mg PO bid , Isordil 20 mg PO tid , enteric coated aspirin 1 PO qd .|Isordil[594,601]|||20mg[602,607]||PO[608,610]|tid[611,614]||||793867|6058|isosorbide dinitrate
+17	Metoprolol 50 mg PO bid , Isordil 20 mg PO tid , enteric coated aspirin 1 PO qd .|enteric coated aspirin[617,639]||||1[640,641]|PO[642,644]|qd[645,647]||||215439|215439|enteric coated aspirin
+29	He had hypotension with beta blockers and therefore they were not started .|beta blockers[2161,2174]||||||||||401870|401870|beta blockers
+31	On day nine , he had a low level exercise tolerance test with Thallium which was positive for 2.5 mm horizontal depressions in II , III , and AVF , and 1.5 mm downsloping ST depressions in V5 and V6 , as well as some anteroseptal redistribution on Thallium .|Thallium[2575,2583]|||||||||C0039738|1311633|1311633|thallium
+41	He was treated with oxygen , aspirin , five sublingual nitroglycerins , heparin , and was eventually made pain free with that regimen .|aspirin[3464,3471]|||||||||C0004057|1191|1191|acetylsalicylic acid
+41	He was treated with oxygen , aspirin , five sublingual nitroglycerins , heparin , and was eventually made pain free with that regimen .|nitroglycerins[3490,3504]|||||sublingual[3479,3489]|||||||
+41	He was treated with oxygen , aspirin , five sublingual nitroglycerins , heparin , and was eventually made pain free with that regimen .|heparin[3507,3514]|||||||||C0019134|235473|235473|heparin,porcine
+49	On admission , he was on Isordil 10 tid and enteric coated aspirin , but he was not taking either of these medications .|Isordil[4025,4032]|||10[4033,4035]|||tid[4036,4039]|||C1606171|571973|6058|isosorbide dinitrate
+49	On admission , he was on Isordil 10 tid and enteric coated aspirin , but he was not taking either of these medications .|enteric coated aspirin[4044,4066]||||||||||215439|215439|enteric coated aspirin
+77	He was treated with aspirin , heparin , and intravenous nitroglycerin .|aspirin[6105,6112]|||||||||C0004057|1191|1191|acetylsalicylic acid
+77	He was treated with aspirin , heparin , and intravenous nitroglycerin .|heparin[6115,6122]|||||||||C0019134|235473|235473|heparin,porcine
+77	He was treated with aspirin , heparin , and intravenous nitroglycerin .|nitroglycerin[6141,6154]|||||intravenous[6129,6140]||||C0017887|4917|4917|glyceryl trinitrate
+78	No beta blockers was started because of his history of hypertension with beta blockers and because his blood pressure of only 110/70 .|beta blockers[6160,6173]||||||||||401870|401870|beta blockers
+78	No beta blockers was started because of his history of hypertension with beta blockers and because his blood pressure of only 110/70 .|beta blockers[6230,6243]||||||||||401870|401870|beta blockers
+86	A beta blocker was started with Metoprolol initially at 25 mg PO bid and eventually increased to 50 mg PO bid .|beta blocker[7133,7145]||||||||||401870|401870|beta blocker
+86	A beta blocker was started with Metoprolol initially at 25 mg PO bid and eventually increased to 50 mg PO bid .|Metoprolol[7163,7173]|||50mg[7228,7233]||PO[7193,7195]|bid[7196,7199]||||866514|6918|metoprolol
+86	A beta blocker was started with Metoprolol initially at 25 mg PO bid and eventually increased to 50 mg PO bid .|Metoprolol[7133,7145]|||25mg[7187,7192]||PO[7234,7236]|bid[7237,7240]|||null|866924|6918|metoprolol
+89	This treadmill test was done on medications , including beta blockers , in hopes to assess an amount of ischemia on treatment .|beta blockers[7517,7530]||||||||||401870|401870|beta blockers
+90	The patient was able to exercise for approximately nine minutes on a modified Bruce protocol , however , he did not reach his predicted maximal heart rate while he was on the beta blockade .|beta blockade[7764,7777]|||||||nine minutes[7640,7652]|||1423936|5933|jodum
+93	Thallium images revealed a moderate sized region of ischemic but viable myocardium involving the anteroseptal and lateral segments of the left ventricle .|Thallium[8014,8022]|||||||||C0039738|1311633|1311633|thallium
+95	These images were essentially unchanged compared with the previous Thallium images in May 1993 .|Thallium[8315,8323]|||||||||C0039738|1311633|1311633|thallium
+103	The importance of quitting smoking as well as continuing to follow his medical regimen was emphasized to the daughter and to the patient .|medical regimen[8952,8967]||||||||||106573|106573|medical regimen
+104	She will be actively involved in encouraging the patient to comply with this medical regimen and also to follow up with Dr.|medical regimen[9097,9112]||||||||||106573|106573|medical regimen
+108	Despite being on heparin for a short time , his hematocrit remained very stable with only a small dip after the catheterization was done .|heparin[9286,9293]|||||||||C0019134|235473|235473|heparin,porcine
