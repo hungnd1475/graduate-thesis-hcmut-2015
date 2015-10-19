@@ -31,26 +31,5 @@ namespace HCMUT.EMRCorefResol.English.Features
 
             return String.Join("", arr);
         }
-
-        private List<string> getDefinitions(string term)
-        {
-            string url = "http://www.stands4.com/services/v2/abbr.php?uid=4328&tokenid=HAmSoZHuDnOCm0we&term=" + term;
-
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-            Stream s = request.GetResponse().GetResponseStream();
-            StreamReader sr = new StreamReader(s);
-            string xml = sr.ReadToEnd();
-
-            XmlDocument doc = new XmlDocument();
-            doc.LoadXml(xml);
-            XmlNode results = doc.DocumentElement.SelectSingleNode("/results");
-
-            List<string> l = new List<string>();
-            foreach (XmlNode result in results.ChildNodes)
-            {
-                l.Add(result.SelectSingleNode("definition").InnerText);
-            }
-            return l;
-        }
     }
 }

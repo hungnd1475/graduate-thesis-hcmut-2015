@@ -11,12 +11,7 @@ namespace HCMUT.EMRCorefResol.English.Features
         public CapitolMatchFeature(IConceptPair instance)
             :base("Capitol-Match", 2, 0)
         {
-            var alias = new AliasFeature(instance);
-            if(alias.GetCategoricalValue() == 1)
-            {
-                SetCategoricalValue(1);
-                return;
-            }
+            if (!checkPhrase(instance)) return;
 
             var anaAbbre = getAbbre(instance.Anaphora.Lexicon);
             var anteAbbre = getAbbre(instance.Antecedent.Lexicon);
@@ -26,6 +21,14 @@ namespace HCMUT.EMRCorefResol.English.Features
                 SetCategoricalValue(1);
                 return;
             }
+        }
+
+        private bool checkPhrase(IConceptPair pair)
+        {
+            var anaArr = pair.Anaphora.Lexicon.Split(' ');
+            var anteArr = pair.Antecedent.Lexicon.Split(' ');
+
+            return (anaArr.Length == 1 && anteArr.Length == 1) ? false : true;
         }
 
         private string getAbbre(string raw)
