@@ -8,7 +8,7 @@ namespace HCMUT.EMRCorefResol.English.Features
 {
     class PreceededNonPatientFeature : Feature
     {
-        public PreceededNonPatientFeature(PersonInstance instance, EMR emr)
+        public PreceededNonPatientFeature(PersonInstance instance, EMR emr, IPatientDeterminer PatientDeterminer)
             :base("Preceeded-NonPatient", 2, 0)
         {
             var index = emr.Concepts.IndexOf(instance.Concept);
@@ -16,9 +16,9 @@ namespace HCMUT.EMRCorefResol.English.Features
             if(index > 0)
             {
                 var preceeded = emr.Concepts[index - 1];
-                var isPatient = new PatientKeywordFeature(new PersonInstance(preceeded));
+                var isPatient = PatientDeterminer.IsPatient(preceeded);
 
-                if(isPatient.GetCategoricalValue() != 1)
+                if(isPatient.HasValue && isPatient.Value)
                 {
                     SetCategoricalValue(1);
                 }

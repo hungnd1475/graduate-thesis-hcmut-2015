@@ -48,7 +48,7 @@ namespace HCMUT.EMRCorefResol.English
             var patientChain = _groundTruth.GetPatientChain(KeywordService.Instance.PATIENT_KEYWORDS,
                 KeywordService.Instance.RELATIVES);
             var classValue = patientChain != null ? (patientChain.Contains(instance.Concept) ? 1 : 0) : 0;
-            return new PersonInstanceFeatures(instance, EMR, classValue);
+            return new PersonInstanceFeatures(instance, EMR, _patientDeterminer, classValue);
         }
 
         public IFeatureVector Extract(TreatmentPair instance)

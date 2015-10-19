@@ -68,7 +68,7 @@ namespace HCMUT.EMRCorefResol.English
                             KeywordService.Instance.RELATIVES);
                         classValue = patientChain != null ? (patientChain.Contains(instance.Concept) ? 1 : 0) : 0;
                     }
-                    return new PersonInstanceFeatures(instance, EMR, classValue);
+                    return new PersonInstanceFeatures(instance, EMR, _patientDeterminer, classValue);
                 }
             
                 
