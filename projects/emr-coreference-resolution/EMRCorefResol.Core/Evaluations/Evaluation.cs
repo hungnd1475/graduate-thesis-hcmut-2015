@@ -8,6 +8,8 @@ namespace HCMUT.EMRCorefResol.Evaluations
 {
     public struct Evaluation
     {
+        public static readonly Evaluation Zero = new Evaluation(0d, 0d, 0d);
+
         public double Precision { get; }
         public double Recall { get; }
         public double FMeasure { get; }

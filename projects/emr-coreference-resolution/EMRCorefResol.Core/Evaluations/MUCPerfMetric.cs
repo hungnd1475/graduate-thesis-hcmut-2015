@@ -8,38 +8,13 @@ namespace HCMUT.EMRCorefResol.Evaluations
 {
     public class MUCPerfMetric : IPerfMetric
     {
-        public Evaluation Evaluate(CorefChainCollection groundTruth, CorefChainCollection systemChains)
+        public Evaluation Evaluate(EMR emr, CorefChainCollection groundTruth, CorefChainCollection systemChains)
         {
-            var precision = CalcPrecision(groundTruth, systemChains);
-            var recall = CalcRecall(groundTruth, systemChains);
-            var fmeasure = 2 * precision * recall / (precision + recall);
-            return new Evaluation(precision, recall, fmeasure);
-        }
+            var p = systemChains.Aggregate(0d, (t, s) => t + (double)(s.Count - m(s, groundTruth)) / (s.Count - 1));
+            var r = groundTruth.Aggregate(0d, (t, g) => t + (double)(g.Count - m(g, systemChains)) / (g.Count - 1));
 
-        private double CalcPrecision(CorefChainCollection groundTruth, CorefChainCollection systemChains)
-        {
-            double u = 0d, l = 0d;
-
-            foreach (var s in systemChains)
-            {
-                u += (s.Count - m(s, groundTruth));
-                l += (s.Count - 1);
-            }
-
-            return l != 0d ? u / l : u;
-        }
-
-        private double CalcRecall(CorefChainCollection groundTruth, CorefChainCollection systemChains)
-        {
-            double u = 0d, l = 0d;
-
-            foreach (var g in groundTruth)
-            {
-                u += (g.Count - m(g, systemChains));
-                l += (g.Count - 1);
-            }
-
-            return l != 0d ? u / l : u;
+            var f = 2 * p * r / (p + r);
+            return new Evaluation(p, r, f);
         }
 
         private int m(CorefChain chain, CorefChainCollection chainsColl)

@@ -8,7 +8,7 @@ namespace HCMUT.EMRCorefResol.Evaluations
 {
     public interface IPerfMetric
     {
-        Evaluation Evaluate(CorefChainCollection groundTruth,
+        Evaluation Evaluate(EMR emr, CorefChainCollection groundTruth,
             CorefChainCollection systemChains);
     }
 }

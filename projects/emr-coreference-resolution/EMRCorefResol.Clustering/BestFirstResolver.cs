@@ -82,7 +82,7 @@ namespace HCMUT.EMRCorefResol.CorefResolvers
             {
                 var t = ch.OrderBy(c => c);
                 var ante = t.First();
-                resultChains.Add(new CorefChain(t, ante, ante.Type));
+                resultChains.Add(new CorefChain(t, ante.Type));
             }
 
             return new CorefChainCollection(resultChains);              

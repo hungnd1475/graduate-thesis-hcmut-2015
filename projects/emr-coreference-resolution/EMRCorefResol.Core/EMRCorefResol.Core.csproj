@@ -90,6 +90,8 @@
     <Compile Include="Classification\IClasProblemSerializer.cs" />
     <Compile Include="Concept.cs" />
     <Compile Include="ConceptCollection.cs" />
+    <Compile Include="Evaluations\BCubePerfMetric.cs" />
+    <Compile Include="Evaluations\CEAFPerfMetric.cs" />
     <Compile Include="Evaluations\Evaluation.cs" />
     <Compile Include="Evaluations\IPerfMetric.cs" />
     <Compile Include="Evaluations\MUCPerfMetric.cs" />
@@ -123,6 +125,7 @@
     <Compile Include="Utilities\Caches\UnlimitedCache.cs" />
     <Compile Include="Logging\FileLogger.cs" />
     <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Utilities\GenericHelper.cs" />
     <Compile Include="Utilities\Keywords\AhoCorasickKeywordDictionary.cs" />
     <Compile Include="Utilities\Keywords\RegexKeywordDictionary.cs" />
     <Compile Include="Logging\ConsoleLogger.cs" />
