@@ -1,0 +1,24 @@
+19	Margaret 's Center for Women & Infants on 08-02 following a prolonged admission for STEMI , respiratory failure felt secondary to pulmonary edema requiring intubation and subsequent tracheostomy 02-22 failure to wean , sepsis and C.difficile colitis treated with Vancomycin and Flagyl with a course|Vancomycin[726,736]|||||||||C0042313|11124|11124|vancomycin
+19	Margaret 's Center for Women & Infants on 08-02 following a prolonged admission for STEMI , respiratory failure felt secondary to pulmonary edema requiring intubation and subsequent tracheostomy 02-22 failure to wean , sepsis and C.difficile colitis treated with Vancomycin and Flagyl with a course|Flagyl[741,747]||||||||||202866|6922|metronidazole
+20	of Levophed .|Levophed[765,773]|||||||||C1450037|227559|7512|norepinephrine
+25	At OSH , sputum cultures grew Pseudomonas and MRSA , and he was restarted on Zosyn ( 08-08 ) and Vancomycin ( 08-09 ).|Zosyn[1076,1081]|||||||||C0250482|74170|8339|piperacillin
+25	At OSH , sputum cultures grew Pseudomonas and MRSA , and he was restarted on Zosyn ( 08-08 ) and Vancomycin ( 08-09 ).|Vancomycin[1096,1106]|||||||||C0042313|11124|11124|vancomycin
+26	He completed his course of Vancomycin on 2017-08-10 .|Vancomycin[1145,1155]|||||||||C0042313|11124|11124|vancomycin
+41	Stool sent for C.diff and given Flagyl 500 mg PO X 1 dose .|Flagyl[1938,1944]|||500mg[1945,1951]||PO[1952,1954]|X 1[1955,1958]|||C0708602|207290|6922|metronidazole
+53	10. Recent MRSA pneumonia and sepsis 2017-07-21 , treated with Vancomycin|Vancomycin[2422,2432]|||||||||C0042313|11124|11124|vancomycin
+54	11. C. difficile colitis treated with Flagyl ( completed 08-10 )|Flagyl[2471,2477]||||||||||202866|6922|metronidazole
+160	MICRO DATA : 2017-08-17 STOOL CLOSTRIDIUM DIFFICILE TOXIN ASSAY - PENDING 2017-08-16 CSF ; SPINAL FLUID GRAM STAIN - neg FLUID CULTURE - neg ; FUNGAL CULTURE - PENDING ; ACID FAST CULTURE - PENDING ; VIRAL CULTURE - PENDING 2017-08-15 SPUTUM CULTURE - PRELIMINARY { PSEUDOMONAS AERUGINOSA|CSF[7061,7064]||||||||||40209|40209|csf
+160	MICRO DATA : 2017-08-17 STOOL CLOSTRIDIUM DIFFICILE TOXIN ASSAY - PENDING 2017-08-16 CSF ; SPINAL FLUID GRAM STAIN - neg FLUID CULTURE - neg ; FUNGAL CULTURE - PENDING ; ACID FAST CULTURE - PENDING ; VIRAL CULTURE - PENDING 2017-08-15 SPUTUM CULTURE - PRELIMINARY { PSEUDOMONAS AERUGINOSA|PSEUDOMONAS AERUGINOSA[7242,7264]||||||||||1310913|1310913|pseudomonas aeruginosa
+172	He was disconnected from the ventilator and all medications beyond a morphine drip were stopped , and he expired shortly thereafter .|morphine[8622,8630]|||||drip[8631,8635]||||C0026549|7052|7052|morphine
+175	Jevity 1.2 65 mL / hour continuous with water 240 cc q 8 hours|Jevity[8739,8745]|||1.2[8746,8749]|||q 8 hours[8792,8801]||||1604404|223040|jevity
+176	Lasix 40 mg IV QAM ( given 08-14 )|Lasix[8802,8807]|||40mg[8808,8813]||IV[8814,8816]|QAM[8817,8820]|||C1597894|565458|4603|furosemide
+177	Vancomycin 1 gm IV q 36 hours ( last dose at 2000 on 08-13 ) .|Vancomycin[8837,8847]|||1gm[8848,8852]||IV[8853,8855]|q 36 hours[8856,8866]|||null|997839|11124|vancomycin
+179	ASA 325 mg PO QD|ASA[8919,8922]|||325mg[8923,8929]||PO[8930,8932]|QD[8933,8935]||||1050241|1191|acetylsalicylic acid
+180	Lansoprazole 30 mg PO QAM|Lansoprazole[8936,8948]|||30mg[8949,8954]||PO[8955,8957]|QAM[8958,8961]|||null|1603846|17128|lansoprazole
+181	Heparin 5000 units SC TID|Heparin[8962,8969]|||5000[8970,8974]||SC[8981,8983]|TID[8984,8987]|||C1125215|329807|5224|heparin
+182	Zosyn 4.5 gm IV q 8 hours ( last dose on 08-14 at 1400 ) , started 08-08 .|Zosyn[8988,8993]|||4.5gm[8994,9000]||IV[9001,9003]|q 8 hours[9004,9013]|||C0709825|884254|8339|piperacillin
+183	Metoprolol 37.5 mg q 12 hours ( last dose 07/25 in AM )|Metoprolol[9063,9073]|||37.5mg[9074,9081]|||q 12 hours[9082,9092]|||null|1606346|6918|metoprolol
+185	Ipratropium / Albuterol inhaler 4 puffs QID|Ipratropium / Albuterol[9164,9187]||||4 puffs[9196,9203]||QID[9204,9207]|||C0717386|214199|214199|ipratropium / albuterol
+186	Completed course of Flagyl 07-25 --> 08-10 .|Flagyl[9228,9234]|||07 - 25[9235,9240]|||||||202866|6922|metronidazole
+210	10. Recent MRSA pneumonia and sepsis 2017-07-21 , treated with Vancomycin|Vancomycin[9975,9985]|||||||||C0042313|11124|11124|vancomycin
+211	11. C. difficile colitis treated with Flagyl ( completed 08-10 )|Flagyl[10024,10030]||||||||||202866|6922|metronidazole

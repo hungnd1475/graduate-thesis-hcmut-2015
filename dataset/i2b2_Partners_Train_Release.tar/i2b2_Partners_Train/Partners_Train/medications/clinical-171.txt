@@ -1,0 +1,46 @@
+12	Kacholera Junk was a 34 year old gentleman with no significant past medical history except for a history of of intravenous drug abuse .|intravenous drug[313,329]||||||||||3683|3683|intravenous drug
+17	He relates using large doses of Cocaine and Heroin early in the morning on the day of admission .|Cocaine[777,784]|||||||||C0009170|2653|2653|cocaine
+17	He relates using large doses of Cocaine and Heroin early in the morning on the day of admission .|Heroin[789,795]||||||in the morning[802,816]|||C0011892|3304|3304|diacetylmorphine
+23	He was treated with Dopamine for hypertension and Inderal for tachycardia .|Dopamine[1488,1496]|||||||||C0013030|3628|3628|dopamine
+23	He was treated with Dopamine for hypertension and Inderal for tachycardia .|Inderal[1518,1525]|||||||||C0591636|151890|8787|propranolol
+24	He received two amps of Narcan .|Narcan[1568,1574]|||||||||C0684237|197117|7242|naloxone
+25	He received one gram of Ceftriaxone intravenously after blood cultures were drawn .|Ceftriaxone[1601,1612]|||onegram[1589,1597]||intravenously[1613,1626]||||C0007561|2193|2193|ceftriaxone
+29	Toxicology screen at Sephsandpot Center revealed Cocaine and Quinine .|Cocaine[1951,1958]|||||||||C0009170|2653|2653|cocaine
+29	Toxicology screen at Sephsandpot Center revealed Cocaine and Quinine .|Quinine[1963,1970]|||||||||C0034417|9071|9071|quinine
+32	He was reported to have a seizure , although the nature of this was unclear , and received Valium for this .|Valium[2201,2207]|||||||||C0699187|202472|3322|diazepam
+38	His meds on transfer to FIH were Levophed , Dopamine , and Ceftriaxone .|Levophed[2419,2427]|||||||||C1450037|227559|7512|norepinephrine
+38	His meds on transfer to FIH were Levophed , Dopamine , and Ceftriaxone .|Dopamine[2430,2438]|||||||||C0013030|3628|3628|dopamine
+38	His meds on transfer to FIH were Levophed , Dopamine , and Ceftriaxone .|Ceftriaxone[2445,2456]|||||||||C0007561|2193|2193|ceftriaxone
+44	He has a history of intravenous drug abuse , no alcohol abuse or tobacco abuse .|intravenous drug[2631,2647]||||||||||3683|3683|intravenous drug
+87	The serum toxicology was positive for Cocaine on admission to the Fairm of Ijordcompmac Hospital as well as the Sephsandpot Center .|Cocaine[6296,6303]|||||||||C0009170|2653|2653|cocaine
+93	The patient was admitted with the diagnosis of Cocaine induced rhabdomyolysis , renal failure , disseminated intravascular coagulation , shock , hepatic failure , pancreatitis , and thrombocytopenia in the setting of Cocaine intoxication .|Cocaine[6816,6823]|||||||||C0009170|2653|2653|cocaine
+93	The patient was admitted with the diagnosis of Cocaine induced rhabdomyolysis , renal failure , disseminated intravascular coagulation , shock , hepatic failure , pancreatitis , and thrombocytopenia in the setting of Cocaine intoxication .|Cocaine[6986,6993]|||||||||C0009170|2653|2653|cocaine
+96	The patient had massive Cocaine induced rhabdomyolysis .|Cocaine[7181,7188]|||||||||C0009170|2653|2653|cocaine
+102	The patient &apos;s urine output was further augmented by adding Dopamine .|Dopamine[7723,7731]|||||||||C0013030|3628|3628|dopamine
+108	The urinalysis revealed 4+ albumin with marked occult blood .|albumin[8064,8071]|||||||||C0001924|433|433|albumin
+114	On admission the patient &apos;s prothrombin time was 27.7 with a partial thromboplastin time of greater than 100 and a d-dimer positive at 8 with a fibrinogen of 69 .|prothrombin[8435,8446]||||||||||8872|8872|factor ii (prothrombin)
+116	The patient was supported with abundant use of fresh frozen plasma , cryoprecipitate , platelets , and packed red blood cells .|fresh frozen plasma[8693,8712]||||||||||4563|4563|fresh frozen plasma
+116	The patient was supported with abundant use of fresh frozen plasma , cryoprecipitate , platelets , and packed red blood cells .|cryoprecipitate[8715,8730]||||||||||768688|768688|cryoprecipitate
+116	The patient was supported with abundant use of fresh frozen plasma , cryoprecipitate , platelets , and packed red blood cells .|packed red blood cells[8749,8771]||||||||||834201|834201|packed red blood cells
+117	His DIC was further complicated by hepatic failure which resulted in poor endogenous production of clotting factors and he remained fresh frozen plasma dependent .|DIC[8778,8781]||||||||||3098|3098|dacarbazine
+117	His DIC was further complicated by hepatic failure which resulted in poor endogenous production of clotting factors and he remained fresh frozen plasma dependent .|fresh frozen plasma[8906,8925]||||||||||4563|4563|fresh frozen plasma
+119	The patient remained pressor dependent throughout his hospitalization .|pressor[8976,8983]||||||||||||
+120	He was maintained variously on Levophed , Dobutamine , Dopamine , and ultimately Epinephrine for blood pressure support .|Levophed[9058,9066]|||||||||C1450037|227559|7512|norepinephrine
+120	He was maintained variously on Levophed , Dobutamine , Dopamine , and ultimately Epinephrine for blood pressure support .|Dobutamine[9069,9079]|||||||||C0012963|3616|3616|dobutamine
+120	He was maintained variously on Levophed , Dobutamine , Dopamine , and ultimately Epinephrine for blood pressure support .|Dopamine[9082,9090]|||||||||C0013030|3628|3628|dopamine
+120	He was maintained variously on Levophed , Dobutamine , Dopamine , and ultimately Epinephrine for blood pressure support .|Epinephrine[9108,9119]|||||||||C0014563|3992|3992|epinephrine
+130	He had complete loss of synthetic and conjugation function of the liver with rising bilirubin and falling albumin with dependence on transfusion for support of his prothrombin time .|prothrombin[9965,9976]||||||||||8872|8872|factor ii (prothrombin)
+130	He had complete loss of synthetic and conjugation function of the liver with rising bilirubin and falling albumin with dependence on transfusion for support of his prothrombin time .|albumin[9907,9914]|||||||||C0001924|433|433|albumin
+133	6-Cocaine intoxication .|Cocaine[10271,10278]|||||||||C0009170|2653|2653|cocaine
+139	The first was Acinetobacter calcoaceticus subspecies anitratus , treated with Ciprofloxacin and Gentamicin .|Ciprofloxacin[10719,10732]|||||||||C0008809|2551|2551|ciprofloxacin
+139	The first was Acinetobacter calcoaceticus subspecies anitratus , treated with Ciprofloxacin and Gentamicin .|Gentamicin[10737,10747]|||||||||C0017436|662411|662411|gentamicins
+140	He subsequently developed a staphylococcus aureus pneumonia which was treated with Vancomycin , dosed to levels appropriate for his renal failure .|Vancomycin[10833,10843]|||||||||C0042313|11124|11124|vancomycin
+140	He subsequently developed a staphylococcus aureus pneumonia which was treated with Vancomycin , dosed to levels appropriate for his renal failure .|staphylococcus aureus[10778,10799]||||||||||1311275|1311275|staphylococcus aureus
+141	He was seen in consultation by the Infectious Disease Service who advised us on antibiotic choices daily .|antibiotic[10978,10988]||||||daily[10997,11002]||||896|896|antibiotic
+143	The amylase on admission was 279 with a lipase of 161 .|lipase[11062,11068]|||||||||C0023764|6406|6406|lipase
+143	The amylase on admission was 279 with a lipase of 161 .|amylase[11026,11033]|||||||||C0002712|743|743|diastase
+147	These were treated with Vancomycin .|Vancomycin[11352,11362]|||||||||C0042313|11124|11124|vancomycin
+149	The patient &apos;s hematocrit was 33% on admission and fell to 28 requiring 4 units of packed red blood cells over the course of his hospitalization .|packed red blood cells[11465,11487]||||||||||834201|834201|packed red blood cells
+154	The patient was treated empirically with Nafcillin and Ceftriaxone for meningitis and sinusitis .|Nafcillin[11899,11908]|||||||||C0027324|7233|7233|nafcillin
+154	The patient was treated empirically with Nafcillin and Ceftriaxone for meningitis and sinusitis .|Ceftriaxone[11913,11924]|||||||||C0007561|2193|2193|ceftriaxone
+161	Cocaine intoxication , rhabdomyolysis , renal failure , disseminated intravascular coagulation , septic shock , hepatic failure , pneumonia , pancreatitis , catheter tip infection , anemia , coma .|Cocaine[12551,12558]|||||||||C0009170|2653|2653|cocaine

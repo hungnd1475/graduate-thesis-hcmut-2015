@@ -1,0 +1,9 @@
+23	1. Atenolol 25 mg p.o. q. day .|Atenolol[1013,1021]|||25mg[1022,1027]||p.o.[1028,1032]|q. day[1033,1039]|||C0687939|197380|1202|atenolol
+24	2. Enteric-coated aspirin 325 mg p.o. q. day .|coated aspirin[1053,1067]|||325mg[1068,1074]||p.o.[1075,1079]|q. day[1080,1086]||||212033|1191|acetylsalicylic acid
+25	3. Nitroglycerin sublingual p.r.n.|Nitroglycerin[1092,1105]|||||sublingual[1106,1116]|||p.r.n[1117,1122]||1295706|4917|glyceryl trinitrate
+57	The patient was brought to the cardiothoracic Intensive Care Unit in stable condition on minimal pressor support .|pressor[2792,2799]||||||||||||
+60	This was treated with sodium bicarbonate and a Swan-Ganz was placed to provide close hemodynamic monitoring .|sodium bicarbonate[2969,2987]|||||||||C0074722|36676|36676|sodium bicarb (obsolete)
+78	1. Lopressor 75 mg p.o. twice a day .|Lopressor[4327,4336]|||75mg[4337,4342]||p.o.[4343,4347]|a day[4354,4359]|||C3234139|1180279|6918|metoprolol
+79	2. Colace 100 mg p.o. twice a day .|Colace[4365,4371]|||100mg[4372,4378]||p.o.[4379,4383]|a day[4390,4395]|||C0711644|1247756|82003|docusate
+80	3. Percocet one to two p.o. q. four hours p.r.n.|Percocet[4401,4409]||||one to two[4410,4420]|p.o.[4421,4425]||four hours[4429,4439]|p.r.n.[4440,4446]|C3239003|1185228|161|paracetamol
+81	4. Aspirin 325 mg p.o. q. day .|Aspirin[4450,4457]|||325mg[4458,4464]||p.o.[4465,4469]|q. day[4470,4476]||||1050241|1191|acetylsalicylic acid

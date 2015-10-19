@@ -1,0 +1,1 @@
+30	Discharge Medications : motrin 400-600 mg every 8 hours as needed for pain|motrin[744,750]|||400 - 600mg[751,761]|||every 8 hours[762,775]||as needed[776,785]|C1598147|565715|5640|ibuprofen

@@ -1,0 +1,10 @@
+24	Lipitor , Flexeril , hydrochlorothiazide and Norvasc .|Lipitor[873,880]|||||||||C0593906|153165|83367|atorvastatin
+24	Lipitor , Flexeril , hydrochlorothiazide and Norvasc .|Flexeril[883,891]|||||||||C0936055|224954|21949|cyclobenzaprine
+24	Lipitor , Flexeril , hydrochlorothiazide and Norvasc .|hydrochlorothiazide[894,913]|||||||||C0020261|5487|5487|hydrochlorothiazide
+24	Lipitor , Flexeril , hydrochlorothiazide and Norvasc .|Norvasc[918,925]||||||||||58927|17767|amlodipine
+48	1. Colace , 100 mg PO bid .|Colace[2167,2173]|||100mg[2176,2182]||PO[2183,2185]|bid[2186,2189]|||C0711644|1247756|82003|docusate
+49	2. Zantac , 150 mg PO bid .|Zantac[2195,2201]|||150mg[2204,2210]||PO[2211,2213]|bid[2214,2217]|||C0708704|827190|9143|ranitidine
+50	3. Percocet , 5/325 , 1-2 tabs PO q4-6h prn pain .|Percocet[2223,2231]||||2 tabs[2244,2250]|PO[2251,2253]|q4 - 6 h[2254,2259]||prn[2260,2263]|C3239003|1185228|161|paracetamol
+51	4. Lipitor , 10 mg PO daily .|Lipitor[2274,2281]|||10mg[2284,2289]||PO[2290,2292]|daily[2293,2298]|||C0593903|617314|83367|atorvastatin
+52	5. Hydrochlorothiazide , 25 mg PO daily .|Hydrochlorothiazide[2304,2323]|||25mg[2326,2331]||PO[2332,2334]|daily[2335,2340]|||C0977518|310798|5487|hydrochlorothiazide
+53	6. Norvasc , 5 mg PO daily .|Norvasc[2346,2353]|||5mg[2356,2360]||PO[2361,2363]|daily[2364,2369]|||C0715406|212549|17767|amlodipine

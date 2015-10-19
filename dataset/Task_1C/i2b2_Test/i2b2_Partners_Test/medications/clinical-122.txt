@@ -1,0 +1,17 @@
+30	Premarin vaginal once a month , enalapril , Tylenol , vitamins , and Halcion at night .|Premarin vaginal[1248,1264]||||||once a month[1265,1277]||||219358|219358|premarin vaginal
+30	Premarin vaginal once a month , enalapril , Tylenol , vitamins , and Halcion at night .|enalapril[1280,1289]|||||||||C0014025|3827|3827|enalapril
+30	Premarin vaginal once a month , enalapril , Tylenol , vitamins , and Halcion at night .|Tylenol[1292,1299]||||||||||202433|161|paracetamol
+30	Premarin vaginal once a month , enalapril , Tylenol , vitamins , and Halcion at night .|vitamins[1302,1310]|||||||||C0042890|11262|11262|vitamins
+30	Premarin vaginal once a month , enalapril , Tylenol , vitamins , and Halcion at night .|Halcion[1317,1324]||||||||||227423|10767|triazolam
+49	She was maintained on an epidural and PCA for pain control .|PCA[2250,2253]||||||||||1025540|1025540|pca
+51	When she was taking clear liquids , her pain medication was switched to p.o. pain regimen with good affect .|pain regimen[2425,2437]|||||p.o.[2420,2424]|||||1021856|1021856|pain regimen
+52	For blood pressure control she was maintained on metoprolol at the request of her primary care physician and enalapril was discontinued .|metoprolol[2506,2516]|||||||||C0025859|6918|6918|metoprolol
+52	For blood pressure control she was maintained on metoprolol at the request of her primary care physician and enalapril was discontinued .|enalapril[2566,2575]|||||||||C0014025|3827|3827|enalapril
+55	1. Tylenol 650 mg p.o. q.4.h. p.r.n. pain .|Tylenol[2870,2877]|||650mg[2878,2884]||p.o.[2885,2889]|||p.r.n.[2897,2903]|C1739190|646457|161|paracetamol
+56	2. Metoprolol 25 mg p.o. b.i.d.|Metoprolol[2914,2924]|||25mg[2925,2930]||p.o.[2931,2935]|b.i.d.[2936,2942]|||null|866924|6918|metoprolol
+57	3. Motrin 400 mg p.o. b.i.d. p.r.n. pain .|Motrin[2946,2952]|||400mg[2953,2959]||p.o.[2960,2964]|b.i.d.[2965,2971]||p.r.n.[2972,2978]|C0697672|201142|5640|ibuprofen
+58	4. Halcion 0.25 mg p.o. at night .|Halcion[2989,2996]|||0.25mg[2997,3004]||p.o.[3005,3009]||||C0710290|208681|10767|triazolam
+59	5. Dulcolax 10 to 20 mg PR b.i.d. p.r.n. constipation .|Dulcolax[3024,3032]|||10 to 20mg[3033,3044]|||b.i.d.[3048,3054]||p.r.n.[3055,3061]|C1604398|570190|1596|bisacodyl
+60	6. Senna 2 tablets p.o. b.i.d.|Senna[3080,3085]||||2 tablets[3086,3095]|p.o.[3096,3100]|b.i.d[3101,3106]||||373859|36387|sennosides
+67	She is to be maintained on metoprolol for blood pressure control and the restarting of her ACE inhibitor is to be decided by her primary care physician .|metoprolol[3469,3479]|||||||||C0025859|6918|6918|metoprolol
+67	She is to be maintained on metoprolol for blood pressure control and the restarting of her ACE inhibitor is to be decided by her primary care physician .|ACE inhibitor[3533,3546]||||||||||836|836|ace inhibitor

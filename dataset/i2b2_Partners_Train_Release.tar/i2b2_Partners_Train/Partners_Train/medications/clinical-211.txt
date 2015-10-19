@@ -1,0 +1,28 @@
+22	ROBITUSSIN ( GUAIFENESIN ) 10 MILLILITERS PO Q4H PRN cough FLAGYL ( METRONIDAZOLE ) 500 MG PO TID X 5 Days Starting Today ( 08/08 ) NITROGLYCERIN 1/150 ( 0.4 MG ) 1 TAB SL q5min x 3 PRN chest pain|ROBITUSSIN ( GUAIFENESIN )[519,545]|||10MILLILITERS[546,560]||PO[561,563]|Q4H[564,567]||PRN[568,571]|C1238575|364626|5032|guaifenesin
+22	ROBITUSSIN ( GUAIFENESIN ) 10 MILLILITERS PO Q4H PRN cough FLAGYL ( METRONIDAZOLE ) 500 MG PO TID X 5 Days Starting Today ( 08/08 ) NITROGLYCERIN 1/150 ( 0.4 MG ) 1 TAB SL q5min x 3 PRN chest pain|FLAGYL ( METRONIDAZOLE )[578,602]|||500MG[603,609]||PO[610,612]|TID[613,616]|||C0708602|207290|6922|metronidazole
+22	ROBITUSSIN ( GUAIFENESIN ) 10 MILLILITERS PO Q4H PRN cough FLAGYL ( METRONIDAZOLE ) 500 MG PO TID X 5 Days Starting Today ( 08/08 ) NITROGLYCERIN 1/150 ( 0.4 MG ) 1 TAB SL q5min x 3 PRN chest pain|NITROGLYCERIN 1 / 150 ( 0.4 MG )[651,681]||||1 TAB[682,687]|SL[688,690]|q5min[691,696]||PRN[701,704]||198039|4917|glyceryl trinitrate
+24	SBP &lt; 100 AMBIEN ( ZOLPIDEM TARTRATE ) 5 MG PO QHS PRN insomnia|ZOLPIDEM TARTRATE[748,765]|||||||||C0724725|221183|221183|zolpidem tartrate
+27	Number of Doses Required ( approximate ) : 5 LEVOFLOXACIN 250 MG PO QD X 5 Days Starting Today ( 08/08 )|LEVOFLOXACIN[937,949]|||250MG[950,956]||PO[957,959]|QD[960,962]|||C0693578|199884|82122|levofloxacin
+31	HALOPERIDOL and LEVOFLOXACIN|HALOPERIDOL[1082,1093]|||||||||C0018546|5093|5093|haloperidol
+31	HALOPERIDOL and LEVOFLOXACIN|LEVOFLOXACIN[1098,1110]|||||||||C0282386|82122|82122|levofloxacin
+33	HALOPERIDOL and LEVOFLOXACIN|HALOPERIDOL[1145,1156]|||||||||C0018546|5093|5093|haloperidol
+33	HALOPERIDOL and LEVOFLOXACIN|LEVOFLOXACIN[1161,1173]|||||||||C0282386|82122|82122|levofloxacin
+36	Override added on 08/07/01 by ZISKFUSCJALK , ACRI , M.D. on order for HALDOL IM ( ref # 09647807 )|HALDOL[1297,1303]|||||IM[1304,1306]||||C0591585|151839|5093|haloperidol
+38	LEVOFLOXACIN and HALOPERIDOL|LEVOFLOXACIN[1360,1372]|||||||||C0282386|82122|82122|levofloxacin
+38	LEVOFLOXACIN and HALOPERIDOL|HALOPERIDOL[1377,1388]|||||||||C0018546|5093|5093|haloperidol
+41	Override added on 08/07/01 by ZISKFUSCJALK , ACRI , M.D. on order for HALDOL PO ( ref # 60739147 )|HALDOL[1518,1524]|||||PO[1525,1527]||||C3230050|1176098|5093|haloperidol
+43	LEVOFLOXACIN and HALOPERIDOL|LEVOFLOXACIN[1581,1593]|||||||||C0282386|82122|82122|levofloxacin
+43	LEVOFLOXACIN and HALOPERIDOL|HALOPERIDOL[1598,1609]|||||||||C0018546|5093|5093|haloperidol
+45	OMEPRAZOLE 40 MG PO BID X 45 Days ATENOLOL 25 MG PO BID|ATENOLOL[1672,1680]|||25MG[1681,1686]||PO[1655,1657]|BID[1658,1661]|||C0687939|197380|1202|atenolol
+45	OMEPRAZOLE 40 MG PO BID X 45 Days ATENOLOL 25 MG PO BID|OMEPRAZOLE[1638,1648]|||40MG[1649,1654]||PO[1687,1689]|BID[1690,1693]|||C1276881|389173|7646|omeprazole
+57	Conditions , Infections , Complications , affecting Treatment / Stay right scrotal hydrocele bph ( benign prostatic hypertrophy ) ? nph ( ? hydrocephalus ) dementia ( dementia )|nph[2194,2197]||||||||||311030|221108|insulin isophane,pork pure
+74	Throughout admission , hematemesis flow decreased while on PPI and clear liquids .|PPI[3063,3066]||||||||||1364533|1364533|pyrophosphate
+77	Started on omeprazole 40 mg po bid x6 wks .|omeprazole[3271,3281]|||40mg[3282,3287]||po[3288,3290]|bid[3291,3294]|||C1276881|389173|7646|omeprazole
+79	CP , low prob with atypical chest pain , CK &apos;s x3 flat , and no further episodes of CP during the admission .|prob[3322,3326]||||||x3[3365,3367]||||||
+80	BP remained stable throughout the admission ; initially , BP meds were held , but as VS remai ned stable and bleeding subsided , lopressor was titrated up to 25 mg po tid .|BP meds[3486,3493]||||||||||1293136|1293136|bp meds
+80	BP remained stable throughout the admission ; initially , BP meds were held , but as VS remai ned stable and bleeding subsided , lopressor was titrated up to 25 mg po tid .|lopressor[3557,3566]|||25mg[3586,3591]||po[3592,3594]|tid[3595,3598]|||null|866502|5487|hydrochlorothiazide
+81	He was switched back to his home dose of atenolol 25 mg po bid 3 ) ID :|atenolol[3642,3650]|||25mg[3651,3656]||po[3657,3659]|bid[3660,3663]|||C0687939|197380|1202|atenolol
+82	Levo and flagyl for presumed aspiration pneumonia / pneuomonitis .|Levo[3673,3677]||||||||||877015|877015|levoleucovorin
+82	Levo and flagyl for presumed aspiration pneumonia / pneuomonitis .|flagyl[3682,3688]||||||||||202866|6922|metronidazole
+89	DNR , NO CPR , may intubate for airway protection , call son .|DNR[3950,3953]||||||||||||
+104	3 ) Consider oncology follow-up if biopsies suggestive of malignancy 4 ) Omeprazole 40 mg po bid x6 wks .|Omeprazole[4970,4980]|||40mg[4981,4986]||po[4987,4989]|bid[4990,4993]|||C1276881|389173|7646|omeprazole

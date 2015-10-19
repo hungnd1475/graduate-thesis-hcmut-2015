@@ -1,0 +1,6 @@
+54	The patient was admitted to a telemetry bed and started on heparin .|heparin[3191,3198]|||||||||C0019134|235473|235473|heparin,porcine
+79	Heparin was discontinued because of the risk of intercerebral hemorrhage .|Heparin[5168,5175]|||||||||C0019134|235473|235473|heparin,porcine
+80	The aspiration pneumonia was treated with Cefotaxime and Metronidazole .|Cefotaxime[5285,5295]|||||||||C0007554|2186|2186|cefotaxime
+80	The aspiration pneumonia was treated with Cefotaxime and Metronidazole .|Metronidazole[5300,5313]|||||||||C0025872|6922|6922|metronidazole
+81	The patient &apos;s family was involved and they decided to opt for DNR / DNI in view of the poor prognosis .|DNR[5384,5387]||||||||||||
+92	SHAM , M.D.|SHAM[5607,5611]||||||||||||

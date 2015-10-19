@@ -1,0 +1,6 @@
+23	Serax p.r.n. insomnia ; iron ; MVI .|Serax[948,953]||||||||p.r.n.[954,960]|C0702214|204360|7781|oxazepam
+23	Serax p.r.n. insomnia ; iron ; MVI .|MVI[979,982]|||||||||C1966765|747667|747667|Multivitamin Injection
+63	Sandostatin 100 mcg subcu. b.i.d. ; Percocet 1-2 tabs q.3-4h.|Sandostatin[2862,2873]|||100mcg[2874,2881]||subcu.[2882,2888]|b.i.d.[2889,2895]|||C1600405|567989|7617|octreotide
+63	Sandostatin 100 mcg subcu. b.i.d. ; Percocet 1-2 tabs q.3-4h.|Percocet[2898,2906]||||1 - 2 tabs[2907,2915]||q.3 - 4h[2916,2922]|||C0086787|42844|161|paracetamol
+64	p.r.n. pain ; Axid 150 mg p.o. b.i.d. ; Colace 100 mg p.o. b.i.d.|Axid[2938,2942]|||150mg[2943,2949]||p.o.[2950,2954]|b.i.d.[2955,2961]||p.r.n.[2924,2930]|C0353897|104096|42319|nizatidine
+64	p.r.n. pain ; Axid 150 mg p.o. b.i.d. ; Colace 100 mg p.o. b.i.d.|Colace[2964,2970]|||100mg[2971,2977]||p.o.[2978,2982]|b.i.d[2983,2988]|||C0711644|1247756|82003|docusate

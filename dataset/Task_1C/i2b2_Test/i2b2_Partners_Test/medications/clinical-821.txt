@@ -1,0 +1,7 @@
+9	SYSCO TAMARCE DOSE|SYSCO[153,158]||||||||||707993|707993|sysco
+44	Uval General Hospital|Uval[1770,1774]||||||||||||
+48	POSTPARTUM RH IMMUNE GLOBULIN :|RH IMMUNE GLOBULIN[1880,1898]||||||||||35465|35465|anti-d (rh) immunoglobulin
+50	POSTPARTUM MEASLES / MUMPS/RUBELLA VACCINE :|MEASLES / MUMPS / RUBELLA VACCINE[1918,1949]|||||||||C2929435|1008531|1008531|measles / mumps / rubella vaccine
+52	MEDICATION ( S ) ON DISCHARGE :|MEDICATION ( S )[1966,1982]|||||||||C1875470|693173|693173|medication organizer
+53	Multivitamins And Folate|Folate[2016,2022]|||||||||C0178638|62356|62356|folate
+53	Multivitamins And Folate|Multivitamins[1998,2011]|||||||||C0301532|89905|89905|multiple vitamins

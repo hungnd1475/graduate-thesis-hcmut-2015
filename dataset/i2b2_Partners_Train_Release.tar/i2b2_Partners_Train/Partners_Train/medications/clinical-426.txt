@@ -1,0 +1,3 @@
+50	She was discharged home in stable condition with prescriptions for Colace , Motrin and Percocet as needed .|Colace[2448,2454]|||||||||C0282139|82000|82003|docusate
+50	She was discharged home in stable condition with prescriptions for Colace , Motrin and Percocet as needed .|Motrin[2457,2463]|||||||||C0699203|202488|5640|ibuprofen
+50	She was discharged home in stable condition with prescriptions for Colace , Motrin and Percocet as needed .|Percocet[2468,2476]||||||||as needed[2477,2486]|C0086787|42844|161|paracetamol

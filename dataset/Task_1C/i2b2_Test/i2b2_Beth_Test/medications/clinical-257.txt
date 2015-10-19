@@ -1,0 +1,33 @@
+15	She was given betamethasone times one and transferred to the Nantucket Cottage Hospital where she was delivered by cesarean section with rupture of membranes at time of delivery notable for slight meconium stained amniotic fluid .|betamethasone[709,722]||||||times one[723,732]|||C0005308|1514|1514|betamethasone
+38	The baby was intubated in the Delivery Room , received two doses of surfactant .|surfactant[2172,2182]||||||||||10260|10260|surfactants
+42	On day of life two , she was also loaded with caffeine and continues on caffeine at time of transfer .|caffeine[2516,2524]|||||||||C0006644|1886|1886|caffeine
+42	On day of life two , she was also loaded with caffeine and continues on caffeine at time of transfer .|caffeine[2542,2550]|||||||||C0006644|1886|1886|caffeine
+47	She received a normal saline bolus times one initially for poor perfusion and was started on dopamine with a maximum infusion rate of 6 mcg per kg per hour .|normal saline[2861,2874]||||||times one[2881,2890]|||C0445115|125464|125464|normal saline
+47	She received a normal saline bolus times one initially for poor perfusion and was started on dopamine with a maximum infusion rate of 6 mcg per kg per hour .|dopamine[2939,2947]|||6mcg[2980,2985]|||per hour[2993,3001]|||C0013030|3628|3628|dopamine
+53	The UAC was left in place until day of life two and was removed after wean from dopamine .|dopamine[3396,3404]|||||||||C0013030|3628|3628|dopamine
+59	Calories were gradually increased to breast milk 30 calories with ProMod consisting of four of human milk fortifier , four of MCT and two of Polycose with a 12-28 teaspoon of ProMod per 50 ml of breast milk or 60 ml of formula .|ProMod[3867,3873]|||||||||C1875700|693503|693503|promod
+59	Calories were gradually increased to breast milk 30 calories with ProMod consisting of four of human milk fortifier , four of MCT and two of Polycose with a 12-28 teaspoon of ProMod per 50 ml of breast milk or 60 ml of formula .|MCT[3927,3930]|||||||||C0724624|1310578|1310578|medium chain triglycerides
+59	Calories were gradually increased to breast milk 30 calories with ProMod consisting of four of human milk fortifier , four of MCT and two of Polycose with a 12-28 teaspoon of ProMod per 50 ml of breast milk or 60 ml of formula .|Polycose[3942,3950]||||12 - 28 teaspoon[3958,3972]|||||C0086351|42704|42704|polycose
+59	Calories were gradually increased to breast milk 30 calories with ProMod consisting of four of human milk fortifier , four of MCT and two of Polycose with a 12-28 teaspoon of ProMod per 50 ml of breast milk or 60 ml of formula .|ProMod[3976,3982]|||50ml[3987,3992]||||||C1875700|693503|693503|promod
+81	Her initial blood culture remained negative and she received 48 hours of ampicillin and gentamicin .|ampicillin[5716,5726]|||||||48 hours[5704,5712]||C0002680|733|733|ampicillin
+81	Her initial blood culture remained negative and she received 48 hours of ampicillin and gentamicin .|gentamicin[5731,5741]|||||||||C0017436|662411|662411|gentamicins
+84	Blood culture grew staph coagulase negative and the baby received seven days of vancomycin and gentamicin .|vancomycin[6089,6099]|||||||seven days[6075,6085]||C0042313|11124|11124|vancomycin
+84	Blood culture grew staph coagulase negative and the baby received seven days of vancomycin and gentamicin .|gentamicin[6104,6114]|||||||||C0017436|662411|662411|gentamicins
+87	Antibiotic levels were monitored and doses adjusted accordingly .|Antibiotic[6252,6262]||||||||||896|896|antibiotic
+89	On day of life 15 for a hematocrit of 29 , she received 20 cc of packed red blood cells .|packed red blood cells[6445,6467]||||||||||834201|834201|packed red blood cells
+90	She started on iron and vitamin E supplements on day of life 25 and continues on that at this time of transfer .|vitamin E[6494,6503]|||||||||C0042874|11256|11256|tocopherol (vit e)
+93	Therefore , with blood available from the first aliquot , a second 20 cc per kg of packed red blood cells were infused without incident .|packed red blood cells[6896,6918]||||||||||834201|834201|packed red blood cells
+100	The septal leaflets may be partially absent , but there are no coronal images provided for confirmation and the pituitary stalk is present .|pituitary[7573,7582]|||||||||C0304812|91434|91434|pituitary
+106	She had a calcium of 10.3 , a phosphorus of 4.8 and alkaline phosphatase of 440 .|calcium[7945,7952]|||||||||C0006675|1895|1895|calcium
+107	Thyroid function studies revealed a TSH of 2.2 , T4 of 5.7 , T3 of 101 and a cortisol level of 43 , all within the normal range .|T3[8078,8080]||||||||||1035812|1035812|t3
+107	Thyroid function studies revealed a TSH of 2.2 , T4 of 5.7 , T3 of 101 and a cortisol level of 43 , all within the normal range .|cortisol[8094,8102]||||||||||5492|5492|hydrocortisone
+108	A growth hormone was sent and the results were pending at time of transfer .|growth hormone[8149,8163]||||||||||61148|61148|somatropin
+109	In addition , an FSH and LH were obtained on 12-10 and results are pending at time of transfer .|FSH[8241,8244]||||||||||227518|227518|follitropin (fsh)
+111	The baby 's neurologic examination is appropriate for corrected gestational age which is 33 and 6/7 weeks on day of transfer .|is 33[8503,8508]|||||||7 weeks[8515,8522]|||818262|818262|is 33
+128	Feedings at the time of transfer include breast milk 30 with ProMod at 150 cc per kg per day , all gavage given over one hour .|ProMod[9635,9641]||||||per day[9659,9666]|one hour[9691,9699]||C1875700|693503|693503|promod
+129	Medications include Fer-In-Norman , vitamin E 5 international units each day and caffeine citrate once a day .|vitamin E[9738,9747]|||5international units[9748,9769]|||each day[9770,9778]|||C2340774|349657|11256|tocopherol (vit e)
+129	Medications include Fer-In-Norman , vitamin E 5 international units each day and caffeine citrate once a day .|caffeine citrate[9783,9799]||||||a day[9805,9810]|||C0054436|20033|20033|caffeine citrated
+134	Mychelia received hepatitis B vaccine on 11-02 due to unknown maternal hepatitis B surface antigen status .|hepatitis B vaccine[10003,10022]||||||||||816236|816236|hepatitis b vaccine
+135	She also received hepatitis B immune globulin on 11-02 .|hepatitis B immune globulin[10111,10138]|||||||||C0062525|26744|26744|hepatitis b immunoglobulin
+136	On 12-06 , she received her second hepatitis B vaccine .|hepatitis B vaccine[10185,10204]||||||||||816236|816236|hepatitis b vaccine
+139	Synagis RSV prophylaxis should be considered from November through March for infants who meet any of the following three criteria : 1) born at less than 32 weeks , 2) born at between 32 and 35 weeks with two of the following :|Synagis[10289,10296]|||||||32 weeks[10442,10450]||C0723567|220141|194279|palivizumab

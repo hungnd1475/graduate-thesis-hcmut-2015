@@ -1,0 +1,34 @@
+17	The patient has a history of laryngeal cancer in 2000 and 2001 , CVA in 2001 to 2002 and hypertension , who has a six month history of progressive difficulty in ambulation .|laryngeal[627,636]|||||||six month[712,721]||C0023081|838474|838474|laryngeal
+31	The patient is status post radiation therapy and resection and reconstruction for his laryngeal cancer .|laryngeal[2327,2336]|||||||||C0023081|838474|838474|laryngeal
+35	Hypertension , CVA 2001 , 2002 diabetes , laryngeal cancer , right CEA , prostatectomy for BPH , total knee replacement , status post appendectomy .|laryngeal[2472,2481]|||||||||C0023081|838474|838474|laryngeal
+37	Plavix 75 mg every day , Lipitor 40 mg every day , HCTZ 50 mg , Monopril 10 mg every day , Viagra 100 mg prn .|Plavix[2612,2618]|||75mg[2619,2624]|||every day[2625,2634]|||C1607286|573094|32968|clopidogrel
+37	Plavix 75 mg every day , Lipitor 40 mg every day , HCTZ 50 mg , Monopril 10 mg every day , Viagra 100 mg prn .|Lipitor[2637,2644]|||40mg[2645,2650]|||every day[2651,2660]|||C1616508|617319|83367|atorvastatin
+37	Plavix 75 mg every day , Lipitor 40 mg every day , HCTZ 50 mg , Monopril 10 mg every day , Viagra 100 mg prn .|HCTZ[2663,2667]|||50mg[2668,2673]|||||||197770|5487|hydrochlorothiazide
+37	Plavix 75 mg every day , Lipitor 40 mg every day , HCTZ 50 mg , Monopril 10 mg every day , Viagra 100 mg prn .|Monopril[2676,2684]|||10mg[2685,2690]|||every day[2691,2700]|||C2710729|857170|50166|fosinopril
+37	Plavix 75 mg every day , Lipitor 40 mg every day , HCTZ 50 mg , Monopril 10 mg every day , Viagra 100 mg prn .|Viagra[2703,2709]|||100mg[2710,2716]|||||prn[2717,2720]|C1607377|573185|136411|sildenafil
+100	Transcranial Dopplers were checked following surgery and the patient was started on Decadron 4 mg q6 to prevent swelling .|Decadron[6433,6441]|||4mg[6442,6446]|||q6[6447,6449]|||C1599031|566603|3264|dexamethasone
+101	The patient was started on Fragmin for DVT prophylaxis and the patient was also started on Dilantin levels .|Fragmin[6499,6506]|||||||||C0917726|281554|67109|dalteparin
+101	The patient was started on Fragmin for DVT prophylaxis and the patient was also started on Dilantin levels .|Dilantin[6563,6571]||||||||||202740|8183|phenytoin
+105	The patient can have voiding trials at rehab and he is being maintained on Flomax .|Flomax[6952,6958]|||||||||C0662903|190283|77492|tamsulosin
+109	The patient was given an IV load of Decadron and restarted on IV Decadron which was eventually transferred to po Decadron .|Decadron[7308,7316]|||||IV[7297,7299]|||||227682|3264|dexamethasone
+109	The patient was given an IV load of Decadron and restarted on IV Decadron which was eventually transferred to po Decadron .|Decadron[7337,7345]|||||po[7382,7384]||||C3224417|1170297|3264|dexamethasone
+109	The patient was given an IV load of Decadron and restarted on IV Decadron which was eventually transferred to po Decadron .|Decadron[7385,7393]|||||IV[7334,7336]|||||227682|3264|dexamethasone
+110	The patient was also started on Mannitol .|Mannitol[7428,7436]|||||||||C0024730|6628|6628|mannitol
+115	The patient was started on three grams of sodium , 3x a day with fluid restriction .|sodium[7896,7902]|||threegrams[7881,7892]|||3x a day[7905,7913]|||C0037473|9853|9853|sodium
+124	1. Lipitor 40 mg po every day .|Lipitor[8454,8461]|||40mg[8462,8467]||po[8468,8470]|every day[8471,8480]|||C0593905|617320|83367|atorvastatin
+125	2. Captopril 12.5 mg po tid .|Captopril[8486,8495]|||12.5mg[8496,8503]||po[8504,8506]|tid[8507,8510]|||C0975227|308963|1998|captopril
+126	3. Nexium 40 mg po every day .|Nexium[8516,8522]|||40mg[8523,8528]||po[8529,8531]|every day[8532,8541]|||C1592709|574983|283742|esomeprazole
+127	4. Colace 100 mg po bid .|Colace[8547,8553]|||100mg[8554,8560]||po[8561,8563]|bid[8564,8567]|||C0711644|1247756|82003|docusate
+128	5. Ativan 0.5 mg po q4 hours prn for anxiety .|Ativan[8573,8579]|||0.5mg[8580,8586]||po[8587,8589]|q4 hours[8590,8598]||prn[8599,8602]|C0708005|206821|6470|lorazepam
+129	6. Allegra 60 mg po bid .|Allegra[8620,8627]|||60mg[8628,8633]||po[8634,8636]|bid[8637,8640]||||997496|87636|fexofenadine
+130	7. Dilantin 100 mg IV tid which can be changed to a po regimen in seven days .|Dilantin[8646,8654]|||100mg[8655,8661]||IV[8662,8664]|tid[8665,8668]|seven days[8709,8719]||C2710089|855672|8183|phenytoin
+131	8. Zinc 220 mg po every day .|Zinc[8725,8729]|||220mg[8730,8736]||po[8737,8739]|every day[8740,8749]||||313774|39954|zinc sulfate
+132	9. Vitamin C 500 mg po bid .|Vitamin C[8755,8764]|||500mg[8765,8771]||po[8772,8774]|bid[8775,8778]||||237722|1151|ascorbic acid (vit c)
+133	10. Flomax 0.4 mg po every day .|Flomax[8785,8791]|||0.4mg[8792,8798]||po[8799,8801]|every day[8802,8811]|||C1145668|863671|77492|tamsulosin
+134	11. Fragmin 2500 units subcut every day .|Fragmin[8818,8825]|||2500[8826,8830]||subcut[8837,8843]|every day[8844,8853]|||C2912083|978775|67109|dalteparin
+135	12. Levofloxacin 500 mg po q daily x10 days .|Levofloxacin[8860,8872]|||500mg[8873,8879]||po[8880,8882]|daily[8885,8890]|x10 days[8891,8899]||C0693579|199885|82122|levofloxacin
+136	13. Dexamethasone 4 mg po q6 hours .|Dexamethasone[8906,8919]|||4mg[8920,8924]||po[8925,8927]|q6 hours[8928,8936]|||C0688497|197582|3264|dexamethasone
+137	14. The steroid will be kept for now and tapered at a later date on follow up with Dr.|steroid[8947,8954]||||||||||10072|10072|steroid
+139	15. Regular insulin sliding scale with finger sticks qac and qhs .|Regular insulin[9037,9052]|||sliding scale[9053,9066]|||qhs[9094,9097]||||5856|5856|insulin regular
+140	16. Neutra-Phos 1.25 grams po as needed .|Neutra - Phos[9104,9115]|||1.25grams[9116,9126]||po[9127,9129]|||as needed[9130,9139]|C0722072|218709|218709|neutra-phos
+150	The patient is asked to take a course of Dilantin for ten more days .|Dilantin[9960,9968]|||||||ten more days[9973,9986]|||202740|8183|phenytoin

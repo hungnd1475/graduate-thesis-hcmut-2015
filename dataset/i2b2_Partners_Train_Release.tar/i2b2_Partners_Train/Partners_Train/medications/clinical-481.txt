@@ -1,0 +1,5 @@
+35	1. Aspirin 81 mg PO qd ;|Aspirin[1292,1299]|||81mg[1300,1305]||PO[1306,1308]|qd[1309,1311]||||252857|1191|acetylsalicylic acid
+36	2. Atenolol 25 mg PO qd ;|Atenolol[1317,1325]|||25mg[1326,1331]||PO[1332,1334]|qd[1335,1337]|||C0687939|197380|1202|atenolol
+57	He responded to a Neo-Synephrine bolus , and had no further complications from this standpoint .|Neo - Synephrine[2579,2593]|||||||||C0702190|204346|8163|phenylephrine
+59	Rosean Fletcher , of the Cardiology Department was consulted , and it was his opinion that the sinus pause was related to increased vagal tone postoperatively , perhaps secondary to the epidural , as well as the patient &apos;s Atenolol use .|Atenolol[2890,2898]|||||||||C0004147|1202|1202|atenolol
+60	His Atenolol was held , and he had no further pauses during his stay .|Atenolol[2909,2917]|||||||||C0004147|1202|1202|atenolol

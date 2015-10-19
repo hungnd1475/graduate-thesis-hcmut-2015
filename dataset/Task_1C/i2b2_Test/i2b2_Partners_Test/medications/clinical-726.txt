@@ -1,0 +1,30 @@
+20	The patient has a history of severe aortic stenosis and was recently admitted to the Retelk County Medical Center for a Nafcillin sensitive Staphylococcus aureus cellulitis of the right leg treated with a course of Nafcillin and Levofloxacin .|Nafcillin[759,768]|||||||||C0027324|7233|7233|nafcillin
+20	The patient has a history of severe aortic stenosis and was recently admitted to the Retelk County Medical Center for a Nafcillin sensitive Staphylococcus aureus cellulitis of the right leg treated with a course of Nafcillin and Levofloxacin .|Staphylococcus aureus[779,800]||||||||||1311275|1311275|staphylococcus aureus
+20	The patient has a history of severe aortic stenosis and was recently admitted to the Retelk County Medical Center for a Nafcillin sensitive Staphylococcus aureus cellulitis of the right leg treated with a course of Nafcillin and Levofloxacin .|Nafcillin[854,863]|||||||||C0027324|7233|7233|nafcillin
+20	The patient has a history of severe aortic stenosis and was recently admitted to the Retelk County Medical Center for a Nafcillin sensitive Staphylococcus aureus cellulitis of the right leg treated with a course of Nafcillin and Levofloxacin .|Levofloxacin[868,880]|||||||||C0282386|82122|82122|levofloxacin
+22	The patient was sent to rehabilitation on Levofloxacin orally .|Levofloxacin[1019,1031]|||||orally[1032,1038]||||C1246647|372588|82122|levofloxacin
+33	6) History of temporal arteritis on chronic steroids .|steroids[2011,2019]||||||||||10072|10072|steroids
+36	MEDICATIONS ON ADMISSION : 1) Digoxin 0.125 mg p.o. q. day .|Digoxin[2117,2124]|||0.125mg[2125,2133]||p.o.[2134,2138]|q. day[2139,2145]||||197604|3407|digoxin
+37	2) Lasix 80 mg p.o. b.i.d. 3) Aspirin 81 mg p.o. q. day .|Aspirin[2178,2185]|||81mg[2186,2191]||p.o.[2163,2167]|q. day[2197,2203]||||252857|1191|acetylsalicylic acid
+37	2) Lasix 80 mg p.o. b.i.d. 3) Aspirin 81 mg p.o. q. day .|Lasix[2151,2156]|||80mg[2157,2162]||p.o.[2192,2196]||||C0706648|205732|4603|furosemide
+38	4) Coumadin 2 mg p.o. q.h.s. 5) Zaroxolyn 2.5 mg p.o. q. day .|Zaroxolyn[2238,2247]|||2.5mg[2248,2254]||p.o.[2223,2227]|q. day[2260,2266]|||C0708580|207271|6916|metolazone
+38	4) Coumadin 2 mg p.o. q.h.s. 5) Zaroxolyn 2.5 mg p.o. q. day .|Coumadin[2209,2217]|||2mg[2218,2222]||p.o.[2255,2259]||||C0710782|855304|11289|warfarin
+39	6) Toprol XL 50 mg p.o. q. day .|Toprol XL[2272,2281]|||50mg[2282,2287]||p.o.[2288,2292]|q. day[2293,2299]|||C2682131|866440|6918|metoprolol
+40	7) Potassium 20 mEq p.o. q. day .|Potassium[2305,2314]|||20mEq[2315,2321]||p.o.[2322,2326]|q. day[2327,2333]||||312494|34296|pot bicarb (obsolete)
+41	8) Prednisone 5 mg p.o. q.o.d. 9) Fosamax 10 mg p.o. q. day .|Fosamax[2370,2377]|||10mg[2378,2383]||p.o.[2355,2359]|q. day[2389,2395]|||C0361896|904421|46041|alendronate
+41	8) Prednisone 5 mg p.o. q.o.d. 9) Fosamax 10 mg p.o. q. day .|Prednisone[2339,2349]|||5mg[2350,2354]||p.o.[2384,2388]||||C0690124|763181|8640|prednisone
+42	10) Levofloxacin 250 mg p.o. q. day .|Levofloxacin[2402,2414]|||250mg[2415,2421]||p.o.[2422,2426]|q. day[2427,2433]|||C0693578|199884|82122|levofloxacin
+43	11) Axid 150 mg p.o. b.i.d. 12) Buspar 5 mg p.o. t.i.d. 13) Zyrtec 10 mg p.o. q. day .|Zyrtec[2496,2502]|||10mg[2503,2508]||p.o.[2452,2456]|q. day[2514,2520]|||C0712510|1020026|20610|cetirizine
+43	11) Axid 150 mg p.o. b.i.d. 12) Buspar 5 mg p.o. t.i.d. 13) Zyrtec 10 mg p.o. q. day .|Buspar[2468,2474]|||5mg[2475,2479]||p.o.[2480,2484]|b.i.d.[2457,2463]|||C0355063|866096|1827|buspirone
+43	11) Axid 150 mg p.o. b.i.d. 12) Buspar 5 mg p.o. t.i.d. 13) Zyrtec 10 mg p.o. q. day .|Axid[2440,2444]|||150mg[2445,2451]||p.o.[2509,2513]||||C0353897|104096|42319|nizatidine
+101	The patient &apos;s Coumadin was continued .|Coumadin[7176,7184]|||||||||C0699129|202421|11289|warfarin
+105	MEDICATIONS ON DISCHARGE : 1) Aspirin 81 mg p.o. q. day .|Aspirin[7498,7505]|||81mg[7506,7511]||p.o.[7512,7516]|q. day[7517,7523]||||252857|1191|acetylsalicylic acid
+106	2) Digoxin 0.125 mg p.o. q.|Digoxin[7529,7536]|||0.125mg[7537,7545]||p.o.[7546,7550]|||||197604|3407|digoxin
+108	3) Lasix 40 mg p.o. b.i.d. 4) Zaroxolyn 0.25 mg p.o. q. day .|Zaroxolyn[7589,7598]|||0.25mg[7599,7606]||p.o.[7574,7578]|q. day[7612,7618]|||C3240792|1187045|6916|metolazone
+108	3) Lasix 40 mg p.o. b.i.d. 4) Zaroxolyn 0.25 mg p.o. q. day .|Lasix[7562,7567]|||40mg[7568,7573]||p.o.[7607,7611]||||C0697300|200809|4603|furosemide
+109	5) Prednisone 5 mg p.o. q.o.d. 6) Coumadin 2 mg p.o. q.h.s. 7) Kay Ciel 20 mEq p.o. q. day .|Kay Ciel[7684,7692]|||20mEq[7693,7699]||p.o.[7640,7644]|q. day[7705,7711]||||208958|8591|potassium chloride
+109	5) Prednisone 5 mg p.o. q.o.d. 6) Coumadin 2 mg p.o. q.h.s. 7) Kay Ciel 20 mEq p.o. q. day .|Coumadin[7655,7663]|||2mg[7664,7668]||p.o.[7669,7673]|q.o.d.[7645,7651]|||C0710782|855304|11289|warfarin
+109	5) Prednisone 5 mg p.o. q.o.d. 6) Coumadin 2 mg p.o. q.h.s. 7) Kay Ciel 20 mEq p.o. q. day .|Prednisone[7624,7634]|||5mg[7635,7639]||p.o.[7700,7704]||||C0690124|763181|8640|prednisone
+110	8) Fosamax 10 mg p.o. q. day .|Fosamax[7717,7724]|||10mg[7725,7730]||p.o.[7731,7735]|q. day[7736,7742]|||C0361896|904421|46041|alendronate
+111	9) Amitriptyline 10 mg p.o. q.h.s. 10) Buspar 5 mg p.o. t.i.d.|Buspar[7784,7790]|||5mg[7791,7795]||p.o.[7768,7772]|t.i.d[7801,7806]|||C0355063|866096|1827|buspirone
+111	9) Amitriptyline 10 mg p.o. q.h.s. 10) Buspar 5 mg p.o. t.i.d.|Amitriptyline[7748,7761]|||10mg[7762,7767]||p.o.[7796,7800]|||||856783|704|amitriptyline
