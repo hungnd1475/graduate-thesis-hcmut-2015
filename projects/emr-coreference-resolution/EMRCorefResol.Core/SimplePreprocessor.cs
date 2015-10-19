@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HCMUT.EMRCorefResol.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,7 +29,7 @@ namespace HCMUT.EMRCorefResol
                         {
                             if (ana.Begin.CompareTo(ante.Begin) < 0)
                             {
-                                Swap(ref ante, ref ana);
+                                GenericHelper.Swap(ref ante, ref ana);
                             }
 
                             switch (ante.Type)
@@ -59,11 +60,11 @@ namespace HCMUT.EMRCorefResol
             return instances.ToIndexedEnumerable();
         }
 
-        private void Swap(ref Concept c1, ref Concept c2)
-        {
-            var t = c1;
-            c1 = c2;
-            c2 = t;
-        }
+        //private void Swap(ref Concept c1, ref Concept c2)
+        //{
+        //    var t = c1;
+        //    c1 = c2;
+        //    c2 = t;
+        //}
     }
 }

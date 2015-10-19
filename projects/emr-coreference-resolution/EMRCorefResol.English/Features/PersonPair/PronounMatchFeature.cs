@@ -14,32 +14,32 @@ namespace HCMUT.EMRCorefResol.English.Features
         {
             var kw = KeywordService.Instance.PERSON_PRONOUN;
 
-            //if (!kw.Match(instance.Anaphora.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord) ||
-            //    !kw.Match(instance.Antecedent.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
-            //{
-            //    return;
-            //}
-
-            //if (appearBefore(instance.Anaphora, emr) && appearBefore(instance.Antecedent, emr))
-            //{
-            //    SetCategoricalValue(1);
-            //}
-
-            if (kw.Match(instance.Anaphora.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
+            if (!kw.Match(instance.Anaphora.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord) ||
+                !kw.Match(instance.Antecedent.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
             {
-                var s = emr.ContentBetween(instance);
-                if (string.Equals(s, " ") || string.Equals(s, " , "))
-                {
-                    SetCategoricalValue(1);
-                }
-                else if (kw.Match(instance.Antecedent.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
-                {
-                    if (appearBefore(instance.Anaphora, emr) && appearBefore(instance.Antecedent, emr))
-                    {
-                        SetCategoricalValue(1);
-                    }
-                }
+                return;
             }
+
+            if (appearBefore(instance.Anaphora, emr) && appearBefore(instance.Antecedent, emr))
+            {
+                SetCategoricalValue(1);
+            }
+
+            //if (kw.Match(instance.Anaphora.Lexicon, KWSearchOptions.WholeWordIngoreCase))
+            //{
+            //    var s = emr.ContentBetween(instance);
+            //    if (string.Equals(s, " ") || string.Equals(s.Trim(), ","))
+            //    {
+            //        SetCategoricalValue(1);
+            //    }
+            //    else if (kw.Match(instance.Antecedent.Lexicon, KWSearchOptions.WholeWordIngoreCase))
+            //    {
+            //        if (appearBefore(instance.Anaphora, emr) && appearBefore(instance.Antecedent, emr))
+            //        {
+            //            SetCategoricalValue(1);
+            //        }
+            //    }
+            //}
         }
 
         private bool appearBefore(Concept concept, EMR emr)

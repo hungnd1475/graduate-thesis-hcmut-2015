@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HCMUT.EMRCorefResol.Utilities;
 
 namespace HCMUT.EMRCorefResol
 {
@@ -12,17 +13,14 @@ namespace HCMUT.EMRCorefResol
     /// </summary>
     public class CorefChain : IReadOnlyCollection<Concept>
     {
+        public static readonly CorefChain Empty = new CorefChain();
+
         private readonly HashSet<Concept> _chain;
 
         /// <summary>
         /// Gets the coreference type of the chain.
         /// </summary>
         public ConceptType Type { get; }
-
-        /// <summary>
-        /// Gets the antecedent of the chain, i.e. the concept in chain that appears first in the EMR.
-        /// </summary>
-        public Concept Antecedent { get; }
 
         /// <summary>
         /// Gets the total number of concepts in chain.
@@ -38,11 +36,10 @@ namespace HCMUT.EMRCorefResol
         /// <param name="chain">The set of concepts represents the chain.</param>
         /// <param name="antecedent">The antecedent of the chain.</param>
         /// <param name="type">The coreference type of the chain.</param>
-        public CorefChain(HashSet<Concept> chain, Concept antecedent, ConceptType type)
+        public CorefChain(HashSet<Concept> chain, ConceptType type)
         {
             _chain = chain;
             Type = type;
-            Antecedent = antecedent;
         }
 
         /// <summary>
@@ -51,13 +48,39 @@ namespace HCMUT.EMRCorefResol
         /// <param name="chain">The sequence of concepts represents the chain.</param>
         /// <param name="antecedent">The antecedent of the chain.</param>
         /// <param name="type">The coreference type of the chain.</param>
-        public CorefChain(IEnumerable<Concept> chain, Concept antecedent, ConceptType type)
-            : this(new HashSet<Concept>(chain), antecedent, type)
+        public CorefChain(IEnumerable<Concept> chain, ConceptType type)
+            : this(new HashSet<Concept>(chain), type)
         { }
+
+        private CorefChain()
+        {
+            _chain = new HashSet<Concept>();
+            Type = ConceptType.None;
+        }
 
         public bool Contains(Concept concept)
         {
             return _chain.Contains(concept);
+        }
+
+        public CorefChain Intersect(CorefChain other)
+        {
+            CorefChain a = this, b = other;
+            if (a.Count > b.Count)
+            {
+                GenericHelper.Swap(ref a, ref b);
+            }
+
+            var concepts = new HashSet<Concept>();
+            foreach (var c in a)
+            {
+                if (b.Contains(c))
+                {
+                    concepts.Add(c);
+                }
+            }
+
+            return new CorefChain(concepts, ConceptType.None);
         }
 
         /// <summary>

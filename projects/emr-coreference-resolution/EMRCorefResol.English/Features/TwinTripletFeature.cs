@@ -15,8 +15,8 @@ namespace HCMUT.EMRCorefResol.English.Features
             var searcher = KeywordService.Instance.TWIN_TRIPLET;
             string anteLex = instance.Antecedent.Lexicon, anaLex = instance.Anaphora.Lexicon;
 
-            if (searcher.Match(anteLex, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord) &&
-                searcher.Match(anaLex, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
+            if (searcher.Match(anteLex, KWSearchOptions.WholeWordIngoreCase) &&
+                searcher.Match(anaLex, KWSearchOptions.WholeWordIngoreCase))
             {
                 if (string.Equals(anteLex, anaLex))
                     SetCategoricalValue(1);
@@ -27,7 +27,7 @@ namespace HCMUT.EMRCorefResol.English.Features
             : base("Twin-Triplet", 2, 0)
         {
             var searcher = KeywordService.Instance.TWIN_TRIPLET;
-            if (searcher.Match(instance.Concept.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
+            if (searcher.Match(instance.Concept.Lexicon, KWSearchOptions.WholeWordIngoreCase))
             {
                 SetCategoricalValue(1);
             }

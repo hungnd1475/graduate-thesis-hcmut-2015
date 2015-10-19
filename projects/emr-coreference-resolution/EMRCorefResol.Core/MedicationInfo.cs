@@ -37,7 +37,7 @@ namespace HCMUT.EMRCorefResol
 
         public bool Equals(MedicationInfo other)
         {
-            return  int.Equals(LineIndex, other.LineIndex) &&
+            return  LineIndex == other.LineIndex &&
                 string.Equals(Line, other.Line) &&
                 string.Equals(Drug, other.Drug) &&
                 string.Equals(Form, other.Form) &&

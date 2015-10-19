@@ -90,6 +90,11 @@
     <Compile Include="Classification\IClasProblemSerializer.cs" />
     <Compile Include="Concept.cs" />
     <Compile Include="ConceptCollection.cs" />
+    <Compile Include="Evaluations\BCubePerfMetric.cs" />
+    <Compile Include="Evaluations\CEAFPerfMetric.cs" />
+    <Compile Include="Evaluations\Evaluation.cs" />
+    <Compile Include="Evaluations\IPerfMetric.cs" />
+    <Compile Include="Evaluations\MUCPerfMetric.cs" />
     <Compile Include="Utilities\GenericConfig.cs" />
     <Compile Include="CorefChain.cs" />
     <Compile Include="CorefChainCollection.cs" />
@@ -120,6 +125,7 @@
     <Compile Include="Utilities\Caches\UnlimitedCache.cs" />
     <Compile Include="Logging\FileLogger.cs" />
     <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Utilities\GenericHelper.cs" />
     <Compile Include="Utilities\Keywords\AhoCorasickKeywordDictionary.cs" />
     <Compile Include="Utilities\Keywords\RegexKeywordDictionary.cs" />
     <Compile Include="Logging\ConsoleLogger.cs" />
@@ -148,6 +154,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -13,19 +13,24 @@ namespace HCMUT.EMRCorefResol
     /// <summary>
     /// Represents a collection of <see cref="CorefChain"/>(s) resolved from an EMR.
     /// </summary>
-    public class CorefChainCollection : IEnumerable<CorefChain>
+    public class CorefChainCollection : IIndexedEnumerable<CorefChain>
     {
-        private readonly ICollection<CorefChain> _chains;
+        private readonly IList<CorefChain> _chains;
         private CorefChain _patientChain;
         private readonly object _lockObj = new object();
         private bool _searchedForPt = false;
- 
+
         /// <summary>
         /// Gets the total number of chains in the collection.
         /// </summary>
         public int Count
         {
             get { return _chains.Count; }
+        }
+
+        public CorefChain this[int index]
+        {
+            get { return _chains[index]; }
         }
 
         /// <summary>
@@ -44,7 +49,7 @@ namespace HCMUT.EMRCorefResol
                 var line = sr.ReadLine();
                 var concepts = dataReader.ReadMultiple(line).OrderBy(c => c.Begin);
                 var type = dataReader.ReadType(line);
-                var chain = new CorefChain(concepts, concepts.First(), type);
+                var chain = new CorefChain(concepts, type);
                 _chains.Add(chain);
             }
             sr.Close();
@@ -56,7 +61,7 @@ namespace HCMUT.EMRCorefResol
         /// <param name="chains">The collection of <see cref="CorefChain"/> instances.</param>
         public CorefChainCollection(ICollection<CorefChain> chains)
         {
-            _chains = chains;
+            _chains = new List<CorefChain>(chains);
         }
 
         /// <summary>
@@ -65,7 +70,7 @@ namespace HCMUT.EMRCorefResol
         /// <param name="chains">The list of <see cref="CorefChain"/> instances</param>
         public CorefChainCollection(IList<CorefChain> chains)
         {
-            _chains = new Collection<CorefChain>(chains);
+            _chains = chains;
         }
 
         /// <summary>

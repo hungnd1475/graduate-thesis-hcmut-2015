@@ -9,10 +9,10 @@ namespace HCMUT.EMRCorefResol.English.Features
     class CapitolMatchFeature : Feature
     {
         public CapitolMatchFeature(IConceptPair instance)
-            :base("Capitol-Match", 2, 0)
+            : base("Capitol-Match", 2, 0)
         {
             var alias = new AliasFeature(instance);
-            if(alias.GetCategoricalValue() == 1)
+            if (alias.GetCategoricalValue() == 1)
             {
                 SetCategoricalValue(1);
                 return;
@@ -21,7 +21,7 @@ namespace HCMUT.EMRCorefResol.English.Features
             var anaAbbre = getAbbre(instance.Anaphora.Lexicon);
             var anteAbbre = getAbbre(instance.Antecedent.Lexicon);
 
-            if(string.Equals(anaAbbre, anteAbbre, StringComparison.InvariantCultureIgnoreCase))
+            if (string.Equals(anaAbbre, anteAbbre, StringComparison.InvariantCultureIgnoreCase))
             {
                 SetCategoricalValue(1);
                 return;
@@ -30,10 +30,9 @@ namespace HCMUT.EMRCorefResol.English.Features
 
         private string getAbbre(string raw)
         {
-            var arr = raw.ToLower().Split(' ');
-            arr = arr.Select(i => i[0].ToString()).ToArray();
-
-            return String.Join("", arr);
+            var arr = raw.Split(' ');
+            return arr.Select(i => i.Length > 0 ? i[0].ToString() : string.Empty)
+                .Aggregate(string.Empty, (s, c) => s + c);
         }
     }
 }
