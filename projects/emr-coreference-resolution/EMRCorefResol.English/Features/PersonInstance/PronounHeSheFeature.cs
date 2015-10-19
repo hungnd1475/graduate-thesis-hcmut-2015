@@ -9,13 +9,23 @@ namespace HCMUT.EMRCorefResol.English.Features
     using Utilities;
     class PronounHeSheFeature : Feature
     {
-        public PronounHeSheFeature(PersonInstance instance)
-            :base("Pronoun-HeShe", 2, 0)
+        public PronounHeSheFeature(PersonInstance instance, int mostGender)
+            : base("Pronoun-HeShe", 2, 0)
         {
             var kw_searcher = KeywordService.Instance.HESHE_KEYWORDS;
-            var exist = kw_searcher.Match(instance.Concept.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
+            var indices = kw_searcher.SearchDictionaryIndices(instance.Concept.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
 
-            if (exist)
+            if (indices.Length <= 0)
+            {
+                return;
+            }
+
+            if (mostGender == 0 && indices[0] <= 3)
+            {
+                SetCategoricalValue(1);
+            }
+
+            if (mostGender == 1 && indices[0] > 3)
             {
                 SetCategoricalValue(1);
             }

@@ -15,11 +15,13 @@ namespace HCMUT.EMRCorefResol.Service
         private static readonly HttpUtil _http = new HttpUtil();
         private static ICache<string, WikiData> _wikiCache;
         private static ICache<string, string> _temporalCache;
+        private static ICache<EMR, int> _mostGenderCache;
 
         static English()
         {
             _wikiCache = new UnlimitedCache<string, WikiData>();
             _temporalCache = new UnlimitedCache<string, string>();
+            _mostGenderCache = new UnlimitedCache<EMR, int>();
         }
 
         public static void ClearCache()
@@ -161,6 +163,30 @@ namespace HCMUT.EMRCorefResol.Service
                 }
 
                 return (string)res.Data;
+            });
+        }
+
+        public static int GetMostGender(EMR emr)
+        {
+            return _mostGenderCache.GetValue(emr, (EMR e) =>
+            {
+                var he_searcher = new AhoCorasickKeywordDictionary(new string[] { "he", "him", "his", "himself" });
+                var she_searcher = new AhoCorasickKeywordDictionary(new string[] { "she", "her", "hers", "herself" });
+
+                int isHe = 0;
+                foreach (Concept c in emr.Concepts)
+                {
+                    if (he_searcher.Match(c.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
+                    {
+                        isHe++;
+                    }
+
+                    if (she_searcher.Match(c.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
+                    {
+                        isHe--;
+                    }
+                }
+                return isHe >= 0 ? 0 : 1;
             });
         }
     }

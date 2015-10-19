@@ -13,9 +13,11 @@ namespace HCMUT.EMRCorefResol.English
         public PersonInstanceFeatures(PersonInstance instance, EMR emr, double classValue)
             : base(size: 21, classValue: classValue)
         {
+            var mostGender = Service.English.GetMostGender(emr);
+
             this[0] = new PronounIFeature(instance);
             this[1] = new PronounYouFeature(instance);
-            this[2] = new PronounHeSheFeature(instance);
+            this[2] = new PronounHeSheFeature(instance, mostGender);
             this[3] = new PronounWeFeature(instance);
             this[4] = new PronounTheyFeature(instance);
             this[5] = new PatientKeywordFeature(instance);
