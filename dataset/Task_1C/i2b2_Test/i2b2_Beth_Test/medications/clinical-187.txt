@@ -1,0 +1,2 @@
+14	The patient will be continued on medications per Discharge Summary with the addition of captopril ACE inhibitor since the patient 's blood pressure is stable .|ACE inhibitor[581,594]||||||||||836|836|ace inhibitor
+14	The patient will be continued on medications per Discharge Summary with the addition of captopril ACE inhibitor since the patient 's blood pressure is stable .|captopril[571,580]|||||||||C0006938|1998|1998|captopril

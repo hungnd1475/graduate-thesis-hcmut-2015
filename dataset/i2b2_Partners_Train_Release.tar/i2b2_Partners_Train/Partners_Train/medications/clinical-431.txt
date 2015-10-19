@@ -1,0 +1,1 @@
+52	Percocet 1-2 tablets PO q3-4 prn .|Percocet[2797,2805]||||1 - 2 tablets[2806,2817]|PO[2818,2820]|q3[2821,2823]||prn[2826,2829]||1049650|161|paracetamol

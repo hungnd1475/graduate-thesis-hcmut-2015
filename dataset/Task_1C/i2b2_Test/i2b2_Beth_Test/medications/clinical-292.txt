@@ -1,0 +1,8 @@
+8	Leona Wheeler had continued episodes of atrial fibrillation which were treated with intravenous Amiodarone and later intravenous Diltiazem .|Amiodarone[207,217]|||||intravenous[195,206]||||C0002598|703|703|amiodarone
+8	Leona Wheeler had continued episodes of atrial fibrillation which were treated with intravenous Amiodarone and later intravenous Diltiazem .|Diltiazem[240,249]|||||intravenous[228,239]||||C0012373|3443|3443|diltiazem
+9	Her Lopressor dose was progressively increased to 100 mg tid .|Lopressor[256,265]|||100mg[302,308]|||tid[309,312]|||C0708592|866513|6918|metoprolol
+10	Amiodarone 400 mg tid was continued as well .|Amiodarone[315,325]|||400mg[326,332]|||tid[333,336]|||C2609032|834347|703|amiodarone
+11	Due to this continued atrial fibrillation , Leona Wheeler was anticoagulated with intravenous Heparin .|Heparin[455,462]|||||intravenous[443,454]||||C0019134|235473|235473|heparin,porcine
+12	Coumadin dose was started and her INR were followed .|Coumadin[465,473]|||||||||C0699129|202421|11289|warfarin
+17	Metoprolol 100 mg tid , Amiodarone 400 mg tid times 7 days , then bid times 14 days , then q d times 14 days , then 200 mg q d .|Metoprolol[809,819]|||100mg[820,826]|||tid[827,830]|||C1123388|328470|6918|metoprolol
+17	Metoprolol 100 mg tid , Amiodarone 400 mg tid times 7 days , then bid times 14 days , then q d times 14 days , then 200 mg q d .|Amiodarone[833,843]|||400mg[844,850]|||tid[851,854]|7 days[861,867]||C2609032|834347|703|amiodarone

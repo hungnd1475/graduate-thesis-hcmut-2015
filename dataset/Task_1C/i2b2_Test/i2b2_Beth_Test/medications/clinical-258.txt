@@ -1,0 +1,37 @@
+18	EMS was called and the patient was taken to the emergency room .|EMS[840,843]||||||||||||
+20	Agitated in emergency room requiring 4 leather restraints , received 5 mg of Haldol , 2 mg of Ativan .|Haldol[1012,1018]|||5mg[1004,1008]||||||C1598043|565611|5093|haloperidol
+20	Agitated in emergency room requiring 4 leather restraints , received 5 mg of Haldol , 2 mg of Ativan .|Ativan[1029,1035]|||2mg[1021,1025]||||||C1600054|567636|6470|lorazepam
+22	He received a normal saline bolus of 2 liters of good blood pressure response .|normal saline[1177,1190]|||2liters[1200,1208]||||||C0445115|125464|125464|normal saline
+51	1. Lisinopril 5 mg p.o. q.d.|Lisinopril[3216,3226]|||5mg[3227,3231]||p.o.[3232,3236]|q.d.[3237,3241]|||C0978224|311354|29046|lisinopril
+52	2. Mavik question of dosage .|Mavik[3245,3250]|||||||||C0721596|218245|38454|trandolapril
+53	3. Hydrochlorothiazide question of dosage .|Hydrochlorothiazide[3275,3294]|||||||||C0020261|5487|5487|hydrochlorothiazide
+55	1. Ranitidine 150 mg b.i.d.|Ranitidine[3345,3355]|||150mg[3356,3362]|||b.i.d.[3363,3369]|||C1123414|328494|9143|ranitidine
+56	2. Thiamine 100 mg q.d.|Thiamine[3373,3381]|||100mg[3382,3388]|||q.d.[3389,3393]|||C0993029|317518|10454|thiamine (vit b1)
+57	3. Folic acid 1 mg q. d.|Folic acid[3397,3407]|||1mg[3408,3412]|||q. d.[3413,3418]|||C0986175|315966|4511|folic acid
+58	4. Multivitamin|Multivitamin[3422,3434]||||||||||89905|89905|multiple vitamins
+88	Chem-7 : Sodium 145 , potassium 3.4 , chloride 116 , bicarb 21 , BUN 12 , creatinine 0.6 , glucose 96 , calcium 7.2 , phos 3.6 , magnesium 1.7 .|Sodium[4672,4678]|||145[4679,4682]||||||C0037473|9853|9853|sodium
+88	Chem-7 : Sodium 145 , potassium 3.4 , chloride 116 , bicarb 21 , BUN 12 , creatinine 0.6 , glucose 96 , calcium 7.2 , phos 3.6 , magnesium 1.7 .|bicarb[4716,4722]|||21[4723,4725]|||||||36676|36676|sodium bicarb (obsolete)
+88	Chem-7 : Sodium 145 , potassium 3.4 , chloride 116 , bicarb 21 , BUN 12 , creatinine 0.6 , glucose 96 , calcium 7.2 , phos 3.6 , magnesium 1.7 .|calcium[4767,4774]|||7.2[4775,4778]||||||C0006675|1895|1895|calcium
+88	Chem-7 : Sodium 145 , potassium 3.4 , chloride 116 , bicarb 21 , BUN 12 , creatinine 0.6 , glucose 96 , calcium 7.2 , phos 3.6 , magnesium 1.7 .|magnesium[4792,4801]|||1.7[4802,4805]||||||C0024467|6574|6574|magnesium
+89	Liver function tests : ALT 38 , AST 34 , alk phos is 107 , albumin is 3.2 , peak bili is 0.3 , amylase 31 , and lipase is 32 .|albumin[4867,4874]|||||||||C0001924|433|433|albumin
+89	Liver function tests : ALT 38 , AST 34 , alk phos is 107 , albumin is 3.2 , peak bili is 0.3 , amylase 31 , and lipase is 32 .|amylase[4903,4910]|||31[4911,4913]||||||C0002712|743|743|diastase
+89	Liver function tests : ALT 38 , AST 34 , alk phos is 107 , albumin is 3.2 , peak bili is 0.3 , amylase 31 , and lipase is 32 .|lipase[4920,4926]|||||||||C0023764|6406|6406|lipase
+99	Pohl is a 53 - year-old male with a history of ETOH , hypertension who presented int he emergency room with increased agitation , like secondary to ETOH intoxication and developed subsequent hypotension , systolic blood pressures in the 80 's, status post Ativan and Haldol , but was responsive to|Ativan[5690,5696]|||||||||C0699194|202479|6470|lorazepam
+99	Pohl is a 53 - year-old male with a history of ETOH , hypertension who presented int he emergency room with increased agitation , like secondary to ETOH intoxication and developed subsequent hypotension , systolic blood pressures in the 80 's, status post Ativan and Haldol , but was responsive to|Haldol[5701,5707]|||||||||C0591585|151839|5093|haloperidol
+106	We decided to discontinue telemetry and held all hypertension medications including Lisinopril , Mavik , hydrochlorothiazide .|Lisinopril[6250,6260]|||||||||C0065374|29046|29046|lisinopril
+106	We decided to discontinue telemetry and held all hypertension medications including Lisinopril , Mavik , hydrochlorothiazide .|Mavik[6263,6268]|||||||||C0721596|218245|38454|trandolapril
+106	We decided to discontinue telemetry and held all hypertension medications including Lisinopril , Mavik , hydrochlorothiazide .|hydrochlorothiazide[6271,6290]|||||||||C0020261|5487|5487|hydrochlorothiazide
+111	The patient on ranitidine 150 mg p.o. b.i.d. for gastrointestinal prophylaxis .|ranitidine[6509,6519]|||150mg[6520,6526]||p.o.[6527,6531]|b.i.d.[6532,6538]||||198191|9143|ranitidine
+116	We continued IV fluids at 100 cc per hour for one liter secondary to a concern for rhabdomyolysis plus kidney protective effects .|IV fluids[6748,6757]|||oneliter[6781,6790]|||per hour[6768,6776]||||390001|390001|iv fluids
+117	K was 3.4 , repleted , potassium chloride 40 mEq times 1 dose p.o.|potassium chloride[6889,6907]|||40mEq[6908,6914]||p.o[6928,6931]||||C0981676|314182|8591|potassium chloride
+118	Calcium with 7.2 corrected to less than 8.0, completed calcium carbonate at 500 mg blood pressure.o. t.i.d. while in the hospital .|Calcium[6933,6940]|||||||||C0006675|1895|1895|calcium
+118	Calcium with 7.2 corrected to less than 8.0, completed calcium carbonate at 500 mg blood pressure.o. t.i.d. while in the hospital .|calcium carbonate[6988,7005]|||500mg[7009,7015]|||t.i.d.[7034,7040]|||C0984386|315541|1897|calcium (as carbonate)
+119	Mag was 1.7 , repleted with magnesium oxide with 400 mg p.o. times one dose .|magnesium oxide[7093,7108]|||400mg[7114,7120]||p.o.[7121,7125]|times one[7126,7135]||||198741|6582|magnesium oxide
+127	We will given valium 5 mg p.o. q. 3 hours for withdrawal .|valium[7585,7591]|||5mg[7592,7596]||p.o.[7597,7601]|q. 3 hours[7602,7612]|||C0355026|104700|3322|diazepam
+142	CIWA scale over night was 1 for tremor and the patient did not require any Valium for alcohol withdrawal .|Valium[8761,8767]|||||||||C0699187|202472|3322|diazepam
+147	Calcium carbonate 500 mg p.o. t.i.d. , Mag oxide 400 mg p.o. times one dose , potassium chloride repleted 40 mEq times one dose .|Calcium carbonate[8961,8978]|||400mg[9010,9016]||p.o.[8986,8990]|times one[9022,9031]|||C0789828|248398|1897|calcium (as carbonate)
+147	Calcium carbonate 500 mg p.o. t.i.d. , Mag oxide 400 mg p.o. times one dose , potassium chloride repleted 40 mEq times one dose .|Calcium carbonate[8961,8978]|||500mg[8979,8985]||p.o.[9017,9021]|t.i.d.[8991,8997]|||C0994837|318076|1897|calcium (as carbonate)
+147	Calcium carbonate 500 mg p.o. t.i.d. , Mag oxide 400 mg p.o. times one dose , potassium chloride repleted 40 mEq times one dose .|potassium chloride[9039,9057]|||40mEq[9067,9073]|||times one[9074,9083]|||C0981676|314182|8591|potassium chloride
+161	1. Lisinopril 5 mg p.o.q.d.|Lisinopril[9579,9589]|||5mg[9590,9594]||||||C0987222|316156|29046|lisinopril
+162	2. Mavik unknown dosage .|Mavik[9607,9612]|||||||||C0721596|218245|38454|trandolapril
+163	3. Hydrochlorothiazide unknown dosage .|Hydrochlorothiazide[9633,9652]|||||||||C0020261|5487|5487|hydrochlorothiazide

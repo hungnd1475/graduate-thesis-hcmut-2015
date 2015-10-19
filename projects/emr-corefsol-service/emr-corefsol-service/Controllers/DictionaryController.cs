@@ -14,9 +14,9 @@ namespace emr_corefsol_service.Controllers
 {
     public class DictionaryController : ApiController
     {
-        private IDictionaryHelper _helper = null;
+        static private IDictionaryHelper _helper = null;
 
-        public DictionaryController()
+        static DictionaryController()
         {
             _helper = new WordNetHelper(HostingEnvironment.MapPath(@"~\app_data\models\wordnet"));
         }

@@ -1,0 +1,8 @@
+22	His gastrointestinal bleeding issues were investigated with an upper endoscopy which revealed multiple superficial gastric ulcerations consistent with an non-steroidal anti-inflammatory drugs gastropathy .|steroidal anti - inflammatory drugs[930,963]||||||||||887|887|steroidal anti-inflammatory drugs
+23	He had been discharged on one aspirin a day with 20 of Prilosec b.i.d.|Prilosec[1033,1041]||||||b.i.d[1042,1047]|||C0700777|203345|7646|omeprazole
+23	He had been discharged on one aspirin a day with 20 of Prilosec b.i.d.|aspirin[1008,1015]|||||||||C0004057|1191|1191|acetylsalicylic acid
+24	The aspirin was discontinued and he had no further problems with gastrointestinal bleeding and a stable hematocrit the rest of his hospitalization .|aspirin[1053,1060]|||||||||C0004057|1191|1191|acetylsalicylic acid
+27	He responded somewhat to lactulose for hepatic encephalopathy .|lactulose[1387,1396]|||||||||C0022957|6218|6218|lactulose
+40	In the acute setting , he had been started on levofloxacin , Flagyl , and Vancomycin .|levofloxacin[2601,2613]|||||||||C0282386|82122|82122|levofloxacin
+40	In the acute setting , he had been started on levofloxacin , Flagyl , and Vancomycin .|Flagyl[2616,2622]||||||||||202866|6922|metronidazole
+40	In the acute setting , he had been started on levofloxacin , Flagyl , and Vancomycin .|Vancomycin[2629,2639]|||||||||C0042313|11124|11124|vancomycin

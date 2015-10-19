@@ -1,0 +1,6 @@
+24	Include Lamictal 50 mgs bid , Aricept 10 mgs qhs , BuSpar 15 mgs bid , Trazodone 100 mgs qhs .|Lamictal[1273,1281]|||50[1282,1284]|||bid[1289,1292]|||C1596312|563871|28439|lamotrigine
+24	Include Lamictal 50 mgs bid , Aricept 10 mgs qhs , BuSpar 15 mgs bid , Trazodone 100 mgs qhs .|Aricept[1295,1302]|||10[1303,1305]|||qhs[1310,1313]|||C2920057|997221|135447|donepezil
+24	Include Lamictal 50 mgs bid , Aricept 10 mgs qhs , BuSpar 15 mgs bid , Trazodone 100 mgs qhs .|BuSpar[1316,1322]|||15[1323,1325]|||bid[1330,1333]|||C2723089|866087|1827|buspirone
+24	Include Lamictal 50 mgs bid , Aricept 10 mgs qhs , BuSpar 15 mgs bid , Trazodone 100 mgs qhs .|Trazodone[1336,1345]|||100[1346,1349]|||qhs[1354,1357]|||C2710321|856372|10737|trazodone
+60	Opening pressure was 17 and approximately 20-25 cc of CSF was removed .|CSF[3442,3445]||||||||||40209|40209|csf
+61	CSF was notable for sugar level of 65 and total protein level of 56 .|CSF[3460,3463]||||||||||40209|40209|csf

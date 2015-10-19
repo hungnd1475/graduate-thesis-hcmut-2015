@@ -1,0 +1,21 @@
+64	MEDICATIONS ON ADMISSION : 1 ) Aspirin 81 mg p.o. q. day .|Aspirin[4851,4858]|||81mg[4859,4864]||p.o.[4865,4869]|q. day[4870,4876]||||252857|1191|acetylsalicylic acid
+65	2 ) Os-Cal 1250 mg p.o. three times a day .|Os - Cal[4883,4889]|||1250mg[4890,4897]||p.o.[4898,4902]|three times a day[4903,4920]||||346210|1897|calcium (as carbonate)
+66	3 ) Lasix 40 mg p.o. q.o.d. 4 ) Plaquenil 200 mg p.o. q. day .|Plaquenil[4955,4964]|||200mg[4965,4971]||p.o.[4939,4943]|q. day[4977,4983]|||C0698978|979094|5521|hydroxychloroquine
+66	3 ) Lasix 40 mg p.o. q.o.d. 4 ) Plaquenil 200 mg p.o. q. day .|Lasix[4927,4932]|||40mg[4933,4938]||p.o.[4972,4976]||||C0697300|200809|4603|furosemide
+67	5 ) Ibuprofen 400 mg p.o. t.i.d. 6 ) Levoxyl 100 mg p.o. q. day .|Levoxyl[5023,5030]|||100mg[5031,5037]||p.o.[5007,5011]|q. day[5043,5049]|||C0707568|966283|10582|levothyroxine
+67	5 ) Ibuprofen 400 mg p.o. t.i.d. 6 ) Levoxyl 100 mg p.o. q. day .|Ibuprofen[4990,4999]|||400mg[5000,5006]||p.o.[5038,5042]||||C0786114|245417|5640|ibuprofen
+68	7 ) Arava 20 mg p.o. q. day .|Arava[5056,5061]|||20mg[5062,5067]||p.o.[5068,5072]|q. day[5073,5079]|||C0716413|213379|27169|leflunomide
+69	8 ) Zantac 150 mg p.o. b.i.d. 9 ) Isosorbide dinitrate unclear dose .|Isosorbide dinitrate[5116,5136]||||||b.i.d.[5105,5111]|||C0022252|6058|6058|isosorbide dinitrate
+69	8 ) Zantac 150 mg p.o. b.i.d. 9 ) Isosorbide dinitrate unclear dose .|Zantac 150[5086,5096]|||||p.o.[5100,5104]||||C0724451|220992|220992|zantac 150
+70	10 ) Diltiazem 240 mg p.o. q. day .|Diltiazem[5157,5166]|||240mg[5167,5173]||p.o.[5174,5178]|q. day[5179,5185]|||C1102499|323914|3443|diltiazem
+71	11 ) Epogen q. two weeks .|Epogen[5193,5199]|||||||two weeks[5203,5212]|||203281|105694|epoetin alfa,recombinant
+79	The patient was maintained on her aspirin and Lasix .|aspirin[5765,5772]|||||||||C0004057|1191|1191|acetylsalicylic acid
+79	The patient was maintained on her aspirin and Lasix .|Lasix[5777,5782]|||||||||C0699992|202991|4603|furosemide
+80	The patient &apos;s Diltiazem was stopped due to her increased blood pressure and was started on Labetalol which was gradually titrated up to a target blood pressure of 160-170 systolic in her right arm .|Diltiazem[5805,5814]|||||||||C0012373|3443|3443|diltiazem
+80	The patient &apos;s Diltiazem was stopped due to her increased blood pressure and was started on Labetalol which was gradually titrated up to a target blood pressure of 160-170 systolic in her right arm .|Labetalol[5882,5891]|||||||||C0022860|6185|6185|labetalol
+108	The patient was started on Meclizine on December 31 , 2000 for her nausea and vertigo .|Meclizine[9025,9034]|||||||||C0025039|6676|6676|meclozine
+109	An attempt was also made to reduce the patient &apos;s large number of medications and the patient &apos;s Os-Cal , multivitamin , Lasix and Colace were discontinued .|Os - Cal[9193,9199]||||||||||605420|605420|os-cal
+109	An attempt was also made to reduce the patient &apos;s large number of medications and the patient &apos;s Os-Cal , multivitamin , Lasix and Colace were discontinued .|multivitamin[9202,9214]||||||||||89905|89905|multiple vitamins
+109	An attempt was also made to reduce the patient &apos;s large number of medications and the patient &apos;s Os-Cal , multivitamin , Lasix and Colace were discontinued .|Lasix[9217,9222]|||||||||C0699992|202991|4603|furosemide
+109	An attempt was also made to reduce the patient &apos;s large number of medications and the patient &apos;s Os-Cal , multivitamin , Lasix and Colace were discontinued .|Colace[9227,9233]|||||||||C0282139|82000|82003|docusate
+113	The patient was started on Levofloxacin 250 mg p.o. q. day times seven days for a possible nosocomial urinary tract infection .|Levofloxacin[9473,9485]|||250mg[9486,9492]||p.o.[9493,9497]|q. day[9498,9504]|||C0693578|199884|82122|levofloxacin

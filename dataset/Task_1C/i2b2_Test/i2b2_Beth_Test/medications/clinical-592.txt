@@ -1,0 +1,3 @@
+16	clear amniotic fluid , no antepartum maternal fever or fetal tachycardia , no antepartum antibiotic prophylaxis .|antibiotic[862,872]||||||||||896|896|antibiotic
+51	Fibrinogen was 192 .|Fibrinogen[2901,2911]|||||||||C0016006|4385|4385|fibrinogen
+60	Patient has been on room air maintaining sats above 95% .|sats[3369,3373]||||||||||483980|483980|sats

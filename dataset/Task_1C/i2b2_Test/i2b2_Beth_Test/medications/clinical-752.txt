@@ -1,0 +1,11 @@
+11	She was transferred to Charles River Hospital and was treated with magnesium sulfate and betamethasone .|magnesium sulfate[525,542]|||||||||C0024480|6585|6585|magnesium sulfate
+11	She was transferred to Charles River Hospital and was treated with magnesium sulfate and betamethasone .|betamethasone[547,560]|||||||||C0005308|1514|1514|betamethasone
+19	RPR nonreactive , rubella immune .|rubella[975,982]||||||||||1022799|1022799|rubella
+42	He was noted to have some apnea and bradycardic spells of prematurity and was therefore started on caffeine .|caffeine[2134,2142]|||||||||C0006644|1886|1886|caffeine
+43	With the initiation of caffeine therapy the patient has had no more apnea or bradycardic events .|caffeine[2168,2176]|||||||||C0006644|1886|1886|caffeine
+51	Na 145 , K 4.3 , Cl 110 , tCO2 25 .|Na[2890,2892]|||145[2893,2896]|||||||56501|56501|na m-fluorphosphate
+51	Na 145 , K 4.3 , Cl 110 , tCO2 25 .|Cl[2907,2909]|||110[2910,2913]|||||||47104|47104|cl
+62	He was noted to have an erythematous perianal rash and for this was started on Nystatin powder .|Nystatin powder[3611,3626]||||||||||312055|7597|nystatin
+69	To Kindred Hospital Special Care Nursery .|Special Care[3866,3878]||||||||||669616|669616|special care
+75	Caffeine 12 mg pg q day.|Caffeine[4134,4142]|||12mg[4143,4148]|||q day[4152,4157]|||C1367499|438130|1886|caffeine
+81	Synagis RSV prophylaxis should be considered from October through April for infants who meet any of the following criteria :|Synagis[4307,4314]|||||||||C0723567|220141|194279|palivizumab

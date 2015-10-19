@@ -1,0 +1,51 @@
+31	The patient was on coumadin recently , ? whether for the arrhythmia .|coumadin[2019,2027]|||||||||C0699129|202421|11289|warfarin
+32	Coumadin was reportedly discontinued approximately six months ago secondary to planned surgery for diabetic retinopathy and glaucoma .|Coumadin[2070,2078]|||||||six months[2121,2131]||C0699129|202421|11289|warfarin
+60	Humulin 70/30 with 30 units subq.q.a.m. and 20 units subq.q.p.m.|Humulin 70 / 30[3995,4008]|||||||||C1607522|573330|253181|insulin nph human semi-syn
+61	Vasotec 20 mg. q. a.m.|Vasotec[4060,4067]|||20mg.[4068,4074]|||q. a.m[4075,4081]|||C2718824|858811|3827|enalapril
+62	Prozac 40 mg. q.d.|Prozac[4083,4089]|||40mg.[4090,4096]|||q.d .[4097,4101]|||C1592239|574512|4493|fluoxetine
+63	Lasix 40 mg. q.d.|Lasix[4102,4107]|||40mg.[4108,4114]|||q.d .[4115,4119]|||C1597894|565458|4603|furosemide
+64	K-Dur approximately 28 ? mEq q.d.|K - Dur[4120,4125]||||||q.d .[4149,4153]||||93017|8591|potassium chloride
+65	Atropine 1% 1 GTT OD b.i.d.|Atropine[4154,4162]||||1 GTT[4166,4171]||b.i.d[4175,4180]|||C1126306|1190794|1223|atropine
+66	Ocufen 0.03% 1 GTT OD t.i.d.|Ocufen[4182,4188]|||0.03[4189,4193]|1 GTT[4195,4200]||t.i.d[4204,4209]||||93588|4502|flurbiprofen
+67	Ventolin metered-dose inhaler .|Ventolin[4211,4219]||||||||||8887|435|salbutamol
+117	He received Ancef preoperatively .|Ancef[7462,7467]|||||||||C0700926|203483|2180|cefazolin
+126	Cardiology was consulted and aspirin and beta blocker added to his regimen , as well as chest wall nitroglycerin around the time of surgery , which was subsequently discontinued .|aspirin[8244,8251]|||||||||C0004057|1191|1191|acetylsalicylic acid
+126	Cardiology was consulted and aspirin and beta blocker added to his regimen , as well as chest wall nitroglycerin around the time of surgery , which was subsequently discontinued .|beta blocker[8256,8268]||||||||||401870|401870|beta blocker
+126	Cardiology was consulted and aspirin and beta blocker added to his regimen , as well as chest wall nitroglycerin around the time of surgery , which was subsequently discontinued .|nitroglycerin[8314,8327]|||||||||C0017887|4917|4917|glyceryl trinitrate
+127	An adenosine SESTAMIBI was performed on 10/12/97 , which showed a negative electrocardiogram for ischemia and cardiac perfusion scans , with a moderate-sized , dense , fixed inferior defect indicative of scar .|SESTAMIBI[8408,8417]|||||||||C1337333|408081|408081|sestamibi
+127	An adenosine SESTAMIBI was performed on 10/12/97 , which showed a negative electrocardiogram for ischemia and cardiac perfusion scans , with a moderate-sized , dense , fixed inferior defect indicative of scar .|adenosine[8398,8407]|||||||||C0001443|296|296|adenosine
+147	The patient was initially on Cimetidine and Carafate here at Bri Health , and then switched to Prilosec 20 mg bid .|Cimetidine[10824,10834]|||||||||C0008783|2541|2541|cimetidine
+147	The patient was initially on Cimetidine and Carafate here at Bri Health , and then switched to Prilosec 20 mg bid .|Carafate[10839,10847]|||||||||C0740160|227743|10156|sucralfate
+147	The patient was initially on Cimetidine and Carafate here at Bri Health , and then switched to Prilosec 20 mg bid .|Prilosec[10890,10898]|||20mg[10899,10904]|||bid[10905,10908]|||C1602242|541245|7646|omeprazole
+151	Albuterol and Atrovent nebulizers were done .|Albuterol[11101,11110]|||||||||C0001927|435|435|salbutamol
+151	Albuterol and Atrovent nebulizers were done .|Atrovent[11115,11123]||nebulizers[11124,11134]|||||||C0591130|151390|7213|ipratropium
+156	His NPH was recently increased today ( 10/23/97 ) to 24 units in the a.m. and 14 units in the p.m. with CZI sliding-scale coverage .|NPH[11355,11358]||||||||||311030|221108|insulin isophane,pork pure
+158	The patient urinalysis on 10/19/97 showed moderate occult blood , pH 5 , albumin 1+ , white blood cells present , 2-50 red blood cell , 10-20 white blood cells , few bacteria , and moderate bladder epithelial cells .|albumin[11581,11588]|||||||||C0001924|433|433|albumin
+159	Floxin 200 mg po bid was begun .|Floxin[11725,11731]|||200mg[11732,11738]||po[11739,11741]|bid[11742,11745]|||C0708499|207208|7623|ofloxacin
+164	He was given Lasix 40 mg IV x 1 and also had Nitro paste around the time of his surgery and beta blocker .|Lasix[12014,12019]|||40mg[12020,12025]||IV[12026,12028]|x 1[12029,12032]|||C1597894|565458|4603|furosemide
+164	He was given Lasix 40 mg IV x 1 and also had Nitro paste around the time of his surgery and beta blocker .|Nitro paste[12046,12057]||||||||||402496|402496|nitro paste
+164	He was given Lasix 40 mg IV x 1 and also had Nitro paste around the time of his surgery and beta blocker .|beta blocker[12093,12105]||||||||||401870|401870|beta blocker
+174	Repleting potassium , magnesium , phosphorus as needed .|potassium[12742,12751]|||||||||C0032821|8588|8588|potassium
+174	Repleting potassium , magnesium , phosphorus as needed .|magnesium[12754,12763]||||||||as needed[12777,12786]|C0024467|6574|6574|magnesium
+179	NPH insulin 24 units subq. q. a.m.|NPH insulin[13038,13049]|||24[13050,13052]||subq.[13059,13064]|q. a.m[13065,13071]||||5865|5865|insulin isophane nph
+180	NPH insulin 14 units subq. q. p.m.|NPH insulin[13073,13084]|||14[13085,13087]||subq.[13094,13099]|q. p.m[13100,13106]||||5865|5865|insulin isophane nph
+183	Atropine sulfate 1 GTT 1% OD b.i.d.|Atropine sulfate[13388,13404]||||1 GTT[13405,13410]||b.i.d[13417,13422]|||C1126306|1190794|1223|atropine
+184	Ocufen 0.03% 1 GTT OD t.i.d.|Ocufen[13424,13430]|||0.03[13431,13435]|1 GTT[13437,13442]||t.i.d[13446,13451]||||93588|4502|flurbiprofen
+185	Vasotec 20 mg. p.o.q. a.m.|Vasotec[13453,13460]|||20mg.[13461,13467]||||||C2718824|858811|3827|enalapril
+186	Prozac 40 mg.p.o.q. a.m.|Prozac[13480,13486]|||40[13487,13489]||||||C1592239|574512|4493|fluoxetine
+188	Colace 100 mg. p.o. t.i.d.|Colace[13587,13593]|||100mg.[13594,13601]||p.o.[13602,13606]|t.i.d[13607,13612]|||C0711644|1247756|82003|docusate
+189	Senokot 1 p.o. q. h.s.|Senokot[13614,13621]||||1[13622,13623]|p.o.[13624,13628]|h.s[13632,13635]|||C3232830|1178946|36387|sennosides
+190	Nystatin powder to affected area t.i.d.|Nystatin powder[13637,13652]||||||t.i.d[13670,13675]||||312055|7597|nystatin
+191	Lopressor 25 mg. p.o. b.i.d.|Lopressor[13677,13686]|||25mg.[13687,13693]||p.o.[13694,13698]|b.i.d[13699,13704]|||null|866502|5487|hydrochlorothiazide
+192	Atrovent 0.8/2.5 c.c. normal saline nebulizers q. 8 h.|normal saline[13728,13741]||nebulizers[13742,13752]|0.8[13715,13718]|||q. 8 h[13753,13759]|||C0445115|125464|125464|normal saline
+192	Atrovent 0.8/2.5 c.c. normal saline nebulizers q. 8 h.|Atrovent[13706,13714]|||||||||C0591130|151390|7213|ipratropium
+193	Albuterol 2.5/5 c.c. normal saline nebulizers q. 4 h. with q. 2 h. p.r.n.|Albuterol[13761,13770]|||2.5[13771,13774]||||||C1235685|361796|435|salbutamol
+193	Albuterol 2.5/5 c.c. normal saline nebulizers q. 4 h. with q. 2 h. p.r.n.|normal saline[13782,13795]||nebulizers[13796,13806]||||q. 4 h.[13807,13814]||p.r.n[13828,13833]|C0445115|125464|125464|normal saline
+194	Percocet 1-2 p.o. q. 4 h. p.r.n. pain .|Percocet[13835,13843]||||1 - 2[13844,13847]|p.o.[13848,13852]|q. 4 h.[13853,13860]||p.r.n.[13861,13867]|C3239003|1185228|161|paracetamol
+195	Prilosec 20 mg. p.o. b.i.d.|Prilosec[13875,13883]|||20mg.[13884,13890]||p.o.[13891,13895]|b.i.d[13896,13901]|||C0708503|207212|7646|omeprazole
+196	Vexol 1% 1 GTT OD b.i.d.|Vexol[13903,13908]||||1 GTT[13912,13917]||b.i.d[13921,13926]|||C0708788|207446|55681|rimexolone
+197	Lasix 40 mg. p.o. q.d.|Lasix[13928,13933]|||40mg.[13934,13940]||p.o.[13941,13945]|q.d .[13946,13950]|||C0697300|200809|4603|furosemide
+198	KCl 20 mEq p.o. q.d.|KCl[13951,13954]|||20mEq[13955,13961]||p.o.[13962,13966]|q.d .[13967,13971]|||C0981677|891453|8591|potassium chloride
+199	Tylenol 650 mg. p.o. q. 12 h. p.r.n.|Tylenol[13972,13979]|||650mg.[13980,13987]||p.o.[13988,13992]|q. 12 h.[13993,14001]||p.r.n[14002,14007]||1243440|161|paracetamol
+200	Ativan 1 mg. p.o. q. h.s. p.r.n.|Ativan[14009,14015]|||1mg.[14016,14021]||p.o.[14022,14026]|h.s.[14030,14034]||p.r.n[14035,14040]|C0355054|104719|6470|lorazepam
+206	NABETH NA GLYNCRED , M.D.|NA[14103,14105]||||||||||56501|56501|na m-fluorphosphate

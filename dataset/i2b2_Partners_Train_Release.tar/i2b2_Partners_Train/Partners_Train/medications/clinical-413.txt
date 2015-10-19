@@ -1,0 +1,6 @@
+20	He was intubated with pressor support of 25 , and PEEP of 12.5 with 70% FIO2 .|pressor[949,956]||||||||||||
+36	The patient was therefore completely cultured again and begun on antibiotic coverage which would take care of the Pseudomonas he was known to have .|antibiotic[1999,2009]||||||||||896|896|antibiotic
+37	The steroids were tapered .|steroids[2087,2095]||||||||||10072|10072|steroids
+43	He underwent a trial of TPA followed by heparin .|heparin[2509,2516]|||||||||C0019134|235473|235473|heparin,porcine
+43	He underwent a trial of TPA followed by heparin .|TPA[2493,2496]||||||||||988971|988971|tpa
+47	At that time , therefore , ventilator support was withdrawn under the comfort measures of morphine .|morphine[2875,2883]|||||||||C0026549|7052|7052|morphine
