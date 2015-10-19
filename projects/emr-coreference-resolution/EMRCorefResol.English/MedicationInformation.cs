@@ -26,13 +26,16 @@ namespace HCMUT.EMRCorefResol.English
 
             var rootInfo = new DirectoryInfo(rootPath);
 
-            if(_meds.ContainsKey(rootInfo.Name))
+            lock (_meds)
             {
+                if (_meds.ContainsKey(rootInfo.Name))
+                {
+                    return GetMedicationFile(rootInfo, emrName);
+                }
+
+                _meds[rootInfo.Name] = new Dictionary<string, MedicationInfoCollection>();
                 return GetMedicationFile(rootInfo, emrName);
             }
-
-            _meds[rootInfo.Name] = new Dictionary<string, MedicationInfoCollection>();
-            return GetMedicationFile(rootInfo, emrName);
         }
 
         private static DirectoryInfo GetSubFolder(DirectoryInfo root, string folderName)

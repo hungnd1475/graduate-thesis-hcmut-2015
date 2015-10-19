@@ -41,6 +41,9 @@ namespace HCMUT.EMRCorefResol
                     _infos.Add(i);
                 }
             }
+
+            sr.Close();
+            fs.Close();
         }
 
         public int IndexOf(MedicationInfo info)

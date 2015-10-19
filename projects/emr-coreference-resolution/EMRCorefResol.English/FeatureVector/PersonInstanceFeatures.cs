@@ -10,12 +10,14 @@ namespace HCMUT.EMRCorefResol.English
 
     class PersonInstanceFeatures : FeatureVector
     {
-        public PersonInstanceFeatures(PersonInstance instance, EMR emr, double classValue)
+        public PersonInstanceFeatures(PersonInstance instance, EMR emr, IPatientDeterminer PatientDeterminer, double classValue)
             : base(size: 21, classValue: classValue)
         {
+            var mostGender = Service.English.GetMostGender(emr);
+
             this[0] = new PronounIFeature(instance);
             this[1] = new PronounYouFeature(instance);
-            this[2] = new PronounHeSheFeature(instance);
+            this[2] = new PronounHeSheFeature(instance, mostGender);
             this[3] = new PronounWeFeature(instance);
             this[4] = new PronounTheyFeature(instance);
             this[5] = new PatientKeywordFeature(instance);
@@ -25,7 +27,7 @@ namespace HCMUT.EMRCorefResol.English
             this[9] = new SignedInformationFeature(instance, emr);
             this[10] = new TwinTripletFeature(instance);
             this[11] = new DoctorLastNLineFeature(instance, emr);
-            this[12] = new PreceededNonPatientFeature(instance, emr);
+            this[12] = new PreceededNonPatientFeature(instance, emr, PatientDeterminer);
             this[13] = new AppositionFeature(instance, emr);
             this[14] = new DoctorTitleKeywordFeature(instance);
             this[15] = new DepartmentKeywordFeature(instance);
