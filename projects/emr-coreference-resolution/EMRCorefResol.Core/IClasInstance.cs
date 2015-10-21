@@ -21,5 +21,7 @@ namespace HCMUT.EMRCorefResol
         IFeatureVector GetFeatures(IFeatureExtractor extractor);
 
         void AddTo(ClasProblemCollection pCreator, IFeatureVector fVector);
+
+        ClasResult Classify(IClassifier classifier, IFeatureVector fVector);
     }
 }

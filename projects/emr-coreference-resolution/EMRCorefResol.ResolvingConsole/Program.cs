@@ -19,7 +19,11 @@ namespace HCMUT.EMRCorefResol.ResolvingConsole
 
             if (result.HasErrors)
             {
-                Console.WriteLine(result.ErrorText);
+                DescHelpOption.ShowHelp(parser.Options);
+                return;
+            }
+            else if (result.HelpCalled)
+            {
                 return;
             }
 
@@ -88,35 +92,45 @@ namespace HCMUT.EMRCorefResol.ResolvingConsole
 
             p.Setup(a => a.EMRDir)
                 .As('d', "emrdir")
-                .Required();
+                .Required()
+                .WithDescription("Set EMR directory (required).");
 
             p.Setup(a => a.EMRName)
                 .As('e', "emrname")
-                .SetDefault(null);
+                .SetDefault(null)
+                .WithDescription("Set specific EMR file name (without extension) to resolve (default all).");
 
             p.Setup(a => a.EMRFormat)
                 .As('f', "emrformat")
-                .SetDefault(EMRFormat.I2B2);
+                .SetDefault(EMRFormat.I2B2)
+                .WithDescription(Descriptions.EMRFormat("1"));
 
             p.Setup(a => a.Language)
                 .As('l', "language")
-                .SetDefault(Language.English);
+                .SetDefault(Language.English)
+                .WithDescription(Descriptions.Language("1"));
 
             p.Setup(a => a.ModelsDir)
                 .As('m', "models")
-                .Required();
+                .Required()
+                .WithDescription("Set classification models directory (required).");
 
             p.Setup(a => a.ClasMethod)
                 .As('c', "clas")
-                .SetDefault(ClasMethod.LibSVM);
+                .SetDefault(ClasMethod.LibSVM)
+                .WithDescription(Descriptions.ClasMethod("1"));
 
             p.Setup(a => a.ResolMethod)
                 .As('r', "resol")
-                .SetDefault(ResolMethod.BestFirst);
+                .SetDefault(ResolMethod.BestFirst)
+                .WithDescription(Descriptions.ResolMethod("1"));
 
             p.Setup(a => a.OutputDir)
                 .As('o', "outdir")
-                .Required();
+                .Required()
+                .WithDescription("Set output directory (required).");
+
+            p.SetupHelp("?").Callback(() => DescHelpOption.ShowHelp(p.Options));
 
             return p;
         }

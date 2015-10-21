@@ -124,6 +124,21 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             Console.WriteLine(output);
         }
 
+        public static SVMModel Train(SVMProblem problem, SVMParameter parameter)
+        {
+            var ptr_problem = SVMProblem.Allocate(problem);
+            var ptr_parameter = SVMParameter.Allocate(parameter);
+
+            var ptr_model = NativeLibSVM.Train(ptr_problem, ptr_parameter);
+            var model = SVMModel.Convert(ptr_model);
+
+            SVMProblem.Free(ptr_problem);
+            SVMParameter.Free(ptr_parameter);
+            NativeLibSVM.FreeModelContent(ptr_model);
+
+            return model;
+        }
+
         public static SVMModel LoadModel(string modelPath)
         {
             if (string.IsNullOrWhiteSpace(modelPath) || !File.Exists(modelPath))
@@ -303,6 +318,12 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             /// <returns></returns>
             [DllImport(DllPath, CallingConvention = CallingConvention.Cdecl, EntryPoint = "svm_check_probability_model")]
             public static extern bool CheckProbabilityModel(IntPtr model);
+                        
+            /// <param name="problem">svm_problem</param>
+            /// <param name="parameter">svm_parameter</param>
+            /// <returns>svm_model</returns>
+            [DllImport(DllPath, CallingConvention = CallingConvention.Cdecl, EntryPoint = "svm_train")]
+            public static extern IntPtr Train(IntPtr problem, IntPtr parameter);
         }
     }
 }

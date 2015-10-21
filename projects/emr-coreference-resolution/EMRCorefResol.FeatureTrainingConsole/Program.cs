@@ -22,7 +22,7 @@ namespace HCMUT.EMRCorefResol.FeatureTrainingConsole
 
             if (parseResult.HasErrors)
             {
-                Console.WriteLine(parseResult.ErrorText);
+                DescHelpOption.ShowHelp(argsParser.Options);
                 return;
             }
             else if (parseResult.HelpCalled)
@@ -72,10 +72,7 @@ namespace HCMUT.EMRCorefResol.FeatureTrainingConsole
         static FluentCommandLineParser<Arguments> PrepareParser()
         {
             var p = new FluentCommandLineParser<Arguments>();
-
-            p.SetupHelp("-?", "--help");
-            p.HelpOption = new DescHelpOption();
-
+                        
             p.Setup(a => a.FeaturePath)
                 .As('d', "data")
                 .Required()
@@ -115,6 +112,8 @@ namespace HCMUT.EMRCorefResol.FeatureTrainingConsole
                 .As('w', "weights")
                 .SetDefault(-1)
                 .WithDescription("Whether the trainer should apply class weights (LibSVM only, default 0).");
+
+            p.SetupHelp("?").Callback(() => DescHelpOption.ShowHelp(p.Options));
 
             return p;
         }

@@ -10,6 +10,7 @@ namespace HCMUT.EMRCorefResol.Classification
     {
         void Serialize(ClasProblem problem, string filePath);
         void Serialize(ClasProblem problem, string filePath, bool doScale);
+        void Serialize(ClasProblem problem, string filePath, bool doScale, bool append);
         ClasProblem Deserialize(string filePath);
     }
 }

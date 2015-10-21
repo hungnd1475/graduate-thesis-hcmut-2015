@@ -18,5 +18,6 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
         public string ModelsDir { get; set; }
         public int Random { get; set; }
         public int DoScale { get; set; }
+        public string Instances { get; set; }
     }
 }

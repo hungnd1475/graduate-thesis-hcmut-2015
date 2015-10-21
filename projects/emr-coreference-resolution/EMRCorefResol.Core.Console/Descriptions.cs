@@ -41,6 +41,11 @@ namespace HCMUT.EMRCorefResol.Core.Console
             "    + Classify: 3"
         };
 
+        static readonly string[] ResolMethodDescs = new string[]
+        {
+            "    + Best first: 1"
+        };
+
         public static string ClasMethod(string defVal)
         {
             return $"Set classification method. Can be one of the followings ({GetDefVal(defVal)}):\n" +
@@ -69,6 +74,12 @@ namespace HCMUT.EMRCorefResol.Core.Console
         {
             return $"Set operation mode. Can be one of the followings ({GetDefVal(defVal)}):\n"
                 + string.Join(Environment.NewLine, ModeDescs);
+        }
+        
+        public static string ResolMethod(string defVal)
+        {
+            return $"Set resolution method. Can be one of the followings ({GetDefVal(defVal)}):\n"
+                + string.Join(Environment.NewLine, ResolMethodDescs);
         }
 
         private static string GetDefVal(string defVal)

@@ -19,8 +19,7 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
 
             if (parseResult.HasErrors)
             {
-                Console.Write(parseResult.ErrorText);
-                Console.ReadLine();
+                DescHelpOption.ShowHelp(argsParser.Options);
                 return;
             }
             else if (parseResult.HelpCalled)
@@ -45,6 +44,17 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
                 return;
             }
 
+            var types = args.Instances?.Split(',').Aggregate(new HashSet<Type>(), 
+                (t, s) =>
+                {
+                    Instance e;
+                    if (Enum.TryParse(s.Trim(), out e))
+                    {
+                        t.Add(GetTypeFromEnum(e));
+                    }
+                    return t;
+                });
+
             var pCreator = new ClasProblemCollection();
             var dataReader = APISelector.SelectDataReader(args.EMRFormat);
             var fExtractor = APISelector.SelectFeatureExtractor(args.Language, args.Mode, 
@@ -57,12 +67,12 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
                 string[] emrPaths, conceptsPaths, chainsPaths;
                 emrCollections.First().GetRandom(args.Random, out emrPaths, out conceptsPaths, out chainsPaths);
                 FeatureExtractingSystem.Instance.ExtractAll(emrPaths, conceptsPaths, chainsPaths, dataReader,
-                    preprocessor, fExtractor, pCreator);
+                    preprocessor, fExtractor, pCreator, types);
             }
             else
             {
                 FeatureExtractingSystem.Instance.ExtractCollections(emrCollections, dataReader, preprocessor,
-                    fExtractor, pCreator);
+                    fExtractor, pCreator, types);
             }
 
             var serializer = APISelector.SelectProblemSerializer(args.ClasMethod);
@@ -71,20 +81,27 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
             Console.WriteLine("Serializing...");
             var doScale = Convert.ToBoolean(args.DoScale);
 
-            serializer.Serialize(pCreator.GetProblem<PersonPair>(), Path.Combine(args.OutDir, "PersonPair.prb"), doScale);
-            serializer.Serialize(pCreator.GetProblem<PersonInstance>(), Path.Combine(args.OutDir, "PersonInstance.prb"), doScale);
-            serializer.Serialize(pCreator.GetProblem<PronounInstance>(), Path.Combine(args.OutDir, "PronounInstance.prb"), doScale);
-            serializer.Serialize(pCreator.GetProblem<ProblemPair>(), Path.Combine(args.OutDir, "ProblemPair.prb"), doScale);
-            serializer.Serialize(pCreator.GetProblem<TreatmentPair>(), Path.Combine(args.OutDir, "TreatmentPair.prb"), doScale);
-            serializer.Serialize(pCreator.GetProblem<TestPair>(), Path.Combine(args.OutDir, "TestPair.prb"), doScale);
+            if (types == null || types.Count == 0)
+            {
+                serializer.Serialize(pCreator.GetProblem<PersonPair>(), Path.Combine(args.OutDir, "PersonPair.prb"), doScale);
+                serializer.Serialize(pCreator.GetProblem<PersonInstance>(), Path.Combine(args.OutDir, "PersonInstance.prb"), doScale);
+                serializer.Serialize(pCreator.GetProblem<PronounInstance>(), Path.Combine(args.OutDir, "PronounInstance.prb"), doScale);
+                serializer.Serialize(pCreator.GetProblem<ProblemPair>(), Path.Combine(args.OutDir, "ProblemPair.prb"), doScale);
+                serializer.Serialize(pCreator.GetProblem<TreatmentPair>(), Path.Combine(args.OutDir, "TreatmentPair.prb"), doScale);
+                serializer.Serialize(pCreator.GetProblem<TestPair>(), Path.Combine(args.OutDir, "TestPair.prb"), doScale);
+            }
+            else
+            {
+                foreach (var t in types)
+                {
+                    serializer.Serialize(pCreator.GetProblem(t), Path.Combine(args.OutDir, $"{t.Name}.prb"), doScale);
+                }
+            }
         }
 
         static FluentCommandLineParser<Arguments> PrepareParser()
         {
             var p = new FluentCommandLineParser<Arguments>();
-
-            p.SetupHelp("-?", "--help");
-            p.HelpOption = new DescHelpOption();
 
             p.Setup(arg => arg.EMRDirs)
                 .As('e', "emr")
@@ -131,7 +148,35 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
                 .SetDefault(1)
                 .WithDescription("Whether the extractor should scale all features before saving (default 1).");
 
+            p.Setup(a => a.Instances)
+                .As('i', "instances")
+                .SetDefault(null)
+                .WithDescription("Set intance types to extract.");
+
+            p.SetupHelp("?").Callback(() => DescHelpOption.ShowHelp(p.Options));
+
             return p;
+        }
+
+        static Type GetTypeFromEnum(Instance instance)
+        {
+            switch (instance)
+            {
+                case Instance.PersonInstance:
+                    return typeof(PersonInstance);
+                case Instance.PersonPair:
+                    return typeof(PersonPair);
+                case Instance.ProblemPair:
+                    return typeof(ProblemPair);
+                case Instance.PronounInstance:
+                    return typeof(PronounInstance);
+                case Instance.TestPair:
+                    return typeof(TestPair);
+                case Instance.TreatmentPair:
+                    return typeof(TreatmentPair);
+                default:
+                    throw new ArgumentException("instance");
+            }
         }
     }
 }

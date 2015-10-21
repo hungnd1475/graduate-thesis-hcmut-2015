@@ -35,6 +35,8 @@ namespace HCMUT.EMRCorefResol
         }
 
         public abstract void AddTo(ClasProblemCollection pCreator, IFeatureVector fVector);
+        
+        public abstract ClasResult Classify(IClassifier classifier, IFeatureVector fVector);
 
         public bool Equals(SingleInstance other)
         {
@@ -53,6 +55,11 @@ namespace HCMUT.EMRCorefResol
             pCreator.Add(this, fVector);
         }
 
+        public override ClasResult Classify(IClassifier classifier, IFeatureVector fVector)
+        {
+            return classifier.Classify(this, fVector);
+        }
+
         public override IFeatureVector GetFeatures(IFeatureExtractor extractor)
         {
             return extractor.Extract(this);
@@ -68,6 +75,11 @@ namespace HCMUT.EMRCorefResol
         public override void AddTo(ClasProblemCollection pCreator, IFeatureVector fVector)
         {
             pCreator.Add(this, fVector);
+        }
+
+        public override ClasResult Classify(IClassifier classifier, IFeatureVector fVector)
+        {
+            return classifier.Classify(this, fVector);
         }
 
         public override IFeatureVector GetFeatures(IFeatureExtractor extractor)

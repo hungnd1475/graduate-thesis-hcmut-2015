@@ -12,7 +12,7 @@ namespace HCMUT.EMRCorefResol.RBFOptimizingConsole
         public int NFold { get; set; }
         public string GammaRange { get; set; }
         public string CostRange { get; set; }
-        public bool SearchBestRegion { get; set; }
+        public int SearchBestRegion { get; set; }
         public string BestRegion { get; set; }
         public string LogFile { get; set; }
     }

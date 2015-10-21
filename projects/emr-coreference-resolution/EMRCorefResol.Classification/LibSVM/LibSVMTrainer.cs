@@ -122,8 +122,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
                     }
                 }
             }
-                                                
-            //File.WriteAllText(scaledPrbPath, scaledData);
+
             data = null;
             problem = null;
 

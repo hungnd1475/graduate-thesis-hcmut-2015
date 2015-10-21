@@ -9,15 +9,11 @@ using static System.Console;
 
 namespace HCMUT.EMRCorefResol.Core.Console
 {
-    public class DescHelpOption : IHelpCommandLineOption
+    public static class DescHelpOption
     {
-        public bool ShouldShowHelp(IEnumerable<ParsedOption> parsedOptions, StringComparison comparisonType)
+        public static void ShowHelp(IEnumerable<ICommandLineOption> options)
         {
-            return true;
-        }
-
-        public void ShowHelp(IEnumerable<ICommandLineOption> options)
-        {
+            WriteLine("Usage:");
             foreach (var o in options)
             {               
                 WriteLine($"-{o.ShortName}: {o.Description}");
