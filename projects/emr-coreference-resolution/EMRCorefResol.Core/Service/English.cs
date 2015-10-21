@@ -21,12 +21,14 @@ namespace HCMUT.EMRCorefResol.Service
         private static ICache<string, string> _temporalCache;
         private static ICache<EMR, int> _mostGenderCache;
         private static ICache<string, Definition[]> _wordnetCache;
+        private static ICache<string, WikiData> _wikiCache;
 
         static English()
         {
             _temporalCache = new UnlimitedCache<string, string>();
             _mostGenderCache = new UnlimitedCache<EMR, int>();
             _wordnetCache = new UnlimitedCache<string, Definition[]>();
+            _wikiCache = new UnlimitedCache<string, WikiData>();
         }
 
         public static void ClearCache()
@@ -34,6 +36,7 @@ namespace HCMUT.EMRCorefResol.Service
             _temporalCache.Clear();
             _mostGenderCache.Clear();
             _wordnetCache.Clear();
+            _wikiCache.Clear();
         }
 
         public static string[] POSTag(string term)
@@ -156,7 +159,10 @@ namespace HCMUT.EMRCorefResol.Service
 
         public static WikiData GetAllWikiInformation(string term)
         {
-            return _wiki.GetPageInfo(term);
+            return _wikiCache.GetValue(term, (string search_term) =>
+            {
+                return _wiki.GetPageInfo(search_term);
+            });
         }
     }
 }
