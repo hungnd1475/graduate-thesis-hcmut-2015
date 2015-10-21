@@ -17,6 +17,7 @@ namespace HCMUT.EMRCorefResol.English.Features
             if(anaSection == 0 || anteSection == 0)
             {
                 SetContinuousValue(0);
+                return;
             }
 
             var sectionPairIndex = GetSectionPairIndex(anaSection, anteSection, emr);
