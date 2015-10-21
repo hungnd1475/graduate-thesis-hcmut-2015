@@ -11,8 +11,11 @@ namespace HCMUT.EMRCorefResol.English
     class ProblemPairFeatures : FeatureVector
     {
         public ProblemPairFeatures(ProblemPair instance, EMR emr, double classValue)
-            : base(size: 11, classValue: classValue)
+            : base(size: 13, classValue: classValue)
         {
+            var anaWiki = Service.English.GetAllWikiInformation(instance.Anaphora.Lexicon);
+            var anteWiki = Service.English.GetAllWikiInformation(instance.Antecedent.Lexicon);
+
             this[0] = new WordNetMatchFeature(instance);
             this[1] = new SentenceDistanceFeature(instance);
             this[2] = new ArticleFeature(instance);
@@ -25,6 +28,10 @@ namespace HCMUT.EMRCorefResol.English
 
             this[9] = new PositionFeature(instance, emr);
             this[10] = new SectionFeature(instance, emr);
+
+            this[10] = new WikiMatchFeature(anaWiki, anteWiki);
+            this[11] = new WikiAnchorLinkFeature(anaWiki, anteWiki);
+            this[12] = new WikiBoldNameMatchFeature(anaWiki, anteWiki);
         }
     }
 }

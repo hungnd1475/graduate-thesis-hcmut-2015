@@ -11,8 +11,11 @@ namespace HCMUT.EMRCorefResol.English
     class TestPairFeatures : FeatureVector
     {
         public TestPairFeatures(TestPair instance, EMR emr, double classValue)
-            :base(size:14, classValue: classValue)
+            :base(size:17, classValue: classValue)
         {
+            var anaWiki = Service.English.GetAllWikiInformation(instance.Anaphora.Lexicon);
+            var anteWiki = Service.English.GetAllWikiInformation(instance.Antecedent.Lexicon);
+
             this[0] = new WordNetMatchFeature(instance);
             this[1] = new SentenceDistanceFeature(instance);
             this[2] = new ArticleFeature(instance);
@@ -28,6 +31,10 @@ namespace HCMUT.EMRCorefResol.English
             this[11] = new TemporalFeature(instance, emr);
             this[12] = new SectionFeature(instance, emr);
             this[13] = new ModifierFeature(instance, emr);
+
+            this[14] = new WikiMatchFeature(anaWiki, anteWiki);
+            this[15] = new WikiAnchorLinkFeature(anaWiki, anteWiki);
+            this[16] = new WikiBoldNameMatchFeature(anaWiki, anteWiki);
         }
     }
 }
