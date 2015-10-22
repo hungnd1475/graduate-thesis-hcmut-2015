@@ -163,6 +163,8 @@ namespace HCMUT.EMRCorefResol.Service
             {
                 return _wiki.GetPageInfo(search_term);
             });
+
+            //return _wiki.GetPageInfo(term);
         }
     }
 }

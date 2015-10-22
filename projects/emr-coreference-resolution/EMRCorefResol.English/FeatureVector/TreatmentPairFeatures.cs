@@ -21,8 +21,10 @@ namespace HCMUT.EMRCorefResol.English
             var anaMedicationInfo = GetMedicationInfo(instance.Anaphora, emr, medicationCollections);
             var anteMedicationInfo = GetMedicationInfo(instance.Antecedent, emr, medicationCollections);
 
-            var anaWiki = Service.English.GetAllWikiInformation(instance.Anaphora.Lexicon);
-            var anteWiki = Service.English.GetAllWikiInformation(instance.Antecedent.Lexicon);
+            var anaNorm = EnglishNormalizer.Normalize(instance.Anaphora.Lexicon);
+            var anteNorm = EnglishNormalizer.Normalize(instance.Antecedent.Lexicon);
+            var anaWiki = Service.English.GetAllWikiInformation(anaNorm);
+            var anteWiki = Service.English.GetAllWikiInformation(anteNorm);
 
             this[0] = new WordNetMatchFeature(instance);
             this[1] = new SentenceDistanceFeature(instance);

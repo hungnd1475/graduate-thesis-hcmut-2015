@@ -223,6 +223,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Keywords\modifier-keywords.txt" />
+    <Content Include="Keywords\stopwords.txt" />
     <Content Include="Keywords\they.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

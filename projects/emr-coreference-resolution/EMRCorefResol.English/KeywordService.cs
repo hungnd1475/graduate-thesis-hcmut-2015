@@ -89,6 +89,9 @@ namespace HCMUT.EMRCorefResol.English
         public IKeywordDictionary MODIFIER_KEYWORD { get; }
             = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "modifier-keywords.txt")));
 
+        public IKeywordDictionary STOP_WORDS { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "stopwords.txt")));
+
         private KeywordService() { }
 
         private static IEnumerable<string> ReadKWFile(string filePath)
