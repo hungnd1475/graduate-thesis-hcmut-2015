@@ -17,7 +17,8 @@ namespace HCMUT.EMRCorefResol.English.Features
                 return;
             }
 
-            if (anaData.bolds.Contains(anteData.title) || anteData.bolds.Contains(anaData.title))
+            if (anaData.bolds.Contains(anteData.title) || anteData.bolds.Contains(anaData.title) ||
+                anaData.bolds.Contains(anteData.term) || anteData.bolds.Contains(anaData.term))
             {
                 SetCategoricalValue(1);
             }

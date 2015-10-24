@@ -77,20 +77,20 @@ namespace HCMUT.EMRCorefResol.Service
                 return null;
             }
 
-            var pageTitle = response[0].Attributes["title"].Value;
+            var pageTitle = response[0].Attributes["title"].Value.ToLower();
 
             var label = new List<string>();
             var labels = xmlDoc.GetElementsByTagName("Label");
             foreach(XmlNode node in labels)
             {
-                label.Add(node.InnerText);
+                label.Add(node.InnerText.ToLower());
             }
 
             var outLink = new List<string>();
             var links = xmlDoc.GetElementsByTagName("OutLink");
             foreach(XmlNode node in links)
             {
-                outLink.Add(node.Attributes["title"].Value);
+                outLink.Add(node.Attributes["title"].Value.ToLower());
             }
 
             return new WikiData(title, pageTitle, outLink.ToArray(), label.ToArray());
