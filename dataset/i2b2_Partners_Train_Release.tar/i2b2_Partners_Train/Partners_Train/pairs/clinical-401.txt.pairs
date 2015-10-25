@@ -1,8 +1,0 @@
-c="prednisone" 34:0 34:0||t="coref treatment"||c="prednisone" 37:0 37:0
-c="which" 35:13 35:13||t="coref problem"||c="the lung nodule" 40:11 40:13
-c="patient" 29:0 29:0||t="coref person"||c="patient" 39:7 39:7
-c="a pulmonary nodule in the right lower lobe" 35:5 35:12||t="coref problem"||c="which" 35:13 35:13
-c="asha vengloan" 21:0 21:1||t="coref person"||c="vengloan , asha" 42:5 42:7
-c="uph , jim" 13:0 13:2||t="coref person"||c="patient" 29:0 29:0
-c="provider" 20:0 20:0||t="coref person"||c="asha vengloan" 21:0 21:1
-c="nebulizers" 34:2 34:2||t="coref treatment"||c="inhalers" 38:1 38:1

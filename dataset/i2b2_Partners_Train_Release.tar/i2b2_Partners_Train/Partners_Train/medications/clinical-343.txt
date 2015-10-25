@@ -1,6 +1,0 @@
-12	He was seen by a doctor in Arizona and treated with dressing changes and debridement until approximately six weeks ago , when antibiotics were started with Ciprofloxacin .|Ciprofloxacin[641,654]|||||||six weeks[590,599]||C0008809|2551|2551|ciprofloxacin
-20	Tylenol , Ciprofloxacin and Insulin , about 16 units of NPH qa.m.|Tylenol[1144,1151]||||||||||202433|161|paracetamol
-20	Tylenol , Ciprofloxacin and Insulin , about 16 units of NPH qa.m.|Ciprofloxacin[1154,1167]|||||||||C0008809|2551|2551|ciprofloxacin
-20	Tylenol , Ciprofloxacin and Insulin , about 16 units of NPH qa.m.|NPH[1200,1203]||||||||||311030|221108|insulin isophane,pork pure
-46	The patient was preoperatively treated with about a seven day course of intravenous Unasyn and postoperatively treated for approximately four days of intravenous Unasyn .|Unasyn[3712,3718]|||||intravenous[3700,3711]||seven day[3680,3689]||C0971675|57773|733|ampicillin
-46	The patient was preoperatively treated with about a seven day course of intravenous Unasyn and postoperatively treated for approximately four days of intravenous Unasyn .|Unasyn[3790,3796]|||||intravenous[3778,3789]||four days[3765,3774]||C0971675|57773|733|ampicillin

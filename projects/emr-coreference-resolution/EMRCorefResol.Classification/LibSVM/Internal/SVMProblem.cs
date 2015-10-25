@@ -21,13 +21,22 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM.Internal
         public List<double> Y { get; private set; }
         public List<SVMNode[]> X { get; private set; }
 
+        public int GetDimension()
+        {
+            return X.Aggregate(0, (d, x) =>
+            {
+                var max = x.Aggregate(0, (n, f) => n < f.Index ? f.Index : n);
+                return d < max ? max : d;
+            });
+        }
+
         public void Add(SVMNode[] x, double y)
         {
             if (x.Length > 0)
             {
                 SVMNode[] nodes = x.OrderBy(a => a.Index).ToArray();
                 X.Add(nodes);
-                Y.Add(y);
+                Y.Add(y);                
             }
         }
 

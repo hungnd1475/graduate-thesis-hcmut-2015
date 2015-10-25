@@ -1,4 +1,0 @@
-c="selcfarst , naorly" 12:0 12:2||c="patient" 30:0 30:0||c="the patient" 33:0 33:1||c="patient" 40:7 40:7||c="pt" 42:0 42:0||t="coref person"
-c="provider" 19:0 19:0||c="stiege , m.d. tlandjesc" 20:0 20:3||c="provider" 45:0 45:0||c="tlandjesc , iecelane , m.d." 47:5 47:9||t="coref person"
-c="pcp" 22:0 22:0||c="pcp" 23:1 23:1||c="pcp" 41:5 41:5||c="pcp" 43:0 43:0||t="coref person"
-c="dizziness" 31:0 31:0||c="dizziness" 33:7 33:7||t="coref problem"

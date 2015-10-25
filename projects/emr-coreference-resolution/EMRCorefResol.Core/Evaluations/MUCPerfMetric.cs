@@ -8,18 +8,61 @@ namespace HCMUT.EMRCorefResol.Evaluations
 {
     public class MUCPerfMetric : IPerfMetric
     {
-        public Evaluation Evaluate(EMR emr, CorefChainCollection groundTruth, CorefChainCollection systemChains)
+        public string Name
         {
-            var p = systemChains.Aggregate(0d, (t, s) => t + (double)(s.Count - m(s, groundTruth)) / (s.Count - 1));
-            var r = groundTruth.Aggregate(0d, (t, g) => t + (double)(g.Count - m(g, systemChains)) / (g.Count - 1));
+            get { return "MUC"; }
+        }
 
-            var f = 2 * p * r / (p + r);
-            return new Evaluation(p, r, f);
+        public Dictionary<ConceptType, Evaluation> Evaluate(EMR emr, CorefChainCollection groundTruth, CorefChainCollection systemChains)
+        {
+            var evals = new Dictionary<ConceptType, Evaluation>();
+
+            foreach (var type in Evaluation.Types)
+            {
+                var tSystemChains = systemChains.GetChainsOfType(type);
+                var tGroundTruth = groundTruth.GetChainsOfType(type);
+
+                double u = 0d, l = 0d;
+                foreach (var s in tSystemChains)
+                {
+                    u += (s.Count - m(s, tGroundTruth));
+                    l += (s.Count - 1);
+                }
+                var p = (u == 0d && l == 0d) ? 1d : u / l;
+
+                u = 0d; l = 0d;
+                foreach (var g in tGroundTruth)
+                {
+                    u += (g.Count - m(g, tSystemChains));
+                    l += (g.Count - 1);
+                }
+                var r = (u == 0d && l == 0d) ? 1d : u / l;
+
+                var f = 2 * p * r / (p + r);
+                evals.Add(type, new Evaluation(p, r, f, Name));
+            }
+            return evals;
         }
 
         private int m(CorefChain chain, CorefChainCollection chainsColl)
         {
-            return chainsColl.Aggregate(0, (r, c) => c.Intersect(chain).Any() ? r + 1 : r);
+            var overlap = new HashSet<Concept>();
+            var r = 0;
+
+            foreach (var c in chainsColl)
+            {
+                var o = c.Intersect(chain);
+                if (o.Count > 0)
+                {
+                    r += 1;
+                    overlap.UnionWith(o);
+                }
+            }
+
+            var remain = chain.Except(overlap);
+            r += remain.Count();
+
+            return r;
         }
     }
 }

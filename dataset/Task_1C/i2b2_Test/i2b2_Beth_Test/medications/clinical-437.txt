@@ -1,2 +1,0 @@
-12	Prenatal screens were O positive , antibody negative , hepatitis surface antigen negative , rapid plasma reagent nonreactive , rubella immune , group B strep negative .|rubella[474,481]||||||||||1022799|1022799|rubella
-69	6. Immunizations received : Hepatitis B vaccine on 12-31 , 2006 .|Hepatitis B vaccine[3117,3136]||||||||||816236|816236|hepatitis b vaccine

@@ -1,3 +1,0 @@
-12	Maternal history notable for hypothyroidism on Levoxyl .|Levoxyl[423,430]|||||||||C0721346|218002|10582|levothyroxine
-14	Other meds : Paxil .|Paxil[519,524]||||||||||114228|32937|paroxetine
-48	FLUIDS , ELECTROLYTES AND NUTRITION : Infant initiated on 60 cc per kg per day of D10W .|D10W[1747,1751]||||||per day[1736,1743]||||||

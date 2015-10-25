@@ -89,7 +89,7 @@ namespace HCMUT.EMRCorefResol
         /// <returns></returns>
         public override string ToString()
         {
-            return string.Join("||", this.Select(c => $"{c}")) 
+            return string.Join("||", this.Select(c => $"{c}"))
                 + $"||t=\"coref {Type.ToString().ToLower()}\"";
         }
 

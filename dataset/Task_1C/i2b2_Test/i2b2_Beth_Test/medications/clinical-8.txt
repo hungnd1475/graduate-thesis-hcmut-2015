@@ -1,9 +1,0 @@
-13	He was started on p.o. steroids and to CMED for management of COPD exacerbation but he appeared in more respiratory distress overnight and was started on IV Solu-Medrol and more frequent nebulizers for COPD .|steroids[583,591]|||||p.o.[578,582]|||||10072|10072|steroids
-13	He was started on p.o. steroids and to CMED for management of COPD exacerbation but he appeared in more respiratory distress overnight and was started on IV Solu-Medrol and more frequent nebulizers for COPD .|Solu - Medrol[717,728]||nebulizers[747,757]|||IV[714,716]|||||203856|6902|methylprednisolone
-18	He was continued on p.o. prednisone and frequent nebulizers for COPD .|prednisone[1164,1174]||nebulizers[1188,1198]|||p.o.[1159,1163]||||C1247651|373583|8640|prednisone
-31	1. Flovent two puffs b.i.d.|Flovent[1636,1643]||||two puffs[1644,1653]||b.i.d.[1654,1660]|||C0720466|217152|41126|fluticasone
-32	2. Levofloxacin 500 mg p.o. q.d. for another 11 days for a total of a 14 day course .|Levofloxacin[1664,1676]|||500mg[1677,1683]||p.o.[1684,1688]|q.d.[1689,1693]|11 days[1706,1713]||C0693579|199885|82122|levofloxacin
-33	3. Albuterol inhaler one to two puffs q. four to six hours p.r.n.|Albuterol inhaler[1750,1767]||||one to two puffs[1768,1784]||||p.r.n.[1806,1812]|C3209067|1154602|435|salbutamol
-34	4. Aspirin 81 mg p.o. q.d.|Aspirin[1816,1823]|||81mg[1824,1829]||p.o.[1830,1834]|q.d.[1835,1839]||||252857|1191|acetylsalicylic acid
-35	5. Salmeterol one to two puffs b.i.d.|Salmeterol[1843,1853]||||one to two puffs[1854,1870]||b.i.d.[1871,1877]|||C0073992|36117|36117|salmeterol
-37	7. Prednisone taper with 40 mg p.o. q.d. for two days , 30 mg p.o. q.d. for two days , 20 mg p.o. q.d. for two days , 10 mg p.o. q.d. for two days .|Prednisone[1942,1952]|||40mg[1964,1969]||p.o.[1970,1974]|q.d.[1975,1979]|two days[1984,1992]||C1358600|429332|8640|prednisone

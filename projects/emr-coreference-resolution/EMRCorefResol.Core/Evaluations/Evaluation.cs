@@ -8,18 +8,27 @@ namespace HCMUT.EMRCorefResol.Evaluations
 {
     public struct Evaluation
     {
-        public static readonly Evaluation Zero = new Evaluation(0d, 0d, 0d);
+        public static readonly ConceptType[] Types =
+        {
+            ConceptType.None,
+            ConceptType.Person,
+            ConceptType.Problem,
+            ConceptType.Test,
+            ConceptType.Treatment
+        };
 
         public double Precision { get; }
         public double Recall { get; }
         public double FMeasure { get; }
-
-        public Evaluation(double precision, double recall, double fmeasure)
+        public string MetricName { get; }
+        
+        public Evaluation(double precision, double recall, double fmeasure, string metricName)
             : this()
         {
             Precision = precision;
             Recall = recall;
             FMeasure = fmeasure;
+            MetricName = metricName;
         }
     }
 }

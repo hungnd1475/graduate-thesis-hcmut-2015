@@ -88,7 +88,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
                 Type = SVMType.C_SVC,
                 Kernel = SVMKernel.RBF,
                 C = 1,
-                Gamma = 1d / problem.X[0].Length,
+                Gamma = 1d / problem.GetDimension(),
                 Probability = true,
                 Shrinking = false
             };

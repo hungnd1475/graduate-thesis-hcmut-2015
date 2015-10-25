@@ -10,7 +10,7 @@ namespace HCMUT.EMRCorefResol
 {
     public class ClassificationSystem
     {
-        public static ClassificationSystem Instance { get; } = new ClassificationSystem();
+        public static readonly ClassificationSystem Instance = new ClassificationSystem();
 
         private readonly FeatureExtractingSystem _fExtractingSystem =
             FeatureExtractingSystem.Instance;
@@ -28,6 +28,8 @@ namespace HCMUT.EMRCorefResol
             classifier.Classify<PersonInstance>(pCreator.GetProblem<PersonInstance>());
             classifier.Classify<PersonPair>(pCreator.GetProblem<PersonPair>());
             classifier.Classify<PronounInstance>(pCreator.GetProblem<PronounInstance>());
+            classifier.Classify<TreatmentPair>(pCreator.GetProblem<TreatmentPair>());
+            classifier.Classify<TestPair>(pCreator.GetProblem<TestPair>());
         }
     }
 }

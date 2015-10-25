@@ -1,4 +1,0 @@
-23	Aspirin 325 mg. qday .|Aspirin[548,555]|||325mg.[556,563]|||qday[564,568]|||C0992015|317300|1191|acetylsalicylic acid
-24	Plavix 75 mg. qday for four weeks .|Plavix[571,577]|||75mg.[578,584]|||qday[585,589]|four weeks[594,604]||C1607286|573094|32968|clopidogrel
-25	Atenolol 50 mg. qday .|Atenolol[607,615]|||50mg.[616,622]|||qday[623,627]|||C0983889|315438|1202|atenolol
-35	Shortly after Aggrastat was started , the patient became pain free .|Aggrastat[1293,1302]||||||||||187024|73137|tirofiban

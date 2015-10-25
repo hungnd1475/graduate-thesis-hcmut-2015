@@ -37,7 +37,7 @@ namespace HCMUT.EMRCorefResol.English
 
         public IFeatureVector Extract(TestPair instance)
         {
-            var classValue = GroundTruth.IsCoref(instance) ? 1.0 : 0.0;
+            var classValue = GroundTruth != null ? (GroundTruth.IsCoref(instance) ? 1 : 0) : -1;
             return new TestPairFeatures(instance, EMR, classValue);
             //return null;
         }
@@ -66,12 +66,10 @@ namespace HCMUT.EMRCorefResol.English
                     {
                         var patientChain = GroundTruth.GetPatientChain(KeywordService.Instance.PATIENT_KEYWORDS,
                             KeywordService.Instance.RELATIVES);
-                        classValue = patientChain != null ? (patientChain.Contains(instance.Concept) ? 1 : 0) : 0;
+                        classValue = patientChain != null ? (patientChain.Contains(c) ? 1 : 0) : 0;
                     }
                     return new PersonInstanceFeatures(instance, EMR, _patientDeterminer, classValue);
-                }
-            
-                
+                }                
             );
         }
 
@@ -88,14 +86,14 @@ namespace HCMUT.EMRCorefResol.English
 
         public IFeatureVector Extract(TreatmentPair instance)
         {
-            var classValue = GroundTruth.IsCoref(instance) ? 1.0 : 0.0;
+            var classValue = GroundTruth != null ? (GroundTruth.IsCoref(instance) ? 1 : 0) : -1;
             return new TreatmentPairFeatures(instance, EMR, classValue);
             //return null;
         }
 
         public IFeatureVector Extract(ProblemPair instance)
         {
-            var classValue = GroundTruth.IsCoref(instance) ? 1.0 : 0.0;
+            var classValue = GroundTruth != null ? (GroundTruth.IsCoref(instance) ? 1 : 0) : -1;
             return new ProblemPairFeatures(instance, EMR, classValue);
             //return null;
         }
@@ -109,6 +107,7 @@ namespace HCMUT.EMRCorefResol.English
         public void ClearCache()
         {
             _personCache.Clear();
+            Service.English.ClearCache();
         }
     }
 }

@@ -1,7 +1,0 @@
-32	Mild irreg. ctx .|ctx[987,990]||||||||||3002|3002|cyclophosphamide
-38	Ctx q 6 &apos; .|Ctx[1329,1332]||||||q 6[1333,1336]||||3002|3002|cyclophosphamide
-59	POSTPARTUM RH IMMUNE GLOBULIN :|RH IMMUNE GLOBULIN[2442,2460]||||||||||35465|35465|anti-d (rh) immunoglobulin
-61	POSTPARTUM MEASLES / MUMPS / RUBELLA VACCINE :|MEASLES / MUMPS / RUBELLA VACCINE[2488,2521]|||||||||C2929435|1008531|1008531|measles / mumps / rubella vaccine
-63	MEDICATION ( S ) ON DISCHARGE :|MEDICATION ( S )[2538,2554]|||||||||C1875470|693173|693173|medication organizer
-64	Multivitamins And Folate|Folate[2588,2594]|||||||||C0178638|62356|62356|folate
-64	Multivitamins And Folate|Multivitamins[2570,2583]|||||||||C0301532|89905|89905|multiple vitamins

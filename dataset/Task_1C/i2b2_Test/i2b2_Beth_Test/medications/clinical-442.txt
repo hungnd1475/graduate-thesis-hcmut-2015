@@ -1,7 +1,0 @@
-9	Jadiara Harrison is twin #1 born to a 17 year-old primiparous mother at 31 weeks gestation .|a 17[175,179]||||||||||6904|6904|methyltestosterone
-11	She was treated with magnesium sulfate .|magnesium sulfate[401,418]|||||||||C0024480|6585|6585|magnesium sulfate
-13	She was treated with tocolysis and betamethasone at that time .|betamethasone[543,556]|||||||||C0005308|1514|1514|betamethasone
-16	Rubella status was not documented .|Rubella[795,802]||||||||||1022799|1022799|rubella
-44	She was noted to have apnea of prematurity , treated with caffeine until 2017-06-04 .|caffeine[1897,1905]|||||||||C0006644|1886|1886|caffeine
-94	Sent as per protocol; one specimen from 2017-05-28 returned with borderline low thyroxine , but repeat was within normal limits .|thyroxine[5499,5508]|||||||||C0040165|10582|10582|levothyroxine
-96	Hepatitis B vaccine given 06-17 .|Hepatitis B vaccine[5565,5584]||||||||||816236|816236|hepatitis b vaccine

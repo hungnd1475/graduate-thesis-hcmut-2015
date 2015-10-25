@@ -120,6 +120,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
         {
             var instanceType = instance.GetType();
             var sfPath = Path.Combine(_modelsDir, $"{instanceType.Name}.sf");
+            var tmpDir = Path.Combine(_modelsDir, "tmp");
 
             var pCreator = new ClasProblemCollection();
             pCreator.Add(instance, fVector);
@@ -128,7 +129,8 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             string scaledPrbContent;
             lock (_syncRoot)
             {
-                var tmpPrbPath = Path.Combine(_modelsDir, $"{instanceType.Name}-tmp.prb");
+                Directory.CreateDirectory(tmpDir);
+                var tmpPrbPath = Path.Combine(_modelsDir, "tmp", $"{instanceType.Name}.prb");
                 ProblemSerializer.Serialize(rawPrb, tmpPrbPath);
                 scaledPrbContent = LibSVM.RunSVMScale(sfPath, tmpPrbPath);
             }

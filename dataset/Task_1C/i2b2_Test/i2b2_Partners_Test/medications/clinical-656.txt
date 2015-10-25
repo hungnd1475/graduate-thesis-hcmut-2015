@@ -1,6 +1,0 @@
-25	He was admitted to the Short Stay Unit , given Ancef and Gentamicin per the team for antibiotic prophylaxis and observed overnight .|Ancef[1166,1171]|||||||||C0700926|203483|2180|cefazolin
-25	He was admitted to the Short Stay Unit , given Ancef and Gentamicin per the team for antibiotic prophylaxis and observed overnight .|antibiotic[1204,1214]||||||||||896|896|antibiotic
-25	He was admitted to the Short Stay Unit , given Ancef and Gentamicin per the team for antibiotic prophylaxis and observed overnight .|Gentamicin[1176,1186]|||||||||C0017436|662411|662411|gentamicins
-31	Cipro 500 mg p.o. b.i.d. , Vasotec 10 mg q.d.|Cipro[1332,1337]|||500mg[1338,1344]||p.o.[1345,1349]|b.i.d.[1350,1356]||||309309|2551|ciprofloxacin
-31	Cipro 500 mg p.o. b.i.d. , Vasotec 10 mg q.d.|Vasotec[1359,1366]|||10mg[1367,1372]|||q.d .[1373,1377]|||C2718827|858818|3827|enalapril
-62	He will continue Cipro p.o. for prophylaxis .|Cipro[2936,2941]|||||p.o.[2942,2946]||||C1271296|1152118|2551|ciprofloxacin

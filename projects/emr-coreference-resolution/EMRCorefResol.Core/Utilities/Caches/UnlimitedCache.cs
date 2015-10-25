@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.Concurrent;
 
 namespace HCMUT.EMRCorefResol.Utilities
 {
@@ -13,9 +14,9 @@ namespace HCMUT.EMRCorefResol.Utilities
     /// <typeparam name="TValue"></typeparam>
     public class UnlimitedCache<TKey, TValue> : ICache<TKey, TValue>
     {
-        private readonly object _syncObj = new object();
-        private readonly Dictionary<TKey, TValue> _values
-            = new Dictionary<TKey, TValue>();
+        //private readonly object _syncObj = new object();
+        private readonly ConcurrentDictionary<TKey, TValue> _values
+            = new ConcurrentDictionary<TKey, TValue>();
 
         public void Clear()
         {
@@ -24,14 +25,7 @@ namespace HCMUT.EMRCorefResol.Utilities
 
         public TValue GetValue(TKey key, Func<TKey, TValue> valueProducer)
         {
-            lock (_syncObj)
-            {
-                if (!_values.ContainsKey(key))
-                {
-                    _values.Add(key, valueProducer(key));
-                }
-            }
-            return _values[key];
+            return _values.GetOrAdd(key, valueProducer);
         }
     }
 }

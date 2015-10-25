@@ -90,7 +90,7 @@
     <Compile Include="Classification\IClasProblemSerializer.cs" />
     <Compile Include="Concept.cs" />
     <Compile Include="ConceptCollection.cs" />
-    <Compile Include="Evaluations\BCubePerfMetric.cs" />
+    <Compile Include="Evaluations\BCubedPerfMetric.cs" />
     <Compile Include="Evaluations\CEAFPerfMetric.cs" />
     <Compile Include="Evaluations\Evaluation.cs" />
     <Compile Include="Evaluations\IPerfMetric.cs" />

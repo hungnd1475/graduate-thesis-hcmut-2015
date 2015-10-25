@@ -9,7 +9,7 @@ namespace HCMUT.EMRCorefResol.ResolvingConsole
 {
     class Arguments
     {
-        public string EMRDir { get; set; }
+        public string EMRDirs { get; set; }
         public string EMRName { get; set; }
         public EMRFormat EMRFormat { get; set; }
         public Language Language { get; set; }
@@ -17,5 +17,6 @@ namespace HCMUT.EMRCorefResol.ResolvingConsole
         public ClasMethod ClasMethod { get; set; }
         public ResolMethod ResolMethod { get; set; }
         public string OutputDir { get; set; }
+        public string ScoresFile { get; set; }
     }
 }

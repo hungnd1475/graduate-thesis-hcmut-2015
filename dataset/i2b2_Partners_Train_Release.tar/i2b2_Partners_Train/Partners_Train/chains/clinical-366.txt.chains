@@ -1,5 +1,0 @@
-c="ms. less" 16:0 16:1||c="ms. less" 18:0 18:1||c="she" 19:0 19:0||c="she" 20:0 20:0||c="she" 25:3 25:3||c="she" 26:3 26:3||c="she" 27:0 27:0||c="her" 28:7 28:7||c="she" 28:10 28:10||c="she" 29:0 29:0||c="her" 29:10 29:10||c="her" 30:11 30:11||c="the patient" 30:17 30:18||c="the patient" 31:0 31:1||t="coref person"
-c="an emergent head ct scan" 26:13 26:17||c="which" 26:18 26:18||t="coref test"
-c="significant hydrocephalus" 27:3 27:4||c="her hydrocephalus" 28:7 28:8||t="coref problem"
-c="a ventriculostomy" 28:12 28:13||c="the ventriculostomy" 29:7 29:8||t="coref treatment"
-c="the medical examiner" 32:0 32:2||c="he" 32:12 32:12||t="coref person"

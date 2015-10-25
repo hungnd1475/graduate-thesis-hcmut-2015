@@ -1,4 +1,0 @@
-c="patient" 26:0 26:0||c="patient" 47:0 47:0||c="she" 50:0 50:0||t="coref person"
-c="the ct scan abdomen" 65:11 65:14||c="abdominal ct scan of the abdomen" 66:14 66:19||c="ct abdomen" 71:8 71:9||c="the study" 72:5 72:6||t="coref test"
-c="diagnosed liver laceration" 18:14 18:16||c="the liver laceration" 48:0 48:2||t="coref problem"
-c="pain" 47:4 47:4||c="pain" 56:22 56:22||t="coref problem"

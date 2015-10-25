@@ -1,6 +1,0 @@
-c="this" 17:0 17:0||c="he" 18:0 18:0||c="he" 19:0 19:0||c="he" 20:0 20:0||c="he" 21:0 21:0||c="he" 22:0 22:0||c="he" 25:0 25:0||c="he" 26:0 26:0||c="his" 27:3 27:3||c="he" 27:8 27:8||c="the patient" 29:1 29:2||c="his" 29:4 29:4||c="the patient" 29:10 29:11||c="he" 31:0 31:0||c="he" 32:0 32:0||c="he" 33:0 33:0||c="the patient" 35:9 35:10||c="the patient" 36:6 36:7||c="his" 37:0 37:0||t="coref person"
-c="unresponsiveness" 17:17 17:17||c="unresponsive" 19:12 19:12||c="unresponsive" 22:2 22:2||c="unresponsive" 27:10 27:10||c="unresponsive" 36:10 36:10||t="coref problem"
-c="his family" 29:4 29:5||c="the family" 35:15 35:16||c="his family" 37:0 37:1||t="coref person"
-c="focal left-sided seizure" 17:13 17:15||c="seizures" 20:10 20:10||t="coref problem"
-c="ischemic cardiomyopathy" 18:6 18:7||c="cardiomyopathy" 41:1 41:1||t="coref problem"
-c="a right middle cerebral artery territory stroke" 18:19 18:25||c="previous right middle cerebral artery stroke" 42:3 42:8||t="coref problem"

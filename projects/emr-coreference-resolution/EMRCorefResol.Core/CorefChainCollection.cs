@@ -176,6 +176,26 @@ namespace HCMUT.EMRCorefResol
             return chain != null ? chain.Contains(second) : false;
         }
 
+        public CorefChainCollection GetChainsOfType(ConceptType type)
+        {
+            if (type == ConceptType.None)
+            {
+                return this;
+            }
+            else
+            {
+                var list = new List<CorefChain>();
+                foreach (var chain in _chains)
+                {
+                    if (chain.Type == type)
+                    {
+                        list.Add(chain);
+                    }
+                }
+                return new CorefChainCollection(list);
+            }
+        }
+
         #region Enumerator
 
         public IEnumerator<CorefChain> GetEnumerator()

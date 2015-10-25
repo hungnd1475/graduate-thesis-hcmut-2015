@@ -109,7 +109,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             var h = param.Shrinking ? 1 : 0;
             var b = param.Probability ? 1 : 0;
             var w = string.Join(" ", Enumerable.Range(0, param.Weights.Length)
-                .Select(i => $"-w{param.WeightLabels[i]} {param.Weights[i]}"));
+                .Select(i => $"-w{param.WeightLabels[i]} {param.Weights[i]:N0}"));
 
             return $"-s {(int)param.Type} -t {(int)param.Kernel} -d {param.Degree} -g {param.Gamma} -r {param.Coef0}"
                 + $" -c {param.C} -n {param.Nu} -p {param.P} -m {param.CacheSize} -e {param.Eps} -h {h}"
