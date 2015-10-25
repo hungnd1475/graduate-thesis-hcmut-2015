@@ -9,23 +9,6 @@ namespace HCMUT.EMRCorefResol.English.Features
     using Service;
     class WikiMatchFeature : Feature
     {
-        public WikiMatchFeature(IConceptPair instance)
-            :base("Wiki-Match", 2, 0)
-        {
-            string anaPage = English.GetWikiPage(instance.Anaphora.Lexicon);
-            string antePage = English.GetWikiPage(instance.Antecedent.Lexicon);
-
-            if(anaPage == null || antePage == null)
-            {
-                return;
-            }
-
-            if(anaPage.Equals(antePage, StringComparison.InvariantCultureIgnoreCase))
-            {
-                SetCategoricalValue(1);
-            }
-        }
-
         public WikiMatchFeature(WikiData anaData, WikiData anteData)
             : base("Wiki-Match", 2, 0)
         {
@@ -34,7 +17,9 @@ namespace HCMUT.EMRCorefResol.English.Features
                 return;
             }
 
-            if(anaData.title.Equals(anteData.title, StringComparison.InvariantCultureIgnoreCase))
+            if(anaData.title.Equals(anteData.title, StringComparison.InvariantCultureIgnoreCase) ||
+                anaData.term.Equals(anteData.title, StringComparison.InvariantCultureIgnoreCase) ||
+                anaData.title.Equals(anteData.term, StringComparison.InvariantCultureIgnoreCase))
             {
                 SetCategoricalValue(1);
             }

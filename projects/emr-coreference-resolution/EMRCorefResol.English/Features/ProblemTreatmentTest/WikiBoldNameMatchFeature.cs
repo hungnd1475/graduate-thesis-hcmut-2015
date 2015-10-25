@@ -6,20 +6,19 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol.English.Features
 {
+    using Service;
     class WikiBoldNameMatchFeature : Feature
     {
-        public WikiBoldNameMatchFeature(IConceptPair instance)
+        public WikiBoldNameMatchFeature(WikiData anaData, WikiData anteData)
             :base("Wiki-BoldName", 2, 0)
         {
-            var anaBolds = Service.English.GetWikiBoldName(instance.Anaphora.Lexicon);
-            var anteBolds = Service.English.GetWikiBoldName(instance.Antecedent.Lexicon);
-
-            if(anaBolds == null || anteBolds == null)
+            if (anaData == null || anteData == null)
             {
                 return;
             }
 
-            if(anaBolds.Intersect(anteBolds).Count() > 0)
+            if (anaData.bolds.Contains(anteData.title) || anteData.bolds.Contains(anaData.title) ||
+                anaData.bolds.Contains(anteData.term) || anteData.bolds.Contains(anaData.term))
             {
                 SetCategoricalValue(1);
             }

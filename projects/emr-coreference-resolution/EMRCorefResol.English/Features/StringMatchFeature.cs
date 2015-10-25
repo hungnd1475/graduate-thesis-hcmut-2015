@@ -12,9 +12,14 @@ namespace HCMUT.EMRCorefResol.English.Features
         public StringMatchFeature(IConceptPair instance)
             : base("String-Match", 2, 0)
         {
-            var searcher = new AhoCorasickKeywordDictionary("the", "a", "an", "my", "his", "her", "its", "their");
-            var anaNorm = searcher.RemoveKeywords(instance.Anaphora.Lexicon, KWSearchOptions.WholeWordIngoreCase);
-            var anteNorm = searcher.RemoveKeywords(instance.Antecedent.Lexicon, KWSearchOptions.WholeWordIngoreCase);
+            var anaNorm = instance.Anaphora.Lexicon;
+            var anteNorm = instance.Antecedent.Lexicon;
+
+            if(instance.GetType().Name != "PersonPair")
+            {
+                anaNorm = EnglishNormalizer.Normalize(instance.Anaphora.Lexicon);
+                anteNorm = EnglishNormalizer.Normalize(instance.Antecedent.Lexicon);
+            }
 
             if (string.Equals(anaNorm, anteNorm))
             {

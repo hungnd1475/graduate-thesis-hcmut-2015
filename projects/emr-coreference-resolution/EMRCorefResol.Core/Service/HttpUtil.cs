@@ -21,5 +21,16 @@ namespace HCMUT.EMRCorefResol.Service
                 return JsonConvert.DeserializeObject<CustomResponse>(res);
             }
         }
+
+        public string RequestRaw(string url)
+        {
+            var request = WebRequest.Create(url);
+            var s = request.GetResponse().GetResponseStream();
+            using (var r = new StreamReader(s))
+            {
+                var res = r.ReadToEnd();
+                return res;
+            }
+        }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using HCMUT.EMRCorefResol.Utilities;
 namespace HCMUT.EMRCorefResol.English.Features
 {
     class WordNetMatchFeature : Feature
@@ -11,7 +12,10 @@ namespace HCMUT.EMRCorefResol.English.Features
         public WordNetMatchFeature(IConceptPair instance)
             :base("WordNet-Match", 2, 0)
         {
-            var anaDefs = Service.English.GetSyncSets(instance.Anaphora.Lexicon);
+            var anaNorm = EnglishNormalizer.Normalize(instance.Anaphora.Lexicon);
+            var anteNorm = EnglishNormalizer.Normalize(instance.Antecedent.Lexicon);
+
+            var anaDefs = Service.English.GetSyncSets(anaNorm);
 
             if(anaDefs == null)
             {
@@ -23,14 +27,14 @@ namespace HCMUT.EMRCorefResol.English.Features
                 foreach(string word in definition.Words)
                 {
                     var comparable = word.Replace('_', ' ');
-                    if(instance.Antecedent.Lexicon.Equals(comparable, StringComparison.InvariantCultureIgnoreCase))
+                    if(anteNorm.Equals(comparable, StringComparison.InvariantCultureIgnoreCase))
                     {
                         SetCategoricalValue(1);
                     }
                 }
             }
 
-            var anteDefs = Service.English.GetSyncSets(instance.Antecedent.Lexicon);
+            var anteDefs = Service.English.GetSyncSets(anteNorm);
 
             if (anteDefs == null)
             {
@@ -42,7 +46,7 @@ namespace HCMUT.EMRCorefResol.English.Features
                 foreach (string word in definition.Words)
                 {
                     var comparable = word.Replace('_', ' ');
-                    if (instance.Anaphora.Lexicon.Equals(comparable, StringComparison.InvariantCultureIgnoreCase))
+                    if (anaNorm.Equals(comparable, StringComparison.InvariantCultureIgnoreCase))
                     {
                         SetCategoricalValue(1);
                     }
