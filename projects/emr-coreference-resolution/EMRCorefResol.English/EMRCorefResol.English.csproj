@@ -97,14 +97,17 @@
     <Compile Include="Features\PersonInstance\PronounWeFeature.cs" />
     <Compile Include="Features\PersonInstance\PronounYouFeature.cs" />
     <Compile Include="Features\FirstChunkAfterMention.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\AnatomyFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\ArticleFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\DosageFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\DrugFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\DurationFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\EquipmentFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\FrequencyFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\HeadNounFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\IndicatorFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\ModifierFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\OperationFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\PositionFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\SectionFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\TemporalFeature.cs" />
