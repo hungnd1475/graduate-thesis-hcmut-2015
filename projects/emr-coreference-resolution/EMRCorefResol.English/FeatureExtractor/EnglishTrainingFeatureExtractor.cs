@@ -79,6 +79,8 @@ namespace HCMUT.EMRCorefResol.English
         }
 
         public void ClearCache()
-        { }
+        {
+            Service.English.ClearCache();
+        }
     }
 }

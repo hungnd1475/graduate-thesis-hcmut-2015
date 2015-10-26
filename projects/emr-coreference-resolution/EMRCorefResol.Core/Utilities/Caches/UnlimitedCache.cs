@@ -14,18 +14,26 @@ namespace HCMUT.EMRCorefResol.Utilities
     /// <typeparam name="TValue"></typeparam>
     public class UnlimitedCache<TKey, TValue> : ICache<TKey, TValue>
     {
-        //private readonly object _syncObj = new object();
-        private readonly ConcurrentDictionary<TKey, TValue> _values
-            = new ConcurrentDictionary<TKey, TValue>();
+        private readonly object _syncObj = new object();
+        private readonly Dictionary<TKey, TValue> _values
+            = new Dictionary<TKey, TValue>();
 
         public void Clear()
         {
             _values.Clear();
         }
 
-        public TValue GetValue(TKey key, Func<TKey, TValue> valueProducer)
+        public TValue GetValue(TKey key, Func<TKey, TValue> produceValue)
         {
-            return _values.GetOrAdd(key, valueProducer);
+            lock (_syncObj)
+            {
+                if (!_values.ContainsKey(key))
+                {
+                    var v = produceValue(key);
+                    _values[key] = v;
+                }
+            }
+            return _values[key];
         }
     }
 }

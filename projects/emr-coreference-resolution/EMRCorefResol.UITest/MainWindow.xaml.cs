@@ -44,11 +44,7 @@ namespace EMRCorefResol.UITest
         private SelectionInfo emrSelectionInfo = new SelectionInfo(); // stores selection info on emr text area
         private SelectionInfo featuresSelectionInfo = new SelectionInfo();
 
-        private EMRCollection emrCollection = new EMRCollection(
-            @"..\..\..\..\..\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train\docs",
-            @"..\..\..\..\..\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train\concepts",
-            @"..\..\..\..\..\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train\chains",
-            @"..\..\..\..\..\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train\medications");
+        private EMRCollection emrCollection;
 
         private bool conChainMouseDown = false;
 
@@ -56,12 +52,8 @@ namespace EMRCorefResol.UITest
         {
             InitializeComponent();
 
-            txtEMRPath.Text = @"..\..\..\..\..\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train";
-            emrCollection = new EMRCollection(
-                IOPath.Combine(txtEMRPath.Text, "docs"),
-                IOPath.Combine(txtEMRPath.Text, "concepts"),
-                IOPath.Combine(txtEMRPath.Text, "chains"),
-                IOPath.Combine(txtEMRPath.Text, "medications"));
+            txtEMRPath.Text = @"..\..\..\..\..\dataset\i2b2_Train\Beth";
+            emrCollection = new EMRCollection(txtEMRPath.Text);
 
             txtEMR.ShowLineNumbers = true;
             txtEMR.TextArea.SelectionCornerRadius = 0;

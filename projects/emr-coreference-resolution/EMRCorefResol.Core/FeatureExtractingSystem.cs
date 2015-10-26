@@ -61,6 +61,8 @@ namespace HCMUT.EMRCorefResol
                 if (fVector != null)
                     instances[k].AddTo(pCreator, fVector);
             }
+
+            fExtractor.ClearCache();
         }
 
         public void ExtractAll(string[] emrPaths, string[] conceptsPaths, string[] chainsPaths, IDataReader dataReader,
