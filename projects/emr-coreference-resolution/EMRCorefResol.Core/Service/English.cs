@@ -17,11 +17,13 @@ namespace HCMUT.EMRCorefResol.Service
         private const string API_URL = "http://localhost:8181/api/";
         private static readonly HttpUtil _http = new HttpUtil();
         private static readonly WikiUltil _wiki = new WikiUltil();
+        private static readonly UMLSUtil _umls = new UMLSUtil();
 
         private static ICache<string, string> _temporalCache;
         private static ICache<EMR, int> _mostGenderCache;
         private static ICache<string, Definition[]> _wordnetCache;
         private static ICache<string, WikiData> _wikiCache;
+        private static ICache<string, UMLSData> _umlsCache;
 
         static English()
         {
@@ -29,6 +31,8 @@ namespace HCMUT.EMRCorefResol.Service
             _mostGenderCache = new UnlimitedCache<EMR, int>();
             _wordnetCache = new UnlimitedCache<string, Definition[]>();
             _wikiCache = new UnlimitedCache<string, WikiData>();
+            _umlsCache = new UnlimitedCache<string, UMLSData>();
+
         }
 
         public static void ClearCache()
@@ -37,6 +41,7 @@ namespace HCMUT.EMRCorefResol.Service
             _mostGenderCache.Clear();
             _wordnetCache.Clear();
             _wikiCache.Clear();
+            _umlsCache.Clear();
         }
 
         public static string[] POSTag(string term)
@@ -165,6 +170,22 @@ namespace HCMUT.EMRCorefResol.Service
             });
 
             //return _wiki.GetPageInfo(term);
+        }
+
+        public static UMLSData GetUMLSInformation(string term)
+        {
+            return _umlsCache.GetValue(term, (string search_term) =>
+            {
+                return _umls.GetUMLSInfo(search_term);
+            });
+        }
+
+        public static UMLSData GetUMLSInformation(string term, int options)
+        {
+            return _umlsCache.GetValue(term, (string search_term) =>
+            {
+                return _umls.GetUMLSInfo(search_term, options);
+            });
         }
     }
 }
