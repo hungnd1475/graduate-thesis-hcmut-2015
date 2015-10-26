@@ -1,0 +1,68 @@
+c="left fractured clavicle" 61:21 61:23||t="coref problem"||c="the patient 's left clavicular fracture" 69:5 69:10
+c="left fractured radius" 61:25 61:27||t="coref problem"||c="left transverse mid shaft radial fracture" 90:1 90:6
+c="ecchymosis of the right posterior thigh" 37:8 37:13||t="coref problem"||c="right thigh hematoma" 61:29 61:31
+c="a 5 cm laceration" 34:0 34:3||t="coref problem"||c="a posterior scalp laceration" 61:16 61:19
+c="an inferior displaced left midclavicular fracture" 42:3 42:8||t="coref problem"||c="left fractured clavicle" 61:21 61:23
+c="a pelvic fracture" 44:6 44:8||t="coref problem"||c="pelvic fracture" 46:9 46:10
+c="its" 82:16 82:16||t="coref treatment"||c="her figure-of-eight clavicular splint" 98:5 98:8
+c="dr. ronda lopez" 65:27 65:29||t="coref person"||c="dr. ronda lopez" 103:8 103:10
+c="the patient" 25:0 25:1||t="coref person"||c="the patient" 26:0 26:1
+c="diagnostic procedures" 61:8 61:9||t="coref test"||c="which" 61:11 61:11
+c="the patient" 62:0 62:1||t="coref person"||c="the patient" 63:1 63:2
+c="the patient" 65:3 65:4||t="coref person"||c="her" 65:11 65:11
+c="the patient" 70:7 70:8||t="coref person"||c="the patient" 71:0 71:1
+c="the patient" 102:0 102:1||t="coref person"||c="her" 102:22 102:22
+c="a 3 cm laceration in the lower leg" 37:16 37:23||t="coref problem"||c="right leg laceration" 61:34 61:36
+c="the patient 's right anterior tibial wound" 79:0 79:6||t="coref problem"||c="right anterior tibial laceration" 93:1 93:4
+c="her" 75:9 75:9||t="coref person"||c="the patient" 79:0 79:1
+c="a left clavicular deformity" 26:19 26:22||t="coref problem"||c="an inferior displaced left midclavicular fracture" 42:3 42:8
+c="a left radial fracture open reduction" 66:18 66:23||t="coref treatment"||c="left radial open reduction" 90:12 90:15
+c="the patient" 69:5 69:6||t="coref person"||c="the patient" 70:7 70:8
+c="a left upper extremity splint" 80:13 80:17||t="coref treatment"||c="left posterior forearm splint" 98:10 98:13
+c="the patient" 84:3 84:4||t="coref person"||c="the patient" 86:0 86:1
+c="a posterior scalp laceration" 61:16 61:19||t="coref problem"||c="the patient 's head wound laceration" 71:0 71:5
+c="ulnar displacement" 51:12 51:13||t="coref problem"||c="ulnar displacement" 90:8 90:9
+c="who" 13:12 13:12||t="coref person"||c="the patient" 14:3 14:4
+c="the patient" 63:1 63:2||t="coref person"||c="the patient" 65:3 65:4
+c="the patient" 80:3 80:4||t="coref person"||c="the patient" 81:0 81:1
+c="her" 102:22 102:22||t="coref person"||c="her" 102:29 102:29
+c="the patient" 71:0 71:1||t="coref person"||c="the patient" 75:0 75:1
+c="the c-spine collar" 17:4 17:6||t="coref treatment"||c="her c-spine collar" 65:11 65:13
+c="transverse mid shaft radial fracture" 51:6 51:10||t="coref problem"||c="left fractured radius" 61:25 61:27
+c="she" 66:9 66:9||t="coref person"||c="the patient" 67:0 67:1
+c="the patient" 67:0 67:1||t="coref person"||c="the patient" 69:5 69:6
+c="the patient" 26:0 26:1||t="coref person"||c="the patient" 33:0 33:1
+c="the patient" 86:0 86:1||t="coref person"||c="the patient" 97:0 97:1
+c="she" 59:14 59:14||t="coref person"||c="the patient" 61:3 61:4
+c="the patient" 81:0 81:1||t="coref person"||c="the patient" 82:3 82:4
+c="the patient" 33:0 33:1||t="coref person"||c="the patient" 34:7 34:8
+c="the patient" 61:3 61:4||t="coref person"||c="the patient" 62:0 62:1
+c="the patient" 34:7 34:8||t="coref person"||c="the patient" 59:0 59:1
+c="her" 97:11 97:11||t="coref person"||c="the patient" 98:0 98:1
+c="her" 65:11 65:11||t="coref person"||c="the patient" 66:0 66:1
+c="right leg laceration" 61:34 61:36||t="coref problem"||c="the patient 's right anterior tibial wound" 79:0 79:6
+c="her" 100:21 100:21||t="coref person"||c="the patient" 102:0 102:1
+c="the patient" 75:0 75:1||t="coref person"||c="her" 75:9 75:9
+c="the patient" 21:0 21:1||t="coref person"||c="the patient" 25:0 25:1
+c="the patient" 82:3 82:4||t="coref person"||c="the patient" 84:3 84:4
+c="a figure-of-eight clavicular splint" 82:9 82:12||t="coref treatment"||c="its" 82:16 82:16
+c="her" 98:5 98:5||t="coref person"||c="the patient" 100:16 100:17
+c="the patient" 100:16 100:17||t="coref person"||c="her" 100:21 100:21
+c="the patient" 98:0 98:1||t="coref person"||c="her" 98:5 98:5
+c="the patient" 59:0 59:1||t="coref person"||c="she" 59:14 59:14
+c="the patient 's head wound laceration" 71:0 71:5||t="coref problem"||c="occipital scalp laceration" 92:1 92:3
+c="the patient" 79:0 79:1||t="coref person"||c="the patient" 80:3 80:4
+c="this" 13:0 13:0||t="coref person"||c="who" 13:12 13:12
+c="right thigh hematoma" 61:29 61:31||t="coref problem"||c="the patient 's right thigh hematoma" 63:1 63:6
+c="internal fixation procedure" 66:25 66:27||t="coref treatment"||c="internal fixation" 90:17 90:18
+c="percocet" 95:0 95:0||t="coref treatment"||c="percocet" 101:0 101:0
+c="the patient 's left clavicular fracture" 69:5 69:10||t="coref problem"||c="left midclavicular fracture" 91:1 91:3
+c="she" 17:0 17:0||t="coref person"||c="the patient" 21:0 21:1
+c="pain" 95:9 95:9||t="coref problem"||c="pain" 101:2 101:2
+c="the patient" 16:3 16:4||t="coref person"||c="she" 17:0 17:0
+c="the patient" 66:0 66:1||t="coref person"||c="she" 66:9 66:9
+c="occipital scalp laceration" 92:1 92:3||t="coref problem"||c="scalp laceration" 100:0 100:1
+c="the patient" 97:0 97:1||t="coref person"||c="her" 97:11 97:11
+c="the patient" 14:3 14:4||t="coref person"||c="the patient" 16:3 16:4
+c="the trauma service" 62:6 62:8||t="coref person"||c="the trauma team" 68:14 68:16
+c="the trauma service" 59:5 59:7||t="coref person"||c="the trauma service" 62:6 62:8

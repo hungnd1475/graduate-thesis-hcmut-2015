@@ -1,0 +1,32 @@
+13	She presented to Charlton Memorial Hospital Hospital Emergency Department with inferior ST elevations ; at which time she became acutely hypotensive to a systolic blood pressure of 70 to 80 after receiving one ublingual nitroglycerin .|nitroglycerin[792,805]|||||||||C0017887|4917|4917|glyceryl trinitrate
+14	She then became bradycardic which responded to atropine and intravenous fluids .|atropine[855,863]|||||intravenous[868,879]||||C0004259|1223|1223|atropine
+15	In addition , she was given aspirin , Plavix , heparin , and morphine .|aspirin[917,924]|||||||||C0004057|1191|1191|acetylsalicylic acid
+15	In addition , she was given aspirin , Plavix , heparin , and morphine .|Plavix[927,933]|||||||||C0633084|174742|32968|clopidogrel
+15	In addition , she was given aspirin , Plavix , heparin , and morphine .|heparin[936,943]|||||||||C0019134|235473|235473|heparin,porcine
+15	In addition , she was given aspirin , Plavix , heparin , and morphine .|morphine[950,958]|||||||||C0026549|7052|7052|morphine
+17	She received an amiodarone bolus of 150 mg intravenously and was continued on an amiodarone drip while CMED CSRU-flighted to Boston Regional Medical Centerr where she underwent a catheterization .|amiodarone[1190,1200]|||150mg[1210,1216]||intravenously[1217,1230]||||C0692395|833532|703|amiodarone
+17	She received an amiodarone bolus of 150 mg intravenously and was continued on an amiodarone drip while CMED CSRU-flighted to Boston Regional Medical Centerr where she underwent a catheterization .|amiodarone[1255,1265]|||||drip[1266,1270]||||C0002598|703|703|amiodarone
+28	Amiodarone drip .|Amiodarone[2213,2223]|||||drip[2224,2228]||||C0002598|703|703|amiodarone
+29	2. Integrilin drip .|Integrilin[2234,2244]|||||drip[2245,2249]|||||288688|75635|eptifibatide
+65	On the night of admission , the patient experienced post catheterization hypotension which required intravenous fluids and dopamine .|dopamine[4913,4921]|||||intravenous[4890,4901]||||C0013030|3628|3628|dopamine
+67	Her dopamine was weaned off the following day , and her heparin was discontinued secondary to a right groin hematoma which had developed after the sheath had been pulled out by the fellow .|dopamine[5038,5046]|||||||||C0013030|3628|3628|dopamine
+67	Her dopamine was weaned off the following day , and her heparin was discontinued secondary to a right groin hematoma which had developed after the sheath had been pulled out by the fellow .|heparin[5090,5097]|||||||||C0019134|235473|235473|heparin,porcine
+70	For her coronary artery disease , status post catheterization , she was given Integrilin for 18 hours .|Integrilin[5479,5489]|||||||18 hours[5494,5502]|||288688|75635|eptifibatide
+71	She was continued on aspirin , Plavix , and Lipitor .|aspirin[5526,5533]|||||||||C0004057|1191|1191|acetylsalicylic acid
+71	She was continued on aspirin , Plavix , and Lipitor .|Plavix[5536,5542]|||||||||C0633084|174742|32968|clopidogrel
+71	She was continued on aspirin , Plavix , and Lipitor .|Lipitor[5549,5556]|||||||||C0593906|153165|83367|atorvastatin
+72	For her rhythm , amiodarone was discontinued as she was maintained in sinus rhythm after moving to the floor .|amiodarone[5576,5586]|||||||||C0002598|703|703|amiodarone
+73	For pump , once transferred out of the Coronary Care Unit on 2011-11-20 , a beta blocker was begun at 12.5 mg of Lopressor p.o. b.i.d. which was titrated to 25 mg at the time of discharge .|beta blocker[5746,5758]|||12.5mg[5772,5779]|||||||401870|401870|beta blocker
+73	For pump , once transferred out of the Coronary Care Unit on 2011-11-20 , a beta blocker was begun at 12.5 mg of Lopressor p.o. b.i.d. which was titrated to 25 mg at the time of discharge .|Lopressor[5783,5792]|||25mg[5827,5832]||p.o.[5793,5797]|b.i.d.[5798,5804]|||null|866502|5487|hydrochlorothiazide
+74	Also , at the time of discharge , for increased afterload reduction , she was started on lisinopril 5 mg p.o. q.d.|lisinopril[5949,5959]|||5mg[5960,5964]||p.o.[5965,5969]|q.d .[5970,5974]|||C0978224|311354|29046|lisinopril
+81	The patient was treated with Tylenol orally as well as Ativan for anxiety that she had about going home .|Ativan[6476,6482]|||||orally[6458,6464]||||C3226922|1172874|6470|lorazepam
+81	The patient was treated with Tylenol orally as well as Ativan for anxiety that she had about going home .|Tylenol[6450,6457]||||||||||202433|161|paracetamol
+91	This resolved with Tylenol and as needed doses of oxycodone .|Tylenol[7163,7170]||||||||||202433|161|paracetamol
+91	This resolved with Tylenol and as needed doses of oxycodone .|oxycodone[7194,7203]||||||||as needed[7175,7184]|C0030049|7804|7804|oxycodone
+97	She did receive intravenous K-Phos for a low phosphorous of 1.5 .|K - Phos[7569,7575]|||||intravenous[7557,7568]||||C1587981|542409|34322|potassium phosphate
+107	1. Lisinopril 5 mg p.o. q.d.|Lisinopril[8197,8207]|||5mg[8208,8212]||p.o.[8213,8217]|q.d.[8218,8222]|||C0978224|311354|29046|lisinopril
+108	2. Lopressor 25 mg p.o. b.i.d.|Lopressor[8226,8235]|||25mg[8236,8241]||p.o.[8242,8246]|b.i.d.[8247,8253]|||null|866502|5487|hydrochlorothiazide
+109	3. Plavix 75 mg p.o. q.d.|Plavix[8257,8263]|||75mg[8264,8269]||p.o.[8270,8274]|q.d.[8275,8279]|||C0716159|213169|32968|clopidogrel
+110	4. Lipitor 10 mg p.o. q.d.|Lipitor[8283,8290]|||10mg[8291,8296]||p.o.[8297,8301]|q.d.[8302,8306]|||C0593903|617314|83367|atorvastatin
+111	5. Protonix 40 mg p.o. q.d.|Protonix[8310,8318]|||40mg[8319,8324]||p.o.[8325,8329]|q.d.[8330,8334]||||763308|40790|pantoprazole
+112	6. Enteric-coated aspirin 325 mg p.o. q.d.|coated aspirin[8346,8360]|||325mg[8361,8367]||p.o.[8368,8372]|q.d .[8373,8377]||||212033|1191|acetylsalicylic acid

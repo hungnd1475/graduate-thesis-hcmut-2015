@@ -1,0 +1,34 @@
+c="intravenous chemotherapy" 7:0 7:1||t="coref treatment"||c="intravenous chemotherapy" 17:0 17:1
+c="large cell carcinoma of the left upper lobe" 27:15 27:22||t="coref problem"||c="lung carcinoma" 29:10 29:11
+c="left upper lobe large cell carcinoma of the lung" 19:0 19:8||t="coref problem"||c="large cell carcinoma of the left upper lobe" 27:15 27:22
+c="intravenous chemotherapy" 25:0 25:1||t="coref treatment"||c="neoadjuvant chemotherapy" 27:31 27:32
+c="the patient" 27:0 27:1||t="coref person"||c="who" 27:26 27:26
+c="she" 29:2 29:2||t="coref person"||c="the patient" 33:0 33:1
+c="the patient" 33:0 33:1||t="coref person"||c="she" 34:0 34:0
+c="her" 55:5 55:5||t="coref person"||c="she" 56:0 56:0
+c="her" 58:1 58:1||t="coref person"||c="she" 58:6 58:6
+c="5-fu" 27:36 27:36||t="coref treatment"||c="a 72 hour continuous infusion of 5-fu" 53:17 53:23
+c="the chemotherapy" 54:2 54:3||t="coref treatment"||c="this chemotherapy" 57:8 57:9
+c="cisplatinum" 27:34 27:34||t="coref treatment"||c="cisplatinum" 33:15 33:15
+c="his" 64:8 64:8||t="coref person"||c="guabenfranda day , m.d." 73:0 73:3
+c="dr. guabenfranda day" 64:4 64:6||t="coref person"||c="his" 64:8 64:8
+c="her second course of that therapy" 34:5 34:10||t="coref treatment"||c="intravenous chemotherapy" 53:14 53:15
+c="vinblastine" 33:13 33:13||t="coref treatment"||c="vinblastine" 53:25 53:25
+c="who" 27:26 27:26||t="coref person"||c="her" 28:0 28:0
+c="she" 55:0 55:0||t="coref person"||c="her" 55:5 55:5
+c="she" 54:0 54:0||t="coref person"||c="she" 55:0 55:0
+c="this chemotherapy" 57:8 57:9||t="coref treatment"||c="chemotherapy" 58:4 58:4
+c="intravenous chemotherapy" 53:14 53:15||t="coref treatment"||c="the chemotherapy" 54:2 54:3
+c="cancer" 30:16 30:16||t="coref problem"||c="lung cancer" 60:3 60:4
+c="cisplatinum" 33:15 33:15||t="coref treatment"||c="cisplatinum" 53:34 53:34
+c="the patient" 53:0 53:1||t="coref person"||c="she" 54:0 54:0
+c="neoadjuvant chemotherapy" 27:31 27:32||t="coref treatment"||c="preoperative neoadjuvant chemotherapy using 5 fu" 33:6 33:11
+c="her" 34:5 34:5||t="coref person"||c="the patient" 53:0 53:1
+c="intravenous chemotherapy" 17:0 17:1||t="coref treatment"||c="intravenous chemotherapy" 25:0 25:1
+c="her" 28:0 28:0||t="coref person"||c="her" 28:7 28:7
+c="she" 34:0 34:0||t="coref person"||c="her" 34:5 34:5
+c="her" 28:7 28:7||t="coref person"||c="she" 29:2 29:2
+c="she" 56:0 56:0||t="coref person"||c="her" 56:12 56:12
+c="preoperative neoadjuvant chemotherapy using 5 fu" 33:6 33:11||t="coref treatment"||c="her second course of that therapy" 34:5 34:10
+c="her" 56:12 56:12||t="coref person"||c="her" 58:1 58:1
+c="chemotherapy" 58:4 58:4||t="coref treatment"||c="intravenous chemotherapy" 60:0 60:1

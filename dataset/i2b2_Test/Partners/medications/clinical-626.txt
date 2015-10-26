@@ -1,0 +1,9 @@
+29	On admission included Tylenol .|Tylenol[979,986]||||||||||202433|161|paracetamol
+51	Psychiatry Service saw her on 6/28 and recommended avoiding benzodiazepines and Haldol for agitation .|benzodiazepines[2117,2132]||||||||||1402|1402|benzodiazepines
+51	Psychiatry Service saw her on 6/28 and recommended avoiding benzodiazepines and Haldol for agitation .|Haldol[2137,2143]|||||||||C0591585|151839|5093|haloperidol
+52	She was prophylaxed with Kefzol perioperatively and with Coumadin postoperatively .|Kefzol[2185,2191]|||||||||C0700925|203482|2180|cefazolin
+52	She was prophylaxed with Kefzol perioperatively and with Coumadin postoperatively .|Coumadin[2217,2225]|||||||||C0699129|202421|11289|warfarin
+55	Her PT drifted down to a level of 12.9 by 7/3 and therefore she will be discharged with 4 mg of Coumadin per day to be followed by the Coumadin Clinic at Cowerin Tonli Medical Center .|Coumadin[2498,2506]||||||per day[2507,2514]|||C0699129|202421|11289|warfarin
+55	Her PT drifted down to a level of 12.9 by 7/3 and therefore she will be discharged with 4 mg of Coumadin per day to be followed by the Coumadin Clinic at Cowerin Tonli Medical Center .|Coumadin[2537,2545]|||4mg[2490,2494]||||||C2709916|855325|11289|warfarin
+56	She was discharged with a prescription for Tylenol #3 with Physical Therapy .|Tylenol[2630,2637]||||||||||202433|161|paracetamol
+64	CU2|CU2[3030,3033]||||||||||||

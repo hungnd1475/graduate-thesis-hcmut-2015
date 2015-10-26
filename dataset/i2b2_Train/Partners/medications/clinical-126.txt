@@ -1,0 +1,6 @@
+28	The patient was started on Clindamycin intravenous and Cefuroxime intravenous with clearing of his fever but persistence of cough , choking , and intermittently many coarse rales in his base with no clearing by x-ray .|Clindamycin[1393,1404]|||||intravenous[1405,1416]||||C0008947|2582|2582|clindamycin
+28	The patient was started on Clindamycin intravenous and Cefuroxime intravenous with clearing of his fever but persistence of cough , choking , and intermittently many coarse rales in his base with no clearing by x-ray .|Cefuroxime[1421,1431]|||||intravenous[1432,1443]||||C0007562|2194|2194|cefuroxime
+34	Digoxin 0.25 mg .|Digoxin[2029,2036]|||0.25mg[2037,2044]||||||C0985544|315821|3407|digoxin
+35	Hytrin 2mg at bedtime .|Hytrin[2047,2053]|||2mg[2054,2057]|||at bedtime[2058,2068]|||C1596049|563605|37798|terazosin
+36	Ticlid 0.25 g po bid .|Ticlid[2071,2077]|||0.25g[2078,2084]||po[2085,2087]|bid[2088,2091]|||C3232403|1178492|10594|ticlopidine
+37	Bronchodilators as needed .|Bronchodilators[2094,2109]||||||||as needed[2110,2119]||||

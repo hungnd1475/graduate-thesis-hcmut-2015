@@ -1,0 +1,27 @@
+9	Attending : Dona J.|Dona[160,164]||||||||||||
+17	Atrial fibrillation ( on Coumadin )|Coumadin[349,357]|||||||||C0699129|202421|11289|warfarin
+29	GLUCOSE - 126 * UREA N - 9 CREAT - 0.8 SODIUM - 135 POTASSIUM - 3.4 CHLORIDE - 99 TOTAL CO2 - 25 ANION GAP - 14 2014-10-21 08:10 PM|POTASSIUM[684,693]|||||||||C0032821|8588|8588|potassium
+29	GLUCOSE - 126 * UREA N - 9 CREAT - 0.8 SODIUM - 135 POTASSIUM - 3.4 CHLORIDE - 99 TOTAL CO2 - 25 ANION GAP - 14 2014-10-21 08:10 PM|SODIUM[671,677]|||||||||C0037473|9853|9853|sodium
+29	GLUCOSE - 126 * UREA N - 9 CREAT - 0.8 SODIUM - 135 POTASSIUM - 3.4 CHLORIDE - 99 TOTAL CO2 - 25 ANION GAP - 14 2014-10-21 08:10 PM|UREA[648,652]|||||||||C0041942|11002|11002|urea
+30	CALCIUM - 8.2 * PHOSPHATE - 2.1 * MAGNESIUM - 1.9 2014-10-21 08:10 PM|MAGNESIUM[798,807]|||||||||C0024467|6574|6574|magnesium
+30	CALCIUM - 8.2 * PHOSPHATE - 2.1 * MAGNESIUM - 1.9 2014-10-21 08:10 PM|CALCIUM[764,771]|||||||||C0006675|1895|1895|calcium
+35	ASA - NEG ETHANOL - NEG ACETMNPHN - NEG bnzodzpn - NEG barbitrt - NEG tricyclic - NEG 2014-10-21 09:35 AM URINE bnzodzpn - NEG barbitrt - NEG opiates - NEG cocaine - NEG amphetmn - NEG mthdone - NEG|cocaine[1407,1414]|||||||||C0009170|2653|2653|cocaine
+35	ASA - NEG ETHANOL - NEG ACETMNPHN - NEG bnzodzpn - NEG barbitrt - NEG tricyclic - NEG 2014-10-21 09:35 AM URINE bnzodzpn - NEG barbitrt - NEG opiates - NEG cocaine - NEG amphetmn - NEG mthdone - NEG|ASA[1251,1254]|||||||||C1740879|667904|9525|salicylic acid
+41	CONTRAINDICATIONS for IV CONTRAST : None .|IV CONTRAST[1718,1729]||||||||||239738|239738|iv contrast
+65	CONTRAINDICATIONS for IV CONTRAST : None .|IV CONTRAST[3423,3434]||||||||||239738|239738|iv contrast
+96	CONTRAINDICATIONS for IV CONTRAST : None .|IV CONTRAST[5541,5552]||||||||||239738|239738|iv contrast
+133	In TSICU , developed MRSA pneumonia with question of aspiration , treated Zosyn --> vanc / levo --> then 2 week course of Linazolid with resolution of fevers and decreased pulmonary secretions .|levo[8226,8230]|||||||2 week[8240,8246]|||877015|877015|levoleucovorin
+133	In TSICU , developed MRSA pneumonia with question of aspiration , treated Zosyn --> vanc / levo --> then 2 week course of Linazolid with resolution of fevers and decreased pulmonary secretions .|vanc[8219,8223]||||||||||||
+133	In TSICU , developed MRSA pneumonia with question of aspiration , treated Zosyn --> vanc / levo --> then 2 week course of Linazolid with resolution of fevers and decreased pulmonary secretions .|Zosyn[8209,8214]|||||||||C0250482|74170|8339|piperacillin
+142	Occasionally required Haldol / ativan at night for agitation .|ativan[8879,8885]|||||||||C0699194|202479|6470|lorazepam
+142	Occasionally required Haldol / ativan at night for agitation .|Haldol[8870,8876]|||||||||C0591585|151839|5093|haloperidol
+146	1. Heparin ( Porcine ) 5,000 unit/mL Solution Sig : One ( 1 ) Injection TID ( 3 times a day ).|Heparin[9163,9170]|||5 , 000unit / mL[9183,9196]|||TID[9232,9235]|||C1125215|329807|5224|heparin
+147	2. Lisinopril 15 mg Tablet Sig : One ( 1 ) Tablet PO DAILY ( Daily ).|Lisinopril[9258,9268]||Tablet[9275,9281]|15mg[9269,9274]||PO[9305,9307]|DAILY[9308,9313]|||C1246673|372614|29046|lisinopril
+148	3. Lansoprazole 30 mg Susp , Delayed Release for Recon Sig : One ( 1 ) PO DAILY ( Daily ).|Lansoprazole[9328,9340]||Susp[9347,9351]|30mg[9341,9346]||PO[9396,9398]|DAILY[9399,9404]|||null|1603846|17128|lansoprazole
+149	4. Linezolid 600 mg Tablet Sig : One ( 1 ) Tablet PO Q12H ( every 12 hours ): Last dose 2014-11-20 .|Linezolid[9419,9428]||Tablet[9436,9442]|600mg[9429,9435]||PO[9466,9468]|Q12H[9469,9473]|||C0978215|311347|190376|linezolid
+150	5. Metoprolol Tartrate 25 mg Tablet Sig : One ( 1 ) Tablet PO TID ( 3 times a day ).|Metoprolol Tartrate[9520,9539]||Tablet[9546,9552]|25mg[9540,9545]||PO[9576,9578]|TID[9579,9582]|||C1359886|866924|6918|metoprolol
+151	6. Digoxin 125 mcg Tablet Sig : One ( 1 ) Tablet PO DAILY ( Daily ).|Digoxin[9605,9612]||Tablet[9621,9627]|125mcg[9613,9620]||PO[9651,9653]|DAILY[9654,9659]||||197604|3407|digoxin
+152	7. Docusate Sodium 150 mg / 15 mL Liquid Sig : One ( 1 ) PO BID ( 2 times a day ).|Docusate Sodium[9674,9689]|||150 mg / 15 mL[9690,9704]||PO[9728,9730]|BID[9731,9734]||||1245686|82003|docusate
+153	8. Bisacodyl 5 mg Tablet , Delayed Release ( E.C. ) Sig : Two ( 2 ) Tablet , Delayed Release ( E.C. ) PO DAILY ( Daily ) as needed for constipation .|Bisacodyl[9757,9766]||Tablet[9772,9778]|5mg[9767,9771]||PO[9856,9858]|DAILY[9859,9864]||as needed[9875,9884]|C0974988|308753|1596|bisacodyl
+154	9. Magnesium Hydroxide 400 mg / 5 mL Suspension Sig : Thirty ( 30 ) ML PO Q6H ( every 6 hours ) as needed for consitpation .|Magnesium Hydroxide[9907,9926]||Suspension[9941,9951]|400 mg / 5 mL[9927,9940]||PO[9975,9977]|Q6H[9978,9981]||as needed[10000,10009]||253017|6581|magnesium hydroxide
+174	David Thomas MD 60-008|MD 60[10788,10793]|||||||||null|605412|605412|md 60

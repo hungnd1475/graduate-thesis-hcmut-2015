@@ -1,0 +1,12 @@
+25	He denies any IV drug use , did describe cocaine use last two months ago .|cocaine[1342,1349]|||||IV[1315,1317]||two months[1359,1369]||C0009170|2653|2653|cocaine
+27	In emergency room , he was noted to be afebrile with stable vital signs , was treated with IV fluids , azithromycin , and cefuroxime .|IV fluids[1536,1545]||||||||||390001|390001|iv fluids
+27	In emergency room , he was noted to be afebrile with stable vital signs , was treated with IV fluids , azithromycin , and cefuroxime .|azithromycin[1548,1560]|||||||||C0052796|18631|18631|azithromycin
+27	In emergency room , he was noted to be afebrile with stable vital signs , was treated with IV fluids , azithromycin , and cefuroxime .|cefuroxime[1567,1577]|||||||||C0007562|2194|2194|cefuroxime
+66	Thus initially he had been started on prednisone and Bactrim , this was discontinued .|prednisone[3815,3825]|||||||||C0032952|8640|8640|prednisone
+66	Thus initially he had been started on prednisone and Bactrim , this was discontinued .|Bactrim[3830,3837]||||||||||151399|10180|sulfamethoxazole
+67	He was continued on azithromycin and cefuroxime until bronchoscopy results were known , negative .|azithromycin[3884,3896]|||||||||C0052796|18631|18631|azithromycin
+67	He was continued on azithromycin and cefuroxime until bronchoscopy results were known , negative .|cefuroxime[3901,3911]|||||||||C0007562|2194|2194|cefuroxime
+84	Lovenox .|Lovenox[4980,4987]|||||||||C0728963|225036|67108|enoxaparin
+96	1. Prednisone 60 mg p.o. q.a.m.|Prednisone[5696,5706]|||60mg[5707,5712]||p.o.[5713,5717]|q.a.m.[5718,5724]|||C1247651|373583|8640|prednisone
+97	2. Bactrim double strength one tablet p.o. q.d. for PCP prophylaxis during his steroid course .|steroid[5804,5811]||||||||||10072|10072|steroid
+97	2. Bactrim double strength one tablet p.o. q.d. for PCP prophylaxis during his steroid course .|Bactrim[5728,5735]||||one tablet[5752,5762]|p.o.[5763,5767]|q.d.[5768,5772]|||C3222127|1167956|10180|sulfamethoxazole

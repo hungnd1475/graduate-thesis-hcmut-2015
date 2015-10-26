@@ -1,0 +1,18 @@
+31	Triamcinolone , one tablet PO b.i.d. , dosage unknown , Xanax one tablet PO t.i.d. , prn anxiety , dosage unknown , MS Contin prn .|Triamcinolone[1795,1808]||||one tablet[1811,1821]|PO[1822,1824]|b.i.d.[1825,1831]|||C0310392|96819|10759|triamcinolone
+31	Triamcinolone , one tablet PO b.i.d. , dosage unknown , Xanax one tablet PO t.i.d. , prn anxiety , dosage unknown , MS Contin prn .|Xanax[1851,1856]||||one tablet[1857,1867]|PO[1868,1870]|t.i.d.[1871,1877]||prn[1880,1883]|C0308150|94610|596|alprazolam
+31	Triamcinolone , one tablet PO b.i.d. , dosage unknown , Xanax one tablet PO t.i.d. , prn anxiety , dosage unknown , MS Contin prn .|MS Contin[1911,1920]||||||||prn[1921,1924]|C0700786|203354|7052|morphine
+58	Pulmonary recommended that he just be started on Albuterol and Atrovent metered dose inhalers , 2 puffs q6h , prior to surgery .|Albuterol[3817,3826]|||||||||C0001927|435|435|salbutamol
+58	Pulmonary recommended that he just be started on Albuterol and Atrovent metered dose inhalers , 2 puffs q6h , prior to surgery .|Atrovent[3831,3839]||inhalers[3853,3861]||2 puffs[3864,3871]||q6h[3872,3875]|||C3227604|1173573|7213|ipratropium
+65	His left lower lobe micro results revealed alpha hemolytic Streptococcus on culture and he was then switched to penicillin and Gentamicin after being started on triples of Flagyl , Ampicillin , and Gentamicin .|penicillin[4532,4542]||||||||||7986|7986|penicillin
+65	His left lower lobe micro results revealed alpha hemolytic Streptococcus on culture and he was then switched to penicillin and Gentamicin after being started on triples of Flagyl , Ampicillin , and Gentamicin .|Flagyl[4592,4598]||||||||||202866|6922|metronidazole
+65	His left lower lobe micro results revealed alpha hemolytic Streptococcus on culture and he was then switched to penicillin and Gentamicin after being started on triples of Flagyl , Ampicillin , and Gentamicin .|Gentamicin[4547,4557]|||||||||C0017436|662411|662411|gentamicins
+65	His left lower lobe micro results revealed alpha hemolytic Streptococcus on culture and he was then switched to penicillin and Gentamicin after being started on triples of Flagyl , Ampicillin , and Gentamicin .|Ampicillin[4601,4611]|||||||||C0002680|733|733|ampicillin
+65	His left lower lobe micro results revealed alpha hemolytic Streptococcus on culture and he was then switched to penicillin and Gentamicin after being started on triples of Flagyl , Ampicillin , and Gentamicin .|Gentamicin[4618,4628]|||||||||C0017436|662411|662411|gentamicins
+69	He had completed six days of penicillin and Gentamicin and was discharged on Ciprofloxacin and Flagyl for the next seven days .|penicillin[5018,5028]|||||||six days[5006,5014]|||7986|7986|penicillin
+69	He had completed six days of penicillin and Gentamicin and was discharged on Ciprofloxacin and Flagyl for the next seven days .|Gentamicin[5033,5043]|||||||||C0017436|662411|662411|gentamicins
+69	He had completed six days of penicillin and Gentamicin and was discharged on Ciprofloxacin and Flagyl for the next seven days .|Ciprofloxacin[5066,5079]|||||||||C0008809|2551|2551|ciprofloxacin
+69	He had completed six days of penicillin and Gentamicin and was discharged on Ciprofloxacin and Flagyl for the next seven days .|Flagyl[5084,5090]|||||||seven days[5104,5114]|||202866|6922|metronidazole
+72	Tylenol # 3 , Xanax , Ciprofloxacin , Flagyl .|Tylenol[5217,5224]||||||||||202433|161|paracetamol
+72	Tylenol # 3 , Xanax , Ciprofloxacin , Flagyl .|Xanax[5231,5236]|||||||||C0699034|202363|596|alprazolam
+72	Tylenol # 3 , Xanax , Ciprofloxacin , Flagyl .|Ciprofloxacin[5239,5252]|||||||||C0008809|2551|2551|ciprofloxacin
+72	Tylenol # 3 , Xanax , Ciprofloxacin , Flagyl .|Flagyl[5255,5261]||||||||||202866|6922|metronidazole

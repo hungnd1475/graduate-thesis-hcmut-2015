@@ -1,0 +1,6 @@
+c="the patient" 18:0 18:1||c="who" 18:8 18:8||c="he" 19:7 19:7||c="he" 21:0 21:0||c="he" 29:0 29:0||c="his" 30:0 30:0||c="he" 31:0 31:0||c="he" 33:0 33:0||c="he" 33:10 33:10||c="he" 34:0 34:0||c="he" 35:5 35:5||c="his" 35:7 35:7||c="he" 38:0 38:0||t="coref person"
+c="right laminectomy" 16:0 16:1||c="l5-s1 right hemilaminectomy" 33:12 33:14||t="coref treatment"
+c="discectomy" 16:3 16:3||c="discectomy" 33:16 33:16||t="coref treatment"
+c="dr. small" 16:5 16:6||c="nasa r. small , m.d." 40:0 40:4||t="coref person"
+c="lower back pain" 18:10 18:12||c="this" 19:0 19:0||t="coref problem"
+c="pain" 35:21 35:21||c="which" 35:22 35:22||t="coref problem"

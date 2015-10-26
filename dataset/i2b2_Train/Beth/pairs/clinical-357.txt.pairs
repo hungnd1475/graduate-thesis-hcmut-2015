@@ -1,0 +1,18 @@
+c="primary pediatrician" 80:0 80:1||t="coref person"||c="dr. timothy alexander" 81:0 81:2
+c="dr. timothy alexander" 81:0 81:2||t="coref person"||c="primary pediatrician" 102:0 102:1
+c="raymond" 75:0 75:0||t="coref person"||c="twin #2" 105:1 105:2
+c="mother" 16:0 16:0||t="coref person"||c="she" 17:0 17:0
+c="fred grauman" 12:0 12:1||t="coref person"||c="he" 21:0 21:0
+c="he" 21:0 21:0||t="coref person"||c="raymond" 49:0 49:0
+c="she" 17:0 17:0||t="coref person"||c="she" 18:0 18:0
+c="raymond" 70:0 70:0||t="coref person"||c="raymond" 72:0 72:0
+c="he" 58:6 58:6||t="coref person"||c="raymond" 61:11 61:11
+c="preterm infants" 99:11 99:12||t="coref problem"||c="they" 99:18 99:18
+c="he" 57:0 57:0||t="coref person"||c="he" 58:6 58:6
+c="raymond" 61:11 61:11||t="coref person"||c="raymond" 70:0 70:0
+c="he" 52:0 52:0||t="coref person"||c="he" 57:0 57:0
+c="raymond" 72:0 72:0||t="coref person"||c="raymond" 75:0 75:0
+c="a prior cesarean section" 17:2 17:5||t="coref treatment"||c="cesarean section" 17:12 17:13
+c="raymond" 49:0 49:0||t="coref person"||c="he" 50:0 50:0
+c="he" 50:0 50:0||t="coref person"||c="he" 52:0 52:0
+c="sepsis" 61:15 61:15||t="coref problem"||c="sepsis" 107:3 107:3

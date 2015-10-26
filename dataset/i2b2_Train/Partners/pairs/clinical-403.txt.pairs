@@ -1,0 +1,67 @@
+c="episodic vertigo" 56:21 56:22||t="coref problem"||c="episodic vertigo" 70:12 70:13
+c="his" 104:0 104:0||t="coref person"||c="he" 105:0 105:0
+c="gerd" 56:19 56:19||t="coref problem"||c="gerd" 70:1 70:1
+c="ir drainage" 60:0 60:1||t="coref treatment"||c="ir drainage" 68:16 68:17
+c="gout" 56:15 56:15||t="coref problem"||c="gout" 70:5 70:5
+c="he" 116:0 116:0||t="coref person"||c="your" 121:4 121:4
+c="his abdominopelvic fluid collection" 82:26 82:29||t="coref problem"||c="the patient &apos;s fluid collection" 84:20 84:24
+c="he" 99:0 99:0||t="coref person"||c="the patient" 101:0 101:1
+c="who" 62:7 62:7||t="coref person"||c="he" 63:0 63:0
+c="he" 67:0 67:0||t="coref person"||c="he" 69:0 69:0
+c="your" 48:10 48:10||t="coref person"||c="this" 62:1 62:1
+c="dr. liley" 81:7 81:8||t="coref person"||c="dr. liley" 116:10 116:11
+c="his" 66:14 66:14||t="coref person"||c="he" 67:0 67:0
+c="pulmonary nodules in his rml" 66:11 66:15||t="coref problem"||c="which" 66:16 66:16
+c="liley , ber , m.d." 25:0 25:4||t="coref person"||c="dr. liley" 48:0 48:1
+c="clears" 97:4 97:4||t="coref treatment"||c="which" 97:5 97:5
+c="subtotal colectomy" 56:30 56:31||t="coref treatment"||c="a subtotal colectomy" 64:2 64:4
+c="he" 97:6 97:6||t="coref person"||c="his" 98:0 98:0
+c="cts chest" 66:0 66:1||t="coref test"||c="it" 66:8 66:8
+c="he" 69:0 69:0||t="coref person"||c="mr. liley" 81:2 81:3
+c="the patient" 85:4 85:5||t="coref person"||c="the patient" 87:3 87:4
+c="abdominal fluid collection" 5:0 5:2||t="coref problem"||c="abdominal fluid collection" 52:0 52:2
+c="he" 105:0 105:0||t="coref person"||c="mr. liley" 114:0 114:1
+c="a subtotal colectomy" 64:2 64:4||t="coref treatment"||c="which" 64:7 64:7
+c="he" 98:7 98:7||t="coref person"||c="he" 99:0 99:0
+c="attending" 24:0 24:0||t="coref person"||c="liley , ber , m.d." 25:0 25:4
+c="patient" 18:1 18:1||t="coref person"||c="your" 48:10 48:10
+c="he" 63:0 63:0||t="coref person"||c="his" 63:10 63:10
+c="he" 65:1 65:1||t="coref person"||c="his" 66:14 66:14
+c="he" 82:3 82:3||t="coref person"||c="his" 82:26 82:26
+c="he" 83:1 83:1||t="coref person"||c="his" 83:8 83:8
+c="his" 83:8 83:8||t="coref person"||c="the patient" 84:6 84:7
+c="the patient" 84:6 84:7||t="coref person"||c="the patient" 84:20 84:21
+c="the patient" 87:3 87:4||t="coref person"||c="the patient" 89:0 89:1
+c="the patient" 89:0 89:1||t="coref person"||c="his" 89:5 89:5
+c="sips" 95:9 95:9||t="coref treatment"||c="this" 96:2 96:2
+c="his" 101:10 101:10||t="coref person"||c="the patient" 103:0 103:1
+c="the patient" 103:0 103:1||t="coref person"||c="his" 104:0 104:0
+c="mr. liley" 114:0 114:1||t="coref person"||c="his" 115:7 115:7
+c="abdominal fluid collection" 52:0 52:2||t="coref problem"||c="abdominal fluid collection" 54:7 54:9
+c="ir placement of a drainage catheter" 82:19 82:24||t="coref treatment"||c="the catheter" 84:14 84:15
+c="a second catheter" 85:13 85:15||t="coref treatment"||c="the second catheter" 86:3 86:5
+c="a right colon cancer" 62:14 62:17||t="coref problem"||c="colon cancer" 70:15 70:16
+c="the patient" 93:0 93:1||t="coref person"||c="the patient" 95:4 95:5
+c="the patient" 84:20 84:21||t="coref person"||c="the patient" 85:4 85:5
+c="liver hemangioma" 56:10 56:11||t="coref problem"||c="liver hemangioma" 70:9 70:10
+c="abdominal fluid collection" 54:7 54:9||t="coref problem"||c="a collection in the rlq" 68:5 68:9
+c="his" 115:7 115:7||t="coref person"||c="he" 116:0 116:0
+c="the patient" 101:0 101:1||t="coref person"||c="his" 101:10 101:10
+c="c. difficile" 99:6 99:7||t="coref problem"||c="which" 99:8 99:8
+c="his" 82:26 82:26||t="coref person"||c="he" 83:1 83:1
+c="this" 62:1 62:1||t="coref person"||c="who" 62:7 62:7
+c="mr. liley" 81:2 81:3||t="coref person"||c="he" 82:3 82:3
+c="liley , peantsall" 13:0 13:2||t="coref person"||c="patient" 18:1 18:1
+c="a collection in the rlq" 68:5 68:9||t="coref problem"||c="which" 68:10 68:10
+c="he" 96:0 96:0||t="coref person"||c="he" 97:0 97:0
+c="he" 97:0 97:0||t="coref person"||c="he" 97:6 97:6
+c="dr. liley" 48:0 48:1||t="coref person"||c="dr. liley" 81:7 81:8
+c="a follow-up scan" 86:11 86:13||t="coref test"||c="which" 86:14 86:14
+c="his" 63:10 63:10||t="coref person"||c="he" 64:0 64:0
+c="he" 64:0 64:0||t="coref person"||c="he" 65:1 65:1
+c="his" 98:0 98:0||t="coref person"||c="he" 98:7 98:7
+c="his" 89:5 89:5||t="coref person"||c="the patient" 93:0 93:1
+c="which" 68:10 68:10||t="coref problem"||c="his abdominopelvic fluid collection" 82:26 82:29
+c="drains" 34:6 34:6||t="coref treatment"||c="drains" 38:6 38:6
+c="the patient" 95:4 95:5||t="coref person"||c="he" 96:0 96:0
+c="meningioma" 56:17 56:17||t="coref problem"||c="meningioma" 70:7 70:7

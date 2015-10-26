@@ -1,0 +1,69 @@
+c="his hematologist" 94:7 94:8||t="coref person"||c="dr. eci area" 94:10 94:12
+c="rheumatologist" 94:14 94:14||t="coref person"||c="dr. taange peter" 94:16 94:18
+c="cardiologist" 94:21 94:21||t="coref person"||c="dr. peter" 94:23 94:24
+c="his wife" 30:0 30:1||t="coref person"||c="his wife" 53:4 53:5
+c="the patient" 24:0 24:1||t="coref person"||c="the patient" 25:0 25:1
+c="he" 26:0 26:0||t="coref person"||c="the patient" 27:6 27:7
+c="the patient" 27:6 27:7||t="coref person"||c="his" 28:0 28:0
+c="his" 28:0 28:0||t="coref person"||c="his" 29:0 29:0
+c="the patient" 29:16 29:17||t="coref person"||c="his" 30:0 30:0
+c="his" 30:0 30:0||t="coref person"||c="his" 30:3 30:3
+c="his" 30:3 30:3||t="coref person"||c="he" 31:2 31:2
+c="the patient" 31:25 31:26||t="coref person"||c="the patient" 32:5 32:6
+c="his" 33:5 33:5||t="coref person"||c="the patient" 34:0 34:1
+c="the patient" 51:0 51:1||t="coref person"||c="the patient" 53:0 53:1
+c="his" 53:4 53:4||t="coref person"||c="the patient" 75:0 75:1
+c="his" 83:6 83:6||t="coref person"||c="the patient" 85:0 85:1
+c="his" 86:28 86:28||t="coref person"||c="his" 87:1 87:1
+c="he" 87:6 87:6||t="coref person"||c="the patient" 88:0 88:1
+c="the patient" 88:0 88:1||t="coref person"||c="his" 88:7 88:7
+c="he" 89:0 89:0||t="coref person"||c="his" 89:5 89:5
+c="his" 89:5 89:5||t="coref person"||c="he" 89:23 89:23
+c="the patient" 91:0 91:1||t="coref person"||c="the patient" 92:4 92:5
+c="his" 92:9 92:9||t="coref person"||c="he" 92:13 92:13
+c="his" 94:7 94:7||t="coref person"||c="his" 100:2 100:2
+c="psoriasis" 45:1 45:1||t="coref problem"||c="diffuse psoriasis over trunk and arms" 70:0 70:5
+c="rheumatoid arthritis" 40:1 40:2||t="coref problem"||c="rheumatoid arthritis" 68:4 68:5
+c="home o2" 22:4 22:5||t="coref treatment"||c="home oxygen" 38:15 38:16
+c="myelodysplastic syndrome" 26:19 26:20||t="coref problem"||c="myelodysplastic syndrome" 36:1 36:2
+c="congestive heart failure" 20:1 20:3||t="coref problem"||c="congestive heart failure" 28:9 28:11
+c="his hematocrit" 89:5 89:6||t="coref test"||c="his hematocrit" 90:0 90:1
+c="dilated cardiomyopathy" 20:5 20:6||t="coref problem"||c="ischemia cardiomyopathy" 28:15 28:16
+c="symptomatic anemia" 15:4 15:5||t="coref problem"||c="decreased hematocrit" 24:20 24:21
+c="cataracts" 43:1 43:1||t="coref problem"||c="bilateral cataracts" 58:0 58:1
+c="the patient" 34:0 34:1||t="coref person"||c="the patient" 51:0 51:1
+c="his hematocrit" 90:0 90:1||t="coref test"||c="hematocrit" 90:12 90:12
+c="the patient" 75:0 75:1||t="coref person"||c="his" 83:6 83:6
+c="ischemia cardiomyopathy" 28:15 28:16||t="coref problem"||c="ischemiccardiomyopathy" 37:5 37:5
+c="coronary artery disease" 21:1 21:3||t="coref problem"||c="coronary artery disease" 37:1 37:3
+c="his" 88:35 88:35||t="coref person"||c="he" 89:0 89:0
+c="the patient" 85:0 85:1||t="coref person"||c="he" 86:0 86:0
+c="him" 86:17 86:17||t="coref person"||c="he" 86:25 86:25
+c="he" 89:23 89:23||t="coref person"||c="his" 90:0 90:0
+c="dr. peter" 94:23 94:24||t="coref person"||c="dr. peter" 115:1 115:2
+c="his" 29:0 29:0||t="coref person"||c="the patient" 29:16 29:17
+c="he" 92:13 92:13||t="coref person"||c="his" 92:26 92:26
+c="chronic bronchiectasis" 22:1 22:2||t="coref problem"||c="chronic bronchi ectasis" 38:10 38:12
+c="hematocrit" 90:12 90:12||t="coref test"||c="his hematocrit" 92:9 92:10
+c="he" 31:2 31:2||t="coref person"||c="the patient" 31:25 31:26
+c="his" 90:0 90:0||t="coref person"||c="the patient" 91:0 91:1
+c="the patient" 53:0 53:1||t="coref person"||c="his" 53:4 53:4
+c="diabetes mellitus" 18:1 18:2||t="coref problem"||c="non insulin dependent diabetes mellitus" 39:1 39:5
+c="the patient" 25:0 25:1||t="coref person"||c="he" 26:0 26:0
+c="his hematocrit" 88:35 88:36||t="coref test"||c="his hematocrit" 89:5 89:6
+c="his transfusions" 28:0 28:1||t="coref treatment"||c="multiple transfusionsm" 87:4 87:5
+c="he" 86:25 86:25||t="coref person"||c="his" 86:28 86:28
+c="myelodysplastic syndrome" 15:1 15:2||t="coref problem"||c="myelodysplastic syndrome" 24:16 24:17
+c="myelodysplastic syndrome" 24:16 24:17||t="coref problem"||c="myelodysplastic syndrome" 26:19 26:20
+c="the patient" 94:0 94:1||t="coref person"||c="his" 94:7 94:7
+c="his" 87:1 87:1||t="coref person"||c="he" 87:6 87:6
+c="the patient" 92:4 92:5||t="coref person"||c="his" 92:9 92:9
+c="dr. taange peter" 94:16 94:18||t="coref person"||c="taange q. peter , m.d." 104:0 104:4
+c="dr. eci area" 94:10 94:12||t="coref person"||c="dr. eci area" 114:1 114:3
+c="the patient" 32:5 32:6||t="coref person"||c="he" 33:0 33:0
+c="he" 86:0 86:0||t="coref person"||c="him" 86:17 86:17
+c="rheumatoid arthritis" 17:1 17:2||t="coref problem"||c="rheumatoid arthritis" 40:1 40:2
+c="he" 33:0 33:0||t="coref person"||c="his" 33:5 33:5
+c="his" 92:26 92:26||t="coref person"||c="the patient" 94:0 94:1
+c="his" 88:7 88:7||t="coref person"||c="his" 88:35 88:35
+c="his hematocrit" 88:7 88:8||t="coref test"||c="his hematocrit" 88:35 88:36

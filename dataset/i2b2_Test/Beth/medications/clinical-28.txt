@@ -1,0 +1,13 @@
+21	Colace , Senna , Dulcolax , Tylenol , oxycodone as needed , Ambien , and Protonix .|Colace[879,885]|||||||||C0282139|82000|82003|docusate
+21	Colace , Senna , Dulcolax , Tylenol , oxycodone as needed , Ambien , and Protonix .|Senna[888,893]|||||||||C0074332|36387|36387|sennosides
+21	Colace , Senna , Dulcolax , Tylenol , oxycodone as needed , Ambien , and Protonix .|Dulcolax[896,904]|||||||||C0591416|151672|1596|bisacodyl
+21	Colace , Senna , Dulcolax , Tylenol , oxycodone as needed , Ambien , and Protonix .|Tylenol[907,914]||||||||||202433|161|paracetamol
+21	Colace , Senna , Dulcolax , Tylenol , oxycodone as needed , Ambien , and Protonix .|oxycodone[917,926]||||||||as needed[927,936]|C0030049|7804|7804|oxycodone
+21	Colace , Senna , Dulcolax , Tylenol , oxycodone as needed , Ambien , and Protonix .|Ambien[939,945]|||||||||C0487782|131725|39993|zolpidem
+21	Colace , Senna , Dulcolax , Tylenol , oxycodone as needed , Ambien , and Protonix .|Protonix[952,960]|||||||||C0876139|261624|40790|pantoprazole
+60	The patient was bolused with intravenous heparin due to concern for pulmonary embolism .|heparin[2965,2972]|||||intravenous[2953,2964]||||C0019134|235473|235473|heparin,porcine
+64	The patient was placed on Flagyl and Levaquin for treatment of pneumonia .|Flagyl[3382,3388]||||||||||202866|6922|metronidazole
+64	The patient was placed on Flagyl and Levaquin for treatment of pneumonia .|Levaquin[3393,3401]||||||||||217992|82122|levofloxacin
+65	He was continued on heparin for treatment of the pulmonary emboli .|heparin[3451,3458]|||||||||C0019134|235473|235473|heparin,porcine
+72	Octreotide was initiated in an attempt to decrease the gastric secretions .|Octreotide[3924,3934]|||||||||C0028833|7617|7617|octreotide
+79	Morphine was administered to insure patient 's comfort .|Morphine[4366,4374]|||||||||C0026549|7052|7052|morphine

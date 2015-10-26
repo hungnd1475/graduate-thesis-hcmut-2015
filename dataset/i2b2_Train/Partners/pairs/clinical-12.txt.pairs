@@ -1,0 +1,8 @@
+c="smantverge , tawnen" 12:0 12:2||t="coref person"||c="patient" 33:0 33:0
+c="pcp" 22:0 22:0||t="coref person"||c="dr trosgaugh" 43:5 43:6
+c="patient" 33:0 33:0||t="coref person"||c="patient" 42:5 42:5
+c="she" 44:3 44:3||t="coref person"||c="pcp" 45:0 45:0
+c="dr trosgaugh" 43:5 43:6||t="coref person"||c="she" 44:3 44:3
+c="vonnelibry pousscrookesseille" 34:1 34:2||t="coref person"||c="pousscrookesseille , vonnelibry" 49:5 49:7
+c="pcp" 45:0 45:0||t="coref person"||c="trosgaugh , nacole" 46:0 46:2
+c="vonnelibry pousscrookesseille" 20:0 20:1||t="coref person"||c="vonnelibry pousscrookesseille" 34:1 34:2

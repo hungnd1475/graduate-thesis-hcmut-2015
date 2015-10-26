@@ -1,0 +1,10 @@
+c="maren stea tlandflent , m.d." 34:0 34:4||t="coref person"||c="maren stea tlandflent , m.d." 43:0 43:4
+c="uph , jim" 13:0 13:2||t="coref person"||c="this" 25:1 25:1
+c="this" 25:1 25:1||t="coref person"||c="the patient" 26:0 26:1
+c="he" 29:11 29:11||t="coref person"||c="he" 30:6 30:6
+c="chemotherapy" 22:0 22:0||t="coref treatment"||c="chemotherapy" 27:13 27:13
+c="small cell lung cancer" 21:0 21:3||t="coref problem"||c="advanced lung cancer" 25:9 25:11
+c="the patient" 26:0 26:1||t="coref person"||c="he" 27:0 27:0
+c="he" 29:4 29:4||t="coref person"||c="he" 29:11 29:11
+c="maren tlandflent , m.d." 32:0 32:3||t="coref person"||c="maren stea tlandflent , m.d." 34:0 34:4
+c="he" 27:0 27:0||t="coref person"||c="he" 29:4 29:4

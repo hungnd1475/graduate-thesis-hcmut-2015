@@ -1,0 +1,21 @@
+17	PRINCIPAL PROCEDURE : 08/20/98 dual chamber pacemaker generator change ( CPI 1276 Meridian DR ) .|CPI[541,544]|||1276[545,549]|||||||||
+20	Aspirin 325 mg.|Aspirin[818,825]|||325mg[826,832]||||||C0992015|317300|1191|acetylsalicylic acid
+22	Lipitor 80 mg.|Lipitor[842,849]|||80mg[850,855]||||||C1592402|574676|83367|atorvastatin
+24	Toprol XL 50 mg.|Toprol XL[865,874]|||50mg[875,880]|||||||1370512|6918|metoprolol
+26	Lasix 80 mg. q.a.m. and 40 mg. q.p.m.|Lasix[890,895]|||40mg.[914,920]|||q.p.m[921,926]|||C1597894|565458|4603|furosemide
+26	Lasix 80 mg. q.a.m. and 40 mg. q.p.m.|Lasix[890,895]|||80mg.[896,902]|||q.a.m.[903,909]|||C1599049|566621|4603|furosemide
+27	Potassium chloride 20 mEq.|Potassium chloride[928,946]|||20mEq[947,953]||||||C0989074|316547|8591|potassium chloride
+29	Citracal 1 packet q.d.|Citracal[965,973]||||1 packet[974,982]||q.d .[983,987]||||216069|47613|calcium citrate
+30	Imdur 60 mg.|Imdur[988,993]|||60mg[994,999]||||||C1598326|565898|6057|isosorbide
+32	Vitamin E 400 international units q.d.|Vitamin E[1009,1018]|||400international units[1019,1042]|||q.d .[1043,1047]|||C1130599|333982|11256|tocopherol (vit e)
+33	Prilosec 20 mg.|Prilosec[1048,1056]|||20mg[1057,1062]||||||C1602242|541245|7646|omeprazole
+40	She has used antibiotic prophylaxis since 1980 .|antibiotic[1325,1335]||||||||||896|896|antibiotic
+51	Since that time she has continued to have exertional left chest burning , radiating to the left neck and arm , relieved by nitroglycerin .|nitroglycerin[2444,2457]|||||||||C0017887|4917|4917|glyceryl trinitrate
+60	She also has a history of lactose intolerance , peptic ulcer disease , with a remote gastrointestinal bleed and multiple ectopic pregnancies and mid term miscarriages .|lactose[3224,3231]|||||||||C0022949|6211|6211|lactose
+100	It was noted that she became very symptomatic when she was not on a beta blocker but that on a beta blocker she had significant pacemaker failure .|beta blocker[5835,5847]||||||||||401870|401870|beta blocker
+100	It was noted that she became very symptomatic when she was not on a beta blocker but that on a beta blocker she had significant pacemaker failure .|beta blocker[5862,5874]||||||||||401870|401870|beta blocker
+103	When her pacemaker was in a sinus rhythm without a beta blocker , she had significant angina .|beta blocker[6079,6091]||||||||||401870|401870|beta blocker
+108	For this reason , it was decided to maximize her beta blockers and nitrates .|beta blockers[6442,6455]||||||||||401870|401870|beta blockers
+108	For this reason , it was decided to maximize her beta blockers and nitrates .|nitrates[6460,6468]||||||||||7439|7439|nitrates
+111	On August 20 , under local anesthesia the right pectoral region was explored and the leads disconnected and the pulse generator changed to a CPI unit in which the sensitivity could be adjusted to .15 mm. , which permitted appropriate atrial sensing .|local anesthesia[6558,6574]||||||||||992023|992023|local anesthesia
+111	On August 20 , under local anesthesia the right pectoral region was explored and the leads disconnected and the pulse generator changed to a CPI unit in which the sensitivity could be adjusted to .15 mm. , which permitted appropriate atrial sensing .|CPI[6678,6681]||||||||||||

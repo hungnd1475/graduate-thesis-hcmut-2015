@@ -1,0 +1,5 @@
+c="acute myocardial infarction" 7:0 7:2||c="acute myocardial infarction" 17:0 17:2||c="an acute inferior myocardial infarction" 32:6 32:10||t="coref problem"
+c="coronary artery bypass grafting" 19:8 19:11||c="coronary bypass surgery" 29:16 29:18||c="this" 30:0 30:0||t="coref treatment"
+c="the patient" 29:0 29:1||c="who" 29:9 29:9||c="he" 31:2 31:2||c="he" 32:3 32:3||c="he" 33:0 33:0||c="he" 35:0 35:0||c="he" 37:6 37:6||c="he" 37:35 37:35||c="he" 38:11 38:11||c="his" 39:6 39:6||c="he" 39:17 39:17||c="his" 40:0 40:0||c="his" 42:0 42:0||c="he" 42:6 42:6||c="he" 43:13 43:13||t="coref person"
+c="substernal chest pain" 37:37 37:39||c="this" 38:0 38:0||c="the pain" 39:10 39:11||c="pain" 42:9 42:9||t="coref problem"
+c="aortic valve replacement" 19:2 19:4||c="aortic valve replacement" 31:7 31:9||t="coref treatment"

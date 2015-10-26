@@ -1,0 +1,46 @@
+28	Initially on Vanc and Cipro on Friday but then seen by ID who reccommended no abx but a bone biopsy , blood cx .|Vanc[1067,1071]||||||||||||
+28	Initially on Vanc and Cipro on Friday but then seen by ID who reccommended no abx but a bone biopsy , blood cx .|abx[1132,1135]||||||Friday[1085,1091]||||||
+28	Initially on Vanc and Cipro on Friday but then seen by ID who reccommended no abx but a bone biopsy , blood cx .|Cipro[1076,1081]|||||||||C0008809|2551|2551|ciprofloxacin
+30	He was subsequently restared on Vancomycin for Corynebacterium in blood cx from Fri ; Followup cx has been NGTD .|Vancomycin[1326,1336]|||||||||C0042313|11124|11124|vancomycin
+80	Na : 135 , K 4.5 , Cl 96 , CO2 27 , BUN 12 , Cr 0.7 , Glu 167 , Ca 8.4 , Vanco trough 13 , WBC 5.3 , Hct 32.0 , plt 330 , INR 1.0 .|Na[3484,3486]||||||||||56501|56501|na m-fluorphosphate
+80	Na : 135 , K 4.5 , Cl 96 , CO2 27 , BUN 12 , Cr 0.7 , Glu 167 , Ca 8.4 , Vanco trough 13 , WBC 5.3 , Hct 32.0 , plt 330 , INR 1.0 .|Cl[3503,3505]|||96[3506,3508]|||||||47104|47104|cl
+80	Na : 135 , K 4.5 , Cl 96 , CO2 27 , BUN 12 , Cr 0.7 , Glu 167 , Ca 8.4 , Vanco trough 13 , WBC 5.3 , Hct 32.0 , plt 330 , INR 1.0 .|Glu[3538,3541]|||167[3542,3545]|||||||4388|4388|fibrinolysin
+80	Na : 135 , K 4.5 , Cl 96 , CO2 27 , BUN 12 , Cr 0.7 , Glu 167 , Ca 8.4 , Vanco trough 13 , WBC 5.3 , Hct 32.0 , plt 330 , INR 1.0 .|Vanco[3557,3562]||||||||||||
+89	He was continued on IV vancomycin throughout his course and had therapeutic troughs .|vancomycin[4506,4516]|||||IV[4503,4505]||||C0042313|11124|11124|vancomycin
+96	The patient was started on Diflucan .|Diflucan[5140,5148]|||||||||C0699601|202813|4450|fluconazole
+100	The patient will get a total of a two week course of Diflucan .|Diflucan[5332,5340]|||||||two week[5313,5321]||C0699601|202813|4450|fluconazole
+115	- Iron Sulfate 300 mg po tid|Iron Sulfate[6337,6349]|||300mg[6350,6356]||po[6357,6359]|tid[6360,6363]||||198627|24942|ferrous gluconate
+116	- Procrit 40,000 units SC q Friday|Procrit[6366,6373]|||40 , 000[6374,6380]||SC[6387,6389]|q Friday[6390,6398]|||C1607554|573363|105694|epoetin alfa,recombinant
+117	- Lovenox 40 mg SC q24 for DVT ppx|Lovenox[6401,6408]|||40mg[6409,6414]||SC[6415,6417]|q24[6418,6421]||||854236|67108|enoxaparin
+118	- Albuterol / Atrovent nebs q4|Atrovent[6448,6456]||||||q4[6462,6464]|||C0591130|151390|7213|ipratropium
+118	- Albuterol / Atrovent nebs q4|Albuterol[6436,6445]|||||||||C0001927|435|435|salbutamol
+119	- Morphine 2-4 mg IV q3-4 prn|Morphine[6467,6475]|||2 - 4mg[6476,6482]||IV[6483,6485]|q3[6486,6488]||prn[6491,6494]|C0978742|895200|7052|morphine
+120	- Mylanta 30 cc po q6 prn|Mylanta[6497,6504]|||30[6505,6507]||po[6511,6513]|q6[6514,6516]||prn[6517,6520]|C3238869|1185084|612|aluminium hydroxide
+121	- Pepcid 20 mg po daily|Pepcid[6523,6529]|||20mg[6530,6535]||po[6536,6538]|daily[6539,6544]|||C0353895|104094|4278|famotidine
+123	- glipizide 5 mg po bid|glipizide[6571,6580]|||5mg[6581,6585]||po[6586,6588]|bid[6589,6592]|||C0977136|310490|4821|glipizide
+124	- metformin 500 mg po bid|metformin[6595,6604]|||500mg[6605,6611]||po[6612,6614]|bid[6615,6618]||||861007|6809|metformin
+125	- metoprolol 50 mg po daily|metoprolol[6621,6631]|||50mg[6632,6637]||po[6638,6640]|daily[6641,6646]||||866514|6918|metoprolol
+126	- Vancomycin 1.5 gm q 12 hours|Vancomycin[6649,6659]|||1.5gm[6660,6666]|||q 12 hours[6667,6677]|||C0980955|313574|11124|vancomycin
+128	1. Albuterol Sulfate 0.083 % Solution Sig : One ( 1 ) Inhalation Q4H ( every 4 hours ) as needed .|Albuterol Sulfate[6705,6722]|||0.083[6723,6728]||Inhalation[6756,6766]|Q4H[6767,6770]||as needed[6789,6798]|C1696556|630208|435|salbutamol
+129	2. Ipratropium Bromide 0.02 % Solution Sig : One ( 1 ) Inhalation Q6H ( every 6 hours ) as needed .|Ipratropium Bromide[6804,6823]|||0.02[6824,6828]||Inhalation[6856,6866]|Q6H[6867,6870]||as needed[6889,6898]|C3245065|1190219|7213|ipratropium
+130	3. Aluminum-Magnesium Hydroxide 225-200 mg / 5 mL Suspension Sig : 15-30 MLs PO QID ( 4 times a day ) as needed .|Magnesium Hydroxide[6913,6932]||Suspension[6951,6961]|225 - 200 mg / 5 mL[6933,6950]||PO[6978,6980]|QID[6981,6984]||as needed[7003,7012]|C0782828|243353|6581|magnesium hydroxide
+131	4. Glipizide 5 mg Tablet Sig : One ( 1 ) Tablet PO BID ( 2 times a day ).|Glipizide[7018,7027]||Tablet[7033,7039]|5mg[7028,7032]||PO[7063,7065]|BID[7066,7069]|||C0977136|310490|4821|glipizide
+132	5. Miconazole Nitrate 2 % Powder Sig : One ( 1 ) Appl Topical TID ( 3 times a day ) as needed .|Miconazole Nitrate 2 % Powder[7092,7121]|||||Topical[7143,7150]|TID[7151,7154]||as needed[7173,7182]|C1878057|998483|6932|miconazole
+133	6. Acetaminophen 325 mg Tablet Sig : Two ( 2 ) Tablet PO Q6H ( every 6 hours ) as needed for fever or pain .|Acetaminophen[7188,7201]||Tablet[7209,7215]|325mg[7202,7208]||PO[7239,7241]|Q6H[7242,7245]||as needed[7264,7273]||313782|161|paracetamol
+134	7. Metoprolol Tartrate 25 mg Tablet Sig : 1.5 Tablets PO BID ( 2 times a day ).|Metoprolol Tartrate[7297,7316]||Tablet[7323,7329]|25mg[7317,7322]|1.5 Tablets[7336,7347]|PO[7348,7350]|BID[7351,7354]|||C1359886|866924|6918|metoprolol
+135	8. Cepacol 2 mg Lozenge Sig : One ( 1 ) Lozenge Mucous membrane PRN ( as needed ).|Cepacol[7377,7384]||Lozenge[7390,7397]|2mg[7385,7389]|||||PRN[7438,7441]||1146527|1399|benzocaine
+136	9. Docusate Sodium 100 mg Capsule Sig : One ( 1 ) Capsule PO BID ( 2 times a day ).|Docusate Sodium[7460,7475]||Capsule[7483,7490]|100mg[7476,7482]||PO[7515,7517]|BID[7518,7521]||||1115005|82003|docusate
+137	10. Senna 8.6 mg Tablet Sig : One ( 1 ) Tablet PO BID ( 2 times a day ) as needed .|Senna[7545,7550]||Tablet[7558,7564]|8.6mg[7551,7557]||PO[7588,7590]|BID[7591,7594]||as needed[7613,7622]||312935|36387|sennosides
+138	11. Oxycodone 5 mg Tablet Sig : 1-2 Tablets PO every 4-6 hours as needed for pain for 14 days .|Oxycodone[7629,7638]||Tablet[7644,7650]|5mg[7639,7643]|1 - 2 Tablets[7657,7668]|PO[7669,7671]|every 4 - 6 hours[7672,7687]|14 days[7711,7718]|as needed[7688,7697]||1049621|7804|oxycodone
+139	12. Fluconazole 200 mg Tablet Sig : Two ( 2 ) Tablet PO Q24H ( every 24 hours ) for 7 days .|Fluconazole[7725,7736]||Tablet[7744,7750]|200mg[7737,7743]||PO[7774,7776]|Q24H[7777,7781]|7 days[7805,7811]||C0688877|197700|4450|fluconazole
+140	13. Oxycodone 10 mg Tablet Sustained Release 12 HR Sig : One ( 1 ) Tablet Sustained Release 12HR PO Q12H ( every 12 hours ).|Oxycodone[7818,7827]||Tablet[7834,7840]|10mg[7828,7833]||PO[7911,7913]|Q12H[7914,7918]|12 HR[7859,7864]|||1049683|7804|oxycodone
+141	14. Bisacodyl 5 mg Tablet , Delayed Release ( E.C. ) Sig : Two ( 2 ) Tablet , Delayed Release ( E.C. ) PO BID ( 2 times a day ) as needed .|Bisacodyl[7943,7952]||Tablet[7958,7964]|5mg[7953,7957]||PO[8042,8044]|BID[8045,8048]||as needed[8067,8076]|C0974988|308753|1596|bisacodyl
+142	15. Aspirin 81 mg Tablet , Chewable Sig : One ( 1 ) Tablet , Chewable PO DAILY ( Daily ).|Aspirin[8083,8090]||Tablet , Chewable[8097,8114]|81mg[8091,8096]||PO[8149,8151]|DAILY[8152,8157]|||null|318272|1191|acetylsalicylic acid
+143	16. Vancomycin in Dextrose 1 g / 200 mL Piggyback Sig : One ( 1 ) Intravenous Q 12H ( Every 12 Hours ): To finish on 2020-05-12 .|Vancomycin[8173,8183]|||||||||C0042313|11124|11124|vancomycin
+143	16. Vancomycin in Dextrose 1 g / 200 mL Piggyback Sig : One ( 1 ) Intravenous Q 12H ( Every 12 Hours ): To finish on 2020-05-12 .|Dextrose[8187,8195]|||1 g / 200 mL[8196,8208]||Intravenous[8235,8246]|Q 12 H[8247,8252]|||C0773376|237653|4850|glucose
+144	17. Pepcid 20 mg Tablet Sig : One ( 1 ) Tablet PO once a day .|Pepcid[8303,8309]||Tablet[8316,8322]|20mg[8310,8315]||PO[8346,8348]|a day[8354,8359]|||C0353895|104094|4278|famotidine
+145	18. Heparin Lock Flush ( Porcine ) 100 unit / mL Syringe Sig : Two ( 2 ) ML Intravenous DAILY ( Daily ) as needed : 10 ml NS followed by 2 ml of 100 Units / ml heparin ( 200 units heparin ) each lumen Daily and PRN .|Heparin Lock Flush[8366,8384]|||100unit / mL[8397,8410]||Intravenous[8438,8449]|DAILY[8450,8455]||as needed[8466,8475]||1361048|235473|heparin,porcine
+145	18. Heparin Lock Flush ( Porcine ) 100 unit / mL Syringe Sig : Two ( 2 ) ML Intravenous DAILY ( Daily ) as needed : 10 ml NS followed by 2 ml of 100 Units / ml heparin ( 200 units heparin ) each lumen Daily and PRN .|heparin[8522,8529]|||||||||C0019134|235473|235473|heparin,porcine
+145	18. Heparin Lock Flush ( Porcine ) 100 unit / mL Syringe Sig : Two ( 2 ) ML Intravenous DAILY ( Daily ) as needed : 10 ml NS followed by 2 ml of 100 Units / ml heparin ( 200 units heparin ) each lumen Daily and PRN .|heparin[8542,8549]||||||Daily[8563,8568]||PRN[8573,8576]|C0019134|235473|235473|heparin,porcine
+147	19. Insulin Glargine 100 unit / mL Solution Sig : Four ( 4 ) units Subcutaneous at dinner time .|Insulin Glargine[8610,8626]|||100unit / mL[8627,8640]||Subcutaneous[8673,8685]||||null|311041|274783|insulin glargine,hum.rec.anlog
+148	20. Insulin Lispro ( Human ) 100 unit / mL Cartridge Sig : One ( 1 ) Subcutaneous four times a day : As directed by sliding scale-please see attached scale .|Insulin Lispro[8707,8721]|||100unit / mL[8732,8745]||Subcutaneous[8772,8784]|four times a day[8785,8801]|||null|242120|86009|insulin,lispro,human/rdna

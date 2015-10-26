@@ -1,0 +1,13 @@
+41	After admission to L&D , the patient was administered Pitocin for elective induction of labor and progressed uneventfully and went on to deliver a viable female infant , weight 3595 g , Apgars 11-11 .|Pitocin[1116,1123]|||3595g[1239,1245]||||||C0733348|227199|7824|oxytocin
+45	This was treated with transfer back to L&D , bimanual massage , administration of various uterotonics , namely pitocin 100 U , Methergine x 1 , Hemabate x 1 , and cytotec 1000 mcgs with minimal response .|pitocin[1536,1543]|||100U[1544,1549]||||||C0733348|227199|7824|oxytocin
+45	This was treated with transfer back to L&D , bimanual massage , administration of various uterotonics , namely pitocin 100 U , Methergine x 1 , Hemabate x 1 , and cytotec 1000 mcgs with minimal response .|Methergine[1552,1562]||||||x 1[1563,1566]|||C0733811|227555|6883|methylergometrine
+45	This was treated with transfer back to L&D , bimanual massage , administration of various uterotonics , namely pitocin 100 U , Methergine x 1 , Hemabate x 1 , and cytotec 1000 mcgs with minimal response .|Hemabate[1569,1577]||||||x 1[1578,1581]|||C0121295|50808|2051|carboprost
+45	This was treated with transfer back to L&D , bimanual massage , administration of various uterotonics , namely pitocin 100 U , Methergine x 1 , Hemabate x 1 , and cytotec 1000 mcgs with minimal response .|cytotec[1588,1595]|||1000[1596,1600]|||||||151578|42331|misoprostol
+47	EBL 4000 cc ; IVF 6000 cc crystalloid ; U/O 3500 cc .|crystalloid[1735,1746]||||||||||||
+50	EBL 3500 ; IVF 4000 ; UO 45 ; RBC 9U ; Plt 12 pack ; 1u Cryo ; 6U FFP .|FFP[2038,2041]||||12 pack[2015,2022]||||||||
+53	Overall , the pt maintained good BP throughout and was on pressors only briefly .|pressors[2192,2200]||||||||||||
+59	Her pain was controlled with percocet and motrin .|percocet[2536,2544]|||||||||C0086787|42844|161|paracetamol
+59	Her pain was controlled with percocet and motrin .|motrin[2549,2555]|||||||||C0699203|202488|5640|ibuprofen
+63	Cylert .|Cylert[2732,2738]|||||||||C1563829|216304|7966|pemoline
+65	1. Ibuprofen 600 mg Tablet Sig : One ( 1 ) Tablet PO Q6H ( every 6 hours ) as needed .|Ibuprofen[2768,2777]||Tablet[2785,2791]|600mg[2778,2784]||PO[2815,2817]|Q6H[2818,2821]||as needed[2840,2849]|C0689174|197806|5640|ibuprofen
+67	2. Oxycodone - Acetaminophen 5-325 mg Tablet Sig : 1-2 Tablets PO Q4-6H ( every 4 to 6 hours ) as needed .|Oxycodone - Acetaminophen[2896,2921]||Tablet[2931,2937]|5 - 325mg[2922,2930]|1 - 2 Tablets[2944,2955]|PO[2956,2958]|Q4 - 6 H[2959,2964]||as needed[2988,2997]|C0717368|214183|214183|oxycodone-acetaminophen

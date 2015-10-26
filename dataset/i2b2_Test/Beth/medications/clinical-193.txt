@@ -1,0 +1,40 @@
+15	Trazodone stopped .|Trazodone[571,580]|||||||||C0040805|10737|10737|trazodone
+16	Patient was started on Lactulose and Rifaximine which improved his mental status .|Lactulose[614,623]|||||||||C0022957|6218|6218|lactulose
+29	Underwent treatment with Interferon 10 years ago .|Interferon[1382,1392]|||||||10 years[1393,1401]||C0021747|5886|5886|interferon
+36	The patient was taken off of Neurontin because it started to worsen his mental status .|Neurontin[1797,1806]|||||||||C0678176|196498|25480|gabapentin
+38	Nadolol 20 mg q.|Nadolol[1883,1890]|||20mg[1891,1896]||||||C0987966|316319|7226|nadolol
+40	Protonix 20 mg q. 24 hours .|Protonix[1906,1914]|||20mg[1915,1920]|||q. 24 hours[1921,1932]|||C1588004|542443|40790|pantoprazole
+42	Lactulose 30 mg q.i.d.|Lactulose[1957,1966]|||30mg[1967,1972]|||q.i.d[1973,1978]|||C0022957|6218|6218|lactulose
+43	Lasix 40 mg q.|Lasix[1980,1985]|||40mg[1986,1991]||||||C1597894|565458|4603|furosemide
+45	Insulin regular .|Insulin regular[2001,2016]||||||||||5856|5856|insulin regular
+46	Amlodipine 5 mg q.|Amlodipine[2019,2029]|||5mg[2030,2034]||||||C1124796|329528|17767|amlodipine
+49	Testosterone 4 mg q. 24 hours .|Testosterone[2068,2080]|||4mg[2081,2085]|||q. 24 hours[2086,2097]|||null|313233|10379|testosterone
+80	Patient continued on Lactulose .|Lactulose[3199,3208]|||||||||C0022957|6218|6218|lactulose
+83	Continue Lasix .|Lasix[3282,3287]|||||||||C0699992|202991|4603|furosemide
+85	On 2014-04-02 , the patient was awake , alert and oriented , taking Lactulose .|Lactulose[3405,3414]|||||||||C0022957|6218|6218|lactulose
+100	The patient received MMF 1 gram b.i.d. , Flagyl 500 mg IV x1 .|MMF[4223,4226]|||1gram[4227,4233]|||b.i.d.[4234,4240]||||||
+100	The patient received MMF 1 gram b.i.d. , Flagyl 500 mg IV x1 .|Flagyl[4243,4249]|||500mg[4250,4256]||IV[4257,4259]|x1[4260,4262]|||C1598089|565657|6922|metronidazole
+101	The patient also received Unasyn for 2 days , Fluconazole , heparin , Protonix , insulin , morphine , Bactrim .|Unasyn[4291,4297]|||||||2 days[4302,4308]||C0971675|57773|733|ampicillin
+101	The patient also received Unasyn for 2 days , Fluconazole , heparin , Protonix , insulin , morphine , Bactrim .|Fluconazole[4311,4322]|||||||||C0016277|4450|4450|fluconazole
+101	The patient also received Unasyn for 2 days , Fluconazole , heparin , Protonix , insulin , morphine , Bactrim .|heparin[4325,4332]|||||||||C0019134|235473|235473|heparin,porcine
+101	The patient also received Unasyn for 2 days , Fluconazole , heparin , Protonix , insulin , morphine , Bactrim .|Protonix[4335,4343]|||||||||C0876139|261624|40790|pantoprazole
+101	The patient also received Unasyn for 2 days , Fluconazole , heparin , Protonix , insulin , morphine , Bactrim .|morphine[4356,4364]|||||||||C0026549|7052|7052|morphine
+101	The patient also received Unasyn for 2 days , Fluconazole , heparin , Protonix , insulin , morphine , Bactrim .|Bactrim[4367,4374]||||||||||151399|10180|sulfamethoxazole
+102	The patient was on Propofol for 2 days .|Propofol[4396,4404]|||||||2 days[4409,4415]||C0033487|8782|8782|propofol
+121	Patient continued getting Acyclovir , Prednisone , MMF one gram b.i.d .|Acyclovir[5633,5642]|||||||||C0001367|281|281|acyclovir
+121	Patient continued getting Acyclovir , Prednisone , MMF one gram b.i.d .|Prednisone[5645,5655]|||||||||C0032952|8640|8640|prednisone
+121	Patient continued getting Acyclovir , Prednisone , MMF one gram b.i.d .|MMF[5658,5661]|||onegram[5662,5670]|||b.i.d[5671,5676]||||||
+127	Omalley was consulted on 2014-04-08 for better glucose control since the patient was on steroids .|steroids[5983,5991]||||||||||10072|10072|steroids
+143	Protonix 40 mg q. 24 .|Protonix[6845,6853]|||40mg[6854,6859]||||||C1588007|542447|40790|pantoprazole
+146	Fluconazole 400 mg q. 24 hours .|Fluconazole[6892,6903]|||400mg[6904,6910]|||q. 24 hours[6911,6922]|||C0794635|252432|4450|fluconazole
+147	Prednisone 20 mg q.|Prednisone[6925,6935]|||20mg[6936,6941]||||||C0989247|316582|8640|prednisone
+149	MMF 1000 mg b.i.d. .|MMF[6951,6954]|||1000mg[6955,6962]|||b.i.d.[6963,6969]||||||
+150	Lopressor 50 m b.i.d.|Lopressor[6972,6981]||||||b.i.d[6987,6992]|50 m[6982,6986]||C0700776|203344|6918|metoprolol
+151	Percocet 1 to 2 tabs q. 4 to 6 hours prn .|Percocet[6994,7002]||||1 to 2 tabs[7003,7014]||||prn[7031,7034]|C0086787|42844|161|paracetamol
+152	Colace 100 mg b.i.d.|Colace[7037,7043]|||100mg[7044,7050]|||b.i.d[7051,7056]||||1247755|82003|docusate
+153	Bactrim SS 1 tab q.|Bactrim SS[7058,7068]||||1 tab[7069,7074]||||||151399|10180|sulfamethoxazole
+155	Tacrolimus 3 mg b.i.d.|Tacrolimus[7084,7094]|||3mg[7095,7099]|||b.i.d[7100,7105]|||C0085149|42316|42316|tacrolimus
+156	Lasix 20 mg b.i.d.|Lasix[7107,7112]|||20mg[7113,7118]|||b.i.d[7119,7124]|||C1597886|565450|4603|furosemide
+157	Valcyte 900 mg q.|Valcyte[7126,7133]|||900mg[7134,7140]|||||||304959|275891|valganciclovir
+165	Patient needs to have labs every Monday and Thursday including a CBC , chem-10 , AST , ALT , alkaline phosphatase , albumin , total bilirubin and Prograf level need to be obtained .|albumin[7765,7772]||||||every Monday and Thursday[7676,7701]|||C0001924|433|433|albumin
+165	Patient needs to have labs every Monday and Thursday including a CBC , chem-10 , AST , ALT , alkaline phosphatase , albumin , total bilirubin and Prograf level need to be obtained .|Prograf[7795,7802]|||||||||C0678125|196463|42316|tacrolimus

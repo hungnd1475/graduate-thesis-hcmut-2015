@@ -1,0 +1,16 @@
+20	The patient &apos;s pain has not been relieved by Darvocet and Advil .|Darvocet[802,810]|||||||||C1514497|492810|161|paracetamol
+20	The patient &apos;s pain has not been relieved by Darvocet and Advil .|Advil[815,820]||||||||||153010|5640|ibuprofen
+28	MEDICATIONS ON ADMISSION : hydrochlorothiazide 50 mg.|hydrochlorothiazide[1296,1315]|||50mg[1316,1321]||||||C0986528|316051|5487|hydrochlorothiazide
+57	It was his impression that the patient &apos;s hypertension was controlled on hydrochlorothiazide .|hydrochlorothiazide[3258,3277]|||||||||C0020261|5487|5487|hydrochlorothiazide
+58	Given the patient &apos;s low potassium level of 2.4 on the day of admission , he suggested supplementation with potassium .|potassium[3310,3319]|||||||||C0032821|8588|8588|potassium
+58	Given the patient &apos;s low potassium level of 2.4 on the day of admission , he suggested supplementation with potassium .|potassium[3393,3402]|||||||||C0032821|8588|8588|potassium
+65	The patient did have postoperatively hypokalemia to a level of 2.7 and subsequently was corrected with oral and intravenous potassium on 4/22/93 , the patient underwent a duplex ultrasound examination , which showed no evidence of of deep venous thrombosis .|intravenous potassium[4122,4143]|||||oral[4113,4117]|||||108182|108182|intravenous potassium
+66	The patient &apos;s Coumadin was thus stopped and she was switched to Bufferin .|Coumadin[4289,4297]|||||||||C0699129|202421|11289|warfarin
+66	The patient &apos;s Coumadin was thus stopped and she was switched to Bufferin .|Bufferin[4339,4347]||||||||||215770|1191|acetylsalicylic acid
+76	MEDICATIONS ON DISCHARGE : hydrochlorothiazide 50 mg.|hydrochlorothiazide[4767,4786]|||50mg[4787,4792]||||||C0986528|316051|5487|hydrochlorothiazide
+77	PO qday , KayCiel 40 mEq. b.i.d. , Ecotrin 1 tablet qday , Ferrous sulfate 325 mg.|Ecotrin[4829,4836]|||40mEq.[4812,4819]||PO[4794,4796]|qday[4797,4801]|||C3226569|1172517|1191|acetylsalicylic acid
+77	PO qday , KayCiel 40 mEq. b.i.d. , Ecotrin 1 tablet qday , Ferrous sulfate 325 mg.|Ferrous sulfate[4853,4868]|||325mg[4869,4875]||||||C1125139|329760|24947|ferrous sulfate
+78	PO b.i.d. , Folate 1 mg.|Folate[4889,4895]|||||PO[4877,4879]|b.i.d.[4880,4886]|||C0178638|62356|62356|folate
+79	PO qday , multivitamins one tablet qday , Tylenol # 3 1 to 2 PO q3hours PRN .|multivitamins[4912,4925]|||||PO[4902,4904]|qday[4905,4909]|||C0301532|89905|89905|multiple vitamins
+79	PO qday , multivitamins one tablet qday , Tylenol # 3 1 to 2 PO q3hours PRN .|Tylenol[4944,4951]|||||PO[4963,4965]|q3hours[4966,4973]||PRN[4974,4977]|C3241053|1187311|161|paracetamol
+83	The patient should also have her potassium levels checked two times per week to insure that she is not becoming hypokalemic .|potassium[5346,5355]||||||two times per week[5371,5389]|||C0032821|8588|8588|potassium

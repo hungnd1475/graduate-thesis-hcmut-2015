@@ -1,0 +1,7 @@
+c="the patient" 16:0 16:1||c="who" 16:7 16:7||c="the patient" 17:0 17:1||c="who" 17:19 17:19||c="he" 18:0 18:0||c="the patient" 19:0 19:1||c="his" 20:0 20:0||c="patient" 21:0 21:0||c="the patient" 22:0 22:1||c="the patient" 23:0 23:1||c="he" 23:4 23:4||c="the patient" 25:7 25:8||c="he" 25:14 25:14||c="the patient" 35:0 35:1||c="he" 35:8 35:8||c="he" 37:9 37:9||c="the patient" 40:0 40:1||c="the patient" 41:0 41:1||c="the patient" 42:0 42:1||c="the patient" 44:0 44:1||c="the patient" 47:0 47:1||c="the patient" 48:0 48:1||c="the patient" 51:0 51:1||c="the patient" 52:0 52:1||c="his" 53:0 53:0||c="he" 53:5 53:5||t="coref person"
+c="painless jaundice" 16:10 16:11||c="painless jaundice" 17:23 17:24||c="painless jaundice" 44:11 44:12||t="coref problem"
+c="attending" 57:0 57:0||c="breana g. cornea , m.d." 58:0 58:4||c="breana g. cornea , m.d.*" 67:1 67:5||t="coref person"
+c="noninsulin dependent diabetes mellitus" 17:15 17:18||c="type ii diabetes mellitus" 27:1 27:4||t="coref problem"
+c="a 23 pound weight loss" 18:3 18:7||c="weight loss" 44:14 44:15||t="coref problem"
+c="fatigue" 19:5 19:5||c="fatigue" 44:18 44:18||t="coref problem"
+c="glucotrol" 33:0 33:0||c="glucotrol" 54:6 54:6||t="coref treatment"

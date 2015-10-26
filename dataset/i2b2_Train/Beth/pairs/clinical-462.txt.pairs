@@ -1,0 +1,33 @@
+c="he" 13:0 13:0||t="coref person"||c="the infant" 17:0 17:1
+c="mother" 13:17 13:17||t="coref person"||c="linda" 40:0 40:0
+c="his" 49:14 49:14||t="coref person"||c="the infant" 55:13 55:14
+c="he" 22:0 22:0||t="coref person"||c="his" 25:0 25:0
+c="his" 27:0 27:0||t="coref person"||c="his" 28:0 28:0
+c="he" 36:0 36:0||t="coref person"||c="his" 39:0 39:0
+c="he" 41:0 41:0||t="coref person"||c="his" 42:0 42:0
+c="he" 44:10 44:10||t="coref person"||c="his" 45:8 45:8
+c="he" 45:17 45:17||t="coref person"||c="his" 46:0 46:0
+c="his" 46:0 46:0||t="coref person"||c="his" 49:14 49:14
+c="phototherapy" 47:0 47:0||t="coref treatment"||c="phototherapy" 79:6 79:6
+c="murmur" 23:6 23:6||t="coref problem"||c="murmur" 36:10 36:10
+c="his" 42:0 42:0||t="coref person"||c="he" 44:10 44:10
+c="thomas" 21:3 21:3||t="coref person"||c="he" 22:0 22:0
+c="melba barnett" 12:0 12:1||t="coref person"||c="he" 13:0 13:0
+c="he" 19:0 19:0||t="coref person"||c="thomas" 21:3 21:3
+c="he" 26:0 26:0||t="coref person"||c="his" 27:0 27:0
+c="pulses" 23:9 23:9||t="coref test"||c="pulses" 36:13 36:13
+c="the infant" 55:13 55:14||t="coref person"||c="his" 55:19 55:19
+c="double phototherapy" 45:29 45:30||t="coref treatment"||c="phototherapy" 47:0 47:0
+c="his" 73:1 73:1||t="coref person"||c="terrance" 73:5 73:5
+c="hyperbilirubinemia" 14:2 14:2||t="coref problem"||c="exaggerated physiologic hyperbilirubinemia" 79:1 79:3
+c="his" 28:0 28:0||t="coref person"||c="he" 29:0 29:0
+c="his" 45:8 45:8||t="coref person"||c="he" 45:17 45:17
+c="phototherapy" 19:4 19:4||t="coref treatment"||c="double phototherapy" 45:29 45:30
+c="he" 56:7 56:7||t="coref person"||c="his" 73:1 73:1
+c="his" 39:0 39:0||t="coref person"||c="he" 41:0 41:0
+c="he" 29:0 29:0||t="coref person"||c="his" 29:3 29:3
+c="his" 25:0 25:0||t="coref person"||c="he" 26:0 26:0
+c="the infant" 17:0 17:1||t="coref person"||c="he" 19:0 19:0
+c="his weight" 25:0 25:1||t="coref test"||c="his weight" 39:0 39:1
+c="his" 55:19 55:19||t="coref person"||c="he" 56:7 56:7
+c="his" 29:3 29:3||t="coref person"||c="he" 36:0 36:0

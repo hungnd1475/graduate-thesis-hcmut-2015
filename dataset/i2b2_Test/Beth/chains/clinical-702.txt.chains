@@ -1,0 +1,2 @@
+c="the patient" 11:4 11:5||c="her" 11:7 11:7||c="she" 11:16 11:16||c="her" 13:3 13:3||c="she" 13:9 13:9||c="she" 14:0 14:0||t="coref person"
+c="an echocardiogram" 11:18 11:19||c="the procedure" 13:18 13:19||c="the procedure" 14:11 14:12||c="which" 11:20 11:20||c="it" 12:0 12:0||t="coref test"

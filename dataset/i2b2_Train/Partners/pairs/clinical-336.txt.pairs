@@ -1,0 +1,55 @@
+c="dr. state" 78:4 78:5||t="coref person"||c="aka g state , m.d." 79:0 79:4
+c="aka g state , m.d." 79:0 79:4||t="coref person"||c="aka g state , m.d." 79:12 79:16
+c="mr. state" 40:3 40:4||t="coref person"||c="his" 41:0 41:0
+c="the patient" 42:0 42:1||t="coref person"||c="his" 42:6 42:6
+c="the patient" 62:0 62:1||t="coref person"||c="his" 62:22 62:22
+c="his" 62:22 62:22||t="coref person"||c="his" 62:27 62:27
+c="the patient" 63:5 63:6||t="coref person"||c="his" 63:8 63:8
+c="mr. state" 69:8 69:9||t="coref person"||c="his" 69:18 69:18
+c="he" 70:2 70:2||t="coref person"||c="his" 71:0 71:0
+c="his" 71:0 71:0||t="coref person"||c="his" 72:8 72:8
+c="high flow oxygen" 35:23 35:25||t="coref treatment"||c="high flow oxygen" 47:10 47:12
+c="severe dyspnea" 34:30 34:31||t="coref problem"||c="dyspneic" 47:3 47:3
+c="sudden onset dyspnea" 34:18 34:20||t="coref problem"||c="severe dyspnea" 34:30 34:31
+c="lower extremities noninvasive doppler studies" 31:3 31:7||t="coref test"||c="subsequent lower extremities noninvasive studies" 65:0 65:4
+c="chest x-ray" 36:0 36:1||t="coref test"||c="chest x-ray" 59:0 59:1
+c="vq scan" 31:0 31:1||t="coref test"||c="a vq scan" 64:3 64:5
+c="pulmonary edema" 21:0 21:1||t="coref problem"||c="pulmonary edema" 33:32 33:33
+c="cardiac catheterization" 29:0 29:1||t="coref test"||c="a cardiac catheterization" 63:14 63:16
+c="dr. state" 74:6 74:7||t="coref person"||c="dr. state" 78:4 78:5
+c="dyspneic" 47:3 47:3||t="coref problem"||c="multi-factorial dyspnea" 69:13 69:14
+c="bronchiectasis" 23:15 23:15||t="coref problem"||c="bronchiectasis" 40:28 40:28
+c="his" 62:27 62:27||t="coref person"||c="the patient" 63:5 63:6
+c="inferior myocardial infarction" 33:19 33:21||t="coref problem"||c="an inferior myocardial infarction" 39:3 39:6
+c="his" 69:18 69:18||t="coref person"||c="he" 70:2 70:2
+c="mr. state" 33:0 33:1||t="coref person"||c="mr. state" 34:15 34:16
+c="his" 73:22 73:22||t="coref person"||c="the patient" 74:0 74:1
+c="his" 45:9 45:9||t="coref person"||c="mr. state" 47:0 47:1
+c="the patient" 74:0 74:1||t="coref person"||c="the patient" 78:0 78:1
+c="a vq scan" 64:3 64:5||t="coref test"||c="which" 64:8 64:8
+c="his" 42:6 42:6||t="coref person"||c="he" 43:0 43:0
+c="his" 63:8 63:8||t="coref person"||c="the patient" 66:5 66:6
+c="interstitial or alveolar edema" 36:6 36:9||t="coref problem"||c="clear interstitial or alveolar pulmonary edema" 59:7 59:12
+c="state , elro" 13:0 13:2||t="coref person"||c="mr. state" 33:0 33:1
+c="he" 43:0 43:0||t="coref person"||c="the patient" 45:0 45:1
+c="restrictive and obstructive lung disease" 33:10 33:14||t="coref problem"||c="restrictive and obstructive lung disease" 39:8 39:12
+c="aka g state , m.d." 79:12 79:16||t="coref person"||c="aka g state , m.d." 87:0 87:4
+c="the patient" 45:0 45:1||t="coref person"||c="who" 45:7 45:7
+c="pulmonary edema" 33:32 33:33||t="coref problem"||c="interstitial or alveolar edema" 36:6 36:9
+c="a cardiac catheterization" 63:14 63:16||t="coref test"||c="catheterization" 64:2 64:2
+c="inferior myocardial infarction" 23:11 23:13||t="coref problem"||c="inferior myocardial infarction" 33:19 33:21
+c="his" 41:0 41:0||t="coref person"||c="the patient" 42:0 42:1
+c="the patient" 66:5 66:6||t="coref person"||c="mr. state" 69:8 69:9
+c="who" 45:7 45:7||t="coref person"||c="his" 45:9 45:9
+c="a recent work up" 41:24 41:27||t="coref test"||c="that" 41:34 41:34
+c="the patient" 37:0 37:1||t="coref person"||c="mr. state" 40:3 40:4
+c="mediastinal mass" 23:8 23:9||t="coref problem"||c="anterior mediastinal masses" 33:24 33:26
+c="mild-to-moderate aortic stenosis" 39:70 39:72||t="coref problem"||c="aortic stenosis" 51:23 51:24
+c="mr. state" 73:8 73:9||t="coref person"||c="his" 73:22 73:22
+c="mr. state" 47:0 47:1||t="coref person"||c="the patient" 62:0 62:1
+c="pe" 64:14 64:14||t="coref problem"||c="acute pulmonary embolism" 65:15 65:17
+c="mr. state" 35:6 35:7||t="coref person"||c="he" 35:16 35:16
+c="anterior mediastinal masses" 33:24 33:26||t="coref problem"||c="an anterior mediastinal mass" 40:6 40:9
+c="he" 35:16 35:16||t="coref person"||c="the patient" 37:0 37:1
+c="mr. state" 34:15 34:16||t="coref person"||c="mr. state" 35:6 35:7
+c="his" 72:8 72:8||t="coref person"||c="mr. state" 73:8 73:9

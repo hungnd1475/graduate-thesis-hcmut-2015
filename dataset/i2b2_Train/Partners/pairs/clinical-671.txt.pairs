@@ -1,0 +1,5 @@
+c="staff obstetrician" 52:0 52:1||t="coref person"||c="boormkaysscaje , pa a. , m.d." 53:0 53:5
+c="chaffbitz , li" 13:0 13:2||t="coref person"||c="patient" 18:1 18:1
+c="boormkaysscaje , pa a. , m.d." 53:0 53:5||t="coref person"||c="boormkaysscaje , pa a. , m.d." 70:0 70:5
+c="grendziskleeb , delmru ceni , m.d." 25:0 25:5||t="coref person"||c="dr grendziskleeb" 37:0 37:1
+c="attending" 24:0 24:0||t="coref person"||c="grendziskleeb , delmru ceni , m.d." 25:0 25:5

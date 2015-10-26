@@ -1,0 +1,14 @@
+c="patient" 12:0 12:0||t="coref person"||c="58 year-old female" 19:0 19:2
+c="ischemia" 44:3 44:3||t="coref problem"||c="ischemic small bowel" 48:12 48:14
+c="she" 51:0 51:0||t="coref person"||c="she" 52:0 52:0
+c="small bowel obstruction" 48:8 48:10||t="coref problem"||c="small bowel obstruction" 61:0 61:2
+c="an abnormal loop" 40:5 40:7||t="coref problem"||c="this small bowel obstruction" 42:0 42:3
+c="the patient" 48:2 48:3||t="coref person"||c="she" 50:0 50:0
+c="ischemic small bowel" 48:12 48:14||t="coref problem"||c="ischemic small bowel" 62:0 62:2
+c="abdomenal pain" 15:0 15:1||t="coref problem"||c="pain" 20:0 20:0
+c="the patient" 47:9 47:10||t="coref person"||c="the patient" 48:2 48:3
+c="58 year-old female" 19:0 19:2||t="coref person"||c="the patient" 47:9 47:10
+c="she" 50:0 50:0||t="coref person"||c="she" 51:0 51:0
+c="this small bowel obstruction" 42:0 42:3||t="coref problem"||c="this" 43:0 43:0
+c="this" 43:0 43:0||t="coref problem"||c="small bowel obstruction" 48:8 48:10
+c="she" 52:0 52:0||t="coref person"||c="she" 53:0 53:0

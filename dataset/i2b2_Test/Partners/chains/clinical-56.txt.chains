@@ -1,0 +1,3 @@
+c="you" 20:4 20:4||c="your" 20:6 20:6||c="your" 23:0 23:0||c="you" 24:1 24:1||c="pcp" 25:0 25:0||c="ajesc , darlma margea l" 26:0 26:4||c="provider" 27:0 27:0||t="coref person"
+c="rhaltdealbbreutz , sta" 12:0 12:2||c="your patient" 20:6 20:7||c="rhaltdealbbreutz , sta" 20:9 20:11||c="the patient" 21:0 21:1||c="the patient" 22:5 22:6||c="your patient" 23:0 23:1||t="coref person"
+c="pneumonia" 21:8 21:8||c="pneumonia" 23:17 23:17||t="coref problem"

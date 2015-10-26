@@ -1,0 +1,35 @@
+27	1. Insulin by sliding-scale , NPH insulin 16 units in the morning and 6 units in the evening .|NPH insulin[1271,1282]|||16[1283,1285]|||in the morning[1292,1306]||||5865|5865|insulin isophane nph
+28	2. Lipitor 20 mg p.o. q.d.|Lipitor[1339,1346]|||20mg[1347,1352]||p.o.[1353,1357]|q.d.[1358,1362]|||C0593904|617318|83367|atorvastatin
+29	3. Zoloft 50 mg p.o. t.i.d.|Zoloft[1366,1372]|||50mg[1373,1378]||p.o.[1379,1383]|t.i.d.[1384,1390]|||C0709644|208161|36437|sertraline
+30	4. Reglan 10 mg p.o. t.i.d.|Reglan[1394,1400]|||10mg[1401,1406]||p.o.[1407,1411]|t.i.d.[1412,1418]|||C0708573|207266|6915|metoclopramide
+31	5. Lopressor 50 mg p.o. b.i.d.|Lopressor[1422,1431]|||50mg[1432,1437]||p.o.[1438,1442]|b.i.d.[1443,1449]|||C0708591|866516|6918|metoprolol
+32	6. Aspirin 81 mg p.o. q.d.|Aspirin[1453,1460]|||81mg[1461,1466]||p.o.[1467,1471]|q.d.[1472,1476]||||252857|1191|acetylsalicylic acid
+33	7. Multivitamin 1 p.o. q.d.|Multivitamin[1480,1492]||||1[1493,1494]|p.o.[1495,1499]|q.d.[1500,1504]||||260160|89905|multiple vitamins
+34	8. Remeron p.o. q.d.|Remeron[1508,1515]|||||p.o.[1516,1520]|q.d .[1521,1525]|||C3234573|1180723|15996|mirtazapine
+55	Intraoperatively , for immunosuppression she received thymoglobulin and Solu-Medrol .|thymoglobulin[2764,2777]|||||||||C0730920|225741|107044|rabbit anti-human t-lymphocyte globulin
+55	Intraoperatively , for immunosuppression she received thymoglobulin and Solu-Medrol .|Solu - Medrol[2782,2793]||||||||||203856|6902|methylprednisolone
+56	She was started on Prograf and CellCept in the postoperative period .|Prograf[2815,2822]|||||||||C0678125|196463|42316|tacrolimus
+56	She was started on Prograf and CellCept in the postoperative period .|CellCept[2827,2835]||||||||||152633|68149|mycophenolate mofetil
+57	She was also maintained on Bactrim postoperatively and did not require ganciclovir , as she and her sister were cytomegalovirus negative .|Bactrim[2893,2900]||||||||||151399|10180|sulfamethoxazole
+57	She was also maintained on Bactrim postoperatively and did not require ganciclovir , as she and her sister were cytomegalovirus negative .|ganciclovir[2937,2948]|||||||||C0017066|4678|4678|ganciclovir
+60	She did receive pamidronate on postoperative day one and received a total of four doses thymoglobulin .|pamidronate[3227,3238]|||||||||C0043603|11473|11473|pamidronate
+60	She did receive pamidronate on postoperative day one and received a total of four doses thymoglobulin .|thymoglobulin[3299,3312]|||||||||C0730920|225741|107044|rabbit anti-human t-lymphocyte globulin
+61	Her steroid doses were slowly tapered over her hospital course , and her Prograf level was adjusted to maintain therapeutic values between 10 and 15 .|steroid[3319,3326]||||||||||10072|10072|steroid
+61	Her steroid doses were slowly tapered over her hospital course , and her Prograf level was adjusted to maintain therapeutic values between 10 and 15 .|Prograf[3388,3395]|||||||||C0678125|196463|42316|tacrolimus
+68	With blood pressure control via a nitroglycerin drip and fluid restriction , the patient quickly improved and a had a relatively short stay in the Intensive Care Unit .|nitroglycerin[4122,4135]|||||drip[4136,4140]||||C0017887|4917|4917|glyceryl trinitrate
+70	Her beta blocker was progressively increased , and her nitroglycerin drip was weaned down .|beta blocker[4402,4414]||||||||||401870|401870|beta blocker
+70	Her beta blocker was progressively increased , and her nitroglycerin drip was weaned down .|nitroglycerin[4453,4466]|||||drip[4467,4471]||||C0017887|4917|4917|glyceryl trinitrate
+78	1. Prograf 4 mg p.o. b.i.d. ( this may change depending on her most recent Prograf level which will be drawn on the morning of 11-28 ) .|Prograf[5130,5137]||||||b.i.d.[5148,5154]|||C0678125|196463|42316|tacrolimus
+78	1. Prograf 4 mg p.o. b.i.d. ( this may change depending on her most recent Prograf level which will be drawn on the morning of 11-28 ) .|Prograf[5202,5209]|||4mg[5138,5142]||p.o.[5143,5147]||||C3234515|1180663|42316|tacrolimus
+79	2. Prednisone 20 mg p.o. q.d.|Prednisone[5267,5277]|||20mg[5278,5283]||p.o.[5284,5288]|q.d.[5289,5293]|||C1966072|746836|8640|prednisone
+80	3. CellCept 1 mg p.o. b.i.d.|CellCept[5297,5305]|||1mg[5306,5310]||p.o.[5311,5315]|b.i.d.[5316,5322]|||C3220448|1166215|68149|mycophenolate mofetil
+81	4. Bactrim 1 single-strength tablet p.o. q.d.|Bactrim[5326,5333]||tablet[5352,5358]|||p.o.[5359,5363]|q.d.[5364,5368]|||C3222127|1167956|10180|sulfamethoxazole
+82	5. Zantac 150 mg p.o. b.i.d.|Zantac 150[5372,5382]|||||p.o.[5386,5390]|b.i.d.[5391,5397]|||C0724451|220992|220992|zantac 150
+83	6. NPH insulin 16 units q.a.m. and 6 units q.p.m.|NPH insulin[5401,5412]|||16[5413,5415]|||q.a.m.[5422,5428]||||5865|5865|insulin isophane nph
+84	7. Zoloft 175 mg p.o. q.d.|Zoloft[5451,5457]|||175mg[5458,5464]||p.o.[5465,5469]|q.d.[5470,5474]|||C3241899|1188168|36437|sertraline
+85	8. Colace 100 mg p.o. b.i.d.|Colace[5478,5484]|||100mg[5485,5491]||p.o.[5492,5496]|b.i.d.[5497,5503]|||C0711644|1247756|82003|docusate
+86	9. Reglan 10 mg p.o. t.i.d.|Reglan[5507,5513]|||10mg[5514,5519]||p.o.[5520,5524]|t.i.d.[5525,5531]|||C0708573|207266|6915|metoclopramide
+87	10. Percocet one to two tablets p.o. q.4-6h.|Percocet[5536,5544]||||one to two tablets[5545,5563]|p.o.[5564,5568]|q.4 - 6h[5569,5575]||||1049650|161|paracetamol
+89	11. Lopressor 125 mg p.o. b.i.d.|Lopressor[5588,5597]|||125mg[5598,5604]||p.o.[5605,5609]|b.i.d.[5610,5616]|||C3234139|1180279|6918|metoprolol
+90	12. Aspirin 81 mg p.o. q.d.|Aspirin[5621,5628]|||81mg[5629,5634]||p.o.[5635,5639]|q.d.[5640,5644]||||252857|1191|acetylsalicylic acid
+91	13. Cardizem-CD 180 mg p.o. q.d.|Cardizem[5649,5657]|||180mg[5661,5667]||p.o.[5668,5672]|q.d .[5673,5677]|||C0976396|830847|3443|diltiazem

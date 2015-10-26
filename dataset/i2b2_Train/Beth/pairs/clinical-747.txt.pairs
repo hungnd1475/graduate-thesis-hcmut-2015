@@ -1,0 +1,99 @@
+c="who" 20:10 20:10||t="coref person"||c="pt" 21:0 21:0
+c="an ecg" 24:2 24:3||t="coref test"||c="which" 24:9 24:9
+c="she" 25:0 25:0||t="coref person"||c="her" 26:9 26:9
+c="she" 30:0 30:0||t="coref person"||c="patient" 31:5 31:5
+c="patient" 31:5 31:5||t="coref person"||c="the patient" 100:0 100:1
+c="the patient" 101:0 101:1||t="coref person"||c="her" 102:0 102:0
+c="her" 102:0 102:0||t="coref person"||c="her" 103:0 103:0
+c="she" 104:4 104:4||t="coref person"||c="her" 105:0 105:0
+c="her" 105:0 105:0||t="coref person"||c="her" 106:0 106:0
+c="her" 106:0 106:0||t="coref person"||c="her" 107:0 107:0
+c="she" 109:6 109:6||t="coref person"||c="her" 109:16 109:16
+c="metoprolol" 110:7 110:7||t="coref treatment"||c="this" 110:8 110:8
+c="she" 112:0 112:0||t="coref person"||c="her" 112:3 112:3
+c="her" 112:3 112:3||t="coref person"||c="her" 112:13 112:13
+c="her" 112:13 112:13||t="coref person"||c="her" 117:0 117:0
+c="she" 119:0 119:0||t="coref person"||c="her" 120:0 120:0
+c="bactrim" 126:5 126:5||t="coref treatment"||c="this" 126:8 126:8
+c="asa" 30:2 30:2||t="coref treatment"||c="asa" 101:4 101:4
+c="ekg" 69:0 69:0||t="coref test"||c="ekg" 94:19 94:19
+c="ctropnt" 66:6 66:6||t="coref test"||c="troponin" 94:26 94:26
+c="echo" 76:0 76:0||t="coref test"||c="an echo" 108:0 108:1
+c="sscp" 22:8 22:8||t="coref problem"||c="substernal chest pain" 94:8 94:10
+c="metoprolol" 30:11 30:11||t="coref treatment"||c="metoprolol" 101:19 101:19
+c="atrial fibrillation" 104:6 104:7||t="coref problem"||c="her afib" 109:16 109:17
+c="lasix" 120:15 120:15||t="coref treatment"||c="lasix" 121:5 121:5
+c="plavix" 101:6 101:6||t="coref treatment"||c="plavix" 110:18 110:18
+c="this" 110:8 110:8||t="coref treatment"||c="metoprolol" 132:15 132:15
+c="nstemi" 95:1 95:1||t="coref problem"||c="acute mi" 116:28 116:29
+c="blindness" 36:0 36:0||t="coref problem"||c="blind" 47:6 47:6
+c="lasix" 121:5 121:5||t="coref treatment"||c="lasix" 145:1 145:1
+c="bibasilar crackles" 27:9 27:10||t="coref problem"||c="crackles at base and mid-lungs bilaterally" 55:0 55:5
+c="htn" 94:6 94:6||t="coref problem"||c="htn" 152:0 152:0
+c="chest pain" 154:2 154:3||t="coref problem"||c="chest pain" 158:5 158:6
+c="troponin" 29:0 29:0||t="coref test"||c="ctropnt" 66:6 66:6
+c="acute mi" 116:28 116:29||t="coref problem"||c="nstemi" 150:0 150:0
+c="sinus brady" 28:2 28:3||t="coref problem"||c="sinus brady" 70:0 70:1
+c="atorvastatin" 101:17 101:17||t="coref treatment"||c="lipitor" 111:5 111:5
+c="she" 111:0 111:0||t="coref person"||c="she" 112:0 112:0
+c="crackles at base and mid-lungs bilaterally" 55:0 55:5||t="coref problem"||c="bilateral crackles at bases and midlungs" 116:0 116:5
+c="she" 126:12 126:12||t="coref person"||c="she" 127:0 127:0
+c="asa" 101:4 101:4||t="coref treatment"||c="aspirin" 110:16 110:16
+c="she" 22:5 22:5||t="coref person"||c="she" 25:0 25:0
+c="pt" 21:0 21:0||t="coref person"||c="her" 21:4 21:4
+c="substernal chest pain" 20:18 20:20||t="coref problem"||c="sscp" 22:8 22:8
+c="her" 117:0 117:0||t="coref person"||c="she" 118:0 118:0
+c="she" 126:0 126:0||t="coref person"||c="she" 126:12 126:12
+c="her" 107:0 107:0||t="coref person"||c="she" 108:4 108:4
+c="she" 121:0 121:0||t="coref person"||c="she" 123:2 123:2
+c="shortness of breath" 121:10 121:12||t="coref problem"||c="shortness of breath" 145:19 145:21
+c="metoprolol" 101:19 101:19||t="coref treatment"||c="her metoprolol dose" 105:0 105:2
+c="attending" 13:0 13:0||t="coref person"||c="jacob u. rolland , m.d." 14:0 14:4
+c="shortness of breath" 145:19 145:21||t="coref problem"||c="shortness of breath" 146:11 146:13
+c="her chest pain" 102:0 102:2||t="coref problem"||c="chest pain" 154:2 154:3
+c="she" 109:20 109:20||t="coref person"||c="she" 111:0 111:0
+c="several new medications" 157:5 157:7||t="coref treatment"||c="which" 157:8 157:8
+c="patient" 154:0 154:0||t="coref person"||c="she" 157:0 157:0
+c="she" 103:11 103:11||t="coref person"||c="she" 104:4 104:4
+c="her afib" 109:16 109:17||t="coref problem"||c="atrial fibrillation" 151:0 151:1
+c="she" 157:0 157:0||t="coref person"||c="her" 157:13 157:13
+c="we" 109:0 109:0||t="coref person"||c="we" 110:1 110:1
+c="patient 's family" 31:5 31:7||t="coref person"||c="family" 41:0 41:0
+c="the patient" 100:0 100:1||t="coref person"||c="the patient" 101:0 101:1
+c="her" 103:0 103:0||t="coref person"||c="she" 103:11 103:11
+c="her new meds" 112:13 112:15||t="coref treatment"||c="several new medications" 157:5 157:7
+c="her" 157:13 157:13||t="coref person"||c="the patient" 158:1 158:2
+c="htn" 34:0 34:0||t="coref problem"||c="htn" 94:6 94:6
+c="lasix" 145:1 145:1||t="coref treatment"||c="lasix" 146:3 146:3
+c="her" 21:4 21:4||t="coref person"||c="here" 21:11 21:11
+c="her" 22:3 22:3||t="coref person"||c="she" 22:5 22:5
+c="regional wall motion abnormality" 77:8 77:11||t="coref problem"||c="wall motion abnormalities" 108:10 108:12
+c="morphine" 30:9 30:9||t="coref treatment"||c="morphine" 102:6 102:6
+c="the still mild pulmonary edema" 72:5 72:9||t="coref problem"||c="pulmonary edema" 116:22 116:23
+c="a culture" 127:2 127:3||t="coref test"||c="which" 127:5 127:5
+c="ekg" 28:0 28:0||t="coref test"||c="ekg" 69:0 69:0
+c="nitro sl" 30:4 30:5||t="coref treatment"||c="nitro drip" 101:14 101:15
+c="lisinopril" 101:22 101:22||t="coref treatment"||c="lisinopril" 111:7 111:7
+c="chest pain" 16:0 16:1||t="coref problem"||c="substernal chest pain" 20:18 20:20
+c="her" 26:9 26:9||t="coref person"||c="she" 30:0 30:0
+c="pulmonary edema" 116:22 116:23||t="coref problem"||c="mild pulm edema" 120:6 120:8
+c="her metoprolol dose" 105:0 105:2||t="coref treatment"||c="metoprolol" 110:7 110:7
+c="family" 41:0 41:0||t="coref person"||c="the patient 's family" 100:0 100:3
+c="substernal chest pain" 94:8 94:10||t="coref problem"||c="her chest pain" 102:0 102:2
+c="st depressions in v1-v4" 70:17 70:20||t="coref problem"||c="st depressions in v1-v4" 94:21 94:24
+c="trace ankle edema bilaterally" 59:0 59:3||t="coref problem"||c="trace bilateral ankle edema" 116:10 116:13
+c="her" 109:3 109:3||t="coref person"||c="she" 109:6 109:6
+c="shortness of breath" 146:11 146:13||t="coref problem"||c="shortness of breath" 158:8 158:10
+c="she" 123:2 123:2||t="coref person"||c="she" 126:0 126:0
+c="heparin gtt" 30:14 30:15||t="coref treatment"||c="heparin drip" 101:8 101:9
+c="weight gain" 121:7 121:8||t="coref problem"||c="weight gain" 146:8 146:9
+c="she" 108:4 108:4||t="coref person"||c="her" 109:3 109:3
+c="she" 127:0 127:0||t="coref person"||c="patient" 154:0 154:0
+c="htn" 20:9 20:9||t="coref problem"||c="htn" 34:0 34:0
+c="here" 21:11 21:11||t="coref person"||c="her" 22:3 22:3
+c="new st depressions in v1-v4" 24:11 24:15||t="coref problem"||c="st depressions in v1-v4" 70:17 70:20
+c="the patient" 20:0 20:1||t="coref person"||c="who" 20:10 20:10
+c="she" 118:0 118:0||t="coref person"||c="she" 119:0 119:0
+c="her" 120:0 120:0||t="coref person"||c="she" 121:0 121:0
+c="her" 109:16 109:16||t="coref person"||c="she" 109:20 109:20
+c="metoprolol" 132:15 132:15||t="coref treatment"||c="metoprolol tartrate" 142:1 142:2

@@ -1,0 +1,83 @@
+c="li rijarred class , m.d." 95:2 95:6||t="coref person"||c="li rijarred class , m.d." 95:10 95:14
+c="this" 29:0 29:0||t="coref person"||c="who" 29:6 29:6
+c="who" 29:6 29:6||t="coref person"||c="his" 29:20 29:20
+c="he" 31:0 31:0||t="coref person"||c="he" 32:0 32:0
+c="he" 32:0 32:0||t="coref person"||c="he" 32:7 32:7
+c="he" 34:0 34:0||t="coref person"||c="he" 35:0 35:0
+c="he" 48:0 48:0||t="coref person"||c="his" 49:0 49:0
+c="his" 49:0 49:0||t="coref person"||c="his" 49:6 49:6
+c="his" 49:6 49:6||t="coref person"||c="this" 51:0 51:0
+c="this" 51:0 51:0||t="coref person"||c="who" 51:12 51:12
+c="he" 56:0 56:0||t="coref person"||c="his" 56:4 56:4
+c="he" 57:0 57:0||t="coref person"||c="his" 58:0 58:0
+c="he" 63:0 63:0||t="coref person"||c="his" 64:0 64:0
+c="he" 66:5 66:5||t="coref person"||c="his" 67:0 67:0
+c="he" 68:0 68:0||t="coref person"||c="his" 69:0 69:0
+c="lower extremity noninvasive ultrasounds" 70:5 70:8||t="coref test"||c="which" 70:12 70:12
+c="the patient" 87:0 87:1||t="coref person"||c="his" 88:0 88:0
+c="his" 88:0 88:0||t="coref person"||c="his" 89:1 89:1
+c="he" 91:0 91:0||t="coref person"||c="he" 92:0 92:0
+c="right hip osteoarthritis" 21:0 21:2||t="coref problem"||c="advanced osteoarthritis of his right hip" 49:3 49:8
+c="constipation" 79:10 79:10||t="coref problem"||c="constipation" 85:14 85:14
+c="the procedure" 54:3 54:4||t="coref treatment"||c="surgery" 87:14 87:14
+c="right hip pain" 27:0 27:2||t="coref problem"||c="his right hip pain" 29:20 29:23
+c="an uncomplicated right total hip replacement" 53:16 53:21||t="coref treatment"||c="the procedure" 54:3 54:4
+c="posterior hip dislocation precautions" 61:4 61:7||t="coref treatment"||c="posterior hip dislocation precautions" 90:12 90:15
+c="surgery" 88:13 88:13||t="coref treatment"||c="surgery" 90:23 90:23
+c="surgery" 87:14 87:14||t="coref treatment"||c="surgery" 88:13 88:13
+c="coumadin" 91:4 91:4||t="coref treatment"||c="anticoagulation" 91:6 91:6
+c="asthma" 23:0 23:0||t="coref problem"||c="asthma" 37:0 37:0
+c="ancef" 59:9 59:9||t="coref treatment"||c="routine antimicrobial coverage" 59:11 59:13
+c="gastroesophageal reflux disease" 23:2 23:4||t="coref problem"||c="gastroesophageal reflux disease" 37:35 37:37
+c="non-small-cell lung cancer" 37:7 37:9||t="coref problem"||c="the non-small-cell lung cancer" 37:30 37:33
+c="coumadin" 59:4 59:4||t="coref treatment"||c="dvt prophylaxis" 59:6 59:7
+c="singulair" 39:7 39:7||t="coref treatment"||c="singulair" 82:0 82:0
+c="advanced osteoarthritis of his right hip" 49:3 49:8||t="coref problem"||c="severe osteoarthritis of the right hip" 51:6 51:11
+c="dvt prophylaxis" 59:6 59:7||t="coref treatment"||c="coumadin" 80:0 80:0
+c="a right total hip replacement" 51:32 51:36||t="coref treatment"||c="an uncomplicated right total hip replacement" 53:16 53:21
+c="he" 46:0 46:0||t="coref person"||c="his" 46:5 46:5
+c="his" 64:0 64:0||t="coref person"||c="he" 65:0 65:0
+c="his" 56:4 56:4||t="coref person"||c="he" 57:0 57:0
+c="his right hip pain" 29:20 29:23||t="coref problem"||c="his pain" 30:3 30:4
+c="his" 71:3 71:3||t="coref person"||c="the patient" 87:0 87:1
+c="his" 46:5 46:5||t="coref person"||c="he" 47:0 47:0
+c="constipation" 23:7 23:7||t="coref problem"||c="constipation" 37:42 37:42
+c="he" 30:0 30:0||t="coref person"||c="his" 30:3 30:3
+c="he" 47:0 47:0||t="coref person"||c="he" 48:0 48:0
+c="his" 67:0 67:0||t="coref person"||c="he" 68:0 68:0
+c="constipation" 37:42 37:42||t="coref problem"||c="constipation" 79:10 79:10
+c="dr. class" 87:6 87:7||t="coref person"||c="dr. class" 92:4 92:5
+c="his" 44:7 44:7||t="coref person"||c="his" 45:0 45:0
+c="his incision" 67:0 67:1||t="coref problem"||c="his wound" 89:1 89:2
+c="his" 37:12 37:12||t="coref person"||c="he" 43:0 43:0
+c="he" 61:0 61:0||t="coref person"||c="he" 63:0 63:0
+c="a walker" 34:2 34:3||t="coref treatment"||c="a walker" 90:7 90:8
+c="his" 69:0 69:0||t="coref person"||c="his" 71:3 71:3
+c="he" 35:0 35:0||t="coref person"||c="his" 37:12 37:12
+c="his" 89:1 89:1||t="coref person"||c="he" 89:6 89:6
+c="he" 90:0 90:0||t="coref person"||c="he" 91:0 91:0
+c="the patient" 54:0 54:1||t="coref person"||c="he" 55:4 55:4
+c="he" 32:7 32:7||t="coref person"||c="he" 33:0 33:0
+c="he" 55:4 55:4||t="coref person"||c="he" 56:0 56:0
+c="he" 89:6 89:6||t="coref person"||c="he" 90:0 90:0
+c="he" 33:0 33:0||t="coref person"||c="his" 33:4 33:4
+c="right total hip arthroplasty" 25:0 25:3||t="coref treatment"||c="a right total hip replacement" 51:32 51:36
+c="he" 60:0 60:0||t="coref person"||c="his" 60:6 60:6
+c="inr level" 80:11 80:12||t="coref test"||c="inr" 91:21 91:21
+c="he" 44:0 44:0||t="coref person"||c="his" 44:7 44:7
+c="his" 30:3 30:3||t="coref person"||c="he" 31:0 31:0
+c="getzzochtland , synnani f" 13:0 13:3||t="coref person"||c="this" 29:0 29:0
+c="he" 43:0 43:0||t="coref person"||c="he" 44:0 44:0
+c="who" 51:12 51:12||t="coref person"||c="the patient" 53:0 53:1
+c="surgery" 90:23 90:23||t="coref treatment"||c="surgery" 91:14 91:14
+c="he" 59:0 59:0||t="coref person"||c="he" 60:0 60:0
+c="his" 58:0 58:0||t="coref person"||c="he" 59:0 59:0
+c="his" 33:4 33:4||t="coref person"||c="he" 34:0 34:0
+c="his" 45:0 45:0||t="coref person"||c="he" 46:0 46:0
+c="his" 60:6 60:6||t="coref person"||c="he" 61:0 61:0
+c="his" 29:20 29:20||t="coref person"||c="he" 30:0 30:0
+c="he" 65:0 65:0||t="coref person"||c="he" 66:5 66:5
+c="dr. class" 92:4 92:5||t="coref person"||c="li rijarred class , m.d." 95:2 95:6
+c="coumadin" 80:0 80:0||t="coref treatment"||c="coumadin" 91:4 91:4
+c="li rijarred class , m.d." 95:10 95:14||t="coref person"||c="li rijarred class , m.d." 103:0 103:4
+c="the patient" 53:0 53:1||t="coref person"||c="the patient" 54:0 54:1

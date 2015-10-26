@@ -1,0 +1,48 @@
+c="primary cardiologist" 143:8 143:9||t="coref person"||c="your cardiologist" 181:7 181:8
+c="your cardiologist" 181:7 181:8||t="coref person"||c="your cardiologist" 184:3 184:4
+c="he" 134:9 134:9||t="coref person"||c="pt" 144:1 144:1
+c="he" 19:0 19:0||t="coref person"||c="he" 19:2 19:2
+c="he" 19:2 19:2||t="coref person"||c="he" 20:0 20:0
+c="he" 21:0 21:0||t="coref person"||c="he" 22:0 22:0
+c="he" 23:0 23:0||t="coref person"||c="he" 25:5 25:5
+c="hazy lesions" 128:2 128:3||t="coref problem"||c="this" 128:7 128:7
+c="pt" 144:1 144:1||t="coref person"||c="your" 161:3 161:3
+c="you" 180:0 180:0||t="coref person"||c="your" 181:7 181:7
+c="your" 181:7 181:7||t="coref person"||c="your" 184:3 184:3
+c="your" 184:3 184:3||t="coref person"||c="your" 185:3 185:3
+c="elevations in the anterior leads ( v2-5 )" 22:25 22:32||t="coref problem"||c="stemi" 127:11 127:11
+c="1 cypher stent" 26:0 26:2||t="coref treatment"||c="1 cypher stent" 104:0 104:2
+c="dm" 18:15 18:15||t="coref problem"||c="dm" 32:1 32:1
+c="stemi" 127:11 127:11||t="coref problem"||c="st elevation myocardial infarction" 174:0 174:3
+c="cad" 18:5 18:5||t="coref problem"||c="cad" 30:1 30:1
+c="stent to lad" 18:7 18:9||t="coref treatment"||c="prior stent" 25:15 25:16
+c="somnolent" 44:2 44:2||t="coref problem"||c="somnolent status" 150:10 150:11
+c="beta-blockers" 181:5 181:5||t="coref treatment"||c="beta-blockers" 182:0 182:0
+c="chest pain" 14:3 14:4||t="coref problem"||c="chest pain" 18:22 18:23
+c="ulcerated" 91:4 91:4||t="coref problem"||c="hazy ulceration" 103:3 103:4
+c="the pain" 21:3 21:4||t="coref problem"||c="pain" 24:0 24:0
+c="glucophage" 158:0 158:0||t="coref treatment"||c="your previous diabetes medications" 161:3 161:6
+c="ciwa" 145:10 145:10||t="coref test"||c="ciwas" 146:1 146:1
+c="lipitor" 147:4 147:4||t="coref treatment"||c="lipitor" 154:0 154:0
+c="he" 20:0 20:0||t="coref person"||c="he" 20:3 20:3
+c="he" 25:5 25:5||t="coref person"||c="he" 28:0 28:0
+c="this pain" 19:6 19:7||t="coref problem"||c="anterior chest pain" 19:12 19:14
+c="he" 22:9 22:9||t="coref person"||c="he" 23:0 23:0
+c="cad" 30:1 30:1||t="coref problem"||c="cad" 127:1 127:1
+c="he" 28:0 28:0||t="coref person"||c="he" 134:9 134:9
+c="plavix" 130:6 130:6||t="coref treatment"||c="plavix" 180:5 180:5
+c="vicodin" 12:0 12:0||t="coref treatment"||c="vicodin" 159:2 159:2
+c="dm" 32:1 32:1||t="coref problem"||c="dm" 141:1 141:1
+c="your" 161:3 161:3||t="coref person"||c="you" 180:0 180:0
+c="chest pain" 18:22 18:23||t="coref problem"||c="this pain" 19:6 19:7
+c="beta-blocker" 143:3 143:3||t="coref treatment"||c="beta-blockers" 181:5 181:5
+c="anginal symptoms" 127:5 127:6||t="coref problem"||c="chest pain" 142:20 142:21
+c="metformin" 141:4 141:4||t="coref treatment"||c="glucophage" 158:0 158:0
+c="he" 20:3 20:3||t="coref person"||c="he" 21:0 21:0
+c="he" 22:0 22:0||t="coref person"||c="he" 22:9 22:9
+c="anterior chest pain" 19:12 19:14||t="coref problem"||c="the pain" 21:3 21:4
+c="prior stent" 25:15 25:16||t="coref treatment"||c="stenting of lad" 30:8 30:10
+c="pain" 24:0 24:0||t="coref problem"||c="anginal symptoms" 127:5 127:6
+c="lesions in lad , lcx , and plb" 127:18 127:25||t="coref problem"||c="hazy lesions" 128:2 128:3
+c="catheterization" 53:0 53:0||t="coref test"||c="cardiac catheterization" 127:15 127:16
+c="hypercholesterolemia" 18:13 18:13||t="coref problem"||c="hypercholesterolemia" 31:1 31:1

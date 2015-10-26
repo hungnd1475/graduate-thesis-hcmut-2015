@@ -1,0 +1,3 @@
+29	Subsequently a saline-filled right breast implant was performed .|saline[1142,1148]||||||||||789982|789982|saline
+35	Discharge medications include Percocet and Colace .|Percocet[1482,1490]|||||||||C0086787|42844|161|paracetamol
+35	Discharge medications include Percocet and Colace .|Colace[1495,1501]|||||||||C0282139|82000|82003|docusate

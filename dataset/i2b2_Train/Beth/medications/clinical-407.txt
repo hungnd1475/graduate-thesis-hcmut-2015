@@ -1,0 +1,28 @@
+27	1. Glucophage XR 1000 mg p.o. q. day .|Glucophage XR[1159,1172]|||1000mg[1173,1180]||p.o.[1181,1185]|q. day[1186,1192]|||C0716527|861006|6809|metformin
+28	2. Avandia 4 mg p.o. q. day .|Avandia[1198,1205]|||4mg[1206,1210]||p.o.[1211,1215]|q. day[1216,1222]|||C0875726|261242|84108|rosiglitazone
+29	3. Diovan 160 mg p.o. q. day .|Diovan[1228,1234]|||160mg[1235,1241]||p.o.[1242,1246]|q. day[1247,1253]|||C1169353|351762|69749|valsartan
+30	4. Atenolol 25 mg p.o. q. day .|Atenolol[1259,1267]|||25mg[1268,1273]||p.o.[1274,1278]|q. day[1279,1285]|||C0687939|197380|1202|atenolol
+31	5. Lipitor 10 mg p.o. q. day .|Lipitor[1291,1298]|||10mg[1299,1304]||p.o.[1305,1309]|q. day[1310,1316]|||C0593903|617314|83367|atorvastatin
+32	6. Niaspan 500 mg p.o. q. day .|Niaspan[1322,1329]|||500mg[1330,1336]||p.o.[1337,1341]|q. day[1342,1348]|||C1592883|575159|7393|nicotinic acid
+33	7. Enteric-coated aspirin .|coated aspirin[1362,1376]|||||||||C0719394|216110|216110|coated aspirin
+39	The patient was transferred to the Intensive Care Unit in stable condition on Neo-Synephrine infusion .|Neo - Synephrine[1848,1862]|||||||||C0702190|204346|8163|phenylephrine
+41	Postoperative days one and two , the patient continued to require Neo-Synephrine to maintain systolic blood pressures greater than 100 .|Neo - Synephrine[2039,2053]|||||||||C0702190|204346|8163|phenylephrine
+42	On postoperative day two , the patient 's hematocrit was noted to be 23.1 ; he was transfused one unit of packed red blood cells as well as given a dose of Lasix .|Lasix[2266,2271]|||||||||C0699992|202991|4603|furosemide
+42	On postoperative day two , the patient 's hematocrit was noted to be 23.1 ; he was transfused one unit of packed red blood cells as well as given a dose of Lasix .|packed red blood cells[2216,2238]||||||||||834201|834201|packed red blood cells
+43	The Neo-Synephrine was weaned off by postoperative day number three .|Neo - Synephrine[2278,2292]|||||||||C0702190|204346|8163|phenylephrine
+45	The patient was started on low dose Lasix and Lopressor which he tolerated well .|Lasix[2466,2471]|||||||||C0699992|202991|4603|furosemide
+45	The patient was started on low dose Lasix and Lopressor which he tolerated well .|Lopressor[2476,2485]|||||||||C0700776|203344|6918|metoprolol
+75	1. Atenolol 25 mg p.o. q. day .|Atenolol[4407,4415]|||25mg[4416,4421]||p.o.[4422,4426]|q. day[4427,4433]|||C0687939|197380|1202|atenolol
+76	2. Lasix 20 mg p.o. q. day times seven days .|Lasix[4439,4444]|||20mg[4445,4450]||p.o.[4451,4455]|q. day[4456,4462]|||C0697292|200801|4603|furosemide
+77	3. Potassium chloride 20 mEq p.o. q. day times seven days .|Potassium chloride[4485,4503]|||20mEq[4504,4510]||p.o.[4511,4515]|q. day[4516,4522]||||343050|8591|potassium chloride
+78	4. Niferex 150 mg p.o. q. day times one month .|Niferex[4545,4552]|||150mg[4553,4559]||p.o.[4560,4564]|q. day[4565,4571]|||C3237229|1183403|105669|iron (as polysaccharide complex)
+79	5. Vitamin C 500 mg p.o. twice a day times one month .|Vitamin C[4593,4602]|||500mg[4603,4609]||p.o.[4610,4614]|a day[4621,4626]||||237722|1151|ascorbic acid (vit c)
+80	6. Multivitamin one p.o. q. day times one month .|Multivitamin[4648,4660]||||one[4661,4664]|p.o.[4665,4669]|q. day[4670,4676]||||89905|89905|multiple vitamins
+81	7. Ambien 5 mg p.o. q. h.s. p.r.n.|Ambien[4698,4704]|||5mg[4705,4709]||p.o.[4710,4714]|h.s.[4718,4722]||p.r.n.[4723,4729]|C0712699|854878|39993|zolpidem
+82	8. Colace 100 mg p.o. twice a day .|Colace[4733,4739]|||100mg[4740,4746]||p.o.[4747,4751]|a day[4758,4763]|||C0711644|1247756|82003|docusate
+83	9. Avandia 4 mg p.o. q. day .|Avandia[4769,4776]|||4mg[4777,4781]||p.o.[4782,4786]|q. day[4787,4793]|||C0875726|261242|84108|rosiglitazone
+84	10. Glucophage 500 mg p.o. twice a day .|Glucophage[4800,4810]|||500mg[4811,4817]||p.o.[4818,4822]|a day[4829,4834]|||C0701677|861008|6809|metformin
+85	11. Lipitor 20 mg p.o. q. day .|Lipitor[4841,4848]|||20mg[4849,4854]||p.o.[4855,4859]|q. day[4860,4866]|||C0593904|617318|83367|atorvastatin
+86	12. Zantac 150 mg p.o. twice a day .|Zantac 150[4873,4883]|||||p.o.[4887,4891]|a day[4898,4903]|||C0724451|220992|220992|zantac 150
+87	13. Niaspan 500 mg p.o. q. day .|Niaspan[4910,4917]|||500mg[4918,4924]||p.o.[4925,4929]|q. day[4930,4936]|||C1592883|575159|7393|nicotinic acid
+88	14. Percocet 5/325 one to two p.o. q. four to six hours p.r.n.|Percocet 5 / 325[4943,4957]||||one to two[4958,4968]|p.o.[4969,4973]|||p.r.n[4995,5000]||1049640|161|paracetamol

@@ -1,0 +1,12 @@
+22	She does not smoke , does not use birth control pills , does not use drugs .|birth control pills[1039,1058]||||||||||2821|2821|birth control pills
+68	Sedimentation rate 2 , antithrombin 3 .|antithrombin[3487,3499]|||3[3500,3501]|||||||985845|1010|
+69	Protein C , protein S and plasminogen level within normal limits .|Protein C[3504,3513]|||||||||C0033621|8834|8834|protein c
+69	Protein C , protein S and plasminogen level within normal limits .|protein S[3516,3525]||||||||||34822|34822|protein s
+69	Protein C , protein S and plasminogen level within normal limits .|plasminogen[3530,3541]||||||||||8409|8409|plasminogen
+85	Her hypertension was difficult to manage initially and required three days of Intensive Care Unit with A-line and Nipride intravenously .|Nipride[4972,4979]|||||intravenously[4980,4993]||three days[4922,4932]|||||
+86	It was finally under control with high doses of Captopril , Nifedipine , and hydrochlorothiazide .|Captopril[5044,5053]|||||||||C0006938|1998|1998|captopril
+86	It was finally under control with high doses of Captopril , Nifedipine , and hydrochlorothiazide .|Nifedipine[5056,5066]|||||||||C0028066|7417|7417|nifedipine
+86	It was finally under control with high doses of Captopril , Nifedipine , and hydrochlorothiazide .|hydrochlorothiazide[5073,5092]|||||||||C0020261|5487|5487|hydrochlorothiazide
+89	MEDICATIONS ON DISCHARGE : hydrochlorothiazide 25 mg. po q.day , Captopril 75 mg. po three times a day , Nifedipine 40 mg. po three times a day .|hydrochlorothiazide[5510,5529]|||25mg.[5530,5536]||po[5537,5539]|q.day[5540,5545]|||C0977518|310798|5487|hydrochlorothiazide
+89	MEDICATIONS ON DISCHARGE : hydrochlorothiazide 25 mg. po q.day , Captopril 75 mg. po three times a day , Nifedipine 40 mg. po three times a day .|Captopril[5548,5557]|||75mg.[5558,5564]||po[5565,5567]|three times a day[5568,5585]|||C1358077|428809|1998|captopril
+89	MEDICATIONS ON DISCHARGE : hydrochlorothiazide 25 mg. po q.day , Captopril 75 mg. po three times a day , Nifedipine 40 mg. po three times a day .|Nifedipine[5588,5598]|||40mg.[5599,5605]||po[5606,5608]|three times a day[5609,5626]|||C1134813|337331|7417|nifedipine

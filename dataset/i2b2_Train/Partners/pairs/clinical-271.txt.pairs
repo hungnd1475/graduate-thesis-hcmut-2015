@@ -1,0 +1,71 @@
+c="attending" 25:0 25:0||t="coref person"||c="fyfe , naan acandea , m.d." 26:0 26:5
+c="patient" 19:1 19:1||t="coref person"||c="pt" 91:0 91:0
+c="the patient" 113:0 113:1||t="coref person"||c="he" 114:0 114:0
+c="pt" 91:0 91:0||t="coref person"||c="the patient" 112:10 112:11
+c="he" 114:0 114:0||t="coref person"||c="his" 114:9 114:9
+c="-the pt" 123:2 123:3||t="coref person"||c="his" 123:24 123:24
+c="his" 123:24 123:24||t="coref person"||c="his" 124:0 124:0
+c="he" 125:0 125:0||t="coref person"||c="his" 125:3 125:3
+c="his" 125:3 125:3||t="coref person"||c="his" 126:4 126:4
+c="his" 126:7 126:7||t="coref person"||c="his" 127:0 127:0
+c="the patient" 130:0 130:1||t="coref person"||c="his" 131:0 131:0
+c="the patient" 135:0 135:1||t="coref person"||c="his" 136:0 136:0
+c="the patient" 141:0 141:1||t="coref person"||c="the patient" 143:0 143:1
+c="vit. b-3" 51:4 51:5||t="coref treatment"||c="b-3" 61:0 61:0
+c="the patient" 117:9 117:10||t="coref person"||c="he" 118:0 118:0
+c="the patient" 112:10 112:11||t="coref person"||c="the patient" 113:0 113:1
+c="dr. clow" 69:9 69:10||t="coref person"||c="dr. clow" 154:5 154:6
+c="his" 124:0 124:0||t="coref person"||c="his" 124:5 124:5
+c="hd" 78:4 78:4||t="coref treatment"||c="hemodialysis" 82:0 82:0
+c="his" 124:5 124:5||t="coref person"||c="he" 125:0 125:0
+c="his" 132:24 132:24||t="coref person"||c="the patient" 135:0 135:1
+c="a follow up ultrasound" 141:4 141:7||t="coref test"||c="ultrasound of right kidney and bladder" 153:8 153:13
+c="he" 132:0 132:0||t="coref person"||c="his" 132:24 132:24
+c="hypothyroidism" 78:29 78:29||t="coref problem"||c="hypothyroid" 95:16 95:16
+c="r complex renal cyst" 140:0 140:3||t="coref problem"||c="right kidney cyst" 153:16 153:18
+c="his" 131:0 131:0||t="coref person"||c="he" 132:0 132:0
+c="md" 56:3 56:3||t="coref person"||c="felsapprydefusc , eri n. , m.d." 58:5 58:10
+c="trouitsa , win" 13:0 13:2||t="coref person"||c="patient" 19:1 19:1
+c="abdominal fat pad biopsy" 82:4 82:7||t="coref test"||c="abdominal fat pad biopsy" 117:12 117:15
+c="his" 122:1 122:1||t="coref person"||c="-the pt" 123:2 123:3
+c="the patient" 143:0 143:1||t="coref person"||c="he" 144:0 144:0
+c="his" 136:0 136:0||t="coref person"||c="the patient" 141:0 141:1
+c="simvastatin" 51:0 51:0||t="coref treatment"||c="zocor ( simvastatin )" 54:0 54:3
+c="his" 114:9 114:9||t="coref person"||c="the patient" 115:0 115:1
+c="copd" 78:12 78:12||t="coref problem"||c="copd" 95:14 95:14
+c="labetalol hcl" 36:14 36:15||t="coref treatment"||c="labetalol" 125:8 125:8
+c="his" 127:0 127:0||t="coref person"||c="the patient" 130:0 130:1
+c="htn" 78:27 78:27||t="coref problem"||c="htn" 95:12 95:12
+c="niacin" 51:2 51:2||t="coref treatment"||c="niacin" 60:2 60:2
+c="carotid ultrasound studies" 120:2 120:4||t="coref test"||c="that" 120:8 120:8
+c="iga" 95:2 95:2||t="coref problem"||c="his renal disease" 123:24 123:26
+c="hd" 121:5 121:5||t="coref treatment"||c="dialysis" 122:10 122:10
+c="abdominal fat pad biopsy" 117:12 117:15||t="coref test"||c="abdominal fat pad biopsy" 154:12 154:15
+c="esrd" 78:2 78:2||t="coref problem"||c="esrd" 95:0 95:0
+c="bladder diverticula" 140:5 140:6||t="coref problem"||c="bladder diverticula" 153:20 153:21
+c="he" 144:0 144:0||t="coref person"||c="you" 147:6 147:6
+c="iga nephropathy" 87:5 87:6||t="coref problem"||c="iga" 95:2 95:2
+c="&quot; raccoon eyes &quot;" 88:13 88:16||t="coref problem"||c="raccoon eyes" 97:16 97:17
+c="he" 118:0 118:0||t="coref person"||c="he" 120:0 120:0
+c="hemodialysis" 82:0 82:0||t="coref treatment"||c="hd" 87:12 87:12
+c="zocor ( simvastatin )" 54:0 54:3||t="coref treatment"||c="simvastatin" 60:0 60:0
+c="his" 116:0 116:0||t="coref person"||c="the patient" 117:9 117:10
+c="hemodialysis" 69:0 69:0||t="coref treatment"||c="hd" 78:4 78:4
+c="dialysis" 122:10 122:10||t="coref treatment"||c="hemodialysis" 151:1 151:1
+c="nephrocaps ( nephro-vit rx )" 47:0 47:4||t="coref treatment"||c="nephrocaps po" 58:14 58:15
+c="dobutamine-mibi" 92:20 92:20||t="coref test"||c="recent mibi" 123:12 123:13
+c="his" 126:4 126:4||t="coref person"||c="his" 126:7 126:7
+c="he" 120:0 120:0||t="coref person"||c="his" 122:1 122:1
+c="carotid u / s" 92:8 92:11||t="coref test"||c="carotid ultrasound studies" 120:2 120:4
+c="copd" 95:14 95:14||t="coref problem"||c="copd" 138:0 138:0
+c="his coumadin" 126:4 126:5||t="coref treatment"||c="coumadin" 152:5 152:5
+c="iga nephropathy" 78:6 78:7||t="coref problem"||c="iga nephropathy" 87:5 87:6
+c="simvastatin" 60:0 60:0||t="coref treatment"||c="his zocor" 125:3 125:4
+c="pacemaker" 78:17 78:17||t="coref treatment"||c="his pacemaker" 114:9 114:10
+c="hd" 87:12 87:12||t="coref treatment"||c="hd" 121:5 121:5
+c="cozaar ( losartan )" 42:0 42:3||t="coref treatment"||c="cozaar" 125:6 125:6
+c="peripheral neuropathy ble" 132:15 132:17||t="coref problem"||c="which" 132:18 132:18
+c="a tte" 115:4 115:5||t="coref test"||c="his tte" 116:0 116:1
+c="felsapprydefusc , eri n. , m.d." 49:5 49:10||t="coref person"||c="md" 56:3 56:3
+c="felsapprydefusc , eri n. , m.d." 58:5 58:10||t="coref person"||c="felsapprydefusc , eri n. , m.d." 157:0 157:5
+c="the patient" 115:0 115:1||t="coref person"||c="his" 116:0 116:0

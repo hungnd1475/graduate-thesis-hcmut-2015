@@ -1,0 +1,12 @@
+c="she" 38:0 38:0||t="coref person"||c="her" 39:1 39:1
+c="she" 39:3 39:3||t="coref person"||c="her" 41:1 41:1
+c="her" 41:1 41:1||t="coref person"||c="she" 41:3 41:3
+c="she" 42:2 42:2||t="coref person"||c="she" 44:0 44:0
+c="she" 44:0 44:0||t="coref person"||c="patient" 45:6 45:6
+c="her" 39:1 39:1||t="coref person"||c="she" 39:3 39:3
+c="xieacass bethconri balloon" 13:0 13:2||t="coref person"||c="she" 38:0 38:0
+c="she" 41:3 41:3||t="coref person"||c="she" 42:2 42:2
+c="spontaneous vertex vaginal delivery" 25:0 25:3||t="coref treatment"||c="spontaneous vertex vaginal delivery" 38:30 38:33
+c="depression" 23:4 23:4||t="coref problem"||c="depression" 43:0 43:0
+c="vaginal delivery" 21:0 21:1||t="coref treatment"||c="spontaneous vertex vaginal delivery" 25:0 25:3
+c="active labor" 32:0 32:1||t="coref problem"||c="active labor" 37:0 37:1

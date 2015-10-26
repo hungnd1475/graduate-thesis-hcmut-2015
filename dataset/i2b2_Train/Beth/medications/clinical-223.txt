@@ -1,0 +1,17 @@
+26	AM BLOOD Glucose - 156 * UreaN - 20 Creat - 1.0 Na - 140 K - 3.8 Cl - 99 HCO3 - 31 AnGap - 14|Na[1146,1148]||||||||||56501|56501|na m-fluorphosphate
+26	AM BLOOD Glucose - 156 * UreaN - 20 Creat - 1.0 Na - 140 K - 3.8 Cl - 99 HCO3 - 31 AnGap - 14|Cl -[1163,1167]|||99[1168,1170]||||||C0106269|47104|47104|cl-
+35	Medications on Admission : lisinopril , protonix , glipizide , metformin , asa|lisinopril[1889,1899]|||||||||C0065374|29046|29046|lisinopril
+35	Medications on Admission : lisinopril , protonix , glipizide , metformin , asa|protonix[1902,1910]|||||||||C0876139|261624|40790|pantoprazole
+35	Medications on Admission : lisinopril , protonix , glipizide , metformin , asa|glipizide[1913,1922]|||||||||C0017642|4821|4821|glipizide
+35	Medications on Admission : lisinopril , protonix , glipizide , metformin , asa|metformin[1925,1934]|||||||||C0025598|6809|6809|metformin
+35	Medications on Admission : lisinopril , protonix , glipizide , metformin , asa|asa[1937,1940]|||||||||C1740879|667904|9525|salicylic acid
+37	1. Aspirin 81 mg Tablet , Delayed Release ( E.C. ) Sig : One ( 1 ) Tablet , Delayed Release ( E.C. ) PO DAILY ( Daily ).|Aspirin[1968,1975]||Tablet[1982,1988]|81mg[1976,1981]||PO[2066,2068]|DAILY[2069,2074]||||243670|1191|acetylsalicylic acid
+39	2. Pantoprazole 40 mg Tablet , Delayed Release ( E.C. ) Sig : One ( 1 ) Tablet , Delayed Release ( E.C. ) PO Q24H ( every 24 hours ).|Pantoprazole[2153,2165]||Tablet[2172,2178]|40mg[2166,2171]||PO[2256,2258]|Q24H[2259,2263]|||C0981697|314200|40790|pantoprazole
+41	3. Metoprolol Tartrate 50 mg Tablet Sig : One ( 1 ) Tablet PO BID ( 2 times a day ).|Metoprolol Tartrate[2351,2370]||Tablet[2377,2383]|50mg[2371,2376]||PO[2407,2409]|BID[2410,2413]|||C0978612|866514|6918|metoprolol
+43	4. Docusate Sodium 150 mg / 15 mL Liquid Sig : One ( 1 ) PO BID ( 2 times a day ).|Docusate Sodium[2474,2489]|||150 mg / 15 mL[2490,2504]||PO[2528,2530]|BID[2531,2534]||||1245686|82003|docusate
+45	5. Oxycodone - Acetaminophen 5-325 mg Tablet Sig : 1-2 Tablets PO every 4-6 hours as needed for pain .|Oxycodone - Acetaminophen[2593,2618]||Tablet[2628,2634]|5 - 325mg[2619,2627]|1 - 2 Tablets[2641,2652]|PO[2653,2655]|every 4 - 6 hours[2656,2671]||as needed[2672,2681]|C0717368|214183|214183|oxycodone-acetaminophen
+47	6. Clopidogrel 75 mg Tablet Sig : One ( 1 ) Tablet PO DAILY ( Daily ).|Clopidogrel[2734,2745]||Tablet[2752,2758]|75mg[2746,2751]||PO[2782,2784]|DAILY[2785,2790]||||309362|32968|clopidogrel
+49	7. Atorvastatin 10 mg Tablet Sig : One ( 1 ) Tablet PO DAILY ( Daily ).|Atorvastatin[2843,2855]||Tablet[2862,2868]|10mg[2856,2861]||PO[2892,2894]|DAILY[2895,2900]||||617312|83367|atorvastatin
+51	8. Glipizide 5 mg Tablet Sig : One ( 1 ) Tablet PO BID ( 2 times a day ).|Glipizide[2953,2962]||Tablet[2968,2974]|5mg[2963,2967]||PO[2998,3000]|BID[3001,3004]|||C0977136|310490|4821|glipizide
+53	9. Lisinopril 10 mg Tablet Sig : One ( 1 ) Tablet PO DAILY ( Daily ).|Lisinopril[3065,3075]||Tablet[3082,3088]|10mg[3076,3081]||PO[3112,3114]|DAILY[3115,3120]|||C0981555|314076|29046|lisinopril
+55	10. Hydrochlorothiazide 25 mg Tablet Sig : One ( 1 ) Tablet PO once a day .|Hydrochlorothiazide[3174,3193]||Tablet[3200,3206]|25mg[3194,3199]||PO[3230,3232]|a day[3238,3243]|||C0977518|310798|5487|hydrochlorothiazide

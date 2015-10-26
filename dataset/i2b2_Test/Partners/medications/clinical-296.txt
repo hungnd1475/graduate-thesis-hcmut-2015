@@ -1,0 +1,4 @@
+33	Levoxine 0.125 mg PO q.day , Vasotec 10 mg PO b.i.d. , Maxzide 75/50 , 30 mg PO q.day .|Levoxine[2557,2565]|||0.125mg[2566,2574]||PO[2575,2577]|q.day[2578,2583]||||1068985|1068985|levoxine
+33	Levoxine 0.125 mg PO q.day , Vasotec 10 mg PO b.i.d. , Maxzide 75/50 , 30 mg PO q.day .|Vasotec[2586,2593]|||10mg[2594,2599]||PO[2600,2602]|b.i.d.[2603,2609]|||C0706701|858819|3827|enalapril
+33	Levoxine 0.125 mg PO q.day , Vasotec 10 mg PO b.i.d. , Maxzide 75/50 , 30 mg PO q.day .|Maxzide[2612,2619]|||75[2620,2622]||PO[2634,2636]|q.day[2637,2642]|||C3236576|1182741|5487|hydrochlorothiazide
+62	Percocet for pain .|Percocet[4725,4733]|||||||||C0086787|42844|161|paracetamol

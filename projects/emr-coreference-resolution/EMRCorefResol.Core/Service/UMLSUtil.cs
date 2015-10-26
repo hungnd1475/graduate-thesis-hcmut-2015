@@ -15,7 +15,7 @@ namespace HCMUT.EMRCorefResol.Service
         public static int UMLS_EQUIPMENT = 1;
         public static int UMLS_OPERATION = 2;
 
-        private const string UMLS_ROOT = @"E:\public_mm\bin\metamap";
+        private const string UMLS_ROOT = @"D:\Documents\HCMUT\public_mm\bin\metamap";
 
         public UMLSData GetUMLSInfo(string term)
         {

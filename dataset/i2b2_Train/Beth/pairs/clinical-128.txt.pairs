@@ -1,0 +1,92 @@
+c="daughter" 28:4 28:4||t="coref person"||c="a daughter" 49:6 49:7
+c="patient" 212:3 212:3||t="coref person"||c="ms. pimental" 217:3 217:4
+c="she" 217:44 217:44||t="coref person"||c="pt" 219:0 219:0
+c="patient" 12:0 12:0||t="coref person"||c="who" 27:9 27:9
+c="who" 27:9 27:9||t="coref person"||c="patient" 30:0 30:0
+c="patient" 30:0 30:0||t="coref person"||c="she" 31:0 31:0
+c="she" 31:0 31:0||t="coref person"||c="her" 31:3 31:3
+c="this limited study" 197:6 197:8||t="coref test"||c="this" 198:0 198:0
+c="who" 206:5 206:5||t="coref person"||c="patient" 208:0 208:0
+c="patient" 208:0 208:0||t="coref person"||c="her" 208:4 208:4
+c="her" 208:4 208:4||t="coref person"||c="patient" 209:3 209:3
+c="she" 210:0 210:0||t="coref person"||c="patient" 212:3 212:3
+c="ms. pimental" 217:3 217:4||t="coref person"||c="who" 217:30 217:30
+c="who" 217:30 217:30||t="coref person"||c="she" 217:44 217:44
+c="ct scan" 218:0 218:1||t="coref test"||c="this" 218:5 218:5
+c="mmp" 27:4 27:4||t="coref problem"||c="mmp" 206:4 206:4
+c="r humerus and r hip fx" 32:7 32:12||t="coref problem"||c="a hip and arm fracture" 206:14 206:18
+c="ct abdomen w/o contrast" 167:0 167:3||t="coref test"||c="ct of the abdomen without iv contrast" 177:0 177:6
+c="ms changes" 170:5 170:6||t="coref problem"||c="mental status changes" 174:5 174:7
+c="moderate renal insufficiency" 99:11 99:13||t="coref problem"||c="renal failure" 173:5 173:6
+c="ct pelvis w/o contrast" 167:5 167:8||t="coref test"||c="ct of the pelvis without iv contrast" 189:0 189:6
+c="a small amount of free fluid" 186:0 186:5||t="coref problem"||c="a small amount of free fluid" 189:14 189:19
+c="ddd dual chamber rate response pacemaker" 47:3 47:8||t="coref treatment"||c="a dual chamber pacemaker" 180:0 180:3
+c="a nasogastric tube" 179:0 179:2||t="coref treatment"||c="nasogastric tube" 181:0 181:1
+c="lasix" 213:7 213:7||t="coref treatment"||c="lasix" 227:0 227:0
+c="glipizide" 215:3 215:3||t="coref treatment"||c="glipizide" 234:0 234:0
+c="mental status changes" 174:5 174:7||t="coref problem"||c="worsening mental status" 217:55 217:57
+c="closed reduction of right hip" 18:1 18:5||t="coref treatment"||c="right orif of the hip" 217:19 217:23
+c="free air and free fluid in the pelvis and abdomen" 196:5 196:14||t="coref problem"||c="free air" 218:7 218:8
+c="pacemaker" 47:1 47:1||t="coref treatment"||c="ddd dual chamber rate response pacemaker" 47:3 47:8
+c="renal failure" 173:5 173:6||t="coref problem"||c="renal failure" 217:59 217:60
+c="anemia" 38:1 38:1||t="coref problem"||c="anemia" 212:1 212:1
+c="transfusion dependent" 38:3 38:4||t="coref problem"||c="transfusion dependant" 212:4 212:5
+c="diabetes type 2" 37:1 37:3||t="coref problem"||c="dm" 215:1 215:1
+c="pain in her r arm and hip" 31:12 31:18||t="coref problem"||c="pain in r arm and r hip" 61:13 61:19
+c="internal and external drainage" 22:11 22:14||t="coref treatment"||c="wide drainage" 221:3 221:4
+c="wide drainage" 221:3 221:4||t="coref treatment"||c="internal and external drainage" 221:11 221:14
+c="tube gastrostomy" 24:1 24:2||t="coref treatment"||c="tube gastrostomy" 223:1 223:2
+c="a hip and arm fracture" 27:18 27:22||t="coref problem"||c="r humerus and r hip fx" 32:7 32:12
+c="intra-abdominal abscess" 21:6 21:7||t="coref problem"||c="intra-abdominal abscess" 220:6 220:7
+c="peritonitis" 21:9 21:9||t="coref problem"||c="peritonitis" 220:9 220:9
+c="gross soilage with bile and gastric contents" 21:11 21:17||t="coref problem"||c="gross soilage with bile and gastric contents" 220:11 220:17
+c="drainage" 21:4 21:4||t="coref treatment"||c="drainage" 220:4 220:4
+c="coronary artery disease" 35:1 35:3||t="coref problem"||c="single vessel disease in a right dominant system" 90:4 90:11
+c="single vessel disease in a right dominant system" 90:4 90:11||t="coref problem"||c="one vessel coronary artery disease" 102:1 102:5
+c="elevated right and left sided filling pressures" 96:4 96:10||t="coref problem"||c="moderately elevated right and left sided filling pressures" 103:1 103:8
+c="stenting of the proximal lad" 100:4 100:8||t="coref treatment"||c="successful stenting of the proximal lad" 104:1 104:6
+c="chronic renal insufficiency" 43:1 43:3||t="coref problem"||c="moderate renal insufficiency" 99:11 99:13
+c="a mechanical fall" 27:11 27:13||t="coref problem"||c="fall" 28:0 28:0
+c="successful ptca" 100:1 100:2||t="coref treatment"||c="ptca" 100:33 100:33
+c="prednisone" 216:4 216:4||t="coref treatment"||c="prednisone" 236:0 236:0
+c="a fracture of the proximal right humerus" 194:12 194:18||t="coref problem"||c="right proximal humeral fracture" 200:1 200:4
+c="this" 198:0 198:0||t="coref test"||c="the study" 201:0 201:1
+c="vascular calcifications" 185:8 185:9||t="coref problem"||c="vascular calcifications" 191:0 191:1
+c="a mechanical fall" 206:7 206:9||t="coref problem"||c="fall" 207:2 207:2
+c="ct of the abdomen without iv contrast" 177:0 177:6||t="coref test"||c="this noncontrast study" 182:5 182:7
+c="the fall" 30:15 30:16||t="coref problem"||c="a mechanical fall" 206:7 206:9
+c="one vessel coronary artery disease" 102:1 102:5||t="coref problem"||c="cad" 209:5 209:5
+c="chf" 36:1 36:1||t="coref problem"||c="chf" 209:7 209:7
+c="ct abdomen w/o contrast" 166:0 166:3||t="coref test"||c="ct abdomen w/o contrast" 167:0 167:3
+c="exposure" 22:1 22:1||t="coref treatment"||c="exposure" 221:1 221:1
+c="perf / ischemic bowel" 168:5 168:8||t="coref problem"||c="perf / ischemic bowel" 172:3 172:6
+c="fall" 207:2 207:2||t="coref problem"||c="a recent fall" 217:15 217:17
+c="resting regional wall motion abnormalities" 78:0 78:4||t="coref problem"||c="new inferior and inferolateral wall motion abnormalities" 88:0 88:6
+c="orthopedic hardware" 194:21 194:22||t="coref treatment"||c="fixation" 200:7 200:7
+c="95 yo f" 206:0 206:2||t="coref person"||c="who" 206:5 206:5
+c="vent" 144:21 144:21||t="coref treatment"||c="ventilatory support" 224:6 224:7
+c="her" 31:3 31:3||t="coref person"||c="her" 31:14 31:14
+c="intubat" 144:20 144:20||t="coref treatment"||c="intubated" 147:3 147:3
+c="wide drainage" 22:3 22:4||t="coref treatment"||c="internal and external drainage" 22:11 22:14
+c="coronary vascular calcifications" 178:2 178:4||t="coref problem"||c="vascular calcifications" 185:8 185:9
+c="major trauma" 209:13 209:14||t="coref problem"||c="multiple trauma" 243:0 243:1
+c="first degree a-v heart block" 44:5 44:9||t="coref problem"||c="1st deg block" 70:17 70:19
+c="perforated posterior duodenal ulcer" 22:6 22:9||t="coref problem"||c="perforated posterior duodenal ulcer" 221:6 221:9
+c="patient" 209:3 209:3||t="coref person"||c="she" 210:0 210:0
+c="abdominal pain" 174:11 174:12||t="coref problem"||c="abdominal pain" 217:46 217:47
+c="cardiac catheterization" 35:14 35:15||t="coref test"||c="cath" 89:0 89:0
+c="right orif of the hip" 217:19 217:23||t="coref treatment"||c="surgery" 219:2 219:2
+c="abd pain" 170:8 170:9||t="coref problem"||c="abdominal pain" 174:11 174:12
+c="moderate ( 2 +) mitral regurgitation" 84:0 84:5||t="coref problem"||c="more severe mitral regurgitation" 88:8 88:11
+c="a small amount of free fluid" 189:14 189:19||t="coref problem"||c="a small amount of free air" 190:0 190:5
+c="fall" 28:0 28:0||t="coref problem"||c="the fall" 30:15 30:16
+c="pain in r arm and r hip" 61:13 61:19||t="coref problem"||c="a fracture of the proximal right humerus" 194:12 194:18
+c="perforation" 196:30 196:30||t="coref problem"||c="duodenal perforation" 242:0 242:1
+c="left anterior descending artery stent placement" 35:17 35:22||t="coref treatment"||c="stenting of the proximal lad" 100:4 100:8
+c="exploratory laparotomy" 21:1 21:2||t="coref test"||c="exploratory laparotomy" 220:1 220:2
+c="moderate pulmonary artery systolic hypertension" 85:3 85:7||t="coref problem"||c="moderate pulmonary hypertension" 97:0 97:2
+c="a small amount of free air" 190:0 190:5||t="coref problem"||c="free air and free fluid in the pelvis and abdomen" 196:5 196:14
+c="her" 31:14 31:14||t="coref person"||c="95 yo f" 206:0 206:2
+c="polymyalgia rheumatica" 40:1 40:2||t="coref problem"||c="pmr" 216:1 216:1
+c="ct of the pelvis without iv contrast" 189:0 189:6||t="coref test"||c="this limited study" 197:6 197:8
+c="feeding jejunostomy" 23:1 23:2||t="coref treatment"||c="feeding jejunostomy" 222:1 222:2

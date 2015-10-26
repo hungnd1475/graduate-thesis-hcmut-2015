@@ -1,0 +1,15 @@
+15	The patient is a 60 year old diabetic who underwent an APR in 1989 for rectal carcinoma and has been doing following radiation therapy and 5FU .|5FU[683,686]||||||||||4492|4492|fluorouracil
+19	Diabeta 10 mg. po. bid .|Diabeta[1109,1116]|||10mg.[1117,1123]||po.[1124,1127]|bid[1128,1131]||||203295|4815|glibenclamide
+20	Serax 20 mg. po. qhs .|Serax[1134,1139]|||20mg.[1140,1146]||po.[1147,1150]|qhs[1151,1154]|||C0702214|204360|7781|oxazepam
+21	Sudafed 30 mg. po. bid .|Sudafed[1157,1164]|||30mg.[1165,1171]||po.[1172,1175]|bid[1176,1179]|||C2955048|1049528|8896|pseudoephedrine
+22	Theo-dur 300 mg. po. bid .|Theo - dur[1182,1190]|||300mg.[1191,1198]||po.[1199,1202]|bid[1203,1206]|||C0698112|201541|10438|theophylline
+23	Betoptic 0.5% one drop OU bid , Propene 0.1% one drop OU bid , Pred-Forte 1% one drop OS bid , Percocet two tabs. po. q4hours prn .|Betoptic[1209,1217]|||0.5[1218,1221]||OU[1232,1234]|bid[1235,1238]|||C3227644|1173613|1520|betaxolol
+23	Betoptic 0.5% one drop OU bid , Propene 0.1% one drop OU bid , Pred-Forte 1% one drop OS bid , Percocet two tabs. po. q4hours prn .|Percocet[1304,1312]||||two tabs.[1313,1322]|po.[1323,1326]|q4hours[1327,1334]||prn[1335,1338]|C0086787|42844|161|paracetamol
+24	Proventil 2 puffs q6hours prn .|Proventil[1341,1350]||||2 puffs[1351,1358]||q6hours[1359,1366]||prn[1367,1370]|C1607836|573645|435|salbutamol
+58	These include Diabeta 10 mg. po. bid .|Diabeta[4175,4182]|||10mg.[4183,4189]||po.[4190,4193]|bid[4194,4197]||||203295|4815|glibenclamide
+59	Serax 20 mg. po. qhs .|Serax[4200,4205]|||20mg.[4206,4212]||po.[4213,4216]|qhs[4217,4220]|||C0702214|204360|7781|oxazepam
+60	Sudafed 30 po. bid .|Sudafed[4223,4230]|||30[4231,4233]||po.[4234,4237]|bid[4238,4241]|||C2955048|1049528|8896|pseudoephedrine
+61	Theo-dur 300 mg. po. bid .|Theo - dur[4244,4252]|||300mg.[4253,4260]||po.[4261,4264]|bid[4265,4268]|||C0698112|201541|10438|theophylline
+62	Betoptic 0.5% one drop OU bid , Propene 0.1% one drop OU bid .|Betoptic[4271,4279]|||0.5[4280,4283]||OU[4294,4296]|bid[4297,4300]|||C3227644|1173613|1520|betaxolol
+64	Percocet two tabs po. q4h prn .|Percocet[4366,4374]||||two tabs[4375,4383]|po.[4384,4387]|q4h[4388,4391]||prn[4392,4395]|C0086787|42844|161|paracetamol
+65	Proventil 2 puffs q6hours prn .|Proventil[4398,4407]||||2 puffs[4408,4415]||q6hours[4416,4423]||prn[4424,4427]|C1607836|573645|435|salbutamol

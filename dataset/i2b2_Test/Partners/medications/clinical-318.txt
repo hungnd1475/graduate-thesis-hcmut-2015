@@ -1,0 +1,12 @@
+15	Epistaxis on Coumadin in the past .|Coumadin[418,426]|||||||||C0699129|202421|11289|warfarin
+24	She is admitted now for a neuro-interventional radiology procedure to decrease the likelihood of epistaxis on Coumadin .|Coumadin[886,894]|||||||||C0699129|202421|11289|warfarin
+39	The patient received Coumadin , 10 mg. , on the evening following the procedure , and is discharged the next day .|Coumadin[1708,1716]|||10mg.[1719,1725]||||||C2709902|855297|11289|warfarin
+40	Her prothrombin time will be rechecked on August 27 by her primary care physician , Dr.|prothrombin[1806,1817]||||||||||8872|8872|factor ii (prothrombin)
+42	Once her prothrombin time is in therapeutic range , she will be observed for epistaxis .|prothrombin[1911,1922]||||||||||8872|8872|factor ii (prothrombin)
+43	She will take her last dose of Coumadin on September 1 in anticipation of cardiac surgery .|Coumadin[2022,2030]|||||||||C0699129|202421|11289|warfarin
+44	If her prothrombin time does not come into therapeutic range promptly , then surgery may be delayed .|prothrombin[2090,2101]||||||||||8872|8872|factor ii (prothrombin)
+46	Coumadin , 5 mg. , alternating with 2.5 mg. , qD , digoxin , 0.125 mg. , qD , Lasix , 80 mg. , qAM and 40 mg. , qPM , Vanceril , 3 puffs , b.i.d.|Coumadin[2205,2213]|||5mg.[2216,2221]|||qD[2251,2253]|||C2709920|855333|11289|warfarin
+46	Coumadin , 5 mg. , alternating with 2.5 mg. , qD , digoxin , 0.125 mg. , qD , Lasix , 80 mg. , qAM and 40 mg. , qPM , Vanceril , 3 puffs , b.i.d.|digoxin[2256,2263]|||0.125mg.[2266,2275]|||qD[2278,2280]|||C0985542|315819|3407|digoxin
+46	Coumadin , 5 mg. , alternating with 2.5 mg. , qD , digoxin , 0.125 mg. , qD , Lasix , 80 mg. , qAM and 40 mg. , qPM , Vanceril , 3 puffs , b.i.d.|Lasix[2283,2288]|||40mg.[2308,2314]|||qPM[2317,2320]|||C1597894|565458|4603|furosemide
+46	Coumadin , 5 mg. , alternating with 2.5 mg. , qD , digoxin , 0.125 mg. , qD , Lasix , 80 mg. , qAM and 40 mg. , qPM , Vanceril , 3 puffs , b.i.d.|Lasix[2283,2288]|||80mg.[2291,2297]|||qAM[2300,2303]|||C1599049|566621|4603|furosemide
+46	Coumadin , 5 mg. , alternating with 2.5 mg. , qD , digoxin , 0.125 mg. , qD , Lasix , 80 mg. , qAM and 40 mg. , qPM , Vanceril , 3 puffs , b.i.d.|Vanceril[2323,2331]||||3 puffs[2334,2341]||b.i.d[2344,2349]||||202382|1347|beclomethasone

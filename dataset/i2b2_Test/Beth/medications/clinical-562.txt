@@ -1,0 +1,15 @@
+13	Patient was given two boluses of 15 units of regular insulin and was started on an insulin drip of one unit per hour and given a total of five liters of normal saline .|regular insulin[761,776]|||||drip[807,811]|per hour[824,832]||||5856|5856|insulin regular
+13	Patient was given two boluses of 15 units of regular insulin and was started on an insulin drip of one unit per hour and given a total of five liters of normal saline .|normal saline[869,882]|||fiveliters[854,865]||||||C0445115|125464|125464|normal saline
+18	Her NPH and a regular sliding scale were started and her drip was discontinued .|NPH[1230,1233]|||sliding scale[1248,1261]||drip[1283,1287]|||||311030|221108|insulin isophane,pork pure
+22	Multiple episodes of diabetic ketoacidosis in the past , migraine headaches and attention deficit disorder .|diabetic ketoacidosis[1449,1470]||||||||||1022795|1022795|diabetic ketoacidosis
+24	Included Wellbutrin , Imitrex , Tylenol , Humalog sliding scale and NPH insulin two units in the morning , 7 units at noon and 13 units at bedtime .|Wellbutrin[1568,1578]|||||||||C0085934|42568|42347|bupropion
+24	Included Wellbutrin , Imitrex , Tylenol , Humalog sliding scale and NPH insulin two units in the morning , 7 units at noon and 13 units at bedtime .|Imitrex[1581,1588]|||||||||C0721044|217713|37418|sumatriptan
+24	Included Wellbutrin , Imitrex , Tylenol , Humalog sliding scale and NPH insulin two units in the morning , 7 units at noon and 13 units at bedtime .|Tylenol[1591,1598]||||||||||202433|161|paracetamol
+24	Included Wellbutrin , Imitrex , Tylenol , Humalog sliding scale and NPH insulin two units in the morning , 7 units at noon and 13 units at bedtime .|Humalog[1601,1608]|||sliding scale[1609,1622]||||||C0528249|135805|86009|insulin,lispro,human/rdna
+24	Included Wellbutrin , Imitrex , Tylenol , Humalog sliding scale and NPH insulin two units in the morning , 7 units at noon and 13 units at bedtime .|NPH insulin[1627,1638]||||||in the morning[1649,1663]||||5865|5865|insulin isophane nph
+73	Potassium was given with her intravenous fluids and phosphate will be repleted as patient increases her po intake .|Potassium[4045,4054]|||||intravenous[4074,4085]||||C0032821|8588|8588|potassium
+79	1. Diabetic ketoacidosis .|Diabetic ketoacidosis[4247,4268]||||||||||1022795|1022795|diabetic ketoacidosis
+82	Includes her regular insulin sliding scale and her NPH fixed scale of 7 units in the morning , 2 units at noon and 13 units at bedtime .|regular insulin[4335,4350]|||sliding scale[4351,4364]|||||||5856|5856|insulin regular
+82	Includes her regular insulin sliding scale and her NPH fixed scale of 7 units in the morning , 2 units at noon and 13 units at bedtime .|NPH[4373,4376]||||||in the morning[4400,4414]||||311030|221108|insulin isophane,pork pure
+84	Patient will also continue on her Wellbutrin and Imitrex as needed for migraines .|Wellbutrin[4588,4598]|||||||||C0085934|42568|42347|bupropion
+84	Patient will also continue on her Wellbutrin and Imitrex as needed for migraines .|Imitrex[4603,4610]||||||||as needed[4611,4620]|C0721044|217713|37418|sumatriptan

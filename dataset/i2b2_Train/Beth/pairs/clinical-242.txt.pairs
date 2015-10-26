@@ -1,0 +1,75 @@
+c="decrease systolics" 16:7 16:8||t="coref problem"||c="which" 16:13 16:13
+c="patient" 16:0 16:0||t="coref person"||c="patient" 42:0 42:0
+c="patient" 42:0 42:0||t="coref person"||c="patient" 65:3 65:3
+c="her" 67:12 67:12||t="coref person"||c="patient" 69:0 69:0
+c="patient" 69:0 69:0||t="coref person"||c="the patient" 70:4 70:5
+c="patient" 70:12 70:12||t="coref person"||c="her" 70:23 70:23
+c="her" 70:23 70:23||t="coref person"||c="patient" 71:0 71:0
+c="patient" 76:0 76:0||t="coref person"||c="patient" 77:0 77:0
+c="patient" 79:2 79:2||t="coref person"||c="the patient" 80:2 80:3
+c="the patient" 80:2 80:3||t="coref person"||c="she" 81:0 81:0
+c="she" 81:0 81:0||t="coref person"||c="patient" 84:8 84:8
+c="patient" 84:8 84:8||t="coref person"||c="her" 85:0 85:0
+c="her" 85:0 85:0||t="coref person"||c="patient" 85:19 85:19
+c="her" 86:0 86:0||t="coref person"||c="patient" 86:12 86:12
+c="the patient" 87:5 87:6||t="coref person"||c="she" 87:28 87:28
+c="she" 87:28 87:28||t="coref person"||c="she" 88:0 88:0
+c="she" 88:0 88:0||t="coref person"||c="the patient" 89:11 89:12
+c="patient" 90:0 90:0||t="coref person"||c="patient" 92:0 92:0
+c="patient" 95:6 95:6||t="coref person"||c="patient" 96:7 96:7
+c="the patient" 97:15 97:16||t="coref person"||c="the patient" 98:9 98:10
+c="the patient" 98:9 98:10||t="coref person"||c="her" 98:14 98:14
+c="unresponsive" 89:16 89:16||t="coref problem"||c="unresponsive" 90:1 90:1
+c="multiple medical problems" 13:8 13:10||t="coref problem"||c="multiple medical problems" 65:11 65:13
+c="alcohol and benzodiazepine withdrawal" 80:18 80:21||t="coref problem"||c="withdrawal" 85:7 85:7
+c="depression" 23:1 23:1||t="coref problem"||c="depression" 65:17 65:17
+c="tachypneic" 75:4 75:4||t="coref problem"||c="patient 's tachypnea" 79:2 79:4
+c="dilantin" 74:3 74:3||t="coref treatment"||c="dilantin" 84:12 84:12
+c="patient 's hypoxia" 77:0 77:2||t="coref problem"||c="hypoxia" 86:7 86:7
+c="patient 's tachypnea" 79:2 79:4||t="coref problem"||c="tachypnea" 86:4 86:4
+c="insulin" 16:19 16:19||t="coref treatment"||c="insulin" 67:4 67:4
+c="dni" 96:11 96:11||t="coref treatment"||c="dni" 97:23 97:23
+c="lp" 81:6 81:6||t="coref test"||c="lp" 83:8 83:8
+c="suicide precautions" 72:3 72:4||t="coref treatment"||c="suicide precautions" 88:4 88:5
+c="disorientation" 73:16 73:16||t="coref problem"||c="her delirium" 85:0 85:1
+c="eeg" 81:2 81:2||t="coref test"||c="eeg" 82:1 82:1
+c="neurontin" 13:24 13:24||t="coref treatment"||c="neurontin" 26:1 26:1
+c="seizure" 80:7 80:7||t="coref problem"||c="seizure activity" 82:7 82:8
+c="patient" 71:0 71:0||t="coref person"||c="her" 71:7 71:7
+c="suicide precautions" 88:4 88:5||t="coref treatment"||c="a one-to-one sitter" 88:7 88:9
+c="patient" 72:0 72:0||t="coref person"||c="the patient" 73:6 73:7
+c="her" 71:7 71:7||t="coref person"||c="patient" 72:0 72:0
+c="barbiturate withdrawal" 85:25 85:26||t="coref problem"||c="barbiturate withdrawal" 87:33 87:34
+c="glucose drips" 16:21 16:22||t="coref treatment"||c="glucagon drips" 67:8 67:9
+c="seizure activity" 82:7 82:8||t="coref problem"||c="seizure activity" 84:3 84:4
+c="patient" 15:0 15:0||t="coref person"||c="patient" 16:0 16:0
+c="patient" 77:0 77:0||t="coref person"||c="she" 78:0 78:0
+c="the patient" 73:6 73:7||t="coref person"||c="patient" 76:0 76:0
+c="the patient" 70:4 70:5||t="coref person"||c="patient" 70:12 70:12
+c="eeg" 82:1 82:1||t="coref test"||c="eeg" 84:6 84:6
+c="the patient" 97:7 97:8||t="coref person"||c="the patient" 97:15 97:16
+c="patient" 65:3 65:3||t="coref person"||c="patient" 67:0 67:0
+c="bradycardic" 17:4 17:4||t="coref problem"||c="which" 17:9 17:9
+c="withdrawal" 85:7 85:7||t="coref problem"||c="barbiturate withdrawal" 85:25 85:26
+c="patient" 85:19 85:19||t="coref person"||c="her" 86:0 86:0
+c="patient" 67:0 67:0||t="coref person"||c="her" 67:12 67:12
+c="the patient 's mother" 97:7 97:10||t="coref person"||c="who" 97:12 97:12
+c="she" 89:14 89:14||t="coref person"||c="patient" 90:0 90:0
+c="the patient" 14:11 14:12||t="coref person"||c="patient" 15:0 15:0
+c="beta blocker" 13:17 13:18||t="coref treatment"||c="beta blocker" 65:29 65:30
+c="hypoxic" 75:2 75:2||t="coref problem"||c="patient 's hypoxia" 77:0 77:2
+c="the patient" 89:11 89:12||t="coref person"||c="she" 89:14 89:14
+c="patient" 12:0 12:0||t="coref person"||c="the patient" 14:11 14:12
+c="unresponsive" 90:1 90:1||t="coref problem"||c="without corneal reflexes , spontaneous breathing , heart sounds , or palpable pulses" 92:4 92:16
+c="this patient" 108:19 108:20||t="coref person"||c="she" 108:29 108:29
+c="her" 98:14 98:14||t="coref person"||c="this patient" 108:19 108:20
+c="patient" 92:0 92:0||t="coref person"||c="patient" 93:0 93:0
+c="patient" 93:0 93:0||t="coref person"||c="patient" 94:0 94:0
+c="patient" 86:12 86:12||t="coref person"||c="the patient" 87:5 87:6
+c="mri" 81:4 81:4||t="coref test"||c="mri" 83:0 83:0
+c="she" 78:0 78:0||t="coref person"||c="patient" 79:2 79:2
+c="patient" 94:0 94:0||t="coref person"||c="patient" 95:6 95:6
+c="she" 108:29 108:29||t="coref person"||c="she" 108:40 108:40
+c="dnr" 96:9 96:9||t="coref treatment"||c="dnr" 97:21 97:21
+c="which" 17:9 17:9||t="coref problem"||c="sinus bradycardia" 57:0 57:1
+c="patient" 96:7 96:7||t="coref person"||c="the patient" 97:7 97:8

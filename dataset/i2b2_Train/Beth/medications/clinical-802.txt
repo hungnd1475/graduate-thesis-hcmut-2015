@@ -1,0 +1,83 @@
+27	He was given Percocet for back pain , Lasix 80 mg IV , and Combivent neb .|Percocet[1402,1410]|||||||||C0086787|42844|161|paracetamol
+27	He was given Percocet for back pain , Lasix 80 mg IV , and Combivent neb .|Lasix[1427,1432]|||80mg[1433,1438]||IV[1439,1441]||||C1599049|566621|4603|furosemide
+27	He was given Percocet for back pain , Lasix 80 mg IV , and Combivent neb .|Combivent[1448,1457]|||||neb[1458,1461]||||C0591282|151539|435|salbutamol
+30	He was quickly weaned to 3L O2 via NC , O2 sats 100% .|sats[1624,1628]|||100[1629,1632]|||||||483980|483980|sats
+161	He was started on a lasix gtt the night of admission with a good response .|lasix[8408,8413]|||||||||C0699992|202991|4603|furosemide
+162	He continued to diurese and he was moved to the floor since he no longer required intensive level care .|diurese[8480,8487]||||||||||216675|10772|trichlormethiazide
+164	After several days , he became hypotensive and triggered for BPs 60s/30s .|BPs[8681,8684]|||||||several days[8626,8638]|||899894|899894|bps
+166	He was transferred back to the CCU and started on a dopamine gtt .|dopamine[8812,8820]|||||||||C0013030|3628|3628|dopamine
+167	He diuresed well on the dopamine gtt and his BP was supported .|dopamine[8851,8859]|||||||||C0013030|3628|3628|dopamine
+168	Gradually , the dopamine gtt was weaned .|dopamine[8907,8915]|||||||||C0013030|3628|3628|dopamine
+172	The Lasix drip was eventually changed to IV Lasix boluses , with a net diuresis of over 36 liters for the hospital stay .|Lasix[9436,9441]|||36liters[9520,9529]||IV[9473,9475]||||C0699992|202991|4603|furosemide
+172	The Lasix drip was eventually changed to IV Lasix boluses , with a net diuresis of over 36 liters for the hospital stay .|Lasix[9476,9481]|||||drip[9442,9446]||||C0699992|202991|4603|furosemide
+173	He was then transitioned to oral Lasix for maintainence .|Lasix[9587,9592]|||||oral[9582,9586]||||C3229626|1175647|4603|furosemide
+181	He was continued on Aspirin , Metoprolol and Lipitor with no further issues .|Aspirin[10150,10157]|||||||||C0004057|1191|1191|acetylsalicylic acid
+181	He was continued on Aspirin , Metoprolol and Lipitor with no further issues .|Metoprolol[10160,10170]|||||||||C0025859|6918|6918|metoprolol
+181	He was continued on Aspirin , Metoprolol and Lipitor with no further issues .|Lipitor[10175,10182]|||||||||C0593906|153165|83367|atorvastatin
+184	He is on Amiodarone for post-op afib and this was continued this entire admission .|Amiodarone[10301,10311]|||||||||C0002598|703|703|amiodarone
+186	Anti-coagulation was started with Warfarin 5 mg with a goal of 2-3 and a plan for cardioversion in 6 weeks .|Warfarin[10513,10521]|||5mg[10522,10526]||||6 weeks[10578,10585]||C2709919|855331|11289|warfarin
+187	The patient 's INR became supratherapeutic and Coumadin was held .|Coumadin[10635,10643]|||||||||C0699129|202421|11289|warfarin
+188	His coumadin was transitioned to 2 mg and then 1 mg .|coumadin[10659,10667]|||2mg[10688,10692]||||||C2709905|855303|11289|warfarin
+197	On discharge , the patient was maintained on standing diuretics as well as PRN nebs and INH COPD meds .|diuretics[11427,11436]|||||INH[11461,11464]|||PRN[11448,11451]|C0012798|3567|3567|diuretics
+200	This acutely worsened on 2017-09-18 , when the patient was found to have mental status changes and an ABG revealed a CO2 of over 100 , likley due to a depressed respiratory drive secondary to sedatives given for agitation on top of a preexisting alkalosis .|sedatives[11798,11807]|||||||||C1875740|691770|691770|sedatives
+208	The patient was started on Glargine for tighter glycemic control and was covered with an insulin sliding scale .|Glargine[12578,12586]|||sliding scale[12648,12661]|||||||274783|274783|insulin glargine,hum.rec.anlog
+212	The patient was continued on his statin .|statin[12807,12813]||||||||||||
+219	His mental status did clear somewhat with the addition of standing lactulose ; he was discharged on this medication .|lactulose[13332,13341]|||||||||C0022957|6218|6218|lactulose
+221	The patient was continued on his outpatient dose of Levothyroxine .|Levothyroxine[13455,13468]|||||||||C0040165|10582|10582|levothyroxine
+223	The patient was started on levofloxacin at Newton-Wellesley Hospital for a question of UTI based on U/A positive for WBC .|levofloxacin[13510,13522]|||||||||C0282386|82122|82122|levofloxacin
+226	The patient was treated with a Lidocaine patch and Percocet prn .|Lidocaine[13743,13752]||patch[13753,13758]|||||||C1251704|377476|6387|lidocaine (obsolete)
+226	The patient was treated with a Lidocaine patch and Percocet prn .|Percocet[13763,13771]||||||||prn[13772,13775]|C0086787|42844|161|paracetamol
+227	Stronger narcotics were avoided given somnolence and MS changes .|narcotics[13787,13796]||||||||||||
+231	For the left gluteal pressure ulcer , they recommended gentle cleansing with normal saline or commercial wound cleaner , thin layer of Duoderm gel , air dry , allevyn foam adhesive over the site , and change every 2 days or prn .|normal saline[14084,14097]|||||||||C0445115|125464|125464|normal saline
+231	For the left gluteal pressure ulcer , they recommended gentle cleansing with normal saline or commercial wound cleaner , thin layer of Duoderm gel , air dry , allevyn foam adhesive over the site , and change every 2 days or prn .|Duoderm[14142,14149]||foam[14174,14178]||||every 2 days[14215,14227]||prn[14231,14234]|C0058802|23717|23717|duoderm
+232	For the left chest wound , they recommended cleansing with commercial wound cleanser , pat dry , pack aquacel AG rope and moisten with saline , cover with dry gauze and change daily .|saline[14372,14378]||pack[14334,14338]||||daily[14413,14418]||||789982|789982|saline
+243	Levothyroxine 100 mcg PO daily|Levothyroxine[14843,14856]|||100mcg[14857,14864]||PO[14865,14867]|daily[14868,14873]||||966404|10582|levothyroxine
+244	Duloxetine 20 mg PO QHS|Duloxetine[14874,14884]|||20mg[14885,14890]||PO[14891,14893]|QHS[14894,14897]|||C1621172|542051|72625|duloxetine
+245	Ondansetron PRN|Ondansetron[14898,14909]||||||||PRN[14910,14913]|C0061851|26225|26225|ondansetron
+246	Percocet 1 tab PRN|Percocet[14914,14922]||||1 tab[14923,14928]||||PRN[14929,14932]|C0086787|42844|161|paracetamol
+247	Senna PRN|Senna[14933,14938]||||||||PRN[14939,14942]|C0074332|36387|36387|sennosides
+248	Colace PRN|Colace[14943,14949]||||||||PRN[14950,14953]|C0282139|82000|82003|docusate
+249	Lasix 80 mg PO BID|Lasix[14954,14959]|||80mg[14960,14965]||PO[14966,14968]|BID[14969,14972]|||C0706648|205732|4603|furosemide
+250	Lactulose PRN|Lactulose[14973,14982]||||||||PRN[14983,14986]|C0022957|6218|6218|lactulose
+251	Lidocaine patch|Lidocaine[14987,14996]||patch[14997,15002]|||||||C1251704|377476|6387|lidocaine (obsolete)
+252	Nystatin powder|Nystatin powder[15003,15018]||||||||||312055|7597|nystatin
+253	Gabapentin 300 mg PO TID|Gabapentin[15019,15029]|||300mg[15030,15036]||PO[15037,15039]|TID[15040,15043]|||C1509488|476677|25480|gabapentin
+254	Alb nebs|Alb[15044,15047]||||||||||||
+255	Fluticasone / Salmeterol|Fluticasone / Salmeterol[15053,15077]|||||||||C0939232|284635|284635|salmeterol and fluticasone
+256	Tiotropium Bromide|Tiotropium Bromide[15078,15096]|||||||||C1306772|393575|393575|tiotropium bromide
+257	Spironolactone 25 mg PO daily|Spironolactone[15097,15111]|||25mg[15112,15117]||PO[15118,15120]|daily[15121,15126]|||C0980346|313096|9997|spironolactone
+258	Epoetin 4000 units MWF|Epoetin[15127,15134]|||4000[15135,15139]|||MWF[15146,15149]|||C0992300|317363|105694|epoetin alfa,recombinant
+259	RISS|RISS[15150,15154]||||||||||||
+260	Amiodarone 200 mg PO daily|Amiodarone[15155,15165]|||200mg[15166,15172]||PO[15173,15175]|daily[15176,15181]||||833528|703|amiodarone
+261	Calcium Acetate 667 mg PO TID|Calcium Acetate[15182,15197]|||667mg[15198,15204]||PO[15205,15207]|TID[15208,15211]||||359296|214342|calcium acetate
+262	SubQ Heparin|Heparin[15217,15224]|||||SubQ[15212,15216]||||C0019134|235473|235473|heparin,porcine
+263	Pantoprazole 40 mg PO daily|Pantoprazole[15225,15237]|||40mg[15238,15243]||PO[15244,15246]|daily[15247,15252]|||C2341545|762829|40790|pantoprazole
+264	Simvastatin 40 mg PO QHS|Simvastatin[15253,15264]|||40mg[15265,15270]||PO[15271,15273]|QHS[15274,15277]|||C0690321|198211|36567|simvastatin
+265	ASA 81 mg PO daily|ASA[15278,15281]|||81mg[15282,15287]||PO[15288,15290]|daily[15291,15296]||||243670|1191|acetylsalicylic acid
+266	MVI|MVI[15297,15300]|||||||||C1966765|747667|747667|Multivitamin Injection
+267	Tylenol PRN|Tylenol[15301,15308]||||||||PRN[15309,15312]||202433|161|paracetamol
+269	1. Docusate Sodium 100 mg Capsule Sig : One ( 1 ) Capsule PO TID ( 3 times a day ) as needed for Constipation .|Docusate Sodium[15340,15355]||Capsule[15363,15370]|100mg[15356,15362]||PO[15395,15397]|TID[15398,15401]||as needed[15420,15429]||1115005|82003|docusate
+271	2. Levothyroxine 100 mcg Tablet Sig : One ( 1 ) Tablet PO DAILY ( Daily ) .|Levothyroxine[15493,15506]||Tablet[15515,15521]|100mcg[15507,15514]||PO[15545,15547]|DAILY[15548,15553]||||892246|10582|levothyroxine
+273	3. Duloxetine 20 mg Capsule , Delayed Release( E.C. ) Sig : One ( 1 ) Capsule , Delayed Release ( E.C. ) PO QHS ( once a day ( at bedtime ) ) .|Duloxetine[15609,15619]||Capsule[15626,15633]|20mg[15620,15625]||PO[15711,15713]|QHS[15714,15717]|||C1627784|483045|72625|duloxetine
+274	4. Lactulose 10 g / 15 mL Syrup Sig : Thirty ( 30 ) ML PO BID ( 2 times a day ) .|Lactulose[15753,15762]|||10 g / 15 mL[15763,15775]||PO[15805,15807]|BID[15808,15811]|||C1252332|378092|6218|lactulose
+275	5. Fluticasone - Salmeterol 100-50 mcg / Dose Disk with Device Sig : One ( 1 ) Disk with Device Inhalation BID ( 2 times a day ) .|Fluticasone - Salmeterol[15835,15859]||Disk[15878,15882]|100 - 50mcg[15860,15870]||Inhalation[15928,15938]|BID[15939,15942]|||null|1359779|36117|salmeterol
+277	6. Tiotropium Bromide 18 mcg Capsule , w/ Inhalation Device Sig : One ( 1 ) Cap Inhalation DAILY ( Daily ) .|Tiotropium Bromide[16016,16034]||Capsule[16042,16049]|18mcg[16035,16041]||Inhalation[16055,16065]|DAILY[16104,16109]|||null|485032|69120|tiotropium
+279	7. Amiodarone 200 mg Tablet Sig : One ( 1 ) Tablet PO DAILY ( Daily ) .|Amiodarone[16153,16163]||Tablet[16171,16177]|200mg[16164,16170]||PO[16201,16203]|DAILY[16204,16209]||||833528|703|amiodarone
+281	8. Calcium Acetate 667 mg Capsule Sig : One ( 1 ) Capsule PO TID W/MEALS ( 3 TIMES A DAY WITH MEALS ) .|Calcium Acetate[16265,16280]||Capsule[16288,16295]|667mg[16281,16287]||PO[16320,16322]|TID[16323,16326]||||359296|214342|calcium acetate
+283	9. Oxycodone - Acetaminophen 5-325 mg Tablet Sig : 1-2 Tablets PO Q4-6H ( every 4 to 6 hours ) as needed for pain .|Oxycodone - Acetaminophen[16410,16435]||Tablet[16445,16451]|5 - 325mg[16436,16444]|1 - 2 Tablets[16458,16469]|PO[16470,16472]|Q4 - 6 H[16473,16478]||as needed[16502,16511]|C0717368|214183|214183|oxycodone-acetaminophen
+285	10. Multivitamin Capsule Sig : One ( 1 ) Cap PO DAILY ( Daily ) .|Multivitamin[16567,16579]||Capsule[16580,16587]|||PO[16608,16610]|DAILY[16611,16616]||||89905|89905|multiple vitamins
+287	11. Miconazole Nitrate 2 % Powder Sig : One ( 1 ) Appl Topical BID ( 2 times a day ) .|Miconazole Nitrate 2 % Powder[16669,16698]|||||Topical[16720,16727]|BID[16728,16731]|||C1878057|998483|6932|miconazole
+288	12. Aspirin 81 mg Tablet , Delayed Release ( E.C. ) Sig : One ( 1 ) Tablet , Delayed Release ( E.C. ) PO DAILY ( Daily ) .|Aspirin[16756,16763]||Tablet[16770,16776]|81mg[16764,16769]||PO[16854,16856]|DAILY[16857,16862]||||243670|1191|acetylsalicylic acid
+290	13. Simvastatin 40 mg Tablet Sig : One ( 1 ) Tablet PO QHS ( once a day ( at bedtime ) ) .|Simvastatin[16945,16956]||Tablet[16963,16969]|40mg[16957,16962]||PO[16993,16995]|QHS[16996,16999]|||C0690321|198211|36567|simvastatin
+292	14. Pantoprazole 40 mg Tablet , Delayed Release ( E.C. ) Sig : One ( 1 ) Tablet , Delayed Release ( E.C. ) PO DAILY ( Daily ) .|Pantoprazole[17076,17088]||Tablet[17095,17101]|40mg[17089,17094]||PO[17179,17181]|DAILY[17182,17187]|||C0981697|314200|40790|pantoprazole
+294	15. Lidocaine 5 %( 700 mg / patch ) Adhesive Patch , Medicated Sig : Two ( 2 ) Adhesive Patch , Medicated Topical DAILY ( Daily ) .|Lidocaine[17270,17279]||patch[17294,17299]|5[17280,17281]||Topical[17372,17379]|DAILY[17380,17385]|||C0794042|251919|6387|lidocaine (obsolete)
+296	16. Furosemide 40 mg Tablet Sig : One ( 1 ) Tablet PO BID ( 2 times a day ) .|Furosemide[17462,17472]||Tablet[17479,17485]|40mg[17473,17478]||PO[17509,17511]|BID[17512,17515]|||C0981442|313988|4603|furosemide
+298	17. Ferrous Sulfate 325 ( 65 ) mg Tablet Sig : One ( 1 ) Tablet PO DAILY ( Daily ) .|Ferrous Sulfate[17580,17595]||Tablet[17610,17616]|325[17596,17599]||PO[17640,17642]|DAILY[17643,17648]||||310325|24947|ferrous sulfate
+300	18. Epoetin Alfa 4,000 unit/mL Solution Sig : One ( 1 ) Injection QMOWEFR ( Monday - Wednesday - Friday ) .|Epoetin Alfa[17705,17717]|||4 , 000unit / mL[17718,17731]|||Monday - Wednesday - Friday[17777,17804]|||null|239999|105694|epoetin alfa,recombinant
+302	19. Spironolactone 25 mg Tablet Sig : Two ( 2 ) Tablet PO DAILY ( Daily ) .|Spironolactone[17841,17855]||Tablet[17862,17868]|25mg[17856,17861]||PO[17892,17894]|DAILY[17895,17900]|||C0980346|313096|9997|spironolactone
+304	20. Albuterol 90 mcg/Actuation Aerosol Sig : 4-6 Puffs Inhalation Q6H ( every 6 hours ) .|Albuterol[17957,17966]|||90mcg[17967,17973]|4 - 6 Puffs[17998,18007]|Inhalation[18008,18018]|Q6H[18019,18022]|||C1615173|582498|435|salbutamol
+306	21. Metoprolol Succinate 25 mg Tablet Sustained Release 24HR Sig : One ( 1 ) Tablet Sustained Release 24HR PO DAILY ( Daily ) .|Metoprolol Succinate[18075,18095]||Tablet[18102,18108]|25mg[18096,18101]||PO[18178,18180]|DAILY[18181,18186]|24 HR[18127,18131]||null|866924|6918|metoprolol
+307	22. Finasteride 5 mg Tablet Sig : One ( 1 ) Tablet PO DAILY ( Daily ) .|Finasteride[18203,18214]||Tablet[18220,18226]|5mg[18215,18219]||PO[18250,18252]|DAILY[18253,18258]||||310346|25025|finasteride
+309	23. Gabapentin 300 mg Capsule Sig : One ( 1 ) Capsule PO BID ( 2 times a day ) .|Gabapentin[18315,18325]||Capsule[18333,18340]|300mg[18326,18332]||PO[18365,18367]|BID[18368,18371]||||310431|25480|gabapentin
+311	24. Warfarin 1 mg Tablet Sig : One ( 1 ) Tablet PO at bedtime : Please monitor INR with goal 02-24 .|Warfarin[18437,18445]||Tablet[18451,18457]|1mg[18446,18450]||PO[18481,18483]|at bedtime[18484,18494]||||855288|11289|warfarin
+327	Adhere to 2 gm sodium diet|sodium[19058,19064]|||2gm[19053,19057]||||||C0989978|316677|56443|sodium acet (obsolete)

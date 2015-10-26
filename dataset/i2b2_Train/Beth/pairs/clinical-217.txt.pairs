@@ -1,0 +1,25 @@
+c="the patient" 14:0 14:1||t="coref person"||c="he" 15:0 15:0
+c="the patient" 40:8 40:9||t="coref person"||c="the patient" 40:15 40:16
+c="the patient" 41:0 41:1||t="coref person"||c="the patient" 43:0 43:1
+c="the patient" 43:0 43:1||t="coref person"||c="his" 43:9 43:9
+c="his" 43:9 43:9||t="coref person"||c="his" 43:14 43:14
+c="the patient" 44:6 44:7||t="coref person"||c="the patient" 45:0 45:1
+c="his" 46:6 46:6||t="coref person"||c="the patient" 47:0 47:1
+c="the patient" 48:10 48:11||t="coref person"||c="the patient" 51:0 51:1
+c="the patient" 51:0 51:1||t="coref person"||c="the patient" 58:1 58:2
+c="his" 58:7 58:7||t="coref person"||c="he" 58:10 58:10
+c="he" 58:10 58:10||t="coref person"||c="the patient" 59:1 59:2
+c="the patient" 59:1 59:2||t="coref person"||c="the patient" 60:1 60:2
+c="the patient" 47:0 47:1||t="coref person"||c="the patient" 48:10 48:11
+c="the patient" 45:0 45:1||t="coref person"||c="the patient" 46:0 46:1
+c="the patient" 39:0 39:1||t="coref person"||c="the patient" 40:8 40:9
+c="resuscitation" 38:9 38:9||t="coref treatment"||c="aggressive resuscitation" 39:4 39:5
+c="his" 43:14 43:14||t="coref person"||c="the patient" 44:6 44:7
+c="the patient" 58:1 58:2||t="coref person"||c="his" 58:7 58:7
+c="the patient" 40:15 40:16||t="coref person"||c="the patient" 41:0 41:1
+c="every 4-hour hematocrit checks" 41:14 41:17||t="coref test"||c="his hematocrit" 43:14 43:15
+c="he" 15:0 15:0||t="coref person"||c="the patient" 38:0 38:1
+c="the patient" 38:0 38:1||t="coref person"||c="the patient" 39:0 39:1
+c="the patient" 60:1 60:2||t="coref person"||c="the patient" 63:0 63:1
+c="the left pubic rami fractures" 47:12 47:16||t="coref problem"||c="left superior/inferior pubic rami fractures" 55:1 55:5
+c="the patient" 46:0 46:1||t="coref person"||c="his" 46:6 46:6
