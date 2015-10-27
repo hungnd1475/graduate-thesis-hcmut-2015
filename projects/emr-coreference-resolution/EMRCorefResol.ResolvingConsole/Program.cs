@@ -85,7 +85,7 @@ namespace HCMUT.EMRCorefResol.ResolvingConsole
             }
             else
             {
-                if (string.IsNullOrEmpty(args.ScoresFile))
+                if (string.IsNullOrEmpty(args.AverageFile))
                 {
                     Console.WriteLine("Score file must be set if there are many EMRs to be resolved.");
                     return;
@@ -175,7 +175,7 @@ namespace HCMUT.EMRCorefResol.ResolvingConsole
                         e.Recall / mLength, e.FMeasure / mLength, e.MetricName);                    
                 }
 
-                File.WriteAllText(args.ScoresFile, StringifyScores(avgEvals));
+                File.WriteAllText(args.AverageFile, StringifyScores(avgEvals));
                 Console.WriteLine("Done!");
             }
         }
@@ -224,8 +224,8 @@ namespace HCMUT.EMRCorefResol.ResolvingConsole
                 .Required()
                 .WithDescription("Set output directory (required).");
 
-            p.Setup(a => a.ScoresFile)
-                .As('s', "score")
+            p.Setup(a => a.AverageFile)
+                .As('a', "avgfile")
                 .SetDefault(null)
                 .WithDescription("Set score file path (required if many EMRs to be resolved).");
 
