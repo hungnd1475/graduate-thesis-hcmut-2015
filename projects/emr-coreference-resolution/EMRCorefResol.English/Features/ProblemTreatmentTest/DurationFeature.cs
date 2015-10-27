@@ -13,7 +13,9 @@ namespace HCMUT.EMRCorefResol.English.Features
         {
             if (ana == null || ante == null) return;
 
-            if(string.Equals(ana.Duration, ante.Duration, StringComparison.InvariantCultureIgnoreCase))
+            if(ana.Duration.Length > 0 &&
+                ante.Duration.Length > 0 &&
+                string.Equals(ana.Duration, ante.Duration, StringComparison.InvariantCultureIgnoreCase))
             {
                 SetCategoricalValue(1);
             }

@@ -13,8 +13,8 @@ namespace HCMUT.EMRCorefResol.English.Features
         {
             if (ana == null || ante == null) return;
 
-            if(string.Equals(ana.DoseAmount, ante.DoseAmount, StringComparison.InvariantCultureIgnoreCase) ||
-                string.Equals(ana.Strength, ante.Strength, StringComparison.InvariantCultureIgnoreCase))
+            if((ana.DoseAmount.Length > 0 && ante.DoseAmount.Length > 0 && string.Equals(ana.DoseAmount, ante.DoseAmount, StringComparison.InvariantCultureIgnoreCase)) ||
+                (ana.Strength.Length > 0 && ante.Strength.Length > 0 && string.Equals(ana.Strength, ante.Strength, StringComparison.InvariantCultureIgnoreCase)))
             {
                 SetCategoricalValue(1);
             }
