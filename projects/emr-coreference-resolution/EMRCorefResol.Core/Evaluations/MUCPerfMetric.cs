@@ -17,26 +17,48 @@ namespace HCMUT.EMRCorefResol.Evaluations
         {
             var evals = new Dictionary<ConceptType, Evaluation>();
 
-            foreach (var type in Evaluation.Types)
+            foreach (var type in Evaluation.ConceptTypes)
             {
                 var tSystemChains = systemChains.GetChainsOfType(type);
                 var tGroundTruth = groundTruth.GetChainsOfType(type);
 
-                double u = 0d, l = 0d;
-                foreach (var s in tSystemChains)
+                double p, r;
+                if (tSystemChains.Count == 0 && tGroundTruth.Count == 0)
                 {
-                    u += (s.Count - m(s, tGroundTruth));
-                    l += (s.Count - 1);
+                    p = r = 1d;
                 }
-                var p = (u == 0d && l == 0d) ? 1d : u / l;
+                else
+                {
+                    if (tSystemChains.Count == 0)
+                    {
+                        p = 0d;
+                    }
+                    else
+                    {
+                        double u = 0d, l = 0d;
+                        foreach (var s in tSystemChains)
+                        {
+                            u += (s.Count - m(s, tGroundTruth));
+                            l += (s.Count - 1);
+                        }
+                        p = u / l;
+                    }
 
-                u = 0d; l = 0d;
-                foreach (var g in tGroundTruth)
-                {
-                    u += (g.Count - m(g, tSystemChains));
-                    l += (g.Count - 1);
-                }
-                var r = (u == 0d && l == 0d) ? 1d : u / l;
+                    if (tGroundTruth.Count == 0)
+                    {
+                        r = 0d;
+                    }
+                    else
+                    {
+                        double u = 0d, l = 0d;
+                        foreach (var g in tGroundTruth)
+                        {
+                            u += (g.Count - m(g, tSystemChains));
+                            l += (g.Count - 1);
+                        }
+                        r = u / l;
+                    }
+                }  
 
                 var f = 2 * p * r / (p + r);
                 evals.Add(type, new Evaluation(p, r, f, Name));
@@ -60,7 +82,7 @@ namespace HCMUT.EMRCorefResol.Evaluations
             }
 
             var remain = chain.Except(overlap);
-            r += remain.Count();
+            r += remain.Count;
 
             return r;
         }

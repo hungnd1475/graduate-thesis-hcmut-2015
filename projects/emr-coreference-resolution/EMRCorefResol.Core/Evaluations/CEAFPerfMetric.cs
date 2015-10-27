@@ -18,7 +18,7 @@ namespace HCMUT.EMRCorefResol.Evaluations
         {
             var evals = new Dictionary<ConceptType, Evaluation>();
 
-            foreach (var type in Evaluation.Types)
+            foreach (var type in Evaluation.ConceptTypes)
             {
                 var tGroundTruth = groundTruth.GetChainsOfType(type);
                 var tSystemChains = systemChains.GetChainsOfType(type);
@@ -44,13 +44,13 @@ namespace HCMUT.EMRCorefResol.Evaluations
             return evals;
         }
 
-        private double phi4(CorefChain a, CorefChain b)
+        private static double phi4(CorefChain a, CorefChain b)
         {
             var o = a.Intersect(b);
             return 2d * o.Count / (a.Count + b.Count);
         }
 
-        private double findBestPhi(CorefChainCollection c1, CorefChainCollection c2)
+        private static double findBestPhi(CorefChainCollection c1, CorefChainCollection c2)
         {
             var n = c2.Count;
             var phiMatrix = new double[n, n];
@@ -185,7 +185,7 @@ namespace HCMUT.EMRCorefResol.Evaluations
             return bestPhi;
         }
 
-        private void starMatrix(double[,] matrix, int n, bool[,] starredCells)
+        private static void starMatrix(double[,] matrix, int n, bool[,] starredCells)
         {
             for (int i = 0; i < n; i++)
             {
@@ -217,7 +217,7 @@ namespace HCMUT.EMRCorefResol.Evaluations
             }
         }
 
-        private int coverCols(bool[] coveredCols, bool[,] starredCells, int n)
+        private static int coverCols(bool[] coveredCols, bool[,] starredCells, int n)
         {
             var nColCovered = 0;
 
@@ -237,7 +237,7 @@ namespace HCMUT.EMRCorefResol.Evaluations
             return nColCovered;
         }
 
-        private bool primeMatrix(double[,] matrix, int n, bool[,] starredCells, bool[,] primedCells,
+        private static bool primeMatrix(double[,] matrix, int n, bool[,] starredCells, bool[,] primedCells,
             bool[] coveredRows, bool[] coveredCols, out double min, out Coordinate primeZ)
         {
             min = double.MaxValue;
@@ -286,7 +286,7 @@ namespace HCMUT.EMRCorefResol.Evaluations
             return true;
         }
 
-        private double findMin(double[,] matrix, int n, bool[] coveredRows, bool[] coveredCols)
+        private static double findMin(double[,] matrix, int n, bool[] coveredRows, bool[] coveredCols)
         {
             var min = double.MaxValue;
             for (int i = 0; i < n; i++)
@@ -306,7 +306,7 @@ namespace HCMUT.EMRCorefResol.Evaluations
             return min;
         }
 
-        private bool hasUncoveredZeros(double[,] matrix, int n, bool[] coveredRows, bool[] coveredCols)
+        private static bool hasUncoveredZeros(double[,] matrix, int n, bool[] coveredRows, bool[] coveredCols)
         {
             for (int i = 0; i < n; i++)
             {
@@ -322,7 +322,7 @@ namespace HCMUT.EMRCorefResol.Evaluations
             return false;
         }
 
-        private void toMinimization(double[,] matrix, int n)
+        private static void toMinimization(double[,] matrix, int n)
         {
             var max = double.MinValue;
             for (int i = 0; i < n; i++)
@@ -345,7 +345,7 @@ namespace HCMUT.EMRCorefResol.Evaluations
             }
         }
 
-        private void reduceRows(double[,] matrix, int n)
+        private static void reduceRows(double[,] matrix, int n)
         {
             for (int i = 0; i < n; i++)
             {

@@ -13,9 +13,7 @@ namespace HCMUT.EMRCorefResol
     /// </summary>
     public class CorefChain : IReadOnlyCollection<Concept>
     {
-        public static readonly CorefChain Empty = new CorefChain();
-
-        private readonly HashSet<Concept> _chain;
+        private readonly HashSet<Concept> _conceptSet;
 
         /// <summary>
         /// Gets the coreference type of the chain.
@@ -27,40 +25,40 @@ namespace HCMUT.EMRCorefResol
         /// </summary>
         public int Count
         {
-            get { return _chain.Count; }
+            get { return _conceptSet.Count; }
         }
 
         /// <summary>
         /// Initializes a <see cref="CorefChain"/> instance from a set of concepts.
         /// </summary>
-        /// <param name="chain">The set of concepts represents the chain.</param>
+        /// <param name="conceptSet">The set of concepts represents the chain.</param>
         /// <param name="antecedent">The antecedent of the chain.</param>
         /// <param name="type">The coreference type of the chain.</param>
-        public CorefChain(HashSet<Concept> chain, ConceptType type)
+        public CorefChain(HashSet<Concept> conceptSet, ConceptType type)
         {
-            _chain = chain;
+            _conceptSet = conceptSet;
             Type = type;
         }
 
         /// <summary>
         /// Initializes a <see cref="CorefChain"/> instance from a sequence of concepts.
         /// </summary>
-        /// <param name="chain">The sequence of concepts represents the chain.</param>
+        /// <param name="conceptSet">The sequence of concepts represents the chain.</param>
         /// <param name="antecedent">The antecedent of the chain.</param>
         /// <param name="type">The coreference type of the chain.</param>
-        public CorefChain(IEnumerable<Concept> chain, ConceptType type)
-            : this(new HashSet<Concept>(chain), type)
+        public CorefChain(IEnumerable<Concept> conceptSet, ConceptType type)
+            : this(new HashSet<Concept>(conceptSet), type)
         { }
 
         private CorefChain()
         {
-            _chain = new HashSet<Concept>();
+            _conceptSet = new HashSet<Concept>();
             Type = ConceptType.None;
         }
 
         public bool Contains(Concept concept)
         {
-            return _chain.Contains(concept);
+            return _conceptSet.Contains(concept);
         }
 
         public CorefChain Intersect(CorefChain other)
@@ -71,16 +69,34 @@ namespace HCMUT.EMRCorefResol
                 GenericHelper.Swap(ref a, ref b);
             }
 
-            var concepts = new HashSet<Concept>();
+            var intersected = new HashSet<Concept>();
             foreach (var c in a)
             {
                 if (b.Contains(c))
                 {
-                    concepts.Add(c);
+                    intersected.Add(c);
                 }
             }
 
-            return new CorefChain(concepts, ConceptType.None);
+            return new CorefChain(intersected, Type);
+        }
+
+        public CorefChain Except(CorefChain other)
+        {
+            return Except(other._conceptSet);
+        }
+
+        public CorefChain Except(HashSet<Concept> concepts)
+        {
+            var excepted = new HashSet<Concept>();
+            foreach (var c in _conceptSet)
+            {
+                if (!concepts.Contains(c))
+                {
+                    excepted.Add(c);
+                }
+            }
+            return new CorefChain(excepted, Type);
         }
 
         /// <summary>
@@ -95,7 +111,7 @@ namespace HCMUT.EMRCorefResol
 
         public IEnumerator<Concept> GetEnumerator()
         {
-            return _chain.GetEnumerator();
+            return _conceptSet.GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()

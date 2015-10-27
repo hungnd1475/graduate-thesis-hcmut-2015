@@ -8,7 +8,7 @@ namespace HCMUT.EMRCorefResol.Evaluations
 {
     public struct Evaluation
     {
-        public static readonly ConceptType[] Types =
+        public static readonly ConceptType[] ConceptTypes =
         {
             ConceptType.None,
             ConceptType.Person,
