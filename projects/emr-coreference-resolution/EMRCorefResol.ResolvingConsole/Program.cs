@@ -92,10 +92,10 @@ namespace HCMUT.EMRCorefResol.ResolvingConsole
                 }
 
                 var emrCollection = new EMRCollection(args.EMRDirs);
-                var emrCount = 10;
+                var emrCount = args.EMRCount > 0 ? args.EMRCount : emrCollection.Count;
                 var evals = new Dictionary<ConceptType, Evaluation>[emrCount][];
 
-                for (int i = 0; i < emrCount; i++)
+                for (int i = 0; i < emrCount && i < emrCollection.Count; i++)
                 {
                     var emrFile = emrCollection.GetEMRPath(i);
                     var emrName = Path.GetFileName(emrFile);
@@ -228,6 +228,11 @@ namespace HCMUT.EMRCorefResol.ResolvingConsole
                 .As('s', "score")
                 .SetDefault(null)
                 .WithDescription("Set score file path (required if many EMRs to be resolved).");
+
+            p.Setup(a => a.EMRCount)
+                .As('n', "count")
+                .SetDefault(0)
+                .WithDescription("Set number of emr to resolve (optional).");
 
             p.SetupHelp("?").Callback(() => DescHelpOption.ShowHelp(p.Options));
 

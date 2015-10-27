@@ -23,21 +23,28 @@ namespace HCMUT.EMRCorefResol.Evaluations
                 var tGroundTruth = groundTruth.GetChainsOfType(type);
                 var tSystemChains = systemChains.GetChainsOfType(type);
 
-                var c1 = tGroundTruth;
-                var c2 = tSystemChains;
-                if (c1.Count > c2.Count)
+                double p, r;
+                if (tGroundTruth.Count == 0 && tSystemChains.Count == 0)
                 {
-                    GenericHelper.Swap(ref c1, ref c2);
+                    p = r = 1d;
+                }
+                else
+                {
+                    var c1 = tGroundTruth;
+                    var c2 = tSystemChains;
+                    if (c1.Count > c2.Count)
+                    {
+                        GenericHelper.Swap(ref c1, ref c2);
+                    }
+
+                    double bestPhi = 0d;
+                    bestPhi = findBestPhi(c1, c2);
+
+                    p = (tSystemChains.Count == 0) ? 0d : bestPhi / tSystemChains.Aggregate(0d, (t, s) => t + phi4(s, s));
+                    r = (tGroundTruth.Count == 0) ? 0d : bestPhi / tGroundTruth.Aggregate(0d, (t, g) => t + phi4(g, g));
                 }
 
-                double bestPhi = 0d;
-                bestPhi = findBestPhi(c1, c2);
-
-                var bothNone = c1.Count == 0 && c2.Count == 0;
-                var p = bothNone ? 1d : bestPhi / tSystemChains.Aggregate(0d, (t, s) => t + phi4(s, s));
-                var r = bothNone ? 1d : bestPhi / tGroundTruth.Aggregate(0d, (t, g) => t + phi4(g, g));
-                var f = 2 * p * r / (p + r);
-
+                var f = (p == 0 && r == 0) ? 0d : 2 * p * r / (p + r);
                 evals.Add(type, new Evaluation(p, r, f, Name));
             }
 

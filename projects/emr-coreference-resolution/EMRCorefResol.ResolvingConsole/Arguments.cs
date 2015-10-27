@@ -18,5 +18,6 @@ namespace HCMUT.EMRCorefResol.ResolvingConsole
         public ResolMethod ResolMethod { get; set; }
         public string OutputDir { get; set; }
         public string ScoresFile { get; set; }
+        public int EMRCount { get; set; }
     }
 }

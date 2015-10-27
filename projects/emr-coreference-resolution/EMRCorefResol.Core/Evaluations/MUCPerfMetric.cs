@@ -60,7 +60,7 @@ namespace HCMUT.EMRCorefResol.Evaluations
                     }
                 }  
 
-                var f = 2 * p * r / (p + r);
+                var f = (p == 0 && r == 0) ? 0d : 2 * p * r / (p + r);
                 evals.Add(type, new Evaluation(p, r, f, Name));
             }
             return evals;
