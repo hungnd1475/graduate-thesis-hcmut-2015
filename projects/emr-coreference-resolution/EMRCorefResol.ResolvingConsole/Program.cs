@@ -85,17 +85,29 @@ namespace HCMUT.EMRCorefResol.ResolvingConsole
             }
             else
             {
-                if (string.IsNullOrEmpty(args.AverageFile))
-                {
-                    Console.WriteLine("Score file must be set if there are many EMRs to be resolved.");
-                    return;
-                }
+                //if (string.IsNullOrEmpty(args.AverageFile))
+                //{
+                //    Console.WriteLine("Score file must be set if there are many EMRs to be resolved.");
+                //    return;
+                //}
 
                 var emrCollection = new EMRCollection(args.EMRDirs);
-                var emrCount = args.EMRCount > 0 ? args.EMRCount : emrCollection.Count;
-                var evals = new Dictionary<ConceptType, Evaluation>[emrCount][];
+                int beginIndex = 0;
 
-                for (int i = 0; i < emrCount && i < emrCollection.Count; i++)
+                if (!string.IsNullOrEmpty(args.BeginAt))
+                {
+                    beginIndex = emrCollection.IndexOf(args.BeginAt);
+                    if (beginIndex < 0)
+                    {
+                        Console.WriteLine($"Begining EMR file {args.BeginAt} not found.");
+                        return;
+                    }
+                }
+
+                int emrCount = args.EMRCount > 0 ? args.EMRCount + beginIndex : emrCollection.Count;
+                //var evals = new Dictionary<ConceptType, Evaluation>[emrCount][];
+
+                for (int i = beginIndex; i < emrCount && i < emrCollection.Count; i++)
                 {
                     var emrFile = emrCollection.GetEMRPath(i);
                     var emrName = Path.GetFileName(emrFile);
@@ -109,7 +121,7 @@ namespace HCMUT.EMRCorefResol.ResolvingConsole
                         resolver, fExtractor, classifier, Path.Combine(args.OutputDir, $"{emrName}.chains"),
                         Path.Combine(args.OutputDir, $"{emrName}.scores"));
 
-                    evals[i] = result.Evaluations;
+                    //evals[i] = result.Evaluations;
                 };
 
                 //Console.WriteLine("Calculating average...");
@@ -233,6 +245,11 @@ namespace HCMUT.EMRCorefResol.ResolvingConsole
                 .As('n', "count")
                 .SetDefault(0)
                 .WithDescription("Set number of emr to resolve (optional).");
+
+            p.Setup(a => a.BeginAt)
+                .As('b', "beginat")
+                .SetDefault(null)
+                .WithDescription("Set emr file name to begin with (optional).");
 
             p.SetupHelp("?").Callback(() => DescHelpOption.ShowHelp(p.Options));
 

@@ -48,28 +48,26 @@ namespace HCMUT.EMRCorefResol.EvaluatingConsole
                 var chainsFile = $"{args.EMRFile}.chains";
                 var gtFile = Path.Combine(args.EMRDir, "chains", chainsFile);
                 var scFile = Path.Combine(args.SystemChainsDir, chainsFile);
-                                
+
                 if (!File.Exists(gtFile))
                 {
-                    Console.WriteLine($"Ground truth file {chainsFile} not found.");
+                    Console.WriteLine($"Ground truth file for {args.EMRFile} not found.");
+                    return;
+                }
+                else if (!File.Exists(scFile))
+                {
+                    Console.WriteLine($"System chains file for {args.EMRFile} not found.");
                     return;
                 }
 
                 Console.WriteLine($"Evaluating {args.EMRFile}...");
-                Dictionary<ConceptType, Evaluation>[] evals;
-                if (!File.Exists(scFile))
-                {
-                    evals = ZeroEvaluations();
-                }
-                else
-                {
-                    var emrFile = Path.Combine(args.EMRDir, "docs", args.EMRFile);
-                    var conceptsFile = Path.Combine(args.EMRDir, "concepts", $"{args.EMRFile}.con");
-                    var emr = new EMR(emrFile, conceptsFile, dataReader);
-                    var groundTruth = new CorefChainCollection(gtFile, dataReader);
-                    var systemChains = new CorefChainCollection(scFile, dataReader);
-                    evals = Evaluation.Metrics.Select(m => m.Evaluate(emr, groundTruth, systemChains)).ToArray();
-                }
+
+                var emrFile = Path.Combine(args.EMRDir, "docs", args.EMRFile);
+                var conceptsFile = Path.Combine(args.EMRDir, "concepts", $"{args.EMRFile}.con");
+                var emr = new EMR(emrFile, conceptsFile, dataReader);
+                var groundTruth = new CorefChainCollection(gtFile, dataReader);
+                var systemChains = new CorefChainCollection(scFile, dataReader);
+                var evals = Evaluation.Metrics.Select(m => m.Evaluate(emr, groundTruth, systemChains)).ToArray();
 
                 var s = StringifyScores(evals);
                 Console.WriteLine(s);
@@ -78,7 +76,7 @@ namespace HCMUT.EMRCorefResol.EvaluatingConsole
             else
             {
                 var emrCollection = new EMRCollection(args.EMRDir);
-                var emrCount = 10;
+                var emrCount = emrCollection.Count;
                 var evals = new Dictionary<ConceptType, Evaluation>[emrCount][];
 
                 Parallel.For(0, emrCount, i =>
@@ -93,7 +91,8 @@ namespace HCMUT.EMRCorefResol.EvaluatingConsole
 
                     if (!File.Exists(scPath))
                     {
-                        evals[i] = ZeroEvaluations();
+                        Console.WriteLine("System chains file not found.");
+                        evals[i] = null;
                     }
                     else
                     {
@@ -108,37 +107,40 @@ namespace HCMUT.EMRCorefResol.EvaluatingConsole
                 });
 
                 var nMetrics = Evaluation.Metrics.Count;
-                var avgEvals = evals.Aggregate(new Dictionary<ConceptType, Evaluation>[nMetrics],
+                var avgEvals = evals.Aggregate(new Dictionary<ConceptType, Evaluation>[nMetrics + 1],
                     (avg, eval) =>
                     {
-                        for (int i = 0; i < nMetrics; i++)
+                        if (eval != null)
                         {
-                            if (avg[i] == null)
+                            for (int i = 0; i < nMetrics; i++)
                             {
-                                avg[i] = new Dictionary<ConceptType, Evaluation>();
-                            }
-
-                            foreach (var t in Evaluation.ConceptTypes)
-                            {
-                                var e = eval[i].ContainsKey(t) ? eval[i][t] : new Evaluation(0d, 0d, 0d, Evaluation.Metrics[i].Name);
-
-                                if (!avg[i].ContainsKey(t))
+                                if (avg[i] == null)
                                 {
-                                    var ep = double.IsNaN(e.Precision) ? 0 : e.Precision;
-                                    var er = double.IsNaN(e.Recall) ? 0 : e.Recall;
-                                    var ef = double.IsNaN(e.FMeasure) ? 0 : e.FMeasure;
-                                    avg[i].Add(t, new Evaluation(ep, er, ef, e.MetricName));
+                                    avg[i] = new Dictionary<ConceptType, Evaluation>();
                                 }
-                                else
+
+                                foreach (var t in Evaluation.ConceptTypes)
                                 {
-                                    var a = avg[i][t];
+                                    var e = eval[i].ContainsKey(t) ? eval[i][t] : new Evaluation(0d, 0d, 0d, Evaluation.Metrics[i].Name);
 
-                                    var ep = double.IsNaN(e.Precision) ? 0 : e.Precision;
-                                    var er = double.IsNaN(e.Recall) ? 0 : e.Recall;
-                                    var ef = double.IsNaN(e.FMeasure) ? 0 : e.FMeasure;
+                                    if (!avg[i].ContainsKey(t))
+                                    {
+                                        var ep = double.IsNaN(e.Precision) ? 0 : e.Precision;
+                                        var er = double.IsNaN(e.Recall) ? 0 : e.Recall;
+                                        var ef = double.IsNaN(e.FMeasure) ? 0 : e.FMeasure;
+                                        avg[i].Add(t, new Evaluation(ep, er, ef, e.MetricName));
+                                    }
+                                    else
+                                    {
+                                        var a = avg[i][t];
 
-                                    avg[i][t] = new Evaluation(a.Precision + ep,
-                                        a.Recall + er, a.FMeasure + ef, e.MetricName);
+                                        var ep = double.IsNaN(e.Precision) ? 0 : e.Precision;
+                                        var er = double.IsNaN(e.Recall) ? 0 : e.Recall;
+                                        var ef = double.IsNaN(e.FMeasure) ? 0 : e.FMeasure;
+
+                                        avg[i][t] = new Evaluation(a.Precision + ep,
+                                            a.Recall + er, a.FMeasure + ef, e.MetricName);
+                                    }
                                 }
                             }
                         }
@@ -171,7 +173,7 @@ namespace HCMUT.EMRCorefResol.EvaluatingConsole
                 var s = StringifyScores(avgEvals);
                 Console.WriteLine("Average scores:");
                 Console.WriteLine(s);
-                File.WriteAllText(args.AverageFile, s);                
+                File.WriteAllText(args.AverageFile, s);
             }
         }
 
