@@ -1,0 +1,22 @@
+18	Per the pt 's daughter , the patient has had 2-3 episodes of asp pna in the last 2 months , for which he has received IV abx at the NH with apparent resolution of symptoms .|abx[557,560]|||||IV[554,556]||2 months[517,525]|||||
+21	Of note , the patient 's daughter and son-in-law confirm his desire to be DNR/DNI , stating that they want him to be comfortable .|DNR[991,994]||||||||||||
+23	In particular , she feels that the pt would not want a morphine drip if it would negatively impact his respiratory function .|impact[1310,1316]|||||drip[1282,1286]||||C0726639|222931|222931|impact
+23	In particular , she feels that the pt would not want a morphine drip if it would negatively impact his respiratory function .|morphine[1273,1281]|||||||||C0026549|7052|7052|morphine
+68	27.4 INR ( PT )- 1.2 2014-01-20 05:30 AM BLOOD Plt Ct - 393 # 2014-01-20 05:30 AM BLOOD Glucose - 334 * UreaN - 22 * Creat - 0.9 Na - 144 K - 5.0 Cl - 108 HCO3 - 25 AnGap - 16 2014-01-20 02:08 PM BLOOD CK ( CPK )- 275 * 2014-01-20 05:30 AM BLOOD ALT - 15 AST - 22 LD ( LDH )|Na[3286,3288]||||||||||56501|56501|na m-fluorphosphate
+68	27.4 INR ( PT )- 1.2 2014-01-20 05:30 AM BLOOD Plt Ct - 393 # 2014-01-20 05:30 AM BLOOD Glucose - 334 * UreaN - 22 * Creat - 0.9 Na - 144 K - 5.0 Cl - 108 HCO3 - 25 AnGap - 16 2014-01-20 02:08 PM BLOOD CK ( CPK )- 275 * 2014-01-20 05:30 AM BLOOD ALT - 15 AST - 22 LD ( LDH )|Cl -[3303,3307]|||108[3308,3311]||||||C0106269|47104|47104|cl-
+68	27.4 INR ( PT )- 1.2 2014-01-20 05:30 AM BLOOD Plt Ct - 393 # 2014-01-20 05:30 AM BLOOD Glucose - 334 * UreaN - 22 * Creat - 0.9 Na - 144 K - 5.0 Cl - 108 HCO3 - 25 AnGap - 16 2014-01-20 02:08 PM BLOOD CK ( CPK )- 275 * 2014-01-20 05:30 AM BLOOD ALT - 15 AST - 22 LD ( LDH )|HCO3[3312,3316]||||||||||||
+69	- 254 * CK ( CPK )- 398 * AlkPhos - 125 * TotBili - 0.5 2014-01-20 02:08 PM BLOOD CK-MB - 9 cTropnT - 0.08 * 2014-01-20 05:30 AM BLOOD cTropnT - 0.05 * 2014-01-20 05:30 AM BLOOD CK-MB - 7 2014-01-20 05:30 AM BLOOD Albumin - 3.2 * Calcium - 9.3 Phos - 4.2 Mg - 1.8|Albumin[3645,3652]|||||||||C0001924|433|433|albumin
+69	- 254 * CK ( CPK )- 398 * AlkPhos - 125 * TotBili - 0.5 2014-01-20 02:08 PM BLOOD CK-MB - 9 cTropnT - 0.08 * 2014-01-20 05:30 AM BLOOD cTropnT - 0.05 * 2014-01-20 05:30 AM BLOOD CK-MB - 7 2014-01-20 05:30 AM BLOOD Albumin - 3.2 * Calcium - 9.3 Phos - 4.2 Mg - 1.8|Calcium[3661,3668]|||4.2Mg[3682,3688]||||||C0006675|1895|1895|calcium
+71	BLOOD Glucose - 114 * Lactate - 1.8 K - 4.8 2014-01-20 11:49 AM BLOOD Lactate - 3.0 * K - 5.1 2014-01-20 11:49 AM BLOOD freeCa - 1.19|Lactate[3999,4006]|||||||||C0376261|114202|114202|lactate
+71	BLOOD Glucose - 114 * Lactate - 1.8 K - 4.8 2014-01-20 11:49 AM BLOOD Lactate - 3.0 * K - 5.1 2014-01-20 11:49 AM BLOOD freeCa - 1.19|Lactate[4047,4054]|||||||||C0376261|114202|114202|lactate
+77	He was started on Zosyn and Vanco for his presumed aspiration , " hospital " aquired PNA .|Zosyn[4384,4389]|||||||||C0250482|74170|8339|piperacillin
+77	He was started on Zosyn and Vanco for his presumed aspiration , " hospital " aquired PNA .|Vanco[4394,4399]||||||||||||
+85	He was given some prn Morphine for comfort .|Morphine[4862,4870]||||||||prn[4858,4861]|C0026549|7052|7052|morphine
+91	He was written for a morphine drip however he expired before this could be initiated .|morphine[5252,5260]|||||drip[5261,5265]||||C0026549|7052|7052|morphine
+93	Elevated lactate :|lactate[5344,5351]|||||||||C0376261|114202|114202|lactate
+103	- Paxil|Paxil[5711,5716]||||||||||114228|32937|paroxetine
+104	- Terazosin|Terazosin[5719,5728]|||||||||C0076107|37798|37798|terazosin
+105	- Glucophage|Glucophage[5731,5741]|||||||||C0591573|151827|6809|metformin
+106	- Glyburide|Glyburide[5744,5753]|||||||||C0017628|4815|4815|glibenclamide
+107	- Atenolol|Atenolol[5756,5764]|||||||||C0004147|1202|1202|atenolol
+108	- Imdur|Imdur[5767,5772]||||||||||151162|6057|isosorbide

@@ -1,0 +1,157 @@
+c="dr. cedwi stone" 116:13 116:15||t="coref person"||c="cedwi stone , md" 146:0 146:3
+c="dr. study" 109:8 109:9||t="coref person"||c="tamarg study , md" 146:8 146:11
+c="her primary care physician" 107:7 107:10||t="coref person"||c="dr. tamarg study" 107:12 107:14
+c="dr. tamarg study" 107:12 107:14||t="coref person"||c="the nephrologist" 109:0 109:1
+c="who" 109:2 109:2||t="coref person"||c="dr. study" 109:8 109:9
+c="dr. ian zineisfreierm" 110:31 110:33||t="coref person"||c="the hematology attending" 110:35 110:37
+c="the hematology attending" 110:35 110:37||t="coref person"||c="dr. ian zineisfreierm" 117:9 117:11
+c="the patient" 20:0 20:1||t="coref person"||c="the patient" 21:6 21:7
+c="the patient" 21:6 21:7||t="coref person"||c="she" 22:0 22:0
+c="her" 24:0 24:0||t="coref person"||c="she" 24:12 24:12
+c="the patient" 27:6 27:7||t="coref person"||c="her" 28:11 28:11
+c="her" 28:11 28:11||t="coref person"||c="her" 28:16 28:16
+c="she" 29:0 29:0||t="coref person"||c="her" 30:0 30:0
+c="a video assisted thoracoscopic study of the right lung" 31:9 31:17||t="coref test"||c="which" 31:18 31:18
+c="the patient" 32:0 32:1||t="coref person"||c="the patient" 33:11 33:12
+c="the patient" 33:11 33:12||t="coref person"||c="her" 33:17 33:17
+c="her" 33:17 33:17||t="coref person"||c="she" 34:6 34:6
+c="she" 34:6 34:6||t="coref person"||c="the patient" 53:0 53:1
+c="the patient" 53:0 53:1||t="coref person"||c="the patient" 55:0 55:1
+c="steroids" 70:5 70:5||t="coref treatment"||c="this" 71:0 71:0
+c="her" 70:10 70:10||t="coref person"||c="her" 71:12 71:12
+c="she" 72:3 72:3||t="coref person"||c="the patient" 73:0 73:1
+c="the patient" 73:31 73:32||t="coref person"||c="her" 74:16 74:16
+c="the patient" 75:7 75:8||t="coref person"||c="her" 75:19 75:19
+c="the patient" 77:0 77:1||t="coref person"||c="her" 77:25 77:25
+c="her" 77:25 77:25||t="coref person"||c="she" 78:17 78:17
+c="daily plasma exchange" 78:21 78:23||t="coref treatment"||c="which" 78:24 78:24
+c="she" 79:0 79:0||t="coref person"||c="her" 80:0 80:0
+c="her" 80:0 80:0||t="coref person"||c="her" 81:0 81:0
+c="she" 82:0 82:0||t="coref person"||c="her" 82:8 82:8
+c="a few schistocytes" 82:4 82:6||t="coref problem"||c="it" 82:12 82:12
+c="the patient" 83:0 83:1||t="coref person"||c="her" 83:19 83:19
+c="her" 83:19 83:19||t="coref person"||c="her" 84:2 84:2
+c="her" 84:2 84:2||t="coref person"||c="the patient" 85:3 85:4
+c="the patient" 85:3 85:4||t="coref person"||c="the patient" 86:4 86:5
+c="she" 87:0 87:0||t="coref person"||c="her" 87:4 87:4
+c="permanent and non-reversible renal failure" 91:10 91:14||t="coref problem"||c="it" 91:16 91:16
+c="she" 92:0 92:0||t="coref person"||c="her" 92:15 92:15
+c="her" 92:15 92:15||t="coref person"||c="her" 93:4 93:4
+c="she" 93:7 93:7||t="coref person"||c="her" 93:13 93:13
+c="her" 93:13 93:13||t="coref person"||c="her" 93:18 93:18
+c="a klebsiella urinary tract infection" 98:20 98:24||t="coref problem"||c="which" 98:26 98:26
+c="fluconazole" 100:4 100:4||t="coref treatment"||c="which" 100:9 100:9
+c="the patient" 101:0 101:1||t="coref person"||c="her" 101:20 101:20
+c="the patient" 103:0 103:1||t="coref person"||c="her" 103:10 103:10
+c="her" 103:10 103:10||t="coref person"||c="her" 103:15 103:15
+c="the patient" 107:2 107:3||t="coref person"||c="her" 107:7 107:7
+c="the nephrologist" 109:0 109:1||t="coref person"||c="who" 109:2 109:2
+c="the patient" 110:2 110:3||t="coref person"||c="her" 110:8 110:8
+c="she" 113:0 113:0||t="coref person"||c="her" 113:7 113:7
+c="the patient" 114:2 114:3||t="coref person"||c="her" 114:14 114:14
+c="the patient" 115:2 115:3||t="coref person"||c="her" 115:6 115:6
+c="bronchiolitis obliterans organizing pneumonia" 20:31 20:34||t="coref problem"||c="a bronchiolitis obliterans organizing pneumonia-like reaction" 31:24 31:29
+c="thrombotic thrombocytopenic purpura" 76:2 76:4||t="coref problem"||c="thrombotic thrombocytopenic purpura" 78:7 78:9
+c="acute renal failure" 89:4 89:6||t="coref problem"||c="permanent and non-reversible renal failure" 91:10 91:14
+c="thrombotic thrombocytopenic purpura" 16:2 16:4||t="coref problem"||c="thrombotic thrombocytopenic purpura" 20:27 20:29
+c="her ana" 28:11 28:12||t="coref test"||c="her ana" 103:10 103:11
+c="anca" 28:20 28:20||t="coref test"||c="anca" 103:19 103:19
+c="her rheumatoid factor" 28:16 28:18||t="coref test"||c="her rheumatoid factor" 103:15 103:17
+c="which" 78:24 78:24||t="coref treatment"||c="her plasma exchange" 84:2 84:4
+c="hypertension" 36:12 36:12||t="coref problem"||c="hypertension" 37:2 37:2
+c="solu-medrol" 71:4 71:4||t="coref treatment"||c="intravenous solu-medrol" 79:5 79:6
+c="each dialysis" 110:22 110:23||t="coref treatment"||c="dialysis" 114:12 114:12
+c="the patient" 55:0 55:1||t="coref person"||c="she" 56:0 56:0
+c="her" 114:14 114:14||t="coref person"||c="the patient" 115:2 115:3
+c="amphojel bladder irrigation" 98:12 98:14||t="coref treatment"||c="which" 98:16 98:16
+c="her prednisone" 115:6 115:7||t="coref treatment"||c="this" 115:18 115:18
+c="intravenous solu-medrol" 79:5 79:6||t="coref treatment"||c="which" 79:11 79:11
+c="the left subclavian tesio" 112:0 112:3||t="coref treatment"||c="which" 112:4 112:4
+c="she" 98:3 98:3||t="coref person"||c="she" 98:27 98:27
+c="a very slow taper" 87:18 87:21||t="coref treatment"||c="a slow taper" 115:32 115:34
+c="the patient" 91:23 91:24||t="coref person"||c="she" 92:0 92:0
+c="the patient" 96:0 96:1||t="coref person"||c="she" 97:0 97:0
+c="she" 98:27 98:27||t="coref person"||c="she" 99:0 99:0
+c="she" 59:0 59:0||t="coref person"||c="the patient" 70:0 70:1
+c="renal failure" 18:2 18:3||t="coref problem"||c="her renal failure" 74:16 74:18
+c="she" 99:0 99:0||t="coref person"||c="she" 100:0 100:0
+c="a left subclavian tesio catheter" 96:4 96:8||t="coref treatment"||c="the left subclavian tesio" 112:0 112:3
+c="a slow taper" 115:32 115:34||t="coref treatment"||c="a slow taper" 127:21 127:23
+c="the patient" 95:0 95:1||t="coref person"||c="her" 95:7 95:7
+c="the patient &apos;s bronchiolitis obliterans organizing pneumonia" 73:0 73:6||t="coref problem"||c="the bronchiolitis obliterans organizing pneumonia" 87:12 87:16
+c="a right brachial picc line" 96:11 96:15||t="coref treatment"||c="which" 96:22 96:22
+c="the patient" 116:2 116:3||t="coref person"||c="the patient" 117:2 117:3
+c="the patient" 31:6 31:7||t="coref person"||c="the patient" 32:0 32:1
+c="the patient" 74:22 74:23||t="coref person"||c="her" 75:4 75:4
+c="she" 115:29 115:29||t="coref person"||c="the patient" 116:2 116:3
+c="her" 109:5 109:5||t="coref person"||c="the patient" 110:2 110:3
+c="bronchiolitis obliterans organizing pneumonia" 17:2 17:5||t="coref problem"||c="bronchiolitis obliterans organizing pneumonia" 20:31 20:34
+c="her" 104:2 104:2||t="coref person"||c="she" 104:14 104:14
+c="she" 24:12 24:12||t="coref person"||c="the patient" 27:6 27:7
+c="thrombotic thrombocytopenic purpura" 34:22 34:24||t="coref problem"||c="thrombotic thrombocytopenic purpura" 76:2 76:4
+c="the patient" 89:0 89:1||t="coref person"||c="she" 90:6 90:6
+c="she" 107:19 107:19||t="coref person"||c="the patient" 108:2 108:3
+c="this" 115:18 115:18||t="coref treatment"||c="prednisone" 127:2 127:2
+c="her" 93:18 93:18||t="coref person"||c="the patient" 95:0 95:1
+c="her" 81:0 81:0||t="coref person"||c="she" 82:0 82:0
+c="prednisone" 43:2 43:2||t="coref treatment"||c="prednisone" 72:10 72:10
+c="her" 113:7 113:7||t="coref person"||c="the patient" 114:2 114:3
+c="this" 71:0 71:0||t="coref treatment"||c="her high dose steroids" 101:20 101:23
+c="her" 28:16 28:16||t="coref person"||c="she" 29:0 29:0
+c="she" 56:0 56:0||t="coref person"||c="she" 57:0 57:0
+c="bronchiolitis obliterans organizing pneumonia" 69:12 69:15||t="coref problem"||c="the patient &apos;s bronchiolitis obliterans organizing pneumonia" 73:0 73:6
+c="thrombotic thrombocytopenic purpura" 78:7 78:9||t="coref problem"||c="the patient &apos;s thrombotic thrombocytopenic purpura" 86:4 86:9
+c="she" 58:0 58:0||t="coref person"||c="she" 59:0 59:0
+c="she" 100:0 100:0||t="coref person"||c="the patient" 101:0 101:1
+c="a steroid trial" 29:4 29:6||t="coref treatment"||c="steroids" 70:5 70:5
+c="supplemental oxygen" 73:36 73:37||t="coref treatment"||c="supplemental oxygen" 75:15 75:16
+c="her dialysis" 93:4 93:5||t="coref treatment"||c="each dialysis" 110:22 110:23
+c="her" 74:16 74:16||t="coref person"||c="the patient" 74:22 74:23
+c="chronic dialysis" 18:5 18:6||t="coref treatment"||c="dialysis" 73:25 73:25
+c="the patient" 86:4 86:5||t="coref person"||c="she" 87:0 87:0
+c="she" 97:0 97:0||t="coref person"||c="she" 98:3 98:3
+c="her" 110:8 110:8||t="coref person"||c="the patient" 111:2 111:3
+c="her" 75:19 75:19||t="coref person"||c="the patient" 77:0 77:1
+c="the patient" 111:2 111:3||t="coref person"||c="she" 112:5 112:5
+c="a fourteen day course of acyclovir" 99:3 99:8||t="coref treatment"||c="which" 99:9 99:9
+c="prednisone" 32:9 32:9||t="coref treatment"||c="prednisone" 43:2 43:2
+c="her" 82:8 82:8||t="coref person"||c="the patient" 83:0 83:1
+c="dialysis" 73:25 73:25||t="coref treatment"||c="dialysis" 74:34 74:34
+c="the patient" 23:6 23:7||t="coref person"||c="her" 24:0 24:0
+c="her" 71:12 71:12||t="coref person"||c="she" 72:3 72:3
+c="the patient" 70:0 70:1||t="coref person"||c="her" 70:10 70:10
+c="her renal failure" 74:16 74:18||t="coref problem"||c="acute renal failure" 89:4 89:6
+c="a bronchiolitis obliterans organizing pneumonia-like reaction" 31:24 31:29||t="coref problem"||c="bronchiolitis obliterans organizing pneumonia" 68:2 68:5
+c="her" 103:15 103:15||t="coref person"||c="her" 104:2 104:2
+c="she" 22:0 22:0||t="coref person"||c="the patient" 23:6 23:7
+c="her" 95:7 95:7||t="coref person"||c="the patient" 96:0 96:1
+c="her" 115:6 115:6||t="coref person"||c="she" 115:29 115:29
+c="her" 101:20 101:20||t="coref person"||c="the patient" 103:0 103:1
+c="she" 108:11 108:11||t="coref person"||c="her" 109:5 109:5
+c="dialysis" 91:28 91:28||t="coref treatment"||c="her dialysis" 93:4 93:5
+c="her" 87:4 87:4||t="coref person"||c="the patient" 89:0 89:1
+c="she" 104:14 104:14||t="coref person"||c="the patient" 107:2 107:3
+c="her" 107:7 107:7||t="coref person"||c="she" 107:19 107:19
+c="her" 93:4 93:4||t="coref person"||c="she" 93:7 93:7
+c="she" 57:0 57:0||t="coref person"||c="she" 58:0 58:0
+c="a slow taper" 72:20 72:22||t="coref treatment"||c="a very slow taper" 87:18 87:21
+c="she" 90:22 90:22||t="coref person"||c="the patient" 91:23 91:24
+c="which" 31:18 31:18||t="coref test"||c="the video assisted thoracoscopic study" 69:0 69:4
+c="her" 73:12 73:12||t="coref person"||c="the patient" 73:31 73:32
+c="prednisone" 79:19 79:19||t="coref treatment"||c="her prednisone" 87:4 87:5
+c="her ldh" 81:0 81:1||t="coref test"||c="which" 81:2 81:2
+c="her prednisone" 87:4 87:5||t="coref treatment"||c="her prednisone" 115:6 115:7
+c="the patient" 108:2 108:3||t="coref person"||c="she" 108:11 108:11
+c="her" 75:4 75:4||t="coref person"||c="the patient" 75:7 75:8
+c="dialysis" 74:34 74:34||t="coref treatment"||c="dialysis" 90:27 90:27
+c="prednisone" 72:10 72:10||t="coref treatment"||c="prednisone" 79:19 79:19
+c="she" 90:6 90:6||t="coref person"||c="she" 90:22 90:22
+c="a ct scan of the chest" 27:9 27:14||t="coref test"||c="which" 27:15 27:15
+c="bronchiolitis obliterans organizing pneumonia" 68:2 68:5||t="coref problem"||c="bronchiolitis obliterans organizing pneumonia" 69:12 69:15
+c="she" 112:5 112:5||t="coref person"||c="she" 113:0 113:0
+c="the patient" 73:0 73:1||t="coref person"||c="her" 73:12 73:12
+c="dialysis" 90:27 90:27||t="coref treatment"||c="dialysis" 91:28 91:28
+c="her" 30:0 30:0||t="coref person"||c="the patient" 31:6 31:7
+c="thrombotic thrombocytopenic purpura" 20:27 20:29||t="coref problem"||c="thrombotic thrombocytopenic purpura" 34:22 34:24
+c="she" 78:17 78:17||t="coref person"||c="she" 79:0 79:0
+c="a permanent dialysis fistula" 111:7 111:10||t="coref treatment"||c="her fistula" 113:7 113:8

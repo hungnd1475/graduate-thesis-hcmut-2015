@@ -1,0 +1,30 @@
+23	3. Hyperthyroidism , status post radioactive iodine ablation .|radioactive iodine[1141,1159]|||||||||C0021968|5933|5933|jodum
+28	1. Accupril 40 mg q.d.|Accupril[1294,1302]|||40mg[1303,1308]|||q.d.[1309,1313]|||C1601042|568627|35208|quinapril
+29	2. Aspirin 325 mg q.d.|Aspirin[1317,1324]|||325mg[1325,1331]|||q.d.[1332,1336]|||C0992015|317300|1191|acetylsalicylic acid
+30	3. Clonidine 0.1 mg b.i.d.|Clonidine[1340,1349]|||0.1mg[1350,1356]|||b.i.d[1357,1362]|||C2726347|884172|2599|clonidine
+57	ALT 27 , AST 21 , alkaline phosphatase 72 , total bilirubin 1.2 , amylase 47 .|amylase[2167,2174]|||47[2175,2177]||||||C0002712|743|743|diastase
+63	The patient was continued on a heparin drip for atrial fibrillation .|heparin[2572,2579]|||||drip[2580,2584]||||C0019134|235473|235473|heparin,porcine
+71	He was attempted on multiple different drugs including Procainamide , Diltiazem , Esmolol , Sotalol , Amiodarone .|Procainamide[3336,3348]|||||||||C0033216|8700|8700|procainamide
+71	He was attempted on multiple different drugs including Procainamide , Diltiazem , Esmolol , Sotalol , Amiodarone .|Diltiazem[3351,3360]|||||||||C0012373|3443|3443|diltiazem
+71	He was attempted on multiple different drugs including Procainamide , Diltiazem , Esmolol , Sotalol , Amiodarone .|Esmolol[3363,3370]|||||||||C0116569|49737|49737|esmolol
+71	He was attempted on multiple different drugs including Procainamide , Diltiazem , Esmolol , Sotalol , Amiodarone .|Sotalol[3373,3380]|||||||||C0037707|9947|9947|sotalol
+71	He was attempted on multiple different drugs including Procainamide , Diltiazem , Esmolol , Sotalol , Amiodarone .|Amiodarone[3383,3393]|||||||||C0002598|703|703|amiodarone
+73	The patient was also started on digoxin .|digoxin[3505,3512]|||||||||C0012265|3407|3407|digoxin
+74	Ultimately , the patient was transferred to the floor and anticoagulation with Coumadin was begun .|Coumadin[3594,3602]|||||||||C0699129|202421|11289|warfarin
+74	Ultimately , the patient was transferred to the floor and anticoagulation with Coumadin was begun .|anticoagulation[3573,3588]||||||||||1024413|1024413|anticoagulation
+76	Sotalol 180 mg b.i.d. , Diltiazem 90 mg q.i.d. , digoxin 0.125 mg q.d.|Sotalol[3678,3685]|||180mg[3686,3692]|||b.i.d.[3693,3699]|||C0037707|9947|9947|sotalol
+76	Sotalol 180 mg b.i.d. , Diltiazem 90 mg q.i.d. , digoxin 0.125 mg q.d.|Diltiazem[3702,3711]|||90mg[3712,3717]|||q.i.d.[3718,3724]|||C1126590|330818|3443|diltiazem
+76	Sotalol 180 mg b.i.d. , Diltiazem 90 mg q.i.d. , digoxin 0.125 mg q.d.|digoxin[3727,3734]|||0.125mg[3735,3743]|||q.d .[3744,3748]|||C0985542|315819|3407|digoxin
+77	While the patient was awaiting therapeutic anticoagulation with Coumadin , he spontaneously converted into normal sinus rhythm .|Coumadin[3813,3821]|||||||||C0699129|202421|11289|warfarin
+77	While the patient was awaiting therapeutic anticoagulation with Coumadin , he spontaneously converted into normal sinus rhythm .|anticoagulation[3792,3807]||||||||||1024413|1024413|anticoagulation
+79	In consultation with the EP Service , Diltiazem was stopped .|Diltiazem[4008,4017]|||||||||C0012373|3443|3443|diltiazem
+80	After approximately 24 hours , the patient converted back into atrial fibrillation and Diltiazem was restarted at 60 mg q.i.d.|Diltiazem[4119,4128]|||60mg[4146,4151]|||q.i.d[4152,4157]|24 hours[4052,4060]||C2586994|830864|3443|diltiazem
+92	1. Percocet 5/325 mg one to two q. four hours p.r.n.|Percocet 5 / 325[4691,4705]|||||||four hours[4723,4733]|p.r.n.[4734,4740]|C2955103|1049639|161|paracetamol
+93	2. Aspirin 325 mg q.d.|Aspirin[4744,4751]|||325mg[4752,4758]|||q.d.[4759,4763]|||C0992015|317300|1191|acetylsalicylic acid
+94	3. Colace 100 mg b.i.d.|Colace[4767,4773]|||100mg[4774,4780]|||b.i.d.[4781,4787]||||1247755|82003|docusate
+95	4. Coumadin 5 mg q.d.|Coumadin[4791,4799]|||5mg[4800,4804]|||q.d.[4805,4809]|||C2709920|855333|11289|warfarin
+96	5. Sotalol 180 mg b.i.d.|Sotalol[4813,4820]|||180mg[4821,4827]|||b.i.d.[4828,4834]|||C0037707|9947|9947|sotalol
+97	6. Digoxin 0.125 mg q.d.|Digoxin[4838,4845]|||0.125mg[4846,4854]|||q.d.[4855,4859]|||C0985542|315819|3407|digoxin
+98	7. Diltiazem 60 mg q.i.d.|Diltiazem[4863,4872]|||60mg[4873,4878]|||q.i.d.[4879,4885]|||C2586994|830864|3443|diltiazem
+99	8. Ambien 5-10 mg q.h.s. p.r.n.|Ambien[4889,4895]|||5 - 10mg[4896,4903]|||q.h.s.[4904,4910]||p.r.n[4911,4916]|C2709710|854874|39993|zolpidem
+102	He will also go home with VNA for INRs twice weekly with the results reported to his PCP or cardiologist for Coumadin adjustment .|Coumadin[5125,5133]||||||twice weekly[5055,5067]|||C0699129|202421|11289|warfarin

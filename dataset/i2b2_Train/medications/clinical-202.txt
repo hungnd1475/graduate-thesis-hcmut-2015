@@ -1,0 +1,69 @@
+23	Intubated for airway protection ( ABG 7.39/26.5/73.6 ) and placed on levophed .|levophed[1366,1374]|||||||||C1450037|227559|7512|norepinephrine
+25	Placed on Reynolds/vanc/fluc/gentamicin for neutropenic fever and thrush initially .|gentamicin[1408,1418]|||||||||C0017436|662411|662411|gentamicins
+25	Placed on Reynolds/vanc/fluc/gentamicin for neutropenic fever and thrush initially .|vanc[1398,1402]||||||||||||
+28	04-27 results from Blood Cx from W+I : 04-24 PICC Bld Cx : pseudomonas Diaz to zosyn , cipro , cefepime , Tardugno -- staph epi- Gray to vanc 04-24 Peripheral Bld Cx : pseudomonas as above 04-24 Urine Cx : pseudomonas as above|zosyn[1658,1663]|||||||||C0250482|74170|8339|piperacillin
+28	04-27 results from Blood Cx from W+I : 04-24 PICC Bld Cx : pseudomonas Diaz to zosyn , cipro , cefepime , Tardugno -- staph epi- Gray to vanc 04-24 Peripheral Bld Cx : pseudomonas as above 04-24 Urine Cx : pseudomonas as above|cipro[1666,1671]|||||||||C0008809|2551|2551|ciprofloxacin
+28	04-27 results from Blood Cx from W+I : 04-24 PICC Bld Cx : pseudomonas Diaz to zosyn , cipro , cefepime , Tardugno -- staph epi- Gray to vanc 04-24 Peripheral Bld Cx : pseudomonas as above 04-24 Urine Cx : pseudomonas as above|cefepime[1674,1682]|||||||||C0055003|20481|20481|cefepime
+28	04-27 results from Blood Cx from W+I : 04-24 PICC Bld Cx : pseudomonas Diaz to zosyn , cipro , cefepime , Tardugno -- staph epi- Gray to vanc 04-24 Peripheral Bld Cx : pseudomonas as above 04-24 Urine Cx : pseudomonas as above|vanc[1716,1720]|||04 - 24[1721,1726]|||||||||
+28	04-27 results from Blood Cx from W+I : 04-24 PICC Bld Cx : pseudomonas Diaz to zosyn , cipro , cefepime , Tardugno -- staph epi- Gray to vanc 04-24 Peripheral Bld Cx : pseudomonas as above 04-24 Urine Cx : pseudomonas as above|epi[1703,1706]||||||||||216932|216932|epi
+29	Abx changed to vanc , zosyn , cipro , fluc , azith .|vanc[1821,1825]||||||||||||
+29	Abx changed to vanc , zosyn , cipro , fluc , azith .|Abx[1806,1809]||||||||||||
+29	Abx changed to vanc , zosyn , cipro , fluc , azith .|zosyn[1828,1833]|||||||||C0250482|74170|8339|piperacillin
+29	Abx changed to vanc , zosyn , cipro , fluc , azith .|cipro[1836,1841]|||||||||C0008809|2551|2551|ciprofloxacin
+30	Pressors weaned off by 04-27 .|Pressors[1859,1867]||||||||||||
+31	Completed 7 days of vanc/fluc , 13/14 days of cipro/zosyn .|vanc[1910,1914]|||||||7 days[1900,1906]|||||
+31	Completed 7 days of vanc/fluc , 13/14 days of cipro/zosyn .|zosyn[1942,1947]|||||||||C0250482|74170|8339|piperacillin
+31	Completed 7 days of vanc/fluc , 13/14 days of cipro/zosyn .|cipro[1936,1941]|||||||14 days[1925,1932]||C0008809|2551|2551|ciprofloxacin
+35	Found to be in DIC and supported with daily blood products .|DIC[2103,2106]||||||||||3098|3098|dacarbazine
+35	Found to be in DIC and supported with daily blood products .|blood products[2132,2146]||||||daily[2126,2131]||||126145|126145|blood products
+36	Seen by heme and GCSF started .|GCSF[2166,2170]||||||||||||
+45	Placed on Dilantin .|Dilantin[2589,2597]||||||||||202740|8183|phenytoin
+50	Initially decided not to escilate care and make DNR 05-05 .|DNR[2793,2796]|||05 - 05[2797,2802]|||||||||
+53	Given 48 hours off sedation with out change in mental status ( last morphine was 2016-05-07 ) .|morphine[3114,3122]|||||||48 hours[3052,3060]||C0026549|7052|7052|morphine
+58	- Retroperitoneal Squamous Cell Carcinoma of unknown primary , dx 12-15 , s/p XRT ( last tx 2015-04-20 ) , s/p cisplatin ( last dose 3/22 )|cisplatin[3406,3415]|||||||||C0008838|2555|2555|cisplatin
+60	- h/o LLE DVT on coumadin|coumadin[3514,3522]|||||||||C0699129|202421|11289|warfarin
+73	Cor - RRR|Cor[3836,3839]||||||||||1026934|1026934|cor
+83	CALCIUM - 7.1* PHOSPHATE - 5.1* MAGNESIUM - 1.7 2016-05-10 11:02PM|MAGNESIUM[4352,4361]|||||||||C0024467|6574|6574|magnesium
+83	CALCIUM - 7.1* PHOSPHATE - 5.1* MAGNESIUM - 1.7 2016-05-10 11:02PM|CALCIUM[4320,4327]|||||||||C0006675|1895|1895|calcium
+85	GLUCOSE - 96 UREA N - 113* CREAT - 2.3* SODIUM - 150*|SODIUM[4537,4543]|||||||||C0037473|9853|9853|sodium
+85	GLUCOSE - 96 UREA N - 113* CREAT - 2.3* SODIUM - 150*|UREA[4510,4514]|||||||||C0041942|11002|11002|urea
+86	POTASSIUM - 3.9 CHLORIDE - 110* TOTAL CO2 - 28 ANION GAP - 16 2016-05-15 06:02AM BLOOD|POTASSIUM[4551,4560]|||||||||C0032821|8588|8588|potassium
+92	Glucose - 120* UreaN - 79* Creat - 1.8* Na - 144|Na[4967,4969]||||||||||56501|56501|na m-fluorphosphate
+93	K - 3.6 Cl - 110* HCO3 - 23 AnGap - 15 2016-05-11 04:30AM BLOOD|HCO3[4994,4998]|||110[4989,4992]|||||||||
+93	K - 3.6 Cl - 110* HCO3 - 23 AnGap - 15 2016-05-11 04:30AM BLOOD|Cl -[4984,4988]|||||||||C0106269|47104|47104|cl-
+95	Amylase - 37 TotBili - 0.8 2016-05-15 06:02AM BLOOD|Amylase[5090,5097]|||||||||C0002712|743|743|diastase
+96	Calcium - 7.4* Phos - 3.6 Mg - 2.2 2016-05-11 04:30AM BLOOD|Calcium[5142,5149]|||3.6Mg[5164,5170]||||||C1367560|438184|236693|calcium saccharate
+97	Albumin - 2.3 2016-05-13 08:32AM BLOOD|Albumin[5202,5209]|||||||||C0001924|433|433|albumin
+101	Lactate - 1.6 .|Lactate[5410,5417]|||||||||C0376261|114202|114202|lactate
+112	There is increased signal seen along the sulci on FLAIR images at the convexity which could be secondary to subarachnoid hemorrhage .|FLAIR[6525,6530]||||||||||||
+114	Gadolinium-enhanced MRI would also help for further assessment .|Gadolinium[6702,6712]|||||||||C0016911|1310171|1310171|gadolinium
+176	Due to mixed bacterial types (  >= 3 colony types ) an abbreviated workup is performed appropriate to the isolates recovered from the site ( including a screen for Pseudomonas aeruginosa , Staphylococcus aureus and beta streptococcus ) .|Pseudomonas aeruginosa[10315,10337]||||||||||1310913|1310913|pseudomonas aeruginosa
+176	Due to mixed bacterial types (  >= 3 colony types ) an abbreviated workup is performed appropriate to the isolates recovered from the site ( including a screen for Pseudomonas aeruginosa , Staphylococcus aureus and beta streptococcus ) .|Staphylococcus aureus[10340,10361]||||||||||1311275|1311275|staphylococcus aureus
+181	PSEUDOMONAS AERUGINOSA .|PSEUDOMONAS AERUGINOSA[10500,10522]||||||||||1310913|1310913|pseudomonas aeruginosa
+186	PSEUDOMONAS AERUGINOSA | .|PSEUDOMONAS AERUGINOSA[10637,10659]||||||||||1310913|1310913|pseudomonas aeruginosa
+229	At OSH , she was treated with 7 days of vancomycin , as well as 13 days ( of 14-day planned course ) of Ciprofloxacin and Zosyn .|vancomycin[13322,13332]|||||||7 days[13312,13318]||C0042313|11124|11124|vancomycin
+229	At OSH , she was treated with 7 days of vancomycin , as well as 13 days ( of 14-day planned course ) of Ciprofloxacin and Zosyn .|Ciprofloxacin[13386,13399]|||||||13 days[13346,13353]||C0008809|2551|2551|ciprofloxacin
+229	At OSH , she was treated with 7 days of vancomycin , as well as 13 days ( of 14-day planned course ) of Ciprofloxacin and Zosyn .|Zosyn[13404,13409]|||||||||C0250482|74170|8339|piperacillin
+230	She was intially continued on Cipro/Zosyn .|Zosyn[13448,13453]|||||||||C0250482|74170|8339|piperacillin
+230	She was intially continued on Cipro/Zosyn .|Cipro[13442,13447]|||||||||C0008809|2551|2551|ciprofloxacin
+236	She was continued on zosyn and vancomycin to complete a >14 day course .|zosyn[13764,13769]|||||||||C0250482|74170|8339|piperacillin
+236	She was continued on zosyn and vancomycin to complete a >14 day course .|vancomycin[13774,13784]|||||||14 day[13800,13806]||C0042313|11124|11124|vancomycin
+244	Upon discussion with him it was noted that the patient had progression of her disease after systemic therapy with topotecan and cisplatin .|topotecan[14264,14273]|||||||||C0146224|57308|57308|topotecan
+244	Upon discussion with him it was noted that the patient had progression of her disease after systemic therapy with topotecan and cisplatin .|cisplatin[14278,14287]|||||||||C0008838|2555|2555|cisplatin
+245	She then proceed to XRT with cisplatin which she was unable to tolerate this secondary to thrombocytopenia ( 40-50K ) .|cisplatin[14319,14328]|||||||||C0008838|2555|2555|cisplatin
+256	She was continued on free H20 boluses and D5 1/2 NS and corrected .|D5 1 / 2 NS[14932,14941]||||||||||6835|6835|methimazole
+267	She was made DNR/DNI and the plan is that she will be transferred to WIH and extubated there upon arrival with initiation of full palliative care .|DNR[15345,15348]||||||||||||
+271	1. Acetaminophen 325 mg Tablet Sig : Two ( 2 ) Tablet PO Q4-6H ( every 4 to 6 hours ) as needed for fever or pain .|Acetaminophen[15695,15708]||Tablet[15716,15722]|325mg[15709,15715]||PO[15746,15748]|Q4 - 6 H[15749,15754]||as needed[15778,15787]||313782|161|paracetamol
+272	2. Albuterol-Ipratropium 103-18 mcg/Actuation Aerosol Sig : 06-17 Puffs Inhalation Q2-4H ( every 2 to 4 hours ) as needed .|Albuterol - Ipratropium[15811,15832]|||103 - 18mcg[15833,15843]|06 - 17 Puffs[15868,15879]|Inhalation[15880,15890]|Q2 - 4 H[15891,15896]||as needed[15920,15929]||836286|435|salbutamol
+273	3. Calcium Acetate 667 mg Capsule Sig : Two ( 2 ) Capsule PO TID W/MEALS ( 3 TIMES A DAY WITH MEALS ) .|Calcium Acetate[15935,15950]||Capsule[15958,15965]|667mg[15951,15957]||PO[15990,15992]|TID[15993,15996]||||359296|214342|calcium acetate
+274	4. Fentanyl Citrate ( PF ) 0.05 mg/mL Solution Sig : 25-100 mcg Injection Q2H ( every 2 hours ) as needed for comfort .|Fentanyl Citrate[16039,16055]|||0.05mg / mL[16063,16073]|||Q2H[16110,16113]||as needed[16132,16141]|null|206977|142436|fentanyl citrate
+275	5. Insulin Regular Human 100 unit/mL Solution Sig : 2-10 units Injection ASDIR ( AS DIRECTED ) : per sliding scale for blood sugars > 150mg/dl .|Insulin Regular Human[16159,16180]|||100unit / mL[16181,16192]||||||C0977794|311034|253182|insulin regular,human buffered
+276	6. Midazolam 1 mg/mL Solution Sig : 1-2 mg Injection Q2H ( every 2 hours ) as needed for comfort .|Midazolam[16304,16313]|||1mg / mL[16314,16321]|||Q2H[16354,16357]||as needed[16376,16385]|C1123404|328485|6960|midazolam
+277	7. Phenytoin Sodium 50 mg/mL Solution Sig : One 95y ( 150 ) mg Intravenous Q8H ( every 8 hours ) .|Phenytoin Sodium[16403,16419]|||50mg / mL[16420,16428]||Intravenous[16463,16474]|Q8H[16475,16478]|||null|1132825|71227|phenytoin sodium
+278	8. Ranitidine HCl 15 mg/mL Syrup Sig : One 95y ( 150 ) mg PO DAILY ( Daily ) .|Ranitidine HCl[16502,16516]|||15mg / mL[16517,16525]||PO[16557,16559]|DAILY[16560,16565]||||705610|9143|ranitidine
+279	9. Polyvinyl Alcohol-Povidone 1.4-0.6 % Dropperette Sig : 01-12 Drops Ophthalmic QID ( 4 times a day ) .|Polyvinyl Alcohol[16581,16598]|||||||||C0032623|8570|8570|polyvinyl alcohol
+279	9. Polyvinyl Alcohol-Povidone 1.4-0.6 % Dropperette Sig : 01-12 Drops Ophthalmic QID ( 4 times a day ) .|Povidone[16599,16607]|||||||||C0032856|8610|8610|povidone
+279	9. Polyvinyl Alcohol-Povidone 1.4-0.6 % Dropperette Sig : 01-12 Drops Ophthalmic QID ( 4 times a day ) .|Povidone[16581,16598]||Ophthalmic[16648,16658]|1.4 - 0.6[16608,16615]|||QID[16659,16662]||||603960|8610|povidone
+285	3. Pseudomonal sepsis , completed antibiotic course|antibiotic[16857,16867]||||||||||896|896|antibiotic
+294	Your antibiotics were stopped 2016-05-15 ( Vancomycin 1000mg q24 and Aztreonam 1000mg q8 ) as your micorbiology data has been negative and your course for pseudomonal sepsis has been completed .|Vancomycin[17254,17264]|||1000mg[17265,17271]|||q24[17272,17275]|||null|313572|11124|vancomycin
+294	Your antibiotics were stopped 2016-05-15 ( Vancomycin 1000mg q24 and Aztreonam 1000mg q8 ) as your micorbiology data has been negative and your course for pseudomonal sepsis has been completed .|Aztreonam[17280,17289]|||1000mg[17290,17296]|||q8[17297,17299]|||C0004521|1272|1272|aztreonam

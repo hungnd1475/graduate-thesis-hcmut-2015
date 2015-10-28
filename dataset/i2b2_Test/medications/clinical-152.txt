@@ -1,0 +1,19 @@
+25	1. Amiodarone 200 mg q.d.|Amiodarone[1132,1142]|||200mg[1143,1149]|||q.d.[1150,1154]|||C2608792|833527|703|amiodarone
+26	2. Lasix 20 mg b.i.d.|Lasix[1158,1163]|||20mg[1164,1169]|||b.i.d.[1170,1176]|||C1597886|565450|4603|furosemide
+27	3. Potassium chloride 20 mEq b.i.d.|Potassium chloride[1180,1198]|||20mEq[1199,1205]|||b.i.d.[1206,1212]|||C0989074|316547|8591|potassium chloride
+28	4. Ampicillin 2 grams q. 4 hours .|Ampicillin[1216,1226]|||2grams[1227,1234]|||q. 4 hours[1235,1245]||||313819|733|ampicillin
+29	5. Albuterol and Atrovent p.r.n.|Albuterol[1251,1260]|||||||||C0001927|435|435|salbutamol
+29	5. Albuterol and Atrovent p.r.n.|Atrovent[1265,1273]||||||||p.r.n.[1274,1280]|C0591130|151390|7213|ipratropium
+30	6. Aspirin 325 q.d.|Aspirin[1284,1291]|||325[1292,1295]|||q.d.[1296,1300]|||C0992015|317300|1191|acetylsalicylic acid
+31	7. Coumadin 5 q.d.|Coumadin[1304,1312]|||5[1313,1314]|||q.d.[1315,1319]|||C2709920|855333|11289|warfarin
+32	8. Nystatin swish and swallow 5 cc t.i.d.|Nystatin[1323,1331]|||||swallow[1342,1349]|t.i.d.[1355,1361]|||C0028741|7597|7597|nystatin
+33	9. Colace 100 b.i.d.|Colace[1365,1371]|||100[1372,1375]|||b.i.d.[1376,1382]||||1247755|82003|docusate
+34	10. Percocet 5/325 , 1-2 tablets q. 4 hours p.r.n.|Percocet 5 / 325[1387,1401]||||1 - 2 tablets[1404,1415]||q. 4 hours[1416,1426]||p.r.n[1427,1432]||1049640|161|paracetamol
+49	He was given fresh frozen plasma to correct his INR and a left chest tube was placed .|fresh frozen plasma[2382,2401]||||||||||4563|4563|fresh frozen plasma
+71	1. Colace 100 mg b.i.d.|Colace[4139,4145]|||100mg[4146,4152]|||b.i.d.[4153,4159]||||1247755|82003|docusate
+72	2. Aspirin 325 mg q.d.|Aspirin[4163,4170]|||325mg[4171,4177]|||q.d.[4178,4182]|||C0992015|317300|1191|acetylsalicylic acid
+73	3. Nystatin swish and swallow , 5 cc q. 8 hours .|Nystatin[4186,4194]|||||swallow[4205,4212]|q. 8 hours[4220,4230]|||C0028741|7597|7597|nystatin
+74	4. Ampicillin 2 grams IV q. 6 through 09-08 .|Ampicillin[4236,4246]|||2grams[4247,4254]||IV[4255,4257]|||||313819|733|ampicillin
+75	5. Amiodarone 200 mg q.d.|Amiodarone[4282,4292]|||200mg[4293,4299]|||q.d.[4300,4304]|||C2608792|833527|703|amiodarone
+76	6. Percocet 5/325 , 1-2 tablets q. 6 hours p.r.n.|Percocet 5 / 325[4308,4322]||||1 - 2 tablets[4325,4336]||q. 6 hours[4337,4347]||p.r.n.[4348,4354]||1049640|161|paracetamol
+77	7. Milk of Magnesia 30 cc q.h.s. p.r.n.|Milk of Magnesia[4358,4374]|||30[4375,4377]|||q.h.s.[4381,4387]||p.r.n[4388,4393]|C0591789|152039|152039|milk of magnesia

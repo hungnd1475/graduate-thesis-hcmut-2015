@@ -1,0 +1,54 @@
+15	She received aspirin , Lasix 40 mg intravenously times two , 0.8 mg of nitroglycerin times four , plus morphine sulfate .|aspirin[908,915]|||||||||C0004057|1191|1191|acetylsalicylic acid
+15	She received aspirin , Lasix 40 mg intravenously times two , 0.8 mg of nitroglycerin times four , plus morphine sulfate .|Lasix[918,923]|||40mg[924,929]||intravenously[930,943]|times two[944,953]|||C1597894|565458|4603|furosemide
+15	She received aspirin , Lasix 40 mg intravenously times two , 0.8 mg of nitroglycerin times four , plus morphine sulfate .|nitroglycerin[966,979]|||0.8mg[956,962]|||times four[980,990]|||C1378256|446773|4917|glyceryl trinitrate
+15	She received aspirin , Lasix 40 mg intravenously times two , 0.8 mg of nitroglycerin times four , plus morphine sulfate .|morphine sulfate[998,1014]|||||||||C0066814|30236|30236|morphine sulfate
+19	She did receive intravenous nitroglycerin in the Emergency Room for blood pressure controlled to the 170s .|nitroglycerin[1310,1323]|||||intravenous[1298,1309]||||C0017887|4917|4917|glyceryl trinitrate
+21	She also received 80 mg of Solu-Medrol in the Emergency Department .|Solu - Medrol[1506,1517]|||80mg[1497,1502]|||||||203856|6902|methylprednisolone
+24	She also received captopril 12.5 mg times one .|captopril[1792,1801]|||12.5mg[1802,1809]|||times one[1810,1819]|||C0984501|315560|1998|captopril
+25	Recently , the patient has been treated with several steroid tapers .|steroid[1875,1882]||||||||||10072|10072|steroid
+27	It either ended in 2011-04-11 or continued through 2011-05-11 with use of Augmentin ; and , by report , lasted until 06-07 .|Augmentin[2080,2089]|||||||||C0591132|151392|723|amoxicillin
+28	However , the family said the patient has been on steroids for several weeks .|steroids[2181,2189]|||||||several weeks[2194,2207]|||10072|10072|steroids
+32	She takes an albuterol and Atrovent inhalers as well as Serevent and Flovent .|albuterol[2397,2406]|||||||||C0001927|435|435|salbutamol
+32	She takes an albuterol and Atrovent inhalers as well as Serevent and Flovent .|Serevent[2440,2448]||inhalers[2420,2428]|||||||C3234607|1180757|36117|salmeterol
+32	She takes an albuterol and Atrovent inhalers as well as Serevent and Flovent .|Atrovent[2411,2419]|||||||||C0591130|151390|7213|ipratropium
+32	She takes an albuterol and Atrovent inhalers as well as Serevent and Flovent .|Flovent[2453,2460]|||||||||C0720466|217152|41126|fluticasone
+34	She has had multiple prednisone tapers ( see History of Present Illness ) .|prednisone[2553,2563]|||||||||C0032952|8640|8640|prednisone
+35	On prednisone or sometime after it was discontinued , depending on the version , the patient developed worsening lower extremity edema which has been a Vega problem for her and was started on dyazide as an outpatient .|prednisone[2611,2621]|||||||||C0032952|8640|8640|prednisone
+35	On prednisone or sometime after it was discontinued , depending on the version , the patient developed worsening lower extremity edema which has been a Vega problem for her and was started on dyazide as an outpatient .|dyazide[2800,2807]|||||||||C0058829|23742|5487|hydrochlorothiazide
+38	In 2003 , there was 19% change of the FEV1 and an 11% change in the FVC with bronchodilators .|bronchodilators[3078,3093]||||||||||||
+39	2. Mild hypertension , especially on prednisone .|prednisone[3133,3143]|||||||||C0032952|8640|8640|prednisone
+59	Dyazide 25/37.5 p.o. q.d. , as well as Atrovent , albuterol , and Flovent inhalers , and Swanson 60 mg p.o. b.i.d. , and Serevent 2 puffs q.12h.|Dyazide[3933,3940]|||25[3941,3943]||p.o.[3949,3953]|q.d.[3954,3958]||||208124|5487|hydrochlorothiazide
+59	Dyazide 25/37.5 p.o. q.d. , as well as Atrovent , albuterol , and Flovent inhalers , and Swanson 60 mg p.o. b.i.d. , and Serevent 2 puffs q.12h.|Atrovent[3972,3980]|||||||||C0591130|151390|7213|ipratropium
+59	Dyazide 25/37.5 p.o. q.d. , as well as Atrovent , albuterol , and Flovent inhalers , and Swanson 60 mg p.o. b.i.d. , and Serevent 2 puffs q.12h.|albuterol[3983,3992]|||||||||C0001927|435|435|salbutamol
+59	Dyazide 25/37.5 p.o. q.d. , as well as Atrovent , albuterol , and Flovent inhalers , and Swanson 60 mg p.o. b.i.d. , and Serevent 2 puffs q.12h.|Flovent[3999,4006]||inhalers[4007,4015]|60mg[4030,4035]||p.o.[4036,4040]|b.i.d.[4041,4047]|||C3223929|1169793|41126|fluticasone
+59	Dyazide 25/37.5 p.o. q.d. , as well as Atrovent , albuterol , and Flovent inhalers , and Swanson 60 mg p.o. b.i.d. , and Serevent 2 puffs q.12h.|Serevent[4054,4062]||||2 puffs[4063,4070]||q.12h[4071,4076]||||203159|36117|salmeterol
+61	On transfer , she also arrived on 200 mcg of nitroglycerin and reports p.r.n.|nitroglycerin[4149,4162]|||200mcg[4138,4145]|||||p.r.n[4175,4180]|C1378252|446770|4917|glyceryl trinitrate
+62	Alka-Seltzer , sinus and NyQuil use .|Alka - Seltzer[4182,4194]|||||||||C0051166|17315|1191|acetylsalicylic acid
+62	Alka-Seltzer , sinus and NyQuil use .|NyQuil[4207,4213]|||||||||C2933207|747945|161|paracetamol
+103	She was treated with albuterol and Atrovent continuous nebulizers and was weaned then to intermittent nebulizer treatments and then to her meter-dosed inhalers taking them q.4h. at the time of discharge .|albuterol[6817,6826]|||||||||C0001927|435|435|salbutamol
+103	She was treated with albuterol and Atrovent continuous nebulizers and was weaned then to intermittent nebulizer treatments and then to her meter-dosed inhalers taking them q.4h. at the time of discharge .|Atrovent[6831,6839]||nebulizers[6851,6861]||||q.4h.[6968,6973]|||C0591130|151390|7213|ipratropium
+104	She was continued on salmeterol and Flovent .|salmeterol[7022,7032]|||||||||C0073992|36117|36117|salmeterol
+104	She was continued on salmeterol and Flovent .|Flovent[7037,7044]|||||||||C0720466|217152|41126|fluticasone
+105	She was continued on Solu-Medrol 80 mg q.8h. then converted to prednisone at 60 mg p.o. q.d.|prednisone[7110,7120]|||60mg[7124,7129]||p.o.[7130,7134]|q.d .[7135,7139]|||C1247651|373583|8640|prednisone
+105	She was continued on Solu-Medrol 80 mg q.8h. then converted to prednisone at 60 mg p.o. q.d.|Solu - Medrol[7068,7079]|||80mg[7080,7085]|||||||203856|6902|methylprednisolone
+106	She was started on Singulair 10 mg p.o. q.d.|Singulair[7159,7168]|||10mg[7169,7174]||p.o.[7175,7179]|q.d .[7180,7184]|||C0595730|153892|88249|montelukast
+113	She was given a trial of 80/20 mixed helium/oxygen to decrease the stridor but had minimal effect .|helium / oxygen[7864,7877]|||||||||C1875235|692796|692796|helium / oxygen
+119	She was treated with captopril for hypertension , and this was switched to Norvasc 7.5 mg p.o. q.d. on discharge .|captopril[8382,8391]|||||||||C0006938|1998|1998|captopril
+119	She was treated with captopril for hypertension , and this was switched to Norvasc 7.5 mg p.o. q.d. on discharge .|Norvasc[8436,8443]|||7.5mg[8444,8450]||p.o.[8451,8455]|q.d.[8456,8460]|||C3239502|1185732|17767|amlodipine
+121	She apparently did not have a cardiovascular component to her wheezing or shortness of breath ; however , she was to go home on Lasix 20 mg p.o. q.d. to help with lower extremity edema , as she experiences discomfort with this , and the team felt this may be a limiting factor with her prednisone compliance|Lasix[8744,8749]|||20mg[8750,8755]||p.o.[8756,8760]|q.d.[8761,8765]|||C0697292|200801|4603|furosemide
+121	She apparently did not have a cardiovascular component to her wheezing or shortness of breath ; however , she was to go home on Lasix 20 mg p.o. q.d. to help with lower extremity edema , as she experiences discomfort with this , and the team felt this may be a limiting factor with her prednisone compliance|prednisone[8902,8912]|||||||||C0032952|8640|8640|prednisone
+124	She was treated with a sliding-scale of regular insulin while she was in house .|regular insulin[8981,8996]||||||||||5856|5856|insulin regular
+125	She was given 500 mg p.o. q.d. of metformin to treat her steroid-induced diabetes on discharge .|metformin[9056,9065]|||500mg[9036,9042]||p.o.[9043,9047]|q.d.[9048,9052]||||861007|6809|metformin
+128	She was treated briefly with levofloxacin because of the gram-positive cocci in her sputum culture ; however , her symptoms were felt to be consistent with a viral upper respiratory infection , and levofloxacin was continued at the time of discharge .|levofloxacin[9231,9243]|||||||||C0282386|82122|82122|levofloxacin
+128	She was treated briefly with levofloxacin because of the gram-positive cocci in her sputum culture ; however , her symptoms were felt to be consistent with a viral upper respiratory infection , and levofloxacin was continued at the time of discharge .|levofloxacin[9400,9412]|||||||||C0282386|82122|82122|levofloxacin
+130	1. Lasix 20 mg p.o. q.d.|Lasix[9483,9488]|||20mg[9489,9494]||p.o.[9495,9499]|q.d.[9500,9504]|||C0697292|200801|4603|furosemide
+131	2. Combivent meter-dosed inhaler 2 puffs q.4h. weaning to albuterol meter-dosed inhaler 2 puffs q.4h.|albuterol[9563,9572]||||2 puffs[9538,9545]||q.4h.[9546,9551]|||C1124741|329499|435|salbutamol
+131	2. Combivent meter-dosed inhaler 2 puffs q.4h. weaning to albuterol meter-dosed inhaler 2 puffs q.4h.|Combivent[9508,9517]||||2 puffs[9593,9600]|||||C0591282|151539|435|salbutamol
+132	3. Salmeterol 2 puffs q.12h.|Salmeterol[9610,9620]||||2 puffs[9621,9628]||q.12h.[9629,9635]|||C0073992|36117|36117|salmeterol
+133	4. Flovent 220 mcg 2 puffs q.12h.|Flovent[9639,9646]|||220mcg[9647,9654]|2 puffs[9655,9662]||q.12h.[9663,9669]|||C2731790|896005|41126|fluticasone
+134	5. Prednisone 40 mg p.o. q.d. with taper .|Prednisone[9673,9683]|||40mg[9684,9689]||p.o.[9690,9694]|q.d.[9695,9699]|||C1358600|429332|8640|prednisone
+136	7. Singulair 10 mg p.o. q.d.|Singulair[9746,9755]|||10mg[9756,9761]||p.o.[9762,9766]|q.d.[9767,9771]|||C0595730|153892|88249|montelukast
+137	8. Univasc 7.5 mg p.o. q.d.|Univasc[9775,9782]|||7.5mg[9783,9789]||p.o.[9790,9794]|q.d.[9795,9799]|||C0707378|1299965|30131|moexipril
+138	9. Metformin 500 mg p.o. q.d.|Metformin[9803,9812]|||500mg[9813,9819]||p.o.[9820,9824]|q.d .[9825,9829]||||861007|6809|metformin
+139	Dyazide was discontinued .|Dyazide[9830,9837]|||||||||C0058829|23742|5487|hydrochlorothiazide
+153	3. Steroid-induced diabetes .|Steroid[10482,10489]||||||||||10072|10072|steroid

@@ -1,0 +1,17 @@
+c="ms. less" 16:0 16:1||t="coref person"||c="ms. less" 18:0 18:1
+c="ms. less" 18:0 18:1||t="coref person"||c="she" 19:0 19:0
+c="she" 19:0 19:0||t="coref person"||c="she" 20:0 20:0
+c="she" 25:3 25:3||t="coref person"||c="she" 26:3 26:3
+c="an emergent head ct scan" 26:13 26:17||t="coref test"||c="which" 26:18 26:18
+c="she" 26:3 26:3||t="coref person"||c="she" 27:0 27:0
+c="she" 28:10 28:10||t="coref person"||c="she" 29:0 29:0
+c="she" 29:0 29:0||t="coref person"||c="her" 29:10 29:10
+c="her" 29:10 29:10||t="coref person"||c="her" 30:11 30:11
+c="the patient" 30:17 30:18||t="coref person"||c="the patient" 31:0 31:1
+c="the medical examiner" 32:0 32:2||t="coref person"||c="he" 32:12 32:12
+c="significant hydrocephalus" 27:3 27:4||t="coref problem"||c="her hydrocephalus" 28:7 28:8
+c="she" 27:0 27:0||t="coref person"||c="her" 28:7 28:7
+c="her" 28:7 28:7||t="coref person"||c="she" 28:10 28:10
+c="a ventriculostomy" 28:12 28:13||t="coref treatment"||c="the ventriculostomy" 29:7 29:8
+c="her" 30:11 30:11||t="coref person"||c="the patient" 30:17 30:18
+c="she" 20:0 20:0||t="coref person"||c="she" 25:3 25:3

@@ -13,11 +13,11 @@ namespace HCMUT.EMRCorefResol.English.Features
         {
             var searcher = KeywordService.Instance.MODIFIER_KEYWORD;
 
-            var line = emr.GetLine(instance.Anaphora.Begin.Line);
+            var line = emr.GetLine(instance.Anaphora);
             var anaKeyword = searcher.SearchKeywords(line, Utilities.KWSearchOptions.IgnoreCase);
             if (anaKeyword.Length <= 0) return;
 
-            line = emr.GetLine(instance.Antecedent.Begin.Line);
+            line = emr.GetLine(instance.Antecedent);
             var anteKeyword = searcher.SearchKeywords(line, Utilities.KWSearchOptions.IgnoreCase);
             if (anteKeyword.Length <= 0) return;
 

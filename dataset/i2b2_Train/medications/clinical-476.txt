@@ -1,0 +1,6 @@
+23	IBUPROFEN 400-600 MG PO Q6H PRN Pain|IBUPROFEN[527,536]|||400 - 600MG[537,547]||PO[548,550]|Q6H[551,554]||PRN[555,558]|C0786114|245417|5640|ibuprofen
+26	OXYCODONE 5-10 MG PO Q3H PRN Pain|OXYCODONE[615,624]|||5 - 10MG[625,632]||PO[633,635]|Q3H[636,639]||PRN[640,643]||1049683|7804|oxycodone
+28	If pt received post partum spinal morphine , DO NOT administer Oxycodone for 18 hours after morphine administration .|morphine[698,706]|||||||||C0026549|7052|7052|morphine
+28	If pt received post partum spinal morphine , DO NOT administer Oxycodone for 18 hours after morphine administration .|morphine[756,764]|||||||18 hours[741,749]||C0026549|7052|7052|morphine
+28	If pt received post partum spinal morphine , DO NOT administer Oxycodone for 18 hours after morphine administration .|Oxycodone[727,736]|||||||||C0030049|7804|7804|oxycodone
+29	PRENATAL MULTIVITAMINS ( STUARTNATAL ) 1|PRENATAL MULTIVITAMINS[782,804]||||||||||219376|219376|prenatal multivitamins

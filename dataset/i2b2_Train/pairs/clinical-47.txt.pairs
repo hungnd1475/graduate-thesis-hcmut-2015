@@ -1,0 +1,172 @@
+c="paroxysmal atrial fibrillation" 53:1 53:3||t="coref problem"||c="rapid af" 114:6 114:7
+c="he" 42:0 42:0||t="coref person"||c="his" 42:9 42:9
+c="he" 134:9 134:9||t="coref person"||c="his" 134:15 134:15
+c="he" 136:0 136:0||t="coref person"||c="his" 136:8 136:8
+c="he" 142:0 142:0||t="coref person"||c="his" 145:0 145:0
+c="him" 147:4 147:4||t="coref person"||c="his" 147:9 147:9
+c="he" 148:0 148:0||t="coref person"||c="his" 148:10 148:10
+c="thrombocytopenia" 21:1 21:1||t="coref problem"||c="chronically low platelet count" 56:1 56:4
+c="right lower extremity pseudomonas cellulitis" 15:1 15:5||t="coref problem"||c="a pseudomonas cellulitis" 96:9 96:11
+c="gentamicin" 48:6 48:6||t="coref treatment"||c="gentamicin" 66:7 66:7
+c="blood cultures" 47:0 47:1||t="coref test"||c="blood cultures" 97:0 97:1
+c="betadine" 106:9 106:9||t="coref treatment"||c="betadine" 107:10 107:10
+c="paroxysmal atrial fibrillation" 16:1 16:3||t="coref problem"||c="paroxysmal atrial fibrillation" 53:1 53:3
+c="decadron" 33:4 33:4||t="coref treatment"||c="the patient &apos;s decadron dose" 39:0 39:4
+c="purple-red" 75:9 75:9||t="coref problem"||c="erythema along the lateral right lower extremity" 104:23 104:29
+c="he" 77:5 77:5||t="coref person"||c="the patient" 96:0 96:1
+c="steroids" 126:11 126:11||t="coref treatment"||c="steroids" 134:12 134:12
+c="xeroform" 106:7 106:7||t="coref treatment"||c="the xeroform" 107:7 107:8
+c="radiation therapy" 122:4 122:5||t="coref treatment"||c="xrt to the spinal region" 123:9 123:13
+c="multiple myeloma" 22:1 22:2||t="coref problem"||c="multiple myeloma" 25:4 25:5
+c="a dopamine drip" 48:15 48:17||t="coref treatment"||c="dopamine" 66:34 66:34
+c="ms contin" 39:18 39:19||t="coref treatment"||c="ms contin" 66:21 66:22
+c="surgical intervention" 105:18 105:19||t="coref treatment"||c="amputation" 105:21 105:21
+c="this bone marrow transplant" 28:0 28:3||t="coref treatment"||c="his transplant" 42:9 42:10
+c="he" 48:0 48:0||t="coref person"||c="his" 48:21 48:21
+c="the patient" 25:0 25:1||t="coref person"||c="he" 26:0 26:0
+c="he" 27:3 27:3||t="coref person"||c="he" 28:10 28:10
+c="her" 31:2 31:2||t="coref person"||c="he" 32:0 32:0
+c="poor nutritional status" 20:1 20:3||t="coref problem"||c="a poor nutritional status" 140:3 140:6
+c="those medications" 101:12 101:13||t="coref treatment"||c="his regimen" 104:5 104:6
+c="ceftazidime" 48:4 48:4||t="coref treatment"||c="ceftazidime" 66:5 66:5
+c="the patient" 108:3 108:4||t="coref person"||c="his" 109:13 109:13
+c="his" 147:9 147:9||t="coref person"||c="his" 147:15 147:15
+c="a pseudomonas cellulitis" 96:9 96:11||t="coref problem"||c="his pseudomonas cellulitis" 109:13 109:15
+c="an mri without gadolinium" 37:0 37:3||t="coref test"||c="an mri" 90:0 90:1
+c="synthroid" 66:17 66:17||t="coref treatment"||c="synthroid" 152:73 152:73
+c="multiple myeloma" 25:4 25:5||t="coref problem"||c="multiple myeloma" 52:1 52:2
+c="his transplant" 42:9 42:10||t="coref treatment"||c="failed autologous bone marrow transplant" 57:1 57:5
+c="the surgery department" 105:4 105:6||t="coref person"||c="there" 105:10 105:10
+c="pseudomonas aeruginosa" 47:7 47:8||t="coref problem"||c="his sepsis" 48:21 48:22
+c="the right lower extremity swelling" 42:12 42:16||t="coref problem"||c="swollen" 75:11 75:11
+c="swollen" 41:21 41:21||t="coref problem"||c="the right lower extremity swelling" 42:12 42:16
+c="the patient" 29:3 29:4||t="coref person"||c="her" 31:2 31:2
+c="nasal cannula" 137:19 137:20||t="coref treatment"||c="nasal cannula" 137:26 137:27
+c="plasmacytoma" 19:1 19:1||t="coref problem"||c="a right posterior lateral epidural mass" 37:11 37:16
+c="parenteral morphine sulfate" 108:14 108:16||t="coref treatment"||c="morphine sulfate iv" 152:89 152:91
+c="he" 122:0 122:0||t="coref person"||c="the patient" 124:0 124:1
+c="the patient" 103:3 103:4||t="coref person"||c="his" 104:5 104:5
+c="radiation therapy" 39:21 39:22||t="coref treatment"||c="radiation therapy" 122:4 122:5
+c="dopamine" 66:34 66:34||t="coref treatment"||c="dopamine" 113:6 113:6
+c="the digoxin" 119:5 119:6||t="coref treatment"||c="digoxin" 152:21 152:21
+c="neurological exam on admission" 77:0 77:3||t="coref test"||c="examination" 77:34 77:34
+c="the patient" 40:7 40:8||t="coref person"||c="the patient" 41:12 41:13
+c="he" 26:0 26:0||t="coref person"||c="he" 27:3 27:3
+c="these dressing changes" 107:0 107:2||t="coref treatment"||c="these dressing changes" 108:9 108:11
+c="the patient" 132:0 132:1||t="coref person"||c="he" 133:0 133:0
+c="his" 48:21 48:21||t="coref person"||c="he" 50:0 50:0
+c="the plasmacytoma" 123:15 123:16||t="coref problem"||c="plasmacytoma" 124:28 124:28
+c="the patient" 140:0 140:1||t="coref person"||c="he" 141:0 141:0
+c="erythema" 110:7 110:7||t="coref problem"||c="this erythema" 111:3 111:4
+c="failed autologous bone marrow transplant" 57:1 57:5||t="coref treatment"||c="his bone marrow transplant" 146:8 146:11
+c="he" 104:19 104:19||t="coref person"||c="he" 105:0 105:0
+c="he" 43:0 43:0||t="coref person"||c="the patient" 44:5 44:6
+c="he" 124:31 124:31||t="coref person"||c="he" 126:3 126:3
+c="right lower extremity pain" 40:10 40:13||t="coref problem"||c="the pain" 40:20 40:21
+c="this" 24:0 24:0||t="coref person"||c="the patient" 25:0 25:1
+c="chronically low platelet count" 56:1 56:4||t="coref problem"||c="a low platelet count" 145:14 145:17
+c="his" 119:14 119:14||t="coref person"||c="he" 119:18 119:18
+c="his decadron dose" 130:0 130:2||t="coref treatment"||c="decadron" 152:15 152:15
+c="he" 119:18 119:18||t="coref person"||c="the patient" 121:0 121:1
+c="he" 32:0 32:0||t="coref person"||c="he" 33:0 33:0
+c="increasingly painful" 41:24 41:25||t="coref problem"||c="extremely tender" 75:23 75:24
+c="tobramycin" 109:11 109:11||t="coref treatment"||c="tobramycin" 152:105 152:105
+c="cultures" 98:2 98:2||t="coref test"||c="those" 98:14 98:14
+c="atrial fibrillation" 115:7 115:8||t="coref problem"||c="his paroxysmal atrial fibrillation" 117:8 117:11
+c="digoxin" 117:6 117:6||t="coref treatment"||c="the digoxin" 119:5 119:6
+c="blood cultures" 46:0 46:1||t="coref test"||c="blood cultures" 47:0 47:1
+c="that" 141:8 141:8||t="coref treatment"||c="this tube feeds" 142:15 142:17
+c="he" 116:8 116:8||t="coref person"||c="the patient" 117:0 117:1
+c="vancomycin" 48:9 48:9||t="coref treatment"||c="vancomycin" 66:3 66:3
+c="his" 145:0 145:0||t="coref person"||c="he" 145:10 145:10
+c="his" 104:5 104:5||t="coref person"||c="he" 104:19 104:19
+c="he" 39:13 39:13||t="coref person"||c="the patient" 40:7 40:8
+c="the patient" 96:0 96:1||t="coref person"||c="he" 100:0 100:0
+c="dopamine" 113:6 113:6||t="coref treatment"||c="which" 113:7 113:7
+c="cord compression" 31:24 31:25||t="coref problem"||c="cord compression" 38:4 38:5
+c="the patient" 121:0 121:1||t="coref person"||c="he" 122:0 122:0
+c="that" 97:10 97:10||t="coref problem"||c="septic" 116:10 116:10
+c="he" 45:12 45:12||t="coref person"||c="he" 48:0 48:0
+c="his" 110:10 110:10||t="coref person"||c="his" 110:15 110:15
+c="the tobramycin" 102:0 102:1||t="coref treatment"||c="tobramycin" 109:11 109:11
+c="his" 137:30 137:30||t="coref person"||c="he" 138:0 138:0
+c="his" 113:13 113:13||t="coref person"||c="he" 114:0 114:0
+c="this" 104:10 104:10||t="coref treatment"||c="vancomyin" 152:111 152:111
+c="he" 126:3 126:3||t="coref person"||c="he" 127:0 127:0
+c="plasmacytoma" 124:28 124:28||t="coref problem"||c="which" 124:30 124:30
+c="an autologous bone marrow transplant" 26:2 26:6||t="coref treatment"||c="this bone marrow transplant" 28:0 28:3
+c="his" 42:9 42:9||t="coref person"||c="he" 43:0 43:0
+c="cord compression" 17:1 17:2||t="coref problem"||c="the cord compression" 92:5 92:7
+c="these dressing changes" 108:9 108:11||t="coref treatment"||c="dressing changes" 152:93 152:94
+c="the cord compression" 92:5 92:7||t="coref problem"||c="a cord compression" 126:5 126:7
+c="bone marrow transplant" 21:4 21:6||t="coref treatment"||c="an autologous bone marrow transplant" 26:2 26:6
+c="he" 28:10 28:10||t="coref person"||c="the patient" 29:3 29:4
+c="erythema along the lateral right lower extremity" 104:23 104:29||t="coref problem"||c="erythema" 110:7 110:7
+c="plasmacytoma of t9 through t12" 54:1 54:5||t="coref problem"||c="an epidural mass" 90:8 90:10
+c="his" 130:11 130:11||t="coref person"||c="the patient" 132:0 132:1
+c="imipenem" 109:9 109:9||t="coref treatment"||c="imipenem" 152:45 152:45
+c="he" 35:0 35:0||t="coref person"||c="he" 36:0 36:0
+c="vancomycin" 104:0 104:0||t="coref treatment"||c="this" 104:10 104:10
+c="pseudomonas" 97:9 97:9||t="coref problem"||c="that" 97:10 97:10
+c="stress steroids" 50:3 50:4||t="coref treatment"||c="solu cortef" 66:9 66:10
+c="he" 36:0 36:0||t="coref person"||c="he" 36:3 36:3
+c="he" 45:0 45:0||t="coref person"||c="he" 45:12 45:12
+c="his" 130:0 130:0||t="coref person"||c="his" 130:11 130:11
+c="steroid induced diabetes mellitus" 18:1 18:4||t="coref problem"||c="steroid induced diabetes mellitus" 132:3 132:6
+c="his" 110:15 110:15||t="coref person"||c="the patient" 113:0 113:1
+c="he" 138:0 138:0||t="coref person"||c="the patient" 140:0 140:1
+c="he" 101:0 101:0||t="coref person"||c="the patient" 103:3 103:4
+c="a low platelet count" 145:14 145:17||t="coref problem"||c="this" 146:0 146:0
+c="an epidural mass" 90:8 90:10||t="coref problem"||c="a plasmacytoma" 121:3 121:4
+c="his" 148:10 148:10||t="coref person"||c="this patient" 149:9 149:10
+c="his" 134:15 134:15||t="coref person"||c="he" 136:0 136:0
+c="he" 114:0 114:0||t="coref person"||c="he" 115:0 115:0
+c="tobramycin" 101:7 101:7||t="coref treatment"||c="the tobramycin" 102:0 102:1
+c="septic" 116:10 116:10||t="coref problem"||c="improving septic pictures" 137:6 137:8
+c="the patient" 34:6 34:7||t="coref person"||c="he" 35:0 35:0
+c="he" 141:0 141:0||t="coref person"||c="he" 142:0 142:0
+c="xrt to the spinal region" 123:9 123:13||t="coref treatment"||c="the radiation therapy" 124:34 124:36
+c="the patient" 113:0 113:1||t="coref person"||c="his" 113:13 113:13
+c="a czi sliding scale" 133:18 133:21||t="coref treatment"||c="insulin czi sliding scale regular" 152:67 152:71
+c="he" 33:0 33:0||t="coref person"||c="the patient" 34:6 34:7
+c="the patient" 41:12 41:13||t="coref person"||c="he" 42:0 42:0
+c="the patient" 39:0 39:1||t="coref person"||c="he" 39:13 39:13
+c="he" 50:0 50:0||t="coref person"||c="he" 77:5 77:5
+c="imipenem" 101:5 101:5||t="coref treatment"||c="imipenem" 102:3 102:3
+c="a right posterior lateral epidural mass" 37:11 37:16||t="coref problem"||c="plasmacytoma of t9 through t12" 54:1 54:5
+c="his" 136:8 136:8||t="coref person"||c="he" 137:15 137:15
+c="he" 105:0 105:0||t="coref person"||c="he" 106:0 106:0
+c="pseudomonas aeruginosa" 98:18 98:19||t="coref problem"||c="the organism" 99:0 99:1
+c="he" 100:0 100:0||t="coref person"||c="he" 101:0 101:0
+c="gentamicin" 66:7 66:7||t="coref treatment"||c="gentamicin" 100:7 100:7
+c="the patient" 44:5 44:6||t="coref person"||c="he" 45:0 45:0
+c="imipenem" 102:3 102:3||t="coref treatment"||c="imipenem" 109:9 109:9
+c="the pain" 40:20 40:21||t="coref problem"||c="increasingly painful" 41:24 41:25
+c="his" 128:0 128:0||t="coref person"||c="his" 129:0 129:0
+c="elevated pt and ptt" 143:1 143:4||t="coref problem"||c="these" 144:2 144:2
+c="a plasmacytoma" 121:3 121:4||t="coref problem"||c="the plasmacytoma" 123:15 123:16
+c="his" 124:5 124:5||t="coref person"||c="he" 124:31 124:31
+c="he" 110:3 110:3||t="coref person"||c="his" 110:10 110:10
+c="attending" 155:0 155:0||t="coref person"||c="tamyrcleo n. back , m.d." 156:0 156:4
+c="the patient" 124:0 124:1||t="coref person"||c="his" 124:5 124:5
+c="subsequent sepsis" 96:13 96:14||t="coref problem"||c="pseudomonas" 97:9 97:9
+c="his" 147:15 147:15||t="coref person"||c="he" 148:0 148:0
+c="he" 106:0 106:0||t="coref person"||c="the patient" 108:3 108:4
+c="a pseudomonas sepsis picture" 49:31 49:34||t="coref problem"||c="subsequent sepsis" 96:13 96:14
+c="increasing doses of insulin" 133:4 133:7||t="coref treatment"||c="the supplemental insulin" 134:5 134:7
+c="he" 133:0 133:0||t="coref person"||c="he" 134:9 134:9
+c="ceftazidime" 66:5 66:5||t="coref treatment"||c="ceftazidime" 100:5 100:5
+c="his" 129:0 129:0||t="coref person"||c="his" 130:0 130:0
+c="his" 117:8 117:8||t="coref person"||c="he" 118:0 118:0
+c="his sepsis" 48:21 48:22||t="coref problem"||c="a pseudomonas sepsis picture" 49:31 49:34
+c="his" 109:13 109:13||t="coref person"||c="he" 110:3 110:3
+c="tube feeds" 141:5 141:6||t="coref treatment"||c="that" 141:8 141:8
+c="he" 115:0 115:0||t="coref person"||c="he" 116:8 116:8
+c="he" 36:3 36:3||t="coref person"||c="the patient" 39:0 39:1
+c="he" 127:0 127:0||t="coref person"||c="his" 128:0 128:0
+c="the patient" 117:0 117:1||t="coref person"||c="his" 117:8 117:8
+c="he" 118:0 118:0||t="coref person"||c="his" 119:14 119:14
+c="he" 137:15 137:15||t="coref person"||c="his" 137:30 137:30
+c="his decadron dose" 129:0 129:2||t="coref treatment"||c="his decadron dose" 130:0 130:2
+c="he" 145:10 145:10||t="coref person"||c="his" 146:8 146:8
+c="subsequent sepsis" 96:13 96:14||t="coref problem"||c="his sepsis" 113:13 113:14

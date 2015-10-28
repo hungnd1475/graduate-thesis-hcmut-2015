@@ -1,0 +1,24 @@
+9	He had a Myoview on 05-04 which showed fixed inferior wall defect but no evidence of ischemia .|Myoview[318,325]||||||||||115527|115527|myoview
+21	1. Folic Acid .|Folic Acid[1251,1261]|||||||||C0016410|4511|4511|folic acid
+22	2. Metformin .|Metformin[1267,1276]|||||||||C0025598|6809|6809|metformin
+23	3. Norvasc .|Norvasc[1282,1289]||||||||||58927|17767|amlodipine
+24	4. Aspirin .|Aspirin[1295,1302]|||||||||C0004057|1191|1191|acetylsalicylic acid
+25	5. Lopressor .|Lopressor[1308,1317]|||||||||C0700776|203344|6918|metoprolol
+26	6. Lipitor .|Lipitor[1323,1330]|||||||||C0593906|153165|83367|atorvastatin
+27	7. Diovan .|Diovan[1336,1342]|||||||||C0719949|216652|69749|valsartan
+28	8. Hydrochlorothiazide .|Hydrochlorothiazide[1348,1367]|||||||||C0020261|5487|5487|hydrochlorothiazide
+54	He initially required nitroglycerin drip .|nitroglycerin[2362,2375]|||||drip[2376,2380]||||C0017887|4917|4917|glyceryl trinitrate
+56	Received perioperative Vancomycin .|Vancomycin[2452,2462]|||||||||C0042313|11124|11124|vancomycin
+60	The patient was discharged to the regular cardiothoracic floor where his anti-hypertensives were manipulated to improve his heart rate and blood pressure .|anti - hypertensives[2816,2834]||||||||||||
+71	He is on Lopressor 100 mg twice a day .|Lopressor[3349,3358]|||100mg[3359,3365]|||a day[3372,3377]|||C0708592|866513|6918|metoprolol
+72	Metformin 500 mg twice a day .|Metformin[3380,3389]|||500mg[3390,3396]|||a day[3403,3408]|||C0987665|316256|6809|metformin
+73	Lasix 20 mg twice a day times seven days .|Lasix[3411,3416]|||20mg[3417,3422]|||a day[3429,3434]|||C1597886|565450|4603|furosemide
+74	Potassium 20 mEq twice a day times seven days .|Potassium[3454,3463]|||20mEq[3464,3470]|||a day[3477,3482]|||C0989018|316534|34296|pot bicarb (obsolete)
+75	Potassium chloride 20 mEq times seven days , Plavix 75 mg p.o. q day , Isosorbide 60 mg q day , Percocet p.r.n. , Entericoated aspirin 325 mg q day .|Potassium chloride[3502,3520]|||20mEq[3521,3527]|||times seven[3528,3539]|||C0989074|316547|8591|potassium chloride
+75	Potassium chloride 20 mEq times seven days , Plavix 75 mg p.o. q day , Isosorbide 60 mg q day , Percocet p.r.n. , Entericoated aspirin 325 mg q day .|Plavix[3547,3553]|||75mg[3554,3559]||p.o.[3560,3564]|q day[3565,3570]|||C0716159|213169|32968|clopidogrel
+75	Potassium chloride 20 mEq times seven days , Plavix 75 mg p.o. q day , Isosorbide 60 mg q day , Percocet p.r.n. , Entericoated aspirin 325 mg q day .|Isosorbide[3573,3583]|||60mg[3584,3589]|||q day[3590,3595]|||C1256523|381051|6058|isosorbide dinitrate
+75	Potassium chloride 20 mEq times seven days , Plavix 75 mg p.o. q day , Isosorbide 60 mg q day , Percocet p.r.n. , Entericoated aspirin 325 mg q day .|Percocet[3598,3606]||||||||p.r.n.[3607,3613]|C0086787|42844|161|paracetamol
+75	Potassium chloride 20 mEq times seven days , Plavix 75 mg p.o. q day , Isosorbide 60 mg q day , Percocet p.r.n. , Entericoated aspirin 325 mg q day .|aspirin[3629,3636]|||325mg[3637,3643]|||q day[3644,3649]|||C0992015|317300|1191|acetylsalicylic acid
+76	Colace 100 mg twice a day p.r.n.|Colace[3652,3658]|||100mg[3659,3665]|||a day[3672,3677]||p.r.n[3678,3683]||1247755|82003|docusate
+77	Lipitor 20 mg p.o. q day .|Lipitor[3685,3692]|||20mg[3693,3698]||p.o.[3699,3703]|q day[3704,3709]|||C0593904|617318|83367|atorvastatin
+78	Folate 1 mg q day .|Folate[3712,3718]|||1mg[3719,3723]|||q day[3724,3729]||||74178|62356|folate

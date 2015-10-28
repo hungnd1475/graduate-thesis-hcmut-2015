@@ -1,0 +1,23 @@
+46	GLUCOSE - 193 * UREA N - 23 * CREAT - 1.2 SODIUM - 138 POTASSIUM - 4.6 CHLORIDE - 101 TOTAL CO2 - 21 * ANION GAP - 21 * 2018-05-24 08:55 PM|POTASSIUM[1712,1721]|||||||||C0032821|8588|8588|potassium
+46	GLUCOSE - 193 * UREA N - 23 * CREAT - 1.2 SODIUM - 138 POTASSIUM - 4.6 CHLORIDE - 101 TOTAL CO2 - 21 * ANION GAP - 21 * 2018-05-24 08:55 PM|SODIUM[1699,1705]|||||||||C0037473|9853|9853|sodium
+46	GLUCOSE - 193 * UREA N - 23 * CREAT - 1.2 SODIUM - 138 POTASSIUM - 4.6 CHLORIDE - 101 TOTAL CO2 - 21 * ANION GAP - 21 * 2018-05-24 08:55 PM|UREA[1673,1677]|||||||||C0041942|11002|11002|urea
+47	CALCIUM - 8.8 PHOSPHATE - 3.9 MAGNESIUM - 2.4 2018-05-24 08:55 PM|MAGNESIUM[1827,1836]|||||||||C0024467|6574|6574|magnesium
+47	CALCIUM - 8.8 PHOSPHATE - 3.9 MAGNESIUM - 2.4 2018-05-24 08:55 PM|CALCIUM[1797,1804]|||||||||C0006675|1895|1895|calcium
+55	During ER evaluation pt was noted to have some degree of dyspnea as well as mental status changes , including loss of short term memory and brief unresponsive period after one dose of IV Benadry and steroids prior to CT scan .|steroids[2579,2587]|||||IV[2564,2566]|||||10072|10072|steroids
+59	The pt was begun on heparin gtt and was noted to have platelet drop > 50% after infusion began , hepain was d/c 'd.|heparin[2806,2813]|||||||||C0019134|235473|235473|heparin,porcine
+60	Argatroban was started abd a HIT panel was sent , HIT panel was positive .|Argatroban[2902,2912]|||||||||C0048470|15202|15202|argatroban
+63	Over the next several days the patient was maintained on Argatrobanwhile coumadin therapy was initiated .|coumadin[3201,3209]|||||||several days[3142,3154]||C0699129|202421|11289|warfarin
+64	On HD#6 the pt had a therapeudic INR ( 4.4 ) off Argatroban and wad discharged home .|Argatroban[3283,3293]|||||||||C0048470|15202|15202|argatroban
+68	ASA 81 '|ASA[3461,3464]|||81[3465,3467]|||||||243670|1191|acetylsalicylic acid
+69	Atorvastatin 10 '|Atorvastatin[3470,3482]|||10[3483,3485]||||||C1379772|597970|83367|atorvastatin
+70	Lisinopril 5 '|Lisinopril[3488,3498]|||5[3499,3500]||||||C0987222|316156|29046|lisinopril
+71	Lopressor 50 "|Lopressor[3503,3512]|||50[3513,3515]||||||C2723340|866515|6918|metoprolol
+72	Amiodarone 200 '|Amiodarone[3518,3528]|||200[3529,3532]||||||C2608792|833527|703|amiodarone
+74	1. Aspirin 81 mg Tablet , Delayed Release ( E.C. ) Sig : One ( 1 ) Tablet , Delayed Release ( E.C. ) PO DAILY ( Daily ) .|Aspirin[3562,3569]||Tablet[3576,3582]|81mg[3570,3575]||PO[3660,3662]|DAILY[3663,3668]||||243670|1191|acetylsalicylic acid
+75	2. Atorvastatin 10 mg Tablet Sig : One ( 1 ) Tablet PO DAILY ( Daily ) .|Atorvastatin[3684,3696]||Tablet[3703,3709]|10mg[3697,3702]||PO[3733,3735]|DAILY[3736,3741]||||617312|83367|atorvastatin
+76	3. Metoprolol Tartrate 50 mg Tablet Sig :One ( 1 ) Tablet PO BID ( 2 times a day ) .|Metoprolol Tartrate[3757,3776]||Tablet[3783,3789]|50mg[3777,3782]||PO[3812,3814]|BID[3815,3818]|||C0978612|866514|6918|metoprolol
+77	4. Amoxicillin-Pot Clavulanate 875-125 mg Tablet Sig : One ( 1 ) Tablet PO BID ( 2 times a day ) for 10 days .|Amoxicillin[3842,3853]|||||||||C0002645|723|723|amoxicillin
+77	4. Amoxicillin-Pot Clavulanate 875-125 mg Tablet Sig : One ( 1 ) Tablet PO BID ( 2 times a day ) for 10 days .|Clavulanate[3858,3869]|||||||||C0110038|48203|48203|clavulanate
+77	4. Amoxicillin-Pot Clavulanate 875-125 mg Tablet Sig : One ( 1 ) Tablet PO BID ( 2 times a day ) for 10 days .|Clavulanate[3842,3853]||Tablet[3881,3887]|875 - 125mg[3870,3880]||PO[3911,3913]|BID[3914,3917]|10 days[3940,3947]||C1126575|345821|48203|clavulanate
+79	5. Amiodarone 200 mg Tablet Sig : One ( 1 ) Tablet PO DAILY ( Daily ) .|Amiodarone[3991,4001]||Tablet[4009,4015]|200mg[4002,4008]||PO[4039,4041]|DAILY[4042,4047]||||833528|703|amiodarone
+80	6. Warfarin 2 mg Tablet Sig : 1.5 Tablets PO as directed : 3 mg 1943-05-29 and 6/1 then as directed by Dr Mace .|Warfarin[4063,4071]||Tablet[4077,4083]|2mg[4072,4076]|1.5 Tablets[4090,4101]|PO[4102,4104]|||||855302|11289|warfarin

@@ -1,0 +1,3 @@
+c="glotzasrhalt , shirlh" 12:0 12:2||c="patient" 30:0 30:0||c="the patient" 33:0 33:1||c="you" 41:1 41:1||c="you" 41:14 41:14||c="you" 42:1 42:1||c="patient" 43:7 43:7||t="coref person"
+c="uri" 31:2 31:2||c="urinary tract infection" 33:7 33:9||c="urinary tract infection" 35:0 35:2||t="coref problem"
+c="provider" 19:0 19:0||c="gram meedner" 20:0 20:1||t="coref person"

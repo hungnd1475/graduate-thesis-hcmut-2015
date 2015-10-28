@@ -1,0 +1,28 @@
+20	She was started on Levofloxacin but the patient became hypotensive at that point with blood pressure of 70/45 and received a normal saline bolus to boost her blood pressure to 99/60 ; however the patient was admitted to the Medical Intensive Care Unit for overnight observation because of her somnolence|Levofloxacin[1037,1049]|||||||||C0282386|82122|82122|levofloxacin
+20	She was started on Levofloxacin but the patient became hypotensive at that point with blood pressure of 70/45 and received a normal saline bolus to boost her blood pressure to 99/60 ; however the patient was admitted to the Medical Intensive Care Unit for overnight observation because of her somnolence|normal saline[1143,1156]|||||||||C0445115|125464|125464|normal saline
+24	1. Positive lupus anti-coagulant .|coagulant[1497,1506]||||||||||2632|2632|coagulant
+33	10. Seizure history on Neurontin .|Neurontin[1875,1884]|||||||||C0678176|196498|25480|gabapentin
+40	1. Enteric-coated aspirin .|coated aspirin[2145,2159]|||||||||C0719394|216110|216110|coated aspirin
+41	2. Aggrenox .|Aggrenox[2165,2173]|||||||||C0732282|226718|1191|acetylsalicylic acid
+42	3. Zanaflex .|Zanaflex[2179,2187]|||||||||C0595425|153736|57258|tizanidine
+43	4. Neurontin 300 mg three times a day .|Neurontin[2193,2202]|||300mg[2203,2209]|||three times a day[2210,2227]|||C1596319|563878|25480|gabapentin
+44	5. Celexa 10 mg daily .|Celexa[2233,2239]|||10mg[2240,2245]|||daily[2246,2251]|||C1592743|575018|2556|citalopram
+62	After transfer to the Floor , the patient was continued on Levofloxacin for a ten to 14 day course for presumptive pneumonia .|Levofloxacin[3397,3409]|||||||14 day[3423,3429]||C0282386|82122|82122|levofloxacin
+64	For her depression , continued on Citalopram 10 mg daily .|Citalopram[3570,3580]|||10mg[3581,3586]|||daily[3587,3592]|||C1127563|331567|2556|citalopram
+65	For her paraplegia and associated muscle spasticity she was continued on her Zanaflex .|Zanaflex[3672,3680]|||||||||C0595425|153736|57258|tizanidine
+66	For deep vein thrombosis prophylaxis she was treated with subcutaneous heparin and for gastrointestinal prophylaxis she was treated with Protonix .|subcutaneous heparin[3741,3761]||||||||||103984|103984|subcutaneous heparin
+66	For deep vein thrombosis prophylaxis she was treated with subcutaneous heparin and for gastrointestinal prophylaxis she was treated with Protonix .|Protonix[3820,3828]|||||||||C0876139|261624|40790|pantoprazole
+72	There was some question regarding restarting of the patient 's Coumadin given her positive lupus anti-coagulant status as well as the presence of her basilar artery stenosis .|Coumadin[4496,4504]|||||||||C0699129|202421|11289|warfarin
+75	1. Levofloxacin 250 mg q. day for ten days .|Levofloxacin[4712,4724]|||250mg[4725,4731]|||q. day[4732,4738]|ten days[4743,4751]||C0987134|316145|82122|levofloxacin
+76	2. Aspirin / dipyridamole 25/200 mg capsules taken two times a day .|Aspirin / dipyridamole[4757,4779]||capsules[4790,4798]|25[4780,4782]|||two times a day[4805,4820]||||259081|1191|acetylsalicylic acid
+77	3. Neurontin 300 mg taken three times a day .|Neurontin[4826,4835]|||300mg[4836,4842]|||three times a day[4849,4866]|||C1596319|563878|25480|gabapentin
+78	4. Subcutaneous heparin taken 5000 units twice a day .|Subcutaneous heparin[4872,4892]||||||a day[4916,4921]||||103984|103984|subcutaneous heparin
+79	5. Albuterol multiple dose inhalers , one to two puffs q. six hours as needed .|Albuterol[4927,4936]||inhalers[4951,4959]||one to two puffs[4962,4978]|||six hours[4982,4991]|as needed[4992,5001]|C3209067|1154602|435|salbutamol
+80	6. Atrovent multiple dose inhalers , one to two puffs q. six hours as needed .|Atrovent[5007,5015]||inhalers[5030,5038]||one to two puffs[5041,5057]|||six hours[5061,5070]|as needed[5071,5080]|C3227604|1173573|7213|ipratropium
+81	7. Citalopram 10 mg q. day .|Citalopram[5086,5096]|||10mg[5097,5102]|||q. day[5103,5109]|||C1127563|331567|2556|citalopram
+82	8. Lisinopril 2.5 mg once a day .|Lisinopril[5115,5125]|||2.5mg[5126,5132]|||a day[5138,5143]|||C0987218|316152|29046|lisinopril
+83	9. Trazodone 25 mg q. h.s. p.r.n.|Trazodone[5149,5158]|||25mg[5159,5164]|||h.s.[5168,5172]||p.r.n.[5173,5179]|C1368820|439360|10737|trazodone
+84	10. Protonix 40 mg q. day .|Protonix[5184,5192]|||40mg[5193,5198]|||q. day[5199,5205]|||C1588007|542447|40790|pantoprazole
+85	11. Zanaflex 2 mg twice a day .|Zanaflex[5212,5220]|||2mg[5221,5225]|||a day[5232,5237]|||C1597807|565371|57258|tizanidine
+86	12. Tylenol 325 mg , one to two tablets q. four to six hours p.r.n.|Tylenol[5244,5251]|||325mg[5252,5258]|one to two tablets[5261,5279]||||p.r.n.[5301,5307]|C1604206|569998|161|paracetamol
+87	13. The patient was also discharged with the restarting of warfarin 2 mg daily .|warfarin[5367,5375]|||2mg[5376,5380]|||daily[5381,5386]|||C2709904|855301|11289|warfarin

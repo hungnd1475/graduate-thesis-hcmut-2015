@@ -12,7 +12,7 @@ namespace HCMUT.EMRCorefResol.English.Features
         public SignedInformationFeature(PersonInstance instance, EMR emr)
             :base("Sign-Information", 2, 0)
         {
-            var line = EMRExtensions.GetLine(emr, instance.Concept.Begin.Line);
+            var line = EMRExtensions.GetLine(emr, instance.Concept);
             var previous = EMRExtensions.GetLine(emr, instance.Concept.Begin.Line -1);
 
             var searcher = KeywordService.Instance.SIGN_INFORMATION;

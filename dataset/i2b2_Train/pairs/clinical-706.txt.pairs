@@ -1,0 +1,6 @@
+c="attending" 24:0 24:0||t="coref person"||c="obstetrics service , yc , m.d." 25:0 25:5
+c="certified nurse midwife" 55:0 55:2||t="coref person"||c="nead , manertny , cnm" 56:0 56:4
+c="waresin , sagay" 13:0 13:2||t="coref person"||c="patient" 18:1 18:1
+c="perineal , 1st degree" 49:0 49:3||t="coref problem"||c="first degree perineal laceration" 58:2 58:5
+c="newborn" 65:1 65:1||t="coref person"||c="baby 1" 67:0 67:1
+c="laceration" 48:0 48:0||t="coref problem"||c="perineal , 1st degree" 49:0 49:3

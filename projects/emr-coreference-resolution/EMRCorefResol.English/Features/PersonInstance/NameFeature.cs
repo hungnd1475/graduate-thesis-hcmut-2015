@@ -13,7 +13,9 @@ namespace HCMUT.EMRCorefResol.English.Features
         public NameFeature(PersonInstance instance, EMR emr)
             :base("Name-Feature", 2, 0)
         {
-            var line = EMRExtensions.GetLine(emr, instance.Concept.Begin.Line);
+            var line = EMRExtensions.GetLine(emr, instance.Concept);
+
+            //Return if concept have only 1 word and stay at the beginning of sentence (surely Capitol)
             if(instance.Concept.Lexicon.Split(' ').Length == 1 &&
                 line.ToLower().IndexOf(instance.Concept.Lexicon) == 0)
             {
@@ -27,8 +29,17 @@ namespace HCMUT.EMRCorefResol.English.Features
                 return;
             }
 
+            //Calculate end index
+            var endIndex = instance.Concept.End.WordIndex;
+            if (instance.Concept.Begin.Line != instance.Concept.End.Line)
+            {
+                var beginLine = EMRExtensions.GetLine(emr, instance.Concept.Begin.Line);
+                var beginMaxWord = beginLine.Replace("\r", "").Replace("\n", "").Split(' ').Length;
+                endIndex = beginMaxWord + instance.Concept.End.WordIndex;
+            }
+
             var rawNameArr = tokens.Skip(instance.Concept.Begin.WordIndex)
-                .Take(instance.Concept.End.WordIndex - instance.Concept.Begin.WordIndex + 1)
+                .Take(endIndex - instance.Concept.Begin.WordIndex + 1)
                 .ToArray();
             var rawName = string.Join(" ", rawNameArr);
 

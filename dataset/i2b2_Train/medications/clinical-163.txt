@@ -1,0 +1,20 @@
+16	Of note , she has had recent medication changes which included discontinuing Diovan and starting terazosin .|Diovan[837,843]|||||||||C0719949|216652|69749|valsartan
+16	Of note , she has had recent medication changes which included discontinuing Diovan and starting terazosin .|terazosin[857,866]|||||||||C0076107|37798|37798|terazosin
+25	1. Aspirin 325 mg p.o. q. day .|Aspirin[1032,1039]|||325mg[1040,1046]||p.o.[1047,1051]|q. day[1052,1058]||||1050241|1191|acetylsalicylic acid
+26	2. Norvasc 10 mg p.o. q. day .|Norvasc[1064,1071]|||10mg[1072,1077]||p.o.[1078,1082]|q. day[1083,1089]|||C0715434|212575|17767|amlodipine
+27	3. Isosorbide mononitrate 30 q. day .|Isosorbide mononitrate[1095,1117]|||30[1118,1120]|||q. day[1121,1127]|||C1256519|381047|6057|isosorbide
+28	4. Terazosin 1 mg p.o. q. day .|Terazosin[1133,1142]|||1mg[1143,1147]||p.o.[1148,1152]|q. day[1153,1159]||||313215|37798|terazosin
+95	1. Aspirin 325 mg p.o. q. day .|Aspirin[4791,4798]|||325mg[4799,4805]||p.o.[4806,4810]|q. day[4811,4817]||||1050241|1191|acetylsalicylic acid
+96	2. Norvasc 10 mg p.o. q. day .|Norvasc[4823,4830]|||10mg[4831,4836]||p.o.[4837,4841]|q. day[4842,4848]|||C0715434|212575|17767|amlodipine
+97	3. Atorvastatin 10 mg p.o. q. day .|Atorvastatin[4854,4866]|||10mg[4867,4872]||p.o.[4873,4877]|q. day[4878,4884]||||617312|83367|atorvastatin
+98	4. Protonix 20 mg p.o. q. day .|Protonix[4890,4898]|||20mg[4899,4904]||p.o.[4905,4909]|q. day[4910,4916]|||C1588004|542443|40790|pantoprazole
+99	5. Multivitamin one p.o. q. day .|Multivitamin[4922,4934]||||one[4935,4938]|p.o.[4939,4943]|q. day[4944,4950]||||89905|89905|multiple vitamins
+100	6. Carvedilol 3.125 p.o. b.i.d.|Carvedilol[4956,4966]|||3.125[4967,4972]||p.o.[4973,4977]|b.i.d.[4978,4984]|||C0693822|686924|20352|carvedilol
+102	8. Erythropoietin 10,000 units two times a week Tuesday and Saturday .|Erythropoietin[5031,5045]|||10 , 000[5046,5052]|||two times a week[5059,5075]|||C3503585|1360162|105694|epoetin alfa,recombinant
+103	9. Calcium acetate Tums one p.o. t.i.d. with meals .|Tums[5118,5122]||||one[5123,5126]|p.o.[5127,5131]|t.i.d.[5132,5138]|||C3230828|1176894|1897|calcium (as carbonate)
+103	9. Calcium acetate Tums one p.o. t.i.d. with meals .|Calcium acetate[5102,5117]|||||||||C0717537|214342|214342|calcium acetate
+104	10. Tylenol 325 mg p.o. q. 4-6 h. p.r.n.|Tylenol[5156,5163]|||325mg[5164,5170]||p.o.[5171,5175]|q. 4 - 6 h.[5176,5185]||p.r.n.[5186,5192]||209387|161|paracetamol
+105	11. Iron sulfate 325 mg p.o. q. day .|Iron sulfate[5197,5209]|||325mg[5210,5216]||p.o.[5217,5221]|q. day[5222,5228]||||310325|24947|ferrous sulfate
+106	12. Colace 100 mg p.o. b.i.d.|Colace[5235,5241]|||100mg[5242,5248]||p.o.[5249,5253]|b.i.d.[5254,5260]|||C0711644|1247756|82003|docusate
+107	13. Hydralazine 10 mg p.o. q. 6h.|Hydralazine[5265,5276]|||10mg[5277,5282]||p.o.[5283,5287]|q. 6h[5288,5293]||||905199|5470|hydralazine
+108	14. Plavix 75 mg p.o. q. day times 30 days .|Plavix[5299,5305]|||75mg[5306,5311]||p.o.[5312,5316]|q. day[5317,5323]|30 days[5330,5337]||C0716159|213169|32968|clopidogrel

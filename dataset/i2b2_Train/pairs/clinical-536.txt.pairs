@@ -1,0 +1,8 @@
+c="lichereanyve chirdkotekerth" 20:0 20:1||t="coref person"||c="provider" 42:0 42:0
+c="provider" 42:0 42:0||t="coref person"||c="chirdkotekerth , lichereanyve" 44:5 44:7
+c="sours , nanoniff ellmi" 12:0 12:3||t="coref person"||c="patient" 28:1 28:1
+c="pcp" 40:0 40:0||t="coref person"||c="clev , nisha" 41:0 41:2
+c="your" 37:2 37:2||t="coref person"||c="patient" 38:7 38:7
+c="patient" 28:1 28:1||t="coref person"||c="your" 37:2 37:2
+c="provider" 19:0 19:0||t="coref person"||c="lichereanyve chirdkotekerth" 20:0 20:1
+c="your pcp" 37:2 37:3||t="coref person"||c="pcp" 40:0 40:0

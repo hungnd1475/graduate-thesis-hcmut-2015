@@ -1,0 +1,12 @@
+27	She had her belly cleaned with Hibiclens one a day and once an adequate preoperative evaluation was performed , she was given a bowel prep on Monday afternoon and evening in preparation for an exploratory laparotomy on Tuesday , 2014-07-29 .|Hibiclens[2138,2147]||||one[2148,2151]||a day[2152,2157]||||224892|2358|chlorhexidine
+31	In addition to the gastrostomy and feeding jejunostomy tube , two Belmont-Gardner drains were placed .|jejunostomy tube[3047,3063]||||||||||769432|769432|jejunostomy tube
+34	In addition , the patient had low hematocrits which required a transfusion of packed red blood cells .|packed red blood cells[3439,3461]||||||||||834201|834201|packed red blood cells
+35	In addition , on postoperative day number two , the patient was transferred out to the floor and she was doing better in terms of pain control on a Dilaudid PCA machine .|PCA[3621,3624]||||||||||1025540|1025540|pca
+35	In addition , on postoperative day number two , the patient was transferred out to the floor and she was doing better in terms of pain control on a Dilaudid PCA machine .|Dilaudid[3612,3620]||||||||||224913|3423|hydromorphone
+58	1. Levothyroxine 100 micrograms orally once a day .|Levothyroxine[5184,5197]|||100[5198,5201]||orally[5213,5219]|a day[5225,5230]|||C1827757|966404|10582|levothyroxine
+59	2. Pantoprazole one tablet once a day .|Pantoprazole[5236,5248]||||one tablet[5249,5259]||a day[5265,5270]|||C1247285|373222|40790|pantoprazole
+60	3. Ambien 10 mg orally before bed .|Ambien[5276,5282]|||10mg[5283,5288]||orally[5289,5295]||||C0712713|854875|39993|zolpidem
+61	4. Tylenol # 3 one tablet every four hours as needed for pain .|Tylenol[5312,5319]||||one tablet[5324,5334]||every four hours[5335,5351]||as needed[5352,5361]|null|209387|161|paracetamol
+62	5. Reglan 10 mg four times a day before meals and at bedtime .|Reglan[5376,5382]|||10mg[5383,5388]|||four times a day[5389,5405]|||C1600467|568051|6915|metoclopramide
+63	6. Colace 100 mg twice a day .|Colace[5439,5445]|||100mg[5446,5452]|||a day[5459,5464]||||1247755|82003|docusate
+68	Heather FISCHER , M.D. 91-657|Heather[5752,5759]||||||||||1104258|1104258|heather

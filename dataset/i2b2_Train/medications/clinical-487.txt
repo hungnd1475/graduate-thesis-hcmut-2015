@@ -1,0 +1,21 @@
+24	1. Metformin .|Metformin[1391,1400]|||||||||C0025598|6809|6809|metformin
+25	2. Celexa .|Celexa[1406,1412]||||||||||215928|2556|citalopram
+26	3. Lipitor .|Lipitor[1418,1425]|||||||||C0593906|153165|83367|atorvastatin
+27	4. Aspirin .|Aspirin[1431,1438]|||||||||C0004057|1191|1191|acetylsalicylic acid
+28	5. Toprol XL .|Toprol XL[1444,1453]|||||||||C2723006|865575|6918|metoprolol
+41	Active drips included milrinone , Levophed , propofol , and insulin .|milrinone[2509,2518]|||||||||C0128513|52769|52769|milrinone
+41	Active drips included milrinone , Levophed , propofol , and insulin .|Levophed[2521,2529]|||||||||C1450037|227559|7512|norepinephrine
+41	Active drips included milrinone , Levophed , propofol , and insulin .|propofol[2532,2540]|||||||||C0033487|8782|8782|propofol
+50	The patient was begun on anticoagulation therapy for a target INR of 2.5 .|anticoagulation[3449,3464]||||||||||1024413|1024413|anticoagulation
+63	1. Lopressor 25 mg p.o. b.i.d.|Lopressor[4403,4412]|||25mg[4413,4418]||p.o.[4419,4423]|b.i.d.[4424,4430]|||null|866502|5487|hydrochlorothiazide
+64	2. Lasix 20 mg p.o. q. 12 hours times seven days .|Lasix[4434,4439]|||20mg[4440,4445]||p.o.[4446,4450]|q. 12 hours[4451,4462]|||C0697292|200801|4603|furosemide
+65	3. Potassium chloride 20 mEq p.o. q. 12 hours times seven days .|Potassium chloride[4485,4503]|||20mEq[4504,4510]||p.o.[4511,4515]|q. 12 hours[4516,4527]||||343050|8591|potassium chloride
+66	4. Colace 100 mg p.o. b.i.d.|Colace[4550,4556]|||100mg[4557,4563]||p.o.[4564,4568]|b.i.d.[4569,4575]|||C0711644|1247756|82003|docusate
+67	5. Metformin 500 mg p.o. b.i.d.|Metformin[4579,4588]|||500mg[4589,4595]||p.o.[4596,4600]|b.i.d.[4601,4607]||||861007|6809|metformin
+68	6. Percocet 5/325 one to two tablets p.o. q. four to six hours p.r.n.|Percocet 5 / 325[4611,4625]||||one to two tablets[4626,4644]|p.o.[4645,4649]|||p.r.n.[4671,4677]||1049640|161|paracetamol
+69	7. Celexa 20 mg p.o. q.d.|Celexa[4681,4687]|||20mg[4688,4693]||p.o.[4694,4698]|q.d.[4699,4703]|||C0716373|213344|2556|citalopram
+70	8. Lipitor 20 mg p.o. q.d.|Lipitor[4707,4714]|||20mg[4715,4720]||p.o.[4721,4725]|q.d.[4726,4730]|||C0593904|617318|83367|atorvastatin
+71	9. Warfarin 5 mg p.o. q.d. times four days , after which point the patient 's dosage schedule is to be coordinated by his PCP , Dr.|Warfarin[4734,4742]|||5mg[4743,4747]||p.o.[4748,4752]|q.d.[4753,4757]||||855332|11289|warfarin
+79	The patient is to have his Coumadin managed by his primary care provider , Dr.|Coumadin[5297,5305]|||||||||C0699129|202421|11289|warfarin
+82	Jones office on 2010-06-14 for an initial blood draw and subsequent Coumadin titration ; Coumadin levels are to be monitored per his PCP David .|Coumadin[5492,5500]|||||||||C0699129|202421|11289|warfarin
+82	Jones office on 2010-06-14 for an initial blood draw and subsequent Coumadin titration ; Coumadin levels are to be monitored per his PCP David .|Coumadin[5513,5521]|||||||||C0699129|202421|11289|warfarin

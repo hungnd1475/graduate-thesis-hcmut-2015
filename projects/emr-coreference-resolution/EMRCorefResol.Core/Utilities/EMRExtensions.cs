@@ -49,6 +49,19 @@ namespace HCMUT.EMRCorefResol
             return emr.ContentBetween(pair.Antecedent, pair.Anaphora);
         }
 
+        public static string GetLine(this EMR emr, Concept concept)
+        {
+            if(concept.Begin.Line == concept.End.Line)
+            {
+                return GetLine(emr, concept.Begin.Line).Replace("  ", " ").Replace("\r", "").Replace("\n", "");
+            } else
+            {
+                var beginLine = GetLine(emr, concept.Begin.Line).Replace("  ", " ").Replace("\r", "").Replace("\n", "");
+                var endLine = GetLine(emr, concept.End.Line).Replace("  ", " ").Replace("\r", "").Replace("\n", "");
+                return beginLine + " " + endLine;
+            }
+        }
+
         public static string GetLine(this EMR emr, int lineNumber)
         {
             var lines = emr.Content.Split('\n');

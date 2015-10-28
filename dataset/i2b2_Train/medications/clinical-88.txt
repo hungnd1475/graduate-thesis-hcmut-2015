@@ -1,0 +1,38 @@
+18	Per report , there were empty bottles of Inderal and Klonopin found at bedside , as well as 02-26 full bottles of geodon , gabapentin , Lescol and paroxitine .|Inderal[602,609]|||||||||C0591636|151890|8787|propranolol
+18	Per report , there were empty bottles of Inderal and Klonopin found at bedside , as well as 02-26 full bottles of geodon , gabapentin , Lescol and paroxitine .|Klonopin[614,622]|||||bedside[632,639]||||C0699315|202585|2598|clonazepam
+18	Per report , there were empty bottles of Inderal and Klonopin found at bedside , as well as 02-26 full bottles of geodon , gabapentin , Lescol and paroxitine .|geodon[675,681]||||||||||285064|115698|ziprasidone
+18	Per report , there were empty bottles of Inderal and Klonopin found at bedside , as well as 02-26 full bottles of geodon , gabapentin , Lescol and paroxitine .|gabapentin[684,694]|||||||||C0060926|25480|25480|gabapentin
+18	Per report , there were empty bottles of Inderal and Klonopin found at bedside , as well as 02-26 full bottles of geodon , gabapentin , Lescol and paroxitine .|Lescol[697,703]|||||||||C0733716|151972|41127|fluvastatin
+20	In the Rita , the patient was intubated and given activated charcoal .|activated charcoal[871,889]|||||||||C0001275|272|272|activated charcoal
+22	He was given 4 amps of calcium gluconate , and started on a Calcium gtt .|calcium gluconate[965,982]|||||||||C0006699|1908|1908|calcium gluconate
+22	He was given 4 amps of calcium gluconate , and started on a Calcium gtt .|Calcium[1002,1009]|||||||||C0006675|1895|1895|calcium
+23	He was also given 5mg of glucagon and started on a glucagon drip with good response .|glucagon[1041,1049]|||5mg[1034,1037]||||||C0017687|4832|4832|glucagon
+23	He was also given 5mg of glucagon and started on a glucagon drip with good response .|glucagon[1067,1075]|||||drip[1076,1080]||||C0017687|4832|4832|glucagon
+26	He was admitted to the CMED , intubated for airway protection and started on both a calcium and glucagon drip .|calcium[1343,1350]|||||||||C0006675|1895|1895|calcium
+26	He was admitted to the CMED , intubated for airway protection and started on both a calcium and glucagon drip .|glucagon[1355,1363]|||||drip[1364,1368]||||C0017687|4832|4832|glucagon
+30	Hep C|Hep[1609,1612]||||||||||26746|26746|hepatitis b virus vaccine,recb
+38	Has a history of cocaine abuse - in remission for 6 years , with one relapse 2.5 years ago .|cocaine[1821,1828]|||||||6 years[1854,1861]||C0009170|2653|2653|cocaine
+40	Denies use of AA/NA .|NA[1983,1985]||||||||||56501|56501|na m-fluorphosphate
+62	09:55 PM BLOOD PT - 12.8 PTT - 25.7 INR(PT) - 1.0 2012-06-07 09:55 PM BLOOD Glucose - 108 * UreaN - 13 Creat - 0.7 Na - 146 * K - 3.7 Cl - 109 * HCO3 - 30 * AnGap - 11 2012-06-07 09:55 PM BLOOD Albumin - 3.9 Calcium - 8.5 Phos - 4.2 Mg - 2.0 2012-06-07 09:55 PM BLOOD ALT - 44 *|Na[3333,3335]||||||||||56501|56501|na m-fluorphosphate
+62	09:55 PM BLOOD PT - 12.8 PTT - 25.7 INR(PT) - 1.0 2012-06-07 09:55 PM BLOOD Glucose - 108 * UreaN - 13 Creat - 0.7 Na - 146 * K - 3.7 Cl - 109 * HCO3 - 30 * AnGap - 11 2012-06-07 09:55 PM BLOOD Albumin - 3.9 Calcium - 8.5 Phos - 4.2 Mg - 2.0 2012-06-07 09:55 PM BLOOD ALT - 44 *|Cl -[3352,3356]|||109[3357,3360]||||||C0106269|47104|47104|cl-
+62	09:55 PM BLOOD PT - 12.8 PTT - 25.7 INR(PT) - 1.0 2012-06-07 09:55 PM BLOOD Glucose - 108 * UreaN - 13 Creat - 0.7 Na - 146 * K - 3.7 Cl - 109 * HCO3 - 30 * AnGap - 11 2012-06-07 09:55 PM BLOOD Albumin - 3.9 Calcium - 8.5 Phos - 4.2 Mg - 2.0 2012-06-07 09:55 PM BLOOD ALT - 44 *|HCO3[3363,3367]||||||||||||
+62	09:55 PM BLOOD PT - 12.8 PTT - 25.7 INR(PT) - 1.0 2012-06-07 09:55 PM BLOOD Glucose - 108 * UreaN - 13 Creat - 0.7 Na - 146 * K - 3.7 Cl - 109 * HCO3 - 30 * AnGap - 11 2012-06-07 09:55 PM BLOOD Albumin - 3.9 Calcium - 8.5 Phos - 4.2 Mg - 2.0 2012-06-07 09:55 PM BLOOD ALT - 44 *|Na[3221,3226]||||||||||56501|56501|na m-fluorphosphate
+62	09:55 PM BLOOD PT - 12.8 PTT - 25.7 INR(PT) - 1.0 2012-06-07 09:55 PM BLOOD Glucose - 108 * UreaN - 13 Creat - 0.7 Na - 146 * K - 3.7 Cl - 109 * HCO3 - 30 * AnGap - 11 2012-06-07 09:55 PM BLOOD Albumin - 3.9 Calcium - 8.5 Phos - 4.2 Mg - 2.0 2012-06-07 09:55 PM BLOOD ALT - 44 *|Cl -[3221,3226]|||||||||C0106269|47104|47104|cl-
+62	09:55 PM BLOOD PT - 12.8 PTT - 25.7 INR(PT) - 1.0 2012-06-07 09:55 PM BLOOD Glucose - 108 * UreaN - 13 Creat - 0.7 Na - 146 * K - 3.7 Cl - 109 * HCO3 - 30 * AnGap - 11 2012-06-07 09:55 PM BLOOD Albumin - 3.9 Calcium - 8.5 Phos - 4.2 Mg - 2.0 2012-06-07 09:55 PM BLOOD ALT - 44 *|HCO3[3221,3226]||||||||||||
+62	09:55 PM BLOOD PT - 12.8 PTT - 25.7 INR(PT) - 1.0 2012-06-07 09:55 PM BLOOD Glucose - 108 * UreaN - 13 Creat - 0.7 Na - 146 * K - 3.7 Cl - 109 * HCO3 - 30 * AnGap - 11 2012-06-07 09:55 PM BLOOD Albumin - 3.9 Calcium - 8.5 Phos - 4.2 Mg - 2.0 2012-06-07 09:55 PM BLOOD ALT - 44 *|Albumin[3412,3419]|||||||||C0001924|433|433|albumin
+62	09:55 PM BLOOD PT - 12.8 PTT - 25.7 INR(PT) - 1.0 2012-06-07 09:55 PM BLOOD Glucose - 108 * UreaN - 13 Creat - 0.7 Na - 146 * K - 3.7 Cl - 109 * HCO3 - 30 * AnGap - 11 2012-06-07 09:55 PM BLOOD Albumin - 3.9 Calcium - 8.5 Phos - 4.2 Mg - 2.0 2012-06-07 09:55 PM BLOOD ALT - 44 *|Calcium[3426,3433]|||4.2Mg[3447,3453]||||||C0006675|1895|1895|calcium
+63	AST - 31 AlkPhos - 36 * TotBili - 0.2 2012-06-07 09:55 PM BLOOD ASA - NEG Ethanol - NEG Acetmnp - NEG Bnzodzp - NEG Barbitr - NEG Tricycl - NEG|ASA[3561,3564]|||||||||C1740879|667904|9525|salicylic acid
+78	A/P : 48yo man with h/o HCV , bipolar DO , h/o suicide attempts , a/w overdose of Inderal , Klonopin , Geodon , s/T Jackson stay with intubation for airway protection , with question of L retrocardiac infiltrate , now doing well .|Inderal[4879,4886]|||||||||C0591636|151890|8787|propranolol
+78	A/P : 48yo man with h/o HCV , bipolar DO , h/o suicide attempts , a/w overdose of Inderal , Klonopin , Geodon , s/T Jackson stay with intubation for airway protection , with question of L retrocardiac infiltrate , now doing well .|Klonopin[4889,4897]|||||||||C0699315|202585|2598|clonazepam
+78	A/P : 48yo man with h/o HCV , bipolar DO , h/o suicide attempts , a/w overdose of Inderal , Klonopin , Geodon , s/T Jackson stay with intubation for airway protection , with question of L retrocardiac infiltrate , now doing well .|Geodon[4900,4906]||||||||||285064|115698|ziprasidone
+81	- if HR drops , restart glucagon gtt|glucagon[5091,5099]|||||||||C0017687|4832|4832|glucagon
+88	PPX : SC heparin , bowel regimen , nicotine patch|heparin[5329,5336]|||||SC[5326,5328]||||C0019134|235473|235473|heparin,porcine
+88	PPX : SC heparin , bowel regimen , nicotine patch|nicotine patch[5355,5369]||||||||||721638|7407|nicotine
+92	Neurontin 800 mg tid|Neurontin[5460,5469]|||800mg[5470,5476]|||tid[5477,5480]|||C1592235|574508|25480|gabapentin
+93	Ziprasidone bid|Ziprasidone[5481,5492]||||||bid[5493,5496]|||C0380393|115698|115698|ziprasidone
+94	Propanolol 20 mg tid|Propanolol[5497,5507]|||20mg[5508,5513]|||tid[5514,5517]|||C0690193|856457|8787|propranolol
+95	Klonopin 2 mg tid|Klonopin[5518,5526]|||2mg[5527,5531]|||tid[5532,5535]|||C1599455|567031|2598|clonazepam
+96	Paxil 30 mg qd|Paxil[5536,5541]|||30mg[5542,5547]|||qd[5548,5550]|||C1600540|568124|32937|paroxetine
+97	Protonix 40 mg qd|Protonix[5551,5559]|||40mg[5560,5565]|||qd[5566,5568]|||C1588007|542447|40790|pantoprazole
+98	Folate 1 mg qd|Folate[5569,5575]|||1mg[5576,5580]|||qd[5581,5583]||||74178|62356|folate
+99	Lescol 40 qd|Lescol[5584,5590]|||40[5591,5593]|||qd[5594,5596]|||C1595898|563453|41127|fluvastatin

@@ -1,0 +1,85 @@
+c="his wife" 82:5 82:6||t="coref person"||c="sligh" 82:8 82:8
+c="dr. thorebreutz" 93:12 93:13||t="coref person"||c="dr. thorebreutz" 118:0 118:1
+c="the patient" 48:0 48:1||t="coref person"||c="patient" 48:7 48:7
+c="he" 48:39 48:39||t="coref person"||c="he" 49:0 49:0
+c="he" 49:0 49:0||t="coref person"||c="he" 50:0 50:0
+c="he" 54:0 54:0||t="coref person"||c="he" 58:1 58:1
+c="he" 58:1 58:1||t="coref person"||c="the patient" 77:0 77:1
+c="he" 77:11 77:11||t="coref person"||c="he" 80:0 80:0
+c="he" 80:0 80:0||t="coref person"||c="his" 81:0 81:0
+c="his" 81:0 81:0||t="coref person"||c="his" 82:5 82:5
+c="his" 82:5 82:5||t="coref person"||c="he" 83:3 83:3
+c="he" 83:3 83:3||t="coref person"||c="his" 83:24 83:24
+c="he" 85:2 85:2||t="coref person"||c="his" 85:13 85:13
+c="he" 88:0 88:0||t="coref person"||c="his" 88:16 88:16
+c="he" 91:2 91:2||t="coref person"||c="his" 91:8 91:8
+c="the patient" 92:0 92:1||t="coref person"||c="he" 92:17 92:17
+c="he" 99:0 99:0||t="coref person"||c="his" 100:0 100:0
+c="him" 101:12 101:12||t="coref person"||c="his" 101:17 101:17
+c="his" 101:17 101:17||t="coref person"||c="his" 102:6 102:6
+c="his" 102:6 102:6||t="coref person"||c="his" 102:41 102:41
+c="he" 107:0 107:0||t="coref person"||c="his" 107:10 107:10
+c="he" 109:0 109:0||t="coref person"||c="he" 109:3 109:3
+c="he" 109:3 109:3||t="coref person"||c="his" 109:14 109:14
+c="his" 109:14 109:14||t="coref person"||c="his" 109:18 109:18
+c="pulmonary hypertension" 21:1 21:2||t="coref problem"||c="hypertension" 49:6 49:6
+c="aspirin" 52:4 52:4||t="coref treatment"||c="his aspirin" 85:13 85:14
+c="coronary artery disease" 7:0 7:2||t="coref problem"||c="coronary artery disease" 17:0 17:2
+c="quadruple coronary artery bypass grafting" 93:24 93:28||t="coref treatment"||c="surgery" 96:1 96:1
+c="intravenous heparin" 102:23 102:24||t="coref treatment"||c="heparin" 102:29 102:29
+c="iv heparin" 85:21 85:22||t="coref treatment"||c="intravenous heparin" 102:23 102:24
+c="an intra-aortic balloon pump" 93:3 93:6||t="coref treatment"||c="his intra-aortic balloon pump" 100:0 100:3
+c="congestive heart failure" 19:1 19:3||t="coref problem"||c="congestive heart failure" 84:10 84:12
+c="sinus tachycardia" 23:1 23:2||t="coref problem"||c="tachycardia" 56:5 56:5
+c="right bundle branch block" 26:1 26:4||t="coref problem"||c="a right bundle branch block" 106:2 106:6
+c="he" 89:0 89:0||t="coref person"||c="he" 90:0 90:0
+c="his" 85:13 85:13||t="coref person"||c="he" 85:17 85:17
+c="ventricular ectopy" 55:4 55:5||t="coref problem"||c="some ventricular ectopy" 87:5 87:7
+c="monitoring of his prothrombin times and his arrhythmias" 109:12 109:19||t="coref test"||c="these" 109:21 109:21
+c="he" 84:20 84:20||t="coref person"||c="he" 85:2 85:2
+c="he" 105:0 105:0||t="coref person"||c="he" 106:0 106:0
+c="he" 106:0 106:0||t="coref person"||c="he" 107:0 107:0
+c="his" 88:16 88:16||t="coref person"||c="he" 89:0 89:0
+c="he" 85:17 85:17||t="coref person"||c="he" 86:0 86:0
+c="his" 107:10 107:10||t="coref person"||c="he" 107:18 107:18
+c="sligh" 82:8 82:8||t="coref person"||c="she" 83:0 83:0
+c="he" 92:17 92:17||t="coref person"||c="him" 93:15 93:15
+c="coronary artery bypass grafting x 3" 32:0 32:5||t="coref treatment"||c="quadruple coronary artery bypass grafting" 93:24 93:28
+c="his" 83:24 83:24||t="coref person"||c="he" 84:20 84:20
+c="dr. slusslashgodle" 92:11 92:12||t="coref person"||c="who" 92:14 92:14
+c="he" 101:0 101:0||t="coref person"||c="him" 101:12 101:12
+c="he" 90:0 90:0||t="coref person"||c="he" 91:2 91:2
+c="she" 83:0 83:0||t="coref person"||c="her" 83:22 83:22
+c="his" 91:8 91:8||t="coref person"||c="the patient" 92:0 92:1
+c="heparin" 29:0 29:0||t="coref treatment"||c="heparin" 103:9 103:9
+c="he" 97:0 97:0||t="coref person"||c="he" 98:0 98:0
+c="he" 100:10 100:10||t="coref person"||c="he" 101:0 101:0
+c="he" 103:2 103:2||t="coref person"||c="he" 104:0 104:0
+c="he" 104:0 104:0||t="coref person"||c="he" 105:0 105:0
+c="who" 48:23 48:23||t="coref person"||c="he" 48:39 48:39
+c="he" 98:0 98:0||t="coref person"||c="he" 99:0 99:0
+c="patient" 48:7 48:7||t="coref person"||c="who" 48:23 48:23
+c="him" 93:15 93:15||t="coref person"||c="he" 93:22 93:22
+c="the nutrition service" 101:6 101:8||t="coref person"||c="who" 101:10 101:10
+c="a holter monitor" 55:0 55:2||t="coref test"||c="holter monitor" 87:9 87:10
+c="he" 50:0 50:0||t="coref person"||c="he" 52:0 52:0
+c="he" 93:22 93:22||t="coref person"||c="he" 94:0 94:0
+c="diabetes mellitus" 24:1 24:2||t="coref problem"||c="diabetes mellitus" 49:8 49:9
+c="nonsustained ventricular tachycardia" 105:5 105:7||t="coref problem"||c="which" 105:9 105:9
+c="he" 53:0 53:0||t="coref person"||c="he" 54:0 54:0
+c="he" 52:0 52:0||t="coref person"||c="he" 53:0 53:0
+c="insertion of intra-aortic balloon pump" 36:0 36:4||t="coref treatment"||c="an intra-aortic balloon pump" 93:3 93:6
+c="his" 102:41 102:41||t="coref person"||c="he" 103:2 103:2
+c="the patient" 77:0 77:1||t="coref person"||c="he" 77:11 77:11
+c="he" 108:1 108:1||t="coref person"||c="he" 109:0 109:0
+c="ventricular ectopy" 20:1 20:2||t="coref problem"||c="ventricular ectopy" 55:4 55:5
+c="he" 96:2 96:2||t="coref person"||c="he" 97:0 97:0
+c="he" 94:0 94:0||t="coref person"||c="he" 96:2 96:2
+c="tachycardia" 56:5 56:5||t="coref problem"||c="a ongoing sinus tachycardia" 96:4 96:7
+c="he" 86:0 86:0||t="coref person"||c="he" 87:0 87:0
+c="his" 100:0 100:0||t="coref person"||c="he" 100:10 100:10
+c="he" 107:18 107:18||t="coref person"||c="he" 108:1 108:1
+c="diabetes mellitus" 49:8 49:9||t="coref problem"||c="his diabetes mellitus" 101:17 101:19
+c="he" 87:0 87:0||t="coref person"||c="he" 88:0 88:0
+c="epigastric pain" 88:2 88:3||t="coref problem"||c="which" 88:6 88:6
+c="thrombocytopenia" 29:4 29:4||t="coref problem"||c="a thrombocytopenic reaction" 103:5 103:7

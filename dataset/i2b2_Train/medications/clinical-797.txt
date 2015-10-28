@@ -1,0 +1,35 @@
+14	His nitroglycerin patch did not help , and he only had slight relief with sublingual nitroglycerin times three .|nitroglycerin patch[890,909]||||||||||202507|4917|glyceryl trinitrate
+14	His nitroglycerin patch did not help , and he only had slight relief with sublingual nitroglycerin times three .|nitroglycerin[971,984]|||||sublingual[960,970]|times three[985,996]||||1295706|4917|glyceryl trinitrate
+18	In the Emergency Department he received aspirin , nitroglycerin drip , heparin drip , Dilaudid , and TNK with decreased in his pain but without resolution of symptoms .|aspirin[1354,1361]|||||||||C0004057|1191|1191|acetylsalicylic acid
+18	In the Emergency Department he received aspirin , nitroglycerin drip , heparin drip , Dilaudid , and TNK with decreased in his pain but without resolution of symptoms .|nitroglycerin[1364,1377]|||||drip[1378,1382]||||C0017887|4917|4917|glyceryl trinitrate
+18	In the Emergency Department he received aspirin , nitroglycerin drip , heparin drip , Dilaudid , and TNK with decreased in his pain but without resolution of symptoms .|heparin[1385,1392]|||||drip[1393,1397]||||C0019134|235473|235473|heparin,porcine
+18	In the Emergency Department he received aspirin , nitroglycerin drip , heparin drip , Dilaudid , and TNK with decreased in his pain but without resolution of symptoms .|Dilaudid[1400,1408]||||||||||224913|3423|hydromorphone
+36	Diltiazem 180 mg p.o. q.d. , Lipitor 10 mg p.o. q.d. , Glyset 25 mg p.o. q.d. , Prevacid 30 mg p.o. q.d. , metoprolol 50 mg p.o. b.i.d. , Glucophage 500 mg p.o. q.d.|Diltiazem[2724,2733]|||180mg[2734,2740]||p.o.[2741,2745]|q.d.[2746,2750]|||C1123645|328683|3443|diltiazem
+36	Diltiazem 180 mg p.o. q.d. , Lipitor 10 mg p.o. q.d. , Glyset 25 mg p.o. q.d. , Prevacid 30 mg p.o. q.d. , metoprolol 50 mg p.o. b.i.d. , Glucophage 500 mg p.o. q.d.|Lipitor[2753,2760]|||10mg[2761,2766]||p.o.[2767,2771]|q.d.[2772,2776]|||C0593903|617314|83367|atorvastatin
+36	Diltiazem 180 mg p.o. q.d. , Lipitor 10 mg p.o. q.d. , Glyset 25 mg p.o. q.d. , Prevacid 30 mg p.o. q.d. , metoprolol 50 mg p.o. b.i.d. , Glucophage 500 mg p.o. q.d.|Glyset[2779,2785]|||25mg[2786,2791]||p.o.[2792,2796]|q.d.[2797,2801]|||C0716566|213485|30009|miglitol
+36	Diltiazem 180 mg p.o. q.d. , Lipitor 10 mg p.o. q.d. , Glyset 25 mg p.o. q.d. , Prevacid 30 mg p.o. q.d. , metoprolol 50 mg p.o. b.i.d. , Glucophage 500 mg p.o. q.d.|Prevacid[2804,2812]|||30mg[2813,2818]||p.o.[2819,2823]|q.d.[2824,2828]|||C1329616|866152|17128|lansoprazole
+36	Diltiazem 180 mg p.o. q.d. , Lipitor 10 mg p.o. q.d. , Glyset 25 mg p.o. q.d. , Prevacid 30 mg p.o. q.d. , metoprolol 50 mg p.o. b.i.d. , Glucophage 500 mg p.o. q.d.|metoprolol[2831,2841]|||50mg[2842,2847]||p.o.[2848,2852]|b.i.d.[2853,2859]||||866514|6918|metoprolol
+36	Diltiazem 180 mg p.o. q.d. , Lipitor 10 mg p.o. q.d. , Glyset 25 mg p.o. q.d. , Prevacid 30 mg p.o. q.d. , metoprolol 50 mg p.o. b.i.d. , Glucophage 500 mg p.o. q.d.|Glucophage[2862,2872]|||500mg[2873,2879]||p.o.[2880,2884]|q.d .[2885,2889]|||C0701677|861008|6809|metformin
+42	Cardiac output was 7 ( that was on 6 of dopamine ) .|dopamine[3295,3303]|||||||||C0013030|3628|3628|dopamine
+83	Dopamine was discontinued on day one .|Dopamine[6124,6132]|||||||||C0013030|3628|3628|dopamine
+85	The patient was continued on heparin throughout his hospital course and transitioned to Coumadin on hospital day four .|heparin[6252,6259]|||||||||C0019134|235473|235473|heparin,porcine
+85	The patient was continued on heparin throughout his hospital course and transitioned to Coumadin on hospital day four .|Coumadin[6311,6319]|||||||||C0699129|202421|11289|warfarin
+86	The patient was continued on Lipitor and aspirin , and Plavix was added and will be continued for 30 days post catheterization .|Lipitor[6372,6379]|||||||||C0593906|153165|83367|atorvastatin
+86	The patient was continued on Lipitor and aspirin , and Plavix was added and will be continued for 30 days post catheterization .|aspirin[6384,6391]|||||||||C0004057|1191|1191|acetylsalicylic acid
+86	The patient was continued on Lipitor and aspirin , and Plavix was added and will be continued for 30 days post catheterization .|Plavix[6398,6404]|||||||30 days[6441,6448]||C0633084|174742|32968|clopidogrel
+87	The patient was continued on Lopressor and captopril throughout his hospital course , and changed to|Lopressor[6501,6510]|||||||||C0700776|203344|6918|metoprolol
+87	The patient was continued on Lopressor and captopril throughout his hospital course , and changed to|captopril[6515,6524]|||||||||C0006938|1998|1998|captopril
+88	Zestril 10 mg q.d. and atenolol 25 mg q.d. at discharge .|Zestril[6573,6580]|||10mg[6581,6586]|||q.d.[6587,6591]|||C1596055|563611|29046|lisinopril
+88	Zestril 10 mg q.d. and atenolol 25 mg q.d. at discharge .|atenolol[6596,6604]|||25mg[6605,6610]|||q.d.[6611,6615]|||C0983888|315437|1202|atenolol
+95	Instructions to follow up with his primary care physician on the Heather after discharge .|Heather[6985,6992]||||||||||1104258|1104258|heather
+96	Primary care physician was to check INR and titrate Zestril up and atenolol as tolerated .|Zestril[7063,7070]|||||||||C0678140|196472|29046|lisinopril
+96	Primary care physician was to check INR and titrate Zestril up and atenolol as tolerated .|atenolol[7078,7086]|||||||||C0004147|1202|1202|atenolol
+98	1. Lipitor 10 mg p.o. q.d.|Lipitor[7132,7139]|||10mg[7140,7145]||p.o.[7146,7150]|q.d.[7151,7155]|||C0593903|617314|83367|atorvastatin
+99	2. Aspirin 325 mg p.o. q.d.|Aspirin[7159,7166]|||325mg[7167,7173]||p.o.[7174,7178]|q.d.[7179,7183]||||1050241|1191|acetylsalicylic acid
+100	3. Plavix 75 mg p.o. q.d. times 30 days .|Plavix[7187,7193]|||75mg[7194,7199]||p.o.[7200,7204]|q.d.[7205,7209]|30 days[7216,7223]||C0716159|213169|32968|clopidogrel
+101	4. Prevacid 30 mg p.o. q.d.|Prevacid[7229,7237]|||30mg[7238,7243]||p.o.[7244,7248]|q.d.[7249,7253]|||C1329616|866152|17128|lansoprazole
+102	5. Atenolol 25 mg p.o. q.d.|Atenolol[7257,7265]|||25mg[7266,7271]||p.o.[7272,7276]|q.d.[7277,7281]|||C0687939|197380|1202|atenolol
+103	6. Zestril 10 mg p.o. q.d.|Zestril[7285,7292]|||10mg[7293,7298]||p.o.[7299,7303]|q.d.[7304,7308]|||C0354403|104377|29046|lisinopril
+104	7. Glyset 25 mg p.o. q.d.|Glyset[7312,7318]|||25mg[7319,7324]||p.o.[7325,7329]|q.d.[7330,7334]|||C0716566|213485|30009|miglitol
+105	8. Glucophage 500 mg p.o. q.d.|Glucophage[7338,7348]|||500mg[7349,7355]||p.o.[7356,7360]|q.d.[7361,7365]|||C0701677|861008|6809|metformin
+106	9. Coumadin 5 mg p.o. q.d.|Coumadin[7369,7377]|||5mg[7378,7382]||p.o.[7383,7387]|q.d .[7388,7392]|||C0710780|855334|11289|warfarin

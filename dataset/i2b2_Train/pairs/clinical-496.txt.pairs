@@ -1,0 +1,54 @@
+c="the family" 43:7 43:8||t="coref person"||c="the family" 45:5 45:6
+c="they" 45:9 45:9||t="coref person"||c="the family" 49:0 49:1
+c="the family" 49:0 49:1||t="coref person"||c="the family" 50:0 50:1
+c="the family" 42:0 42:1||t="coref person"||c="the family" 43:7 43:8
+c="mr. vinktlandfreierm" 21:0 21:1||t="coref person"||c="he" 21:10 21:10
+c="he" 21:10 21:10||t="coref person"||c="he" 22:0 22:0
+c="he" 24:0 24:0||t="coref person"||c="he" 25:0 25:0
+c="he" 25:0 25:0||t="coref person"||c="his" 26:0 26:0
+c="an upper endoscopy" 26:7 26:9||t="coref test"||c="which" 26:10 26:10
+c="his" 26:0 26:0||t="coref person"||c="he" 27:0 27:0
+c="he" 28:5 28:5||t="coref person"||c="his" 28:20 28:20
+c="his" 28:20 28:20||t="coref person"||c="his" 29:4 29:4
+c="an extensive work-up" 30:0 30:2||t="coref test"||c="which" 30:9 30:9
+c="he" 29:7 29:7||t="coref person"||c="he" 31:0 31:0
+c="he" 31:0 31:0||t="coref person"||c="he" 32:0 32:0
+c="he" 32:0 32:0||t="coref person"||c="his" 33:6 33:6
+c="his" 33:6 33:6||t="coref person"||c="he" 33:9 33:9
+c="he" 33:9 33:9||t="coref person"||c="his" 33:23 33:23
+c="he" 36:6 36:6||t="coref person"||c="he" 37:0 37:0
+c="he" 37:0 37:0||t="coref person"||c="his" 37:10 37:10
+c="his" 37:10 37:10||t="coref person"||c="he" 38:5 38:5
+c="he" 40:12 40:12||t="coref person"||c="the patient" 42:9 42:10
+c="the family" 45:5 45:6||t="coref person"||c="they" 45:9 45:9
+c="he" 44:5 44:5||t="coref person"||c="the patient" 45:17 45:18
+c="the patient" 45:17 45:18||t="coref person"||c="the patient" 46:0 46:1
+c="the patient" 46:0 46:1||t="coref person"||c="the patient" 47:13 47:14
+c="the family" 50:0 50:1||t="coref person"||c="they" 50:7 50:7
+c="the patient" 49:9 49:10||t="coref person"||c="the patient" 50:10 50:11
+c="hepatic encephalopathy" 18:2 18:3||t="coref problem"||c="hepatic encephalopathy" 31:6 31:7
+c="gastrointestinal bleed" 5:0 5:1||t="coref problem"||c="gastrointestinal bleed" 17:2 17:3
+c="his gastrointestinal bleeding issues" 26:0 26:3||t="coref problem"||c="gastrointestinal bleeding" 28:11 28:12
+c="one aspirin" 27:5 27:6||t="coref treatment"||c="the aspirin" 28:0 28:1
+c="the patient" 42:9 42:10||t="coref person"||c="the patient" 43:18 43:19
+c="the patient" 50:10 50:11||t="coref person"||c="the patient" 51:0 51:1
+c="him" 43:22 43:22||t="coref person"||c="he" 44:5 44:5
+c="the patient &apos;s attending physician" 51:0 51:4||t="coref person"||c="dr. erm neidwierst" 51:6 51:8
+c="he" 35:0 35:0||t="coref person"||c="his" 35:7 35:7
+c="his" 29:4 29:4||t="coref person"||c="he" 29:7 29:7
+c="he" 22:0 22:0||t="coref person"||c="he" 24:0 24:0
+c="gastrointestinal bleed" 17:2 17:3||t="coref problem"||c="his gastrointestinal bleeding issues" 26:0 26:3
+c="he" 27:0 27:0||t="coref person"||c="he" 28:5 28:5
+c="the patient" 47:13 47:14||t="coref person"||c="who" 47:15 47:15
+c="repeat blood gas" 41:0 41:2||t="coref test"||c="which" 41:5 41:5
+c="i" 47:8 47:8||t="coref person"||c="conrellie koterudes , m.d." 53:0 53:3
+c="attending" 54:0 54:0||t="coref person"||c="erm k. neidwierst , m.d." 55:0 55:4
+c="his" 35:7 35:7||t="coref person"||c="he" 36:6 36:6
+c="he" 34:3 34:3||t="coref person"||c="he" 35:0 35:0
+c="increasingly lethargic" 29:9 29:10||t="coref problem"||c="somewhat lethargic" 33:12 33:13
+c="the patient" 43:18 43:19||t="coref person"||c="him" 43:22 43:22
+c="who" 47:15 47:15||t="coref person"||c="the patient" 49:9 49:10
+c="somewhat fluid overloaded" 22:12 22:14||t="coref problem"||c="apparent fluid overload" 25:14 25:16
+c="he" 38:5 38:5||t="coref person"||c="he" 40:12 40:12
+c="his" 33:23 33:23||t="coref person"||c="he" 34:3 34:3
+c="dr. erm neidwierst" 51:6 51:8||t="coref person"||c="attending" 54:0 54:0

@@ -1,0 +1,60 @@
+40	Following gadolinium , no evidence of abnormal parenchymal , vascular , or meningeal enhancement seen .|gadolinium[1734,1744]|||||||||C0016911|1310171|1310171|gadolinium
+46	He was placed on vancomycin , levofloxacin and fluconazole .|vancomycin[2182,2192]|||||||||C0042313|11124|11124|vancomycin
+46	He was placed on vancomycin , levofloxacin and fluconazole .|levofloxacin[2195,2207]|||||||||C0282386|82122|82122|levofloxacin
+46	He was placed on vancomycin , levofloxacin and fluconazole .|fluconazole[2212,2223]|||||||||C0016277|4450|4450|fluconazole
+54	The fluconazole was discontinued .|fluconazole[2579,2590]|||||||||C0016277|4450|4450|fluconazole
+63	On 06-27 , his nutrition regimen was changed to Deliver 2.0 at 70 cc / hr with 15 g ProMod .|ProMod[3299,3305]|||70cc / hr[3278,3288]||||||C1875700|693503|693503|promod
+68	The cardiology service simply recommended increasing the beta-blockade and maximizing the patient 's electrolyte status .|blockade[3576,3584]||||||||||1423936|5933|jodum
+70	Pt 's vancomycin was stopped after 14 days of treatment .|vancomycin[3706,3716]|||||||14 days[3735,3742]||C0042313|11124|11124|vancomycin
+80	He was found to have a large gastric ulcer and high dose PPI was started .|PPI[4487,4490]||||||||||1364533|1364533|pyrophosphate
+87	07-12 the patient was found to be C diff positive and was started on 14 day course of Flagyl .|Flagyl[5027,5033]|||||||14 day[5010,5016]|||202866|6922|metronidazole
+101	Initially , his pain was controlled with titrating up the Oxycontin .|Oxycontin[6134,6143]|||||||||C0722364|218986|7804|oxycodone
+106	His Flagyl course was extended , and Vanc / Levo were added .|Flagyl[6500,6506]||||||||||202866|6922|metronidazole
+106	His Flagyl course was extended , and Vanc / Levo were added .|Levo[6540,6544]||||||||||877015|877015|levoleucovorin
+106	His Flagyl course was extended , and Vanc / Levo were added .|Vanc[6533,6537]||||||||||||
+108	Given his recent MRSA pneumonia , he will be treated with 2 week course of Vanc / Levo / Flagyl .|Flagyl[6706,6712]||||||||||202866|6922|metronidazole
+108	Given his recent MRSA pneumonia , he will be treated with 2 week course of Vanc / Levo / Flagyl .|Levo[6699,6703]||||||||||877015|877015|levoleucovorin
+108	Given his recent MRSA pneumonia , he will be treated with 2 week course of Vanc / Levo / Flagyl .|Vanc[6692,6696]|||||||2 week[6675,6681]|||||
+109	He was seen by the pain service who recommended to discontinue Oxycontin , and start Neurontin , MSIR , and lidocaine patch in addition to the standing Tylenol .|Oxycontin[6778,6787]|||||||||C0722364|218986|7804|oxycodone
+109	He was seen by the pain service who recommended to discontinue Oxycontin , and start Neurontin , MSIR , and lidocaine patch in addition to the standing Tylenol .|Neurontin[6800,6809]|||||||||C0678176|196498|25480|gabapentin
+109	He was seen by the pain service who recommended to discontinue Oxycontin , and start Neurontin , MSIR , and lidocaine patch in addition to the standing Tylenol .|MSIR[6812,6816]|||||||||C0700789|203357|7052|morphine
+109	He was seen by the pain service who recommended to discontinue Oxycontin , and start Neurontin , MSIR , and lidocaine patch in addition to the standing Tylenol .|Tylenol[6867,6874]||patch[6833,6838]||||||||202433|161|paracetamol
+109	He was seen by the pain service who recommended to discontinue Oxycontin , and start Neurontin , MSIR , and lidocaine patch in addition to the standing Tylenol .|lidocaine[6823,6832]|||||||||C0023660|6387|6387|lidocaine (obsolete)
+112	Since oxycontin was discontinued , the foley was removed on 07-27 and was able to void without any difficulty .|oxycontin[7028,7037]|||||||||C0722364|218986|7804|oxycodone
+114	Lopressor 50 mg BID percocet nebulizer lipitor klonopin 0.5 mg TID|klonopin[7208,7216]|||0.5mg[7217,7223]|||TID[7224,7227]|||C1599452|567028|2598|clonazepam
+114	Lopressor 50 mg BID percocet nebulizer lipitor klonopin 0.5 mg TID|lipitor[7200,7207]|||||||||C0593906|153165|83367|atorvastatin
+114	Lopressor 50 mg BID percocet nebulizer lipitor klonopin 0.5 mg TID|percocet[7181,7189]||||||BID[7177,7180]|||C0086787|42844|161|paracetamol
+114	Lopressor 50 mg BID percocet nebulizer lipitor klonopin 0.5 mg TID|Lopressor[7161,7170]|||50mg[7171,7176]||||||C2723340|866515|6918|metoprolol
+115	RISS heparin sc lasix 40 mg TID prevacid milk of mag multivitamin papain zinc|zinc[7301,7305]|||||||||C0043481|11416|11416|zinc
+115	RISS heparin sc lasix 40 mg TID prevacid milk of mag multivitamin papain zinc|papain[7294,7300]|||||||||C0700917|7892|7892|papain
+115	RISS heparin sc lasix 40 mg TID prevacid milk of mag multivitamin papain zinc|multivitamin[7281,7293]||||||||||89905|89905|multiple vitamins
+115	RISS heparin sc lasix 40 mg TID prevacid milk of mag multivitamin papain zinc|prevacid[7260,7268]||||||TID[7256,7259]||||83156|17128|lansoprazole
+115	RISS heparin sc lasix 40 mg TID prevacid milk of mag multivitamin papain zinc|lasix[7244,7249]|||40mg[7250,7255]||sc[7241,7243]||||C1597894|565458|4603|furosemide
+115	RISS heparin sc lasix 40 mg TID prevacid milk of mag multivitamin papain zinc|heparin[7233,7240]|||||||||C0019134|235473|235473|heparin,porcine
+115	RISS heparin sc lasix 40 mg TID prevacid milk of mag multivitamin papain zinc|RISS[7228,7232]||||||||||||
+117	1. Albuterol - Ipratropium 103-18 mcg / Actuation Aerosol Sig : 02-19 Puffs Inhalation Q6H ( every 6 hours ) as needed .|Albuterol - Ipratropium[7333,7356]|||103 - 18mcg[7357,7367]|02 - 19 Puffs[7394,7405]|Inhalation[7406,7416]|Q6H[7417,7420]||as needed[7439,7448]||836286|435|salbutamol
+118	2. Multivitamins Tablet , Chewable Sig : One ( 1 ) Cap PO DAILY ( Daily ) .|Multivitamins[7454,7467]||Tablet , Chewable[7468,7485]|||PO[7506,7508]|DAILY[7509,7514]||||311821|89905|multiple vitamins
+119	3. Magnesium Hydroxide 400 mg / 5 mL Suspension Sig : Thirty ( 30 ) ML PO Q6H ( every 6 hours ) as needed .|Magnesium Hydroxide[7530,7549]||Suspension[7564,7574]|400 mg / 5 mL[7550,7563]||PO[7598,7600]|Q6H[7601,7604]||as needed[7623,7632]||253017|6581|magnesium hydroxide
+120	4. Ipratropium Bromide 0.02 % Solution Sig : One ( 1 ) Inhalation Q6H ( every 6 hours ) .|Ipratropium Bromide[7638,7657]|||0.02[7658,7662]||Inhalation[7690,7700]|Q6H[7701,7704]|||C3245065|1190219|7213|ipratropium
+121	5. Heparin Sodium ( Porcine ) 5,000 unit / mL Solution Sig : One ( 1 ) Injection TID ( 3 times a day ) .|Heparin Sodium[7728,7742]|||5 , 000unit / mL[7755,7770]|||TID[7806,7809]|||null|1361615|235473|heparin,porcine
+122	6. Atorvastatin Calcium 20 mg Tablet Sig : One ( 1 ) Tablet PO DAILY ( Daily ) .|Atorvastatin Calcium[7833,7853]||Tablet[7860,7866]|20mg[7854,7859]||PO[7890,7892]|DAILY[7893,7898]|||C0693628|617310|83367|atorvastatin
+123	7. Papain - Urea 830,000-10 unit -% Spray , Non-Aerosol Sig : One ( 1 ) Appl Topical DAILY ( Daily ) .|Papain - Urea[7914,7927]||Spray[7947,7952]|830 , 000[7928,7935]||Topical[7988,7995]|DAILY[7996,8001]|||null|584507|11002|urea
+124	8. Insulin Regular Human 100 unit / mL Solution Sig : Sliding scale Injection ASDIR ( AS DIRECTED ) : See the sliding scale .|Insulin Regular Human[8017,8038]|||100unit / mL[8039,8052]||||||C0977794|311034|253182|insulin regular,human buffered
+125	9. Zinc Sulfate 220 mg Capsule Sig : One ( 1 ) Capsule PO DAILY ( Daily ) .|Zinc Sulfate[8143,8155]||Capsule[8163,8170]|220mg[8156,8162]||PO[8195,8197]|DAILY[8198,8203]||||313773|39954|zinc sulfate
+126	10. Ascorbic Acid 500 mg Tablet Sig : One ( 1 ) Tablet PO BID ( 2 times a day ) .|Ascorbic Acid[8220,8233]||Tablet[8241,8247]|500mg[8234,8240]||PO[8271,8273]|BID[8274,8277]||||282402|1151|ascorbic acid (vit c)
+127	11. Metoprolol Tartrate 50 mg Tablet Sig : One ( 1 ) Tablet PO BID ( 2 times a day ) .|Metoprolol Tartrate[8302,8321]||Tablet[8328,8334]|50mg[8322,8327]||PO[8358,8360]|BID[8361,8364]|||C0978612|866514|6918|metoprolol
+128	12. Aspirin 81 mg Tablet , Chewable Sig : One ( 1 ) Tablet , Chewable PO DAILY ( Daily ) .|Aspirin[8389,8396]||Tablet , Chewable[8403,8420]|81mg[8397,8402]||PO[8455,8457]|DAILY[8458,8463]|||null|318272|1191|acetylsalicylic acid
+129	13. Clopidogrel Bisulfate 75 mg Tablet Sig : One ( 1 ) Tablet PO DAILY ( Daily ) .|Clopidogrel Bisulfate[8480,8501]||Tablet[8508,8514]|75mg[8502,8507]||PO[8538,8540]|DAILY[8541,8546]|||C0975741|309362|32968|clopidogrel
+130	14. Metronidazole 500 mg Tablet Sig : One ( 1 ) Tablet PO TID ( 3 times a day ) for 6 days : Last day 2017-07-25 .|Metronidazole[8563,8576]||Tablet[8584,8590]|500mg[8577,8583]||PO[8614,8616]|TID[8617,8620]|6 days[8643,8649]||C0978620|311681|6922|metronidazole
+131	15. Acetaminophen 325 mg Tablet Sig : Two ( 2 ) Tablet PO Q6H ( every 6 hours ) .|Acetaminophen[8678,8691]||Tablet[8699,8705]|325mg[8692,8698]||PO[8729,8731]|Q6H[8732,8735]||||313782|161|paracetamol
+132	16. Olanzapine 5 mg Tablet Sig : One ( 1 ) Tablet PO DAILY ( Daily ) as needed for confusion .|Olanzapine[8760,8770]||Tablet[8776,8782]|5mg[8771,8775]||PO[8806,8808]|DAILY[8809,8814]||as needed[8825,8834]|C0979110|312078|61381|olanzapine
+133	17. Protonix 40 mg Tablet , Delayed Release ( E.C. ) Sig : One ( 1 ) Tablet , Delayed Release ( E.C. ) PO twice a day .|Protonix[8855,8863]||Tablet[8870,8876]|40mg[8864,8869]||PO[8954,8956]|a day[8963,8968]|||C0938971|284400|40790|pantoprazole
+134	18. Morphine Sulfate 15 mg Tablet Sig : 1-2 Tablets PO Q4-6H ( every 4 to 6 hours ) as needed .|Morphine Sulfate[8975,8991]||Tablet[8998,9004]|15mg[8992,8997]|1 - 2 Tablets[9011,9022]|PO[9023,9025]|Q4 - 6 H[9026,9031]||as needed[9055,9064]||892582|7052|morphine
+135	19. Levofloxacin 500 mg Tablet Sig : One ( 1 ) Tablet PO Q24H ( every 24 hours ) : Last day 08-07 .|Levofloxacin[9071,9083]||Tablet[9091,9097]|500mg[9084,9090]||PO[9121,9123]|Q24H[9124,9128]|||C0693579|199885|82122|levofloxacin
+136	20. Vancomycin HCl in Dextrose 1 g / 200 mL Piggyback Sig : One ( 1 ) Intravenous Q 12H ( Every 12 Hours ) : Last day 08-07 .|Vancomycin HCl[9171,9185]||||||||||66955|66955|vancomycin (as hydrochloride)
+136	20. Vancomycin HCl in Dextrose 1 g / 200 mL Piggyback Sig : One ( 1 ) Intravenous Q 12H ( Every 12 Hours ) : Last day 08-07 .|Dextrose[9189,9197]|||1 g / 200 mL[9198,9210]||Intravenous[9237,9248]|Q 12 H[9249,9254]|||C0773376|237653|4850|glucose
+137	21. Gabapentin 300 mg Capsule Sig : One ( 1 ) Capsule PO TID ( 3 times a day ) .|Gabapentin[9297,9307]||Capsule[9315,9322]|300mg[9308,9314]||PO[9347,9349]|TID[9350,9353]||||310431|25480|gabapentin
+138	22. Lidocaine 5 %( 700 mg / patch ) Adhesive Patch , Medicated Sig : One ( 1 ) Adhesive Patch , Medicated Topical QD (  ) .|Lidocaine[9378,9387]||patch[9402,9407]|5[9388,9389]||Topical[9480,9487]|QD[9488,9490]|||C0794042|251919|6387|lidocaine (obsolete)
+139	23. Morphine Sulfate 2 mg / mL Syringe Sig : 02-19 Injection Q12H ( every 12 hours ) as needed .|Morphine Sulfate[9502,9518]|||2mg / mL[9519,9528]|||Q12H[9559,9563]||as needed[9583,9592]|C2730213|892588|7052|morphine
+140	24. Prochlorperazine 10 mg Tablet Sig : One ( 1 ) Tablet PO Q6H ( every 6 hours ) as needed .|Prochlorperazine[9599,9615]||Tablet[9622,9628]|10mg[9616,9621]||PO[9652,9654]|Q6H[9655,9658]||as needed[9677,9686]||198365|8704|prochlorperazine
+146	Primary : 1) Gangrenous leg 2) Urinary tract infection 3) MRSA pneumonia 4) Failure to thrive and weight loss 5) Altered mental status 6) Gastric ulcer 7) C.diff colitis|thrive[9882,9888]||||||||||1011867|7407|nicotine

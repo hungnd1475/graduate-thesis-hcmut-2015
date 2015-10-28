@@ -1,0 +1,108 @@
+c="the pulmonary service" 83:5 83:7||t="coref person"||c="the pulmonary service" 84:15 84:17
+c="her primary care provider" 110:5 110:8||t="coref person"||c="dr. sandra lamar" 110:10 110:12
+c="felix weiss , m.d." 111:0 111:3||t="coref person"||c="dr. felix willis" 118:4 118:6
+c="patient" 12:0 12:0||t="coref person"||c="who" 12:24 12:24
+c="positional chest pain" 15:3 15:5||t="coref problem"||c="which" 15:7 15:7
+c="she" 32:0 32:0||t="coref person"||c="she" 34:0 34:0
+c="she" 36:0 36:0||t="coref person"||c="she" 37:0 37:0
+c="she" 37:0 37:0||t="coref person"||c="she" 41:0 41:0
+c="she" 41:0 41:0||t="coref person"||c="she" 42:0 42:0
+c="she" 42:0 42:0||t="coref person"||c="she" 45:0 45:0
+c="she" 53:0 53:0||t="coref person"||c="she" 55:0 55:0
+c="she" 58:0 58:0||t="coref person"||c="her" 59:0 59:0
+c="a chem-7" 65:2 65:3||t="coref test"||c="which" 65:4 65:4
+c="she" 65:0 65:0||t="coref person"||c="she" 66:0 66:0
+c="patient" 72:0 72:0||t="coref person"||c="her" 72:22 72:22
+c="she" 73:0 73:0||t="coref person"||c="she" 73:7 73:7
+c="she" 73:7 73:7||t="coref person"||c="her" 73:16 73:16
+c="patient" 74:0 74:0||t="coref person"||c="her" 74:4 74:4
+c="her" 74:4 74:4||t="coref person"||c="her" 74:7 74:7
+c="her" 74:7 74:7||t="coref person"||c="her" 74:11 74:11
+c="patient" 76:0 76:0||t="coref person"||c="her" 76:19 76:19
+c="her" 76:19 76:19||t="coref person"||c="her" 78:0 78:0
+c="her" 78:0 78:0||t="coref person"||c="her" 78:9 78:9
+c="her" 78:9 78:9||t="coref person"||c="her" 78:18 78:18
+c="her" 78:39 78:39||t="coref person"||c="her" 78:48 78:48
+c="her" 78:48 78:48||t="coref person"||c="patient" 79:0 79:0
+c="a right heart catheterization" 79:3 79:6||t="coref test"||c="which" 79:8 79:8
+c="her" 81:26 81:26||t="coref person"||c="she" 82:4 82:4
+c="she" 82:4 82:4||t="coref person"||c="patient" 83:0 83:0
+c="her" 84:7 84:7||t="coref person"||c="patient" 85:0 85:0
+c="patient" 85:0 85:0||t="coref person"||c="patient" 86:0 86:0
+c="patient" 86:0 86:0||t="coref person"||c="her" 86:8 86:8
+c="her" 86:8 86:8||t="coref person"||c="her" 87:1 87:1
+c="her" 90:8 90:8||t="coref person"||c="her" 90:15 90:15
+c="her" 90:25 90:25||t="coref person"||c="she" 91:0 91:0
+c="she" 91:0 91:0||t="coref person"||c="her" 91:6 91:6
+c="her" 91:6 91:6||t="coref person"||c="her" 91:11 91:11
+c="her" 91:11 91:11||t="coref person"||c="her" 91:14 91:14
+c="her" 91:14 91:14||t="coref person"||c="her" 91:17 91:17
+c="her" 91:21 91:21||t="coref person"||c="the patient" 108:0 108:1
+c="the patient" 108:0 108:1||t="coref person"||c="she" 109:0 109:0
+c="she" 109:0 109:0||t="coref person"||c="patient" 110:0 110:0
+c="patient" 110:0 110:0||t="coref person"||c="her" 110:5 110:5
+c="her" 110:5 110:5||t="coref person"||c="her" 110:16 110:16
+c="a nesiritide drip" 19:9 19:11||t="coref treatment"||c="nesiritide" 71:5 71:5
+c="nonischemic dilated cardiomyopathy" 21:1 21:3||t="coref problem"||c="her cardiomyopathy" 76:19 76:20
+c="nonischemic dilated cardiomyopathy" 12:14 12:16||t="coref problem"||c="nonischemic dilated cardiomyopathy" 21:1 21:3
+c="an ejection fraction" 12:18 12:20||t="coref test"||c="an ejection fraction" 21:5 21:7
+c="biopsy specimens" 79:14 79:15||t="coref test"||c="these biopsies" 80:3 80:4
+c="lasix" 25:1 25:1||t="coref treatment"||c="her lasix" 91:21 91:22
+c="elevated wedge pressures" 79:10 79:12||t="coref problem"||c="her elevated wedge pressures" 81:26 81:29
+c="right heart catheterization" 81:1 81:3||t="coref test"||c="her right heart catheterization" 90:15 90:18
+c="an icd" 85:3 85:4||t="coref treatment"||c="her icd placement" 90:25 90:27
+c="right ventricular biopsy" 81:5 81:7||t="coref test"||c="her biopsy" 90:21 90:22
+c="green sputum" 88:7 88:8||t="coref problem"||c="sputum production" 89:15 89:16
+c="green sputum" 17:7 17:8||t="coref problem"||c="green sputum" 88:7 88:8
+c="a cough" 17:3 17:4||t="coref problem"||c="a cough" 88:3 88:4
+c="toprol" 24:1 24:1||t="coref treatment"||c="her toprol" 74:4 74:5
+c="digoxin" 26:1 26:1||t="coref treatment"||c="her digoxin" 74:11 74:12
+c="lisinopril" 30:1 30:1||t="coref treatment"||c="her lisinopril" 74:7 74:8
+c="icd placement" 75:17 75:18||t="coref treatment"||c="an icd" 85:3 85:4
+c="her" 72:22 72:22||t="coref person"||c="she" 73:0 73:0
+c="her lisinopril" 74:7 74:8||t="coref treatment"||c="her lisinopril" 91:14 91:15
+c="she" 16:0 16:0||t="coref person"||c="she" 17:0 17:0
+c="she" 55:0 55:0||t="coref person"||c="she" 57:0 57:0
+c="she" 19:5 19:5||t="coref person"||c="she" 32:0 32:0
+c="she" 64:0 64:0||t="coref person"||c="she" 65:0 65:0
+c="her" 91:17 91:17||t="coref person"||c="her" 91:21 91:21
+c="her coumadin" 90:8 90:9||t="coref treatment"||c="which" 90:11 90:11
+c="patient" 71:0 71:0||t="coref person"||c="patient" 72:0 72:0
+c="she" 13:0 13:0||t="coref person"||c="patient" 14:0 14:0
+c="she" 57:0 57:0||t="coref person"||c="she" 58:0 58:0
+c="cardiac catheterization" 22:3 22:4||t="coref test"||c="which" 22:7 22:7
+c="which" 79:8 79:8||t="coref test"||c="right heart catheterization" 81:1 81:3
+c="she" 34:0 34:0||t="coref person"||c="she" 35:0 35:0
+c="she" 35:0 35:0||t="coref person"||c="she" 36:0 36:0
+c="she" 47:0 47:0||t="coref person"||c="her" 50:0 50:0
+c="her cardiomyopathy" 76:19 76:20||t="coref problem"||c="nonischemic dilated cardiomyopathy" 97:0 97:2
+c="she" 45:0 45:0||t="coref person"||c="she" 46:0 46:0
+c="patient" 83:0 83:0||t="coref person"||c="her" 84:7 84:7
+c="her" 73:16 73:16||t="coref person"||c="patient" 74:0 74:0
+c="her" 50:0 50:0||t="coref person"||c="she" 53:0 53:0
+c="her toprol" 74:4 74:5||t="coref treatment"||c="her toprol" 91:11 91:12
+c="who" 12:24 12:24||t="coref person"||c="she" 13:0 13:0
+c="patient" 14:0 14:0||t="coref person"||c="she" 15:0 15:0
+c="she" 15:0 15:0||t="coref person"||c="she" 16:0 16:0
+c="her" 78:18 78:18||t="coref person"||c="her" 78:39 78:39
+c="the patient" 90:3 90:4||t="coref person"||c="her" 90:8 90:8
+c="a cough" 88:3 88:4||t="coref problem"||c="her cough" 89:12 89:13
+c="she" 46:0 46:0||t="coref person"||c="she" 47:0 47:0
+c="patient" 75:0 75:0||t="coref person"||c="patient" 76:0 76:0
+c="she" 17:0 17:0||t="coref person"||c="she" 18:0 18:0
+c="her" 90:15 90:15||t="coref person"||c="her" 90:21 90:21
+c="her" 74:11 74:11||t="coref person"||c="patient" 75:0 75:0
+c="her" 59:0 59:0||t="coref person"||c="she" 63:0 63:0
+c="her" 66:7 66:7||t="coref person"||c="patient" 71:0 71:0
+c="she" 66:0 66:0||t="coref person"||c="her" 66:7 66:7
+c="patient" 79:0 79:0||t="coref person"||c="the patient" 81:9 81:10
+c="patient" 88:0 88:0||t="coref person"||c="she" 89:0 89:0
+c="her" 90:21 90:21||t="coref person"||c="her" 90:25 90:25
+c="congestive heart failure" 70:1 70:3||t="coref problem"||c="her congestive heart failure" 78:48 78:51
+c="the patient" 81:9 81:10||t="coref person"||c="her" 81:26 81:26
+c="her digoxin" 74:11 74:12||t="coref treatment"||c="her digoxin" 91:17 91:18
+c="her" 89:12 89:12||t="coref person"||c="the patient" 90:3 90:4
+c="she" 89:0 89:0||t="coref person"||c="her" 89:12 89:12
+c="her" 87:1 87:1||t="coref person"||c="patient" 88:0 88:0
+c="she" 18:0 18:0||t="coref person"||c="she" 19:5 19:5
+c="she" 63:0 63:0||t="coref person"||c="she" 64:0 64:0

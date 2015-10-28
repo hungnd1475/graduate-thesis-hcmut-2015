@@ -1,0 +1,6 @@
+46	He has been breast feeding or taking 20 calorie per ounce formula until the increased respiratory distress so that at the time of transfer he is NPO with a peripheral IV with total fluids of 150 ml / kg / day of 10% dextrose with electrolytes .|dextrose[2370,2378]|||150ml[2345,2351]||NPO[2299,2302]||||C0887285|4850|4850|glucose
+54	He has had no antibiotic therapy or blood cultures sent .|antibiotic[2768,2778]||||||||||896|896|antibiotic
+69	2. He is on peripheral IV of total fluids 150 ml / kg / day of 10% dextrose with 2 mEq of sodium chloride per 100 ml and 1 mEq of potassium chloride per 100 ml .|dextrose[3419,3427]|||150ml[3394,3400]||IV[3375,3377]||||C0773376|237653|4850|glucose
+69	2. He is on peripheral IV of total fluids 150 ml / kg / day of 10% dextrose with 2 mEq of sodium chloride per 100 ml and 1 mEq of potassium chloride per 100 ml .|sodium chloride[3442,3457]|||2mEq[3433,3438]||||||C0990116|316692|9863|sodium chloride
+69	2. He is on peripheral IV of total fluids 150 ml / kg / day of 10% dextrose with 2 mEq of sodium chloride per 100 ml and 1 mEq of potassium chloride per 100 ml .|potassium chloride[3482,3500]|||100ml[3505,3511]||||||null|312507|8591|potassium chloride
+84	Jaqueline RHEIN on : SUN 2014-04-20 8:13 PM ( End of Report )|RHEIN[3952,3957]||||||||||||

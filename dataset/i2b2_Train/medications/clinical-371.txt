@@ -1,0 +1,4 @@
+25	Halcion 0.25 mg.|Halcion[1209,1216]|||0.25mg[1217,1224]||||||C1603552|569344|10767|triazolam
+27	Valium 5 mg.|Valium[1240,1246]|||5mg[1247,1251]||||||C1595472|563026|3322|diazepam
+28	P.O. p.r.n and methyclothiazide 5 mg. q.d.|methyclothiazide[1268,1284]|||||P.O.[1253,1257]|||p.r.n[1258,1263]|C1246907|372847|6860|methyclothiazide
+58	Her only additional medication on discharge is Percocet as needed for pain .|Percocet[3274,3282]||||||||as needed[3283,3292]|C0086787|42844|161|paracetamol

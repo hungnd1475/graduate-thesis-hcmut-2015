@@ -1,0 +1,6 @@
+14	The infant admitted to the Neonatal Intensive Care Unit for a dextrose stick of 20 in the delivery room .|dextrose[524,532]|||||||||C0887285|4850|4850|glucose
+44	On day of life one , the infant had a dextrose stick of 34 .|dextrose[2020,2028]|||||||||C0887285|4850|4850|glucose
+48	Before discharge to the Newborn Nursery , the infant was taking Similac 22 calories per ounce by mouth ad lib and maintaining dextrose sticks in the 60 s.|dextrose[2426,2434]|||||by mouth[2394,2402]|||||237531|4850|glucose
+66	Tamatha - Cape Cod Hospital .|Cape[2885,2889]|||||||||null|1605749|1605749|cape
+69	Similac 22 calories per ounce by mouth ad lib with a goal of decreasing to 20 calories per ounce for dextrose sticks of greater than 60 .|dextrose[3056,3064]|||||by mouth[2985,2993]|||||237531|4850|glucose
+73	4. Received hepatitis B vaccine on 2012-09-30 .|hepatitis B vaccine[3213,3232]||||||||||816236|816236|hepatitis b vaccine

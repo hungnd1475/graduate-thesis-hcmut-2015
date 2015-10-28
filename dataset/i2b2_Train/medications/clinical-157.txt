@@ -1,0 +1,10 @@
+17	Mother has had multiple ultrasounds and fetal surveys at 17 and 21 weeks that had been unremarkable .|at 17[764,769]|||||||21 weeks[774,782]|||6904|6904|methyltestosterone
+20	She received a full course of betamethasone on 03-28 and was treated with magnesium sulfate until 04-12 .|betamethasone[999,1012]|||||||||C0005308|1514|1514|betamethasone
+20	She received a full course of betamethasone on 03-28 and was treated with magnesium sulfate until 04-12 .|magnesium sulfate[1043,1060]|||||||||C0024480|6585|6585|magnesium sulfate
+21	She was given 1 dose of nifedipine 2 days ago as a tocolytic without effect .|nifedipine[1099,1109]|||||||2 days[1110,1116]||C0028066|7417|7417|nifedipine
+41	Hips increased lax knee but no obvious dislocation .|lax[2066,2069]||||||||||217969|155122|phenolphthalein
+48	Echocardiogram results were within normal limits revealing a PPS murmur .|PPS[2425,2428]||||||||||||
+53	The infant was initially started on 60 cc per kg per day of D10W .|D10W[2584,2588]||||||per day[2573,2580]||||||
+66	CBC was benign and blood cultures remained negative at 48 hours at which time ampicillin and gentamicin were discontinued .|ampicillin[3415,3425]|||||||48 hours[3392,3400]||C0002680|733|733|ampicillin
+66	CBC was benign and blood cultures remained negative at 48 hours at which time ampicillin and gentamicin were discontinued .|gentamicin[3430,3440]|||||||||C0017436|662411|662411|gentamicins
+102	Kenneth RHEIN on :|RHEIN[4532,4537]||||||||||||

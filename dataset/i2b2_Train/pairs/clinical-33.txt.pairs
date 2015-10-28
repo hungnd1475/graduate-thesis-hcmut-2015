@@ -1,0 +1,87 @@
+c="pt" 20:0 20:0||t="coref person"||c="he" 21:0 21:0
+c="he" 21:0 21:0||t="coref person"||c="he" 22:3 22:3
+c="he" 27:0 27:0||t="coref person"||c="he" 27:12 27:12
+c="mr. anders" 26:0 26:1||t="coref person"||c="his" 26:8 26:8
+c="you" 131:6 131:6||t="coref person"||c="your" 133:3 133:3
+c="attending" 13:0 13:0||t="coref person"||c="stephanie i sept , m.d" 13:2 13:6
+c="he" 25:0 25:0||t="coref person"||c="mr. anders" 26:0 26:1
+c="tachy" 51:4 51:4||t="coref problem"||c="sinus tach" 79:1 79:2
+c="syncope" 15:0 15:0||t="coref problem"||c="a syncopal episode" 19:7 19:9
+c="saddle pe" 77:1 77:2||t="coref problem"||c="saddle pulmonary embolus" 86:13 86:15
+c="pulmonary embolus" 118:0 118:1||t="coref problem"||c="a pulmonary embolism" 123:7 123:9
+c="p-pulmonale" 79:14 79:14||t="coref problem"||c="p-pulmonale" 99:20 99:20
+c="pe" 97:3 97:3||t="coref problem"||c="saddle pe" 103:10 103:11
+c="essentially bed bound" 29:2 29:4||t="coref problem"||c="unable to ambulate" 29:12 29:14
+c="mildly dilated" 65:5 65:6||t="coref problem"||c="mildly dilated right ventricle" 72:2 72:5
+c="moderate pulmonary artery systolic hypertension" 70:2 70:6||t="coref problem"||c="moderate pulmonary hypertension" 72:15 72:17
+c="any bleeding or clotting disorders" 33:2 33:6||t="coref problem"||c="known clotting disorder" 89:3 89:5
+c="an injury" 107:11 107:12||t="coref problem"||c="meniscal tear" 107:16 107:17
+c="l knee injury" 106:1 106:3||t="coref problem"||c="an injury" 107:11 107:12
+c="mr. anders" 107:7 107:8||t="coref person"||c="he" 109:0 109:0
+c="he" 92:0 92:0||t="coref person"||c="he" 93:0 93:0
+c="his" 90:5 90:5||t="coref person"||c="he" 92:0 92:0
+c="an mri of the knee" 108:10 108:14||t="coref test"||c="the mri of your knee" 128:0 128:4
+c="lightheaded" 20:7 20:7||t="coref problem"||c="lightheaded" 22:11 22:11
+c="coumadin ( warfarin" 125:10 125:12||t="coref treatment"||c="this medication" 126:4 126:5
+c="your inr" 127:3 127:4||t="coref test"||c="blood levels" 127:6 127:7
+c="pt" 33:0 33:0||t="coref person"||c="mr. anders" 86:0 86:1
+c="left knee meniscal tear" 119:0 119:3||t="coref problem"||c="a meniscal tear" 128:6 128:8
+c="he" 29:0 29:0||t="coref person"||c="he" 30:0 30:0
+c="you" 125:0 125:0||t="coref person"||c="you" 127:0 127:0
+c="you" 124:0 124:0||t="coref person"||c="you" 125:0 125:0
+c="he" 109:0 109:0||t="coref person"||c="you" 123:0 123:0
+c="you" 123:0 123:0||t="coref person"||c="you" 124:0 124:0
+c="left knee injury" 86:17 86:19||t="coref problem"||c="trauma to leg" 89:9 89:11
+c="saddle pe" 103:10 103:11||t="coref problem"||c="pulmonary embolus" 118:0 118:1
+c="echo" 57:1 57:1||t="coref test"||c="an echo" 101:0 101:1
+c="meniscal tear" 107:16 107:17||t="coref problem"||c="left knee meniscal tear" 119:0 119:3
+c="trauma to leg" 89:9 89:11||t="coref problem"||c="l knee injury" 106:1 106:3
+c="left knee injury" 35:0 35:2||t="coref problem"||c="left knee injury" 86:17 86:19
+c="anticoagulation" 86:5 86:5||t="coref treatment"||c="anticoagulation" 103:8 103:8
+c="he" 26:10 26:10||t="coref person"||c="his" 26:12 26:12
+c="pe" 87:1 87:1||t="coref problem"||c="his embolus" 88:14 88:15
+c="his embolus" 88:14 88:15||t="coref problem"||c="pe" 93:26 93:26
+c="saddle pe" 23:8 23:9||t="coref problem"||c="saddle pe" 77:1 77:2
+c="his" 27:14 27:14||t="coref person"||c="his" 28:15 28:15
+c="mri left knee w/o contrast" 80:1 80:5||t="coref test"||c="an mri of the knee" 108:10 108:14
+c="coumadin management" 94:13 94:14||t="coref treatment"||c="his coumadin therapy" 95:2 95:4
+c="he" 90:0 90:0||t="coref person"||c="his" 90:5 90:5
+c="he" 22:3 22:3||t="coref person"||c="he" 25:0 25:0
+c="your" 128:3 128:3||t="coref person"||c="your" 129:5 129:5
+c="his" 88:14 88:14||t="coref person"||c="he" 89:0 89:0
+c="your" 130:3 130:3||t="coref person"||c="you" 131:6 131:6
+c="his" 26:8 26:8||t="coref person"||c="he" 26:10 26:10
+c="blood levels" 127:6 127:7||t="coref test"||c="your inr levels" 127:15 127:17
+c="pt" 105:0 105:0||t="coref person"||c="his" 107:1 107:1
+c="his" 98:2 98:2||t="coref person"||c="he" 99:0 99:0
+c="his" 26:12 26:12||t="coref person"||c="he" 27:0 27:0
+c="unable to ambulate" 29:12 29:14||t="coref problem"||c="immobility" 89:13 89:13
+c="he" 27:12 27:12||t="coref person"||c="his" 27:14 27:14
+c="he" 31:5 31:5||t="coref person"||c="pt" 33:0 33:0
+c="his" 28:15 28:15||t="coref person"||c="he" 29:0 29:0
+c="his coumadin therapy" 95:2 95:4||t="coref treatment"||c="coumadin ( warfarin" 125:10 125:12
+c="he" 100:6 100:6||t="coref person"||c="pt" 105:0 105:0
+c="your primary care doctor" 133:3 133:6||t="coref person"||c="larry bock" 133:7 133:8
+c="a syncopal episode" 19:7 19:9||t="coref problem"||c="syncope" 96:1 96:1
+c="he" 89:0 89:0||t="coref person"||c="he" 90:0 90:0
+c="tachy" 24:6 24:6||t="coref problem"||c="tachy" 51:4 51:4
+c="ischemia" 100:13 100:13||t="coref problem"||c="ischemia" 101:11 101:11
+c="his" 30:6 30:6||t="coref person"||c="he" 31:5 31:5
+c="your" 129:5 129:5||t="coref person"||c="your" 130:3 130:3
+c="saddle pulmonary embolus" 86:13 86:15||t="coref problem"||c="pe" 87:1 87:1
+c="his" 94:8 94:8||t="coref person"||c="his" 95:2 95:2
+c="inflammation of his l calf / leg" 30:4 30:10||t="coref problem"||c="l leg/calf swollen" 53:2 53:4
+c="your" 133:3 133:3||t="coref person"||c="you" 134:4 134:4
+c="his" 107:1 107:1||t="coref person"||c="mr. anders" 107:7 107:8
+c="he" 93:0 93:0||t="coref person"||c="he" 94:0 94:0
+c="pe" 93:26 93:26||t="coref problem"||c="pe" 97:3 97:3
+c="his" 100:0 100:0||t="coref person"||c="he" 100:6 100:6
+c="he" 30:0 30:0||t="coref person"||c="his" 30:6 30:6
+c="his" 95:2 95:2||t="coref person"||c="his" 98:2 98:2
+c="he" 94:0 94:0||t="coref person"||c="his" 94:8 94:8
+c="mr. anders" 86:0 86:1||t="coref person"||c="his" 88:14 88:14
+c="he" 99:0 99:0||t="coref person"||c="his" 100:0 100:0
+c="you" 127:0 127:0||t="coref person"||c="your" 127:3 127:3
+c="your" 127:3 127:3||t="coref person"||c="your" 127:15 127:15
+c="your" 127:15 127:15||t="coref person"||c="your" 128:3 128:3
+c="your primary care doctor" 130:3 130:6||t="coref person"||c="marion bock" 130:7 130:8

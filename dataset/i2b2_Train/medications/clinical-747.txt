@@ -1,0 +1,47 @@
+18	The patient is a 91 yo woman with h/o HTN who came from Bridgewater State Hospital Rehab with substernal chest pain after exercise .|a 91[282,286]||||||||||101926|101926|a 91
+23	She received ASA 81 mg x 2 and nitro SL x 2 with partial relief at nursing home .|ASA[696,699]|||81mg[700,705]|||x 2[706,709]||||243670|1191|acetylsalicylic acid
+23	She received ASA 81 mg x 2 and nitro SL x 2 with partial relief at nursing home .|nitro[714,719]|||||SL[720,722]|x 2[723,726]||||7447|7447|nitro
+28	She received ASA , nitro SL then gtt , morphine , metoprolol , and heparin gtt .|ASA[1078,1081]|||||||||C1740879|667904|9525|salicylic acid
+28	She received ASA , nitro SL then gtt , morphine , metoprolol , and heparin gtt .|nitro[1084,1089]|||||SL[1090,1092]|||||7447|7447|nitro
+28	She received ASA , nitro SL then gtt , morphine , metoprolol , and heparin gtt .|morphine[1104,1112]|||||||||C0026549|7052|7052|morphine
+28	She received ASA , nitro SL then gtt , morphine , metoprolol , and heparin gtt .|metoprolol[1115,1125]|||||||||C0025859|6918|6918|metoprolol
+28	She received ASA , nitro SL then gtt , morphine , metoprolol , and heparin gtt .|heparin[1132,1139]|||||||||C0019134|235473|235473|heparin,porcine
+49	Reg rate , nl S1 & S2 , no m/r/g|m / r[1748,1751]||||||||||7916|7916|m / r
+89	The patient was given ASA , Plavix , heparin drip x 24 hours , nitro drip , atorvastatin , metoprolol , and lisinopril .|ASA[3425,3428]|||||||||C1740879|667904|9525|salicylic acid
+89	The patient was given ASA , Plavix , heparin drip x 24 hours , nitro drip , atorvastatin , metoprolol , and lisinopril .|Plavix[3431,3437]|||||||||C0633084|174742|32968|clopidogrel
+89	The patient was given ASA , Plavix , heparin drip x 24 hours , nitro drip , atorvastatin , metoprolol , and lisinopril .|heparin[3440,3447]|||||drip[3448,3452]|x 24[3453,3457]|||C0019134|235473|235473|heparin,porcine
+89	The patient was given ASA , Plavix , heparin drip x 24 hours , nitro drip , atorvastatin , metoprolol , and lisinopril .|nitro[3466,3471]|||||drip[3472,3476]|||||7447|7447|nitro
+89	The patient was given ASA , Plavix , heparin drip x 24 hours , nitro drip , atorvastatin , metoprolol , and lisinopril .|atorvastatin[3479,3491]|||||||||C0286651|83367|83367|atorvastatin
+89	The patient was given ASA , Plavix , heparin drip x 24 hours , nitro drip , atorvastatin , metoprolol , and lisinopril .|metoprolol[3494,3504]|||||||||C0025859|6918|6918|metoprolol
+89	The patient was given ASA , Plavix , heparin drip x 24 hours , nitro drip , atorvastatin , metoprolol , and lisinopril .|lisinopril[3511,3521]|||||||||C0065374|29046|29046|lisinopril
+90	Her chest pain was controlled with morphine .|morphine[3559,3567]|||||||||C0026549|7052|7052|morphine
+93	Her metoprolol dose was increased from 25 mg PO bid to 50 mg PO bid then 75 mg PO tid .|metoprolol[3732,3742]|||75mg[3801,3806]||PO[3773,3775]|tid[3810,3813]|||null|1606349|6918|metoprolol
+93	Her metoprolol dose was increased from 25 mg PO bid to 50 mg PO bid then 75 mg PO tid .|metoprolol[3732,3742]|||50mg[3783,3788]||PO[3789,3791]|bid[3776,3779]||||866514|6918|metoprolol
+93	Her metoprolol dose was increased from 25 mg PO bid to 50 mg PO bid then 75 mg PO tid .|metoprolol[3732,3742]|||25mg[3767,3772]||PO[3807,3809]|bid[3792,3795]|||null|866924|6918|metoprolol
+97	We decided given her age that she would not be a good candidate for cardioversion for her afib nor would she be a good candidate for coumadin .|coumadin[4080,4088]|||||||||C0699129|202421|11289|warfarin
+98	Therefore we will continue rate control with metoprolol this can be titrated if needed , and aspirin and plavix for anti-coagulation .|metoprolol[4136,4146]|||||||||C0025859|6918|6918|metoprolol
+98	Therefore we will continue rate control with metoprolol this can be titrated if needed , and aspirin and plavix for anti-coagulation .|aspirin[4184,4191]|||||||||C0004057|1191|1191|acetylsalicylic acid
+98	Therefore we will continue rate control with metoprolol this can be titrated if needed , and aspirin and plavix for anti-coagulation .|plavix[4196,4202]|||||||||C0633084|174742|32968|clopidogrel
+99	She should also continue on lipitor and lisinopril .|lipitor[4254,4261]|||||||||C0593906|153165|83367|atorvastatin
+99	She should also continue on lipitor and lisinopril .|lisinopril[4266,4276]|||||||||C0065374|29046|29046|lisinopril
+108	Her CXR prior to discharge showed mild pulm edema and thus was given 40 of lasix prior to going to rehab .|lasix[4842,4847]|||||||||C0699992|202991|4603|furosemide
+109	She can be given prn lasix for weight gain or shortness of breath .|lasix[4895,4900]||||||||prn[4891,4894]|C0699992|202991|4603|furosemide
+114	She was initially started on Bactrim , but this was stopped as she was afebrile .|Bactrim[5060,5067]||||||||||151399|10180|sulfamethoxazole
+118	DNR/DNI|DNR[5226,5229]||||||||||||
+119	Medications on Admission : tylenol PRN lisinopril 5 mg PO qd protonix 20 mg PO qd artifical tears bid metoprolol 25 mg PO bid|metoprolol[5336,5346]|||25mg[5347,5352]||PO[5289,5291]|bid[5332,5335]|||null|866924|6918|metoprolol
+119	Medications on Admission : tylenol PRN lisinopril 5 mg PO qd protonix 20 mg PO qd artifical tears bid metoprolol 25 mg PO bid|protonix[5295,5303]|||20mg[5304,5309]||PO[5310,5312]|qd[5292,5294]|||C1588004|542443|40790|pantoprazole
+119	Medications on Admission : tylenol PRN lisinopril 5 mg PO qd protonix 20 mg PO qd artifical tears bid metoprolol 25 mg PO bid|lisinopril[5273,5283]|||5mg[5284,5288]||PO[5353,5355]|||PRN[5269,5272]|C0978224|311354|29046|lisinopril
+119	Medications on Admission : tylenol PRN lisinopril 5 mg PO qd protonix 20 mg PO qd artifical tears bid metoprolol 25 mg PO bid|tylenol[5261,5268]||||||||||202433|161|paracetamol
+121	1. Senna 8.6 mg Tablet Sig : One ( 1 ) Tablet PO BID ( 2 times a day ) as needed .|Senna[5386,5391]||Tablet[5399,5405]|8.6mg[5392,5398]||PO[5429,5431]|BID[5432,5435]||as needed[5454,5463]||312935|36387|sennosides
+122	2. Docusate Sodium 100 mg Capsule Sig : One ( 1 ) Capsule PO BID ( 2 times a day ) as needed for constipation .|Docusate Sodium[5469,5484]||Capsule[5492,5499]|100mg[5485,5491]||PO[5524,5526]|BID[5527,5530]||as needed[5549,5558]||1115005|82003|docusate
+123	3. Aspirin 325 mg Tablet Sig : One ( 1 ) Tablet PO DAILY ( Daily ) .|Aspirin[5581,5588]||Tablet[5596,5602]|325mg[5589,5595]||PO[5626,5628]|DAILY[5629,5634]|||C0714615|212033|1191|acetylsalicylic acid
+124	4. Clopidogrel 75 mg Tablet Sig : One ( 1 ) Tablet PO DAILY ( Daily ) .|Clopidogrel[5650,5661]||Tablet[5668,5674]|75mg[5662,5667]||PO[5698,5700]|DAILY[5701,5706]||||309362|32968|clopidogrel
+125	5. Atorvastatin 80 mg Tablet Sig : One ( 1 ) Tablet PO DAILY ( Daily ) .|Atorvastatin[5722,5734]||Tablet[5741,5747]|80mg[5735,5740]||PO[5771,5773]|DAILY[5774,5779]||||259255|83367|atorvastatin
+126	6. Pantoprazole 40 mg Tablet , Delayed Release ( E.C. ) Sig : 0.5 Tablet , Delayed Release ( E.C. ) PO Q24H ( every 24 hours ) .|Pantoprazole[5795,5807]||Tablet[5814,5820]|40mg[5808,5813]|0.5 Tablet[5854,5864]|PO[5892,5894]|Q24H[5895,5899]|||C0981697|314200|40790|pantoprazole
+127	7. Polyvinyl Alcohol 1.4 % Drops Sig : 1-2 Drops Ophthalmic BID ( 2 times a day ) .|Polyvinyl Alcohol[5924,5941]||Ophthalmic[5970,5980]|1.4[5942,5945]|||BID[5981,5984]|||C1162990|347786|8570|polyvinyl alcohol
+128	8. Lisinopril 10 mg Tablet Sig : One ( 1 ) Tablet PO DAILY ( Daily ) .|Lisinopril[6008,6018]||Tablet[6025,6031]|10mg[6019,6024]||PO[6055,6057]|DAILY[6058,6063]|||C0981555|314076|29046|lisinopril
+129	9. Metoprolol Tartrate 25 mg Tablet Sig : Three ( 3 ) Tablet PO TID ( 3 times a day ) .|Metoprolol Tartrate[6079,6098]||Tablet[6105,6111]|25mg[6099,6104]||PO[6137,6139]|TID[6140,6143]|||C1359886|866924|6918|metoprolol
+130	10. Acetaminophen 325 mg Tablet Sig : Two ( 2 ) Tablet PO BID ( 2 times a day ) .|Acetaminophen[6168,6181]||Tablet[6189,6195]|325mg[6182,6188]||PO[6219,6221]|BID[6222,6225]||||313782|161|paracetamol
+131	11. Maalox 225-200 mg/5 mL Suspension Sig : Five ( 5 ) mL PO every six ( 6 ) hours as needed for indigestion .|Maalox[6250,6256]||Suspension[6273,6283]|225 - 200 mg / 5 mL[6257,6272]||PO[6304,6306]|||as needed[6329,6338]|C0712795|210836|612|aluminium hydroxide
+132	12. Lasix 40 mg Tablet Sig : One ( 1 ) Tablet PO once a day as needed for shortness of breath or wheezing :|Lasix[6361,6366]||Tablet[6373,6379]|40mg[6367,6372]||PO[6403,6405]|a day[6411,6416]||as needed[6417,6426]|C0697300|200809|4603|furosemide
+133	Can give 40 lasix PO if having any weight gain or shortness of breath .|lasix[6477,6482]|||||PO[6483,6485]||||C3229626|1175647|4603|furosemide

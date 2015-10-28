@@ -1,0 +1,30 @@
+c="the patient" 12:0 12:1||t="coref person"||c="the baby" 19:17 19:18
+c="mother" 12:21 12:21||t="coref person"||c="mother" 16:0 16:0
+c="the baby" 19:17 19:18||t="coref person"||c="he" 36:0 36:0
+c="he" 45:0 45:0||t="coref person"||c="his" 46:0 46:0
+c="his" 46:0 46:0||t="coref person"||c="his" 47:0 47:0
+c="his" 47:0 47:0||t="coref person"||c="the patient" 49:0 49:1
+c="the patient" 52:0 52:1||t="coref person"||c="his" 53:0 53:0
+c="his" 53:0 53:0||t="coref person"||c="the patient" 56:0 56:1
+c="nasal cannula" 36:5 36:6||t="coref treatment"||c="nasal cannula" 37:0 37:1
+c="sepsis risk factors" 52:11 52:13||t="coref problem"||c="sepsis" 75:3 75:3
+c="delivery" 14:17 14:17||t="coref treatment"||c="delivery" 17:11 17:11
+c="nasal cannula" 38:6 38:7||t="coref treatment"||c="low flow nasal cannula." 59:7 59:10
+c="chest x-ray" 31:0 31:1||t="coref test"||c="chest x-ray" 35:0 35:1
+c="streaky lung fields" 31:3 31:5||t="coref problem"||c="mild streakiness of the lung fields" 35:3 35:8
+c="hematocrit" 30:12 30:12||t="coref test"||c="the patient 's initial hematocrit" 56:0 56:4
+c="the patient" 56:0 56:1||t="coref person"||c="the patient" 59:0 59:1
+c="exam" 21:0 21:0||t="coref test"||c="exam" 42:3 42:3
+c="his" 41:9 41:9||t="coref person"||c="the patient" 44:0 44:1
+c="retractions" 19:15 19:15||t="coref problem"||c="mild retractions" 21:21 21:22
+c="murmurs" 21:29 21:29||t="coref problem"||c="murmur" 42:1 42:1
+c="enfamil" 44:17 44:17||t="coref treatment"||c="enfamil" 67:5 67:5
+c="the patient" 41:0 41:1||t="coref person"||c="his" 41:9 41:9
+c="the patient" 49:0 49:1||t="coref person"||c="the patient" 52:0 52:1
+c="the patient" 44:0 44:1||t="coref person"||c="he" 45:0 45:0
+c="the patient" 59:0 59:1||t="coref person"||c="he" 59:11 59:11
+c="antibiotics" 52:6 52:6||t="coref treatment"||c="antibiotics" 75:5 75:5
+c="he" 37:11 37:11||t="coref person"||c="he" 38:0 38:0
+c="he" 59:11 59:11||t="coref person"||c="the patient" 61:0 61:1
+c="he" 38:0 38:0||t="coref person"||c="the patient" 41:0 41:1
+c="he" 36:0 36:0||t="coref person"||c="he" 37:11 37:11

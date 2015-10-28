@@ -1,0 +1,9 @@
+44	On 2019-10-11 he was started on lopressor for his tachycardia which had good effect .|lopressor[1834,1843]|||||||||C0700776|203344|6918|metoprolol
+50	His heart rate continued to be well controlled with his lopressor .|lopressor[2401,2410]|||||||||C0700776|203344|6918|metoprolol
+54	Conway in 2 weeks and an appointment was made on 11-15 for him at the Louis Schubert Community Health Center to follow his heart rate and continued need for lopressor .|lopressor[2725,2734]|||||||2 weeks[2578,2585]||C0700776|203344|6918|metoprolol
+57	1. Docusate Sodium 100 mg Capsule Sig : One ( 1 ) Capsule PO BID ( 2 times a day ) .|Docusate Sodium[2796,2811]||Capsule[2819,2826]|100mg[2812,2818]||PO[2851,2853]|BID[2854,2857]||||1115005|82003|docusate
+59	2. Enoxaparin 30 mg / 0.3 mL Syringe Sig : One ( 1 ) 30 mg syringe Subcutaneous Q12H ( every 12 hours ) for 4 weeks .|Enoxaparin[2922,2932]|||30 mg / 0.3 mL[2933,2947]||Subcutaneous[2986,2998]|Q12H[2999,3003]|4 weeks[3027,3034]||null|1012453|67108|enoxaparin
+61	3. Oxycodone - Acetaminophen 5-325 mg Tablet Sig : 1-2 Tablets PO Q4-6H ( every 4 to 6 hours ) as needed .|Oxycodone - Acetaminophen[3082,3107]||Tablet[3117,3123]|5 - 325mg[3108,3116]|1 - 2 Tablets[3130,3141]|PO[3142,3144]|Q4 - 6 H[3145,3150]||as needed[3174,3183]|C0717368|214183|214183|oxycodone-acetaminophen
+63	4. Metoprolol Tartrate 25 mg Tablet Sig : 0.5 Tablet PO BID ( 2 times a day ) .|Metoprolol Tartrate[3229,3248]||Tablet[3255,3261]|25mg[3249,3254]|0.5 Tablet[3268,3278]|PO[3279,3281]|BID[3282,3285]|||C1359886|866924|6918|metoprolol
+73	Continue your Lovenox injections as instructed|Lovenox[3624,3631]|||||||||C0728963|225036|67108|enoxaparin
+88	They will monitor your blood pressure and heart rate and lopressor .|lopressor[4468,4477]|||||||||C0700776|203344|6918|metoprolol

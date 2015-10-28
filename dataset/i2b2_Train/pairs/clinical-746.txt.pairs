@@ -1,0 +1,9 @@
+c="patient" 32:0 32:0||t="coref person"||c="patient" 43:7 43:7
+c="dr. white" 42:4 42:5||t="coref person"||c="pcp" 45:0 45:0
+c="pcp" 22:0 22:0||t="coref person"||c="pcp" 23:1 23:1
+c="a , walina" 12:0 12:2||t="coref person"||c="patient" 32:0 32:0
+c="pcp" 45:0 45:0||t="coref person"||c="white , elvno r" 46:0 46:3
+c="pcp" 23:1 23:1||t="coref person"||c="dr. white" 42:4 42:5
+c="provider" 47:0 47:0||t="coref person"||c="meedhuang , pada" 49:5 49:7
+c="provider" 19:0 19:0||t="coref person"||c="pada meedhuang" 20:0 20:1
+c="pada meedhuang" 20:0 20:1||t="coref person"||c="provider" 47:0 47:0

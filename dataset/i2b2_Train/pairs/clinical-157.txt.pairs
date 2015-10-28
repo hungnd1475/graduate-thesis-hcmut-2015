@@ -1,0 +1,21 @@
+c="an intrauterine fetal demise" 15:2 15:5||t="coref problem"||c="this" 16:0 16:0
+c="x-ray" 60:13 60:13||t="coref test"||c="x-ray" 71:5 71:5
+c="preterm labor" 21:20 21:21||t="coref problem"||c="ongoing labor" 24:7 24:8
+c="ongoing labor" 24:7 24:8||t="coref problem"||c="preterm labor" 25:0 25:1
+c="cbc" 66:0 66:0||t="coref test"||c="initial cbc" 67:0 67:1
+c="blood cultures" 65:2 65:3||t="coref test"||c="blood cultures" 66:4 66:5
+c="cbc" 65:0 65:0||t="coref test"||c="cbc" 66:0 66:0
+c="the infant" 27:0 27:1||t="coref person"||c="jacqueline" 45:0 45:0
+c="breech presentation" 25:9 25:10||t="coref problem"||c="breech positioning in utero" 31:15 31:18
+c="severe polyhydramnios" 19:4 19:5||t="coref problem"||c="increasing polyhydramnios" 21:17 21:18
+c="baby boy liles" 12:0 12:2||t="coref person"||c="the infant" 27:0 27:1
+c="she" 22:0 22:0||t="coref person"||c="she" 23:0 23:0
+c="mother" 20:0 20:0||t="coref person"||c="mother" 21:0 21:0
+c="hydramnios" 16:4 16:4||t="coref problem"||c="severe polyhydramnios" 19:4 19:5
+c="the infant" 59:10 59:11||t="coref person"||c="his" 59:21 59:21
+c="a te fistula" 59:6 59:8||t="coref problem"||c="tef" 60:0 60:0
+c="mother" 12:23 12:23||t="coref person"||c="mother" 20:0 20:0
+c="weight" 30:0 30:0||t="coref test"||c="birth weight" 51:0 51:1
+c="an audible murmur" 47:2 47:4||t="coref problem"||c="a pps murmur" 49:7 49:9
+c="mother" 21:0 21:0||t="coref person"||c="she" 22:0 22:0
+c="jacqueline" 45:0 45:0||t="coref person"||c="the infant" 59:10 59:11

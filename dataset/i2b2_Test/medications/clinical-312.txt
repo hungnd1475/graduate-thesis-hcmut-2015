@@ -1,0 +1,42 @@
+33	Sinemet was stopped during last admission 06-30 as he was thought to NOT have PD .|Sinemet[2488,2495]|||||||||C0074559|36572|2019|carbidopa
+38	8. orthostatic hypotension , on midodrine|midodrine[2673,2682]|||||||||C0026078|6963|6963|midodrine
+42	Reported occassional glass of wine , no illicit drugs|illicit drugs[2891,2904]|||||||||C3653345|1431777|1431777|illicit drugs
+93	D - 5 ; T - 5 ; B - 5 ; WF - 5 ; WE - 5 ; FiF - 5 ; Bruner - 5 ; Ip - 5 ; Gl - 5 ; Q - 5- ; H - 5 ; AF - 5 ; TF - 5 ; TE - 5|B - 5[4913,4918]||||||||||||
+95	D - 5 ; T - 5 ; B - 5 ; WF - 5 ; WE - 5 ; FiF - 5 ; Bruner - 5 ; Ip - 5 ; Gl - 5 ; Q - 5- ; H - 5 ; AF - 5 ; TF - 5 ; TE - 5-|B - 5[5043,5048]||||||||||||
+102	Right B - 2 ; T - 2 ; Br - 2 ; Pa - 1 ; Pl - 0|B - 2[5409,5414]|||||||||null|607906|607906|b-2
+104	B - 2 ; T - 2 ; Br - 2 ; Pa - 1 ; Pl - 0 ( Less brisk than on R , but exam limited due to cuff )|B - 2[5455,5460]|||||||||null|607906|607906|b-2
+107	Normal Correa , Kimberly , HTS .|HTS[5646,5649]||||||||||||
+118	GLUCOSE - 72 UREA N - 17 CREAT - 0.8 SODIUM - 140 POTASSIUM - 4.4 CHLORIDE - 103 TOTAL CO2 - 29 ANION GAP - 12 2019-03-29 02:00 PM|POTASSIUM[6265,6274]|||||||||C0032821|8588|8588|potassium
+118	GLUCOSE - 72 UREA N - 17 CREAT - 0.8 SODIUM - 140 POTASSIUM - 4.4 CHLORIDE - 103 TOTAL CO2 - 29 ANION GAP - 12 2019-03-29 02:00 PM|SODIUM[6252,6258]|||||||||C0037473|9853|9853|sodium
+118	GLUCOSE - 72 UREA N - 17 CREAT - 0.8 SODIUM - 140 POTASSIUM - 4.4 CHLORIDE - 103 TOTAL CO2 - 29 ANION GAP - 12 2019-03-29 02:00 PM|UREA[6228,6232]|||||||||C0041942|11002|11002|urea
+153	He was admitted to the neurology ICU for closer monitoring and was stable overnight - BP was initially elevated and required a labetalol drip for < 24 hours , then stabilized .|labetalol[9611,9620]|||||drip[9621,9625]||24 hours[9632,9640]||C0022860|6185|6185|labetalol
+156	For the question of seizure activity associated with a cortical bleed , he was started prophylactically on Keppra ( given questionable allergy to dilantin ) , at 500 mg bid ; no seizure activity was seen .|dilantin[9888,9896]|||500mg[9904,9910]|||bid[9911,9914]||||202740|8183|phenytoin
+156	For the question of seizure activity associated with a cortical bleed , he was started prophylactically on Keppra ( given questionable allergy to dilantin ) , at 500 mg bid ; no seizure activity was seen .|Keppra[9849,9855]|||||||||C0876060|261547|114477|levetiracetam
+160	Cardiovascularly , lipitor and amiodarone were continued .|lipitor[10442,10449]|||||||||C0593906|153165|83367|atorvastatin
+160	Cardiovascularly , lipitor and amiodarone were continued .|amiodarone[10454,10464]|||||||||C0002598|703|703|amiodarone
+166	Ins / outs and electrolytes were monitored and were not abnormal ; he was on a bowel regimen , VD boots and PUD prophylaxis with protonix during the admission .|protonix[11064,11072]|||||||||C0876139|261624|40790|pantoprazole
+172	Amiodarone 200 mg Tablet Sig : 0.5 Tablet PO qod - in March , should be on odd days .|Amiodarone[11674,11684]||Tablet[11692,11698]|200mg[11685,11691]|0.5 Tablet[11705,11715]|PO[11716,11718]|qod[11719,11722]||||833528|703|amiodarone
+173	Donepezil 5 mg Tablet Sig : Two ( 2 ) Tablet PO HS ( at bedtime ) .|Donepezil[11760,11769]||Tablet[11775,11781]|5mg[11770,11774]||PO[11805,11807]|HS[11808,11810]||||997229|135447|donepezil
+174	Docusate Sodium 100 mg Capsule Sig : One ( 1 ) Capsule PO BID ( 2 times a day ) .|Docusate Sodium[11828,11843]||Capsule[11851,11858]|100mg[11844,11850]||PO[11883,11885]|BID[11886,11889]||||1115005|82003|docusate
+175	Multivitamin Capsule Sig : One ( 1 ) Cap PO DAILY ( Daily ) .|Multivitamin[11910,11922]||Capsule[11923,11930]|||PO[11951,11953]|DAILY[11954,11959]||||89905|89905|multiple vitamins
+176	Mirtazapine 30 mg Tablet Sig : 0.5 Tablet PO HS ( at bedtime ) .|Mirtazapine[11972,11983]||Tablet[11990,11996]|30mg[11984,11989]|0.5 Tablet[12003,12013]|PO[12014,12016]|HS[12017,12019]|||C0981596|314111|15996|mirtazapine
+177	Atorvastatin 10 mg Tablet Sig : One ( 1 ) Tablet PO at bedtime .|Atorvastatin[12037,12049]||Tablet[12056,12062]|10mg[12050,12055]||PO[12086,12088]|at bedtime[12089,12099]||||617312|83367|atorvastatin
+178	Ocuvite Tablet Sig : One ( 1 ) Tablet PO once a day .|Ocuvite[12102,12109]||Tablet[12110,12116]|||PO[12140,12142]|a day[12148,12153]||||891719|1151|ascorbic acid (vit c)
+179	Artificial Tears Drops Sig : One ( 1 ) drop Ophthalmic twice a day : ou .|Artificial Tears[12156,12172]||Ophthalmic[12200,12210]|||ou[12225,12227]|a day[12217,12222]||||1133|1133|artificial tears
+181	Midodrine 10 mg Tablet Sig : 1.5 Tablets PO twice a day : at 8am and noon .|Midodrine[12286,12295]||Tablet[12302,12308]|10mg[12296,12301]|1.5 Tablets[12315,12326]|PO[12327,12329]|a day[12336,12341]||||993462|6963|midodrine
+182	Ritalin 5 mg Tablet Sig : see below Tablet PO see below : 1.5 tablets at 10am ( 7.5mg ) , 1 tablet 2pm ( 5mg ) .|Ritalin[12362,12369]||Tablet[12375,12381]|5mg[12370,12374]|1.5 tablets[12420,12431]|PO[12405,12407]|||||1091500|6901|methylphenidate
+183	Prilosec 20 mg Capsule , Delayed Release ( E.C. ) Sig : One ( 1 ) Capsule , Delayed Release ( E.C. ) PO once a day .|Prilosec[12475,12483]||Capsule[12490,12497]|20mg[12484,12489]||PO[12576,12578]|a day[12584,12589]|||C0708503|207212|7646|omeprazole
+184	Guaifenesin 100 mg / 5 mL Liquid Sig : 01-28 teaspoons PO every six ( 6 ) hours as needed for cold symptoms .|Guaifenesin[12592,12603]|||100 mg / 5 mL[12604,12617]||PO[12647,12649]|||as needed[12672,12681]||310604|5032|guaifenesin
+186	1. Amiodarone 200 mg Tablet Sig : 0.5 Tablet PO qod - in March , should be on odd days .|Amiodarone[12729,12739]||Tablet[12747,12753]|200mg[12740,12746]|0.5 Tablet[12760,12770]|PO[12771,12773]|qod[12774,12777]||||833528|703|amiodarone
+187	2. Donepezil 5 mg Tablet Sig : Two ( 2 ) Tablet PO HS ( at bedtime ) .|Donepezil[12818,12827]||Tablet[12833,12839]|5mg[12828,12832]||PO[12863,12865]|HS[12866,12868]||||997229|135447|donepezil
+188	3. Docusate Sodium 100 mg Capsule Sig : One ( 1 ) Capsule PO BID ( 2 times a day ) .|Docusate Sodium[12889,12904]||Capsule[12912,12919]|100mg[12905,12911]||PO[12944,12946]|BID[12947,12950]||||1115005|82003|docusate
+189	4. Multivitamin Capsule Sig : One ( 1 ) Cap PO DAILY ( Daily ) .|Multivitamin[12974,12986]||Capsule[12987,12994]|||PO[13015,13017]|DAILY[13018,13023]||||89905|89905|multiple vitamins
+190	5. Mirtazapine 30 mg Tablet Sig : 0.5 Tablet PO HS ( at bedtime ) .|Mirtazapine[13039,13050]||Tablet[13057,13063]|30mg[13051,13056]|0.5 Tablet[13070,13080]|PO[13081,13083]|HS[13084,13086]|||C0981596|314111|15996|mirtazapine
+191	6. Atorvastatin 10 mg Tablet Sig : One ( 1 ) Tablet PO at bedtime .|Atorvastatin[13107,13119]||Tablet[13126,13132]|10mg[13120,13125]||PO[13156,13158]|at bedtime[13159,13169]||||617312|83367|atorvastatin
+192	7. Levetiracetam 500 mg Tablet Sig : One ( 1 ) Tablet PO BID ( 2 times a day ) : on 04-05 , please increase to TWO tablets bid ( 1000 mg bid ) .|Levetiracetam[13175,13188]||Tablet[13196,13202]|500mg[13189,13195]|TWO tablets[13283,13294]|PO[13226,13228]|BID[13229,13232]|||C0978129|311289|114477|levetiracetam
+193	8. Ocuvite Tablet Sig : One ( 1 ) Tablet PO once a day .|Ocuvite[13320,13327]||Tablet[13328,13334]|||PO[13358,13360]|a day[13366,13371]||||891719|1151|ascorbic acid (vit c)
+194	9. Artificial Tears Drops Sig : One ( 1 ) drop Ophthalmic twice a day : ou .|Artificial Tears[13377,13393]||Ophthalmic[13421,13431]|||ou[13446,13448]|a day[13438,13443]||||1133|1133|artificial tears
+196	11. Midodrine 10 mg Tablet Sig : 1.5 Tablets PO twice a day : at 8 am and noon .|Midodrine[13515,13524]||Tablet[13531,13537]|10mg[13525,13530]|1.5 Tablets[13544,13555]|PO[13556,13558]|a day[13565,13570]||||993462|6963|midodrine
+197	12. Ritalin 5 mg Tablet Sig : see below Tablet PO see below : 1.5 tablets at 10 am ( 7.5 mg ) , 1 tablet 2 pm ( 5 mg ) .|Ritalin[13596,13603]||Tablet[13609,13615]|5mg[13604,13608]|1.5 tablets[13654,13665]|PO[13639,13641]|||||1091500|6901|methylphenidate
+198	13. Prilosec 20 mg Capsule , Delayed Release ( E.C. ) Sig : One ( 1 ) Capsule , Delayed Release ( E.C. ) PO once a day .|Prilosec[13717,13725]||Capsule[13732,13739]|20mg[13726,13731]||PO[13818,13820]|a day[13826,13831]|||C0708503|207212|7646|omeprazole
+199	14. Guaifenesin 100 mg / 5 mL Liquid Sig : 01-28 teaspoons PO every six ( 6 ) hours as needed for cold symptoms .|Guaifenesin[13838,13849]|||100 mg / 5 mL[13850,13863]||PO[13893,13895]|||as needed[13918,13927]||310604|5032|guaifenesin

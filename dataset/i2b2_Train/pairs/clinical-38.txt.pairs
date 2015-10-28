@@ -1,0 +1,74 @@
+c="the patient" 85:0 85:1||t="coref person"||c="her" 87:9 87:9
+c="the patient" 77:17 77:18||t="coref person"||c="the patient" 78:0 78:1
+c="copd" 19:2 19:2||t="coref problem"||c="her chronic obstructive pulmonary disease" 76:22 76:26
+c="percocet" 85:5 85:5||t="coref treatment"||c="pain relief" 85:8 85:9
+c="anemia" 35:0 35:0||t="coref problem"||c="anemia" 104:17 104:17
+c="copd" 12:12 12:12||t="coref problem"||c="copd" 19:2 19:2
+c="b12 deficiency" 104:20 104:21||t="coref problem"||c="b12 deficiency" 105:5 105:6
+c="asthma" 19:0 19:0||t="coref problem"||c="asthma flare" 108:0 108:1
+c="her chronic obstructive pulmonary disease" 76:22 76:26||t="coref problem"||c="chronic obstructive pulmonary disease" 109:0 109:3
+c="anxiety" 31:2 31:2||t="coref problem"||c="anxiety disorder" 111:0 111:1
+c="she" 40:0 40:0||t="coref person"||c="her" 43:15 43:15
+c="the patient" 78:0 78:1||t="coref person"||c="her" 78:14 78:14
+c="the patient" 76:0 76:1||t="coref person"||c="her" 76:22 76:22
+c="gastritis" 22:0 22:0||t="coref problem"||c="known gastritis" 89:10 89:11
+c="her" 96:11 96:11||t="coref person"||c="her" 97:0 97:0
+c="pneumonia" 12:10 12:10||t="coref problem"||c="pneumonia" 77:15 77:15
+c="chest x-ray" 16:0 16:1||t="coref test"||c="chest x-ray" 77:6 77:7
+c="upper respiratory like infection" 12:21 12:24||t="coref problem"||c="bronchitis" 108:3 108:3
+c="chronic abdominal pain" 24:0 24:2||t="coref problem"||c="chronic abdominal pain" 112:0 112:2
+c="the patient" 118:0 118:1||t="coref person"||c="her" 118:7 118:7
+c="shortness of breath" 75:0 75:2||t="coref problem"||c="this" 76:14 76:14
+c="her" 78:14 78:14||t="coref person"||c="the patient" 79:0 79:1
+c="abg" 96:4 96:4||t="coref test"||c="which" 96:9 96:9
+c="the patient" 105:0 105:1||t="coref person"||c="her" 105:9 105:9
+c="the patient" 82:0 82:1||t="coref person"||c="the patient" 84:0 84:1
+c="it" 98:15 98:15||t="coref treatment"||c="bipap" 100:1 100:1
+c="this" 76:14 76:14||t="coref problem"||c="her shortness of breath" 78:14 78:17
+c="the patient" 84:0 84:1||t="coref person"||c="the patient" 85:0 85:1
+c="her" 93:8 93:8||t="coref person"||c="the patient" 95:0 95:1
+c="chest soreness" 83:0 83:1||t="coref problem"||c="chest discomfort" 84:3 84:4
+c="her" 105:9 105:9||t="coref person"||c="the patient" 114:0 114:1
+c="she" 101:14 101:14||t="coref person"||c="the patient" 102:4 102:5
+c="she" 91:12 91:12||t="coref person"||c="the patient" 93:0 93:1
+c="the patient" 114:0 114:1||t="coref person"||c="the patient" 116:0 116:1
+c="the patient" 104:23 104:24||t="coref person"||c="the patient" 105:0 105:1
+c="the patient" 104:0 104:1||t="coref person"||c="the patient" 104:23 104:24
+c="the patient" 89:0 89:1||t="coref person"||c="the patient" 91:0 91:1
+c="her" 87:9 87:9||t="coref person"||c="the patient" 89:0 89:1
+c="levoxyl" 60:1 60:1||t="coref treatment"||c="levoxyl" 93:4 93:4
+c="chest discomfort" 84:3 84:4||t="coref problem"||c="this" 86:0 86:0
+c="hyperthyroidism" 32:0 32:0||t="coref problem"||c="hyperthyroidism" 93:12 93:12
+c="the patient" 116:0 116:1||t="coref person"||c="the patient" 118:0 118:1
+c="the patient" 91:0 91:1||t="coref person"||c="she" 91:12 91:12
+c="she" 45:0 45:0||t="coref person"||c="the patient" 56:23 56:24
+c="she" 14:0 14:0||t="coref person"||c="the patient" 15:5 15:6
+c="her" 43:15 43:15||t="coref person"||c="she" 45:0 45:0
+c="this" 12:0 12:0||t="coref person"||c="the patient" 13:0 13:1
+c="asthma exacerbation" 12:14 12:15||t="coref problem"||c="asthma" 19:0 19:0
+c="the patient" 56:23 56:24||t="coref person"||c="the patient" 76:0 76:1
+c="the patient" 15:5 15:6||t="coref person"||c="the patient" 17:0 17:1
+c="the patient" 13:0 13:1||t="coref person"||c="her" 13:3 13:3
+c="her" 13:3 13:3||t="coref person"||c="she" 14:0 14:0
+c="the patient" 98:0 98:1||t="coref person"||c="she" 98:6 98:6
+c="her" 102:12 102:12||t="coref person"||c="the patient" 104:0 104:1
+c="her" 97:0 97:0||t="coref person"||c="the patient" 98:0 98:1
+c="the patient" 96:0 96:1||t="coref person"||c="her" 96:11 96:11
+c="the patient" 95:0 95:1||t="coref person"||c="the patient" 96:0 96:1
+c="the patient" 93:0 93:1||t="coref person"||c="her" 93:8 93:8
+c="chest x-ray" 77:6 77:7||t="coref test"||c="her chest x-ray" 87:9 87:11
+c="the patient" 79:0 79:1||t="coref person"||c="the patient" 82:0 82:1
+c="adrenal insufficiency" 81:0 81:1||t="coref problem"||c="adrenal insufficiency" 101:9 101:10
+c="her" 76:22 76:22||t="coref person"||c="the patient" 77:17 77:18
+c="the patient" 17:0 17:1||t="coref person"||c="she" 40:0 40:0
+c="the patient" 102:4 102:5||t="coref person"||c="her" 102:12 102:12
+c="she" 98:6 98:6||t="coref person"||c="the patient" 99:0 99:1
+c="bipap" 98:3 98:3||t="coref treatment"||c="it" 98:15 98:15
+c="the patient" 99:0 99:1||t="coref person"||c="the patient" 100:5 100:6
+c="her shortness of breath" 78:14 78:17||t="coref problem"||c="shortness of breath" 129:8 129:10
+c="the patient" 100:5 100:6||t="coref person"||c="the patient" 101:0 101:1
+c="left lower lobe infiltrate" 16:7 16:10||t="coref problem"||c="consolidation" 77:4 77:4
+c="neurogenic bladder" 25:0 25:1||t="coref problem"||c="neurogenic bladder" 91:6 91:7
+c="chronic inflammatory demyelinating polyradiculopathy" 21:0 21:3||t="coref problem"||c="demyelinating polyradiculopathy" 110:0 110:1
+c="the patient" 101:0 101:1||t="coref person"||c="she" 101:14 101:14
+c="solu-medrol iv" 78:6 78:7||t="coref treatment"||c="iv solu - medrol" 82:5 82:8

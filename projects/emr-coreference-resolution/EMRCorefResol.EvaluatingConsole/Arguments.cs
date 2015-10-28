@@ -9,10 +9,11 @@ namespace HCMUT.EMRCorefResol.EvaluatingConsole
 {
     class Arguments
     {
-        public string GroundTruthDir { get; set; }
+        public string EMRDir { get; set; }
         public string SystemChainsDir { get; set; }
-        public string OutputFile { get; set; }
-        public string ChainsFile { get; set; }
+        public string OutputDir { get; set; }
+        public string EMRFile { get; set; }
         public EMRFormat Format { get; set; }
+        public string AverageFile { get; set; }
     }
 }

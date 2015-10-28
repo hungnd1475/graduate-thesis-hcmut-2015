@@ -1,0 +1,21 @@
+c="patient" 12:0 12:0||t="coref person"||c="he" 106:8 106:8
+c="coronary bypass surgery" 51:2 51:4||t="coref treatment"||c="this procedure" 100:7 100:8
+c="mild symmetric left ventricular hypertrophy" 72:2 72:6||t="coref problem"||c="mild symmetric left ventricular hypertrophy" 73:2 73:6
+c="spontaneous echo contrast" 68:1 68:3||t="coref problem"||c="spontaneous echo contrast" 69:1 69:3
+c="ventral hernia" 25:0 25:1||t="coref problem"||c="ventral hernia" 143:1 143:2
+c="emergency cabg" 16:0 16:1||t="coref treatment"||c="cabg" 23:4 23:4
+c="phenylephrine" 96:5 96:5||t="coref treatment"||c="phenylephrine" 104:8 104:8
+c="i" 100:3 100:3||t="coref person"||c="tracy kimball , md" 101:3 101:6
+c="cabg" 23:4 23:4||t="coref treatment"||c="coronary bypass surgery" 51:2 51:4
+c="i" 100:0 100:0||t="coref person"||c="i" 100:3 100:3
+c="he" 109:0 109:0||t="coref person"||c="he" 110:0 110:0
+c="metal plate" 26:7 26:8||t="coref treatment"||c="right facial plating" 143:6 143:8
+c="dr. howard" 23:6 23:7||t="coref person"||c="dr. howard" 103:12 103:13
+c="a right internal jugular vascular catheter" 52:11 52:16||t="coref treatment"||c="vascular catheter tip" 59:1 59:3
+c="his" 106:17 106:17||t="coref person"||c="he" 109:0 109:0
+c="he" 106:8 106:8||t="coref person"||c="his" 106:17 106:17
+c="this procedure" 100:7 100:8||t="coref treatment"||c="cabg" 103:9 103:9
+c="bilateral pleural effusions" 57:0 57:2||t="coref problem"||c="persistent pleural effusions" 61:0 61:2
+c="htn" 26:0 26:0||t="coref problem"||c="htn" 143:0 143:0
+c="face right nephrectomy" 26:13 26:15||t="coref treatment"||c="right nephrectomy" 143:3 143:4
+c="thrombus" 69:5 69:5||t="coref problem"||c="mass/thrombus" 70:1 70:1
