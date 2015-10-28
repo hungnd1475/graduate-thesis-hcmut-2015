@@ -24,7 +24,7 @@ namespace HCMUT.EMRCorefResol.English.Features
         public FirstChunkBeforeIsPreposition(PronounInstance instance, EMR emr)
             : base("FirstChunkBefore-IsPreposition", 2, 0)
         {
-            var line = EMRExtensions.GetLine(emr, instance.Concept.Begin.Line);
+            var line = EMRExtensions.GetLine(emr, instance.Concept);
 
             var chunks = Service.English.GetChunks(line);
 

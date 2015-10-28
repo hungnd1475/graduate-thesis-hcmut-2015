@@ -45,10 +45,10 @@ namespace EMRCorefResol.UITest
         private SelectionInfo featuresSelectionInfo = new SelectionInfo();
 
         private EMRCollection emrCollection = new EMRCollection(
-            @"..\..\..\..\..\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train\docs",
-            @"..\..\..\..\..\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train\concepts",
-            @"..\..\..\..\..\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train\chains",
-            @"..\..\..\..\..\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train\medications");
+            @"..\..\..\..\..\dataset\i2b2_Train\docs",
+            @"..\..\..\..\..\dataset\i2b2_Train\concepts",
+            @"..\..\..\..\..\dataset\i2b2_Train\chains",
+            @"..\..\..\..\..\dataset\i2b2_Train\medications");
 
         private bool conChainMouseDown = false;
 
@@ -56,7 +56,7 @@ namespace EMRCorefResol.UITest
         {
             InitializeComponent();
 
-            txtEMRPath.Text = @"..\..\..\..\..\dataset\i2b2_Beth_Train_Release.tar\i2b2_Beth_Train\Beth_Train";
+            txtEMRPath.Text = @"..\..\..\..\..\dataset\i2b2_Train";
             emrCollection = new EMRCollection(
                 IOPath.Combine(txtEMRPath.Text, "docs"),
                 IOPath.Combine(txtEMRPath.Text, "concepts"),

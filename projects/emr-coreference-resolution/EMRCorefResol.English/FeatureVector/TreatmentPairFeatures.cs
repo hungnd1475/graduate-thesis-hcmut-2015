@@ -42,7 +42,7 @@ namespace HCMUT.EMRCorefResol.English
 
         private MedicationInfo GetMedicationInfo(Concept c, EMR emr, MedicationInfoCollection meds)
         {
-            var line = emr.GetLine(c.Begin.Line);
+            var line = emr.GetLine(c);
 
             foreach(MedicationInfo med in meds)
             {

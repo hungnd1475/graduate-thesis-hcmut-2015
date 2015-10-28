@@ -23,13 +23,21 @@ namespace HCMUT.EMRCorefResol.English.Features
         public FirstNextChunkIsVerb(PersonInstance instance, EMR emr)
             :base("FirstNextChunk-IsVerb", 2, 0)
         {
-            var line = EMRExtensions.GetLine(emr, instance.Concept.Begin.Line);
+            var line = EMRExtensions.GetLine(emr, instance.Concept);
 
             var chunks = Service.English.GetChunks(line);
 
-            if (instance.Concept.End.WordIndex < chunks.Length - 1)
+            var endIndex = instance.Concept.End.WordIndex;
+            if(instance.Concept.Begin.Line != instance.Concept.End.Line)
             {
-                var nextChunk = chunks[instance.Concept.Begin.WordIndex + 1];
+                var beginLine = EMRExtensions.GetLine(emr, instance.Concept.Begin.Line);
+                var beginMaxWord = beginLine.Replace("\r", "").Replace("\n", "").Split(' ').Length;
+                endIndex = beginMaxWord + instance.Concept.End.WordIndex;
+            }
+
+            if (endIndex < chunks.Length - 1)
+            {
+                var nextChunk = chunks[endIndex + 1];
                 var tags = nextChunk.Split('|')[1].Split('-');
                 if (!tags[0].Equals("O", StringComparison.InvariantCultureIgnoreCase))
                 {
