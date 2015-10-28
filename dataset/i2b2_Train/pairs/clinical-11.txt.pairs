@@ -1,0 +1,117 @@
+c="patient" 21:0 21:0||t="coref person"||c="patient" 22:0 22:0
+c="pulmonary function tests" 29:18 29:20||t="coref test"||c="which" 29:21 29:21
+c="a new pericardial effusion" 65:5 65:8||t="coref problem"||c="which" 65:9 65:9
+c="she" 70:0 70:0||t="coref person"||c="her" 71:0 71:0
+c="who" 71:8 71:8||t="coref person"||c="they" 72:0 72:0
+c="pulmonary wheezing" 70:4 70:5||t="coref problem"||c="it" 72:2 72:2
+c="pulmonary function tests" 73:2 73:4||t="coref test"||c="which" 73:6 73:6
+c="she" 75:0 75:0||t="coref person"||c="her" 75:9 75:9
+c="she" 76:2 76:2||t="coref person"||c="her" 76:7 76:7
+c="she" 82:0 82:0||t="coref person"||c="her" 82:2 82:2
+c="her ct scan" 82:2 82:4||t="coref test"||c="this" 83:0 83:0
+c="pulmonary" 84:0 84:0||t="coref person"||c="they" 84:10 84:10
+c="she" 87:0 87:0||t="coref person"||c="her" 87:13 87:13
+c="they" 88:4 88:4||t="coref all"||c="they" 89:0 89:0
+c="the patient" 89:15 89:16||t="coref person"||c="the patient" 90:0 90:1
+c="the patient" 90:0 90:1||t="coref person"||c="her" 91:0 91:0
+c="another echocardiogram" 92:12 92:13||t="coref test"||c="which" 92:14 92:14
+c="the ifex" 95:0 95:1||t="coref treatment"||c="it" 95:9 95:9
+c="tamponade" 32:24 32:24||t="coref problem"||c="tamponade" 66:5 66:5
+c="malignant" 33:18 33:18||t="coref problem"||c="a new pericardial effusion" 65:5 65:8
+c="which" 65:9 65:9||t="coref problem"||c="moderate anterior pericardial effusion" 68:2 68:5
+c="tamponade" 77:17 77:17||t="coref problem"||c="tamponade" 91:14 91:14
+c="ectopic p" 63:27 63:28||t="coref problem"||c="an ectopic low atrial p" 77:2 77:6
+c="a follow-up echocardiogram" 78:3 78:5||t="coref test"||c="echocardiogram" 79:0 79:0
+c="moderate anterior pericardial effusion" 68:2 68:5||t="coref problem"||c="moderate to mild effusion" 79:17 79:20
+c="appendectomy" 26:10 26:10||t="coref treatment"||c="appendectomy" 38:40 38:40
+c="tamponade" 91:14 91:14||t="coref problem"||c="tamponade" 92:21 92:21
+c="arterial blood gas" 71:27 71:29||t="coref test"||c="room air arterial blood gas" 74:0 74:4
+c="pericardial effusion" 32:9 32:10||t="coref problem"||c="the pericardial effusion" 33:9 33:11
+c="few inspiratory wheezes" 49:0 49:2||t="coref problem"||c="pulmonary wheezing" 70:4 70:5
+c="some mental status changes" 94:2 94:5||t="coref problem"||c="the mental status changes" 95:13 95:16
+c="sinus tachycardia" 32:2 32:3||t="coref problem"||c="tachycardia" 51:5 51:5
+c="malignant pericardial effusion" 21:20 21:22||t="coref problem"||c="pericardial effusion" 32:9 32:10
+c="a total abdominal hysterectomy" 22:2 22:5||t="coref treatment"||c="total abdominal hysterectomy" 38:2 38:4
+c="pulmonary" 71:5 71:5||t="coref person"||c="who" 71:8 71:8
+c="numerous erythematous maculopapules on her back" 87:9 87:14||t="coref problem"||c="this" 88:7 88:7
+c="she" 30:0 30:0||t="coref person"||c="the patient" 33:1 33:2
+c="she" 29:0 29:0||t="coref person"||c="her" 29:12 29:12
+c="she" 26:0 26:0||t="coref person"||c="the patient" 28:0 28:1
+c="patient" 24:0 24:0||t="coref person"||c="she" 24:11 24:11
+c="a new rub" 75:25 75:27||t="coref problem"||c="a rub" 76:4 76:5
+c="the pericardial effusion" 33:9 33:11||t="coref problem"||c="malignant" 33:18 33:18
+c="a 4x3.6x2 cm cervical mass" 22:9 22:13||t="coref problem"||c="a fibroid" 22:17 22:18
+c="a bilateral salpingo-oophorectomy" 26:6 26:8||t="coref treatment"||c="bilateral salpingo-oophorectomy" 38:37 38:38
+c="moderate to mild effusion" 79:17 79:20||t="coref problem"||c="the effusion" 79:44 79:45
+c="a ct scan of the chest" 71:10 71:15||t="coref test"||c="her ct scan" 75:9 75:11
+c="she" 94:0 94:0||t="coref person"||c="she" 95:19 95:19
+c="5-fu" 85:15 85:15||t="coref treatment"||c="her 5-fu" 99:22 99:23
+c="she" 73:0 73:0||t="coref person"||c="she" 75:0 75:0
+c="shortness of breath" 28:12 28:14||t="coref problem"||c="the patient &apos;s shortness of breath" 90:0 90:5
+c="cisplatin" 86:3 86:3||t="coref treatment"||c="cisplatin chemotherapy" 99:25 99:26
+c="who" 29:10 29:10||t="coref person"||c="dr. mielke" 101:5 101:6
+c="she" 93:4 93:4||t="coref person"||c="she" 94:0 94:0
+c="cardiology" 92:0 92:0||t="coref person"||c="they" 93:0 93:0
+c="tamponade" 66:5 66:5||t="coref problem"||c="tamponade" 69:5 69:5
+c="she" 95:19 95:19||t="coref person"||c="she" 96:0 96:0
+c="she" 77:10 77:10||t="coref person"||c="she" 78:0 78:0
+c="she" 85:11 85:11||t="coref person"||c="she" 86:0 86:0
+c="tamponade" 69:5 69:5||t="coref problem"||c="tamponade" 77:17 77:17
+c="an echocardiogram" 67:0 67:1||t="coref test"||c="echocardiogram" 68:0 68:0
+c="she" 81:0 81:0||t="coref person"||c="she" 82:0 82:0
+c="the patient" 28:0 28:1||t="coref person"||c="she" 29:0 29:0
+c="they" 77:8 77:8||t="coref person"||c="cardiology" 92:0 92:0
+c="dermatology" 88:0 88:0||t="coref person"||c="they" 88:4 88:4
+c="she" 92:10 92:10||t="coref person"||c="she" 93:4 93:4
+c="it" 95:9 95:9||t="coref treatment"||c="the ifex" 96:7 96:8
+c="cervical cancer" 33:6 33:7||t="coref problem"||c="metastatic cervical cancer" 65:18 65:20
+c="the effusion" 79:44 79:45||t="coref problem"||c="pericardial effusion" 83:18 83:19
+c="metastatic cervical carcinoma" 16:0 16:2||t="coref problem"||c="metastatic cervical cancer" 21:12 21:14
+c="her" 97:14 97:14||t="coref person"||c="she" 98:0 98:0
+c="her" 99:22 99:22||t="coref person"||c="she" 101:0 101:0
+c="her" 71:0 71:0||t="coref person"||c="she" 73:0 73:0
+c="she" 86:0 86:0||t="coref person"||c="she" 87:0 87:0
+c="her" 75:9 75:9||t="coref person"||c="she" 75:15 75:15
+c="the patient" 85:8 85:9||t="coref person"||c="she" 85:11 85:11
+c="pulmonary lymphangitic spread" 17:6 17:8||t="coref problem"||c="extensive lymphatic invasion" 23:25 23:27
+c="the patient" 33:1 33:2||t="coref person"||c="she" 34:0 34:0
+c="her" 91:0 91:0||t="coref person"||c="she" 92:10 92:10
+c="follow-up echo" 92:3 92:4||t="coref test"||c="another echocardiogram" 92:12 92:13
+c="extensive lymphatic invasion" 23:25 23:27||t="coref problem"||c="a malignant lymphangitic spread" 72:6 72:9
+c="patient" 79:37 79:37||t="coref person"||c="she" 81:0 81:0
+c="cardiology" 76:0 76:0||t="coref person"||c="they" 77:8 77:8
+c="poorly differentiated squamous cell carcinoma of the cervix" 23:2 23:9||t="coref problem"||c="cervical cancer" 33:6 33:7
+c="her" 76:7 76:7||t="coref person"||c="she" 77:10 77:10
+c="wheezing" 29:15 29:15||t="coref problem"||c="few inspiratory wheezes" 49:0 49:2
+c="dr. mielke" 101:5 101:6||t="coref person"||c="earllamarg s. mielke , m.d" 104:1 104:5
+c="she" 98:0 98:0||t="coref person"||c="she" 99:0 99:0
+c="the patient" 25:5 25:6||t="coref person"||c="she" 26:0 26:0
+c="dr. mielke" 29:4 29:5||t="coref person"||c="who" 29:10 29:10
+c="a malignant lymphangitic spread" 72:6 72:9||t="coref problem"||c="lymphangitic spread" 83:2 83:3
+c="cardiology" 69:0 69:0||t="coref person"||c="cardiology" 76:0 76:0
+c="metastatic cervical cancer" 21:12 21:14||t="coref problem"||c="poorly differentiated squamous cell carcinoma of the cervix" 23:2 23:9
+c="her" 97:6 97:6||t="coref person"||c="she" 97:10 97:10
+c="she" 78:0 78:0||t="coref person"||c="patient" 79:37 79:37
+c="she" 99:0 99:0||t="coref person"||c="her" 99:7 99:7
+c="she" 24:11 24:11||t="coref person"||c="the patient" 25:5 25:6
+c="liver and spleen metastases" 17:11 17:14||t="coref problem"||c="multiple liver metastases" 83:21 83:23
+c="her" 99:7 99:7||t="coref person"||c="her" 99:22 99:22
+c="patient" 22:0 22:0||t="coref person"||c="patient" 24:0 24:0
+c="pericardial effusion" 17:3 17:4||t="coref problem"||c="malignant pericardial effusion" 21:20 21:22
+c="this" 88:7 88:7||t="coref problem"||c="steroid acne" 88:11 88:12
+c="ifex" 86:11 86:11||t="coref treatment"||c="the ifex" 95:0 95:1
+c="her" 82:2 82:2||t="coref person"||c="the patient" 85:8 85:9
+c="thoracic surgery" 80:0 80:1||t="coref person"||c="they" 80:6 80:6
+c="it" 72:2 72:2||t="coref problem"||c="wheezing" 90:7 90:7
+c="her" 87:13 87:13||t="coref person"||c="the patient" 89:15 89:16
+c="her ct scan" 75:9 75:11||t="coref test"||c="her ct scan" 82:2 82:4
+c="the patient &apos;s shortness of breath" 90:0 90:5||t="coref problem"||c="her shortness of breath" 99:7 99:10
+c="her" 29:12 29:12||t="coref person"||c="she" 30:0 30:0
+c="she" 34:0 34:0||t="coref person"||c="the patient" 65:0 65:1
+c="the patient" 65:0 65:1||t="coref person"||c="she" 70:0 70:0
+c="cardiology" 67:5 67:5||t="coref person"||c="cardiology" 69:0 69:0
+c="she" 75:15 75:15||t="coref person"||c="she" 76:2 76:2
+c="she" 96:0 96:0||t="coref person"||c="her" 97:6 97:6
+c="metastatic cervical cancer" 65:18 65:20||t="coref problem"||c="metastatic cervical cancer" 85:2 85:4
+c="she" 97:10 97:10||t="coref person"||c="her" 97:14 97:14
+c="lymphangitic spread" 83:2 83:3||t="coref problem"||c="lymphangitic spread" 84:7 84:8

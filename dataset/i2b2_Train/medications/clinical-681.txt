@@ -1,0 +1,8 @@
+26	Her Doxepin has recently been increased .|Doxepin[1570,1577]|||||||||C0013085|3638|3638|doxepin
+31	The only medications she is on are Paxil 30 mg p.o. q.day , Doxepin 25 mg p.o. q.day , and Klonopin 2 mg p.o. q.h.s.|Paxil[1796,1801]|||30mg[1802,1807]||p.o.[1808,1812]|q.day[1813,1818]|||C0708674|207350|32937|paroxetine
+31	The only medications she is on are Paxil 30 mg p.o. q.day , Doxepin 25 mg p.o. q.day , and Klonopin 2 mg p.o. q.h.s.|Doxepin[1821,1828]|||25mg[1829,1834]||p.o.[1835,1839]|q.day[1840,1845]|||C1359730|430462|3638|doxepin
+31	The only medications she is on are Paxil 30 mg p.o. q.day , Doxepin 25 mg p.o. q.day , and Klonopin 2 mg p.o. q.h.s.|Klonopin[1852,1860]|||2mg[1861,1865]||p.o.[1866,1870]|q.h.s[1871,1876]|||C0707175|206160|2598|clonazepam
+37	She is a former tobacco user and takes no illicit drugs .|illicit drugs[2127,2140]|||||||||C3653345|1431777|1431777|illicit drugs
+76	She had been placed on heparin initially , but this was discontinued after the magnetic resonance imaging results were obtained .|heparin[5151,5158]|||||||||C0019134|235473|235473|heparin,porcine
+85	Freiermchird ( Sone Memorial Hospital ) on a regular basis , and she can follow up with the Neurology Service on a p.r.n. basis if needed .|Sone[6336,6340]||||||||p.r.n.[6436,6442]||544731|1514|betamethasone
+86	She will continue on her previous outpatient medical regimen .|medical regimen[6506,6521]||||||||||106573|106573|medical regimen

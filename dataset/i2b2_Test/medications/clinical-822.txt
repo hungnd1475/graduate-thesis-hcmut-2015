@@ -1,0 +1,14 @@
+26	1. Amiodarone 200 mg p.o. q day .|Amiodarone[958,968]|||200mg[969,975]||p.o.[976,980]|q day[981,986]||||833528|703|amiodarone
+27	2. Warfarin 3 mg p.o. q h.s.|Warfarin[992,1000]|||3mg[1001,1005]||p.o.[1006,1010]|h.s.[1013,1017]||||855318|11289|warfarin
+28	3. Renagel 1600 mg p.o. t.i.d.|Renagel[1021,1028]|||1600mg[1029,1036]||p.o.[1037,1041]|t.i.d.[1042,1048]|||C3234586|1180736|214824|sevelamer
+29	4. Aspirin 325 mg p.o. q day .|Aspirin[1052,1059]|||325mg[1060,1066]||p.o.[1067,1071]|q day[1072,1077]||||1050241|1191|acetylsalicylic acid
+30	5. Miconazole powder 2% t.i.d.|Miconazole powder[1083,1100]||||||t.i.d.[1104,1110]||||241654|241654|miconazole powder
+31	6. Levofloxacin 250 mg p.o. q48 hours for the next five weeks for osteomyelitis .|Levofloxacin[1114,1126]|||250mg[1127,1133]||p.o.[1134,1138]|q48 hours[1139,1148]|five weeks[1162,1172]||C0693578|199884|82122|levofloxacin
+32	7. Flagyl 500 mg p.o. t.i.d. for the next five weeks for osteomyelitis .|Flagyl[1196,1202]|||500mg[1203,1209]||p.o.[1210,1214]|t.i.d.[1215,1221]|five weeks[1235,1245]||C0708602|207290|6922|metronidazole
+33	8. Protonix 40 mg p.o. q day .|Protonix[1269,1277]|||40mg[1278,1283]||p.o.[1284,1288]|q day[1289,1294]||||763308|40790|pantoprazole
+34	9. Magnesium Oxide 800 mg p.o. b.i.d.|Magnesium Oxide[1300,1315]|||800mg[1316,1322]||p.o.[1323,1327]|b.i.d.[1328,1334]|||C1246751|372692|6582|magnesium oxide
+35	10. Epogen 5000 units two times weekly , on Monday and Thursday .|Epogen[1339,1345]|||5000[1346,1350]|||two times weekly[1357,1373]||||203281|105694|epoetin alfa,recombinant
+36	11. Colace 100 mg p.o. b.i.d.|Colace[1405,1411]|||100mg[1412,1418]||p.o.[1419,1423]|b.i.d.[1424,1430]|||C0711644|1247756|82003|docusate
+37	12. Lasix 80 mg p.o. b.i.d.|Lasix[1435,1440]|||80mg[1441,1446]||p.o.[1447,1451]|b.i.d.[1452,1458]|||C0706648|205732|4603|furosemide
+38	13. NPH insulin 7 units in the morning and 5 units at night .|NPH insulin[1463,1474]|||7[1475,1476]|||in the morning[1483,1497]||||5865|5865|insulin isophane nph
+39	14. Regular insulin sliding scale .|Regular insulin[1525,1540]|||sliding scale[1541,1554]|||||||5856|5856|insulin regular

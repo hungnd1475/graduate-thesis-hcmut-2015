@@ -1,0 +1,73 @@
+c="the baby" 31:8 31:9||t="coref person"||c="infant" 34:4 34:4
+c="the baby" 59:9 59:10||t="coref person"||c="jule" 60:0 60:0
+c="jule" 60:0 60:0||t="coref person"||c="renee" 62:0 62:0
+c="renee" 62:0 62:0||t="coref person"||c="the baby" 65:0 65:1
+c="infant" 79:0 79:0||t="coref person"||c="infant" 86:9 86:9
+c="baby" 95:0 95:0||t="coref person"||c="infant" 126:3 126:3
+c="depression" 17:8 17:8||t="coref problem"||c="which" 17:10 17:10
+c="he" 67:0 67:0||t="coref person"||c="his" 67:8 67:8
+c="his" 67:8 67:8||t="coref person"||c="his" 67:23 67:23
+c="gastroesophageal reflux" 69:25 69:26||t="coref problem"||c="frequent spitting episodes" 74:5 74:7
+c="a blood culture" 85:0 85:2||t="coref test"||c="blood cultures" 85:17 85:18
+c="blood type" 13:2 13:3||t="coref test"||c="mother 's blood type" 78:0 78:3
+c="an eeg" 90:0 90:1||t="coref test"||c="the eeg" 91:0 91:1
+c="desaturation" 58:8 58:8||t="coref problem"||c="desaturations" 58:13 58:13
+c="a coloboma" 38:17 38:18||t="coref problem"||c="a coloboma" 97:8 97:9
+c="a coloboma" 97:8 97:9||t="coref problem"||c="this left martha coloboma" 98:3 98:6
+c="he" 76:0 76:0||t="coref person"||c="the baby" 77:0 77:1
+c="their" 69:17 69:17||t="coref person"||c="neurology" 88:0 88:0
+c="delivery" 18:3 18:3||t="coref treatment"||c="delivery" 22:6 22:6
+c="social worker" 101:3 101:4||t="coref person"||c="she" 102:0 102:0
+c="some facial jaundice" 34:6 34:8||t="coref problem"||c="mild physiologic jaundice" 77:3 77:5
+c="his" 67:23 67:23||t="coref person"||c="the baby" 68:8 68:9
+c="neurology" 69:15 69:15||t="coref person"||c="their" 69:17 69:17
+c="the baby" 68:8 68:9||t="coref person"||c="baby" 74:0 74:0
+c="delivery" 23:0 23:0||t="coref treatment"||c="repeat cesarean section" 23:3 23:5
+c="infant" 86:9 86:9||t="coref person"||c="the baby" 89:2 89:3
+c="seizures" 88:8 88:8||t="coref problem"||c="seizure activity" 92:6 92:7
+c="neurology" 88:0 88:0||t="coref person"||c="neurology" 89:0 89:0
+c="ophthalmology" 97:0 97:0||t="coref person"||c="ophthalmology" 98:0 98:0
+c="sepsis risk factors" 19:3 19:5||t="coref problem"||c="sepsis" 127:2 127:2
+c="the baby" 89:6 89:7||t="coref person"||c="baby" 95:0 95:0
+c="the mother" 25:4 25:5||t="coref person"||c="she" 26:0 26:0
+c="the baby" 30:0 30:1||t="coref person"||c="the baby" 31:8 31:9
+c="delivery" 22:6 22:6||t="coref treatment"||c="delivery" 23:0 23:0
+c="his" 42:0 42:0||t="coref person"||c="infant" 50:0 50:0
+c="the baby" 89:2 89:3||t="coref person"||c="the baby" 89:6 89:7
+c="baby" 74:0 74:0||t="coref person"||c="he" 76:0 76:0
+c="infant" 50:0 50:0||t="coref person"||c="the infant" 57:0 57:1
+c="frequent spitting episodes" 74:5 74:7||t="coref problem"||c="this" 75:0 75:0
+c="this left martha coloboma" 98:3 98:6||t="coref problem"||c="left coloboma" 128:0 128:1
+c="a serum bilirubin" 77:7 77:9||t="coref test"||c="which" 77:16 77:16
+c="he" 58:0 58:0||t="coref person"||c="the baby" 59:9 59:10
+c="any further dusky spells" 60:14 60:17||t="coref problem"||c="dusky episodes" 88:13 88:14
+c="delivery" 16:17 16:17||t="coref treatment"||c="delivery" 18:3 18:3
+c="repeat cesarean section" 12:14 12:16||t="coref treatment"||c="delivery" 16:17 16:17
+c="mother" 17:11 17:11||t="coref person"||c="mother" 18:4 18:4
+c="peggy hammock" 12:0 12:1||t="coref person"||c="baby" 24:0 24:0
+c="mother" 78:0 78:0||t="coref person"||c="mom" 121:5 121:5
+c="baby" 24:0 24:0||t="coref person"||c="baby" 25:12 25:12
+c="this family" 101:8 101:9||t="coref person"||c="this family" 123:12 123:13
+c="infant" 34:4 34:4||t="coref person"||c="he" 38:0 38:0
+c="mother" 18:4 18:4||t="coref person"||c="the mother" 25:4 25:5
+c="antibiotics" 86:0 86:0||t="coref treatment"||c="antibiotics" 86:15 86:15
+c="circumcised" 50:2 50:2||t="coref treatment"||c="which" 50:7 50:7
+c="the baby" 29:2 29:3||t="coref person"||c="the baby" 30:0 30:1
+c="the baby" 28:5 28:6||t="coref person"||c="the baby" 29:2 29:3
+c="the infant" 57:0 57:1||t="coref person"||c="he" 58:0 58:0
+c="some discoordination of his suck" 67:20 67:24||t="coref problem"||c="this" 68:0 68:0
+c="he" 38:0 38:0||t="coref person"||c="his" 42:0 42:0
+c="a patient" 66:7 66:8||t="coref person"||c="he" 67:0 67:0
+c="baby" 25:12 25:12||t="coref person"||c="the infant" 26:6 26:7
+c="she" 26:0 26:0||t="coref person"||c="mother" 29:0 29:0
+c="the baby" 65:0 65:1||t="coref person"||c="he" 66:0 66:0
+c="he" 66:0 66:0||t="coref person"||c="a patient" 66:7 66:8
+c="seizure activity" 92:6 92:7||t="coref problem"||c="seizures" 129:2 129:2
+c="neurology" 89:0 89:0||t="coref person"||c="neurology" 118:0 118:0
+c="ophthalmology" 98:0 98:0||t="coref person"||c="ophthalmology" 120:2 120:2
+c="the infant" 27:10 27:11||t="coref person"||c="the baby" 28:5 28:6
+c="the infant" 26:6 26:7||t="coref person"||c="the infant" 27:10 27:11
+c="primary pediatrician" 107:0 107:1||t="coref person"||c="dr. satterlund" 107:3 107:4
+c="desaturations" 58:13 58:13||t="coref problem"||c="this" 59:0 59:0
+c="mother" 29:0 29:0||t="coref person"||c="mother" 78:0 78:0
+c="the baby" 77:0 77:1||t="coref person"||c="infant" 79:0 79:0

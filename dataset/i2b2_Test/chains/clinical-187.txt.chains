@@ -1,0 +1,4 @@
+c="the patient" 12:0 12:1||c="the patient" 13:0 13:1||c="the patient" 16:0 16:1||c="the patient" 17:0 17:1||c="the patient 's" 17:18 17:20||c="the patient" 18:0 18:1||c="the patient" 19:0 19:1||c="the patient" 20:0 20:1||c="his" 20:8 20:8||c="the patient" 21:0 21:1||c="the patient" 22:0 22:1||c="the patient" 23:0 23:1||c="his" 23:11 23:11||t="coref person"
+c="rehabilitation" 13:6 13:6||c="rehabilitation" 23:4 23:4||t="coref treatment"
+c="his scrotal and lower extremity edema" 20:8 20:13||c="his fluid status" 23:11 23:13||t="coref problem"
+c="shirley h.q. neller , m.d." 24:0 24:4||c="dr. shirley x schaack" 37:0 37:3||t="coref person"

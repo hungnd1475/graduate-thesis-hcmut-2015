@@ -1,0 +1,41 @@
+c="a hit panel" 81:4 81:6||t="coref test"||c="hit panel" 81:10 81:11
+c="dyspnea" 15:3 15:3||t="coref problem"||c="dyspnea" 76:11 76:11
+c="positive rue dvt" 75:6 75:8||t="coref problem"||c="rue dvt" 105:15 105:16
+c="renal calculi" 29:0 29:1||t="coref problem"||c="renal calculi" 106:4 106:5
+c="pt" 75:0 75:0||t="coref person"||c="pt" 76:3 76:3
+c="ue duplex" 23:4 23:5||t="coref test"||c="which" 23:6 23:6
+c="mental status changes" 15:9 15:11||t="coref problem"||c="mental status changes" 76:15 76:17
+c="amiodarone" 93:0 93:0||t="coref treatment"||c="amiodarone" 100:1 100:1
+c="positive" 81:13 81:13||t="coref problem"||c="hit positive" 105:18 105:19
+c="argatroban" 81:0 81:0||t="coref treatment"||c="argatrobanwhile" 84:10 84:10
+c="sleep apnea" 30:1 30:2||t="coref problem"||c="sleep apnea" 106:7 106:8
+c="right upper extremity dvt" 20:3 20:6||t="coref problem"||c="rue dvt" 23:8 23:9
+c="the patient" 84:5 84:6||t="coref person"||c="the pt" 85:2 85:3
+c="pulmonary embolism" 77:9 77:10||t="coref problem"||c="pulmonary embolism" 105:12 105:13
+c="ct scan" 76:39 76:40||t="coref test"||c="the ct" 77:0 77:1
+c="heparin gtt" 80:5 80:6||t="coref treatment"||c="infusion" 80:17 80:17
+c="dr lewis" 86:8 86:9||t="coref person"||c="dr lewis" 111:8 111:9
+c="mental status changes" 76:15 76:17||t="coref problem"||c="all mental status changes" 83:4 83:7
+c="he" 78:0 78:0||t="coref person"||c="the pt" 79:4 79:5
+c="pt" 14:3 14:3||t="coref person"||c="pt" 75:0 75:0
+c="the pt" 79:4 79:5||t="coref person"||c="the pt" 80:0 80:1
+c="he" 86:0 86:0||t="coref person"||c="the pt" 87:1 87:2
+c="atorvastatin" 90:0 90:0||t="coref treatment"||c="atorvastatin" 96:1 96:1
+c="the pt" 80:0 80:1||t="coref person"||c="the pt" 83:11 83:12
+c="argatrobanwhile" 84:10 84:10||t="coref treatment"||c="argatroban" 85:12 85:12
+c="infusion" 80:17 80:17||t="coref treatment"||c="hepain" 80:20 80:20
+c="attending" 13:0 13:0||t="coref person"||c="james f. bard , m.d." 13:2 13:6
+c="father" 39:5 39:5||t="coref person"||c="his" 39:9 39:9
+c="lopressor" 92:0 92:0||t="coref treatment"||c="metoprolol tartrate" 97:1 97:2
+c="pt" 76:3 76:3||t="coref person"||c="he" 78:0 78:0
+c="asa" 89:0 89:0||t="coref treatment"||c="aspirin" 95:1 95:1
+c="mri" 79:8 79:8||t="coref test"||c="which" 79:9 79:9
+c="the pt" 83:11 83:12||t="coref person"||c="the patient" 84:5 84:6
+c="the pt" 85:2 85:3||t="coref person"||c="he" 86:0 86:0
+c="postop afib" 20:8 20:9||t="coref problem"||c="post-op afib" 27:0 27:1
+c="htn" 28:0 28:0||t="coref problem"||c="htn" 106:2 106:2
+c="avr" 26:1 26:1||t="coref treatment"||c="avr" 105:4 105:4
+c="rue dvt" 23:8 23:9||t="coref problem"||c="positive rue dvt" 75:6 75:8
+c="ue dvt" 14:11 14:12||t="coref problem"||c="right upper extremity dvt" 20:3 20:6
+c="avr ( tissue )" 17:0 17:3||t="coref treatment"||c="avr" 19:1 19:1
+c="avr" 19:1 19:1||t="coref treatment"||c="avr" 26:1 26:1

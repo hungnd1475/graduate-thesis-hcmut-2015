@@ -112,70 +112,70 @@ namespace HCMUT.EMRCorefResol.ResolvingConsole
                     evals[i] = result.Evaluations;
                 };
 
-                Console.WriteLine("Calculating average...");
-                var avgEvals = evals.Aggregate(new Dictionary<ConceptType, Evaluation>[PerfMetrics.Length + 1],
-                    (avg, eval) =>
-                    {
-                        for (int i = 0; i < PerfMetrics.Length; i++)
-                        {
-                            if (avg[i] == null)
-                            {
-                                avg[i] = new Dictionary<ConceptType, Evaluation>();
-                            }
+                //Console.WriteLine("Calculating average...");
+                //var avgEvals = evals.Aggregate(new Dictionary<ConceptType, Evaluation>[PerfMetrics.Length + 1],
+                //    (avg, eval) =>
+                //    {
+                //        for (int i = 0; i < PerfMetrics.Length; i++)
+                //        {
+                //            if (avg[i] == null)
+                //            {
+                //                avg[i] = new Dictionary<ConceptType, Evaluation>();
+                //            }
 
-                            foreach (var t in Types)
-                            {
-                                var e = eval[i].ContainsKey(t) ? eval[i][t] : new Evaluation(0d, 0d, 0d, PerfMetrics[i].Name);
+                //            foreach (var t in Types)
+                //            {
+                //                var e = eval[i].ContainsKey(t) ? eval[i][t] : new Evaluation(0d, 0d, 0d, PerfMetrics[i].Name);
 
-                                if (!avg[i].ContainsKey(t))
-                                {                                    
-                                    var ep = double.IsNaN(e.Precision) ? 0 : e.Precision;
-                                    var er = double.IsNaN(e.Recall) ? 0 : e.Recall;
-                                    var ef = double.IsNaN(e.FMeasure) ? 0 : e.FMeasure;
-                                    avg[i].Add(t, new Evaluation(ep, er, ef, e.MetricName));
-                                }
-                                else
-                                {
-                                    var a = avg[i][t];
+                //                if (!avg[i].ContainsKey(t))
+                //                {                                    
+                //                    var ep = double.IsNaN(e.Precision) ? 0 : e.Precision;
+                //                    var er = double.IsNaN(e.Recall) ? 0 : e.Recall;
+                //                    var ef = double.IsNaN(e.FMeasure) ? 0 : e.FMeasure;
+                //                    avg[i].Add(t, new Evaluation(ep, er, ef, e.MetricName));
+                //                }
+                //                else
+                //                {
+                //                    var a = avg[i][t];
 
-                                    var ep = double.IsNaN(e.Precision) ? 0 : e.Precision;
-                                    var er = double.IsNaN(e.Recall) ? 0 : e.Recall;
-                                    var ef = double.IsNaN(e.FMeasure) ? 0 : e.FMeasure;
+                //                    var ep = double.IsNaN(e.Precision) ? 0 : e.Precision;
+                //                    var er = double.IsNaN(e.Recall) ? 0 : e.Recall;
+                //                    var ef = double.IsNaN(e.FMeasure) ? 0 : e.FMeasure;
 
-                                    avg[i][t] = new Evaluation(a.Precision + ep,
-                                        a.Recall + er, a.FMeasure + ef, e.MetricName);
-                                }
-                            }
-                        }
-                        return avg;
-                    });
+                //                    avg[i][t] = new Evaluation(a.Precision + ep,
+                //                        a.Recall + er, a.FMeasure + ef, e.MetricName);
+                //                }
+                //            }
+                //        }
+                //        return avg;
+                //    });
 
-                var mLength = PerfMetrics.Length;
-                avgEvals[mLength] = new Dictionary<ConceptType, Evaluation>();
+                //var mLength = PerfMetrics.Length;
+                //avgEvals[mLength] = new Dictionary<ConceptType, Evaluation>();
 
-                for (int i = 0; i < PerfMetrics.Length; i++)
-                {
-                    foreach (var t in Types)
-                    {
-                        var a = avgEvals[i][t];
-                        avgEvals[i][t] = new Evaluation(a.Precision / emrCount,
-                            a.Recall / emrCount, a.FMeasure / emrCount, a.MetricName);
+                //for (int i = 0; i < PerfMetrics.Length; i++)
+                //{
+                //    foreach (var t in Types)
+                //    {
+                //        var a = avgEvals[i][t];
+                //        avgEvals[i][t] = new Evaluation(a.Precision / emrCount,
+                //            a.Recall / emrCount, a.FMeasure / emrCount, a.MetricName);
 
-                        a = avgEvals[i][t];
-                        var e = avgEvals[mLength].ContainsKey(t) ? avgEvals[mLength][t] : new Evaluation(0d, 0d, 0d, "Average");
-                        avgEvals[mLength][t] = new Evaluation(a.Precision + e.Precision,
-                            a.Recall + e.Recall, a.FMeasure + e.FMeasure, e.MetricName);
-                    }
-                }
+                //        a = avgEvals[i][t];
+                //        var e = avgEvals[mLength].ContainsKey(t) ? avgEvals[mLength][t] : new Evaluation(0d, 0d, 0d, "Average");
+                //        avgEvals[mLength][t] = new Evaluation(a.Precision + e.Precision,
+                //            a.Recall + e.Recall, a.FMeasure + e.FMeasure, e.MetricName);
+                //    }
+                //}
 
-                foreach (var t in Types)
-                {
-                    var e = avgEvals[mLength][t];
-                    avgEvals[mLength][t] = new Evaluation(e.Precision / mLength,
-                        e.Recall / mLength, e.FMeasure / mLength, e.MetricName);                    
-                }
+                //foreach (var t in Types)
+                //{
+                //    var e = avgEvals[mLength][t];
+                //    avgEvals[mLength][t] = new Evaluation(e.Precision / mLength,
+                //        e.Recall / mLength, e.FMeasure / mLength, e.MetricName);                    
+                //}
 
-                File.WriteAllText(args.AverageFile, StringifyScores(avgEvals));
+                //File.WriteAllText(args.AverageFile, StringifyScores(avgEvals));
                 Console.WriteLine("Done!");
             }
         }

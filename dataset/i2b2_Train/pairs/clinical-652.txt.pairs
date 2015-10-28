@@ -1,0 +1,54 @@
+c="dr. fairchild" 74:6 74:7||t="coref person"||c="her primary care physician" 74:9 74:12
+c="she" 12:36 12:36||t="coref person"||c="her" 13:0 13:0
+c="her" 20:0 20:0||t="coref person"||c="patient" 20:30 20:30
+c="patient" 20:30 20:30||t="coref person"||c="patient" 20:38 20:38
+c="a son" 33:2 33:3||t="coref person"||c="who" 33:4 33:4
+c="the patient" 74:0 74:1||t="coref person"||c="her" 74:9 74:9
+c="bilateral arm and chest discomfort" 12:38 12:42||t="coref problem"||c="her symptoms" 13:0 13:1
+c="cardiac catheterization" 11:16 11:17||t="coref test"||c="cardiac catheterization" 17:8 17:9
+c="hypercholesterolemia" 12:9 12:9||t="coref problem"||c="hypercholesterolemia" 21:0 21:0
+c="cardiac catheterization" 17:8 17:9||t="coref test"||c="the catheterization" 18:2 18:3
+c="psoriasis" 24:24 24:24||t="coref problem"||c="some psoriasis of the lower extremities" 43:10 43:15
+c="hypertension" 20:4 20:4||t="coref problem"||c="hypertension" 24:10 24:10
+c="beta blocker" 15:18 15:19||t="coref treatment"||c="toprol" 71:0 71:0
+c="lovenox" 15:16 15:16||t="coref treatment"||c="lovenox injections" 40:14 40:15
+c="hypercholesterolemia" 21:0 21:0||t="coref problem"||c="hypercholesterolemia" 24:12 24:12
+c="hypertension" 12:7 12:7||t="coref problem"||c="hypertension" 20:4 20:4
+c="her" 13:0 13:0||t="coref person"||c="the patient" 15:0 15:1
+c="her" 60:4 60:4||t="coref person"||c="she" 61:4 61:4
+c="she" 55:0 55:0||t="coref person"||c="the patient" 56:0 56:1
+c="the patient" 19:0 19:1||t="coref person"||c="her" 20:0 20:0
+c="three vessel disease" 18:8 18:10||t="coref problem"||c="three vessel disease in the right dominant system" 45:6 45:13
+c="the patient" 22:0 22:1||t="coref person"||c="the patient" 32:0 32:1
+c="she" 33:0 33:0||t="coref person"||c="the patient" 54:0 54:1
+c="this" 11:0 11:0||t="coref person"||c="who" 11:7 11:7
+c="the patient" 73:0 73:1||t="coref person"||c="the patient" 74:0 74:1
+c="a coronary artery bypass graft" 54:27 54:31||t="coref treatment"||c="the procedure" 56:3 56:4
+c="she" 63:4 63:4||t="coref person"||c="the patient" 73:0 73:1
+c="she" 61:4 61:4||t="coref person"||c="she" 63:4 63:4
+c="the procedure" 56:3 56:4||t="coref treatment"||c="coronary artery bypass graft" 69:3 69:6
+c="patient" 20:38 20:38||t="coref person"||c="the patient" 22:0 22:1
+c="the patient" 54:0 54:1||t="coref person"||c="she" 54:25 54:25
+c="the patient" 56:0 56:1||t="coref person"||c="the patient" 57:0 57:1
+c="the patient" 15:0 15:1||t="coref person"||c="she" 15:10 15:10
+c="her symptoms" 13:0 13:1||t="coref problem"||c="the same symptoms" 14:0 14:2
+c="the patient" 57:0 57:1||t="coref person"||c="the patient" 58:0 58:1
+c="her" 74:9 74:9||t="coref person"||c="the patient" 75:0 75:1
+c="she" 17:0 17:0||t="coref person"||c="the patient" 18:5 18:6
+c="father" 20:20 20:20||t="coref person"||c="his" 20:27 20:27
+c="the patient" 12:0 12:1||t="coref person"||c="who" 12:22 12:22
+c="she" 15:10 15:10||t="coref person"||c="she" 16:0 16:0
+c="her" 59:5 59:5||t="coref person"||c="she" 59:12 59:12
+c="rest" 13:4 13:4||t="coref treatment"||c="rest" 14:16 14:16
+c="she" 16:0 16:0||t="coref person"||c="she" 17:0 17:0
+c="she" 59:12 59:12||t="coref person"||c="her" 60:4 60:4
+c="coronary artery bypass graft" 18:16 18:19||t="coref treatment"||c="a coronary artery bypass graft" 54:27 54:31
+c="who" 12:22 12:22||t="coref person"||c="she" 12:36 12:36
+c="she" 54:25 54:25||t="coref person"||c="she" 55:0 55:0
+c="the catheterization" 18:2 18:3||t="coref test"||c="cardiac catheterization" 45:0 45:1
+c="she" 58:8 58:8||t="coref person"||c="her" 59:5 59:5
+c="her foley catheter" 60:4 60:6||t="coref treatment"||c="foley catheter" 62:0 62:1
+c="who" 11:7 11:7||t="coref person"||c="the patient" 12:0 12:1
+c="the patient" 18:5 18:6||t="coref person"||c="the patient" 19:0 19:1
+c="the patient" 58:0 58:1||t="coref person"||c="she" 58:8 58:8
+c="the patient" 32:0 32:1||t="coref person"||c="she" 33:0 33:0

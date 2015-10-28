@@ -1,0 +1,2 @@
+32	Only multivitamins .|multivitamins[1769,1782]|||||||||C0301532|89905|89905|multiple vitamins
+67	Percocet 5 mg in 325 mg one to two tabs po q4 to 6 prn pain .|Percocet[3140,3148]|||5mg[3149,3153]|one to two tabs[3164,3179]|po[3180,3182]|q4[3183,3185]||prn[3191,3194]|C3239003|1185228|161|paracetamol

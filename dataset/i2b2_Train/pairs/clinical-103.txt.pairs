@@ -1,0 +1,35 @@
+c="attending" 13:0 13:0||t="coref person"||c="angie cm johnson , m.d." 13:2 13:6
+c="patient" 12:0 12:0||t="coref person"||c="mr. andersen" 19:0 19:1
+c="he" 50:0 50:0||t="coref person"||c="the" 51:0 51:0
+c="it" 92:18 92:18||t="coref person"||c="dr. mullins" 93:9 93:10
+c="provider" 98:0 98:0||t="coref person"||c="mary , francis z." 98:2 98:5
+c="provider" 100:0 100:0||t="coref person"||c="laurie , paul g." 100:2 100:5
+c="mr. andersen" 19:0 19:1||t="coref person"||c="who" 19:10 19:10
+c="the" 51:0 51:0||t="coref person"||c="his" 52:0 52:0
+c="his" 52:0 52:0||t="coref person"||c="the patient" 53:5 53:6
+c="the patient" 53:5 53:6||t="coref person"||c="his" 53:14 53:14
+c="the patient" 54:5 54:6||t="coref person"||c="his" 54:11 54:11
+c="you" 92:3 92:3||t="coref person"||c="your" 92:12 92:12
+c="your" 96:7 96:7||t="coref person"||c="your" 96:17 96:17
+c="coronary artery disease" 15:0 15:2||t="coref problem"||c="severe three-vessel disease" 19:15 19:17
+c="revascularization" 20:4 20:4||t="coref treatment"||c="a cabg" 46:11 46:12
+c="cabg" 17:0 17:0||t="coref treatment"||c="revascularization" 20:4 20:4
+c="a cabg" 46:11 46:12||t="coref treatment"||c="this procedure" 48:3 48:4
+c="severe three-vessel disease" 19:15 19:17||t="coref problem"||c="coronary artery disease" 87:0 87:2
+c="surgical intervention" 15:4 15:5||t="coref treatment"||c="cabg" 17:0 17:0
+c="who" 19:10 19:10||t="coref person"||c="he" 20:0 20:0
+c="his" 54:11 54:11||t="coref person"||c="he" 55:0 55:0
+c="catheterization" 19:12 19:12||t="coref test"||c="that" 19:13 19:13
+c="you" 96:0 96:0||t="coref person"||c="your" 96:7 96:7
+c="plt ct" 40:32 40:33||t="coref test"||c="plt ct" 42:4 42:5
+c="he" 20:0 20:0||t="coref person"||c="the patient" 46:0 46:1
+c="you" 91:12 91:12||t="coref person"||c="you" 92:3 92:3
+c="he" 56:0 56:0||t="coref person"||c="you" 91:12 91:12
+c="he" 55:0 55:0||t="coref person"||c="he" 56:0 56:0
+c="his" 53:14 53:14||t="coref person"||c="the patient" 54:5 54:6
+c="a foley catheter" 56:12 56:14||t="coref treatment"||c="your urinary catheter" 96:17 96:19
+c="the patient" 48:0 48:1||t="coref person"||c="he" 49:0 49:0
+c="your" 92:12 92:12||t="coref person"||c="you" 94:0 94:0
+c="you" 94:0 94:0||t="coref person"||c="you" 96:0 96:0
+c="he" 49:0 49:0||t="coref person"||c="he" 50:0 50:0
+c="the patient" 46:0 46:1||t="coref person"||c="the patient" 48:0 48:1

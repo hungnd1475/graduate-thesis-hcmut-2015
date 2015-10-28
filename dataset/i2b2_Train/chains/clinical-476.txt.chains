@@ -1,0 +1,5 @@
+c="primary c / s" 5:0 5:3||c="primary c / s" 48:7 48:10||c="scheduled c / s" 51:0 51:3||t="coref treatment"
+c="breech" 5:5 5:5||c="breech failed version pregnancy" 46:0 46:3||c="breech" 48:12 48:12||c="breech" 51:5 51:5||c="breech" 60:0 60:0||t="coref problem"
+c="obefyfe , tree" 13:0 13:2||c="patient" 19:1 19:1||c="pt" 35:1 35:1||t="coref person"
+c="attending" 25:0 25:0||c="po , iedearc j , m.d." 26:0 26:5||c="staff obstetrician" 68:0 68:1||c="po , iedearc j , m.d." 69:0 69:5||c="po , iedearc j , m.d." 86:0 86:5||t="coref person"
+c="oxycodone" 33:0 33:0||c="oxycodone" 35:11 35:11||t="coref treatment"

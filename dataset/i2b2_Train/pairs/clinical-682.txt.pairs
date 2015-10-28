@@ -1,0 +1,91 @@
+c="his" 46:10 46:10||t="coref person"||c="james" 47:0 47:0
+c="his pharmacy" 37:2 37:3||t="coref person"||c="his pharmacy" 48:10 48:11
+c="the patient 's family" 15:12 15:15||t="coref person"||c="his family" 91:16 91:17
+c="his son" 44:0 44:1||t="coref person"||c="his son" 91:19 91:20
+c="his family" 91:16 91:17||t="coref person"||c="the family" 94:0 94:1
+c="the patient" 14:0 14:1||t="coref person"||c="who" 14:8 14:8
+c="who" 14:8 14:8||t="coref person"||c="the patient" 15:12 15:13
+c="the patient" 15:12 15:13||t="coref person"||c="his" 16:8 16:8
+c="his" 16:8 16:8||t="coref person"||c="the patient" 17:2 17:3
+c="the patient" 17:2 17:3||t="coref person"||c="he" 17:10 17:10
+c="he" 17:10 17:10||t="coref person"||c="the patient" 19:0 19:1
+c="the patient" 19:0 19:1||t="coref person"||c="he" 20:0 20:0
+c="he" 20:0 20:0||t="coref person"||c="he" 21:0 21:0
+c="he" 21:0 21:0||t="coref person"||c="his" 23:12 23:12
+c="left lung collapse" 24:9 24:11||t="coref problem"||c="which" 24:12 24:12
+c="his" 23:12 23:12||t="coref person"||c="the patient" 25:0 25:1
+c="the patient" 25:0 25:1||t="coref person"||c="his" 25:15 25:15
+c="his" 25:15 25:15||t="coref person"||c="his" 37:2 37:2
+c="his" 37:2 37:2||t="coref person"||c="he" 37:5 37:5
+c="he" 37:5 37:5||t="coref person"||c="the patient" 43:0 43:1
+c="the patient" 43:0 43:1||t="coref person"||c="his" 44:0 44:0
+c="his" 44:0 44:0||t="coref person"||c="he" 45:0 45:0
+c="he" 45:0 45:0||t="coref person"||c="he" 46:0 46:0
+c="he" 46:0 46:0||t="coref person"||c="his" 46:10 46:10
+c="james" 47:0 47:0||t="coref person"||c="he" 48:0 48:0
+c="he" 48:0 48:0||t="coref person"||c="his" 48:10 48:10
+c="his" 48:10 48:10||t="coref person"||c="he" 49:0 49:0
+c="he" 49:0 49:0||t="coref person"||c="he" 54:3 54:3
+c="he" 54:3 54:3||t="coref person"||c="his" 55:10 55:10
+c="his" 55:10 55:10||t="coref person"||c="his" 57:0 57:0
+c="his" 57:0 57:0||t="coref person"||c="his" 60:0 60:0
+c="his" 60:0 60:0||t="coref person"||c="he" 62:3 62:3
+c="he" 62:3 62:3||t="coref person"||c="he" 63:0 63:0
+c="he" 63:0 63:0||t="coref person"||c="his" 74:3 74:3
+c="his" 74:3 74:3||t="coref person"||c="his" 75:7 75:7
+c="his" 75:7 75:7||t="coref person"||c="his" 75:11 75:11
+c="his" 75:11 75:11||t="coref person"||c="the patient" 77:0 77:1
+c="an echocardiogram" 77:3 77:4||t="coref test"||c="which" 77:8 77:8
+c="the patient" 77:0 77:1||t="coref person"||c="the patient" 78:1 78:2
+c="the patient" 78:1 78:2||t="coref person"||c="he" 78:16 78:16
+c="he" 78:16 78:16||t="coref person"||c="his" 78:36 78:36
+c="his" 78:36 78:36||t="coref person"||c="he" 78:53 78:53
+c="induced hypothermia" 78:20 78:21||t="coref treatment"||c="this" 79:0 79:0
+c="he" 78:53 78:53||t="coref person"||c="the patient" 80:2 80:3
+c="the patient" 80:2 80:3||t="coref person"||c="the patient" 80:11 80:12
+c="the patient" 80:11 80:12||t="coref person"||c="his" 80:23 80:23
+c="his" 80:23 80:23||t="coref person"||c="the patient" 81:2 81:3
+c="the patient" 81:2 81:3||t="coref person"||c="the patient" 82:4 82:5
+c="the patient" 82:4 82:5||t="coref person"||c="the patient" 83:0 83:1
+c="the patient" 83:0 83:1||t="coref person"||c="he" 84:0 84:0
+c="he" 84:0 84:0||t="coref person"||c="the patient" 85:8 85:9
+c="status epilepticus" 85:14 85:15||t="coref problem"||c="which" 85:16 85:16
+c="the patient" 85:8 85:9||t="coref person"||c="his" 86:7 86:7
+c="his" 86:7 86:7||t="coref person"||c="the patient" 86:11 86:12
+c="the patient" 86:11 86:12||t="coref person"||c="the patient" 87:5 87:6
+c="the patient" 87:5 87:6||t="coref person"||c="the patient" 88:5 88:6
+c="the patient" 88:5 88:6||t="coref person"||c="he" 88:12 88:12
+c="he" 88:12 88:12||t="coref person"||c="his" 88:27 88:27
+c="coagulase positive staphylococcus" 90:12 90:14||t="coref problem"||c="which" 90:15 90:15
+c="his" 88:27 88:27||t="coref person"||c="the patient" 91:0 91:1
+c="the patient" 91:0 91:1||t="coref person"||c="his" 91:6 91:6
+c="his" 91:6 91:6||t="coref person"||c="his" 91:16 91:16
+c="his" 91:22 91:22||t="coref person"||c="the patient" 92:5 92:6
+c="the patient" 92:5 92:6||t="coref person"||c="his" 92:21 92:21
+c="his" 92:21 92:21||t="coref person"||c="the patient" 93:6 93:7
+c="any sedation" 54:11 54:12||t="coref treatment"||c="sedation" 62:8 62:8
+c="percocet" 46:7 46:7||t="coref treatment"||c="percocet" 49:10 49:10
+c="oxycontin" 38:1 38:1||t="coref treatment"||c="oxycontin" 49:17 49:17
+c="cardiac arrest" 14:19 14:20||t="coref problem"||c="his cardiac arrest" 16:8 16:10
+c="unresponsive" 17:15 17:15||t="coref problem"||c="unresponsive" 21:2 21:2
+c="unarousible" 54:5 54:5||t="coref problem"||c="unarousible" 62:5 62:5
+c="cardiac arrest" 12:0 12:1||t="coref problem"||c="cardiac arrest" 14:19 14:20
+c="percocet" 39:1 39:1||t="coref treatment"||c="percocet" 46:7 46:7
+c="pneumonia" 87:18 87:18||t="coref problem"||c="aspiration pneumonia" 88:21 88:22
+c="persistent seizure activity" 81:6 81:8||t="coref problem"||c="seizure activity" 83:5 83:6
+c="his cardiac arrest" 75:7 75:9||t="coref problem"||c="an out of hospital arrest" 78:4 78:8
+c="unresponsive" 21:2 21:2||t="coref problem"||c="unresponsive" 78:11 78:11
+c="unresponsive" 78:11 78:11||t="coref problem"||c="unresponsive" 80:5 80:5
+c="this" 79:0 79:0||t="coref treatment"||c="the induced hypothermia" 80:7 80:9
+c="his cardiac arrest" 16:8 16:10||t="coref problem"||c="cardiac arrest" 74:0 74:1
+c="his arrest" 74:3 74:4||t="coref problem"||c="his cardiac arrest" 75:7 75:9
+c="which" 90:15 90:15||t="coref problem"||c="methicillin resistant staphylococcus aureus" 90:17 90:20
+c="methicillin resistant staphylococcus aureus bacteremia" 87:12 87:16||t="coref problem"||c="mrsa bacteremia" 101:0 101:1
+c="urinary tract infection" 87:21 87:23||t="coref problem"||c="mrsa urinary tract infection" 100:0 100:3
+c="an out of hospital arrest" 78:4 78:8||t="coref problem"||c="cardiac arrest" 96:0 96:1
+c="cardiac arrest" 74:0 74:1||t="coref problem"||c="his arrest" 74:3 74:4
+c="which" 85:16 85:16||t="coref problem"||c="status epilepticus" 98:0 98:1
+c="his" 91:19 91:19||t="coref person"||c="his" 91:22 91:22
+c="methicillin resistant staphylococcus aureus" 90:17 90:20||t="coref problem"||c="methicillin resistant staphylococcus aureus pneumonia" 99:0 99:4
+c="aspiration pneumonia" 88:21 88:22||t="coref problem"||c="coagulase positive staphylococcus" 90:12 90:14
+c="his" 91:16 91:16||t="coref person"||c="his" 91:19 91:19

@@ -1,0 +1,9 @@
+18	Lanoxin 0.375 mg. daily .|Lanoxin[587,594]|||0.375mg.[595,604]|||daily[605,610]||||202988|3407|digoxin
+19	Coumadin as adjusted by Prothrombin times , Isordil 20 mg. tid , Micronase 1.25 mg. daily , aspirin 81 mg. daily , nitroglycerin 0.3 mg.|Prothrombin[637,648]||||||||||8872|8872|factor ii (prothrombin)
+19	Coumadin as adjusted by Prothrombin times , Isordil 20 mg. tid , Micronase 1.25 mg. daily , aspirin 81 mg. daily , nitroglycerin 0.3 mg.|Coumadin[613,621]|||||||||C0699129|202421|11289|warfarin
+19	Coumadin as adjusted by Prothrombin times , Isordil 20 mg. tid , Micronase 1.25 mg. daily , aspirin 81 mg. daily , nitroglycerin 0.3 mg.|Isordil[657,664]|||20mg.[665,671]|||tid[672,675]|||C2342585|793866|6058|isosorbide dinitrate
+19	Coumadin as adjusted by Prothrombin times , Isordil 20 mg. tid , Micronase 1.25 mg. daily , aspirin 81 mg. daily , nitroglycerin 0.3 mg.|Micronase[678,687]|||1.25mg.[688,696]|||daily[697,702]|||C1599188|566762|4815|glibenclamide
+19	Coumadin as adjusted by Prothrombin times , Isordil 20 mg. tid , Micronase 1.25 mg. daily , aspirin 81 mg. daily , nitroglycerin 0.3 mg.|aspirin[705,712]|||81mg.[713,719]|||daily[720,725]|||C0983882|315431|1191|acetylsalicylic acid
+19	Coumadin as adjusted by Prothrombin times , Isordil 20 mg. tid , Micronase 1.25 mg. daily , aspirin 81 mg. daily , nitroglycerin 0.3 mg.|nitroglycerin[728,741]|||0.3mg[742,748]||||||C0988171|316364|4917|glyceryl trinitrate
+25	In April 1994 he presented with an acute inferior myocardial infarction and was given Streptokinase .|Streptokinase[1092,1105]|||||||||C0038418|10106|10106|streptokinase
+31	This waxed and waned for thirty to sixty minutes , and he took a number of nitroglycerins .|nitroglycerins[1781,1795]||||||||||||

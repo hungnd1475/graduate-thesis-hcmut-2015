@@ -1,0 +1,22 @@
+15	EMS was called and reported to arrive on scene within three minutes .|EMS[558,561]|||||||three minutes[612,625]|||||
+16	The patient was asystolic but regained a perfusing rhythm after 2 mg of Epinephrine and 2 mg of Atropine .|Epinephrine[700,711]|||2mg[692,696]||||||C1125084|329724|3992|epinephrine
+16	The patient was asystolic but regained a perfusing rhythm after 2 mg of Epinephrine and 2 mg of Atropine .|Atropine[724,732]|||2mg[716,720]||||||C1140342|340079|1223|atropine
+18	He remained unresponsive despite the administration of Narcan .|Narcan[862,868]|||||||||C0684237|197117|7242|naloxone
+34	1. OxyContin 40 mg p.o. q 12hours .|OxyContin[1763,1772]|||40mg[1773,1778]||p.o.[1779,1783]|q 12 hours[1784,1793]||||1049588|7804|oxycodone
+35	2. Percocet .|Percocet[1799,1807]|||||||||C0086787|42844|161|paracetamol
+36	3. Nortriptyline .|Nortriptyline[1813,1826]|||||||||C0028420|7531|7531|nortriptyline
+37	4. Neurontin 1800 mg four times a day|Neurontin[1832,1841]|||1800mg[1842,1849]|||four times a day[1850,1866]|||C0678176|196498|25480|gabapentin
+42	He has a history of abuse of Percocet according to his brother .|Percocet[2032,2040]|||||||||C0086787|42844|161|paracetamol
+45	He had recently filled a prescription for 560 tablets of Percocet as well as 60 tablets of OxyContin early last month .|Percocet[2236,2244]||||560 tablets[2221,2232]|||||null|1049642|161|paracetamol
+45	He had recently filled a prescription for 560 tablets of Percocet as well as 60 tablets of OxyContin early last month .|OxyContin[2270,2279]||||60 tablets[2256,2266]||||||1049597|7804|oxycodone
+79	Neurology was consulted and the patient was treated very aggressively , loaded with multiple drugs , including Ativan and Propofol drips .|Ativan[4752,4758]|||||||||C0699194|202479|6470|lorazepam
+79	Neurology was consulted and the patient was treated very aggressively , loaded with multiple drugs , including Ativan and Propofol drips .|Propofol[4763,4771]|||||||||C0033487|8782|8782|propofol
+81	He was loaded with Dilantin and ultimately was treated with a Pentobarb coma .|Dilantin[4868,4876]||||||||||202740|8183|phenytoin
+84	Multiple cultures were done and the patient was ultimately found to have methicillin resistant Staphylococcus aureus bacteremia , pneumonia , and urinary tract infection .|Staphylococcus aureus[5295,5316]||||||||||1311275|1311275|staphylococcus aureus
+84	Multiple cultures were done and the patient was ultimately found to have methicillin resistant Staphylococcus aureus bacteremia , pneumonia , and urinary tract infection .|methicillin[5273,5284]|||||||||C0025643|589822|589822|methicillin
+85	For all these infections , the patient was treated with Vancomycin and he was also on Levofloxacin and Flagyl for presumed aspiration pneumonia at the time of his admission .|Vancomycin[5428,5438]|||||||||C0042313|11124|11124|vancomycin
+85	For all these infections , the patient was treated with Vancomycin and he was also on Levofloxacin and Flagyl for presumed aspiration pneumonia at the time of his admission .|Levofloxacin[5458,5470]|||||||||C0282386|82122|82122|levofloxacin
+85	For all these infections , the patient was treated with Vancomycin and he was also on Levofloxacin and Flagyl for presumed aspiration pneumonia at the time of his admission .|Flagyl[5475,5481]||||||||||202866|6922|metronidazole
+87	Sputum culture as late as 2013-05-10 , however was still positive for coagulase positive Staphylococcus which was methicillin resistant Staphylococcus aureus .|Staphylococcus aureus[5722,5743]||||||||||1311275|1311275|staphylococcus aureus
+96	Methicillin resistant Staphylococcus aureus pneumonia .|Staphylococcus aureus[6314,6335]||||||||||1311275|1311275|staphylococcus aureus
+96	Methicillin resistant Staphylococcus aureus pneumonia .|Methicillin[6292,6303]|||||||||C0025643|589822|589822|methicillin

@@ -1,0 +1,116 @@
+c="a 40% rca" 34:24 34:26||t="coref problem"||c="which" 34:28 34:28
+c="he" 47:3 47:3||t="coref person"||c="his" 48:6 48:6
+c="the patient" 73:0 73:1||t="coref person"||c="his" 73:24 73:24
+c="his" 119:10 119:10||t="coref person"||c="his" 119:26 119:26
+c="nitroglycerin" 44:10 44:10||t="coref treatment"||c="his nitroglycerin" 45:2 45:3
+c="hyperlipidemia" 23:6 23:6||t="coref problem"||c="high cholesterol" 33:10 33:11
+c="pulmonary nodule" 71:33 71:34||t="coref problem"||c="this nodule" 72:5 72:6
+c="adenosine stress test" 25:0 25:2||t="coref test"||c="an adenosine stress test" 75:3 75:6
+c="diabetes" 33:7 33:7||t="coref problem"||c="diabetes" 53:0 53:0
+c="naa naricha early , m.d." 140:1 141:0||t="coref person"||c="naa naricha early , m.d." 148:0 148:4
+c="diabetes type 2" 23:11 23:13||t="coref problem"||c="diabetes" 33:7 33:7
+c="avandia" 55:26 55:26||t="coref treatment"||c="avandia" 127:0 127:0
+c="he" 117:18 117:18||t="coref person"||c="he" 118:0 118:0
+c="his" 73:24 73:24||t="coref person"||c="the patient" 74:5 74:6
+c="an echocardiogram" 82:2 82:3||t="coref test"||c="which" 82:5 82:5
+c="mild posterior vasal thinning" 80:2 80:5||t="coref problem"||c="it" 81:0 81:0
+c="a sleep study" 95:3 95:5||t="coref test"||c="which" 95:11 95:11
+c="his" 50:2 50:2||t="coref person"||c="his" 50:7 50:7
+c="a ct scan" 66:3 66:5||t="coref test"||c="that" 67:0 67:0
+c="lower extremity study" 68:2 68:4||t="coref test"||c="that" 69:0 69:0
+c="he" 42:0 42:0||t="coref person"||c="he" 43:0 43:0
+c="his" 45:2 45:2||t="coref person"||c="he" 46:4 46:4
+c="he" 34:3 34:3||t="coref person"||c="he" 36:0 36:0
+c="the patient" 39:3 39:4||t="coref person"||c="he" 39:14 39:14
+c="he" 39:14 39:14||t="coref person"||c="he" 40:3 40:3
+c="he" 32:0 32:0||t="coref person"||c="he" 33:0 33:0
+c="an ivus" 35:0 35:1||t="coref test"||c="it" 35:10 35:10
+c="a cath" 34:18 34:19||t="coref test"||c="which" 34:22 34:22
+c="he" 33:0 33:0||t="coref person"||c="he" 34:3 34:3
+c="intermittent substernal chest pain" 40:5 40:8||t="coref problem"||c="that" 40:15 40:15
+c="his" 40:24 40:24||t="coref person"||c="he" 42:0 42:0
+c="that" 40:15 40:15||t="coref problem"||c="it" 41:0 41:0
+c="non st elevation mi" 31:13 31:16||t="coref problem"||c="a non st elevation mi" 34:5 34:9
+c="who" 31:19 31:19||t="coref person"||c="he" 32:0 32:0
+c="the systolic function" 89:0 89:2||t="coref test"||c="the systolic function" 94:0 94:2
+c="a ptc stenting of an rca" 36:2 36:7||t="coref treatment"||c="prior ptca" 64:41 64:42
+c="coronary artery disease" 23:0 23:2||t="coref problem"||c="cad" 31:10 31:10
+c="hypertension" 33:5 33:5||t="coref problem"||c="hypertension" 53:2 53:2
+c="part 1 of a sleep study" 26:0 26:5||t="coref test"||c="a sleep study" 95:3 95:5
+c="full pfts" 71:19 71:20||t="coref test"||c="pfts" 100:7 100:7
+c="intermittent right neck swelling" 73:5 73:8||t="coref problem"||c="the swelling" 74:21 74:22
+c="his" 119:26 119:26||t="coref person"||c="the patient" 131:0 131:1
+c="the patient" 131:0 131:1||t="coref person"||c="his" 131:8 131:8
+c="his" 117:13 117:13||t="coref person"||c="he" 117:18 117:18
+c="ativan" 118:2 118:2||t="coref treatment"||c="which" 118:7 118:7
+c="apnea" 95:21 95:21||t="coref problem"||c="some obstructive apnea" 97:12 97:14
+c="anxiety" 58:6 58:6||t="coref problem"||c="anxious" 117:21 117:21
+c="dr. riale tables" 132:7 132:9||t="coref person"||c="his cardiologist" 132:11 132:12
+c="dr. cora belbsnil" 131:11 131:13||t="coref person"||c="his pcp" 133:9 133:10
+c="hypertension" 23:4 23:4||t="coref problem"||c="hypertension" 33:5 33:5
+c="he" 119:5 119:5||t="coref person"||c="his" 119:10 119:10
+c="chest pain" 21:0 21:1||t="coref problem"||c="chest pain" 31:22 31:23
+c="plavix" 55:19 55:19||t="coref treatment"||c="plavix" 124:0 124:0
+c="toprol xl" 55:11 55:12||t="coref treatment"||c="toprol xl" 128:0 128:1
+c="lisinopril" 55:1 55:1||t="coref treatment"||c="lisinopril" 126:0 126:0
+c="lipitor" 55:33 55:33||t="coref treatment"||c="lipitor" 123:0 123:0
+c="high cholesterol" 33:10 33:11||t="coref problem"||c="hyperlipidemia" 53:4 53:4
+c="anxious" 117:21 117:21||t="coref problem"||c="his anxiety level" 119:26 119:28
+c="his pcp" 131:8 131:9||t="coref person"||c="dr. cora belbsnil" 131:11 131:13
+c="chest ct" 28:0 28:1||t="coref test"||c="a ct scan" 66:3 66:5
+c="ischemia" 77:4 77:4||t="coref problem"||c="ischemia" 78:9 78:9
+c="the patient" 99:0 99:1||t="coref person"||c="he" 100:5 100:5
+c="the patient" 95:0 95:1||t="coref person"||c="he" 95:14 95:14
+c="he" 76:0 76:0||t="coref person"||c="he" 82:0 82:0
+c="he" 75:9 75:9||t="coref person"||c="he" 76:0 76:0
+c="the patient" 133:0 133:1||t="coref person"||c="he" 133:5 133:5
+c="he" 40:3 40:3||t="coref person"||c="his" 40:24 40:24
+c="he" 118:0 118:0||t="coref person"||c="him" 118:9 118:9
+c="his" 131:8 131:8||t="coref person"||c="he" 132:0 132:0
+c="the patient" 119:0 119:1||t="coref person"||c="he" 119:5 119:5
+c="his cardiologist" 132:11 132:12||t="coref person"||c="he" 132:23 132:23
+c="tricheprakejesc , betla" 13:0 13:2||t="coref person"||c="the patient" 31:0 31:1
+c="he" 36:0 36:0||t="coref person"||c="the patient" 39:3 39:4
+c="he" 82:0 82:0||t="coref person"||c="the patient" 95:0 95:1
+c="he" 74:17 74:17||t="coref person"||c="the patient" 75:0 75:1
+c="the patient" 71:10 71:11||t="coref person"||c="the patient" 73:0 73:1
+c="he" 70:0 70:0||t="coref person"||c="the patient" 71:10 71:11
+c="he" 61:0 61:0||t="coref person"||c="the patient" 63:0 63:1
+c="him" 118:9 118:9||t="coref person"||c="the patient" 119:0 119:1
+c="the patient" 116:5 116:6||t="coref person"||c="the patient" 117:8 117:9
+c="his" 103:0 103:0||t="coref person"||c="the patient" 116:5 116:6
+c="he" 100:5 100:5||t="coref person"||c="the patient" 102:11 102:12
+c="the patient" 98:3 98:4||t="coref person"||c="the patient" 99:0 99:1
+c="he" 95:14 95:14||t="coref person"||c="the patient" 98:3 98:4
+c="pfts" 100:7 100:7||t="coref test"||c="the pfts" 101:3 101:4
+c="his" 133:9 133:9||t="coref person"||c="the patient" 134:0 134:1
+c="the patient" 31:0 31:1||t="coref person"||c="who" 31:19 31:19
+c="his" 132:11 132:11||t="coref person"||c="the patient" 133:0 133:1
+c="tricor" 55:40 55:40||t="coref treatment"||c="tricor" 122:0 122:0
+c="anxiety" 130:6 130:6||t="coref problem"||c="anxiety" 133:20 133:20
+c="obstruction" 97:5 97:5||t="coref problem"||c="obstruction to airflow" 97:8 97:10
+c="he" 46:4 46:4||t="coref person"||c="he" 47:3 47:3
+c="his" 48:6 48:6||t="coref person"||c="he" 49:0 49:0
+c="he" 43:0 43:0||t="coref person"||c="he" 44:0 44:0
+c="he" 66:0 66:0||t="coref person"||c="he" 68:0 68:0
+c="he" 65:0 65:0||t="coref person"||c="he" 66:0 66:0
+c="he" 64:0 64:0||t="coref person"||c="he" 65:0 65:0
+c="the patient" 63:0 63:1||t="coref person"||c="he" 64:0 64:0
+c="the patient" 75:0 75:1||t="coref person"||c="he" 75:9 75:9
+c="he" 74:14 74:14||t="coref person"||c="he" 74:17 74:17
+c="the patient" 74:5 74:6||t="coref person"||c="he" 74:14 74:14
+c="he" 68:0 68:0||t="coref person"||c="he" 70:0 70:0
+c="he" 58:0 58:0||t="coref person"||c="he" 59:1 59:1
+c="he" 57:0 57:0||t="coref person"||c="he" 58:0 58:0
+c="he" 51:0 51:0||t="coref person"||c="he" 57:0 57:0
+c="his" 50:7 50:7||t="coref person"||c="he" 51:0 51:0
+c="he" 60:0 60:0||t="coref person"||c="he" 61:0 61:0
+c="he" 59:1 59:1||t="coref person"||c="he" 60:0 60:0
+c="medication for antianxiety" 119:13 119:15||t="coref treatment"||c="medications" 133:18 133:18
+c="he" 44:0 44:0||t="coref person"||c="his" 45:2 45:2
+c="he" 49:0 49:0||t="coref person"||c="his" 50:2 50:2
+c="the patient" 102:11 102:12||t="coref person"||c="his" 103:0 103:0
+c="the patient" 117:8 117:9||t="coref person"||c="his" 117:13 117:13
+c="his pcp" 119:10 119:11||t="coref person"||c="his pcp" 131:8 131:9
+c="he" 132:0 132:0||t="coref person"||c="his" 132:11 132:11
+c="he" 133:5 133:5||t="coref person"||c="his" 133:9 133:9

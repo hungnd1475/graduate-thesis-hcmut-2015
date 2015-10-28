@@ -1,0 +1,26 @@
+22	TYLENOL ( ACETAMINOPHEN ) 650 MG PO Q4H Starting Today ( 11/02 ) PRN Headache|TYLENOL ( ACETAMINOPHEN )[495,520]|||650MG[521,527]||PO[528,530]|Q4H[531,534]||PRN[560,563]|C1739190|646457|161|paracetamol
+24	Do not take more than 4gm / day ACETYLSALICYLIC ACID 325 MG PO DAILY PHOSLO ( CALCIUM ACETATE ( 1 GELCAP = 667 MG ) ) 1,334 MG PO TID|ACETYLSALICYLIC ACID[620,640]|||325MG[641,647]||PO[648,650]|DAILY[651,656]||||1191|1191|acetylsalicylic acid
+24	Do not take more than 4gm / day ACETYLSALICYLIC ACID 325 MG PO DAILY PHOSLO ( CALCIUM ACETATE ( 1 GELCAP = 667 MG ) ) 1,334 MG PO TID|ACETYLSALICYLIC ACID[620,640]||||||||||1191|1191|acetylsalicylic acid
+24	Do not take more than 4gm / day ACETYLSALICYLIC ACID 325 MG PO DAILY PHOSLO ( CALCIUM ACETATE ( 1 GELCAP = 667 MG ) ) 1,334 MG PO TID|PHOSLO[657,663]|||||||||C0722621|219236|214342|calcium acetate
+24	Do not take more than 4gm / day ACETYLSALICYLIC ACID 325 MG PO DAILY PHOSLO ( CALCIUM ACETATE ( 1 GELCAP = 667 MG ) ) 1,334 MG PO TID|CALCIUM ACETATE[666,681]|||667MG[695,701]||PO[715,717]|TID[718,721]||||359296|214342|calcium acetate
+26	Please give with meals FLOVENT HFA ( FLUTICASONE PROPIONATE ) 44 MCG INH BID LABETALOL HCL 300|FLOVENT HFA ( FLUTICASONE PROPIONATE )[760,798]|||||||||C1170279|352650|352650|flovent hfa
+26	Please give with meals FLOVENT HFA ( FLUTICASONE PROPIONATE ) 44 MCG INH BID LABETALOL HCL 300|LABETALOL HCL[814,827]|||44MCG[799,805]||INH[806,809]|BID[810,813]||||202693|202693|labetalol hcl
+32	COZAAR ( LOSARTAN ) 50|COZAAR ( LOSARTAN )[966,985]|||||||||C1242222|368240|52175|losartan
+36	NEPHROCAPS ( NEPHRO-VIT RX ) 1 TAB PO DAILY|NEPHROCAPS ( NEPHRO - VIT RX )[1069,1097]||||1 TAB[1098,1103]|PO[1104,1106]|DAILY[1107,1112]|||C3236097|1182262|1151|ascorbic acid (vit c)
+40	SIMVASTATIN and NIACIN , VIT.|SIMVASTATIN[1228,1239]|||||||||C0074554|36567|36567|simvastatin
+40	SIMVASTATIN and NIACIN , VIT.|NIACIN[1244,1250]|||||||||C0027996|7393|7393|nicotinic acid
+43	ZOCOR ( SIMVASTATIN ) 40 MG PO BEDTIME|ZOCOR ( SIMVASTATIN )[1297,1318]|||40MG[1319,1324]||PO[1325,1327]|||||152923|36567|simvastatin
+47	Override added on 10/30/06 by FELSAPPRYDEFUSC , ERI N. , M.D. on order for NEPHROCAPS PO ( ref # 581988585 )|NEPHROCAPS[1514,1524]|||||PO[1525,1527]||||C3236097|1182262|1151|ascorbic acid (vit c)
+49	SIMVASTATIN and NIACIN , VIT .|SIMVASTATIN[1582,1593]|||||||||C0074554|36567|36567|simvastatin
+49	SIMVASTATIN and NIACIN , VIT .|NIACIN[1598,1604]|||||||||C0027996|7393|7393|nicotinic acid
+53	House / 2 gm Na / Low saturated fat low cholesterol / 2 gram K+ , Renal diet &lt; I &gt; &lt; FDI &gt;|Na[1672,1674]|||2gm[1667,1671]|||||||56501|56501|na m-fluorphosphate
+78	Recent neuro w / u including EEG , carotid u / s , head ct ( old stroke ) , dobutamine-MIBI ( fixed defect and small inferolateral reversible ) were all negative .|dobutamine[3009,3019]|||||||||C0012963|3616|3616|dobutamine
+81	ESRD from IgA , s / p PPI after nodal ablation , HTN , COPD , hypothyroid , hypertrophic|PPI[3133,3136]||||||||||1364533|1364533|pyrophosphate
+106	He continued on his zocor , cozaar and labetalol .|zocor[4888,4893]|||||||||C0733683|196503|36567|simvastatin
+106	He continued on his zocor , cozaar and labetalol .|cozaar[4896,4902]|||||||||C0591301|151558|52175|losartan
+106	He continued on his zocor , cozaar and labetalol .|labetalol[4907,4916]|||||||||C0022860|6185|6185|labetalol
+107	We will now hold his coumadin given his recent falls and bleeding risk .|coumadin[4940,4948]|||||||||C0699129|202421|11289|warfarin
+108	His aspirin was restarted prior to discharge .|aspirin[4996,5003]|||||||||C0004057|1191|1191|acetylsalicylic acid
+112	His B12 level was 418 and normal .|B12[5121,5124]|||||||||null|643357|643357|b12
+126	A c.difficile test is negative on prelim read , however very low suspicion given no recent antibiotic use .|antibiotic[5846,5856]||||||||||896|896|antibiotic
+131	TO DO / PLAN : 1) Hemodialysis 2) Please do not take coumadin .|coumadin[6098,6106]|||||||||C0699129|202421|11289|warfarin

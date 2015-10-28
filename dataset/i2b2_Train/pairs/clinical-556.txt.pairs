@@ -1,0 +1,63 @@
+c="she" 43:0 43:0||t="coref person"||c="her" 43:4 43:4
+c="she" 86:2 86:2||t="coref person"||c="her" 86:10 86:10
+c="confusion" 100:11 100:11||t="coref problem"||c="these" 101:2 101:2
+c="she" 104:4 104:4||t="coref person"||c="her" 104:8 104:8
+c="right occipital hemorrhagic stroke" 17:0 17:3||t="coref problem"||c="a right occipital hemorrhage" 80:8 80:11
+c="dizzy" 19:10 19:10||t="coref problem"||c="dizzy" 22:3 22:3
+c="po bactrim" 102:14 102:15||t="coref treatment"||c="bactrim ds" 110:12 110:13
+c="a right occipital hemorrhage" 80:8 80:11||t="coref problem"||c="a right occipital hemorrhagic stroke" 82:17 82:21
+c="right occipital hemorrhagic stroke" 7:0 7:3||t="coref problem"||c="right occipital hemorrhagic stroke" 17:0 17:3
+c="who" 19:5 19:5||t="coref person"||c="her" 19:16 19:16
+c="her" 21:23 21:23||t="coref person"||c="she" 21:26 21:26
+c="his" 76:13 76:13||t="coref person"||c="the patient" 82:0 82:1
+c="a dense hemianopsia on the left side" 56:2 56:8||t="coref problem"||c="hemianopsia" 71:14 71:14
+c="who" 82:13 82:13||t="coref person"||c="the patient" 84:0 84:1
+c="the patient" 84:0 84:1||t="coref person"||c="the patient" 85:0 85:1
+c="she" 54:0 54:0||t="coref person"||c="the patient" 71:0 71:1
+c="an magnetic resonance imaging angiogram" 91:1 91:5||t="coref test"||c="the mra" 92:0 92:1
+c="a right occipital hemorrhagic stroke" 82:17 82:21||t="coref problem"||c="a large hemorrhagic lesion on the occipital lobe" 89:15 89:22
+c="the patient" 40:0 40:1||t="coref person"||c="she" 42:4 42:4
+c="her" 43:4 43:4||t="coref person"||c="the patient" 53:5 53:6
+c="she" 21:26 21:26||t="coref person"||c="she" 22:0 22:0
+c="the patient" 103:3 103:4||t="coref person"||c="she" 104:4 104:4
+c="an echocardiogram" 98:0 98:1||t="coref test"||c="it" 99:0 99:0
+c="ms. tlandkotesmitskote" 19:0 19:1||t="coref person"||c="who" 19:5 19:5
+c="the patient" 85:0 85:1||t="coref person"||c="she" 86:2 86:2
+c="she" 89:0 89:0||t="coref person"||c="the patient" 94:8 94:9
+c="the patient" 53:5 53:6||t="coref person"||c="she" 54:0 54:0
+c="who" 20:12 20:12||t="coref person"||c="she" 21:8 21:8
+c="her" 23:9 23:9||t="coref person"||c="she" 24:0 24:0
+c="she" 106:0 106:0||t="coref person"||c="she" 107:0 107:0
+c="she" 107:0 107:0||t="coref person"||c="the patient" 108:0 108:1
+c="she" 102:0 102:0||t="coref person"||c="the patient" 103:3 103:4
+c="she" 26:0 26:0||t="coref person"||c="she" 27:0 27:0
+c="neurosurgery service" 87:1 87:2||t="coref person"||c="they" 87:7 87:7
+c="she" 24:0 24:0||t="coref person"||c="she" 26:0 26:0
+c="her" 104:8 104:8||t="coref person"||c="she" 105:0 105:0
+c="hypertension" 29:7 29:7||t="coref problem"||c="hypertension" 82:12 82:12
+c="she" 21:13 21:13||t="coref person"||c="she" 21:16 21:16
+c="she" 21:8 21:8||t="coref person"||c="she" 21:13 21:13
+c="she" 105:0 105:0||t="coref person"||c="she" 106:0 106:0
+c="a large hemorrhagic lesion on the occipital lobe" 89:15 89:22||t="coref problem"||c="the right parietal occipital hemorrhage" 91:10 91:14
+c="which" 89:13 89:13||t="coref test"||c="an magnetic resonance imaging angiogram" 91:1 91:5
+c="hypertension" 20:11 20:11||t="coref problem"||c="hypertension" 29:7 29:7
+c="patient" 76:0 76:0||t="coref person"||c="his" 76:12 76:12
+c="the patient" 108:0 108:1||t="coref person"||c="the patient" 110:0 110:1
+c="the patient" 94:8 94:9||t="coref person"||c="the patient" 100:5 100:6
+c="the patient" 88:0 88:1||t="coref person"||c="she" 89:0 89:0
+c="she" 27:0 27:0||t="coref person"||c="the patient" 34:0 34:1
+c="the patient" 82:0 82:1||t="coref person"||c="who" 82:13 82:13
+c="she" 22:0 22:0||t="coref person"||c="she" 23:3 23:3
+c="hemianopsia" 71:14 71:14||t="coref problem"||c="a dense left hemianopsia" 107:4 107:7
+c="his" 76:12 76:12||t="coref person"||c="his" 76:13 76:13
+c="she" 42:4 42:4||t="coref person"||c="she" 43:0 43:0
+c="the patient" 36:5 36:6||t="coref person"||c="the patient" 40:0 40:1
+c="the patient" 100:5 100:6||t="coref person"||c="she" 102:0 102:0
+c="the patient" 71:0 71:1||t="coref person"||c="patient" 76:0 76:0
+c="the patient" 34:0 34:1||t="coref person"||c="the patient" 36:5 36:6
+c="magnetic resonance imaging angiogram" 89:8 89:11||t="coref test"||c="which" 89:13 89:13
+c="her" 86:10 86:10||t="coref person"||c="the patient" 88:0 88:1
+c="she" 21:16 21:16||t="coref person"||c="her" 21:23 21:23
+c="she" 20:0 20:0||t="coref person"||c="who" 20:12 20:12
+c="her" 19:16 19:16||t="coref person"||c="she" 20:0 20:0
+c="she" 23:3 23:3||t="coref person"||c="her" 23:9 23:9

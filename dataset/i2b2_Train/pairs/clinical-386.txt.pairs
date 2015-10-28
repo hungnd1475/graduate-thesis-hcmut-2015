@@ -1,0 +1,58 @@
+c="dr. fede duhenile" 76:5 76:7||t="coref person"||c="dr. duhenile" 76:12 76:13
+c="dr. duhenile" 57:21 57:22||t="coref person"||c="dr. fede duhenile" 76:5 76:7
+c="the patient" 23:0 23:1||t="coref person"||c="who" 23:8 23:8
+c="who" 23:8 23:8||t="coref person"||c="he" 24:0 24:0
+c="a large liver mass" 24:9 24:12||t="coref problem"||c="which" 24:13 24:13
+c="he" 24:0 24:0||t="coref person"||c="the patient" 47:7 47:8
+c="the patient" 47:7 47:8||t="coref person"||c="the patient" 54:0 54:1
+c="celiac and superior mesenteric artery angiography" 54:6 54:11||t="coref test"||c="which" 54:12 54:12
+c="the patient" 54:0 54:1||t="coref person"||c="his" 55:0 55:0
+c="the patient" 62:16 62:17||t="coref person"||c="his" 63:0 63:0
+c="he" 63:6 63:6||t="coref person"||c="his" 64:2 64:2
+c="mr. fyfe" 65:6 65:7||t="coref person"||c="his" 65:21 65:21
+c="his" 65:21 65:21||t="coref person"||c="his" 66:0 66:0
+c="his" 66:0 66:0||t="coref person"||c="his" 66:9 66:9
+c="blood" 58:18 58:18||t="coref treatment"||c="transfused blood" 60:6 60:7
+c="percocet" 32:21 32:21||t="coref treatment"||c="percocet" 74:0 74:0
+c="which" 24:13 24:13||t="coref problem"||c="poorly differentiated neoplasm" 24:20 24:22
+c="diabeta" 28:0 28:0||t="coref treatment"||c="diabeta" 68:2 68:2
+c="serax" 29:0 29:0||t="coref treatment"||c="serax" 69:0 69:0
+c="sudafed" 30:0 30:0||t="coref treatment"||c="sudafed" 70:0 70:0
+c="his nasogastric tube" 63:0 63:2||t="coref treatment"||c="his tubes" 65:21 65:22
+c="his jackson-pratt drains" 64:2 64:4||t="coref treatment"||c="drains" 65:24 65:24
+c="an intact colostomy" 46:0 46:2||t="coref treatment"||c="his colostomy" 66:9 66:10
+c="proventil" 33:0 33:0||t="coref treatment"||c="proventil" 75:0 75:0
+c="diabetic neuropathy" 26:12 26:13||t="coref problem"||c="a peripheral neuropathy" 50:6 50:8
+c="theo-dur" 31:0 31:0||t="coref treatment"||c="theo-dur" 71:0 71:0
+c="betoptic" 32:0 32:0||t="coref treatment"||c="betoptic" 72:0 72:0
+c="propene" 32:7 32:7||t="coref treatment"||c="propene" 72:7 72:7
+c="pred-forte" 32:14 32:14||t="coref treatment"||c="pred-forte" 73:0 73:0
+c="diabetes mellitus" 19:0 19:1||t="coref problem"||c="diabetes mellitus" 26:2 26:3
+c="he" 62:0 62:0||t="coref person"||c="the patient" 62:16 62:17
+c="the patient" 58:0 58:1||t="coref person"||c="mr. fyfe" 59:4 59:5
+c="dr. duhenile" 76:12 76:13||t="coref person"||c="fede a. duhenile , m.d." 79:0 79:4
+c="peripheral neuropathy" 19:3 19:4||t="coref problem"||c="diabetic neuropathy" 26:12 26:13
+c="premature ventricular contractions" 19:9 19:11||t="coref problem"||c="premature ventricular contractions" 26:5 26:7
+c="obese" 45:2 45:2||t="coref problem"||c="the patient &apos;s extreme obesity" 47:7 47:11
+c="the patient" 57:2 57:3||t="coref person"||c="he" 57:11 57:11
+c="the same medications" 67:14 67:16||t="coref treatment"||c="which" 67:17 67:17
+c="occasional premature ventricular contractions" 62:4 62:7||t="coref problem"||c="these" 62:10 62:10
+c="premature ventricular contractions" 26:5 26:7||t="coref problem"||c="occasional premature ventricular contractions" 62:4 62:7
+c="he" 67:0 67:0||t="coref person"||c="he" 67:18 67:18
+c="his" 64:2 64:2||t="coref person"||c="mr. fyfe" 65:6 65:7
+c="his" 63:0 63:0||t="coref person"||c="he" 63:6 63:6
+c="mr. fyfe" 59:4 59:5||t="coref person"||c="his" 59:10 59:10
+c="he" 60:0 60:0||t="coref person"||c="he" 61:0 61:0
+c="he" 57:11 57:11||t="coref person"||c="the patient" 58:0 58:1
+c="celiac and superior mesenteric angiogram" 21:5 21:9||t="coref test"||c="celiac and superior mesenteric artery angiography" 54:6 54:11
+c="left hepatectomy" 21:1 21:2||t="coref treatment"||c="left hepatectomy" 57:16 57:17
+c="rectal carcinoma" 23:15 23:16||t="coref problem"||c="rectal carcinoma" 26:9 26:10
+c="his" 66:9 66:9||t="coref person"||c="he" 67:0 67:0
+c="which" 67:17 67:17||t="coref treatment"||c="these" 68:0 68:0
+c="his" 55:0 55:0||t="coref person"||c="the patient" 57:2 57:3
+c="he" 67:18 67:18||t="coref person"||c="the patient" 76:0 76:1
+c="his" 59:10 59:10||t="coref person"||c="he" 60:0 60:0
+c="he" 61:0 61:0||t="coref person"||c="he" 62:0 62:0
+c="metastatic cancer to the liver" 7:0 7:4||t="coref problem"||c="metastatic cancer to the liver" 17:0 17:4
+c="an apr" 23:10 23:11||t="coref treatment"||c="abdominoperineal resection" 35:2 35:3
+c="metastatic cancer to the liver" 17:0 17:4||t="coref problem"||c="a large liver mass" 24:9 24:12

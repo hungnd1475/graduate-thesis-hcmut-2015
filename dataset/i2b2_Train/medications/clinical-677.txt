@@ -1,0 +1,28 @@
+22	He was treated with nitroglycerin paste and IV Integrelin as well as Plavix .|nitroglycerin[1229,1242]|||||||||C0017887|4917|4917|glyceryl trinitrate
+22	He was treated with nitroglycerin paste and IV Integrelin as well as Plavix .|Plavix[1278,1284]|||||||||C0633084|174742|32968|clopidogrel
+22	He was treated with nitroglycerin paste and IV Integrelin as well as Plavix .|Integrelin[1256,1266]|||||IV[1253,1255]|||||288688|75635|eptifibatide
+33	1. Flomax 0.4 q.d.|Flomax[1853,1859]|||0.4[1860,1863]|||q.d.[1864,1868]|||C2722256|863670|77492|tamsulosin
+34	2. Aspirin 325 q.d.|Aspirin[1872,1879]|||325[1880,1883]|||q.d.[1884,1888]|||C0992015|317300|1191|acetylsalicylic acid
+35	3. Lipitor 10 q.d.|Lipitor[1892,1899]|||10[1900,1902]|||q.d.[1903,1907]|||C1617527|617313|83367|atorvastatin
+36	4. Naproxen p.r.n. as well as several vitamins and supplements .|vitamins[1946,1954]||||||||p.r.n.[1920,1926]|C0042890|11262|11262|vitamins
+36	4. Naproxen p.r.n. as well as several vitamins and supplements .|Naproxen[1911,1919]|||||||||C0027396|7258|7258|naproxen
+37	5. Zestoretic with an unknown dose .|Zestoretic[1976,1986]|||unknown dose[1995,2007]|||||||85783|5487|hydrochlorothiazide
+39	1. Captopril 25 t.i.d.|Captopril[2039,2048]|||25[2049,2051]|||t.i.d.[2052,2058]|||C0984502|315561|1998|captopril
+40	2. Protonix q.d. 40 .|Protonix[2062,2070]||||||q.d.[2071,2075]|||C0876139|261624|40790|pantoprazole
+41	3. Nitroglycerin paste 1 inch q. 6 hours .|Nitroglycerin[2084,2097]||||||q. 6 hours[2111,2121]|||C0017887|4917|4917|glyceryl trinitrate
+42	4. Lopressor 25 b.i.d.|Lopressor[2127,2136]|||25[2137,2139]|||b.i.d.[2140,2146]|||null|866502|5487|hydrochlorothiazide
+43	5. Plavix 75 q.d.|Plavix[2150,2156]|||75[2157,2159]|||q.d.[2160,2164]|||C1607286|573094|32968|clopidogrel
+44	6. Lovenox 90 b.i.d.|Lovenox[2168,2175]|||90[2176,2178]|||b.i.d.[2179,2185]|||C0728963|225036|67108|enoxaparin
+45	7. Aspirin 325 q.d.|Aspirin[2189,2196]|||325[2197,2200]|||q.d.[2201,2205]|||C0992015|317300|1191|acetylsalicylic acid
+46	8. Lipitor 10 q.d.|Lipitor[2209,2216]|||10[2217,2219]|||q.d .[2220,2224]|||C1617527|617313|83367|atorvastatin
+80	He had Propofol at 30 mc per kg per minute and Neo-Synephrine to maintain his blood pressure .|Neo - Synephrine[4689,4703]||||||per minute[4674,4684]|||C0702190|204346|8163|phenylephrine
+85	On postoperative day 1 , the patient remained hemodynamically stable on a Neo-Synephrine drip to maintain an adequate blood pressure .|Neo - Synephrine[5048,5062]|||||drip[5063,5067]||||C0702190|204346|8163|phenylephrine
+86	He remained in the Intensive Care Unit as he was unable to be weaned off of his Neo-Synephrine drip .|Neo - Synephrine[5189,5203]|||||drip[5204,5208]||||C0702190|204346|8163|phenylephrine
+95	On postoperative day 4 , additional attempts were made to wean the patient off of his Neo-Synephrine , however , he continued to drop his blood pressure whenever an attempt was made .|Neo - Synephrine[5986,6000]|||||||||C0702190|204346|8163|phenylephrine
+129	1. Atorvastatin 10 mg q.d.|Atorvastatin[8320,8332]|||10mg[8333,8338]|||q.d.[8339,8343]|||C1379772|597970|83367|atorvastatin
+130	2. Plavix 75 mg q.d. times 3 months .|Plavix[8347,8353]|||75mg[8354,8359]|||q.d.[8360,8364]|3 months[8371,8379]||C1607286|573094|32968|clopidogrel
+131	3. Aspirin 325 mg q.d.|Aspirin[8385,8392]|||325mg[8393,8399]|||q.d.[8400,8404]|||C0992015|317300|1191|acetylsalicylic acid
+132	4. Lasix 20 mg q.d. times two weeks .|Lasix[8408,8413]|||20mg[8414,8419]|||q.d.[8420,8424]|||C1597886|565450|4603|furosemide
+133	5. Potassium chloride 20 mEq q.d. times two weeks .|Potassium chloride[8446,8464]|||20mEq[8465,8471]|||q.d.[8472,8476]|||C0989074|316547|8591|potassium chloride
+134	6. Metoprolol 12.5 mg b.i.d.|Metoprolol[8498,8508]|||12.5mg[8509,8516]|||b.i.d.[8517,8523]|||C0025859|6918|6918|metoprolol
+135	7. Percocet 1 to 2 tabs q. 4 hours p.r.n.|Percocet[8527,8535]||||1 to 2 tabs[8536,8547]||q. 4 hours[8548,8558]||p.r.n[8559,8564]|C0086787|42844|161|paracetamol

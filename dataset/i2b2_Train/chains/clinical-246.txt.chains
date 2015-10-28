@@ -1,0 +1,4 @@
+c="akote , ralpri" 13:0 13:2||c="your patient" 21:6 21:7||c="akote , ralpri" 21:9 21:11||c="the patient" 22:0 22:1||c="the patient" 23:5 23:6||c="the patient" 24:0 24:1||t="coref person"
+c="you" 21:4 21:4||c="your" 21:6 21:6||c="you" 26:1 26:1||t="coref person"
+c="the patient &apos;s preliminary admitting physician" 24:0 24:5||c="chird , grajord c" 24:7 24:10||t="coref person"
+c="pcp" 27:0 27:0||c="ftloyd , lette d" 28:0 28:3||t="coref person"

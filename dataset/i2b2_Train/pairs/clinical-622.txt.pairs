@@ -1,0 +1,38 @@
+c="attending" 13:0 13:0||t="coref person"||c="christopher q thompson , m.d." 13:2 13:6
+c="he" 34:0 34:0||t="coref person"||c="mr. chester" 65:0 65:1
+c="his" 21:0 21:0||t="coref person"||c="he" 25:6 25:6
+c="he" 25:6 25:6||t="coref person"||c="he" 34:0 34:0
+c="mother" 36:0 36:0||t="coref person"||c="her" 36:4 36:4
+c="mr. chester" 65:0 65:1||t="coref person"||c="he" 66:0 66:0
+c="he" 66:0 66:0||t="coref person"||c="he" 67:4 67:4
+c="he" 70:4 70:4||t="coref person"||c="he" 71:4 71:4
+c="he" 71:4 71:4||t="coref person"||c="he" 72:5 72:5
+c="he" 72:5 72:5||t="coref person"||c="he" 75:5 75:5
+c="he" 77:0 77:0||t="coref person"||c="his" 78:3 78:3
+c="his" 78:3 78:3||t="coref person"||c="his" 78:11 78:11
+c="he" 81:3 81:3||t="coref person"||c="he" 82:3 82:3
+c="he" 82:3 82:3||t="coref person"||c="his" 82:13 82:13
+c="tiny pleural effusions" 59:4 59:6||t="coref problem"||c="tiny pleural effusions" 80:10 80:12
+c="severe two vessel coronary artery disease" 22:13 22:18||t="coref problem"||c="coronary artery disease" 113:0 113:2
+c="persistent bibasilar atelectasis" 59:0 59:2||t="coref problem"||c="persistent bibasilar atelectasis" 80:5 80:7
+c="wounds" 124:7 124:7||t="coref problem"||c="wounds" 125:10 125:10
+c="benign prostatic hypertrophy" 28:0 28:2||t="coref problem"||c="bph" 116:0 116:0
+c="chest pain" 15:0 15:1||t="coref problem"||c="new onset chest pain" 19:8 19:11
+c="off pump coronary artery bypass grafting" 17:1 17:6||t="coref treatment"||c="off pump coronary artery bypass grafting" 68:6 68:11
+c="this" 19:0 19:0||t="coref person"||c="his" 21:0 21:0
+c="the operation" 70:1 70:2||t="coref treatment"||c="off pump cabg" 113:5 113:7
+c="nephrolithiasis" 29:2 29:2||t="coref problem"||c="nephrolithiasis" 117:0 117:0
+c="his" 78:11 78:11||t="coref person"||c="his" 78:19 78:19
+c="low dose beta blockade" 73:0 73:3||t="coref treatment"||c="low dose beta blockade" 77:11 77:14
+c="off pump coronary artery bypass grafting" 68:6 68:11||t="coref treatment"||c="the operation" 70:1 70:2
+c="he" 79:0 79:0||t="coref person"||c="his" 80:0 80:0
+c="surgical revascularization" 25:15 25:16||t="coref treatment"||c="surgery" 67:8 67:8
+c="asthma" 27:0 27:0||t="coref problem"||c="asthma" 115:0 115:0
+c="he" 76:0 76:0||t="coref person"||c="he" 77:0 77:0
+c="he" 67:4 67:4||t="coref person"||c="he" 70:4 70:4
+c="he" 75:5 75:5||t="coref person"||c="he" 76:0 76:0
+c="sinus bradycardia" 77:3 77:4||t="coref problem"||c="sinus bradycardia" 114:0 114:1
+c="his" 80:0 80:0||t="coref person"||c="he" 81:3 81:3
+c="his" 78:19 78:19||t="coref person"||c="he" 79:0 79:0
+c="bradycardia" 72:3 72:3||t="coref problem"||c="sinus bradycardia" 77:3 77:4
+c="patient" 12:0 12:0||t="coref person"||c="this" 19:0 19:0

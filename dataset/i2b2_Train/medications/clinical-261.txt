@@ -1,0 +1,4 @@
+20	Zantac .|Zantac[533,539]|||||||||C0592278|152523|9143|ranitidine
+21	Furosemide .|Furosemide[542,552]|||||||||C0016860|4603|4603|furosemide
+22	Aerobid .|Aerobid[555,562]|||||||||C0718284|215045|25120|flunisolide
+43	He was placed on Zantac 150 mg.|Zantac 150[1607,1617]|||||||||C0724451|220992|220992|zantac 150

@@ -1,0 +1,15 @@
+c="she" 14:0 14:0||t="coref person"||c="her" 19:0 19:0
+c="her" 19:0 19:0||t="coref person"||c="she" 20:0 20:0
+c="she" 20:3 20:3||t="coref person"||c="her" 21:0 21:0
+c="her" 21:0 21:0||t="coref person"||c="her" 22:0 22:0
+c="the patient" 32:0 32:1||t="coref person"||c="she" 33:0 33:0
+c="she" 33:0 33:0||t="coref person"||c="she" 34:0 34:0
+c="she" 34:0 34:0||t="coref person"||c="she" 46:0 46:0
+c="her" 22:0 22:0||t="coref person"||c="her" 27:8 27:8
+c="patient" 12:0 12:0||t="coref person"||c="who" 12:18 12:18
+c="she" 30:0 30:0||t="coref person"||c="the patient" 32:0 32:1
+c="her" 27:8 27:8||t="coref person"||c="she" 29:0 29:0
+c="she" 29:0 29:0||t="coref person"||c="she" 30:0 30:0
+c="who" 12:18 12:18||t="coref person"||c="she" 14:0 14:0
+c="a repeat head ct" 34:15 34:18||t="coref test"||c="repeat head ct" 46:11 46:13
+c="she" 20:0 20:0||t="coref person"||c="she" 20:3 20:3

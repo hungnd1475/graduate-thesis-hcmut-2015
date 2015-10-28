@@ -1,0 +1,19 @@
+29	A barium swallow prior to admission showed the presence of a tracheoesophageal fistula with entrance into the right mainstem bronchus below the carina .|barium[1957,1963]|||||swallow[1964,1971]||||C0004749|1311067|1311067|barium
+35	Cefuroxime 1.5 grams intravenously q8h , Solu-Medrol 62.5 mg intravenously q8h , Ventolin metered dose inhaler , 2 puffs PO q.i.d. , Pepcid 20 mg intravenously b.i.d.|Cefuroxime[2441,2451]|||1.5grams[2452,2461]||intravenously[2462,2475]|q8h[2476,2479]||||309099|2194|cefuroxime
+35	Cefuroxime 1.5 grams intravenously q8h , Solu-Medrol 62.5 mg intravenously q8h , Ventolin metered dose inhaler , 2 puffs PO q.i.d. , Pepcid 20 mg intravenously b.i.d.|Solu - Medrol[2482,2493]|||62.5mg[2494,2501]||intravenously[2502,2515]|q8h[2516,2519]|||C1600400|567984|6902|methylprednisolone
+35	Cefuroxime 1.5 grams intravenously q8h , Solu-Medrol 62.5 mg intravenously q8h , Ventolin metered dose inhaler , 2 puffs PO q.i.d. , Pepcid 20 mg intravenously b.i.d.|Ventolin[2522,2530]||metered dose inhaler[2531,2551]||2 puffs[2554,2561]|PO[2562,2564]|q.i.d.[2565,2571]|||C2345813|801094|435|salbutamol
+35	Cefuroxime 1.5 grams intravenously q8h , Solu-Medrol 62.5 mg intravenously q8h , Ventolin metered dose inhaler , 2 puffs PO q.i.d. , Pepcid 20 mg intravenously b.i.d.|Pepcid[2574,2580]|||20mg[2581,2586]||intravenously[2587,2600]|b.i.d[2601,2606]|||C1577495|491217|4278|famotidine
+54	Her steroids were weaned and the patient was brought to the Operating Room on February 10 , 1994 where she underwent once again flexible bronchoscopy and flexible esophagoscopy , as well as rigid bronchoscopy .|steroids[3730,3738]||||||||||10072|10072|steroids
+58	The patient was maintained on triple antibiotics which included Vancomycin , ceftazidime and Gentamicin .|Vancomycin[4341,4351]|||||||||C0042313|11124|11124|vancomycin
+58	The patient was maintained on triple antibiotics which included Vancomycin , ceftazidime and Gentamicin .|ceftazidime[4354,4365]|||||||||C0007559|2191|2191|ceftazidime
+58	The patient was maintained on triple antibiotics which included Vancomycin , ceftazidime and Gentamicin .|Gentamicin[4370,4380]|||||||||C0017436|662411|662411|gentamicins
+68	She suffered an episode of renal failure which was felt attributable to aminoglycoside toxicity .|aminoglycoside[5417,5431]||||||||||678|678|aminoglycoside
+69	Her steroids were weaned .|steroids[5447,5455]||||||||||10072|10072|steroids
+73	Her sputum grew out Pseudomonas aeruginosa as well .|Pseudomonas aeruginosa[5733,5755]||||||||||1310913|1310913|pseudomonas aeruginosa
+74	The urine contained yeast and she was treated with amphotericin .|amphotericin[5817,5829]|||||||||C0085795|42527|42527|amphotericin
+78	Her sputum then grew out Klebsiella and she was treated with amikacin and imipenem .|amikacin[6116,6124]|||||||||C0002499|641|641|amikacin
+78	Her sputum then grew out Klebsiella and she was treated with amikacin and imipenem .|imipenem[6129,6137]|||||||||C0020933|5690|5690|imipenem
+83	Attempts were made to facilitate her wean by resting her overnight with a combination of propafol and Fentanyl .|Fentanyl[6504,6512]|||||||||C0015846|4337|4337|fentanyl
+85	She continued to require pressor support in the high 30 &apos;s .|pressor[6647,6654]||||||||||||
+87	On March 31 , 1994 , her pressor support requirement increased and she continued to have tachypneic episodes .|pressor[6752,6759]||||||||||||
+93	The patient was removed from the ventilator and placed on a T-piece in her trachea only and was made comfortable with narcotics .|narcotics[7556,7565]||||||||||||

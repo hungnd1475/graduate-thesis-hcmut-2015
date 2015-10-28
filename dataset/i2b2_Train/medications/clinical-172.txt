@@ -1,0 +1,6 @@
+25	Pt was treated with 3 days of an antibiotics , followed by a 10 day course of levaquin ( completed 2 days PTA ) .|levaquin[1348,1356]|||||||3 days[1290,1296]|||217992|82122|levofloxacin
+29	Pt was initially seen at Lahey North , where he was given steroids , with improvement in respiratory status .|steroids[1638,1646]||||||||||10072|10072|steroids
+33	Pt was given racemic epinephrine and Decadron 10mg IV x1.|racemic epinephrine[1884,1903]||||||||||66887|66887|racepinephrine
+33	Pt was given racemic epinephrine and Decadron 10mg IV x1.|Decadron[1908,1916]|||10mg[1917,1921]||IV[1922,1924]|x1[1925,1927]||||227682|3264|dexamethasone
+86	These results exclude both melanoma and hematopoietic neoplasms .|melanoma[4213,4221]||||||||||1023577|1023577|melanoma
+97	Patient was started on morphine drip and palliative care team was consulted with recommendations to ensure comfort .|morphine[5292,5300]|||||drip[5301,5305]||||C0026549|7052|7052|morphine

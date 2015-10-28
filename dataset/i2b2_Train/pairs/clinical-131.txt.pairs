@@ -1,0 +1,228 @@
+c="dr. wedleung" 56:14 56:15||t="coref person"||c="dr. wedleung" 150:3 150:4
+c="the patient" 36:0 36:1||t="coref person"||c="she" 37:1 37:1
+c="she" 38:1 38:1||t="coref person"||c="her" 38:13 38:13
+c="her" 38:13 38:13||t="coref person"||c="she" 38:16 38:16
+c="she" 38:16 38:16||t="coref person"||c="the patient" 39:0 39:1
+c="she" 41:6 41:6||t="coref person"||c="she" 45:5 45:5
+c="she" 46:1 46:1||t="coref person"||c="she" 47:0 47:0
+c="klebsiella uti" 49:3 49:4||t="coref problem"||c="it" 50:0 50:0
+c="she" 49:0 49:0||t="coref person"||c="she" 52:3 52:3
+c="she" 52:3 52:3||t="coref person"||c="her" 52:5 52:5
+c="her" 52:5 52:5||t="coref person"||c="she" 53:3 53:3
+c="she" 55:0 55:0||t="coref person"||c="her" 55:9 55:9
+c="she" 62:0 62:0||t="coref person"||c="she" 63:0 63:0
+c="augmentin" 65:4 65:4||t="coref treatment"||c="which" 65:5 65:5
+c="she" 76:15 76:15||t="coref person"||c="her" 84:2 84:2
+c="her" 86:6 86:6||t="coref person"||c="the patient" 87:2 87:3
+c="the patient" 87:2 87:3||t="coref person"||c="she" 88:0 88:0
+c="she" 88:0 88:0||t="coref person"||c="the patient" 98:3 98:4
+c="who" 98:26 98:26||t="coref person"||c="her" 98:48 98:48
+c="her" 98:48 98:48||t="coref person"||c="she" 99:5 99:5
+c="she" 99:5 99:5||t="coref person"||c="she" 100:1 100:1
+c="she" 100:1 100:1||t="coref person"||c="she" 101:1 101:1
+c="a collagenace ondebrided" 101:20 101:22||t="coref treatment"||c="which" 101:23 101:23
+c="she" 101:1 101:1||t="coref person"||c="her" 101:28 101:28
+c="the patient" 102:15 102:16||t="coref person"||c="she" 103:0 103:0
+c="her" 106:21 106:21||t="coref person"||c="the patient" 108:2 108:3
+c="she" 109:2 109:2||t="coref person"||c="her" 109:11 109:11
+c="dilaudid p.o." 110:5 110:6||t="coref treatment"||c="which" 110:7 110:7
+c="which" 110:7 110:7||t="coref treatment"||c="it" 110:22 110:22
+c="her" 109:11 109:11||t="coref person"||c="she" 111:0 111:0
+c="she" 112:0 112:0||t="coref person"||c="her" 113:15 113:15
+c="her" 113:15 113:15||t="coref person"||c="she" 113:27 113:27
+c="she" 113:27 113:27||t="coref person"||c="her" 114:13 114:13
+c="her" 114:13 114:13||t="coref person"||c="her" 114:21 114:21
+c="her" 114:21 114:21||t="coref person"||c="she" 114:37 114:37
+c="a head ct" 115:5 115:7||t="coref test"||c="it" 115:9 115:9
+c="she" 114:37 114:37||t="coref person"||c="her" 116:2 116:2
+c="the patient" 116:20 116:21||t="coref person"||c="the patient" 118:0 118:1
+c="the patient" 118:0 118:1||t="coref person"||c="her" 119:0 119:0
+c="her" 119:0 119:0||t="coref person"||c="she" 119:11 119:11
+c="her" 121:5 121:5||t="coref person"||c="her" 121:10 121:10
+c="her" 121:14 121:14||t="coref person"||c="her" 121:20 121:20
+c="some fluid" 121:11 121:12||t="coref treatment"||c="it" 121:26 121:26
+c="her" 121:20 121:20||t="coref person"||c="her" 122:3 122:3
+c="her" 122:3 122:3||t="coref person"||c="her" 123:4 123:4
+c="a sodium chloride" 123:5 123:7||t="coref treatment"||c="that" 123:13 123:13
+c="the patient" 123:26 123:27||t="coref person"||c="her" 125:7 125:7
+c="her" 125:7 125:7||t="coref person"||c="the patient" 126:6 126:7
+c="a wedge shaped infiltrate in the right upper lobe" 126:19 126:27||t="coref problem"||c="which" 126:28 126:28
+c="her" 128:5 128:5||t="coref person"||c="she" 128:13 128:13
+c="she" 128:13 128:13||t="coref person"||c="her" 128:24 128:24
+c="her" 128:24 128:24||t="coref person"||c="she" 128:28 128:28
+c="she" 128:28 128:28||t="coref person"||c="her" 129:0 129:0
+c="her" 129:0 129:0||t="coref person"||c="her" 130:2 130:2
+c="her inr" 130:2 130:3||t="coref test"||c="it" 131:2 131:2
+c="her" 130:2 130:2||t="coref person"||c="her" 133:14 133:14
+c="her" 133:14 133:14||t="coref person"||c="her" 133:22 133:22
+c="her" 134:2 134:2||t="coref person"||c="her" 134:15 134:15
+c="her" 134:15 134:15||t="coref person"||c="her" 134:31 134:31
+c="she" 135:3 135:3||t="coref person"||c="her" 136:6 136:6
+c="her" 136:6 136:6||t="coref person"||c="her" 136:12 136:12
+c="the patient" 137:0 137:1||t="coref person"||c="she" 138:0 138:0
+c="she" 138:0 138:0||t="coref person"||c="the patient" 139:0 139:1
+c="the patient" 139:0 139:1||t="coref person"||c="she" 140:5 140:5
+c="she" 141:7 141:7||t="coref person"||c="her" 142:4 142:4
+c="her" 142:4 142:4||t="coref person"||c="her" 145:25 145:25
+c="she" 152:8 152:8||t="coref person"||c="her" 152:15 152:15
+c="pain control" 23:14 23:15||t="coref treatment"||c="pain control" 104:7 104:8
+c="which" 102:14 102:14||t="coref treatment"||c="the taxol therapy" 103:2 103:4
+c="hyponatremia" 17:1 17:1||t="coref problem"||c="hyponatremic" 118:6 118:6
+c="hyponatremic" 118:6 118:6||t="coref problem"||c="hypovolemia" 120:16 120:16
+c="iv antibiotics" 100:18 100:19||t="coref treatment"||c="dicloxicillin" 101:5 101:5
+c="local and metastatic recurrence" 38:8 38:11||t="coref problem"||c="tumor recurrences" 45:22 45:23
+c="pain" 105:8 105:8||t="coref problem"||c="pain" 108:8 108:8
+c="ovarian cyst resection" 20:3 20:5||t="coref treatment"||c="ovarian cyst resection" 60:2 60:4
+c="nausea" 19:3 19:3||t="coref problem"||c="nausea" 55:17 55:17
+c="an agent" 101:13 101:14||t="coref treatment"||c="santyl" 101:16 101:16
+c="bilateral breast masses" 26:8 26:10||t="coref problem"||c="carcinoma" 26:14 26:14
+c="oxygen" 139:4 139:4||t="coref treatment"||c="oxygen" 140:9 140:9
+c="systemic chemotherapy" 38:19 38:20||t="coref treatment"||c="high dose chemotherapy" 47:8 47:10
+c="elevated" 133:26 133:26||t="coref problem"||c="the elevatd blood pressure" 143:14 143:17
+c="a metastatic adenocarcinoma of the breast" 22:9 22:14||t="coref problem"||c="a tender right axillary mass" 24:8 24:12
+c="metastatic cancer" 33:15 33:16||t="coref problem"||c="a stage iii-a adenocarcinoma of the breast" 37:3 37:9
+c="a stage iii-a adenocarcinoma of the breast" 37:3 37:9||t="coref problem"||c="her tumor" 38:13 38:14
+c="the fluid restriction of free water intake" 125:13 125:19||t="coref treatment"||c="fluid restriction" 137:24 137:25
+c="metastatic breast cancer" 58:2 58:4||t="coref problem"||c="metastatic breast cell ca" 98:12 98:15
+c="fluid restriction" 122:14 122:15||t="coref treatment"||c="the fluid restriction of free water intake" 125:13 125:19
+c="high dose chemotherapy" 22:19 22:21||t="coref treatment"||c="systemic chemotherapy" 38:19 38:20
+c="hypovolemia" 120:16 120:16||t="coref problem"||c="her hyponatremia" 121:5 121:6
+c="fentanyl patch" 111:15 111:16||t="coref treatment"||c="the fentanyl patch" 112:9 112:11
+c="keflex" 98:43 98:43||t="coref treatment"||c="the keflex" 99:0 99:1
+c="diarrhea" 55:5 55:5||t="coref problem"||c="diarrhea" 98:34 98:34
+c="nausea" 55:17 55:17||t="coref problem"||c="nausea" 98:36 98:36
+c="heparin" 128:7 128:7||t="coref treatment"||c="anticoagulation" 128:9 128:9
+c="pulmonary embolus" 18:1 18:2||t="coref problem"||c="pe" 127:12 127:12
+c="5 liters" 141:10 141:11||t="coref treatment"||c="5 liters" 141:18 141:19
+c="increased shortness of breath" 126:9 126:12||t="coref problem"||c="her difficulty breathing" 152:19 152:21
+c="local wound care" 101:9 101:11||t="coref treatment"||c="an agent" 101:13 101:14
+c="her tumor" 38:13 38:14||t="coref problem"||c="metastatic breast cancer" 58:2 58:4
+c="pain" 113:34 113:34||t="coref problem"||c="her pain" 152:15 152:16
+c="the patient &apos;s sodium" 123:26 123:29||t="coref test"||c="that" 124:1 124:1
+c="the patient" 22:0 22:1||t="coref person"||c="who" 22:15 22:15
+c="we" 132:2 132:2||t="coref person"||c="we" 134:0 134:0
+c="we" 56:0 56:0||t="coref person"||c="we" 101:7 101:7
+c="fever" 19:7 19:7||t="coref problem"||c="fever" 23:6 23:6
+c="she" 73:0 73:0||t="coref person"||c="she" 76:15 76:15
+c="her blood pressure" 134:15 134:17||t="coref test"||c="which" 134:18 134:18
+c="coumadin" 128:32 128:32||t="coref treatment"||c="coumadin" 131:17 131:17
+c="her hyponatremia" 133:14 133:15||t="coref problem"||c="the hyponatremia" 143:7 143:8
+c="which" 112:12 112:12||t="coref treatment"||c="the fentanyl patch" 113:8 113:10
+c="we" 101:7 101:7||t="coref person"||c="we" 102:6 102:6
+c="we" 106:25 106:25||t="coref person"||c="we" 110:19 110:19
+c="her" 65:7 65:7||t="coref person"||c="she" 72:0 72:0
+c="atenolol" 134:33 134:33||t="coref treatment"||c="atenolol" 135:6 135:6
+c="nifedipine ir" 134:4 134:5||t="coref treatment"||c="that" 134:9 134:9
+c="she" 23:0 23:0||t="coref person"||c="the patient" 24:0 24:1
+c="tumor recurrences" 45:22 45:23||t="coref problem"||c="mediastinal recurrence" 46:3 46:4
+c="she" 47:0 47:0||t="coref person"||c="she" 49:0 49:0
+c="her" 152:15 152:15||t="coref person"||c="her" 152:19 152:19
+c="her" 105:10 105:10||t="coref person"||c="she" 106:8 106:8
+c="i" 137:21 137:21||t="coref person"||c="i" 143:3 143:3
+c="chest wall nodules" 45:14 45:16||t="coref problem"||c="which" 45:17 45:17
+c="a tender right axillary mass" 24:8 24:12||t="coref problem"||c="a 5.5 cm poorly differentiated , grade iii out of iii infiltrating ductal carcinoma" 31:6 31:19
+c="ms contin" 67:0 67:1||t="coref treatment"||c="ms contin" 106:11 106:12
+c="the patient" 152:0 152:1||t="coref person"||c="she" 152:8 152:8
+c="this patient" 104:4 104:5||t="coref person"||c="she" 105:0 105:0
+c="dilaudid" 111:4 111:4||t="coref treatment"||c="the dilaudid" 113:24 113:25
+c="the patient" 108:2 108:3||t="coref person"||c="she" 109:2 109:2
+c="her" 101:28 101:28||t="coref person"||c="the patient" 102:15 102:16
+c="she" 141:0 141:0||t="coref person"||c="she" 141:7 141:7
+c="we" 102:6 102:6||t="coref person"||c="we" 106:25 106:25
+c="she" 148:0 148:0||t="coref person"||c="she" 149:0 149:0
+c="the patient" 39:0 39:1||t="coref person"||c="she" 41:6 41:6
+c="she" 111:11 111:11||t="coref person"||c="she" 112:0 112:0
+c="the taxol therapy" 103:2 103:4||t="coref treatment"||c="that" 103:6 103:6
+c="her" 121:10 121:10||t="coref person"||c="her" 121:14 121:14
+c="pain" 108:8 108:8||t="coref problem"||c="her pain" 113:15 113:16
+c="ahead ct" 114:10 114:11||t="coref test"||c="a head ct" 115:5 115:7
+c="she" 119:11 119:11||t="coref person"||c="her" 121:5 121:5
+c="her" 136:12 136:12||t="coref person"||c="the patient" 137:0 137:1
+c="the patient" 24:0 24:1||t="coref person"||c="the patient" 36:0 36:1
+c="she" 61:0 61:0||t="coref person"||c="she" 62:0 62:0
+c="metastatic adenocarcinoma of the breast" 15:0 15:4||t="coref problem"||c="a metastatic adenocarcinoma of the breast" 22:9 22:14
+c="the fentanyl patch" 112:9 112:11||t="coref treatment"||c="which" 112:12 112:12
+c="we" 125:0 125:0||t="coref person"||c="we" 128:1 128:1
+c="we" 122:0 122:0||t="coref person"||c="we" 122:9 122:9
+c="it" 110:22 110:22||t="coref treatment"||c="dilaudid" 111:4 111:4
+c="left simple mastectomy" 30:9 30:11||t="coref treatment"||c="the left simple mastectomy" 34:0 34:3
+c="we" 121:24 121:24||t="coref person"||c="we" 122:0 122:0
+c="she" 37:1 37:1||t="coref person"||c="she" 38:1 38:1
+c="cellulitis" 23:12 23:12||t="coref problem"||c="cellulitis" 100:16 100:16
+c="the patient" 98:3 98:4||t="coref person"||c="who" 98:26 98:26
+c="high dose chemotherapy" 47:8 47:10||t="coref treatment"||c="high dose chemotherapy" 49:10 49:12
+c="we" 131:10 131:10||t="coref person"||c="we" 132:2 132:2
+c="neutropenia" 53:9 53:9||t="coref problem"||c="neutropenia" 58:10 58:10
+c="the patient" 54:0 54:1||t="coref person"||c="she" 55:0 55:0
+c="we" 121:8 121:8||t="coref person"||c="we" 121:24 121:24
+c="further work-up" 116:12 116:13||t="coref test"||c="that" 116:16 116:16
+c="her" 84:2 84:2||t="coref person"||c="her" 86:6 86:6
+c="that" 116:16 116:16||t="coref test"||c="that" 116:26 116:26
+c="further blocks" 109:4 109:5||t="coref treatment"||c="which" 109:7 109:7
+c="coumadin" 131:17 131:17||t="coref treatment"||c="it" 132:5 132:5
+c="we" 123:2 123:2||t="coref person"||c="we" 125:0 125:0
+c="vomiting" 19:5 19:5||t="coref problem"||c="vomiting" 55:19 55:19
+c="she" 111:0 111:0||t="coref person"||c="she" 111:11 111:11
+c="pbse" 22:23 22:23||t="coref treatment"||c="peripheral stem cell support" 47:14 47:17
+c="coumadin" 128:26 128:26||t="coref treatment"||c="coumadin" 128:32 128:32
+c="she" 64:0 64:0||t="coref person"||c="she" 65:0 65:0
+c="her" 123:4 123:4||t="coref person"||c="the patient" 123:26 123:27
+c="vomiting" 55:19 55:19||t="coref problem"||c="vomiting" 98:38 98:38
+c="santyl" 101:16 101:16||t="coref treatment"||c="which" 101:18 101:18
+c="she" 65:0 65:0||t="coref person"||c="her" 65:7 65:7
+c="who" 22:15 22:15||t="coref person"||c="she" 23:0 23:0
+c="her blood pressure" 133:22 133:24||t="coref test"||c="her blood pressure" 134:15 134:17
+c="she" 72:0 72:0||t="coref person"||c="she" 73:0 73:0
+c="we" 130:0 130:0||t="coref person"||c="we" 131:10 131:10
+c="atypical cells" 27:9 27:10||t="coref problem"||c="which" 27:11 27:11
+c="she" 149:0 149:0||t="coref person"||c="the patient" 152:0 152:1
+c="she" 105:0 105:0||t="coref person"||c="her" 105:10 105:10
+c="her" 134:31 134:31||t="coref person"||c="she" 135:3 135:3
+c="a right modified mastectomy" 30:4 30:7||t="coref treatment"||c="the right modified radical mastectomy" 31:0 31:4
+c="she" 45:5 45:5||t="coref person"||c="she" 46:1 46:1
+c="she" 106:8 106:8||t="coref person"||c="she" 106:17 106:17
+c="she" 103:0 103:0||t="coref person"||c="this patient" 104:4 104:5
+c="her" 133:22 133:22||t="coref person"||c="her" 134:2 134:2
+c="oxygen" 140:9 140:9||t="coref treatment"||c="the oxygen" 142:8 142:9
+c="her pain" 113:15 113:16||t="coref problem"||c="pain" 113:34 113:34
+c="we" 134:0 134:0||t="coref person"||c="we" 134:28 134:28
+c="she" 106:17 106:17||t="coref person"||c="her" 106:21 106:21
+c="we" 113:18 113:18||t="coref person"||c="we" 114:8 114:8
+c="diarrhea" 19:1 19:1||t="coref problem"||c="diarrhea" 55:5 55:5
+c="she" 140:5 140:5||t="coref person"||c="she" 141:0 141:0
+c="cmsap" 39:5 39:5||t="coref treatment"||c="which" 39:7 39:7
+c="palliative taxol chemotherapy" 102:10 102:12||t="coref treatment"||c="which" 102:14 102:14
+c="we" 134:28 134:28||t="coref person"||c="we" 142:0 142:0
+c="fever" 23:6 23:6||t="coref problem"||c="fever" 54:7 54:7
+c="pain control" 106:1 106:2||t="coref treatment"||c="pain management" 106:30 106:31
+c="her" 145:25 145:25||t="coref person"||c="she" 148:0 148:0
+c="msir" 67:3 67:3||t="coref treatment"||c="msir" 106:14 106:14
+c="difficulty with recent memory" 87:11 87:14||t="coref problem"||c="her clouded thinking" 114:21 114:23
+c="we" 121:0 121:0||t="coref person"||c="we" 121:8 121:8
+c="pain control" 104:7 104:8||t="coref treatment"||c="pain control" 106:1 106:2
+c="a mass on the right pectoralis muscle" 33:3 33:9||t="coref problem"||c="which" 33:10 33:10
+c="the patient" 126:6 126:7||t="coref person"||c="her" 128:5 128:5
+c="her" 55:9 55:9||t="coref person"||c="she" 61:0 61:0
+c="a subarachnoid neurologic block at c6-c7 interface" 107:6 107:12||t="coref treatment"||c="that" 108:1 108:1
+c="we" 128:19 128:19||t="coref person"||c="we" 130:0 130:0
+c="we" 122:9 122:9||t="coref person"||c="we" 123:2 123:2
+c="pe" 127:12 127:12||t="coref problem"||c="the pulmonary embolus" 140:2 140:4
+c="we" 114:8 114:8||t="coref person"||c="we" 115:0 115:0
+c="diarrhea" 98:34 98:34||t="coref problem"||c="the diarrhea" 99:7 99:8
+c="we" 113:0 113:0||t="coref person"||c="we" 113:18 113:18
+c="we" 110:19 110:19||t="coref person"||c="we" 113:0 113:0
+c="it" 131:2 131:2||t="coref test"||c="it" 131:14 131:14
+c="the pulmonary embolus" 140:2 140:4||t="coref problem"||c="pulmonary embolus" 143:10 143:11
+c="we" 116:8 116:8||t="coref person"||c="we" 121:0 121:0
+c="her hyponatremia" 121:5 121:6||t="coref problem"||c="her hyponatremia" 133:14 133:15
+c="an erythema on her left chest wall" 98:45 98:51||t="coref problem"||c="here rythematous induration" 100:11 100:13
+c="she" 53:3 53:3||t="coref person"||c="the patient" 54:0 54:1
+c="metastatic carcinoma" 32:17 32:18||t="coref problem"||c="metastatic cancer" 33:15 33:16
+c="we" 128:1 128:1||t="coref person"||c="we" 128:19 128:19
+c="her" 116:2 116:2||t="coref person"||c="the patient" 116:20 116:21
+c="high dose chemotherapy" 49:10 49:12||t="coref treatment"||c="chemotherapy" 98:19 98:19
+c="she" 63:0 63:0||t="coref person"||c="she" 64:0 64:0
+c="confusion" 55:15 55:15||t="coref problem"||c="difficulty with recent memory" 87:11 87:14
+c="anticoagulation" 128:9 128:9||t="coref treatment"||c="heparin" 128:17 128:17
+c="we" 115:0 115:0||t="coref person"||c="we" 116:8 116:8
+c="fever" 54:7 54:7||t="coref problem"||c="fever" 98:29 98:29

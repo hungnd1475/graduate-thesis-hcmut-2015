@@ -1,0 +1,26 @@
+24	2. Atrial fibrillation on Coumadin .|Coumadin[1124,1132]|||||||||C0699129|202421|11289|warfarin
+38	1. Digoxin .125 mg qod , .25 mg qod .|Digoxin[1438,1445]|||.25mg[1460,1466]|||qod[1454,1457]|||C0012265|3407|3407|digoxin
+38	1. Digoxin .125 mg qod , .25 mg qod .|Digoxin[1438,1445]|||.125mg[1446,1453]|||qod[1467,1470]|||C0012265|3407|3407|digoxin
+39	2. Colace 100 mg po tid .|Colace[1476,1482]|||100mg[1483,1489]||po[1490,1492]|tid[1493,1496]|||C0711644|1247756|82003|docusate
+40	3. Levoxyl 100 ugm po qd .|Levoxyl[1502,1509]|||100[1510,1513]||po[1518,1520]|qd[1521,1523]|||C0707568|966283|10582|levothyroxine
+41	4. Prinivil 20 mg po qd .|Prinivil[1529,1537]|||20mg[1538,1543]||po[1544,1546]|qd[1547,1549]|||C0707940|206766|29046|lisinopril
+42	5. Zantac 150 mg po bid .|Zantac 150[1555,1565]|||||po[1569,1571]|bid[1572,1575]|||C0724451|220992|220992|zantac 150
+43	6. Aspirin 325 mg qd .|Aspirin[1581,1588]|||325mg[1589,1595]|||qd[1596,1598]|||C0992015|317300|1191|acetylsalicylic acid
+44	7. Aricept 5 mg po qd .|Aricept[1604,1611]|||5mg[1612,1616]||po[1617,1619]|qd[1620,1622]|||C0594445|997230|135447|donepezil
+45	8. Glyburide 1.25 mg po qam .|Glyburide[1628,1637]|||1.25mg[1638,1645]||po[1646,1648]|qam[1649,1652]|||C0688969|197737|4815|glibenclamide
+46	9. Oxybutynin 5 mg po bid .|Oxybutynin[1658,1668]|||5mg[1669,1673]||po[1674,1676]|bid[1677,1680]||||863664|32675|oxybutynin
+47	10. Coumadin 7.5 mg on Sun , Tues , Wed , Fri and Sat .|Coumadin[1687,1695]|||7.5mg[1696,1702]|||Fri and Sat[1725,1736]|||C0710786|855346|11289|warfarin
+75	She was placed on a bowel regimen of Dulcolax , Fleet enema , and Colace .|Dulcolax[3242,3250]|||||||||C0591416|151672|1596|bisacodyl
+75	She was placed on a bowel regimen of Dulcolax , Fleet enema , and Colace .|Fleet enema[3253,3264]|||||||||C0117857|50088|235496|sodium phosphate,monobasic
+75	She was placed on a bowel regimen of Dulcolax , Fleet enema , and Colace .|Colace[3271,3277]|||||||||C0282139|82000|82003|docusate
+87	1. Digoxin .125 mg qod , .25 mg qod .|Digoxin[4077,4084]|||.25mg[4099,4105]|||qod[4093,4096]|||C0012265|3407|3407|digoxin
+87	1. Digoxin .125 mg qod , .25 mg qod .|Digoxin[4077,4084]|||.125mg[4085,4092]|||qod[4106,4109]|||C0012265|3407|3407|digoxin
+88	2. Colace 100 mg po tid .|Colace[4115,4121]|||100mg[4122,4128]||po[4129,4131]|tid[4132,4135]|||C0711644|1247756|82003|docusate
+89	3. Levoxyl 100 ugm po qd .|Levoxyl[4141,4148]|||100[4149,4152]||po[4157,4159]|qd[4160,4162]|||C0707568|966283|10582|levothyroxine
+90	4. Prinivil 20 mg po qd .|Prinivil[4168,4176]|||20mg[4177,4182]||po[4183,4185]|qd[4186,4188]|||C0707940|206766|29046|lisinopril
+91	5. Zantac 150 mg po bid .|Zantac 150[4194,4204]|||||po[4208,4210]|bid[4211,4214]|||C0724451|220992|220992|zantac 150
+92	6. Aspirin 325 mg qd .|Aspirin[4220,4227]|||325mg[4228,4234]|||qd[4235,4237]|||C0992015|317300|1191|acetylsalicylic acid
+93	7. Aricept 5 mg po qd .|Aricept[4243,4250]|||5mg[4251,4255]||po[4256,4258]|qd[4259,4261]|||C0594445|997230|135447|donepezil
+94	8. Glyburide 1.25 mg po qam .|Glyburide[4267,4276]|||1.25mg[4277,4284]||po[4285,4287]|qam[4288,4291]|||C0688969|197737|4815|glibenclamide
+95	9. Oxybutynin 5 mg po bid .|Oxybutynin[4297,4307]|||5mg[4308,4312]||po[4313,4315]|bid[4316,4319]||||863664|32675|oxybutynin
+96	10. Coumadin 7.5 mg on Sun , Tues , Wed , Fri and Sat .|Coumadin[4326,4334]|||7.5mg[4335,4341]|||Fri and Sat[4364,4375]|||C0710786|855346|11289|warfarin

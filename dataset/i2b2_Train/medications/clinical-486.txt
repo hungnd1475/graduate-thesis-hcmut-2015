@@ -1,0 +1,31 @@
+19	A potassium three days prior to surgery was 2.8 , the level being normalized with p.o. kay ciel prior to admission .|potassium[993,1002]|||||||three days[1003,1013]||C0032821|8588|8588|potassium
+19	A potassium three days prior to surgery was 2.8 , the level being normalized with p.o. kay ciel prior to admission .|kay ciel[1078,1086]|||||p.o.[1073,1077]||||C3223442|1169300|8591|potassium chloride
+29	She received Tamoxifen briefly .|Tamoxifen[1621,1630]|||||||||C0039286|10324|10324|tamoxifen
+33	Dyazide one p.o. q.d.|Dyazide[1800,1807]||||one[1808,1811]|p.o.[1812,1816]|q.d .[1817,1821]|||C3223800|1169664|5487|hydrochlorothiazide
+34	Propanolol 5 mg. p.o. t.i.d.|Propanolol[1822,1832]|||5mg.[1833,1838]||p.o.[1839,1843]|t.i.d[1844,1849]||||8787|8787|propranolol
+35	Isordil 5 mg. p.o. t.i.d.|Isordil[1851,1858]|||5mg.[1859,1864]||p.o.[1865,1869]|t.i.d[1870,1875]||||793873|6058|isosorbide dinitrate
+67	Albumin 2.5 .|Albumin[3824,3831]|||2.5[3832,3835]||||||null|1364313|433|albumin
+76	She was anticoagulated with heparin and after several days Coumadin was started .|heparin[4685,4692]|||||||||C0019134|235473|235473|heparin,porcine
+76	She was anticoagulated with heparin and after several days Coumadin was started .|Coumadin[4716,4724]|||||||several days[4703,4715]||C0699129|202421|11289|warfarin
+77	Her exact Coumadin dose is undetermined at this point , however it looks like it will be something around 5 mg a day .|Coumadin[4749,4757]|||5mg[4845,4849]|||a day[4850,4855]|||C2709920|855333|11289|warfarin
+79	She needs to be given 5 mg of Coumadin tonight , 5/22/92 .|Coumadin[4952,4960]|||5mg[4944,4948]||||||C2709920|855333|11289|warfarin
+80	In addition heparin should be started to drip on arrival at 400 units an hour .|heparin[4993,5000]|||||drip[5022,5026]||||C0019134|235473|235473|heparin,porcine
+101	We would like to discontinue her Isordil to improve upon some orthostatic hypotension , but we are not certain whether her heart will tolerate this .|Isordil[6928,6935]||||||||||151187|6058|isosorbide dinitrate
+102	Persantine thallium is scheduled at this time , but is yet to be performed .|thallium[7056,7064]|||||||||C0039738|1311633|1311633|thallium
+102	Persantine thallium is scheduled at this time , but is yet to be performed .|Persantine[7045,7055]||||||||||203015|3521|dipyridamole
+105	During her hospitalization , we confirmed the presence of this , even when she was hydrated with saline , to a fractional excretion of sodium of 2% .|saline[7339,7345]||||||||||789982|789982|saline
+109	Florinef is to be considered , however stopping the Isordil is one goal .|Florinef[7656,7664]|||||||||C0060486|25105|4452|fludrocortisone
+109	Florinef is to be considered , however stopping the Isordil is one goal .|Isordil[7708,7715]||||||||||151187|6058|isosorbide dinitrate
+117	The left volar forearm has the PPD just proximal to the wrist crease and a candida albicans placed just distal to the antecubital fossa .|candida albicans[8215,8231]|||||||||C0006837|1963|1963|candida albicans
+118	The patient has a history of deep venous thrombosis in 1990 , for which she received 6 months of Coumadin .|Coumadin[8375,8383]|||||||6 months[8363,8371]||C0699129|202421|11289|warfarin
+122	The patient had mild hyponatremia during this hospitalization with a sodium as low as 131 .|sodium[8702,8708]|||||||||C0037473|9853|9853|sodium
+130	Propanolol 5 mg. p.o. t.i.d. [ hold for SBP less than 110 ] , Isosorbide 5 mg. p.o. t.i.d. , hold for SBP less than 110 , Colace 100 mg. p.o. b.i.d.|Propanolol[9060,9070]|||5mg.[9071,9076]||p.o.[9077,9081]|t.i.d.[9082,9088]||||8787|8787|propranolol
+130	Propanolol 5 mg. p.o. t.i.d. [ hold for SBP less than 110 ] , Isosorbide 5 mg. p.o. t.i.d. , hold for SBP less than 110 , Colace 100 mg. p.o. b.i.d.|Isosorbide[9122,9132]|||5mg.[9133,9138]||p.o.[9139,9143]|t.i.d.[9144,9150]|||C0981530|314055|6058|isosorbide dinitrate
+130	Propanolol 5 mg. p.o. t.i.d. [ hold for SBP less than 110 ] , Isosorbide 5 mg. p.o. t.i.d. , hold for SBP less than 110 , Colace 100 mg. p.o. b.i.d.|Colace[9182,9188]|||100mg.[9189,9196]||p.o.[9197,9201]|b.i.d[9202,9207]|||C0711644|1247756|82003|docusate
+131	Pilocarpine 4% one drop q.i.d.|Pilocarpine[9209,9220]|||4[9221,9222]|||q.i.d[9233,9238]|||C0031923|8328|8328|pilocarpine
+133	Pilocarpine 2% one drop b.i.d.|Pilocarpine[9245,9256]||||||b.i.d[9269,9274]|||C0031923|8328|8328|pilocarpine
+137	Bacitracin ointment one drop O.D. q.h.s.|Bacitracin[9317,9327]||ointment[9328,9336]||||q.h.s[9351,9356]|||C1245017|370983|1291|bacitracin
+138	Ciprofloxacin 500 mg. one p.o. b.i.d. x four more days [ until 5/25/92 ] , for recently discovered siderobacter UTI .|Ciprofloxacin[9358,9371]|||500mg.[9372,9379]|one[9380,9383]|p.o.[9384,9388]|b.i.d.[9389,9395]|four more days[9398,9412]|||309309|2551|ciprofloxacin
+139	Coumadin 5 mg. p.o. q.h.s.|Coumadin[9476,9484]|||5mg.[9485,9490]||p.o.[9491,9495]|q.h.s[9496,9501]|||C0710780|855334|11289|warfarin
+141	Heparin i.v. drip at 400 units per hour , on her arrival .|Heparin[9535,9542]|||||drip[9548,9552]|per hour[9566,9574]|||C0019134|235473|235473|heparin,porcine
+144	Amoxicillin rash .|Amoxicillin[9693,9704]|||||||||C0002645|723|723|amoxicillin

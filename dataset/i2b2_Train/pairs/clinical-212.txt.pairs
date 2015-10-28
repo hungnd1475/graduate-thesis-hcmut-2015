@@ -1,0 +1,75 @@
+c="her primary care physician" 122:6 122:9||t="coref person"||c="dr. benson" 122:11 122:12
+c="a 40-year-old female" 12:0 12:2||t="coref person"||c="who" 12:36 12:36
+c="who" 12:36 12:36||t="coref person"||c="her" 12:49 12:49
+c="her" 12:49 12:49||t="coref person"||c="her" 41:2 41:2
+c="her" 43:7 43:7||t="coref person"||c="the patient" 85:0 85:1
+c="the patient" 85:0 85:1||t="coref person"||c="her" 86:3 86:3
+c="patient" 86:8 86:8||t="coref person"||c="the patient" 87:0 87:1
+c="the patient" 88:0 88:1||t="coref person"||c="her" 88:6 88:6
+c="her" 88:6 88:6||t="coref person"||c="her" 89:9 89:9
+c="she" 89:15 89:15||t="coref person"||c="the patient" 90:0 90:1
+c="she" 91:0 91:0||t="coref person"||c="her" 91:5 91:5
+c="her benadryl" 92:13 92:14||t="coref treatment"||c="that" 92:15 92:15
+c="she" 92:16 92:16||t="coref person"||c="this patient" 93:9 93:10
+c="this patient" 93:9 93:10||t="coref person"||c="she" 93:13 93:13
+c="she" 93:13 93:13||t="coref person"||c="the patient" 95:0 95:1
+c="patient" 101:0 101:0||t="coref person"||c="the patient" 122:0 122:1
+c="the patient" 122:0 122:1||t="coref person"||c="her" 122:6 122:6
+c="instent restenosis" 28:1 28:2||t="coref problem"||c="mild diffuse instent restenosis in the mid stent" 87:9 87:16
+c="which" 91:9 91:9||t="coref problem"||c="the asthma exacerbation" 92:22 92:24
+c="asthma" 30:1 30:1||t="coref problem"||c="asthma flare" 43:12 43:13
+c="flexeril" 55:1 55:1||t="coref treatment"||c="flexeril" 97:9 97:9
+c="it" 13:0 13:0||t="coref problem"||c="chest pain" 19:2 19:3
+c="which" 90:13 90:13||t="coref treatment"||c="the aspirin" 92:7 92:8
+c="advair" 47:1 47:1||t="coref treatment"||c="advair" 106:1 106:1
+c="vicodin" 97:11 97:11||t="coref treatment"||c="vicodin" 115:1 115:1
+c="shortness of breath" 16:1 16:3||t="coref problem"||c="her shortness of breath" 43:7 43:10
+c="the patient" 87:0 87:1||t="coref person"||c="the patient" 88:0 88:1
+c="nitroglycerin" 14:3 14:3||t="coref treatment"||c="nitroglycerin drip" 20:5 20:6
+c="benadryl" 60:1 60:1||t="coref treatment"||c="benadryl" 91:13 91:13
+c="which" 43:2 43:2||t="coref treatment"||c="aspirin" 89:7 89:7
+c="plavix" 89:24 89:24||t="coref treatment"||c="plavix" 105:1 105:1
+c="diovan" 46:1 46:1||t="coref treatment"||c="valsartan" 118:1 118:1
+c="her" 41:2 41:2||t="coref person"||c="she" 43:3 43:3
+c="a cardiac catheterization" 86:10 86:12||t="coref test"||c="cardiac catheterization" 87:5 87:6
+c="the aspirin" 92:7 92:8||t="coref treatment"||c="aspirin" 93:0 93:0
+c="benadryl" 91:13 91:13||t="coref treatment"||c="her benadryl" 92:13 92:14
+c="asthma flare" 43:12 43:13||t="coref problem"||c="her asthma attacks" 91:5 91:7
+c="her" 91:5 91:5||t="coref person"||c="the patient" 92:0 92:1
+c="the patient" 92:0 92:1||t="coref person"||c="she" 92:5 92:5
+c="the patient" 95:0 95:1||t="coref person"||c="patient" 101:0 101:0
+c="her" 92:13 92:13||t="coref person"||c="she" 92:16 92:16
+c="plavix" 48:1 48:1||t="coref treatment"||c="plavix" 89:24 89:24
+c="she" 43:3 43:3||t="coref person"||c="her" 43:7 43:7
+c="back pain" 96:1 96:2||t="coref problem"||c="this" 97:0 97:0
+c="singulair" 54:1 54:1||t="coref treatment"||c="montelukast" 109:1 109:1
+c="aspirin" 89:22 89:22||t="coref treatment"||c="aspirin desensitization protocol" 90:9 90:11
+c="this" 97:0 97:0||t="coref problem"||c="a chronic issue" 97:2 97:4
+c="she" 92:5 92:5||t="coref person"||c="her" 92:13 92:13
+c="mi" 12:53 12:53||t="coref problem"||c="non-st-elevation myocardial infarction" 27:1 27:3
+c="she" 90:14 90:14||t="coref person"||c="she" 91:0 91:0
+c="her" 86:3 86:3||t="coref person"||c="patient" 86:8 86:8
+c="chest pain" 19:2 19:3||t="coref problem"||c="chest pain" 84:1 84:2
+c="this" 93:18 93:18||t="coref treatment"||c="aspirin" 119:1 119:1
+c="that" 92:15 92:15||t="coref treatment"||c="benadryl" 120:1 120:1
+c="aspirin desensitization protocol" 90:9 90:11||t="coref treatment"||c="which" 90:13 90:13
+c="stent to the lad" 12:12 12:15||t="coref treatment"||c="three stents" 27:8 27:9
+c="cardiac catheterization evaluation" 18:6 18:8||t="coref test"||c="a cardiac catheterization" 86:10 86:12
+c="her asthma attacks" 91:5 91:7||t="coref problem"||c="which" 91:9 91:9
+c="hypercholesterolemia" 22:1 22:1||t="coref problem"||c="hyperlipidemia" 94:1 94:1
+c="aspirin" 93:0 93:0||t="coref treatment"||c="this" 93:18 93:18
+c="her" 89:9 89:9||t="coref person"||c="she" 89:15 89:15
+c="chest pain" 12:45 12:46||t="coref problem"||c="it" 13:0 13:0
+c="the patient" 90:0 90:1||t="coref person"||c="she" 90:14 90:14
+c="brachytherapy to the rca" 12:31 12:34||t="coref treatment"||c="brachytherapy" 28:5 28:5
+c="vicodin" 52:1 52:1||t="coref treatment"||c="vicodin" 97:11 97:11
+c="prozac" 63:1 63:1||t="coref treatment"||c="fluoxetine" 114:1 114:1
+c="aspirin" 89:7 89:7||t="coref treatment"||c="aspirin" 89:22 89:22
+c="non-st-elevation myocardial infarction" 12:6 12:8||t="coref problem"||c="mi" 12:53 12:53
+c="the patient 's lipitor" 95:0 95:3||t="coref treatment"||c="atorvastatin" 117:1 117:1
+c="neurontin" 50:1 50:1||t="coref treatment"||c="neurontin" 107:1 107:1
+c="flexeril" 97:9 97:9||t="coref treatment"||c="cyclobenzaprine" 116:1 116:1
+c="premarin" 62:1 62:1||t="coref treatment"||c="estrogen" 113:1 113:1
+c="instent restenosis" 12:24 12:25||t="coref problem"||c="instent restenosis" 28:1 28:2
+c="coronary artery disease" 26:1 26:3||t="coref problem"||c="disease" 86:6 86:6
+c="aspirin" 43:0 43:0||t="coref treatment"||c="which" 43:2 43:2

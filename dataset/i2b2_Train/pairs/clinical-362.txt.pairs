@@ -1,0 +1,26 @@
+c="patient" 12:0 12:0||t="coref person"||c="mr. williams" 18:0 18:1
+c="he" 21:0 21:0||t="coref person"||c="mr. williams" 41:0 41:1
+c="mr. williams" 18:0 18:1||t="coref person"||c="who" 18:7 18:7
+c="he" 19:0 19:0||t="coref person"||c="he" 20:0 20:0
+c="he" 20:0 20:0||t="coref person"||c="he" 21:0 21:0
+c="mr. williams" 41:0 41:1||t="coref person"||c="he" 43:0 43:0
+c="he" 43:0 43:0||t="coref person"||c="he" 44:0 44:0
+c="he" 44:0 44:0||t="coref person"||c="he" 45:0 45:0
+c="he" 45:0 45:0||t="coref person"||c="he" 45:14 45:14
+c="he" 45:14 45:14||t="coref person"||c="he" 46:0 46:0
+c="coronary artery bypass graft" 16:0 16:3||t="coref treatment"||c="a cabgx2" 41:20 41:21
+c="cri" 33:0 33:0||t="coref problem"||c="chronic renal insufficiency" 96:0 96:2
+c="atrial fibrillation" 46:2 46:3||t="coref problem"||c="atrial fibrillation" 95:0 95:1
+c="coumadin" 47:6 47:6||t="coref treatment"||c="coumadin" 87:1 87:1
+c="cardiac catheterization" 20:2 20:3||t="coref test"||c="which" 20:4 20:4
+c="aortic valve replacement" 16:7 16:9||t="coref treatment"||c="avr" 41:23 41:23
+c="dr. barber" 21:4 21:5||t="coref person"||c="dr. barber" 41:17 41:18
+c="dr. barber" 41:17 41:18||t="coref person"||c="dr. barber" 107:3 107:4
+c="hyperlipidemia" 26:0 26:0||t="coref problem"||c="hyperlipidemia" 94:0 94:0
+c="who" 18:7 18:7||t="coref person"||c="he" 19:0 19:0
+c="severe aortic stenosis" 19:10 19:12||t="coref problem"||c="aortic stenosis" 93:0 93:1
+c="shortness of breath" 14:7 14:9||t="coref problem"||c="shortness of breath" 18:22 18:24
+c="worsening chest pain" 14:3 14:5||t="coref problem"||c="worsening chest pain" 18:18 18:20
+c="he" 48:2 48:2||t="coref person"||c="he" 48:15 48:15
+c="he" 46:0 46:0||t="coref person"||c="he" 47:0 47:0
+c="he" 47:0 47:0||t="coref person"||c="he" 48:2 48:2
