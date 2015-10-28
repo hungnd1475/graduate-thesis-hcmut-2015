@@ -1,0 +1,246 @@
+c="the patient" 124:21 124:22||t="coref person"||c="the patient" 126:11 126:12
+c="her" 68:32 68:32||t="coref person"||c="the patient" 70:0 70:1
+c="she" 139:0 139:0||t="coref person"||c="she" 139:12 139:12
+c="the patient" 117:0 117:1||t="coref person"||c="the patient" 117:14 117:15
+c="her" 93:12 93:12||t="coref person"||c="her" 99:7 99:7
+c="she" 79:0 79:0||t="coref person"||c="she" 79:3 79:3
+c="she" 17:0 17:0||t="coref person"||c="she" 18:0 18:0
+c="this" 118:0 118:0||t="coref treatment"||c="pacemaker placement" 130:14 130:15
+c="flolan" 120:0 120:0||t="coref treatment"||c="flolan therapy" 121:7 121:8
+c="she" 79:3 79:3||t="coref person"||c="she" 80:0 80:0
+c="the patient" 40:0 40:1||t="coref person"||c="her" 40:4 40:4
+c="the patient" 107:5 107:6||t="coref person"||c="she" 108:0 108:0
+c="the patient" 135:3 135:4||t="coref person"||c="she" 136:0 136:0
+c="her" 114:30 114:30||t="coref person"||c="she" 115:0 115:0
+c="increased urinary frequency" 145:12 145:14||t="coref problem"||c="which" 145:15 145:15
+c="she" 140:0 140:0||t="coref person"||c="her" 140:19 140:19
+c="chest tightness" 68:21 68:22||t="coref problem"||c="chest pressure" 70:11 70:12
+c="her" 139:14 139:14||t="coref person"||c="she" 140:0 140:0
+c="the patient 's hypotension" 90:11 90:14||t="coref problem"||c="these cardiovascular episodes" 111:3 111:5
+c="the patient" 103:37 103:38||t="coref person"||c="her" 104:2 104:2
+c="she" 139:12 139:12||t="coref person"||c="her" 139:14 139:14
+c="these cardiovascular episodes" 111:3 111:5||t="coref problem"||c="the patient 's persistent hypotensive episodes" 112:1 112:6
+c="the patient" 78:0 78:1||t="coref person"||c="she" 79:0 79:0
+c="the patient" 159:0 159:1||t="coref person"||c="her" 159:10 159:10
+c="her pulmonary hypertension" 88:16 88:18||t="coref problem"||c="her pulmonary hypertension" 93:12 93:14
+c="her surgery" 137:5 137:6||t="coref treatment"||c="pacemaker placement" 137:8 137:9
+c="she" 19:0 19:0||t="coref person"||c="she" 20:0 20:0
+c="her" 132:14 132:14||t="coref person"||c="she" 133:0 133:0
+c="an echocardiogram" 86:7 86:8||t="coref test"||c="which" 86:9 86:9
+c="the hickman catheter" 113:3 113:5||t="coref treatment"||c="her hickman" 118:10 118:11
+c="she" 168:0 168:0||t="coref person"||c="the patient" 170:0 170:1
+c="her" 144:21 144:21||t="coref person"||c="her" 145:6 145:6
+c="flolan therapy" 119:28 119:29||t="coref treatment"||c="flolan" 120:0 120:0
+c="she" 80:10 80:10||t="coref person"||c="she" 81:0 81:0
+c="the chest tightness" 16:2 16:4||t="coref problem"||c="chest tightness" 68:21 68:22
+c="her pulmonary hypertension" 93:12 93:14||t="coref problem"||c="a primary pulmonary hypertension" 102:12 102:15
+c="she" 41:0 41:0||t="coref person"||c="she" 42:0 42:0
+c="flolan administration" 171:1 171:2||t="coref treatment"||c="a flolan dose" 172:10 172:12
+c="calcium channel blocker" 103:11 103:13||t="coref treatment"||c="this" 103:30 103:30
+c="her flolan" 132:14 132:15||t="coref treatment"||c="flolan" 132:18 132:18
+c="a vagal response" 84:16 84:18||t="coref problem"||c="severe vasal sensitivity" 117:18 117:20
+c="she" 16:0 16:0||t="coref person"||c="she" 17:0 17:0
+c="her" 25:7 25:7||t="coref person"||c="the patient" 40:0 40:1
+c="the patient" 166:0 166:1||t="coref person"||c="she" 167:0 167:0
+c="her" 99:7 99:7||t="coref person"||c="the patient" 100:6 100:7
+c="the patient" 72:2 72:3||t="coref person"||c="the patient" 74:7 74:8
+c="pacemaker placement" 137:8 137:9||t="coref treatment"||c="pacemaker placement" 141:1 141:2
+c="clear pulmonary hypertension" 111:27 111:29||t="coref problem"||c="her primary pulmonary hypertension" 124:14 124:17
+c="her" 163:0 163:0||t="coref person"||c="she" 164:0 164:0
+c="the patient" 143:0 143:1||t="coref person"||c="she" 144:2 144:2
+c="she" 20:9 20:9||t="coref person"||c="she" 20:15 20:15
+c="symptoms" 15:11 15:11||t="coref problem"||c="her symptoms" 20:2 20:3
+c="the patient" 100:6 100:7||t="coref person"||c="the patient" 101:13 101:14
+c="her" 13:3 13:3||t="coref person"||c="she" 14:0 14:0
+c="the patient" 156:0 156:1||t="coref person"||c="she" 157:0 157:0
+c="the patient" 162:0 162:1||t="coref person"||c="her" 162:10 162:10
+c="the patient" 21:0 21:1||t="coref person"||c="she" 23:11 23:11
+c="her" 20:2 20:2||t="coref person"||c="she" 20:9 20:9
+c="the electrophysiology service" 117:7 117:9||t="coref person"||c="who" 117:11 117:11
+c="menopausal symptoms" 23:6 23:7||t="coref problem"||c="which" 23:10 23:10
+c="she" 20:15 20:15||t="coref person"||c="the patient" 21:0 21:1
+c="the patient" 91:12 91:13||t="coref person"||c="her" 92:16 92:16
+c="her" 167:4 167:4||t="coref person"||c="she" 168:0 168:0
+c="she" 136:0 136:0||t="coref person"||c="the patient" 137:0 137:1
+c="flolan" 132:18 132:18||t="coref treatment"||c="the flolan bag" 133:21 133:23
+c="she" 23:11 23:11||t="coref person"||c="she" 24:0 24:0
+c="a primary pulmonary hypertension" 102:12 102:15||t="coref problem"||c="the patient 's pulmonary hypertension" 103:37 103:41
+c="she" 176:0 176:0||t="coref person"||c="the patient" 178:0 178:1
+c="her primary pulmonary hypertension" 124:14 124:17||t="coref problem"||c="her pulmonary hypertension" 183:20 183:22
+c="aggressive fluids" 114:24 114:25||t="coref treatment"||c="hydration therapy" 116:11 116:12
+c="her" 182:20 182:20||t="coref person"||c="she" 183:0 183:0
+c="her" 18:8 18:8||t="coref person"||c="she" 19:0 19:0
+c="she" 80:0 80:0||t="coref person"||c="she" 80:10 80:10
+c="her symptoms" 20:2 20:3||t="coref problem"||c="any symptoms" 20:11 20:12
+c="the patient" 102:6 102:7||t="coref person"||c="the patient" 103:5 103:6
+c="the patient" 12:0 12:1||t="coref person"||c="who" 12:13 12:13
+c="the patient" 152:0 152:1||t="coref person"||c="her" 152:12 152:12
+c="cardiac output limited" 111:45 111:47||t="coref problem"||c="decreased cardiac output" 116:22 116:24
+c="flolan therapy" 121:7 121:8||t="coref treatment"||c="the patient 's flolan dose" 122:7 122:11
+c="a stress thallium" 73:0 73:2||t="coref test"||c="her stress test" 87:0 87:2
+c="her" 154:17 154:17||t="coref person"||c="she" 154:23 154:23
+c="enterococcus" 146:8 146:8||t="coref problem"||c="which" 146:9 146:9
+c="she" 160:7 160:7||t="coref person"||c="the patient" 162:0 162:1
+c="she" 131:2 131:2||t="coref person"||c="the patient" 132:8 132:9
+c="her" 140:19 140:19||t="coref person"||c="the patient" 141:3 141:4
+c="a high resolution ct" 124:0 124:3||t="coref test"||c="it" 124:24 124:24
+c="the patient" 106:5 106:6||t="coref person"||c="the patient" 107:5 107:6
+c="her" 74:13 74:13||t="coref person"||c="the patient" 76:8 76:9
+c="the patient 's pulmonary hypertension" 103:37 103:41||t="coref problem"||c="clear pulmonary hypertension" 111:27 111:29
+c="her" 104:2 104:2||t="coref person"||c="the patient" 106:5 106:6
+c="the patient" 141:3 141:4||t="coref person"||c="she" 141:16 141:16
+c="the patient" 103:5 103:6||t="coref person"||c="the patient" 103:18 103:19
+c="synthroid" 34:0 34:0||t="coref treatment"||c="her regular synthroid dose" 167:4 167:7
+c="flolan teaching" 139:7 139:8||t="coref treatment"||c="the medication" 139:22 139:23
+c="a previous workup" 21:3 21:5||t="coref test"||c="which" 21:6 21:6
+c="she" 180:0 180:0||t="coref person"||c="she" 182:0 182:0
+c="a relatively elevated white blood cell count" 144:7 144:13||t="coref problem"||c="that" 144:14 144:14
+c="the patient" 178:0 178:1||t="coref person"||c="she" 180:0 180:0
+c="dyspnea" 68:17 68:17||t="coref problem"||c="dyspnea" 70:7 70:7
+c="very preload dependent" 111:32 111:34||t="coref problem"||c="exquisitely preload dependent" 114:17 114:19
+c="the patient" 119:1 119:2||t="coref person"||c="the patient" 119:20 119:21
+c="a pacemaker" 135:9 135:10||t="coref treatment"||c="dual-mode , dual-pacing , dual-sensing pacemaker" 136:2 136:7
+c="protonix" 157:4 157:4||t="coref treatment"||c="protonix" 189:1 189:1
+c="she" 164:0 164:0||t="coref person"||c="the patient" 166:0 166:1
+c="the patient" 101:31 101:32||t="coref person"||c="the patient" 102:6 102:7
+c="she" 133:0 133:0||t="coref person"||c="the patient" 135:3 135:4
+c="she" 24:0 24:0||t="coref person"||c="she" 25:0 25:0
+c="she" 14:0 14:0||t="coref person"||c="she" 15:2 15:2
+c="her" 40:4 40:4||t="coref person"||c="she" 41:0 41:0
+c="the patient" 149:6 149:7||t="coref person"||c="she" 150:0 150:0
+c="collagen vascular disease" 101:0 101:2||t="coref problem"||c="it" 101:22 101:22
+c="a pacemaker" 125:4 125:5||t="coref treatment"||c="a pacemaker" 135:9 135:10
+c="she" 130:7 130:7||t="coref person"||c="she" 131:2 131:2
+c="her" 124:14 124:14||t="coref person"||c="the patient" 124:21 124:22
+c="decreased urine output" 112:9 112:11||t="coref problem"||c="her low urine output" 116:15 116:18
+c="the patient" 122:7 122:8||t="coref person"||c="the patient" 123:0 123:1
+c="pacemaker placement" 117:24 117:25||t="coref treatment"||c="this" 118:0 118:0
+c="the patient" 74:7 74:8||t="coref person"||c="her" 74:13 74:13
+c="she" 115:0 115:0||t="coref person"||c="her" 115:8 115:8
+c="exertional chest tightness" 12:26 12:28||t="coref problem"||c="chest tightness" 14:6 14:7
+c="her" 126:19 126:19||t="coref person"||c="the patient" 130:3 130:4
+c="she" 148:17 148:17||t="coref person"||c="the patient" 149:6 149:7
+c="her regular synthroid dose" 167:4 167:7||t="coref treatment"||c="synthroid" 191:1 191:1
+c="the patient 's persistent hypotensive episodes" 112:1 112:6||t="coref problem"||c="bradycardia" 115:6 115:6
+c="grave's" 31:1 31:1||t="coref problem"||c="grave's disease" 38:2 38:3
+c="who" 12:13 12:13||t="coref person"||c="the patient" 13:0 13:1
+c="the bleeding" 129:13 129:14||t="coref problem"||c="bleeding" 160:1 160:1
+c="pacemaker placement" 130:14 130:15||t="coref treatment"||c="her surgery" 137:5 137:6
+c="her" 145:18 145:18||t="coref person"||c="the patient" 147:2 147:3
+c="her" 137:5 137:5||t="coref person"||c="the patient" 138:6 138:7
+c="she" 157:0 157:0||t="coref person"||c="her" 157:9 157:9
+c="her" 108:9 108:9||t="coref person"||c="the patient" 109:0 109:1
+c="she" 77:0 77:0||t="coref person"||c="the patient" 78:0 78:1
+c="flolan" 104:11 104:11||t="coref treatment"||c="flolan treatment" 105:12 105:13
+c="the patient" 70:0 70:1||t="coref person"||c="the patient" 72:2 72:3
+c="the patient" 170:0 170:1||t="coref person"||c="the patient" 172:6 172:7
+c="a fluid bolus" 77:4 77:6||t="coref treatment"||c="a fluid bolus" 78:5 78:7
+c="the patient" 174:4 174:5||t="coref person"||c="the patient" 175:0 175:1
+c="the patient" 119:20 119:21||t="coref person"||c="the patient" 121:0 121:1
+c="her" 92:16 92:16||t="coref person"||c="the patient" 93:4 93:5
+c="her" 116:15 116:15||t="coref person"||c="the patient" 117:0 117:1
+c="the patient" 68:0 68:1||t="coref person"||c="who" 68:24 68:24
+c="she" 144:2 144:2||t="coref person"||c="her" 144:21 144:21
+c="her low urine output" 116:15 116:18||t="coref problem"||c="the decreased urine output" 154:4 154:7
+c="she" 112:13 112:13||t="coref person"||c="the patient" 114:12 114:13
+c="her" 88:16 88:16||t="coref person"||c="she" 89:0 89:0
+c="her" 159:10 159:10||t="coref person"||c="she" 160:7 160:7
+c="the bleeding" 128:12 128:13||t="coref problem"||c="the bleeding" 129:13 129:14
+c="bradycardia" 117:22 117:22||t="coref problem"||c="bradycardia" 141:10 141:10
+c="the patient" 130:3 130:4||t="coref person"||c="she" 130:7 130:7
+c="she" 15:2 15:2||t="coref person"||c="she" 16:0 16:0
+c="she" 18:0 18:0||t="coref person"||c="her" 18:8 18:8
+c="the patient" 76:8 76:9||t="coref person"||c="she" 77:0 77:0
+c="she" 141:16 141:16||t="coref person"||c="the patient" 143:0 143:1
+c="the patient" 111:15 111:16||t="coref person"||c="she" 111:25 111:25
+c="she" 42:0 42:0||t="coref person"||c="the patient" 68:0 68:1
+c="her" 145:6 145:6||t="coref person"||c="the patient" 145:8 145:9
+c="her" 84:9 84:9||t="coref person"||c="the patient" 86:4 86:5
+c="the patient" 117:14 117:15||t="coref person"||c="the patient" 118:7 118:8
+c="a right heart catheterization" 94:6 94:9||t="coref test"||c="a right heart catheterization" 95:0 95:3
+c="bradycardia" 115:6 115:6||t="coref problem"||c="bradycardia" 117:22 117:22
+c="hypotension" 121:20 121:20||t="coref problem"||c="hypotension" 133:14 133:14
+c="hypothyroidism" 31:8 31:8||t="coref problem"||c="hypothyroidism" 166:6 166:6
+c="she" 154:23 154:23||t="coref person"||c="the patient" 156:0 156:1
+c="her" 138:10 138:10||t="coref person"||c="she" 139:0 139:0
+c="exquisitely preload dependent" 114:17 114:19||t="coref problem"||c="low preload" 116:27 116:28
+c="the patient" 112:1 112:2||t="coref person"||c="she" 112:13 112:13
+c="the patient" 175:0 175:1||t="coref person"||c="she" 176:0 176:0
+c="dyspnea" 14:2 14:2||t="coref problem"||c="dyspnea" 68:17 68:17
+c="the patient" 148:5 148:6||t="coref person"||c="she" 148:17 148:17
+c="her husband" 40:4 40:5||t="coref person"||c="her husband" 139:14 139:15
+c="dr. savage" 176:6 176:7||t="coref person"||c="dr. savage" 183:6 183:7
+c="the patient" 13:0 13:1||t="coref person"||c="her" 13:3 13:3
+c="she" 20:0 20:0||t="coref person"||c="her" 20:2 20:2
+c="she" 25:0 25:0||t="coref person"||c="her" 25:7 25:7
+c="who" 68:24 68:24||t="coref person"||c="her" 68:32 68:32
+c="she" 81:0 81:0||t="coref person"||c="her" 84:0 84:0
+c="her" 84:0 84:0||t="coref person"||c="her" 84:9 84:9
+c="the patient" 86:4 86:5||t="coref person"||c="her" 87:0 87:0
+c="her" 87:0 87:0||t="coref person"||c="her" 88:16 88:16
+c="she" 89:0 89:0||t="coref person"||c="the patient" 90:11 90:12
+c="the patient" 90:11 90:12||t="coref person"||c="the patient" 91:12 91:13
+c="the patient" 93:4 93:5||t="coref person"||c="her" 93:12 93:12
+c="the patient" 101:13 101:14||t="coref person"||c="the patient" 101:31 101:32
+c="the patient" 103:18 103:19||t="coref person"||c="the patient" 103:37 103:38
+c="she" 108:0 108:0||t="coref person"||c="her" 108:9 108:9
+c="the patient" 109:0 109:1||t="coref person"||c="her" 109:14 109:14
+c="her" 109:14 109:14||t="coref person"||c="the patient" 111:15 111:16
+c="she" 111:25 111:25||t="coref person"||c="the patient" 112:1 112:2
+c="the patient" 114:12 114:13||t="coref person"||c="her" 114:30 114:30
+c="her" 115:8 115:8||t="coref person"||c="the patient" 116:3 116:4
+c="the patient" 116:3 116:4||t="coref person"||c="her" 116:15 116:15
+c="the patient" 118:7 118:8||t="coref person"||c="her" 118:10 118:10
+c="her" 118:10 118:10||t="coref person"||c="the patient" 119:1 119:2
+c="the patient" 121:0 121:1||t="coref person"||c="the patient" 122:7 122:8
+c="the patient" 123:0 123:1||t="coref person"||c="her" 123:8 123:8
+c="her" 123:8 123:8||t="coref person"||c="her" 124:14 124:14
+c="the patient" 126:11 126:12||t="coref person"||c="her" 126:19 126:19
+c="the patient" 132:8 132:9||t="coref person"||c="her" 132:14 132:14
+c="the patient" 137:0 137:1||t="coref person"||c="her" 137:5 137:5
+c="the patient" 138:6 138:7||t="coref person"||c="her" 138:10 138:10
+c="the patient" 145:8 145:9||t="coref person"||c="her" 145:18 145:18
+c="the patient" 147:2 147:3||t="coref person"||c="the patient" 148:5 148:6
+c="she" 150:0 150:0||t="coref person"||c="the patient" 152:0 152:1
+c="her" 152:12 152:12||t="coref person"||c="her" 154:11 154:11
+c="her" 154:11 154:11||t="coref person"||c="her" 154:17 154:17
+c="her" 157:9 157:9||t="coref person"||c="the patient" 159:0 159:1
+c="her" 162:10 162:10||t="coref person"||c="her" 163:0 163:0
+c="she" 167:0 167:0||t="coref person"||c="her" 167:4 167:4
+c="the patient" 172:6 172:7||t="coref person"||c="the patient" 174:4 174:5
+c="she" 182:0 182:0||t="coref person"||c="her" 182:20 182:20
+c="she" 183:0 183:0||t="coref person"||c="her" 183:20 183:20
+c="bleeding" 126:17 126:17||t="coref problem"||c="the bleeding" 128:12 128:13
+c="her hickman" 118:10 118:11||t="coref treatment"||c="her hickman catheter" 126:19 126:21
+c="her flolan therapy" 138:10 138:12||t="coref treatment"||c="flolan teaching" 139:7 139:8
+c="gastroesophageal reflux disease" 30:1 30:3||t="coref problem"||c="gastroesophageal reflux disease" 156:6 156:8
+c="any symptoms" 20:11 20:12||t="coref problem"||c="her symptoms" 68:32 68:33
+c="flolan therapy" 140:24 140:25||t="coref treatment"||c="flolan administration" 171:1 171:2
+c="low preload" 116:27 116:28||t="coref problem"||c="her preload dependence" 154:11 154:13
+c="a hickman catheter" 105:6 105:8||t="coref treatment"||c="the hickman catheter" 113:3 113:5
+c="flolan treatment" 105:12 105:13||t="coref treatment"||c="flolan therapy" 112:29 112:30
+c="a flolan dose" 172:10 172:12||t="coref treatment"||c="flolan teaching" 175:8 175:9
+c="the medication" 139:22 139:23||t="coref treatment"||c="flolan therapy" 140:24 140:25
+c="her hickman catheter" 126:19 126:21||t="coref treatment"||c="the hickman site" 160:3 160:5
+c="chest tightness" 14:6 14:7||t="coref problem"||c="the chest tightness" 16:2 16:4
+c="her symptoms" 13:3 13:4||t="coref problem"||c="symptoms" 15:11 15:11
+c="the antibiotic" 148:3 148:4||t="coref treatment"||c="levaquin therapy" 150:7 150:8
+c="levofloxacin therapy" 147:7 147:8||t="coref treatment"||c="the antibiotic" 148:3 148:4
+c="pressure" 127:4 127:4||t="coref treatment"||c="prolonged pressure" 128:6 128:7
+c="her current flolan dose" 123:8 123:11||t="coref treatment"||c="her flolan" 132:14 132:15
+c="dyspnea" 12:20 12:20||t="coref problem"||c="dyspnea" 14:2 14:2
+c="flolan therapy" 112:29 112:30||t="coref treatment"||c="flolan" 113:11 113:11
+c="a right heart catheterization" 95:0 95:3||t="coref test"||c="right heart catheterization" 119:12 119:14
+c="her new beta blocker" 84:9 84:12||t="coref treatment"||c="the beta blocker" 85:5 85:7
+c="a beta blocker" 72:12 72:14||t="coref treatment"||c="her new beta blocker" 84:9 84:12
+c="flolan" 113:11 113:11||t="coref treatment"||c="flolan therapy" 119:28 119:29
+c="her symptoms" 68:32 68:33||t="coref problem"||c="the symptoms" 71:7 71:8
+c="the patient 's flolan dose" 122:7 122:11||t="coref treatment"||c="her current flolan dose" 123:8 123:11
+c="the flolan bag" 133:21 133:23||t="coref treatment"||c="her flolan therapy" 138:10 138:12
+c="a vasodilation trial" 94:11 94:13||t="coref test"||c="a pharmacologic pulmonary vasodilator challenge" 96:0 96:4
+c="a ct angiogram" 88:0 88:2||t="coref test"||c="a ct angiogram of the chest" 97:3 97:8
+c="herbal remedies" 42:3 42:4||t="coref treatment"||c="herbal medication" 92:19 92:20
+c="grave's disease" 38:2 38:3||t="coref problem"||c="the patient 's grave's disease" 91:12 91:16
+c="cardiac disease" 68:13 68:14||t="coref problem"||c="any cardiac disease" 91:6 91:8
+c="her gastroesophageal reflux disease" 25:7 25:10||t="coref problem"||c="gastroesophageal reflux disease" 30:1 30:3
+c="flolan teaching" 175:8 175:9||t="coref treatment"||c="flolan" 194:1 194:1

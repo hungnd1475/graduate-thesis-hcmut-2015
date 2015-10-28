@@ -1,0 +1,204 @@
+c="family" 72:0 72:0||t="coref person"||c="family" 263:1 263:1
+c="family" 263:1 263:1||t="coref person"||c="the patient 's family" 263:12 263:15
+c="her family" 265:4 265:5||t="coref person"||c="family" 270:2 270:2
+c="family" 270:2 270:2||t="coref person"||c="family" 308:4 308:4
+c="him" 287:3 287:3||t="coref person"||c="the doctor" 308:6 308:7
+c="family" 16:15 16:15||t="coref person"||c="family" 24:17 24:17
+c="family" 24:17 24:17||t="coref person"||c="family" 56:1 56:1
+c="family members" 59:17 59:18||t="coref person"||c="family" 72:0 72:0
+c="30-year-old woman" 20:0 20:1||t="coref person"||c="she" 21:7 21:7
+c="she" 21:7 21:7||t="coref person"||c="she" 22:0 22:0
+c="she" 24:4 24:4||t="coref person"||c="her" 25:0 25:0
+c="her" 25:0 25:0||t="coref person"||c="patient" 26:0 26:0
+c="hyperintensities at the convexity" 131:5 131:8||t="coref problem"||c="which" 131:9 131:9
+c="mri head" 259:14 259:15||t="coref test"||c="which" 259:16 259:16
+c="some metabolic abnormalities" 262:2 262:4||t="coref problem"||c="which" 262:5 262:5
+c="the patient" 264:5 264:6||t="coref person"||c="her" 265:4 265:4
+c="pressure support ventilation" 268:7 268:9||t="coref treatment"||c="which" 268:11 268:11
+c="the oncology consult service" 286:5 286:8||t="coref person"||c="who" 286:9 286:9
+c="the patient" 287:8 287:9||t="coref person"||c="her" 287:13 287:13
+c="cisplatin" 288:6 288:6||t="coref treatment"||c="which" 288:7 288:7
+c="which" 288:7 288:7||t="coref treatment"||c="this" 288:13 288:13
+c="head bleed" 291:6 291:7||t="coref problem"||c="which" 291:8 291:8
+c="atn" 300:12 300:12||t="coref problem"||c="that" 300:13 300:13
+c="you" 334:0 334:0||t="coref person"||c="your" 336:0 336:0
+c="pseudomonas" 34:5 34:5||t="coref problem"||c="pseudomonas" 35:4 35:4
+c="pneumonia" 155:20 155:20||t="coref problem"||c="pneumonia" 275:4 275:4
+c="ivc filter" 148:0 148:1||t="coref treatment"||c="ivc filter" 292:0 292:1
+c="stents" 41:7 41:7||t="coref treatment"||c="r ureteral stent" 67:6 67:8
+c="vancomycin" 280:6 280:6||t="coref treatment"||c="vancomycin" 336:6 336:6
+c="aspiration" 150:14 150:14||t="coref problem"||c="aspiration" 155:18 155:18
+c="the patient 's neurologic exam" 261:0 261:4||t="coref test"||c="neurologic exam" 262:15 262:16
+c="mild pulmonary edema" 154:1 154:3||t="coref problem"||c="pulmonary edema" 155:9 155:10
+c="pericardial effusion" 174:3 174:4||t="coref problem"||c="pericardial effusion" 177:1 177:2
+c="vancomycin" 273:10 273:10||t="coref treatment"||c="vancomycin" 280:6 280:6
+c="coagulopathy" 31:12 31:12||t="coref problem"||c="severe coagulopathy" 41:9 41:10
+c="lle dvt" 68:2 68:3||t="coref problem"||c="dvt" 291:2 291:2
+c="cipro" 36:7 36:7||t="coref treatment"||c="ciprofloxacin" 273:24 273:24
+c="eeg" 158:0 158:0||t="coref test"||c="eeg" 260:0 260:0
+c="pseudomonas" 33:5 33:5||t="coref problem"||c="pseudomonas" 34:5 34:5
+c="the sah" 59:13 59:14||t="coref problem"||c="subarachnoid hemorrhages" 130:19 130:20
+c="which" 291:8 291:8||t="coref problem"||c="cranial hemorrages ( sub arachnoid and parenchemal )" 326:1 326:8
+c="extubated" 309:16 309:16||t="coref treatment"||c="extubate" 334:14 334:14
+c="pneumonia" 150:16 150:16||t="coref problem"||c="pneumonia" 155:20 155:20
+c="full palliative care" 270:35 270:37||t="coref treatment"||c="full palliative care" 309:23 309:25
+c="zosyn" 36:5 36:5||t="coref treatment"||c="zosyn" 273:26 273:26
+c="metastases" 259:21 259:21||t="coref problem"||c="cancer" 279:8 279:8
+c="subarachnoid hemorrhages" 130:19 130:20||t="coref problem"||c="subarachnoid hemorrhage" 138:19 138:20
+c="metastatic squamous cell carcinoma" 20:3 20:6||t="coref problem"||c="metastasis" 51:6 51:6
+c="cipro" 33:10 33:10||t="coref treatment"||c="cipro" 36:7 36:7
+c="intubated" 27:0 27:0||t="coref treatment"||c="airway protection" 27:2 27:3
+c="full palliative care" 309:23 309:25||t="coref treatment"||c="palliative care" 334:26 334:27
+c="worsening renal function" 41:12 41:14||t="coref problem"||c="renal failure" 47:1 47:2
+c="nasogastric tube" 186:0 186:1||t="coref treatment"||c="nasogastric tube" 194:0 194:1
+c="mass in llq" 83:2 83:4||t="coref problem"||c="metastatic squamous cell carcinoma" 255:4 255:7
+c="pseudomonas" 35:4 35:4||t="coref problem"||c="pseudomonas" 272:11 272:11
+c="neutropenic fever" 29:4 29:5||t="coref problem"||c="recurrent fevers" 39:3 39:4
+c="zosyn" 273:26 273:26||t="coref treatment"||c="zosyn" 280:4 280:4
+c="pcxr" 153:0 153:0||t="coref test"||c="cxr" 275:0 275:0
+c="vanc" 36:3 36:3||t="coref treatment"||c="vancomycin" 273:10 273:10
+c="et tube" 185:0 185:1||t="coref treatment"||c="the et tube" 193:0 193:2
+c="nephrostomy" 209:3 209:3||t="coref treatment"||c="nephrostomy tube" 277:5 277:6
+c="zosyn" 33:8 33:8||t="coref treatment"||c="zosyn" 36:5 36:5
+c="cipro/zosyn" 38:9 38:9||t="coref treatment"||c="cipro/zosyn" 274:5 274:5
+c="vanc" 33:20 33:20||t="coref treatment"||c="vanc" 36:3 36:3
+c="mri head:" 128:1 128:2||t="coref test"||c="mri head" 259:14 259:15
+c="antibiotics" 282:0 282:0||t="coref treatment"||c="antibiotic course" 327:5 327:6
+c="xrt" 66:3 66:3||t="coref treatment"||c="xrt" 288:4 288:4
+c="extubate" 270:24 270:24||t="coref treatment"||c="extubated" 309:16 309:16
+c="her" 23:0 23:0||t="coref person"||c="she" 24:4 24:4
+c="she" 270:14 270:14||t="coref person"||c="the patient" 272:8 272:9
+c="atn" 48:7 48:7||t="coref problem"||c="atn" 300:12 300:12
+c="metastatic squamous cell carcinoma" 255:4 255:7||t="coref problem"||c="squamous cell cancer" 285:1 285:3
+c="poorly responsive" 44:6 44:7||t="coref problem"||c="unresponsive" 78:5 78:5
+c="increased signal" 133:2 133:3||t="coref problem"||c="which" 133:18 133:18
+c="l temporal parenchymal hematoma" 50:8 50:11||t="coref problem"||c="intraparenchymal bleeds" 256:7 256:8
+c="intubated" 269:3 269:3||t="coref treatment"||c="airway protection" 269:5 269:6
+c="recurrent fevers" 39:3 39:4||t="coref problem"||c="fever" 276:3 276:3
+c="fever" 276:3 276:3||t="coref problem"||c="fevers" 279:0 279:0
+c="your" 336:0 336:0||t="coref person"||c="your" 336:15 336:15
+c="head bleed" 279:5 279:6||t="coref problem"||c="head bleed" 291:6 291:7
+c="her disease" 287:13 287:14||t="coref problem"||c="metastatic squamous cell carcinoma" 328:1 328:4
+c="she" 309:0 309:0||t="coref person"||c="she" 309:9 309:9
+c="patient" 268:19 268:19||t="coref person"||c="she" 269:0 269:0
+c="mild left lower perihilar opacification" 180:0 180:4||t="coref problem"||c="increasing opacification of the lungs" 190:0 190:4
+c="daily blood products" 42:8 42:10||t="coref treatment"||c="aggressive blood product repletion" 44:1 44:4
+c="vaginal bleeding" 21:12 21:13||t="coref problem"||c="vag bleeding" 26:14 26:15
+c="subarachnoid hemorrhage" 138:19 138:20||t="coref problem"||c="subarachnoid hemorrhage" 162:0 162:1
+c="she" 273:3 273:3||t="coref person"||c="she" 274:0 274:0
+c="large necrotic pelvic mass" 31:4 31:7||t="coref problem"||c="retroperitoneal squamous cell carcinoma" 65:1 65:4
+c="which" 150:11 150:11||t="coref problem"||c="vague right lower lobe opacity" 155:1 155:5
+c="the patient 's family" 263:12 263:15||t="coref person"||c="her family" 265:4 265:5
+c="the patient" 308:9 308:10||t="coref person"||c="she" 309:0 309:0
+c="they" 310:9 310:9||t="coref all"||c="they" 311:0 311:0
+c="subarachnoid hemorrhage" 162:0 162:1||t="coref problem"||c="sub arachnoid hemorrhages" 256:3 256:5
+c="she" 22:0 22:0||t="coref person"||c="her" 23:0 23:0
+c="global hypoxic injury to the brain" 133:22 133:27||t="coref problem"||c="a widespread encephalopathy" 160:3 160:5
+c="high signal along the sulci bilaterally" 130:8 130:13||t="coref problem"||c="which" 130:14 130:14
+c="attending" 13:0 13:0||t="coref person"||c="gayle m whitener , m.d." 14:0 14:4
+c="retroperitoneal squamous cell carcinoma" 65:1 65:4||t="coref problem"||c="mass in llq" 83:2 83:4
+c="subarachnoid hemorrhages" 23:10 23:11||t="coref problem"||c="bilateral sah" 50:5 50:6
+c="intubated" 332:0 332:0||t="coref treatment"||c="intubated" 334:8 334:8
+c="she" 280:0 280:0||t="coref person"||c="she" 281:0 281:0
+c="intraparenchymal bleeds" 23:13 23:14||t="coref problem"||c="l temporal parenchymal hematoma" 50:8 50:11
+c="severe coagulopathy" 41:9 41:10||t="coref problem"||c="dic" 42:4 42:4
+c="patient" 44:5 44:5||t="coref person"||c="patient" 59:7 59:7
+c="ivc filter" 30:0 30:1||t="coref treatment"||c="ivc filter" 148:0 148:1
+c="thrombocytopenia" 288:16 288:16||t="coref problem"||c="thrombocytopenia" 329:1 329:1
+c="sub arachnoid hemorrhages" 256:3 256:5||t="coref problem"||c="hemorrhages" 259:24 259:24
+c="renal" 48:2 48:2||t="coref person"||c="who" 48:3 48:3
+c="urology" 41:2 41:2||t="coref person"||c="who" 41:3 41:3
+c="she" 298:0 298:0||t="coref person"||c="the patient" 308:9 308:10
+c="appreciable pneumothorax" 187:1 187:2||t="coref problem"||c="pneumothorax" 195:1 195:1
+c="patient" 293:0 293:0||t="coref person"||c="she" 298:0 298:0
+c="your" 336:15 336:15||t="coref person"||c="your" 336:22 336:22
+c="vague right lower lobe opacity" 155:1 155:5||t="coref problem"||c="opacity" 155:13 155:13
+c="enlargement of the right hilus" 182:0 182:4||t="coref problem"||c="this" 183:3 183:3
+c="the doctor" 308:6 308:7||t="coref person"||c="dr . pauling" 308:16 308:18
+c="hemorrhages" 259:24 259:24||t="coref problem"||c="head bleed" 279:5 279:6
+c="she" 309:9 309:9||t="coref person"||c="you" 334:0 334:0
+c="pleural effusions" 187:4 187:5||t="coref problem"||c="pleural effusion" 192:3 192:4
+c="hypoxic brain injury" 259:30 259:32||t="coref problem"||c="encephalopathy" 260:5 260:5
+c="the ngt" 147:2 147:3||t="coref treatment"||c="ng tube" 156:8 156:9
+c="she" 269:0 269:0||t="coref person"||c="she" 269:12 269:12
+c="pseudomonas aeruginosa" 214:29 214:30||t="coref problem"||c="pseudomonas aeruginosa" 219:0 219:1
+c="cisplatin" 66:11 66:11||t="coref treatment"||c="cisplatin" 287:21 287:21
+c="renal failure" 47:1 47:2||t="coref problem"||c="acute renal failure" 300:1 300:3
+c="patient" 291:4 291:4||t="coref person"||c="patient" 293:0 293:0
+c="resolving edema" 180:9 180:10||t="coref problem"||c="mild pulmonary edema" 190:9 190:11
+c="she" 262:0 262:0||t="coref person"||c="the patient 's" 263:12 263:14
+c="pulmonary edema" 155:9 155:10||t="coref problem"||c="resolving edema" 180:9 180:10
+c="tube feeds" 46:8 46:9||t="coref treatment"||c="the ngt" 147:2 147:3
+c="squamous cell cancer" 285:1 285:3||t="coref problem"||c="her disease" 287:13 287:14
+c="a somewhat wedge-shaped opacity at the right lung base" 150:2 150:10||t="coref problem"||c="which" 150:11 150:11
+c="her" 265:13 265:13||t="coref person"||c="pt" 268:4 268:4
+c="nephrostomy tube" 277:5 277:6||t="coref treatment"||c="tube" 278:5 278:5
+c="pseudomonal urosepsis" 21:9 21:10||t="coref problem"||c="pseudomonal urosepsis" 255:17 255:18
+c="she" 281:0 281:0||t="coref person"||c="the patient" 286:0 286:1
+c="the ett" 145:2 145:3||t="coref treatment"||c="ett" 156:1 156:1
+c="patient" 270:6 270:6||t="coref person"||c="she" 270:14 270:14
+c="pseudomonas aeruginosa" 219:0 219:1||t="coref problem"||c="pseudomonas aeruginosa" 225:0 225:1
+c="the patient 's" 263:12 263:14||t="coref person"||c="the patient" 264:5 264:6
+c="the family" 310:0 310:1||t="coref person"||c="they" 310:9 310:9
+c="intubated" 124:3 124:3||t="coref treatment"||c="intubation" 137:21 137:21
+c="tumor extension/anti-coagulation" 21:15 21:16||t="coref problem"||c="tumor extension/anti-coagulation" 255:23 255:24
+c="fevers" 281:4 281:4||t="coref problem"||c="the fevers" 283:7 283:8
+c="new atelectasis in the right lung" 181:8 181:13||t="coref problem"||c="atelectasis at the r lung base" 275:6 275:11
+c="encephalopathy" 260:5 260:5||t="coref problem"||c="hypoxic brain injury" 325:1 325:3
+c="opacity" 155:13 155:13||t="coref problem"||c="mild left lower perihilar opacification" 180:0 180:4
+c="she" 269:12 269:12||t="coref person"||c="she" 269:21 269:21
+c="metastasis" 51:6 51:6||t="coref problem"||c="areas of metastatic disease" 134:24 134:27
+c="a widespread encephalopathy" 160:3 160:5||t="coref problem"||c="hypotensive brain injury" 256:13 256:15
+c="hypotensive brain injury" 256:13 256:15||t="coref problem"||c="hypoxic brain injury" 259:30 259:32
+c="pseudomonal urosepsis" 255:17 255:18||t="coref problem"||c="pseudomonal sepsis" 327:1 327:2
+c="hypotension" 26:23 26:23||t="coref problem"||c="hypotension" 300:9 300:9
+c="a right ij central venous line" 146:0 146:5||t="coref treatment"||c="r ij" 302:3 302:4
+c="the patient" 59:20 59:21||t="coref person"||c="the patient" 63:5 63:6
+c="nasogastric tube" 194:0 194:1||t="coref treatment"||c="tube feeds" 304:3 304:4
+c="soft tissue changes in the sphenoid sinus" 137:6 137:12||t="coref problem"||c="which" 137:13 137:13
+c="her" 286:11 286:11||t="coref person"||c="the patient" 287:8 287:9
+c="a ct" 132:0 132:1||t="coref test"||c="a ct" 139:0 139:1
+c="she" 274:0 274:0||t="coref person"||c="she" 280:0 280:0
+c="airway protection" 27:2 27:3||t="coref treatment"||c="intubated" 269:3 269:3
+c="hypernatremia" 262:9 262:9||t="coref problem"||c="hypernatremia" 295:1 295:1
+c="increased signal" 138:2 138:3||t="coref problem"||c="which" 138:14 138:14
+c="she" 288:8 288:8||t="coref person"||c="her" 289:7 289:7
+c="her" 289:17 289:17||t="coref person"||c="patient" 291:4 291:4
+c="ng tube" 156:8 156:9||t="coref treatment"||c="nasogastric tube" 186:0 186:1
+c="low platelets" 54:3 54:4||t="coref problem"||c="low plt count" 90:3 90:5
+c="30 yo f" 255:0 255:2||t="coref person"||c="who" 255:11 255:11
+c="she" 265:7 265:7||t="coref person"||c="her" 265:13 265:13
+c="intubated" 270:17 270:17||t="coref treatment"||c="intubated" 332:0 332:0
+c="the patient 's" 261:0 261:2||t="coref person"||c="she" 262:0 262:0
+c="intubated" 63:8 63:8||t="coref treatment"||c="intubated" 124:3 124:3
+c="family" 308:4 308:4||t="coref person"||c="the family" 310:0 310:1
+c="she" 269:21 269:21||t="coref person"||c="patient" 270:6 270:6
+c="pt" 268:4 268:4||t="coref person"||c="patient" 268:19 268:19
+c="fevers" 279:0 279:0||t="coref problem"||c="fevers" 281:4 281:4
+c="patient" 59:7 59:7||t="coref person"||c="the patient" 59:20 59:21
+c="the patient" 259:3 259:4||t="coref person"||c="the patient 's" 261:0 261:2
+c="dic" 42:4 42:4||t="coref problem"||c="coagulopathy" 278:7 278:7
+c="antibiotic course" 327:5 327:6||t="coref treatment"||c="your antibiotics" 336:0 336:1
+c="she" 288:0 288:0||t="coref person"||c="she" 288:8 288:8
+c="vag bleeding" 26:14 26:15||t="coref problem"||c="vaginal bleeding" 255:20 255:21
+c="areas of metastatic disease" 134:24 134:27||t="coref problem"||c="metastases" 259:21 259:21
+c="pseudomonal sepsis" 327:1 327:2||t="coref problem"||c="pseudomonal sepsis" 336:25 336:26
+c="which" 134:20 134:20||t="coref problem"||c="surrounding edema" 134:29 134:30
+c="reynolds/vanc/fluc/gentamicin" 29:2 29:2||t="coref treatment"||c="abx" 36:0 36:0
+c="cisplatin" 287:21 287:21||t="coref treatment"||c="cisplatin" 288:6 288:6
+c="her" 287:13 287:13||t="coref person"||c="she" 288:0 288:0
+c="ett" 156:1 156:1||t="coref treatment"||c="et tube" 185:0 185:1
+c="family" 56:1 56:1||t="coref person"||c="family members" 59:17 59:18
+c="bilateral sah" 50:5 50:6||t="coref problem"||c="the sah" 59:13 59:14
+c="who" 255:11 255:11||t="coref person"||c="the patient" 259:3 259:4
+c="her" 289:7 289:7||t="coref person"||c="her" 289:17 289:17
+c="fever" 26:20 26:20||t="coref problem"||c="neutropenic fever" 29:4 29:5
+c="your" 336:22 336:22||t="coref person"||c="you" 337:1 337:1
+c="her outside hematologist dr. pauling" 286:11 286:15||t="coref person"||c="him" 287:3 287:3
+c="the patient" 272:8 272:9||t="coref person"||c="she" 273:3 273:3
+c="intubation" 137:21 137:21||t="coref treatment"||c="intubated" 270:17 270:17
+c="her" 265:4 265:4||t="coref person"||c="she" 265:7 265:7
+c="brain edema" 134:5 134:6||t="coref problem"||c="which" 134:20 134:20
+c="patient" 26:0 26:0||t="coref person"||c="patient" 44:5 44:5
+c="the patient" 63:5 63:6||t="coref person"||c="30 yo f" 255:0 255:2
+c="the patient" 286:0 286:1||t="coref person"||c="her" 286:11 286:11

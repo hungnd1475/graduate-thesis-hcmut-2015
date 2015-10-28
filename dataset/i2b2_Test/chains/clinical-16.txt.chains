@@ -1,0 +1,8 @@
+c="left renal mass" 16:0 16:2||c="a complex left renal mass" 18:35 18:39||c="a contrast enhancing complex left renal mass" 19:5 19:11||c="the tumor" 36:18 36:19||t="coref problem"
+c="the patient" 18:0 18:1||c="who" 18:18 18:18||c="the patient" 21:0 21:1||c="the patient" 27:0 27:1||c="the patient" 35:0 35:1||c="the patient" 37:0 37:1||c="her" 38:7 38:7||c="her" 38:14 38:14||c="she" 38:17 38:17||c="her" 38:25 38:25||c="her" 38:31 38:31||c="her" 38:34 38:34||c="the patient" 40:0 40:1||c="the patient" 41:0 41:1||c="her" 43:10 43:10||t="coref person"
+c="nephrectomy" 21:4 21:4||c="a left radical nephrectomy" 35:17 35:20||c="operation" 36:1 36:1||t="coref treatment"
+c="hydrea" 24:4 24:4||c="her hydrea" 38:14 38:15||c="her hydrea" 38:31 38:32||t="coref treatment"
+c="dr. suot n. dragtente" 35:9 35:12||c="dr. suot n. dragtente" 43:4 43:7||c="suot n. dragtente , m.d." 45:1 45:5||t="coref person"
+c="oncology fellows" 38:1 38:2||c="they" 38:22 38:22||c="oncology fellows" 43:13 43:14||t="coref person"
+c="polycythemia vera" 18:12 18:13||c="polycythemia vera" 22:4 22:5||t="coref problem"
+c="an ultrasound" 18:31 18:32||c="that" 18:33 18:33||t="coref test"

@@ -1,0 +1,54 @@
+c="amiodarone" 56:26 56:26||t="coref treatment"||c="amiodarone" 59:22 59:22
+c="coronary artery bypass graft" 71:7 71:10||t="coref treatment"||c="coronary artery bypass graft" 75:1 75:4
+c="the patient" 58:5 58:6||t="coref person"||c="his" 59:0 59:0
+c="he" 57:0 57:0||t="coref person"||c="the patient" 58:5 58:6
+c="afebrile" 35:2 35:2||t="coref problem"||c="afebrile" 62:7 62:7
+c="coronary artery disease" 70:1 70:3||t="coref problem"||c="coronary artery disease" 73:1 73:3
+c="he" 59:13 59:13||t="coref person"||c="the patient" 60:4 60:5
+c="coronary artery bypass grafting" 52:12 52:15||t="coref treatment"||c="coronary artery bypass graft" 71:7 71:10
+c="myocardial infarction x3" 20:1 20:3||t="coref problem"||c="myocardial infarction" 74:1 74:2
+c="lopressor" 59:20 59:20||t="coref treatment"||c="lopressor" 62:13 62:13
+c="the patient" 61:5 61:6||t="coref person"||c="he" 62:5 62:5
+c="the patient" 60:4 60:5||t="coref person"||c="the patient" 61:5 61:6
+c="the patient" 87:0 87:1||t="coref person"||c="the patient" 88:0 88:1
+c="the patient" 65:2 65:3||t="coref person"||c="he" 66:0 66:0
+c="his" 46:0 46:0||t="coref person"||c="his" 50:0 50:0
+c="his" 50:0 50:0||t="coref person"||c="the patient" 52:0 52:1
+c="he" 66:0 66:0||t="coref person"||c="the patient" 66:8 66:9
+c="he" 62:5 62:5||t="coref person"||c="his" 63:0 63:0
+c="amiodarone" 59:22 59:22||t="coref treatment"||c="an amiodarone dose" 62:20 62:22
+c="his" 63:10 63:10||t="coref person"||c="the patient" 65:2 65:3
+c="the patient" 52:0 52:1||t="coref person"||c="he" 53:0 53:0
+c="his" 63:0 63:0||t="coref person"||c="his" 63:10 63:10
+c="his" 54:5 54:5||t="coref person"||c="the patient" 54:11 54:12
+c="coronary artery disease" 19:1 19:3||t="coref problem"||c="coronary artery disease" 70:1 70:3
+c="who" 11:46 11:46||t="coref person"||c="the patient" 12:0 12:1
+c="the patient" 12:0 12:1||t="coref person"||c="he" 12:14 12:14
+c="he" 12:14 12:14||t="coref person"||c="he" 13:6 13:6
+c="a repeat catheterization" 13:12 13:14||t="coref test"||c="which" 13:19 13:19
+c="he" 13:6 13:6||t="coref person"||c="the patient" 15:7 15:8
+c="chest pressure" 15:12 15:13||t="coref problem"||c="which" 16:1 16:1
+c="the patient" 15:7 15:8||t="coref person"||c="the patient" 17:14 17:15
+c="the patient" 17:14 17:15||t="coref person"||c="he" 32:0 32:0
+c="he" 32:0 32:0||t="coref person"||c="he" 35:0 35:0
+c="he" 35:0 35:0||t="coref person"||c="his" 46:0 46:0
+c="he" 53:0 53:0||t="coref person"||c="his" 54:5 54:5
+c="the patient" 54:11 54:12||t="coref person"||c="he" 55:0 55:0
+c="he" 55:0 55:0||t="coref person"||c="the patient" 56:8 56:9
+c="atrial fibrillation" 56:15 56:16||t="coref problem"||c="which" 56:19 56:19
+c="the patient" 56:8 56:9||t="coref person"||c="he" 56:20 56:20
+c="he" 56:20 56:20||t="coref person"||c="he" 56:30 56:30
+c="he" 56:30 56:30||t="coref person"||c="he" 57:0 57:0
+c="his" 59:0 59:0||t="coref person"||c="he" 59:13 59:13
+c="the patient" 88:0 88:1||t="coref person"||c="his" 88:7 88:7
+c="stent" 11:55 11:55||t="coref treatment"||c="the stent" 13:23 13:24
+c="three myocardial infarctions" 11:22 11:24||t="coref problem"||c="myocardial infarction x3" 20:1 20:3
+c="a mitral valve annuloplasty" 52:18 52:21||t="coref treatment"||c="mitral valve annuloplasty" 71:13 71:15
+c="five vessel coronary artery bypass graft" 11:29 11:34||t="coref treatment"||c="coronary artery bypass graft" 21:1 21:4
+c="the patient" 11:3 11:4||t="coref person"||c="who" 11:46 11:46
+c="his balloon pump" 54:5 54:7||t="coref treatment"||c="his balloon pump" 59:0 59:2
+c="briley von der ross , m.d." 89:0 89:5||t="coref person"||c="dr. santos von der ross" 97:4 97:8
+c="afebrile" 62:7 62:7||t="coref problem"||c="afebrile" 66:2 66:2
+c="coronary artery disease" 11:16 11:18||t="coref problem"||c="coronary artery disease" 19:1 19:3
+c="his primary care doctor" 88:7 88:10||t="coref person"||c="dr. beals" 88:12 88:13
+c="the patient" 66:8 66:9||t="coref person"||c="the patient" 87:0 87:1

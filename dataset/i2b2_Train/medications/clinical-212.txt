@@ -1,0 +1,52 @@
+12	No relief with nitroglycerin x3 .|nitroglycerin[518,531]||||||x3[532,534]|||C0017887|4917|4917|glyceryl trinitrate
+17	Still getting chest pain intermittently , but relieved by morphine sulfate .|morphine sulfate[753,769]|||||||||C0066814|30236|30236|morphine sulfate
+18	Was on a Heparin and nitroglycerin drip with only intermittent relief .|Heparin[781,788]|||||||||C0019134|235473|235473|heparin,porcine
+18	Was on a Heparin and nitroglycerin drip with only intermittent relief .|nitroglycerin[793,806]|||||drip[807,811]||||C0017887|4917|4917|glyceryl trinitrate
+43	1. Diovan 106 mg q.d.|Diovan[1578,1584]|||106mg[1585,1591]|||q.d.[1592,1596]|||C0719949|216652|69749|valsartan
+44	2. Advair 500/50 two puffs b.i.d.|Advair 500 / 50[1600,1613]||||two puffs[1614,1623]||b.i.d.[1624,1630]|||C1965904|896229|36117|salmeterol
+45	3. Plavix 75 mg q.d.|Plavix[1634,1640]|||75mg[1641,1646]|||q.d.[1647,1651]|||C1607286|573094|32968|clopidogrel
+46	4. Crestor 20 mg q.d.|Crestor[1655,1662]|||20mg[1663,1668]|||q.d.[1669,1673]|||C2719262|859752|301542|rosuvastatin
+47	5. Neurontin 300 mg t.i.d.|Neurontin[1677,1686]|||300mg[1687,1693]|||t.i.d.[1694,1700]|||C1596319|563878|25480|gabapentin
+48	6. Prilosec 20 mg b.i.d.|Prilosec[1704,1712]|||20mg[1713,1718]|||b.i.d.[1719,1725]|||C1602242|541245|7646|omeprazole
+49	7. Vicodin as needed .|Vicodin[1729,1736]||||||||as needed[1737,1746]|C0483514|128793|161|paracetamol
+50	8. Trazodone 50 mg q.d.|Trazodone[1752,1761]|||50mg[1762,1767]|||q.d.[1768,1772]|||C2710323|856376|10737|trazodone
+51	9. Singulair 10 mg q.d.|Singulair[1776,1785]|||10mg[1786,1791]|||q.d.[1792,1796]|||C1597856|565420|88249|montelukast
+52	10. Flexeril 10 mg t.i.d.|Flexeril[1801,1809]|||10mg[1810,1815]|||t.i.d.[1816,1822]|||C2370534|828349|21949|cyclobenzaprine
+53	11. Lopressor 75 mg b.i.d.|Lopressor[1827,1836]|||75mg[1837,1842]|||b.i.d.[1843,1849]|||C0700776|203344|6918|metoprolol
+54	12. Humibid 3600 b.i.d.|Humibid[1854,1861]|||3600[1862,1866]|||b.i.d.[1867,1873]|||C0729017|225071|225071|humibid
+55	13. Colace 100 mg b.i.d.|Colace[1878,1884]|||100mg[1885,1891]|||b.i.d.[1892,1898]||||1247755|82003|docusate
+56	14. Zetia 10 mg q.d.|Zetia[1903,1908]|||10mg[1909,1914]|||q.d.[1915,1919]|||C1593702|576000|341248|ezetimibe
+57	15. Benadryl as needed .|Benadryl[1924,1932]||||||||as needed[1933,1942]|C0700900|203457|3498|diphenhydramine
+58	16. Tricor 106 mg q.d.|Tricor[1949,1955]|||106mg[1956,1962]|||q.d.[1963,1967]|||C0723893|220456|8703|fenofibrate
+59	17. Premarin 0.3 mg q.d.|Premarin[1972,1980]|||0.3mg[1981,1987]|||q.d.[1988,1992]|||C0710100|208513|4099|conjugated estrogens
+60	18. Prozac 40 mg q.d.|Prozac[1997,2003]|||40mg[2004,2009]|||q.d.[2010,2014]|||C1592239|574512|4493|fluoxetine
+61	19. Omega-3 fatty acids t.i.d.|Omega - 3 fatty acids[2019,2038]||||||t.i.d[2039,2044]|||C0015689|4301|4301|omega-3 fatty acids
+84	It was felt that if we attempted aspirin desensitize her while an inpatient , then she would benefit from the use of aspirin and Plavix .|aspirin[3057,3064]|||||||||C0004057|1191|1191|acetylsalicylic acid
+84	It was felt that if we attempted aspirin desensitize her while an inpatient , then she would benefit from the use of aspirin and Plavix .|aspirin[3141,3148]|||||||||C0004057|1191|1191|acetylsalicylic acid
+84	It was felt that if we attempted aspirin desensitize her while an inpatient , then she would benefit from the use of aspirin and Plavix .|Plavix[3153,3159]|||||||||C0633084|174742|32968|clopidogrel
+85	The patient was sent to the CCU and underwent aspirin desensitization protocol , which she tolerated well .|aspirin[3208,3215]|||||||||C0004057|1191|1191|acetylsalicylic acid
+86	She had mild worsening of her asthma attacks , which was relieved by Benadryl and occasionally albuterol .|Benadryl[3339,3347]|||||||||C0700900|203457|3498|diphenhydramine
+86	She had mild worsening of her asthma attacks , which was relieved by Benadryl and occasionally albuterol .|albuterol[3365,3374]|||||||||C0001927|435|435|salbutamol
+87	The patient found that if she took the aspirin in the evening with her Benadryl that she takes for sleep , that the asthma exacerbation did not occur .|Benadryl[3448,3456]|||||||||C0700900|203457|3498|diphenhydramine
+87	The patient found that if she took the aspirin in the evening with her Benadryl that she takes for sleep , that the asthma exacerbation did not occur .|aspirin[3416,3423]|||||||||C0004057|1191|1191|acetylsalicylic acid
+88	Aspirin no longer should be considered an allergy for this patient , and she is going to take this as an outpatient .|Aspirin[3529,3536]|||||||||C0004057|1191|1191|acetylsalicylic acid
+90	The patient 's Lipitor was increased to 80 mg q.d.|Lipitor[3682,3689]|||80mg[3707,3712]|||q.d.[3713,3717]|||C1592402|574676|83367|atorvastatin
+92	This is a chronic issue and was controlled with Flexeril and Vicodin .|Flexeril[3781,3789]|||||||||C0936055|224954|21949|cyclobenzaprine
+92	This is a chronic issue and was controlled with Flexeril and Vicodin .|Vicodin[3794,3801]|||||||||C0483514|128793|161|paracetamol
+99	1. Metoprolol 100 mg b.i.d.|Metoprolol[3987,3997]|||100mg[3998,4004]|||b.i.d.[4005,4011]|||C1123388|328470|6918|metoprolol
+100	2. Plavix 75 mg q.d.|Plavix[4015,4021]|||75mg[4022,4027]|||q.d.[4028,4032]|||C1607286|573094|32968|clopidogrel
+101	3. Advair 550 mcg two puffs b.i.d.|Advair[4036,4042]|||550mcg[4043,4050]|two puffs[4051,4060]||b.i.d.[4061,4067]|||C1622832|301543|36117|salmeterol
+102	4. Neurontin 300 mg t.i.d.|Neurontin[4071,4080]|||300mg[4081,4087]|||t.i.d.[4088,4094]|||C1596319|563878|25480|gabapentin
+103	5. Protonix 40 mg q.d.|Protonix[4098,4106]|||40mg[4107,4112]|||q.d.[4113,4117]|||C1588007|542447|40790|pantoprazole
+104	6. Montelukast 10 mg q.d.|Montelukast[4121,4132]|||10mg[4133,4138]|||q.d.[4139,4143]|||C1145935|343197|88249|montelukast
+105	7. Bethanechol 25 mg b.i.d.|Bethanechol[4147,4158]|||25mg[4159,4164]|||b.i.d.[4165,4171]|||C2710800|857327|19257|bethanechol
+106	8. Docusate sodium 100 mg b.i.d.|Docusate sodium[4175,4190]|||100mg[4191,4197]|||b.i.d.[4198,4204]|||C3153447|1099278|82003|docusate
+107	9. Zetia 10 mg q.d.|Zetia[4208,4213]|||10mg[4214,4219]|||q.d.[4220,4224]|||C1593702|576000|341248|ezetimibe
+108	10. Estrogen 0.3 mg q.d.|Estrogen[4229,4237]|||0.3mg[4238,4244]|||q.d.[4245,4249]||||4100|4100|estrogens
+109	11. Fluoxetine 40 mg q.d.|Fluoxetine[4254,4264]|||40mg[4265,4270]|||q.d.[4271,4275]|||C1125978|330341|4493|fluoxetine
+110	12. Vicodin 5-500 mg tablets q.4-6h.|Vicodin[4280,4287]||tablets[4297,4304]|5 - 500mg[4288,4296]|||q.4 - 6h[4305,4311]|||C0712729|856907|161|paracetamol
+112	13. Cyclobenzaprine 10 mg tablet one tablet orally t.i.d.|Cyclobenzaprine[4338,4353]||tablet[4360,4366]|10mg[4354,4359]|one tablet[4367,4377]|orally[4378,4384]|t.i.d.[4385,4391]||||828348|21949|cyclobenzaprine
+113	14. Atorvastatin 80 mg q.d.|Atorvastatin[4396,4408]|||80mg[4409,4414]|||q.d.[4415,4419]|||C1124482|329299|83367|atorvastatin
+114	15. Valsartan 320 mg q.d.|Valsartan[4424,4433]|||320mg[4434,4440]|||q.d.[4441,4445]|||C1166306|350561|69749|valsartan
+115	16. Aspirin one q.d.|Aspirin[4450,4457]||||one[4458,4461]||q.d.[4462,4466]|||C0004057|1191|1191|acetylsalicylic acid
+116	17. Benadryl as needed .|Benadryl[4471,4479]||||||||as needed[4480,4489]|C0700900|203457|3498|diphenhydramine

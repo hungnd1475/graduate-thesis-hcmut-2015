@@ -1,0 +1,51 @@
+23	The patient was started on Lupron on 10/18/03 , but pain was not affected .|Lupron[741,747]|||||||||C0886797|203852|42375|leuprolide (obsolete)
+24	She was put on Vicodin ES and Ultram with minimal relief .|Vicodin ES[805,815]|||||||||C0724276|220822|220822|vicodin es
+24	She was put on Vicodin ES and Ultram with minimal relief .|Ultram[820,826]|||||||||C0724054|220606|10689|tramadol
+28	Potassium at the outside hospital was 3.1 .|Potassium[1134,1143]|||||||||C0032821|8588|8588|potassium
+31	The patient was transferred to NVH after receiving intravenous fluid with potassium , Demerol for pain control and clindamycin , Valium and droperidol .|potassium[1312,1321]|||||intravenous[1289,1300]||||C0032821|8588|8588|potassium
+31	The patient was transferred to NVH after receiving intravenous fluid with potassium , Demerol for pain control and clindamycin , Valium and droperidol .|Demerol[1324,1331]|||||||||C1130483|282381|6754|pethidine
+31	The patient was transferred to NVH after receiving intravenous fluid with potassium , Demerol for pain control and clindamycin , Valium and droperidol .|clindamycin[1353,1364]|||||||||C0008947|2582|2582|clindamycin
+31	The patient was transferred to NVH after receiving intravenous fluid with potassium , Demerol for pain control and clindamycin , Valium and droperidol .|Valium[1367,1373]|||||||||C0699187|202472|3322|diazepam
+31	The patient was transferred to NVH after receiving intravenous fluid with potassium , Demerol for pain control and clindamycin , Valium and droperidol .|droperidol[1378,1388]|||||||||C0013136|3648|3648|droperidol
+35	A TAH-BSO in 1980 and an exploratory laparotomy with resection of a pelvic mass in 06/22 .|BSO[1526,1529]||||||||||||
+37	1. Vicodin 75/750 p.r.n.|Vicodin[1636,1643]|||75[1644,1646]|||||p.r.n.[1651,1657]|C0483514|128793|161|paracetamol
+38	2. Ultram .|Ultram[1661,1667]|||||||||C0724054|220606|10689|tramadol
+39	3. Verapamil 240 mg b.i.d.|Verapamil[1673,1682]|||240mg[1683,1689]|||b.i.d.[1690,1696]|||C1123819|328824|11170|verapamil
+40	4. Synthroid 100 mcg q.d.|Synthroid[1700,1709]|||100mcg[1710,1717]|||q.d.[1718,1722]||||966250|10582|levothyroxine
+41	5. HCTZ 25 mg q.d.|HCTZ[1726,1730]|||25mg[1731,1736]|||q.d.[1737,1741]||||310798|5487|hydrochlorothiazide
+42	6. Arthrotec 0.2 mg b.i.d.|Arthrotec[1745,1754]|||0.2mg[1755,1761]|||b.i.d.[1762,1768]|||C2710183|855917|42331|misoprostol
+43	7. Advair 250/50 mcg one puff q.a.m.|Advair 250 / 50[1772,1785]||||one puff[1790,1798]||q.a.m.[1799,1805]|||C1965902|896212|36117|salmeterol
+44	8. Tofranil .|Tofranil[1809,1817]|||||||||C0025231|6716|5691|imipramine
+45	9. Ambien 10 mg q.h.s.|Ambien[1823,1829]|||10mg[1830,1835]|||q.h.s.[1836,1842]|||C2709710|854874|39993|zolpidem
+47	11. Ferrous sulfate 325 mg t.i.d.|Ferrous sulfate[1875,1890]|||325mg[1891,1897]|||t.i.d.[1898,1904]|||C1125139|329760|24947|ferrous sulfate
+48	12. Colace .|Colace[1909,1915]|||||||||C0282139|82000|82003|docusate
+53	The patient was admitted to NVH and started on vancomycin , levofloxacin and Flagyl .|vancomycin[2087,2097]|||||||||C0042313|11124|11124|vancomycin
+53	The patient was admitted to NVH and started on vancomycin , levofloxacin and Flagyl .|levofloxacin[2100,2112]|||||||||C0282386|82122|82122|levofloxacin
+53	The patient was admitted to NVH and started on vancomycin , levofloxacin and Flagyl .|Flagyl[2117,2123]||||||||||202866|6922|metronidazole
+63	She had a PCEA for pain , then a Dilaudid PCA .|PCA[2859,2862]||||||||||1025540|1025540|pca
+63	She had a PCEA for pain , then a Dilaudid PCA .|Dilaudid[2850,2858]||||||||||224913|3423|hydromorphone
+65	The patient was seen by Onc Psychiatry consult , who recommended imipramine 75 mg ; that was subsequently increased to 150 mg p.o. q.h.s. , trazadone 100 mg q.h.s. and Ambien 10 mg q.h.s.|imipramine[3005,3015]|||100mg[3090,3096]|||q.h.s.[3071,3077]|||C2609799|835590|5691|imipramine
+65	The patient was seen by Onc Psychiatry consult , who recommended imipramine 75 mg ; that was subsequently increased to 150 mg p.o. q.h.s. , trazadone 100 mg q.h.s. and Ambien 10 mg q.h.s.|imipramine[3005,3015]|||150mg[3059,3065]||p.o.[3066,3070]|q.h.s.[3097,3103]|||C0689187|835577|5691|imipramine
+65	The patient was seen by Onc Psychiatry consult , who recommended imipramine 75 mg ; that was subsequently increased to 150 mg p.o. q.h.s. , trazadone 100 mg q.h.s. and Ambien 10 mg q.h.s.|Ambien[3108,3114]|||10mg[3115,3120]|||q.h.s.[3121,3127]|||C2709710|854874|39993|zolpidem
+68	In the ICU , the patient was on enalapril , hydralazine and labetalol .|enalapril[3250,3259]|||||||||C0014025|3827|3827|enalapril
+68	In the ICU , the patient was on enalapril , hydralazine and labetalol .|hydralazine[3262,3273]|||||||||C0020223|5470|5470|hydralazine
+68	In the ICU , the patient was on enalapril , hydralazine and labetalol .|labetalol[3278,3287]|||||||||C0022860|6185|6185|labetalol
+69	After a Cardiology consulton 12/13/03 , the patient was started on metoprolol 100 mg p.o. q.i.d. , lisinopril 10 mg q.d. , hydrochlorothiazide 25 mg q.d. .|metoprolol[3357,3367]|||100mg[3368,3374]||p.o.[3375,3379]|q.i.d.[3380,3386]||||866511|6918|metoprolol
+69	After a Cardiology consulton 12/13/03 , the patient was started on metoprolol 100 mg p.o. q.i.d. , lisinopril 10 mg q.d. , hydrochlorothiazide 25 mg q.d. .|lisinopril[3389,3399]|||10mg[3400,3405]|||q.d.[3406,3410]|||C0987217|316151|29046|lisinopril
+69	After a Cardiology consulton 12/13/03 , the patient was started on metoprolol 100 mg p.o. q.i.d. , lisinopril 10 mg q.d. , hydrochlorothiazide 25 mg q.d. .|hydrochlorothiazide[3413,3432]|||25mg[3433,3438]|||q.d.[3439,3443]|||C0986526|316049|5487|hydrochlorothiazide
+70	Hydralazine was stopped .|Hydralazine[3446,3457]|||||||||C0020223|5470|5470|hydralazine
+71	Blood pressure stayed high with an SBP in the 170s , so amlodipine 10 mg q.d. was added and that blood pressure was still elevated .|amlodipine[3528,3538]|||10mg[3539,3544]|||q.d.[3545,3549]|||C1124794|329526|17767|amlodipine
+76	The patient was restarted on Advair and by 12/15/03 , was weaned to room air likely an effective Advair and control of anxiety and psychiatric issues .|Advair[3982,3988]|||||||||C1622832|301543|36117|salmeterol
+76	The patient was restarted on Advair and by 12/15/03 , was weaned to room air likely an effective Advair and control of anxiety and psychiatric issues .|Advair[4050,4056]|||||||||C1622832|301543|36117|salmeterol
+95	The patient was started on empiricvancomycin , levofloxacin and Flagyl after the second exploratory laparotomy .|levofloxacin[5758,5770]|||||||||C0282386|82122|82122|levofloxacin
+95	The patient was started on empiricvancomycin , levofloxacin and Flagyl after the second exploratory laparotomy .|Flagyl[5775,5781]||||||||||202866|6922|metronidazole
+96	She was started on vancomycin , levofloxacin , Flagyl , doxycycline and fluconazole .|vancomycin[5843,5853]|||||||||C0042313|11124|11124|vancomycin
+96	She was started on vancomycin , levofloxacin , Flagyl , doxycycline and fluconazole .|levofloxacin[5856,5868]|||||||||C0282386|82122|82122|levofloxacin
+96	She was started on vancomycin , levofloxacin , Flagyl , doxycycline and fluconazole .|Flagyl[5871,5877]||||||||||202866|6922|metronidazole
+96	She was started on vancomycin , levofloxacin , Flagyl , doxycycline and fluconazole .|doxycycline[5880,5891]|||||||||C0013090|3640|3640|doxycycline
+96	She was started on vancomycin , levofloxacin , Flagyl , doxycycline and fluconazole .|fluconazole[5896,5907]|||||||||C0016277|4450|4450|fluconazole
+105	q. heparin for DVT prophylaxis postoperatively .|heparin[6412,6419]|||||||||C0019134|235473|235473|heparin,porcine
+110	The patient was started on heparin .|heparin[6727,6734]|||||||||C0019134|235473|235473|heparin,porcine
+111	The patient transitioned to Lovenox on 12/09/03 after a Cardiology consult indicated increased survival with Lovenox therapy .|Lovenox[6765,6772]|||||||||C0728963|225036|67108|enoxaparin
+111	The patient transitioned to Lovenox on 12/09/03 after a Cardiology consult indicated increased survival with Lovenox therapy .|Lovenox[6846,6853]|||||||||C0728963|225036|67108|enoxaparin
+114	The patient was on home Synthroid dose during her hospitalization , insulin sliding scale with q.6h. fingersticks while she was on TPN .|Synthroid[6937,6946]|||sliding scale[6989,7002]|||q.6h.[7008,7013]||||224920|10582|levothyroxine

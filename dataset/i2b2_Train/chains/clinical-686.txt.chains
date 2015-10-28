@@ -1,0 +1,4 @@
+c="shuffjesc , nanora" 12:0 12:2||c="patient" 32:0 32:0||c="the patient" 35:0 35:1||c="patient" 41:7 41:7||c="you" 43:1 43:1||t="coref person"
+c="provider" 19:0 19:0||c="queloisevier dreweilltrievkemme" 20:0 20:1||c="dreweilltrievkemme , queloisevier" 48:5 48:7||t="coref person"
+c="pcp" 22:0 22:0||c="pcp" 23:1 23:1||c="dr. wires" 42:4 42:5||c="pcp" 44:0 44:0||c="wires , peantsall a" 45:0 45:3||t="coref person"
+c="abd pain/" 33:0 33:1||c="abdominal pain" 35:7 35:8||c="abdominal pain" 37:0 37:1||t="coref problem"

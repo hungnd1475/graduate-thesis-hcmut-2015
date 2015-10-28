@@ -1,0 +1,22 @@
+25	Quit smoking 23 years ago , occasional ETOH , denies illicit drug use .|illicit drug[721,733]|||||||23 years[681,689]|||3683|3683|illicit drug
+33	CV : RRR , no M/R/G|M / R[1011,1014]||||||||||7916|7916|m / r
+38	:09 PM BLOOD Glucose - 172 * UreaN - 11 Creat - 0.9 Na - 142 Cl - 111 * HCO3 - 22 2013-10-29 01:09 PM BLOOD Mg - 2.6|Na[1430,1432]||||||||||56501|56501|na m-fluorphosphate
+38	:09 PM BLOOD Glucose - 172 * UreaN - 11 Creat - 0.9 Na - 142 Cl - 111 * HCO3 - 22 2013-10-29 01:09 PM BLOOD Mg - 2.6|Cl -[1439,1443]|||111[1444,1447]||||||C0106269|47104|47104|cl-
+38	:09 PM BLOOD Glucose - 172 * UreaN - 11 Creat - 0.9 Na - 142 Cl - 111 * HCO3 - 22 2013-10-29 01:09 PM BLOOD Mg - 2.6|HCO3[1450,1454]||||||||||||
+47	On post-op day #3 , the patient 's pacing wires were removed , and his lopressor was started .|lopressor[1984,1993]|||||||||C0700776|203344|6918|metoprolol
+52	Avandia 8 mg daily|Avandia[2248,2255]|||8mg[2256,2260]|||daily[2261,2266]|||C1592199|574472|84108|rosiglitazone
+53	Glipizide 10 mg bid|Glipizide[2267,2276]|||10mg[2277,2282]|||bid[2283,2286]|||C0992363|317379|4821|glipizide
+54	Diovan 160 mg daily|Diovan[2287,2293]|||160mg[2294,2300]|||daily[2301,2306]|||C1597603|565167|69749|valsartan
+55	Metformin 500 mg two tabs bid|Metformin[2307,2316]|||500mg[2317,2323]|two tabs[2324,2332]||bid[2333,2336]|||C0987665|316256|6809|metformin
+56	Omeprazole 20 mg q PM|Omeprazole[2337,2347]|||20mg[2348,2353]|||q PM[2354,2358]|||C0988268|316408|7646|omeprazole
+58	1. Docusate Sodium 100 mg Capsule Sig : One ( 1 ) Capsule PO BID ( 2 times a day ) as needed for constipation .|Docusate Sodium[2386,2401]||Capsule[2409,2416]|100mg[2402,2408]||PO[2441,2443]|BID[2444,2447]||as needed[2466,2475]||1115005|82003|docusate
+60	2. Aspirin 81 mg Tablet , Delayed Release ( E.C. ) Sig : One ( 1 ) Tablet , Delayed Release ( E.C. ) PO DAILY ( Daily ).|Aspirin[2537,2544]||Tablet[2551,2557]|81mg[2545,2550]||PO[2635,2637]|DAILY[2638,2643]||||243670|1191|acetylsalicylic acid
+62	3. Oxycodone - Acetaminophen 5-325 mg Tablet Sig : 1-2 Tablets PO Q4H ( every 4 hours ) as needed for pain for 30 doses .|Oxycodone - Acetaminophen[2722,2747]||Tablet[2757,2763]|5 - 325mg[2748,2756]|1 - 2 Tablets[2770,2781]|PO[2782,2784]|Q4H[2785,2788]||as needed[2807,2816]|C0717368|214183|214183|oxycodone-acetaminophen
+64	4. Atorvastatin Calcium 10 mg Tablet Sig : One ( 1 ) Tablet PO DAILY ( Daily ).|Atorvastatin Calcium[2882,2902]||Tablet[2909,2915]|10mg[2903,2908]||PO[2939,2941]|DAILY[2942,2947]|||C0693627|617312|83367|atorvastatin
+66	5. Rosiglitazone Maleate 8 mg Tablet Sig : One ( 1 ) Tablet PO DAILY ( Daily ).|Rosiglitazone Maleate[3000,3021]||Tablet[3027,3033]|8mg[3022,3026]||PO[3057,3059]|DAILY[3060,3065]|||C0980052|312861|84108|rosiglitazone
+67	6. Glipizide 10 mg Tablet Sig : One ( 1 ) Tablet PO BID ( 2 times a day ).|Glipizide[3080,3089]||Tablet[3096,3102]|10mg[3090,3095]||PO[3126,3128]|BID[3129,3132]|||C0977134|310488|4821|glipizide
+68	7. Tamsulosin 0.4 mg Capsule , Sust.|Tamsulosin[3155,3165]||Capsule[3173,3180]|0.4mg[3166,3172]|||||||863669|77492|tamsulosin
+73	8. Metoprolol Tartrate 25 mg Tablet Sig : 0.5 Tablet PO BID ( 2 times a day ).|Metoprolol Tartrate[3336,3355]||Tablet[3362,3368]|25mg[3356,3361]|0.5 Tablet[3375,3385]|PO[3386,3388]|BID[3389,3392]|||C1359886|866924|6918|metoprolol
+75	9. Furosemide 20 mg Tablet Sig : One ( 1 ) Tablet PO every twelve ( 12 ) hours .|Furosemide[3453,3463]||Tablet[3470,3476]|20mg[3464,3469]||PO[3500,3502]||||C0977056|310429|4603|furosemide
+77	10. Pantoprazole Sodium 40 mg Tablet , Delayed Release ( E.C. ) Sig : One ( 1 ) Tablet , Delayed Release ( E.C. ) PO Q24H ( every 24 hours ).|Pantoprazole Sodium[3573,3592]||Tablet[3599,3605]|40mg[3593,3598]||PO[3683,3685]|Q24H[3686,3690]|||C0981697|314200|40790|pantoprazole
+79	11. Potassium Chloride 10 mEq Capsule , Sustained Release Sig : Two ( 2 ) Capsule , Sustained Release PO Q12H ( every 12 hours ).|Potassium Chloride[3779,3797]||Capsule[3805,3812]|10mEq[3798,3804]||PO[3877,3879]|Q12H[3880,3884]||||904268|8591|potassium chloride

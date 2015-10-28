@@ -1,0 +1,20 @@
+c="the patient" 16:0 16:1||t="coref person"||c="he" 17:0 17:0
+c="he" 17:0 17:0||t="coref person"||c="the patient" 19:0 19:1
+c="the patient" 21:0 21:1||t="coref person"||c="he" 22:6 22:6
+c="the patient" 23:0 23:1||t="coref person"||c="his" 24:0 24:0
+c="his" 24:0 24:0||t="coref person"||c="his" 24:5 24:5
+c="his" 24:5 24:5||t="coref person"||c="he" 25:0 25:0
+c="he" 25:0 25:0||t="coref person"||c="his" 26:0 26:0
+c="he" 29:0 29:0||t="coref person"||c="his" 30:0 30:0
+c="he" 31:0 31:0||t="coref person"||c="he" 32:0 32:0
+c="radical retropubic prostatectomy" 19:3 19:5||t="coref treatment"||c="the surgery" 20:4 20:5
+c="prostate cancer" 12:0 12:1||t="coref problem"||c="prostate cancer" 16:15 16:16
+c="radical retropubic prostatectomy" 14:2 14:4||t="coref treatment"||c="radical retropubic prostatectomy" 19:3 19:5
+c="he" 32:0 32:0||t="coref person"||c="he" 32:9 32:9
+c="the patient" 19:0 19:1||t="coref person"||c="the patient" 21:0 21:1
+c="his" 30:0 30:0||t="coref person"||c="he" 31:0 31:0
+c="he" 22:6 22:6||t="coref person"||c="the patient" 23:0 23:1
+c="the surgery" 20:4 20:5||t="coref treatment"||c="the procedure" 21:3 21:4
+c="he" 27:5 27:5||t="coref person"||c="his" 28:0 28:0
+c="his" 26:0 26:0||t="coref person"||c="he" 27:5 27:5
+c="his" 28:0 28:0||t="coref person"||c="he" 29:0 29:0

@@ -1,0 +1,13 @@
+c="age shuff" 20:0 20:1||t="coref person"||c="shuff , ronrin" 47:5 47:7
+c="provider" 19:0 19:0||t="coref person"||c="age shuff" 20:0 20:1
+c="pcp" 43:0 43:0||t="coref person"||c="reke , atota s" 44:0 44:3
+c="you" 37:6 37:6||t="coref person"||c="your" 37:11 37:11
+c="your" 37:11 37:11||t="coref person"||c="patient" 39:7 39:7
+c="you" 41:1 41:1||t="coref person"||c="you" 41:16 41:16
+c="chirdvoln , iena" 12:0 12:2||t="coref person"||c="patient" 28:0 28:0
+c="dysfunctional uterine bleeding" 31:0 31:2||t="coref problem"||c="your uterine bleeding" 37:11 37:13
+c="you" 41:16 41:16||t="coref person"||c="you" 42:1 42:1
+c="your uterine bleeding" 37:11 37:13||t="coref problem"||c="this bleeding" 42:9 42:10
+c="patient" 28:0 28:0||t="coref person"||c="you" 37:6 37:6
+c="you" 40:6 40:6||t="coref person"||c="you" 41:1 41:1
+c="patient" 39:7 39:7||t="coref person"||c="you" 40:6 40:6

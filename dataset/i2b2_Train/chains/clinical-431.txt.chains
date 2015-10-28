@@ -1,0 +1,6 @@
+c="left axillary node dissection" 17:0 17:3||c="left axillary node dissection" 22:4 22:7||c="a left axillary lymph nodes dissection" 62:14 62:19||c="the procedure" 63:3 63:4||t="coref treatment"
+c="breast carcinoma" 17:7 17:8||c="a breast carcinoma" 19:19 19:21||c="a grade iii / iii infiltrating ductal carcinoma" 21:5 21:12||t="coref problem"
+c="patient" 19:0 19:0||c="who" 19:10 19:10||c="she" 19:24 19:24||c="she" 20:0 20:0||c="she" 22:0 22:0||c="her" 22:11 22:11||c="she" 23:0 23:0||c="her" 25:2 25:2||c="she" 35:7 35:7||c="patient" 39:0 39:0||c="her" 40:0 40:0||c="she" 40:6 40:6||c="the patient" 62:0 62:1||c="the patient" 63:0 63:1||c="the patient" 65:0 65:1||c="her" 66:3 66:3||c="patient" 68:0 68:0||t="coref person"
+c="dr. ausguall" 20:11 20:12||c="dr. ausguall" 62:22 62:23||c="dr. ausguall" 68:5 68:6||c="wilftam ausguall , m.d." 73:0 73:3||c="dr. ausguall" 81:0 81:1||t="coref person"
+c="a wide resection" 20:2 20:4||c="this resection" 21:2 21:3||t="coref treatment"
+c="her jp" 66:3 66:4||c="the jp drain" 68:16 68:18||t="coref treatment"

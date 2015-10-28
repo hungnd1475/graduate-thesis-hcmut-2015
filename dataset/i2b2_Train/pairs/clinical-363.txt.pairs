@@ -1,0 +1,8 @@
+c="you" 20:4 20:4||t="coref person"||c="your" 20:6 20:6
+c="douetnounbreunkoll , stenreslyse" 12:0 12:2||t="coref person"||c="your patient" 20:6 20:7
+c="your" 20:6 20:6||t="coref person"||c="you" 25:1 25:1
+c="the patient" 21:0 21:1||t="coref person"||c="the patient" 22:5 22:6
+c="douetnounbreunkoll , stenreslyse" 20:9 20:11||t="coref person"||c="the patient" 21:0 21:1
+c="the patient" 22:5 22:6||t="coref person"||c="the patient" 23:0 23:1
+c="you" 25:1 25:1||t="coref person"||c="breutzfreierm , viennee" 27:0 27:2
+c="your patient" 20:6 20:7||t="coref person"||c="douetnounbreunkoll , stenreslyse" 20:9 20:11

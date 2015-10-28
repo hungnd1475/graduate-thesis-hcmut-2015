@@ -1,0 +1,35 @@
+16	Patient is a 75 year old right handed male with past medical history of coronary artery disease s/p NQWMI 02-25 , s/p LAD angioplasty and stent 05-26 , dementia , hyperlipidemia , aortic stenosis , atrial fibrillation on coumadin who presented from his CMED CSRU doctor 's office wtih acute onset|coumadin[577,585]|||||||||C0699129|202421|11289|warfarin
+30	Intubated for airway protection at 13:35 after Fentanyl , Etomidate , Vecuronium and Succhinylcholine given .|Fentanyl[1332,1340]|||||||||C0015846|4337|4337|fentanyl
+30	Intubated for airway protection at 13:35 after Fentanyl , Etomidate , Vecuronium and Succhinylcholine given .|Etomidate[1343,1352]|||||||||C0015131|4177|4177|etomidate
+30	Intubated for airway protection at 13:35 after Fentanyl , Etomidate , Vecuronium and Succhinylcholine given .|Vecuronium[1355,1365]|||||||||C0242531|71535|71535|vecuronium
+31	Started on Labetalol and then Nipride drip for BP control ; discontinued as goal BP in 130-160 s.|Labetalol[1406,1415]|||||||||C0022860|6185|6185|labetalol
+31	Started on Labetalol and then Nipride drip for BP control ; discontinued as goal BP in 130-160 s.|Nipride[1425,1432]|||||drip[1433,1437]|||||||
+32	Received 10 mg SC Vitamin K and 2 units FFP while in Gary .|Vitamin K[1511,1520]|||10mg[1502,1507]||SC[1508,1510]||||C1129931|333460|11258|vitamin k (obsolete)
+32	Received 10 mg SC Vitamin K and 2 units FFP while in Gary .|FFP[1533,1536]||||||||||||
+34	Loaded with Dilantin and 50 grams Mannitol .|Dilantin[1613,1621]||||||||||202740|8183|phenytoin
+34	Loaded with Dilantin and 50 grams Mannitol .|Mannitol[1635,1643]|||50grams[1626,1634]||||||C0987552|316229|6628|mannitol
+37	1. Atrial fibrillation , on coumadin|coumadin[1734,1742]|||||||||C0699129|202421|11289|warfarin
+56	PHYSICAL EXAM ( Examined off of Propofol ):|Propofol[2240,2248]|||||||||C0033487|8782|8782|propofol
+75	No M/R/G .|M / R[2616,2619]||||||||||7916|7916|m / r
+112	GLUCOSE - 101 UREA N - 25 * CREAT - 1.0 SODIUM - 142 POTASSIUM - 4.2 CHLORIDE - 106 TOTAL CO2 - 27 ANION GAP - 13 2013-11-11 12:39 PM|POTASSIUM[3762,3771]|||||||||C0032821|8588|8588|potassium
+112	GLUCOSE - 101 UREA N - 25 * CREAT - 1.0 SODIUM - 142 POTASSIUM - 4.2 CHLORIDE - 106 TOTAL CO2 - 27 ANION GAP - 13 2013-11-11 12:39 PM|SODIUM[3749,3755]|||||||||C0037473|9853|9853|sodium
+112	GLUCOSE - 101 UREA N - 25 * CREAT - 1.0 SODIUM - 142 POTASSIUM - 4.2 CHLORIDE - 106 TOTAL CO2 - 27 ANION GAP - 13 2013-11-11 12:39 PM|UREA[3723,3727]|||||||||C0041942|11002|11002|urea
+117	-12 11:16 AM BLOOD ASA - NEG Ethanol - NEG Acetmnp - NEG Bnzodzp - NEG Barbitr - NEG Tricycl - NEG 2013-11-12 10:17 AM URINE bnzodzp - NEG barbitr - NEG opiates - NEG cocaine - NEG amphetm - NEG mthdone - NEG|ASA[4277,4280]|||||||||C1740879|667904|9525|salicylic acid
+117	-12 11:16 AM BLOOD ASA - NEG Ethanol - NEG Acetmnp - NEG Bnzodzp - NEG Barbitr - NEG Tricycl - NEG 2013-11-12 10:17 AM URINE bnzodzp - NEG barbitr - NEG opiates - NEG cocaine - NEG amphetm - NEG mthdone - NEG|cocaine[4425,4432]|||||||||C0009170|2653|2653|cocaine
+131	Patient was a 75 year old right handed male with past medical history of atrial fibrillation on coumadin , coronary artery disease , hyperlipidemia , dementia with sudden onset left sided weakness , dysarthria .|coumadin[5367,5375]|||||||||C0699129|202421|11289|warfarin
+138	He was loaded with Mannitol and Dilantin in the emergency room .|Mannitol[6004,6012]|||||||||C0024730|6628|6628|mannitol
+138	He was loaded with Mannitol and Dilantin in the emergency room .|Dilantin[6017,6025]||||||||||202740|8183|phenytoin
+143	Labetalol continuous infusion was titrated for systolic blood pressure of 130-160 .|Labetalol[6345,6354]|||||||||C0022860|6185|6185|labetalol
+144	Mannitol and Dilantin were continued .|Mannitol[6429,6437]|||||||||C0024730|6628|6628|mannitol
+144	Mannitol and Dilantin were continued .|Dilantin[6442,6450]||||||||||202740|8183|phenytoin
+145	After lengthy discussion , the patient 's wife opted to make him DNR on afternoon of 2013-11-11 .|DNR[6533,6536]||||||||||||
+146	Overnight , fresh frozen plasma was given for goal INR of < 1.4 .|fresh frozen plasma[6578,6597]||||||||||4563|4563|fresh frozen plasma
+164	1. Coumadin|Coumadin[7682,7690]|||||||||C0699129|202421|11289|warfarin
+165	2. Lipitor|Lipitor[7694,7701]|||||||||C0593906|153165|83367|atorvastatin
+166	3. Toprol XL|Toprol XL[7705,7714]|||||||||C2723006|865575|6918|metoprolol
+167	4. ASA|ASA[7718,7721]|||||||||C1740879|667904|9525|salicylic acid
+168	5. Zoloft|Zoloft[7725,7731]|||||||||C0284660|82728|36437|sertraline
+169	6. Glucophage|Glucophage[7735,7745]|||||||||C0591573|151827|6809|metformin
+170	7. Aricept|Aricept[7749,7756]||||||||||135446|135447|donepezil
+171	8. Namenda|Namenda[7760,7767]|||||||||C1563959|405206|6719|memantine
+172	9. Artificial Tears|Artificial Tears[7771,7787]||||||||||1133|1133|artificial tears

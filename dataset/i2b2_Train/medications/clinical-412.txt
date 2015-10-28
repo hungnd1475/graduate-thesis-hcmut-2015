@@ -1,0 +1,34 @@
+11	She was given a Z-Pak for treatment along with albuterol .|albuterol[419,428]|||||||||C0001927|435|435|salbutamol
+11	She was given a Z-Pak for treatment along with albuterol .|Z - Pak[388,393]|||||||||C1878682|750149|750149|z-pak
+14	At the hospital , she was started on Rocephin and Levaquin for a right lower lobe pneumonia seen on chest x-ray .|Rocephin[602,610]|||||||||C0035750|9449|2193|ceftriaxone
+14	At the hospital , she was started on Rocephin and Levaquin for a right lower lobe pneumonia seen on chest x-ray .|Levaquin[615,623]||||||||||217992|82122|levofloxacin
+24	1. Levoxyl 112 mcg q.d.|Levoxyl[1055,1062]|||112mcg[1063,1070]|||q.d.[1071,1075]|||C2747438|966334|10582|levothyroxine
+25	2. Prozac .|Prozac[1079,1085]|||||||||C0162373|58827|4493|fluoxetine
+26	3. Codeine for cough .|Codeine[1091,1098]|||||||||C0009214|2670|2670|codeine
+67	For antibiotic coverage of her pneumonia , she was started on Levaquin , ceftriaxone , and vancomycin .|antibiotic[2757,2767]||||||||||896|896|antibiotic
+67	For antibiotic coverage of her pneumonia , she was started on Levaquin , ceftriaxone , and vancomycin .|Levaquin[2815,2823]||||||||||217992|82122|levofloxacin
+67	For antibiotic coverage of her pneumonia , she was started on Levaquin , ceftriaxone , and vancomycin .|ceftriaxone[2826,2837]|||||||||C0007561|2193|2193|ceftriaxone
+67	For antibiotic coverage of her pneumonia , she was started on Levaquin , ceftriaxone , and vancomycin .|vancomycin[2844,2854]|||||||||C0042313|11124|11124|vancomycin
+74	She was also on round-the-clock Atrovent and albuterol nebulizers .|Atrovent[3508,3516]|||||||||C0591130|151390|7213|ipratropium
+74	She was also on round-the-clock Atrovent and albuterol nebulizers .|albuterol[3521,3530]||nebulizers[3531,3541]|||||||C0001927|435|435|salbutamol
+76	The vancomycin and Levaquin were discontinued after approximately four days in the hospital .|vancomycin[3661,3671]|||||||||C0042313|11124|11124|vancomycin
+76	The vancomycin and Levaquin were discontinued after approximately four days in the hospital .|Levaquin[3676,3684]|||||||four days[3723,3732]|||217992|82122|levofloxacin
+77	The ceftriaxone was discontinued after four days in the hospital , and the patient was to continue on Levaquin .|ceftriaxone[3755,3766]|||||||four days[3790,3799]||C0007561|2193|2193|ceftriaxone
+77	The ceftriaxone was discontinued after four days in the hospital , and the patient was to continue on Levaquin .|Levaquin[3853,3861]||||||||||217992|82122|levofloxacin
+81	She was started on a regimen of MS Contin with oxycodone for breakthrough pain .|MS Contin with oxycodone[4050,4074]||||||||||203354|7052|morphine
+83	Tylenol and ibuprofen were also added for better control .|Tylenol[4195,4202]||||||||||202433|161|paracetamol
+83	Tylenol and ibuprofen were also added for better control .|ibuprofen[4207,4216]|||||||||C0020740|5640|5640|ibuprofen
+91	B12 was noted to be low and the patient was given an injection of IM B12 while in the hospital .|B12[4727,4730]|||||||||null|643357|643357|b12
+91	B12 was noted to be low and the patient was given an injection of IM B12 while in the hospital .|B12[4796,4799]|||||IM[4793,4795]||||null|643357|643357|b12
+92	She was also started on iron supplementation .|iron supplementation[4848,4868]||||||||||1030295|1030295|iron supplementation
+94	The patient was continued on Synthroid for her chronic hypothyroidism .|Synthroid[4917,4926]||||||||||224920|10582|levothyroxine
+105	1. Levothyroxine 75 mcg q.d.|Levothyroxine[5216,5229]|||75mcg[5230,5236]|||q.d.[5237,5241]|||C2746720|903736|10582|levothyroxine
+106	2. Prozac 40 mg q.d.|Prozac[5245,5251]|||40mg[5252,5257]|||q.d.[5258,5262]|||C1592239|574512|4493|fluoxetine
+107	3. Levaquin 500 mg q.d. for 7 days after discharge .|Levaquin[5266,5274]|||500mg[5275,5281]|||q.d.[5282,5286]|7 days[5291,5297]||C1606347|572149|82122|levofloxacin
+108	4. Guaifenesin syrup p.r.n. cough .|Guaifenesin[5319,5330]||||||||p.r.n.[5337,5343]|C0018305|5032|5032|guaifenesin
+109	5. Oxycodone 10 mg q.4 h. p.r.n. for pain .|Oxycodone[5355,5364]|||10mg[5365,5370]|||q.4 h.[5371,5377]||p.r.n.[5378,5384]|C1126285|330592|7804|oxycodone
+110	6. Colace 100 mg b.i.d.|Colace[5399,5405]|||100mg[5406,5412]|||b.i.d.[5413,5419]||||1247755|82003|docusate
+111	7. MS Contin 30 mg b.i.d.|MS Contin[5423,5432]|||30mg[5433,5438]|||b.i.d.[5439,5445]|||C2730251|892659|7052|morphine
+112	8. Ibuprofen 800 mg q.8 h .|Ibuprofen[5449,5458]|||800mg[5459,5465]|||q.8 h[5466,5471]|||C0986668|316078|5640|ibuprofen
+113	9. Albuterol 1 to 2 puffs q.6 h. p.r.n.|Albuterol[5477,5486]||||1 to 2 puffs[5487,5499]||q.6 h.[5500,5506]||p.r.n.[5507,5513]|C1366684|437350|435|salbutamol
+114	10. Atrovent 1 puff q.6 h. p.r.n.|Atrovent[5518,5526]||||1 puff[5527,5533]||q.6 h.[5534,5540]||p.r.n[5541,5546]|C0591130|151390|7213|ipratropium

@@ -1,0 +1,41 @@
+9	He has a recent history of dyspnea on exertion on exertional chest pain which has increased over the last several weeks and is relieved by sublingual nitroglycerin .|nitroglycerin[375,388]|||||sublingual[364,374]||several weeks[331,344]|||1295706|4917|glyceryl trinitrate
+30	One aspirin a day .|aspirin[1420,1427]||||||a day[1428,1433]|||C0004057|1191|1191|acetylsalicylic acid
+31	Nexium 40 mg a day .|Nexium[1436,1442]|||40mg[1443,1448]|||a day[1449,1454]|||C1592709|574983|283742|esomeprazole
+32	Carvedilol 6.125 mg a day .|Carvedilol[1457,1467]|||6.125mg[1468,1476]|||a day[1477,1482]|||C0054836|20352|20352|carvedilol
+33	Glucophage 25 mg once a day .|Glucophage[1485,1495]|||25mg[1496,1501]|||a day[1507,1512]|||C0591573|151827|6809|metformin
+34	Lipitor 10 mg once a day .|Lipitor[1515,1522]|||10mg[1523,1528]|||a day[1534,1539]|||C1617527|617313|83367|atorvastatin
+36	He lives with his wife and works as a drug representative for Carvedilol .|Carvedilol[1621,1631]|||||||||C0054836|20352|20352|carvedilol
+69	The patient tolerated the procedure well and was transferred to the unit , intubated on Milrinone , Levophed and Propofol drips .|Milrinone[3513,3522]|||||||||C0128513|52769|52769|milrinone
+69	The patient tolerated the procedure well and was transferred to the unit , intubated on Milrinone , Levophed and Propofol drips .|Levophed[3525,3533]|||||||||C1450037|227559|7512|norepinephrine
+69	The patient tolerated the procedure well and was transferred to the unit , intubated on Milrinone , Levophed and Propofol drips .|Propofol[3538,3546]|||||||||C0033487|8782|8782|propofol
+76	After an extended stay for hemodynamic monitoring and pressor support to maintain his perfusion .|pressor[4067,4074]||||||||||||
+78	The major neurologic event of this hospital course was that the patient was slow to awake after his Propofol drip was discontinued .|Propofol[4224,4232]|||||drip[4233,4237]||||C0033487|8782|8782|propofol
+88	Douglass is given Trazodone to help him sleep at night .|Trazodone[5299,5308]|||||||||C0040805|10737|10737|trazodone
+91	The Levophed drip was continued until postoperative day number one .|Levophed[5676,5684]|||||drip[5685,5689]||||C1450037|227559|7512|norepinephrine
+92	Milrinone was continued until postoperative day number three , at which point he was having good enough cardiac output that he did not need these drips to help maintain his blood pressure anymore .|Milrinone[5741,5750]|||||||||C0128513|52769|52769|milrinone
+94	In addition , he has hypertension , for which he receives Metoprolol and he has hypercholesterolemia , for which he receives nothing at this time .|Metoprolol[6139,6149]|||||||||C0025859|6918|6918|metoprolol
+99	The patient has gastroesophageal reflux disease , for which he has been receiving Zantac as an inpatient .|Zantac[6475,6481]|||||||||C0592278|152523|9143|ranitidine
+100	We will put him back on his Nexium .|Nexium[6528,6534]||||||||||284799|283742|esomeprazole
+104	Amylase was 108 and lipase was 213 .|Amylase[6845,6852]|||||||||C0002712|743|743|diastase
+104	Amylase was 108 and lipase was 213 .|lipase[6865,6871]|||||||||C0023764|6406|6406|lipase
+106	In addition , the patient did have slightly elevated blood sugars over the last couple of days and has required an insulin sliding scale and basal insulin to maintain his blood sugars at a more appropriate level .|basal insulin[7166,7179]|||sliding scale[7148,7161]|||||||184074|184074|basal insulin
+111	The patient , during this admission , required transfusion of three units of packed red blood cells to maintain adequate hematocrit .|packed red blood cells[7521,7543]||||||||||834201|834201|packed red blood cells
+122	The patient had positive blood and urine cultures on 01-05 for history of Methicillin resistant Staphylococcus aureus , which was pan sensitive .|Staphylococcus aureus[8417,8438]||||||||||1311275|1311275|staphylococcus aureus
+122	The patient had positive blood and urine cultures on 01-05 for history of Methicillin resistant Staphylococcus aureus , which was pan sensitive .|Methicillin[8395,8406]|||||||||C0025643|589822|589822|methicillin
+126	On the 16th , a urine culture was obtained and did grow out greater than 100,000 colonies of E. coli which was intermittently resistant to Ciprofloxacin .|Ciprofloxacin[8761,8774]|||||||||C0008809|2551|2551|ciprofloxacin
+127	He was started on Bactrim for that .|Bactrim[8795,8802]||||||||||151399|10180|sulfamethoxazole
+129	David Montero for one month to fight his blood borne infection , to prevent seeding of his aortic graft and continue Bactrim for ten days after discharge to treat the E. coli in his urine .|Bactrim[8951,8958]|||||||ten days[8963,8971]|||151399|10180|sulfamethoxazole
+148	Metoprolol 75 mg p.o. twice a day .|Metoprolol[9725,9735]|||75mg[9736,9741]||p.o.[9742,9746]|a day[9753,9758]|||null|1606349|6918|metoprolol
+149	Captopril 12.5 mg p.o. three times a day .|Captopril[9761,9770]|||12.5mg[9771,9778]||p.o.[9779,9783]|three times a day[9784,9801]|||C0975227|308963|1998|captopril
+150	Aspirin 81 mg p.o. q. day .|Aspirin[9804,9811]|||81mg[9812,9817]||p.o.[9818,9822]|q. day[9823,9829]||||252857|1191|acetylsalicylic acid
+151	Plavix 75 mg p.o. q. day .|Plavix[9832,9838]|||75mg[9839,9844]||p.o.[9845,9849]|q. day[9850,9856]|||C0716159|213169|32968|clopidogrel
+152	Heparin 5000 units subcutaneous twice a day .|Heparin[9859,9866]|||5000[9867,9871]||subcutaneous[9878,9890]|a day[9897,9902]|||C0977439|1361615|235473|heparin,porcine
+153	Metformin 1000 mg extended release p.o. q. day .|Metformin[9905,9914]||extended release[9923,9939]|1000mg[9915,9922]||p.o.[9940,9944]|q. day[9945,9951]||||860996|6809|metformin
+154	Humalog Max 75/25 , 20 units subcutaneous once a day in the morning .|Humalog[9954,9961]|||||subcutaneous[9983,9995]|a day[10001,10006]|||C0528249|135805|86009|insulin,lispro,human/rdna
+155	Levofloxacin 500 mg p.o. q. day .|Levofloxacin[10024,10036]|||500mg[10037,10043]||p.o.[10044,10048]|q. day[10049,10055]|||C0693579|199885|82122|levofloxacin
+156	Bactrim DS tabs , one tablet p.o. q. day for ten days .|Bactrim DS[10058,10068]||tabs[10069,10073]||one tablet[10076,10086]|p.o.[10087,10091]|q. day[10092,10098]|ten days[10103,10111]||null|849580|10180|sulfamethoxazole
+157	Colace 100 mg p.o. twice a day .|Colace[10114,10120]|||100mg[10121,10127]||p.o.[10128,10132]|a day[10139,10144]|||C0711644|1247756|82003|docusate
+159	Nexium 40 mg p.o. q. day .|Nexium[10171,10177]|||40mg[10178,10183]||p.o.[10184,10188]|q. day[10189,10195]|||C1592709|574983|283742|esomeprazole
+160	Trazodone 25 mg p.o. q h.s. as needed for sleep .|Trazodone[10198,10207]|||25mg[10208,10213]||p.o.[10214,10218]|h.s.[10221,10225]||as needed[10226,10235]|C1341136|411880|10737|trazodone
+161	Lasix 20 mg p.o. q. day for one week .|Lasix[10248,10253]|||20mg[10254,10259]||p.o.[10260,10264]|q. day[10265,10271]|one week[10276,10284]||C0697292|200801|4603|furosemide
+162	KCl 20 mg p.o. q. day for one week .|KCl[10287,10290]|||20mg[10291,10296]||p.o.[10297,10301]|q. day[10302,10308]|one week[10313,10321]||C0981677|891453|8591|potassium chloride

@@ -1,0 +1,32 @@
+17	Chemotherapy of IFEX , MESNA and VP-16 .|IFEX[355,359]|||||||||C0721031|217701|5657|ifosfamide
+17	Chemotherapy of IFEX , MESNA and VP-16 .|MESNA[362,367]|||||||||C0000294|44|44|mesna
+17	Chemotherapy of IFEX , MESNA and VP-16 .|VP - 16[372,377]||||||||||227469|227469|vp-16
+22	The patient underwent TAH / BSO , partial omentectomy at CTMC in 10-90 .|BSO[825,828]||||||||||||
+29	However  , during the fourth cycle  , Cytoxan was dropped .|Cytoxan[1492,1499]|||||||||C0699319|202589|3002|cyclophosphamide
+31	In 05-92 , the patient was admitted to Wellla Uxinny : mount Medical Center with left leg DVT and started on Heparin therapy .|Heparin[1682,1689]|||||||||C0019134|235473|235473|heparin,porcine
+32	She was discharged from there on Coumadin therapy .|Coumadin[1733,1741]|||||||||C0699129|202421|11289|warfarin
+39	Coumadin 5 mg po q d , Tagamet 400 mg po q d , Amoxicillin which was started on Labor Day , for a sore throat and Ativan 1 mg po prn nausea / anxiety .|Coumadin[1942,1950]|||5mg[1951,1955]||po[1956,1958]|q d[1959,1962]|||C0710780|855334|11289|warfarin
+39	Coumadin 5 mg po q d , Tagamet 400 mg po q d , Amoxicillin which was started on Labor Day , for a sore throat and Ativan 1 mg po prn nausea / anxiety .|Tagamet[1965,1972]|||400mg[1973,1979]||po[1980,1982]|q d[1983,1986]|||C0353840|104063|2541|cimetidine
+39	Coumadin 5 mg po q d , Tagamet 400 mg po q d , Amoxicillin which was started on Labor Day , for a sore throat and Ativan 1 mg po prn nausea / anxiety .|Amoxicillin[1989,2000]|||||||||C0002645|723|723|amoxicillin
+39	Coumadin 5 mg po q d , Tagamet 400 mg po q d , Amoxicillin which was started on Labor Day , for a sore throat and Ativan 1 mg po prn nausea / anxiety .|Ativan[2056,2062]|||1mg[2063,2067]||po[2068,2070]|||prn[2071,2074]|C0355054|104719|6470|lorazepam
+55	The patient is thus stage IV endometrial and stage III-C ovarian vs metastatic endometrial for line II , cycle I chemotherapy IFEX , MESNA and VP-16 .|IFEX[3156,3160]|||||IV[3056,3058]||||C0721031|217701|5657|ifosfamide
+55	The patient is thus stage IV endometrial and stage III-C ovarian vs metastatic endometrial for line II , cycle I chemotherapy IFEX , MESNA and VP-16 .|MESNA[3163,3168]|||||||||C0000294|44|44|mesna
+55	The patient is thus stage IV endometrial and stage III-C ovarian vs metastatic endometrial for line II , cycle I chemotherapy IFEX , MESNA and VP-16 .|VP - 16[3173,3178]||||||||||227469|227469|vp-16
+57	With the history of DVT , we plan Coumadin and check her coags .|Coumadin[3249,3257]|||||||||C0699129|202421|11289|warfarin
+63	IFEX 1.2 grams per meter squared x 3 days , MESNA 1.2 grams per meter squared x 3 days continuous IV infusion .|IFEX[3705,3709]|||1.2grams[3710,3719]|||x 3[3738,3741]|||C0721031|217701|5657|ifosfamide
+63	IFEX 1.2 grams per meter squared x 3 days , MESNA 1.2 grams per meter squared x 3 days continuous IV infusion .|MESNA[3749,3754]|||1.2grams[3755,3764]||IV[3803,3805]|x 3[3783,3786]||||204460|44|mesna
+64	She had VP-16 mixed with 250 cc IV fluid given over 1 hour each day for 3 days .|VP - 16[3825,3830]|||||IV[3849,3851]|each day[3876,3884]|1 hour[3869,3875]|||227469|227469|vp-16
+65	She also had MESNA dose of .6 grams per meter squared after her IFEX / MESNA were completed .|IFEX / MESNA[3962,3974]|||.6grams[3925,3933]||||||C1613081|900176|5657|ifosfamide
+65	She also had MESNA dose of .6 grams per meter squared after her IFEX / MESNA were completed .|MESNA[3911,3916]|||||||||C0000294|44|44|mesna
+66	The patient 's urinalysis on admission was significant for red blood cells which were TNTC as well as uric acid .|uric acid[4094,4103]||||||||||1427088|1427088|uric acid
+67	Because it was felt the patient was bleeding and the patient was contaminated , she received her IFEX / MESNA .|IFEX / MESNA[4203,4215]|||||||||C0721031|217701|5657|ifosfamide
+69	After 1 day of chemotherapy , the patient had 8-10 RBC 's in her urine but by the second day of her IFEX infusion , she had 50-80 RBC 's in her urine as well as a few transitional epithelial cells .|IFEX[4367,4371]|||||||1 day[4273,4278]||C0721031|217701|5657|ifosfamide
+70	Because of this finding , her IFEX was stopped before completion of her second day of infusion .|IFEX[4496,4500]|||||||||C0721031|217701|5657|ifosfamide
+71	Her MESNA alone was continued at that time for IV infusion .|MESNA[4567,4572]|||||IV[4610,4612]|||||204460|44|mesna
+72	She did receive her VP-16 without complication .|VP - 16[4644,4649]||||||||||227469|227469|vp-16
+77	The third issue was that her anticoagulation was grossly out of control on admission with PT of 25.6 and PTT of 42.2 .|anticoagulation[5084,5099]||||||||||1024413|1024413|anticoagulation
+78	Her repeat on 9-8 , was 36.0 / 68.2 and her Coumadin was held .|Coumadin[5218,5226]|||||||||C0699129|202421|11289|warfarin
+79	She received no Coumadin during her admission and by the time of discharge , her PT was down to 16.2 .|Coumadin[5254,5262]|||||||||C0699129|202421|11289|warfarin
+80	She was restarted on Coumadin 2.5 mg per day .|Coumadin[5362,5370]|||2.5mg[5371,5377]|||per day[5378,5385]|||C2709910|855313|11289|warfarin
+82	Her PT on the day of discharge was 13.2 and she was started on Coumadin 2.5 mg po q d as mentioned .|Coumadin[5594,5602]|||2.5mg[5603,5609]||po[5610,5612]|q d[5613,5616]|||C0710783|855314|11289|warfarin
+87	Jescspald , for repeat PT and Coumadin dosing on Monday , 9-14-02 .|Coumadin[5904,5912]||||||Monday[5923,5929]|||C0699129|202421|11289|warfarin

@@ -1,0 +1,14 @@
+c="special care formula" 56:20 56:22||t="coref treatment"||c="special care formula" 57:7 57:9
+c="the mother" 15:0 15:1||t="coref person"||c="mother" 18:0 18:0
+c="pediatrician" 80:0 80:0||t="coref person"||c="dr. manuel burke" 81:0 81:2
+c="phototherapy" 62:1 62:1||t="coref treatment"||c="phototherapy" 63:0 63:0
+c="increasing respiratory distress" 46:2 46:4||t="coref problem"||c="respiratory distress syndrome" 92:1 92:3
+c="she" 56:10 56:10||t="coref person"||c="she" 57:0 57:0
+c="sepsis" 69:10 69:10||t="coref problem"||c="perinatal sepsis" 94:1 94:2
+c="mother" 18:0 18:0||t="coref person"||c="mother" 24:0 24:0
+c="infant" 29:0 29:0||t="coref person"||c="she" 47:0 47:0
+c="she" 48:0 48:0||t="coref person"||c="she" 56:10 56:10
+c="the infant" 25:0 25:1||t="coref person"||c="infant" 29:0 29:0
+c="baby girl kathryn frazier" 13:0 13:3||t="coref person"||c="the infant" 25:0 25:1
+c="birth weight" 14:0 14:1||t="coref test"||c="birth weight" 28:2 28:3
+c="she" 47:0 47:0||t="coref person"||c="she" 48:0 48:0

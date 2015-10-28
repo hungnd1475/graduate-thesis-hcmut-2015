@@ -1,0 +1,82 @@
+c="the patient" 12:0 12:1||t="coref person"||c="who" 12:8 12:8
+c="who" 12:8 12:8||t="coref person"||c="the patient" 13:0 13:1
+c="her" 13:5 13:5||t="coref person"||c="she" 14:0 14:0
+c="treatment" 14:6 14:6||t="coref treatment"||c="this" 15:1 15:1
+c="she" 14:0 14:0||t="coref person"||c="she" 15:3 15:3
+c="she" 15:3 15:3||t="coref person"||c="she" 16:2 16:2
+c="she" 18:0 18:0||t="coref person"||c="she" 19:0 19:0
+c="she" 19:0 19:0||t="coref person"||c="the patient" 21:0 21:1
+c="the patient" 33:0 33:1||t="coref person"||c="she" 34:0 34:0
+c="she" 34:0 34:0||t="coref person"||c="she" 35:0 35:0
+c="she" 35:0 35:0||t="coref person"||c="the patient" 40:0 40:1
+c="the patient" 40:0 40:1||t="coref person"||c="the patient" 68:3 68:4
+c="the patient" 68:3 68:4||t="coref person"||c="she" 69:0 69:0
+c="her" 73:13 73:13||t="coref person"||c="the patient" 75:0 75:1
+c="she" 77:0 77:0||t="coref person"||c="the patient" 78:1 78:2
+c="the patient" 78:1 78:2||t="coref person"||c="the patient" 80:12 80:13
+c="the patient" 80:12 80:13||t="coref person"||c="the patient" 81:0 81:1
+c="the patient" 81:0 81:1||t="coref person"||c="her" 81:6 81:6
+c="her" 81:6 81:6||t="coref person"||c="the patient" 83:0 83:1
+c="the patient" 83:0 83:1||t="coref person"||c="she" 84:0 84:0
+c="she" 84:0 84:0||t="coref person"||c="her" 85:2 85:2
+c="her" 89:9 89:9||t="coref person"||c="the patient" 92:0 92:1
+c="the patient" 99:0 99:1||t="coref person"||c="the patient" 120:0 120:1
+c="her" 120:6 120:6||t="coref person"||c="she" 121:0 121:0
+c="her pcp" 121:5 121:6||t="coref person"||c="she" 121:8 121:8
+c="fairly significant abdominal pain" 83:3 83:6||t="coref problem"||c="the pain" 85:14 85:15
+c="abdominal muscle pain" 73:19 73:21||t="coref problem"||c="fairly significant abdominal pain" 83:3 83:6
+c="hypothyroidism" 96:0 96:0||t="coref problem"||c="her chronic hypothyroidism" 97:7 97:9
+c="the patient" 94:7 94:8||t="coref person"||c="she" 95:0 95:0
+c="ards" 20:13 20:13||t="coref problem"||c="acute respiratory distress syndrome" 68:10 68:13
+c="bilateral diffuse infiltrates" 20:8 20:10||t="coref problem"||c="right middle lobe , right lower lobe , and left lower lobe infiltrates" 64:3 64:15
+c="her" 70:4 70:4||t="coref person"||c="she" 70:7 70:7
+c="antibiotic coverage" 70:1 70:2||t="coref treatment"||c="the triple antibiotics" 76:16 76:18
+c="her" 85:2 85:2||t="coref person"||c="she" 85:5 85:5
+c="anemia" 91:0 91:0||t="coref problem"||c="iron-deficiency anemia" 93:17 93:18
+c="a ventilator" 38:14 38:15||t="coref treatment"||c="ventilator" 62:19 62:19
+c="the patient" 75:0 75:1||t="coref person"||c="the patient" 76:11 76:12
+c="the patient" 76:11 76:12||t="coref person"||c="she" 77:0 77:0
+c="her chronic hypothyroidism" 97:7 97:9||t="coref problem"||c="hypothyroidism" 106:0 106:0
+c="a persistent fairly severe cough" 73:5 73:9||t="coref problem"||c="her cough" 73:13 73:14
+c="the cough" 74:0 74:1||t="coref problem"||c="persistent cough" 83:9 83:10
+c="her pcp" 120:6 120:7||t="coref person"||c="dr. ruby godfrey" 120:9 120:11
+c="the triple antibiotics" 76:16 76:18||t="coref treatment"||c="the antibiotics" 78:13 78:14
+c="the patient" 92:0 92:1||t="coref person"||c="the patient" 94:7 94:8
+c="dr. ruby godfrey" 120:9 120:11||t="coref person"||c="her pcp" 121:5 121:6
+c="she" 69:0 69:0||t="coref person"||c="her" 70:4 70:4
+c="the patient" 88:0 88:1||t="coref person"||c="her" 89:9 89:9
+c="ventilator" 62:19 62:19||t="coref treatment"||c="a ventilator" 69:4 69:5
+c="she" 70:7 70:7||t="coref person"||c="the patient" 71:8 71:9
+c="she" 71:18 71:18||t="coref person"||c="the patient" 72:3 72:4
+c="her cough" 73:13 73:14||t="coref problem"||c="repeated coughing" 73:23 73:24
+c="ceftriaxone" 70:13 70:13||t="coref treatment"||c="the ceftriaxone" 80:0 80:1
+c="her pcp" 13:5 13:6||t="coref person"||c="her pcp" 120:6 120:7
+c="she" 95:0 95:0||t="coref person"||c="the patient" 97:0 97:1
+c="transaminitis" 87:0 87:0||t="coref problem"||c="mild transaminitis" 88:6 88:7
+c="vancomycin" 70:16 70:16||t="coref treatment"||c="the vancomycin" 79:0 79:1
+c="albuterol" 14:9 14:9||t="coref treatment"||c="albuterol nebulizers" 77:7 77:8
+c="extubation" 72:1 72:1||t="coref treatment"||c="extubation" 78:11 78:11
+c="levaquin" 70:11 70:11||t="coref treatment"||c="levaquin" 79:3 79:3
+c="the patient" 72:3 72:4||t="coref person"||c="she" 73:0 73:0
+c="she" 17:4 17:4||t="coref person"||c="she" 18:0 18:0
+c="acute respiratory distress syndrome" 68:10 68:13||t="coref problem"||c="acute respiratory distress syndrome" 104:0 104:3
+c="mild transaminitis" 88:6 88:7||t="coref problem"||c="this" 89:2 89:2
+c="levaquin" 17:10 17:10||t="coref treatment"||c="levaquin" 70:11 70:11
+c="she" 16:2 16:2||t="coref person"||c="she" 17:4 17:4
+c="the patient" 97:0 97:1||t="coref person"||c="her" 97:7 97:7
+c="she" 85:5 85:5||t="coref person"||c="the patient" 88:0 88:1
+c="the patient" 71:8 71:9||t="coref person"||c="she" 71:18 71:18
+c="iron-deficiency anemia" 93:17 93:18||t="coref problem"||c="iron-deficiency anemia" 105:0 105:1
+c="a right lower lobe pneumonia" 17:12 17:16||t="coref problem"||c="community - acquired pneumonia" 68:16 68:19
+c="her pneumonia" 70:4 70:5||t="coref problem"||c="community-acquired pneumonia" 103:0 103:1
+c="hypothyroidism" 23:0 23:0||t="coref problem"||c="hypothyroidism" 96:0 96:0
+c="repeated coughing" 73:23 73:24||t="coref problem"||c="the cough" 74:0 74:1
+c="the patient" 21:0 21:1||t="coref person"||c="the patient" 33:0 33:1
+c="community - acquired pneumonia" 68:16 68:19||t="coref problem"||c="her pneumonia" 70:4 70:5
+c="her" 97:7 97:7||t="coref person"||c="the patient" 99:0 99:1
+c="she" 73:0 73:0||t="coref person"||c="her" 73:13 73:13
+c="levaquin" 79:3 79:3||t="coref treatment"||c="levaquin" 80:18 80:18
+c="increasing cough" 13:15 13:16||t="coref problem"||c="a persistent fairly severe cough" 73:5 73:9
+c="the patient" 120:0 120:1||t="coref person"||c="her" 120:6 120:6
+c="she" 121:0 121:0||t="coref person"||c="her" 121:5 121:5
+c="the patient" 13:0 13:1||t="coref person"||c="her" 13:5 13:5

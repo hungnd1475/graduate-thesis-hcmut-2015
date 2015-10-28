@@ -1,0 +1,6 @@
+c="fyfevaia , lorerindil" 12:0 12:2||c="patient" 33:0 33:0||c="the patient" 35:0 35:1||c="patient" 42:7 42:7||c="patient" 43:0 43:0||c="his" 43:4 43:4||c="the patient" 45:0 45:1||t="coref person"
+c="pcp" 22:0 22:0||c="pcp" 24:5 24:5||c="his pcp" 43:4 43:5||c="pcp" 46:0 46:0||c="sumchirdkaysmavveindreps , yertrey" 47:0 47:2||t="coref person"
+c="ch kotekoll" 20:0 20:1||c="kotekoll , ch" 50:5 50:7||t="coref person"
+c="near syncope" 34:0 34:1||c="near syncope" 37:0 37:1||t="coref problem"
+c="dizziness" 35:7 35:7||c="recurrent dizziness" 45:9 45:10||t="coref problem"
+c="dr. foutchner" 43:7 43:8||c="dr. foutchner" 44:0 44:1||t="coref person"

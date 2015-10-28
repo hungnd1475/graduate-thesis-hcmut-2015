@@ -10,7 +10,7 @@ namespace HCMUT.EMRCorefResol
     public class EMRCollection
     {
         private readonly string[] _emrPaths;
-        private readonly string _conceptsDir, _chainsDir, _medicationsDir;
+        private readonly string _conceptsDir, _chainsDir, _medicationsDir, _emrDir;
         private readonly Random _rand = new Random();
 
         public int Count { get { return _emrPaths.Length; } }
@@ -23,6 +23,7 @@ namespace HCMUT.EMRCorefResol
             _conceptsDir = conceptsDir;
             _chainsDir = chainsDir;
             _medicationsDir = medicationsDir;
+            _emrDir = emrDir;
 
             HasGroundTruth = Directory.Exists(_chainsDir);
         }
@@ -98,6 +99,11 @@ namespace HCMUT.EMRCorefResol
                     chainsPaths[i] = GetChainsPath(k);
                 }
             }
+        }
+
+        public int IndexOf(string emrFileName)
+        {
+            return Array.IndexOf(_emrPaths, Path.Combine(_emrDir, emrFileName));
         }
     }
 }

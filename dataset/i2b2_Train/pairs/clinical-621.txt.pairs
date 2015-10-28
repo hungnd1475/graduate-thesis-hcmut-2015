@@ -1,0 +1,8 @@
+c="you" 23:1 23:1||t="coref person"||c="pcp" 24:0 24:0
+c="pcp" 24:0 24:0||t="coref person"||c="ackca , slaineaee l" 25:0 25:3
+c="jem , on" 12:0 12:2||t="coref person"||c="your patient" 20:6 20:7
+c="your" 20:6 20:6||t="coref person"||c="you" 23:1 23:1
+c="you" 20:4 20:4||t="coref person"||c="your" 20:6 20:6
+c="the patient" 21:0 21:1||t="coref person"||c="the patient" 22:3 22:4
+c="your patient" 20:6 20:7||t="coref person"||c="jem , on" 20:9 20:11
+c="jem , on" 20:9 20:11||t="coref person"||c="the patient" 21:0 21:1

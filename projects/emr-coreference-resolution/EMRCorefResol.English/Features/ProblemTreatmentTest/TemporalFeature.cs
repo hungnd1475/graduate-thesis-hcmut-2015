@@ -13,7 +13,7 @@ namespace HCMUT.EMRCorefResol.English.Features
             : base("Temporal-Feature", 3, 2)
         {
             var emrPath = new FileInfo(emr.Path).FullName;
-            var line = emr.GetLine(instance.Anaphora.Begin.Line);
+            var line = emr.GetLine(instance.Anaphora);
 
             var anaTemporal = Service.English.GetTemporalValue(emrPath, line);
             if (anaTemporal == null)
@@ -21,7 +21,7 @@ namespace HCMUT.EMRCorefResol.English.Features
                 return;
             }
 
-            line = emr.GetLine(instance.Antecedent.Begin.Line);
+            line = emr.GetLine(instance.Antecedent);
             var anteTemporal = Service.English.GetTemporalValue(emrPath, line);
             if (anteTemporal == null)
             {

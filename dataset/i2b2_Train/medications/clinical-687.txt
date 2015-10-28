@@ -1,0 +1,11 @@
+19	He was given colchicine and prednisone .|colchicine[599,609]|||||||||C0009262|2683|2683|colchicine
+19	He was given colchicine and prednisone .|prednisone[614,624]|||||||||C0032952|8640|8640|prednisone
+33	CV : RRR , no m/r|m / r[1249,1252]||||||||||7916|7916|m / r
+58	He was placed on Penicillin G , Clindamycin , for empiric coverage of his wound , with Group A strep growth from the New England Baptist Hospital-Bryce cultures .|Penicillin G[3003,3015]|||||||||C0030827|7980|7980|benzylpenicillin
+58	He was placed on Penicillin G , Clindamycin , for empiric coverage of his wound , with Group A strep growth from the New England Baptist Hospital-Bryce cultures .|Clindamycin[3018,3029]|||||||||C0008947|2582|2582|clindamycin
+71	Morton continued to be followed by Infectious Disease , whose recommendations were to complete a 01-28 week course of Penicillin G and Clindamycin after the foot was completely debrided and the skin flaps completed .|Penicillin G[3978,3990]|||||||||C0030827|7980|7980|benzylpenicillin
+71	Morton continued to be followed by Infectious Disease , whose recommendations were to complete a 01-28 week course of Penicillin G and Clindamycin after the foot was completely debrided and the skin flaps completed .|Clindamycin[3995,4006]|||||||||C0008947|2582|2582|clindamycin
+73	He received a PICC on POD#7 for his long-term antibiotic therapy .|antibiotic[4198,4208]||||||||||896|896|antibiotic
+75	Morton had good pain control , was tolerating a regular diet , had a well-healing wound treated with a VAC dressing , and was to continue his IV PCN G and Clindamycin .|PCN G[4395,4400]|||||IV[4392,4394]|||||8668|8668|pcn g
+75	Morton had good pain control , was tolerating a regular diet , had a well-healing wound treated with a VAC dressing , and was to continue his IV PCN G and Clindamycin .|Clindamycin[4405,4416]|||||||||C0008947|2582|2582|clindamycin
+78	Timolol .5%|Timolol[4504,4511]|||.5[4512,4514]||||||C0040233|10600|10600|timolol

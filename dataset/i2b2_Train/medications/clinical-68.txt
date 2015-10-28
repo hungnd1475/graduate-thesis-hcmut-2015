@@ -1,0 +1,36 @@
+21	Interoperatively , he was positive two liters with a stable blood pressure and heart rate , although requiring some neo-synephrine interoperatively .|neo - synephrine[1498,1512]|||twoliters[1417,1427]||||||C0702190|204346|8163|phenylephrine
+22	He responded to intravenous Lasix with 3.2 liters of urine output as well as marked clinical improvement .|Lasix[1560,1565]|||3.2liters[1571,1581]||intravenous[1548,1559]||||C0699992|202991|4603|furosemide
+26	He was given Lasix to continue to diurese the excess volume .|diurese[2080,2087]||||||||||216675|10772|trichlormethiazide
+26	He was given Lasix to continue to diurese the excess volume .|Lasix[2059,2064]|||||||||C0699992|202991|4603|furosemide
+27	He was also put on Lopressor 150 mg twice a day .|Lopressor[2127,2136]|||150mg[2137,2143]|||a day[2150,2155]|||C0700776|203344|6918|metoprolol
+33	2. His non-essential medications that may have been contributing to his change in mental status were discontinued ; those included Temocillin , Nortriptyline , Haldol , Lorazepam , Venlafaxine , Bupropion , and Gabapentin .|Temocillin[2833,2843]|||||||||C0076079|37775|37775|temocillin
+33	2. His non-essential medications that may have been contributing to his change in mental status were discontinued ; those included Temocillin , Nortriptyline , Haldol , Lorazepam , Venlafaxine , Bupropion , and Gabapentin .|Nortriptyline[2846,2859]|||||||||C0028420|7531|7531|nortriptyline
+33	2. His non-essential medications that may have been contributing to his change in mental status were discontinued ; those included Temocillin , Nortriptyline , Haldol , Lorazepam , Venlafaxine , Bupropion , and Gabapentin .|Haldol[2862,2868]|||||||||C0591585|151839|5093|haloperidol
+33	2. His non-essential medications that may have been contributing to his change in mental status were discontinued ; those included Temocillin , Nortriptyline , Haldol , Lorazepam , Venlafaxine , Bupropion , and Gabapentin .|Lorazepam[2871,2880]|||||||||C0024002|6470|6470|lorazepam
+33	2. His non-essential medications that may have been contributing to his change in mental status were discontinued ; those included Temocillin , Nortriptyline , Haldol , Lorazepam , Venlafaxine , Bupropion , and Gabapentin .|Venlafaxine[2883,2894]|||||||||C0078569|39786|39786|venlafaxine
+33	2. His non-essential medications that may have been contributing to his change in mental status were discontinued ; those included Temocillin , Nortriptyline , Haldol , Lorazepam , Venlafaxine , Bupropion , and Gabapentin .|Bupropion[2897,2906]|||||||||C0085208|42347|42347|bupropion
+33	2. His non-essential medications that may have been contributing to his change in mental status were discontinued ; those included Temocillin , Nortriptyline , Haldol , Lorazepam , Venlafaxine , Bupropion , and Gabapentin .|Gabapentin[2913,2923]|||||||||C0060926|25480|25480|gabapentin
+34	In addition , his cyclosporin levels were checked .|cyclosporin[2944,2955]||||||||||3008|3008|ciclosporin
+50	TSH was within normal limits as was B12 and folate .|B12[4438,4441]|||||||||null|643357|643357|b12
+50	TSH was within normal limits as was B12 and folate .|folate[4446,4452]|||||||||C0178638|62356|62356|folate
+60	Intramuscular as well as intravenous Haldol were ordered p.r.n. for emergency use should he become acutely agitated .|Haldol[5446,5452]|||||Intramuscular[5409,5422]||||C0591585|151839|5093|haloperidol
+61	haldol as well as the restraints were not required after the morning of the 23rd .|haldol[5527,5533]|||||||||C0591585|151839|5093|haloperidol
+66	His immunosuppressive therapy was continued throughout his stay ; his creatinine remained approximately 2.3 to 2.4 ; he has a baseline renal insufficiency .|immunosuppressive[5936,5953]||||||||||5748|5748|immunosuppressive
+73	Tylenol once his delirium had resolved .|Tylenol[6565,6572]||||||||||202433|161|paracetamol
+85	1. Venlafaxine XR 75 mg q. a.m.|Venlafaxine[7166,7177]|||75mg[7181,7186]|||q. a.m.[7187,7194]|||C1123787|328801|39786|venlafaxine
+86	2. Furosemide 20 mg q.o.d.|Furosemide[7198,7208]|||20mg[7209,7214]|||q.o.d.[7215,7221]|||C0986198|315970|4603|furosemide
+87	3. Metoprolol 100 mg twice a day .|Metoprolol[7225,7235]|||100mg[7236,7242]|||a day[7249,7254]|||C1123388|328470|6918|metoprolol
+88	4. Nitroglycerin sublingual 0.3 mg p.r.n.|Nitroglycerin[7260,7273]|||0.3mg[7285,7291]||sublingual[7274,7284]|||p.r.n.[7292,7298]||198038|4917|glyceryl trinitrate
+89	5. Cyclosporin microemulsion .|Cyclosporin[7302,7313]||||||||||3008|3008|ciclosporin
+90	6. Neoral 100 mg twice a day .|Neoral[7333,7339]|||100mg[7340,7346]|||a day[7353,7358]|||C0361697|835911|3008|ciclosporin
+92	8. Prednisone 10 mg q. day .|Prednisone[7393,7403]|||10mg[7404,7409]|||q. day[7410,7416]|||C0993472|317663|8640|prednisone
+93	9. Minoxidil 10 mg twice a day .|Minoxidil[7422,7431]|||10mg[7432,7437]|||a day[7444,7449]|||C0987889|316310|6984|minoxidil
+94	10. Prilosec 20 mg q. day .|Prilosec[7456,7464]|||20mg[7465,7470]|||q. day[7471,7477]|||C1602242|541245|7646|omeprazole
+95	11. NPH 30 units q. a.m. , 5 to 6 units q. p.m.|NPH[7484,7487]|||30[7488,7490]|||q. a.m.[7497,7504]||||311030|221108|insulin isophane,pork pure
+96	12. Regular insulin 5 units q. a.m. and 3 to 5 units q. p.m.|Regular insulin[7532,7547]|||5[7548,7549]|||q. a.m.[7556,7563]||||5856|5856|insulin regular
+97	13. Wellbutrin 100 mg q. day .|Wellbutrin[7593,7603]|||100mg[7604,7610]|||q. day[7611,7617]|||C2917773|993510|42347|bupropion
+98	14. Zocor 60 mg q. day .|Zocor[7624,7629]|||60mg[7630,7635]|||q. day[7636,7642]|||C0733683|196503|36567|simvastatin
+99	15. Nitroglycerin SR 2.5 mg twice a day .|Nitroglycerin[7649,7662]|||2.5mg[7666,7672]|||a day[7679,7684]|||C0988184|316375|4917|glyceryl trinitrate
+101	Nortriptyline 10 mg q. h.s. ; Flomax 0.4 mg q. h.s. ; Neurontin 600 mg three times a day .|Nortriptyline[7779,7792]|||10mg[7793,7798]|||h.s.[7802,7806]|||C1123870|328868|7531|nortriptyline
+101	Nortriptyline 10 mg q. h.s. ; Flomax 0.4 mg q. h.s. ; Neurontin 600 mg three times a day .|Flomax[7809,7815]|||0.4mg[7816,7822]|||h.s.[7826,7830]|||C2722256|863670|77492|tamsulosin
+101	Nortriptyline 10 mg q. h.s. ; Flomax 0.4 mg q. h.s. ; Neurontin 600 mg three times a day .|Neurontin[7833,7842]|||600mg[7843,7849]|||three times a day[7850,7867]|||C1592234|574507|25480|gabapentin

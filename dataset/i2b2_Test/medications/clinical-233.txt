@@ -1,0 +1,30 @@
+12	She had taken Maalox but had no relief with this .|Maalox[491,497]|||||||||C0065461|29115|612|aluminium hydroxide
+18	In the Emergency Room , the patient was given Lopressor , nitroglycerin , and aspirin .|Lopressor[896,905]|||||||||C0700776|203344|6918|metoprolol
+18	In the Emergency Room , the patient was given Lopressor , nitroglycerin , and aspirin .|nitroglycerin[908,921]|||||||||C0017887|4917|4917|glyceryl trinitrate
+18	In the Emergency Room , the patient was given Lopressor , nitroglycerin , and aspirin .|aspirin[928,935]|||||||||C0004057|1191|1191|acetylsalicylic acid
+30	1. Atenolol 25 .|Atenolol[1365,1373]|||25[1374,1376]||||||C0983888|315437|1202|atenolol
+31	2. Crestor 10 q.d.|Crestor[1382,1389]|||10[1390,1392]|||q.d.[1393,1397]|||C2719260|859748|301542|rosuvastatin
+32	3. Uniretic 15/25 .|Uniretic 15 / 25[1401,1415]||||||||||1299958|5487|hydrochlorothiazide
+52	The patient was given an aspirin and Plavix and in addition started on a beta Elmore , Maxine ACE inhibitor , and these were titrated up as her blood pressure tolerated .|aspirin[2712,2719]|||||||||C0004057|1191|1191|acetylsalicylic acid
+52	The patient was given an aspirin and Plavix and in addition started on a beta Elmore , Maxine ACE inhibitor , and these were titrated up as her blood pressure tolerated .|Plavix[2724,2730]|||||||||C0633084|174742|32968|clopidogrel
+52	The patient was given an aspirin and Plavix and in addition started on a beta Elmore , Maxine ACE inhibitor , and these were titrated up as her blood pressure tolerated .|ACE inhibitor[2781,2794]||||||||||836|836|ace inhibitor
+53	Given the fact that the patient had issues with muscle cramping with Atorvastatin in the past , she was started on Pravastatin which should give less of these side effects .|Atorvastatin[2927,2939]|||||||||C0286651|83367|83367|atorvastatin
+53	Given the fact that the patient had issues with muscle cramping with Atorvastatin in the past , she was started on Pravastatin which should give less of these side effects .|Pravastatin[2973,2984]|||||||||C0085542|42463|42463|pravastatin
+57	Given the fact that the patient had significant apical akinesis , she was started on heparin with a transition to Coumadin for anticoagulation for stroke prevention in the setting of apical akinesis .|anticoagulation[3519,3534]||||||||||1024413|1024413|anticoagulation
+57	Given the fact that the patient had significant apical akinesis , she was started on heparin with a transition to Coumadin for anticoagulation for stroke prevention in the setting of apical akinesis .|Coumadin[3506,3514]|||||||||C0699129|202421|11289|warfarin
+57	Given the fact that the patient had significant apical akinesis , she was started on heparin with a transition to Coumadin for anticoagulation for stroke prevention in the setting of apical akinesis .|heparin[3477,3484]|||||||||C0019134|235473|235473|heparin,porcine
+58	On discharge , the patient was given Lovenox injections which should be continued until the patient reaches a therapeutic dose of Coumadin .|Coumadin[3723,3731]|||||||||C0699129|202421|11289|warfarin
+58	On discharge , the patient was given Lovenox injections which should be continued until the patient reaches a therapeutic dose of Coumadin .|Lovenox[3630,3637]|||||||||C0728963|225036|67108|enoxaparin
+69	The patient was already on an aspirin and Plavix should this represent a small stroke .|aspirin[4590,4597]|||||||||C0004057|1191|1191|acetylsalicylic acid
+69	The patient was already on an aspirin and Plavix should this represent a small stroke .|Plavix[4602,4608]|||||||||C0633084|174742|32968|clopidogrel
+71	5. HEMATOLOGY : The patient was discharged on Coumadin for apical akinesis and stroke risk .|Coumadin[4825,4833]|||||||||C0699129|202421|11289|warfarin
+73	Banks , who will adjust her Coumadin dose .|Coumadin[4967,4975]|||||||||C0699129|202421|11289|warfarin
+78	1. Aspirin 325 q.d.|Aspirin[5184,5191]|||325[5192,5195]|||q.d.[5196,5200]|||C0992015|317300|1191|acetylsalicylic acid
+79	2. Lisinopril 5 q.d.|Lisinopril[5204,5214]|||5[5215,5216]|||q.d.[5217,5221]|||C0987222|316156|29046|lisinopril
+80	3. Toprol XL 100 q.d.|Toprol XL[5225,5234]|||100[5235,5238]|||q.d.[5239,5243]||||1370485|6918|metoprolol
+81	4. Coumadin 5 q.d.|Coumadin[5247,5255]|||5[5256,5257]|||q.d.[5258,5262]|||C2709920|855333|11289|warfarin
+82	5. Plavix 75 q.d.|Plavix[5266,5272]|||75[5273,5275]|||q.d.[5276,5280]|||C1607286|573094|32968|clopidogrel
+83	6. Lovenox 60 mg b.i.d. until therapeutic on Coumadin .|Coumadin[5326,5334]||||||b.i.d.[5298,5304]|||C0699129|202421|11289|warfarin
+83	6. Lovenox 60 mg b.i.d. until therapeutic on Coumadin .|Lovenox[5284,5291]|||60mg[5292,5297]|||||||854239|67108|enoxaparin
+84	7. Pravastatin 80 q.d.|Pravastatin[5340,5351]|||80[5352,5354]|||q.d .[5355,5359]|||C1171013|353356|42463|pravastatin
+85	FOLLOW-UP PLANS : The patient will follow-up with her primary care physician in the week following discharge for further monitoring of her INR and adjustment of her Coumadin dose .|Coumadin[5525,5533]|||||||||C0699129|202421|11289|warfarin

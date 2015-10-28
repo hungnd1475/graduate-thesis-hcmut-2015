@@ -17,12 +17,12 @@ namespace HCMUT.EMRCorefResol.Evaluations
         {
             var evals = new Dictionary<ConceptType, Evaluation>();
 
-            foreach (var type in Evaluation.Types)
+            foreach (var type in Evaluation.ConceptTypes)
             {
                 var tSystemChains = systemChains.GetChainsOfType(type);
                 var tGroundTruth = groundTruth.GetChainsOfType(type);
 
-                double p, r, f;
+                double p, r;
                 if (tSystemChains.Count == 0 && tGroundTruth.Count == 0)
                 {
                     p = r = 1d;
@@ -58,15 +58,15 @@ namespace HCMUT.EMRCorefResol.Evaluations
                         }
                         r = u / l;
                     }
-                }
+                }  
 
-                f = (p == 0d && r == 0d) ? 0d : 2 * p * r / (p + r);
+                var f = (p == 0 && r == 0) ? 0d : 2 * p * r / (p + r);
                 evals.Add(type, new Evaluation(p, r, f, Name));
             }
             return evals;
         }
 
-        private static int m(CorefChain chain, CorefChainCollection chainsColl)
+        private int m(CorefChain chain, CorefChainCollection chainsColl)
         {
             var overlap = new HashSet<Concept>();
             var r = 0;

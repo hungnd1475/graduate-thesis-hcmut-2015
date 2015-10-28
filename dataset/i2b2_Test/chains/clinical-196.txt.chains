@@ -1,0 +1,6 @@
+c="this 49 year old male" 18:3 18:7||c="the patient" 35:0 35:1||c="his" 35:11 35:11||c="his" 35:15 35:15||c="he" 35:18 35:18||c="his" 36:5 36:5||c="he" 36:8 36:8||t="coref person"
+c="carcinoma of the kidney" 6:0 6:3||c="carcinoma of the kidney" 16:0 16:3||t="coref problem"
+c="hypovolemia" 6:5 6:5||c="hypovolemia" 16:5 16:5||t="coref problem"
+c="metastatic liver" 6:7 6:8||c="metastatic liver disease" 16:7 16:9||t="coref problem"
+c="his family" 35:11 35:12||c="the family" 37:5 37:6||t="coref person"
+c="nu l. gall , m.d." 38:0 38:4||c="dr. nu l. gall" 47:0 47:3||t="coref person"

@@ -1,0 +1,50 @@
+9	The patient is a 54 year-old female with a history of breast cancer with known brain mets , history of PE , recent radiation therapy and steroids who presented in 2012-04-23 with myopathy presumed secondary to sterids , which have been given for her brain mets .|steroids[272,280]||||||||||10072|10072|steroids
+11	She was treated with Levaquin given her temperatures and differential diagnosis of increased PE burden load , infections or pneumonia and questionable lymphangitic spread of her cancer .|Levaquin[532,540]||||||||||217992|82122|levofloxacin
+13	Review of CTA showed no PE , but there was ground glass opacities on CT , so PCP was considered highly unlikely given her recent history of steroid use .|steroid[961,968]||||||||||10072|10072|steroid
+16	She was given Bactrim and she had improvement in the shortness of breath after her Bactrim was started and improved room air sats and was sent home on Bactrim .|Bactrim[1090,1097]||||||||||151399|10180|sulfamethoxazole
+16	She was given Bactrim and she had improvement in the shortness of breath after her Bactrim was started and improved room air sats and was sent home on Bactrim .|Bactrim[1159,1166]||||||||||151399|10180|sulfamethoxazole
+16	She was given Bactrim and she had improvement in the shortness of breath after her Bactrim was started and improved room air sats and was sent home on Bactrim .|sats[1201,1205]||||||||||483980|483980|sats
+16	She was given Bactrim and she had improvement in the shortness of breath after her Bactrim was started and improved room air sats and was sent home on Bactrim .|Bactrim[1227,1234]||||||||||151399|10180|sulfamethoxazole
+21	The patient was given Vancomycin and a gram of intravenous fluids .|Vancomycin[1569,1579]|||||intravenous[1594,1605]||||C0042313|11124|11124|vancomycin
+27	She was treated with chemotherapy and bone marrow transplant and then later with Tamoxifen from 2004 to 2001 .|Tamoxifen[2198,2207]|||||||||C0039286|10324|10324|tamoxifen
+28	In 2011 she had mediastinal lymphadenopathy treated with Taxol and changed to Navelbine on 03-28 .|Taxol[2285,2290]|||||||||C0678133|196466|56946|paclitaxel
+28	In 2011 she had mediastinal lymphadenopathy treated with Taxol and changed to Navelbine on 03-28 .|Navelbine[2306,2315]|||||||||C0131965|53557|39541|vinorelbine
+29	She had diagnosed brain mets in 2012-03-25 right side cerebella and parietal for which she was treated with chemotherapy , radiation therapy and Decadron .|Decadron[2472,2480]||||||||||227682|3264|dexamethasone
+30	2. History of pulmonary embolism in 2012-04-23 treated with only aspirin secondary to brain mets .|aspirin[2548,2555]|||||||||C0004057|1191|1191|acetylsalicylic acid
+35	1. Protonix 40 mg q day .|Protonix[2682,2690]|||40mg[2691,2696]|||q day[2697,2702]|||C1588007|542447|40790|pantoprazole
+36	2. Megace 400 q day .|Megace[2708,2714]|||400[2715,2718]|||q day[2719,2724]||||203000|6703|megestrol
+37	3. Colace 200 b.i.d.|Colace[2730,2736]|||200[2737,2740]|||b.i.d.[2741,2747]|||null|1247766|82003|docusate
+38	4. Aspirin .|Aspirin[2751,2758]|||||||||C0004057|1191|1191|acetylsalicylic acid
+39	5. Heparin subq.|Heparin[2764,2771]|||||subq.[2772,2777]||||C0019134|235473|235473|heparin,porcine
+40	6. Prednisone 40 q day .|Prednisone[2781,2791]|||40[2792,2794]|||q day[2795,2800]|||C1382730|451144|8640|prednisone
+42	8. Clindamycin 900 q 8 .|Clindamycin[2832,2843]|||900[2844,2847]||||||null|205964|2582|clindamycin
+43	9. Levaquin 500 q day .|Levaquin[2857,2865]|||500[2866,2869]|||q day[2870,2875]|||C1606347|572149|82122|levofloxacin
+68	Given her fevers and shortness of breath the patient was treated with broad spectrum antibiotics initially started on Ceptaz , Levaquin and __________ and Clindamycin .|Ceptaz[4607,4613]|||||||||C0719222|215950|2191|ceftazidime
+68	Given her fevers and shortness of breath the patient was treated with broad spectrum antibiotics initially started on Ceptaz , Levaquin and __________ and Clindamycin .|Levaquin[4616,4624]||||||||||217992|82122|levofloxacin
+68	Given her fevers and shortness of breath the patient was treated with broad spectrum antibiotics initially started on Ceptaz , Levaquin and __________ and Clindamycin .|Clindamycin[4644,4655]|||||||||C0008947|2582|2582|clindamycin
+74	Clindamycin and _______________ was discontinued early in hospital course .|Clindamycin[5315,5326]|||||||||C0008947|2582|2582|clindamycin
+76	In addition , Vancomycin , Levaquin were also discontinued .|Vancomycin[5442,5452]|||||||||C0042313|11124|11124|vancomycin
+76	In addition , Vancomycin , Levaquin were also discontinued .|Levaquin[5455,5463]||||||||||217992|82122|levofloxacin
+77	She was later continued on Ceftazidine and Clindamycin for possible gram negative infection and also for possible post obstructive picture that she would be at risk for given her pulmonary anatomy .|Clindamycin[5532,5543]|||||||||C0008947|2582|2582|clindamycin
+80	Unfortunately her mental status failed to improve despite having been off all sedative medications for several days .|sedative[5939,5947]|||||||several days[5964,5976]|||9634|9634|sedative
+87	She required aggressive intravenous fluids and later required pressor support with neo-synephrine .|neo - synephrine[6616,6630]|||||||||C0702190|204346|8163|phenylephrine
+87	She required aggressive intravenous fluids and later required pressor support with neo-synephrine .|pressor[6595,6602]|||||intravenous[6557,6568]|||||||
+89	It was quite difficult weaning her off of neo-synephrine .|neo - synephrine[6797,6811]|||||||||C0702190|204346|8163|phenylephrine
+90	She was also given stress dose steroids .|steroids[6845,6853]||||||||||10072|10072|steroids
+93	As mentioned above the patient 's hemodynamic status was tenuous throughout her hospital course as it was difficult to wean the patient off of neo-synephrine .|neo - synephrine[7271,7285]|||||||||C0702190|204346|8163|phenylephrine
+94	By 06-28 , however , the patient had been off of neo-synephrine , but at this time as mentioned above the patient was deemed to be CMO per discussion with physicians and her husband / health care proxy .|neo - synephrine[7337,7351]|||||||||C0702190|204346|8163|phenylephrine
+98	However , the patient also had brain metastasis and at this point anticoagulation was thought to be a contraindication given risk for hemorrhage into these tumors .|anticoagulation[7845,7860]||||||||||1024413|1024413|anticoagulation
+102	Initially the patient was treated with broad spectrum antibiotics including Vancomycin , Ceptaz , Levaquin , Clindamycin and _________.|Vancomycin[8252,8262]|||||||||C0042313|11124|11124|vancomycin
+102	Initially the patient was treated with broad spectrum antibiotics including Vancomycin , Ceptaz , Levaquin , Clindamycin and _________.|Ceptaz[8265,8271]|||||||||C0719222|215950|2191|ceftazidime
+102	Initially the patient was treated with broad spectrum antibiotics including Vancomycin , Ceptaz , Levaquin , Clindamycin and _________.|Levaquin[8274,8282]||||||||||217992|82122|levofloxacin
+102	Initially the patient was treated with broad spectrum antibiotics including Vancomycin , Ceptaz , Levaquin , Clindamycin and _________.|Clindamycin[8285,8296]|||||||||C0008947|2582|2582|clindamycin
+104	She was negative for PCP and subsequently _____________ was continued and Clindamycin was changed for anaerobic coverage .|Clindamycin[8429,8440]|||||||||C0008947|2582|2582|clindamycin
+105	In addition her Vancomycin and Levaquin were also discontinued .|Vancomycin[8494,8504]|||||||||C0042313|11124|11124|vancomycin
+105	In addition her Vancomycin and Levaquin were also discontinued .|Levaquin[8509,8517]||||||||||217992|82122|levofloxacin
+116	Currently she is comfortable with morphine and Ativan prn.|morphine[9752,9760]|||||||||C0026549|7052|7052|morphine
+116	Currently she is comfortable with morphine and Ativan prn.|Ativan[9765,9771]||||||||prn[9772,9775]|C0699194|202479|6470|lorazepam
+126	1. Morphine prn .|Morphine[10225,10233]||||||||prn[10234,10237]|C0026549|7052|7052|morphine
+127	2. Ativan prn .|Ativan[10243,10249]||||||||prn[10250,10253]|C0699194|202479|6470|lorazepam
+128	3. Tylenol prn .|Tylenol[10259,10266]||||||||prn[10267,10270]||202433|161|paracetamol
+129	4. Albuterol and Atrovent nebs prn .|Albuterol[10276,10285]|||||||||C0001927|435|435|salbutamol
+129	4. Albuterol and Atrovent nebs prn .|Atrovent[10290,10298]||||||||prn[10304,10307]|C0591130|151390|7213|ipratropium

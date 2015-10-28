@@ -1,0 +1,264 @@
+c="her guardian" 21:2 21:3||t="coref person"||c="guardian" 42:3 42:3
+c="guardian" 42:3 42:3||t="coref person"||c="robert murrell" 42:4 42:5
+c="her" 105:6 105:6||t="coref person"||c="murphy , robert sanchez" 105:7 105:10
+c="her" 104:12 104:12||t="coref person"||c="pt" 106:4 106:4
+c="she" 108:2 108:2||t="coref person"||c="odell" 109:0 109:0
+c="guardian" 160:3 160:3||t="coref person"||c="robert fitzgerald" 160:4 160:5
+c="robert murrell" 42:4 42:5||t="coref person"||c="guardian" 160:3 160:3
+c="she" 20:0 20:0||t="coref person"||c="her" 21:2 21:2
+c="her" 21:8 21:8||t="coref person"||c="her" 21:15 21:15
+c="ct placement" 21:28 21:29||t="coref treatment"||c="which" 21:30 21:30
+c="her" 21:15 21:15||t="coref person"||c="her" 21:41 21:41
+c="her" 22:13 22:13||t="coref person"||c="her" 23:5 23:5
+c="her" 23:5 23:5||t="coref person"||c="her" 23:10 23:10
+c="her amiodarone" 23:10 23:11||t="coref treatment"||c="which" 23:12 23:12
+c="she" 26:0 26:0||t="coref person"||c="her" 26:6 26:6
+c="she" 27:0 27:0||t="coref person"||c="her" 28:5 28:5
+c="her" 28:5 28:5||t="coref person"||c="her" 28:9 28:9
+c="some sob" 29:5 29:6||t="coref problem"||c="which" 29:8 29:8
+c="a right sided thoracentesis" 81:13 81:16||t="coref test"||c="which" 81:17 81:17
+c="she" 84:0 84:0||t="coref person"||c="her" 85:0 85:0
+c="she" 86:0 86:0||t="coref person"||c="her" 87:0 87:0
+c="her" 87:0 87:0||t="coref person"||c="her" 88:4 88:4
+c="she" 91:13 91:13||t="coref person"||c="her" 91:21 91:21
+c="the pt" 96:7 96:8||t="coref person"||c="her" 96:22 96:22
+c="she" 100:0 100:0||t="coref person"||c="her" 101:5 101:5
+c="her" 101:5 101:5||t="coref person"||c="her" 102:2 102:2
+c="odell" 109:0 109:0||t="coref person"||c="she" 110:0 110:0
+c="the pt" 109:4 109:5||t="coref person"||c="the patient" 110:2 110:3
+c="the patient" 110:2 110:3||t="coref person"||c="she" 111:0 111:0
+c="the pt" 113:0 113:1||t="coref person"||c="her" 113:14 113:14
+c="her" 113:14 113:14||t="coref person"||c="her" 114:16 114:16
+c="pt" 116:0 116:0||t="coref person"||c="her" 117:2 117:2
+c="her" 117:2 117:2||t="coref person"||c="her" 118:0 118:0
+c="her" 118:0 118:0||t="coref person"||c="her" 118:13 118:13
+c="she" 120:0 120:0||t="coref person"||c="her" 121:0 121:0
+c="her" 121:0 121:0||t="coref person"||c="her" 122:0 122:0
+c="she" 125:18 125:18||t="coref person"||c="her" 127:5 127:5
+c="a complication" 127:14 127:15||t="coref problem"||c="this" 127:21 127:21
+c="her" 128:6 128:6||t="coref person"||c="her" 128:9 128:9
+c="she" 128:15 128:15||t="coref person"||c="her" 128:28 128:28
+c="we" 117:0 117:0||t="coref person"||c="we" 131:1 131:1
+c="she" 135:3 135:3||t="coref person"||c="her" 136:0 136:0
+c="we" 131:1 131:1||t="coref person"||c="we" 137:0 137:0
+c="we" 137:0 137:0||t="coref person"||c="we" 140:0 140:0
+c="the pt" 140:23 140:24||t="coref person"||c="her" 142:0 142:0
+c="chf" 91:28 91:28||t="coref problem"||c="chf" 91:36 91:36
+c="iv ceftriaxone" 149:3 149:4||t="coref treatment"||c="ctx" 150:3 150:3
+c="fever" 30:7 30:7||t="coref problem"||c="fever" 86:7 86:7
+c="diuresis" 117:8 117:8||t="coref treatment"||c="diuresis" 130:4 130:4
+c="diarrhea" 30:12 30:12||t="coref problem"||c="diarrhea" 86:12 86:12
+c="pericardial drainage" 89:8 89:9||t="coref treatment"||c="a left thoracentesis" 91:8 91:10
+c="transudative fluid" 81:19 81:20||t="coref problem"||c="transudative" 91:24 91:24
+c="ptx" 79:12 79:12||t="coref problem"||c="ptx" 135:16 135:16
+c="moderate sized bilateral pleural effusions" 98:10 98:14||t="coref problem"||c="bilateral pleural effusions" 119:7 119:9
+c="bibasilar atelectasis" 69:0 69:1||t="coref problem"||c="atelectasis" 147:17 147:17
+c="abd pain" 30:9 30:10||t="coref problem"||c="abdominal pain" 86:9 86:10
+c="boluses of iv lasix" 93:15 93:18||t="coref treatment"||c="boluses" 117:14 117:14
+c="boluses" 117:14 117:14||t="coref treatment"||c="boluses" 145:21 145:21
+c="low urine output" 92:5 92:7||t="coref problem"||c="low amounts of urine" 145:5 145:8
+c="iv lasix drip" 117:10 117:12||t="coref treatment"||c="iv lasix gtt" 145:17 145:19
+c="her air hunger" 113:14 113:16||t="coref problem"||c="sob" 114:1 114:1
+c="diuresis" 130:4 130:4||t="coref treatment"||c="diuresis" 141:22 141:22
+c="bilateral pleural effusions" 79:35 79:37||t="coref problem"||c="bilateral pleural effusions" 79:65 79:67
+c="a large pericardial effusion" 79:30 79:33||t="coref problem"||c="persistent pericardial effusions" 83:7 83:9
+c="diuresis" 85:6 85:6||t="coref treatment"||c="diuresis" 117:8 117:8
+c="headache" 30:19 30:19||t="coref problem"||c="headache" 86:19 86:19
+c="copd" 19:4 19:4||t="coref problem"||c="copd" 34:0 34:0
+c="afib" 79:5 79:5||t="coref problem"||c="a fib" 140:14 140:15
+c="any cp" 30:2 30:3||t="coref problem"||c="cp" 86:3 86:3
+c="tamponade" 79:45 79:45||t="coref problem"||c="tamponade" 125:28 125:28
+c="a tte" 27:2 27:3||t="coref test"||c="tte" 58:0 58:0
+c="large pericardial effusion" 57:10 57:12||t="coref problem"||c="mod-lg circumferential pericardial eff" 58:9 58:12
+c="black or bloody stools" 30:14 30:17||t="coref problem"||c="black or bloody stools" 86:14 86:17
+c="cough" 30:5 30:5||t="coref problem"||c="cough" 86:5 86:5
+c="chf" 114:6 114:6||t="coref problem"||c="chf" 116:24 116:24
+c="mild pulmonary edema" 67:0 67:2||t="coref problem"||c="pulmonary edema" 177:1 177:2
+c="chf" 132:7 132:7||t="coref problem"||c="congestive heart failure" 180:1 180:3
+c="persistent pericardial effusions" 83:7 83:9||t="coref problem"||c="her ongoing pericardial effusion" 88:4 88:7
+c="hydronephrosis" 73:1 73:1||t="coref problem"||c="hydronephrosis" 76:5 76:5
+c="right heart cath" 106:29 106:31||t="coref treatment"||c="right heart cath" 109:16 109:18
+c="mild resp distress" 48:2 48:4||t="coref problem"||c="her air hunger" 113:14 113:16
+c="hydronephrosis" 76:5 76:5||t="coref problem"||c="hydronephrosis" 143:4 143:4
+c="bilateral pleural effusions" 79:65 79:67||t="coref problem"||c="moderate sized bilateral pleural effusions" 98:10 98:14
+c="pacer wire" 27:33 27:34||t="coref treatment"||c="pacer lead" 58:28 58:29
+c="bilateral pleural effusions" 119:7 119:9||t="coref problem"||c="pleural effusions" 132:1 132:2
+c="chf" 129:1 129:1||t="coref problem"||c="chf" 132:7 132:7
+c="a ptx" 21:25 21:26||t="coref problem"||c="her ptx" 21:41 21:42
+c="n/v" 24:12 24:12||t="coref problem"||c="n/v" 141:8 141:8
+c="her effusion" 28:5 28:6||t="coref problem"||c="pericardial eff" 56:13 56:14
+c="bilateral pleural effusions" 25:19 25:21||t="coref problem"||c="bilateral pleural eff" 56:9 56:11
+c="chf" 28:23 28:23||t="coref problem"||c="mild chf" 70:8 70:9
+c="pafib" 19:8 19:8||t="coref problem"||c="afib" 33:0 33:0
+c="sob" 114:1 114:1||t="coref problem"||c="air hunger" 134:19 134:20
+c="bilat pleural eff" 57:14 57:16||t="coref problem"||c="bilateral pleural effusions" 66:7 66:9
+c="cad" 35:0 35:0||t="coref problem"||c="cad" 79:16 79:16
+c="cad" 19:6 19:6||t="coref problem"||c="cad" 35:0 35:0
+c="unchanged moderate bilateral pleural effusions" 70:2 70:6||t="coref problem"||c="bilateral pleural effusions" 79:35 79:37
+c="sss" 33:2 33:2||t="coref problem"||c="sss" 36:9 36:9
+c="her arf" 26:6 26:7||t="coref problem"||c="arf" 79:23 79:23
+c="chf" 116:24 116:24||t="coref problem"||c="chf" 129:1 129:1
+c="pacer dddr ( vitatron cl860 )" 36:0 36:5||t="coref treatment"||c="pacer" 79:9 79:9
+c="her sob" 28:9 28:10||t="coref problem"||c="some sob" 29:5 29:6
+c="chest tube" 36:18 36:19||t="coref treatment"||c="ct" 79:14 79:14
+c="bilateral pleural eff" 56:9 56:11||t="coref problem"||c="bilat pleural eff" 57:14 57:16
+c="vancomycin" 99:0 99:0||t="coref treatment"||c="vanco" 119:20 119:20
+c="rll infiltrate" 98:21 98:22||t="coref problem"||c="right lower lobe infiltrate" 119:13 119:16
+c="her" 103:13 103:13||t="coref person"||c="her" 105:6 105:6
+c="her" 127:5 127:5||t="coref person"||c="her" 128:6 128:6
+c="dialysis" 94:11 94:11||t="coref treatment"||c="urgent hemodialysis" 144:11 144:12
+c="right pleural effusion" 116:6 116:8||t="coref problem"||c="effusion" 118:8 118:8
+c="her ptx" 21:41 21:42||t="coref problem"||c="r ptx" 36:15 36:16
+c="rv diastolic collapse" 27:22 27:24||t="coref problem"||c="rv diastolic collapse" 58:17 58:19
+c="chest tube" 135:18 135:19||t="coref treatment"||c="tube" 135:23 135:23
+c="perforation" 64:9 64:9||t="coref problem"||c="rv perforation" 125:12 125:13
+c="pacer" 79:9 79:9||t="coref treatment"||c="pacer" 125:15 125:15
+c="she" 24:0 24:0||t="coref person"||c="she" 25:6 25:6
+c="murphy , robert sanchez" 105:7 105:10||t="coref person"||c="lewin" 106:2 106:2
+c="the placement of pacemaker" 126:8 126:11||t="coref treatment"||c="pacer placement" 127:17 127:18
+c="she" 96:30 96:30||t="coref person"||c="she" 100:0 100:0
+c="her o2 requirement" 85:0 85:2||t="coref problem"||c="her oxygen requirement" 96:22 96:24
+c="mi" 81:7 81:7||t="coref problem"||c="mi" 129:16 129:16
+c="chf" 91:36 91:36||t="coref problem"||c="chf" 114:6 114:6
+c="the ccu staff" 112:17 112:19||t="coref person"||c="who" 112:21 112:21
+c="tamponade" 27:31 27:31||t="coref problem"||c="tamponade" 58:26 58:26
+c="arf" 79:23 79:23||t="coref problem"||c="worsening arf" 84:7 84:8
+c="bilateral pleural effusions" 66:7 66:9||t="coref problem"||c="unchanged moderate bilateral pleural effusions" 70:2 70:6
+c="she" 28:15 28:15||t="coref person"||c="she" 29:1 29:1
+c="pericardial effusion drainage" 79:52 79:54||t="coref treatment"||c="pericardial drainage" 89:8 89:9
+c="pericardial effusion" 125:1 125:2||t="coref problem"||c="her large pericardial effusion" 127:5 127:8
+c="she" 22:0 22:0||t="coref person"||c="her" 22:13 22:13
+c="she" 21:4 21:4||t="coref person"||c="her" 21:8 21:8
+c="pacer" 19:12 19:12||t="coref treatment"||c="her pacer" 21:15 21:16
+c="treatment" 28:21 28:21||t="coref treatment"||c="treatment" 79:56 79:56
+c="a large pericardial effusion" 25:13 25:16||t="coref problem"||c="mod-lg circumferential pericardial effusion" 27:15 27:18
+c="which" 29:8 29:8||t="coref problem"||c="mild resp distress" 48:2 48:4
+c="she" 93:0 93:0||t="coref person"||c="she" 93:35 93:35
+c="transudative" 91:24 91:24||t="coref problem"||c="transudate" 116:18 116:18
+c="who" 79:18 79:18||t="coref person"||c="who" 79:47 79:47
+c="sss" 36:9 36:9||t="coref problem"||c="sss" 79:7 79:7
+c="she" 111:0 111:0||t="coref person"||c="she" 112:24 112:24
+c="thoracentesis" 17:0 17:0||t="coref treatment"||c="drainage" 19:26 19:26
+c="some leukocytosis" 132:10 132:11||t="coref problem"||c="leukocytosis" 147:5 147:5
+c="pleural effusions" 132:1 132:2||t="coref problem"||c="moderate bilateral pleural effusions" 179:1 179:4
+c="her" 136:0 136:0||t="coref person"||c="pt" 137:4 137:4
+c="her pacer" 21:15 21:16||t="coref treatment"||c="pacer dddr ( vitatron cl860 )" 36:0 36:5
+c="drainage" 19:26 19:26||t="coref treatment"||c="drainage" 28:19 28:19
+c="her" 140:2 140:2||t="coref person"||c="the pt" 140:23 140:24
+c="definite tamponade physiology" 63:1 63:3||t="coref problem"||c="tamponade" 79:45 79:45
+c="tte" 58:0 58:0||t="coref test"||c="tte" 115:0 115:0
+c="pacer" 125:15 125:15||t="coref treatment"||c="pacer" 135:7 135:7
+c="she" 112:24 112:24||t="coref person"||c="the pt" 113:0 113:1
+c="underlying consolidation" 57:18 57:19||t="coref problem"||c="which" 57:20 57:20
+c="pt" 149:0 149:0||t="coref person"||c="pt" 150:0 150:0
+c="underlying consolidations" 147:14 147:15||t="coref problem"||c="consolidations" 147:27 147:27
+c="pericardial drainage" 104:23 104:24||t="coref treatment"||c="repeat thoracenteses" 104:26 104:27
+c="she" 29:1 29:1||t="coref person"||c="she" 29:9 29:9
+c="sob" 20:17 20:17||t="coref problem"||c="her sob" 28:9 28:10
+c="preload" 95:11 95:11||t="coref test"||c="her preload" 128:28 128:29
+c="she" 90:1 90:1||t="coref person"||c="she" 90:35 90:35
+c="her" 96:22 96:22||t="coref person"||c="she" 96:30 96:30
+c="decreased" 87:3 87:3||t="coref problem"||c="low urine output" 92:5 92:7
+c="large pericardial effusion" 19:21 19:23||t="coref problem"||c="a large pericardial effusion" 25:13 25:16
+c="nrb" 96:27 96:27||t="coref treatment"||c="nrb" 97:17 97:17
+c="her" 118:13 118:13||t="coref person"||c="she" 119:5 119:5
+c="she" 119:5 119:5||t="coref person"||c="she" 120:0 120:0
+c="she" 107:7 107:7||t="coref person"||c="the pt" 108:20 108:21
+c="she" 106:13 106:13||t="coref person"||c="she" 107:7 107:7
+c="she" 81:3 81:3||t="coref person"||c="she" 83:0 83:0
+c="mod-lg circumferential pericardial eff" 58:9 58:12||t="coref problem"||c="moderate to large pericardial effusion" 62:2 62:6
+c="she" 151:0 151:0||t="coref person"||c="she" 154:0 154:0
+c="she" 80:0 80:0||t="coref person"||c="she" 81:3 81:3
+c="a fib" 140:14 140:15||t="coref problem"||c="paroxysmal atrial fibrillation" 181:1 181:3
+c="tamponade" 125:28 125:28||t="coref problem"||c="tamponade physiology" 128:24 128:25
+c="copd" 34:0 34:0||t="coref problem"||c="her copd" 114:16 114:17
+c="she" 93:35 93:35||t="coref person"||c="her" 95:10 95:10
+c="her" 102:2 102:2||t="coref person"||c="the pt" 103:19 103:20
+c="her ongoing pericardial effusion" 88:4 88:7||t="coref problem"||c="her effusions" 91:21 91:22
+c="she" 123:0 123:0||t="coref person"||c="she" 125:18 125:18
+c="pt" 106:4 106:4||t="coref person"||c="she" 106:13 106:13
+c="she" 83:0 83:0||t="coref person"||c="she" 84:0 84:0
+c="worsening arf" 84:7 84:8||t="coref problem"||c="oliguric arf" 141:1 141:2
+c="she" 88:9 88:9||t="coref person"||c="the pt" 89:12 89:13
+c="abg" 97:0 97:0||t="coref test"||c="her abg" 102:2 102:3
+c="effusion" 118:8 118:8||t="coref problem"||c="right pleural effusion" 118:23 118:25
+c="her" 128:28 128:28||t="coref person"||c="pt" 131:12 131:12
+c="her" 142:0 142:0||t="coref person"||c="she" 145:0 145:0
+c="r ptx" 36:15 36:16||t="coref problem"||c="ptx" 79:12 79:12
+c="the pt" 134:7 134:8||t="coref person"||c="she" 135:3 135:3
+c="her" 88:4 88:4||t="coref person"||c="she" 88:9 88:9
+c="which" 135:20 135:20||t="coref problem"||c="ptx" 135:34 135:34
+c="cad" 79:16 79:16||t="coref problem"||c="coronary artery disease" 183:1 183:3
+c="sss" 79:7 79:7||t="coref problem"||c="sick sinus syndrome" 182:1 182:3
+c="her" 95:10 95:10||t="coref person"||c="the pt" 96:7 96:8
+c="her" 85:0 85:0||t="coref person"||c="she" 86:0 86:0
+c="pacer" 135:7 135:7||t="coref treatment"||c="pacer" 135:29 135:29
+c="her" 23:10 23:10||t="coref person"||c="she" 24:0 24:0
+c="she" 139:0 139:0||t="coref person"||c="her" 140:2 140:2
+c="odell" 108:0 108:0||t="coref person"||c="she" 108:2 108:2
+c="tamponade" 58:26 58:26||t="coref problem"||c="definite tamponade physiology" 63:1 63:3
+c="large pericardial effusion" 115:2 115:4||t="coref problem"||c="pericardial effusion" 125:1 125:2
+c="her" 26:6 26:6||t="coref person"||c="she" 27:0 27:0
+c="nrb" 97:17 97:17||t="coref treatment"||c="nrb" 106:43 106:43
+c="atelectasis" 57:25 57:25||t="coref problem"||c="bibasilar atelectasis" 69:0 69:1
+c="lethargy" 24:10 24:10||t="coref problem"||c="lethargy" 79:25 79:25
+c="pericardial eff" 56:13 56:14||t="coref problem"||c="large pericardial effusion" 57:10 57:12
+c="murphy , robert leigh" 103:6 103:9||t="coref person"||c="her" 103:13 103:13
+c="pt" 137:4 137:4||t="coref person"||c="she" 139:0 139:0
+c="zosyn" 99:2 99:2||t="coref treatment"||c="zosyn" 119:22 119:22
+c="levoflox" 147:19 147:19||t="coref treatment"||c="levoflox" 149:8 149:8
+c="large pericardial effusion" 15:0 15:2||t="coref problem"||c="large pericardial effusion" 19:21 19:23
+c="her large pericardial effusion" 127:5 127:8||t="coref problem"||c="large pericardial effusion" 178:1 178:3
+c="her effusions" 91:21 91:22||t="coref problem"||c="large pericardial effusion" 115:2 115:4
+c="pericardial drainage" 106:23 106:24||t="coref treatment"||c="thoracentesis" 106:26 106:26
+c="nausea" 22:3 22:3||t="coref problem"||c="her nausea" 23:5 23:6
+c="drainage" 28:19 28:19||t="coref treatment"||c="pericardial effusion drainage" 79:52 79:54
+c="she" 25:6 25:6||t="coref person"||c="she" 26:0 26:0
+c="mild chf" 70:8 70:9||t="coref problem"||c="chf" 79:58 79:58
+c="arf" 25:11 25:11||t="coref problem"||c="her arf" 26:6 26:7
+c="chf" 79:58 79:58||t="coref problem"||c="chf" 91:28 91:28
+c="her" 21:2 21:2||t="coref person"||c="she" 21:4 21:4
+c="her" 21:41 21:41||t="coref person"||c="she" 22:0 22:0
+c="the pt" 92:0 92:1||t="coref person"||c="she" 93:0 93:0
+c="ct" 79:14 79:14||t="coref treatment"||c="chest tube" 135:18 135:19
+c="echo" 61:0 61:0||t="coref test"||c="echo" 79:40 79:40
+c="ptx" 135:16 135:16||t="coref problem"||c="which" 135:20 135:20
+c="she" 29:9 29:9||t="coref person"||c="she" 30:0 30:0
+c="the pt" 108:20 108:21||t="coref person"||c="the pt" 109:4 109:5
+c="her" 128:9 128:9||t="coref person"||c="she" 128:15 128:15
+c="mod-lg circumferential pericardial effusion" 27:15 27:18||t="coref problem"||c="her effusion" 28:5 28:6
+c="she" 30:0 30:0||t="coref person"||c="who" 79:18 79:18
+c="pacer" 64:0 64:0||t="coref treatment"||c="her pacer wires" 136:0 136:2
+c="repeat thoracenteses" 104:26 104:27||t="coref treatment"||c="pericardial drainage" 106:23 106:24
+c="drainage" 79:63 79:63||t="coref treatment"||c="drainage" 116:4 116:4
+c="leukocytosis" 147:5 147:5||t="coref problem"||c="leukocytosis" 152:8 152:8
+c="afib" 33:0 33:0||t="coref problem"||c="afib" 79:5 79:5
+c="she" 145:0 145:0||t="coref person"||c="pt" 149:0 149:0
+c="transudate" 116:18 116:18||t="coref problem"||c="transudate" 133:3 133:3
+c="afebrile" 100:2 100:2||t="coref problem"||c="afebrile" 147:31 147:31
+c="chf" 19:28 19:28||t="coref problem"||c="chf" 28:23 28:23
+c="who" 79:47 79:47||t="coref person"||c="she" 80:0 80:0
+c="her" 114:16 114:16||t="coref person"||c="pt" 116:0 116:0
+c="arf" 20:8 20:8||t="coref problem"||c="arf" 25:11 25:11
+c="2 echocardiograms" 83:3 83:4||t="coref test"||c="which" 83:5 83:5
+c="her" 28:9 28:9||t="coref person"||c="she" 28:15 28:15
+c="moderate to large pericardial effusion" 62:2 62:6||t="coref problem"||c="a large pericardial effusion" 79:30 79:33
+c="dilt" 140:4 140:4||t="coref treatment"||c="which" 140:19 140:19
+c="pacer lead" 58:28 58:29||t="coref treatment"||c="pacer" 64:0 64:0
+c="pacer placement" 127:17 127:18||t="coref treatment"||c="pacer placement" 182:6 182:7
+c="pt" 150:0 150:0||t="coref person"||c="she" 151:0 151:0
+c="a lasix drip iv" 93:3 93:6||t="coref treatment"||c="iv lasix drip" 117:10 117:12
+c="renal us" 71:0 71:1||t="coref test"||c="renal u/s" 143:0 143:1
+c="the pt" 103:19 103:20||t="coref person"||c="her" 104:5 104:5
+c="her" 122:0 122:0||t="coref person"||c="she" 123:0 123:0
+c="rv perforation" 125:12 125:13||t="coref problem"||c="this" 126:0 126:0
+c="the pt" 89:12 89:13||t="coref person"||c="she" 90:1 90:1
+c="renal consultants" 94:0 94:1||t="coref person"||c="renal consultants" 144:0 144:1
+c="sss" 19:10 19:10||t="coref problem"||c="sss" 33:2 33:2
+c="she" 134:2 134:2||t="coref person"||c="the pt" 134:7 134:8
+c="diuresis" 141:22 141:22||t="coref treatment"||c="aggressive diuresis" 145:14 145:15
+c="her" 91:21 91:21||t="coref person"||c="the pt" 92:0 92:1
+c="pt" 131:12 131:12||t="coref person"||c="she" 134:2 134:2
+c="her" 104:5 104:5||t="coref person"||c="her" 104:12 104:12
+c="a left thoracentesis" 91:8 91:10||t="coref treatment"||c="pericardial drainage" 104:23 104:24
+c="she" 90:35 90:35||t="coref person"||c="she" 91:13 91:13

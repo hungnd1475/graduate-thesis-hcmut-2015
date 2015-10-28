@@ -1,0 +1,5 @@
+16	3. At 29-30 week gestation concern for fetal decelerations of twin A , admitted to Cambridge Health Alliance , completed a course of Betamethasone , discharged to home .|Betamethasone[746,759]|||||||||C0005308|1514|1514|betamethasone
+36	The infant was initially started on 80 cc / kg / day of intravenous fluid D10W and advanced to 150 cc / kg / day by day of life four .|D10W[2022,2026]|||||intravenous[2004,2015]|||||||
+47	6. Infectious disease - The infant received 48 hours of Ampicillin and Gentamicin for rule out sepsis .|Ampicillin[3070,3080]|||||||48 hours[3058,3066]||C0002680|733|733|ampicillin
+47	6. Infectious disease - The infant received 48 hours of Ampicillin and Gentamicin for rule out sepsis .|Gentamicin[3085,3095]|||||||||C0017436|662411|662411|gentamicins
+75	Synagis RSV prophylaxis should be considered from October through April for infants who meet any of the following three criteria :|Synagis[4610,4617]|||||||||C0723567|220141|194279|palivizumab

@@ -1,0 +1,33 @@
+18	Albuterol inhaler .|Albuterol inhaler[704,721]|||||||||C3209067|1154602|435|salbutamol
+19	Amphotericin B 40 mg. qday .|Amphotericin B[724,738]|||40mg.[739,745]|||qday[746,750]|||C0002679|732|732|amphotericin b
+20	Ceftazidime 1 gram intravenous q 8 .|Ceftazidime[753,764]|||1gram[765,771]||intravenous[772,783]|||||313890|2191|ceftazidime
+21	Ciprofloxacin 500 mg. po. q12 .|Ciprofloxacin[790,803]|||500mg.[804,811]||po.[812,815]|q12[816,819]|||C1123173|328287|2551|ciprofloxacin
+22	Cisapride 10 mg. po. qid .|Cisapride[822,831]|||10mg.[832,838]||po.[839,842]|qid[843,846]|||C0984941|315687|35255|cisapride
+23	Dakin &apos;s solution 1/4 strength to ulcer of penis .|Dakin & apos ; s solution[849,871]||||||||||1375993|1375993|dakin & apos ; s solution
+24	Benadryl 50 mg. intravenous tid prn .|Benadryl[905,913]|||50mg.[914,920]||intravenous[921,932]|tid[933,936]||prn[937,940]|C2003927|1049634|3498|diphenhydramine
+26	Lasix prn .|Lasix[978,983]||||||||prn[984,987]|C0699992|202991|4603|furosemide
+27	Nystatin swish and swallow tid .|Nystatin[990,998]|||||swallow[1009,1016]|tid[1017,1020]|||C0028741|7597|7597|nystatin
+28	Percocet po. q4 to 6 prn .|Percocet[1023,1031]|||||po.[1032,1035]|q4[1036,1038]||prn[1044,1047]|C0086787|42844|161|paracetamol
+29	Trazodone 50 mg. qhs. multivitamins 1 po. qd .|multivitamins[1072,1085]||||1[1086,1087]|po.[1088,1091]|qd[1092,1094]||||730567|89905|multiple vitamins
+29	Trazodone 50 mg. qhs. multivitamins 1 po. qd .|Trazodone[1050,1059]|||50mg.[1060,1066]||||||C2710323|856376|10737|trazodone
+34	He had a barium swallow and endoscopy and was said not to have gastric or pericardial ulcer .|barium[1516,1522]|||||swallow[1523,1530]||||C0004749|1311067|1311067|barium
+45	The patient is on Nortriptyline for depression .|Nortriptyline[2754,2767]|||||||||C0028420|7531|7531|nortriptyline
+64	His medications for his respiratory system are Albuterol nebulizer 0.5 mg. 2.5 cc. q4hours .|Albuterol[4548,4557]|||0.5mg.[4568,4575]|||q4hours[4584,4591]|||C1126735|330935|435|salbutamol
+89	The patient remains on Fluconazole .|Fluconazole[6299,6310]|||||||||C0016277|4450|4450|fluconazole
+95	He has been placed on Oxycodone 10 mg. po. q3hours as needed for pain .|Oxycodone[6554,6563]|||10mg.[6564,6570]||po.[6571,6574]|q3hours[6575,6582]||as needed[6583,6592]|C1126285|330592|7804|oxycodone
+96	The patient had a PCA and several other medications have been discontinued .|PCA[6622,6625]||||||||||1025540|1025540|pca
+98	The patient for sleep was given Benadryl 25 to 50 mg. qhs. and was not allowed any increases in his narcotics after weaning him down to just requiring the Oxycodone .|Benadryl[6764,6772]|||25 to 50mg.[6773,6785]|||qhs.[6786,6790]|||C2955099|1049631|3498|diphenhydramine
+98	The patient for sleep was given Benadryl 25 to 50 mg. qhs. and was not allowed any increases in his narcotics after weaning him down to just requiring the Oxycodone .|Oxycodone[6887,6896]|||||||||C0030049|7804|7804|oxycodone
+98	The patient for sleep was given Benadryl 25 to 50 mg. qhs. and was not allowed any increases in his narcotics after weaning him down to just requiring the Oxycodone .|narcotics[6832,6841]||||||||||||
+100	Cimetidine 300 mg. intravenous q6hours .|Cimetidine[6970,6980]|||300mg.[6981,6988]||intravenous[6989,7000]|q6hours[7001,7008]|||C0984914|315679|2541|cimetidine
+101	Albuterol nebulizer 0.5 mg. 2.5 cc. q4hours .|Albuterol[7011,7020]|||0.5mg.[7031,7038]|||q4hours[7047,7054]|||C1126735|330935|435|salbutamol
+102	Senokot two tablets po. bid or Metamucil one tablespoon po. bid .|Senokot[7057,7064]||||two tablets[7065,7076]|po.[7077,7080]|bid[7081,7084]|||null|404186|36387|sennosides
+102	Senokot two tablets po. bid or Metamucil one tablespoon po. bid .|Metamucil[7088,7097]|||||po.[7113,7116]|bid[7117,7120]|||C0025559|6802|8928|psyllium
+103	Nortriptyline 25 mg. po. qhs .|Nortriptyline[7123,7136]|||25mg.[7137,7143]||po.[7144,7147]|qhs[7148,7151]|||C1123872|328870|7531|nortriptyline
+104	KCL 40 mEq. po. bid .|KCL[7154,7157]|||40mEq.[7158,7165]||po.[7166,7169]|bid[7170,7173]|||C0981677|891453|8591|potassium chloride
+105	Saline wet to dry dressing changes three times daily to penis and pelvis decubiti , 40% humidified oxygen , Fluconazole 200 mg. po. bid .|Saline[7176,7182]||||||three times daily[7211,7228]||||789982|789982|saline
+105	Saline wet to dry dressing changes three times daily to penis and pelvis decubiti , 40% humidified oxygen , Fluconazole 200 mg. po. bid .|Fluconazole[7284,7295]|||200mg.[7296,7303]||po.[7304,7307]|bid[7308,7311]|||C0986076|315938|4450|fluconazole
+106	Lasix 2.5 mg. intravenous qid .|Lasix[7314,7319]|||2.5mg.[7320,7327]||intravenous[7328,7339]|qid[7340,7343]|||C0699992|202991|4603|furosemide
+107	Prilosec 20 mg. po. qd .|Prilosec[7346,7354]|||20mg.[7355,7361]||po.[7362,7365]|qd[7366,7368]|||C1602242|541245|7646|omeprazole
+108	Benadryl 25 to 50 mg. po. qhs prn .|Benadryl[7371,7379]|||25 to 50mg.[7380,7392]||po.[7393,7396]|qhs[7397,7400]||prn[7401,7404]|C2955099|1049631|3498|diphenhydramine
+109	Oxycodone 10 mg. po. q3 hours prn .|Oxycodone[7407,7416]|||10mg.[7417,7423]||po.[7424,7427]|q3 hours[7428,7436]||prn[7437,7440]|C1126285|330592|7804|oxycodone

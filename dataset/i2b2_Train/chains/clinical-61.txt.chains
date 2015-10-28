@@ -1,0 +1,7 @@
+c="extensive posterior circulation infarction" 15:1 15:4||c="a large right occipital infarct" 55:5 55:9||c="the right posterior cerebral artery infarction" 69:5 69:10||c="the right cerebellar infarction" 70:8 70:11||c="his stroke" 72:14 72:15||c="infarct of the cerebellar hemispheres bilaterally" 73:3 73:8||t="coref problem"
+c="the patient" 18:0 18:1||c="who" 18:9 18:9||c="he" 19:0 19:0||c="he" 19:14 19:14||c="he" 20:6 20:6||c="his" 20:11 20:11||c="his" 20:15 20:15||c="the patient" 23:0 23:1||c="the patient" 25:0 25:1||c="who" 32:5 32:5||c="the patient" 36:8 36:9||c="his" 36:13 36:13||c="the patient" 41:0 41:1||c="the patient" 43:4 43:5||c="the patient" 57:0 57:1||c="the patient" 60:2 60:3||c="he" 62:0 62:0||c="the patient" 67:0 67:1||c="the patient" 71:4 71:5||c="his" 72:14 72:14||c="the patient" 79:2 79:3||c="the patient" 81:0 81:1||c="the patient" 84:0 84:1||c="the patient" 85:0 85:1||t="coref person"
+c="aspiration pneumonia" 16:1 16:2||c="the aspiration pneumonia" 83:0 83:2||t="coref problem"
+c="heparin" 57:11 57:11||c="heparin" 82:0 82:0||t="coref treatment"
+c="a repeat cat scan of the head" 68:0 68:6||c="this" 69:0 69:0||t="coref test"
+c="an mri" 72:0 72:1||c="the mri" 73:0 73:1||t="coref test"
+c="mra of the head" 72:3 72:6||c="the mra of the intracranial circulation" 74:0 74:5||t="coref test"

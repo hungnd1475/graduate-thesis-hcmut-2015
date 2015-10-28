@@ -1,0 +1,49 @@
+c="her" 22:17 22:17||t="coref person"||c="she" 23:0 23:0
+c="she" 23:0 23:0||t="coref person"||c="she" 24:0 24:0
+c="she" 25:0 25:0||t="coref person"||c="she" 29:0 29:0
+c="she" 29:0 29:0||t="coref person"||c="she" 36:0 36:0
+c="she" 104:0 104:0||t="coref person"||c="her" 105:0 105:0
+c="hypertension" 20:14 20:14||t="coref problem"||c="hypertension" 99:10 99:10
+c="hydrochlorothiazide" 106:14 106:14||t="coref treatment"||c="hydrochlorothiazide" 110:0 110:0
+c="nifedipine" 106:11 106:11||t="coref treatment"||c="nifedipine" 110:15 110:15
+c="difficulty in talking" 21:24 21:26||t="coref problem"||c="slurred" 22:3 22:3
+c="occupational therapy" 103:25 103:26||t="coref treatment"||c="occupational therapy" 117:11 117:12
+c="right capsular putamenal hemorrhage" 16:0 16:3||t="coref problem"||c="3 centimeter hyperdensity" 92:7 92:9
+c="hypertension" 18:0 18:0||t="coref problem"||c="hypertension" 20:14 20:14
+c="hypertension" 99:10 99:10||t="coref problem"||c="hypertension" 99:23 99:23
+c="sensory exam" 71:1 71:2||t="coref test"||c="the exam" 103:0 103:1
+c="physical therapy" 103:22 103:23||t="coref treatment"||c="intensive physical therapy" 117:7 117:9
+c="right capsular putamenal hemorrhage" 6:0 6:3||t="coref problem"||c="right capsular putamenal hemorrhage" 16:0 16:3
+c="captopril" 106:9 106:9||t="coref treatment"||c="captopril" 110:6 110:6
+c="secondary cause" 107:5 107:6||t="coref problem"||c="secondary causes" 108:3 108:4
+c="hypertension" 107:8 107:8||t="coref problem"||c="hypertension" 108:6 108:6
+c="a left central facial paresis" 63:2 63:6||t="coref problem"||c="the walk was paretic in the left side" 74:0 74:7
+c="she" 102:0 102:0||t="coref person"||c="her" 102:9 102:9
+c="slurred" 22:3 22:3||t="coref problem"||c="this" 22:5 22:5
+c="she" 21:0 21:0||t="coref person"||c="her" 21:3 21:3
+c="her" 21:3 21:3||t="coref person"||c="her" 22:0 22:0
+c="intra-parenchymal hematoma" 92:22 92:23||t="coref problem"||c="hemorrhage" 93:4 93:4
+c="mrs. dua" 101:6 101:7||t="coref person"||c="she" 102:0 102:0
+c="her" 105:0 105:0||t="coref person"||c="the patient" 107:10 107:11
+c="dr. ______________" 107:32 107:33||t="coref person"||c="dr. ______________" 114:5 114:6
+c="cerebellar hemorrhage" 99:20 99:21||t="coref problem"||c="the hemorrhage" 100:24 100:25
+c="her" 22:0 22:0||t="coref person"||c="her" 22:17 22:17
+c="the hematoma" 99:4 99:5||t="coref problem"||c="cerebellar hemorrhage" 99:20 99:21
+c="a mild left hemiparesis" 24:20 24:23||t="coref problem"||c="a left central facial paresis" 63:2 63:6
+c="mrs. dua" 20:0 20:1||t="coref person"||c="she" 21:0 21:0
+c="3 centimeter hyperdensity" 92:7 92:9||t="coref problem"||c="intra-parenchymal hematoma" 92:22 92:23
+c="a 34 year old white female" 38:0 38:5||t="coref person"||c="she" 54:0 54:0
+c="she" 36:0 36:0||t="coref person"||c="a 34 year old white female" 38:0 38:5
+c="her hypertension" 105:0 105:1||t="coref problem"||c="it" 106:0 106:0
+c="mrs. dua" 99:17 99:18||t="coref person"||c="mrs. dua" 101:6 101:7
+c="the patient" 107:10 107:11||t="coref person"||c="the patient" 114:0 114:1
+c="her" 55:0 55:0||t="coref person"||c="mrs. dua" 99:17 99:18
+c="she" 24:0 24:0||t="coref person"||c="her" 24:8 24:8
+c="she" 54:0 54:0||t="coref person"||c="her" 55:0 55:0
+c="hypertension" 99:23 99:23||t="coref problem"||c="her hypertension" 105:0 105:1
+c="her" 24:8 24:8||t="coref person"||c="she" 25:0 25:0
+c="hemorrhage" 95:3 95:3||t="coref problem"||c="the hematoma" 99:4 99:5
+c="hemorrhage" 93:4 93:4||t="coref problem"||c="hemorrhage" 95:3 95:3
+c="the walk was paretic in the left side" 74:0 74:7||t="coref problem"||c="a mild leftsided face" 103:5 103:8
+c="her" 102:9 102:9||t="coref person"||c="she" 104:0 104:0
+c="it" 106:0 106:0||t="coref problem"||c="hypertension" 107:8 107:8

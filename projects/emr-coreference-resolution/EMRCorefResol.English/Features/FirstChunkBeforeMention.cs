@@ -11,7 +11,7 @@ namespace HCMUT.EMRCorefResol.English.Features
         public FirstChunkBeforeMention(ISingleConcept instance, EMR emr)
             :base("First-ChunkBefore", 9, 0)
         {
-            var line = EMRExtensions.GetLine(emr, instance.Concept.Begin.Line);
+            var line = EMRExtensions.GetLine(emr, instance.Concept);
 
             var chunks = Service.English.GetChunks(line);
 

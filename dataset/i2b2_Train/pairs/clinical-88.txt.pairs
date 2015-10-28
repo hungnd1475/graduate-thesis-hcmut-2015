@@ -1,0 +1,35 @@
+c="the patient" 21:0 21:1||t="coref person"||c="the patient" 22:4 22:5
+c="he" 24:0 24:0||t="coref person"||c="he" 25:0 25:0
+c="his" 26:0 26:0||t="coref person"||c="he" 27:0 27:0
+c="he" 27:0 27:0||t="coref person"||c="he" 28:0 28:0
+c="cmed" 30:0 30:0||t="coref person"||c="they" 30:6 30:6
+c="he" 29:11 29:11||t="coref person"||c="his" 30:11 30:11
+c="his" 43:5 43:5||t="coref person"||c="he" 44:2 44:2
+c="a patchy area of increased opacity" 80:2 80:7||t="coref problem"||c="which" 80:14 80:14
+c="patchy left retrocardiac opacity" 86:1 86:4||t="coref problem"||c="which" 86:5 86:5
+c="which" 86:5 86:5||t="coref problem"||c="l retrocardiac infiltrate" 89:36 89:38
+c="bipolar do" 89:8 89:9||t="coref problem"||c="bipolar disorder" 94:0 94:1
+c="hepatitis c" 19:12 19:13||t="coref problem"||c="hep c" 32:0 32:1
+c="cxr" 76:0 76:0||t="coref test"||c="the study" 82:7 82:8
+c="an endotracheal tube" 77:0 77:2||t="coref treatment"||c="endotracheal tube" 85:1 85:2
+c="which" 80:14 80:14||t="coref problem"||c="patchy left retrocardiac opacity" 86:1 86:4
+c="depression" 114:0 114:0||t="coref problem"||c="depressed" 116:0 116:0
+c="klonopin" 89:20 89:20||t="coref treatment"||c="klonopin" 106:0 106:0
+c="inderal" 20:8 20:8||t="coref treatment"||c="inderal" 89:18 89:18
+c="geodon" 20:22 20:22||t="coref treatment"||c="geodon" 89:22 89:22
+c="klonopin" 20:10 20:10||t="coref treatment"||c="klonopin" 89:20 89:20
+c="bipolar d/o" 33:0 33:1||t="coref problem"||c="bipolar do" 89:8 89:9
+c="who" 19:30 19:30||t="coref person"||c="the patient" 21:0 21:1
+c="his" 23:0 23:0||t="coref person"||c="he" 24:0 24:0
+c="he" 25:0 25:0||t="coref person"||c="his" 26:0 26:0
+c="bipolar disorder" 19:15 19:16||t="coref problem"||c="bipolar d/o" 33:0 33:1
+c="overdose" 15:0 15:0||t="coref problem"||c="overdose" 89:16 89:16
+c="his" 30:11 30:11||t="coref person"||c="patient" 43:0 43:0
+c="hep c" 32:0 32:1||t="coref problem"||c="hcv" 89:6 89:6
+c="patient" 12:0 12:0||t="coref person"||c="mr. vazquez" 19:0 19:1
+c="patient" 43:0 43:0||t="coref person"||c="his" 43:5 43:5
+c="the patient" 22:4 22:5||t="coref person"||c="his" 23:0 23:0
+c="he" 44:2 44:2||t="coref person"||c="patient" 95:5 95:5
+c="airway protection" 28:9 28:10||t="coref treatment"||c="airway protection" 89:30 89:31
+c="mr. vazquez" 19:0 19:1||t="coref person"||c="who" 19:30 19:30
+c="he" 28:0 28:0||t="coref person"||c="he" 29:11 29:11

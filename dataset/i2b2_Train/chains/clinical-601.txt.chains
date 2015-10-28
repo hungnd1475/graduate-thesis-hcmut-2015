@@ -1,0 +1,3 @@
+c="riashwan berlni valley" 13:0 13:2||c="this" 48:0 48:0||c="she" 50:0 50:0||c="her" 51:1 51:1||c="she" 51:3 51:3||c="her" 53:1 53:1||c="she" 53:3 53:3||c="she" 55:1 55:1||c="she" 57:0 57:0||c="patient" 58:6 58:6||t="coref person"
+c="vaginal delivery" 21:0 21:1||c="spontaneous vertex vaginal delivery" 25:0 25:3||c="spontaneous vertex vaginal delivery" 50:30 50:33||t="coref treatment"
+c="premature rupture of membranes" 34:0 34:3||c="premature rupture of membranes" 49:0 49:3||t="coref problem"

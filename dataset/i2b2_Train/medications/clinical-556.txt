@@ -1,0 +1,4 @@
+27	Atenolol , 25 mg PO qd .|Atenolol[1251,1259]|||25mg[1262,1267]||PO[1268,1270]|qd[1271,1273]|||C0687939|197380|1202|atenolol
+96	She also developed what appeared to be urinary tract infection and was placed on PO Bactrim .|Bactrim[5881,5888]|||||PO[5878,5880]||||C3222127|1167956|10180|sulfamethoxazole
+104	The patient was discharged on Tenormin , 25 mg PO qd ; Bactrim DS , one PO bid x5 days .|Tenormin[6373,6381]|||25mg[6384,6389]||PO[6390,6392]|qd[6393,6395]|||C0589845|150750|1202|atenolol
+104	The patient was discharged on Tenormin , 25 mg PO qd ; Bactrim DS , one PO bid x5 days .|Bactrim DS[6398,6408]|||||PO[6415,6417]|bid[6418,6421]|x5 days[6422,6429]||C1154231|346206|346206|bactrim ds

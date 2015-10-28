@@ -18,26 +18,33 @@ namespace HCMUT.EMRCorefResol.Evaluations
         {
             var evals = new Dictionary<ConceptType, Evaluation>();
 
-            foreach (var type in Evaluation.Types)
+            foreach (var type in Evaluation.ConceptTypes)
             {
                 var tGroundTruth = groundTruth.GetChainsOfType(type);
                 var tSystemChains = systemChains.GetChainsOfType(type);
 
-                var c1 = tGroundTruth;
-                var c2 = tSystemChains;
-                if (c1.Count > c2.Count)
+                double p, r;
+                if (tGroundTruth.Count == 0 && tSystemChains.Count == 0)
                 {
-                    GenericHelper.Swap(ref c1, ref c2);
+                    p = r = 1d;
+                }
+                else
+                {
+                    var c1 = tGroundTruth;
+                    var c2 = tSystemChains;
+                    if (c1.Count > c2.Count)
+                    {
+                        GenericHelper.Swap(ref c1, ref c2);
+                    }
+
+                    double bestPhi = 0d;
+                    bestPhi = findBestPhi(c1, c2);
+
+                    p = (tSystemChains.Count == 0) ? 0d : bestPhi / tSystemChains.Aggregate(0d, (t, s) => t + phi4(s, s));
+                    r = (tGroundTruth.Count == 0) ? 0d : bestPhi / tGroundTruth.Aggregate(0d, (t, g) => t + phi4(g, g));
                 }
 
-                double bestPhi = 0d;
-                bestPhi = findBestPhi(c1, c2);
-
-                var bothNone = c1.Count == 0 && c2.Count == 0;
-                var p = bothNone ? 1d : bestPhi / tSystemChains.Aggregate(0d, (t, s) => t + phi4(s, s));
-                var r = bothNone ? 1d : bestPhi / tGroundTruth.Aggregate(0d, (t, g) => t + phi4(g, g));
-                var f = 2 * p * r / (p + r);
-
+                var f = (p == 0 && r == 0) ? 0d : 2 * p * r / (p + r);
                 evals.Add(type, new Evaluation(p, r, f, Name));
             }
 
@@ -94,15 +101,15 @@ namespace HCMUT.EMRCorefResol.Evaluations
                     // goto step DONE.
                     break;
                 }
-
-                // step 4
-                double min = double.MaxValue;
+                
                 Coordinate primeZ;
 
-                while (!primeMatrix(phiMatrix, n, starredZeros, primedZeros, coveredRows, coveredCols,
-                    out min, out primeZ))
+                // step 4
+                while (!primeMatrix(phiMatrix, n, starredZeros, primedZeros,
+                    coveredRows, coveredCols, out primeZ))
                 {
                     // step 6
+                    var min = findMinUncovered(phiMatrix, n, coveredRows, coveredCols);
                     for (int i = 0; i < n; i++)
                     {
                         for (int j = 0; j < n; j++)
@@ -152,16 +159,9 @@ namespace HCMUT.EMRCorefResol.Evaluations
 
                     if (isDone)
                     {
-                        for (int i = 0; i < n; i++)
-                        {
-                            coveredRows[i] = false;
-                            coveredCols[i] = false;
-
-                            for (int j = 0; j < n; j++)
-                            {
-                                primedZeros[i, j] = false;
-                            }
-                        }
+                        Array.Clear(coveredRows, 0, n);
+                        Array.Clear(coveredCols, 0, n);
+                        Array.Clear(primedZeros, 0, n * n);
                         break;
                     }
                 }
@@ -187,30 +187,20 @@ namespace HCMUT.EMRCorefResol.Evaluations
 
         private static void starMatrix(double[,] matrix, int n, bool[,] starredCells)
         {
+            var starredRows = new bool[n];
+            var starredCols = new bool[n];
+
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < n; j++)
                 {
                     if (matrix[i, j] == 0d)
                     {
-                        var starred = false;
-
-                        for (int pi = 0; pi <= i; pi++)
-                        {
-                            for (int pj = 0; pj <= j; pj++)
-                            {
-                                if (starredCells[pi, pj])
-                                {
-                                    starred = true;
-                                    break;
-                                }
-                            }
-                            if (starred) break;
-                        }
-
-                        if (!starred)
+                        if (!starredRows[i] && !starredCols[j])
                         {
                             starredCells[i, j] = true;
+                            starredRows[i] = true;
+                            starredCols[j] = true;
                         }
                     }
                 }
@@ -238,55 +228,42 @@ namespace HCMUT.EMRCorefResol.Evaluations
         }
 
         private static bool primeMatrix(double[,] matrix, int n, bool[,] starredCells, bool[,] primedCells,
-            bool[] coveredRows, bool[] coveredCols, out double min, out Coordinate primeZ)
+            bool[] coveredRows, bool[] coveredCols, out Coordinate primeZ)
         {
-            min = double.MaxValue;
-            primeZ = new Coordinate();
-
-            for (int i = 0; i < n; i++)
+            while (hasUncoveredZeros(matrix, n, coveredRows, coveredCols, out primeZ))
             {
-                for (int j = 0; j < n; j++)
+                int i = primeZ.RowIndex, j = primeZ.ColIndex;
+
+                primedCells[i, j] = true;
+                var gotoStep5 = true;
+                var starredCol = 0;
+
+                for (int tj = 0; tj < n; tj++)
                 {
-                    if (matrix[i, j] == 0d && !coveredCols[j] && !coveredRows[i])
+                    if (starredCells[i, tj])
                     {
-                        primedCells[i, j] = true;
-                        var gotoStep5 = true;
-                        var starredCol = 0;
-
-                        for (int tj = 0; tj < n; tj++)
-                        {
-                            if (starredCells[i, tj])
-                            {
-                                gotoStep5 = false;
-                                starredCol = tj;
-                                break;
-                            }
-                        }
-
-                        if (gotoStep5)
-                        {
-                            primeZ = new Coordinate(i, j);
-                            return true;
-                        }
-                        else
-                        {
-                            coveredRows[i] = true;
-                            coveredCols[starredCol] = false;
-
-                            if (!hasUncoveredZeros(matrix, n, coveredRows, coveredCols))
-                            {
-                                min = findMin(matrix, n, coveredRows, coveredCols);
-                                return false;
-                            }
-                        }
+                        gotoStep5 = false;
+                        starredCol = tj;
+                        break;
                     }
                 }
+
+                if (gotoStep5)
+                {
+                    return true;
+                }
+                else
+                {
+                    coveredRows[i] = true;
+                    coveredCols[starredCol] = false;
+                }
+
             }
 
-            return true;
+            return false;
         }
 
-        private static double findMin(double[,] matrix, int n, bool[] coveredRows, bool[] coveredCols)
+        private static double findMinUncovered(double[,] matrix, int n, bool[] coveredRows, bool[] coveredCols)
         {
             var min = double.MaxValue;
             for (int i = 0; i < n; i++)
@@ -306,7 +283,7 @@ namespace HCMUT.EMRCorefResol.Evaluations
             return min;
         }
 
-        private static bool hasUncoveredZeros(double[,] matrix, int n, bool[] coveredRows, bool[] coveredCols)
+        private static bool hasUncoveredZeros(double[,] matrix, int n, bool[] coveredRows, bool[] coveredCols, out Coordinate uncoveredZero)
         {
             for (int i = 0; i < n; i++)
             {
@@ -314,11 +291,13 @@ namespace HCMUT.EMRCorefResol.Evaluations
                 {
                     if (matrix[i, j] == 0d && !coveredRows[i] && !coveredCols[j])
                     {
+                        uncoveredZero = new Coordinate(i, j);
                         return true;
                     }
                 }
             }
 
+            uncoveredZero = new Coordinate();
             return false;
         }
 

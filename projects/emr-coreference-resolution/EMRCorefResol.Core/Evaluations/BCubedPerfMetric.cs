@@ -80,11 +80,11 @@ namespace HCMUT.EMRCorefResol.Evaluations
             }
 
             var evals = new Dictionary<ConceptType, Evaluation>();
-            foreach (var t in Evaluation.Types)
+            foreach (var t in Evaluation.ConceptTypes)
             {
                 var p = precisions.ContainsKey(t) ? precisions[t] / mCounts[t] : 1d;
                 var r = recalls.ContainsKey(t) ? recalls[t] / mCounts[t] : 1d;
-                var f = 2 * p * r / (p + r);
+                var f = (p == 0 && r == 0) ? 0d : 2 * p * r / (p + r);
                 evals.Add(t, new Evaluation(p, r, f, Name));
             }
 

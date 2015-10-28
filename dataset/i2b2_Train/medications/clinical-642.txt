@@ -1,0 +1,3 @@
+36	During the operation , the patient received 13 units of packed red blood cells , four units of fresh frozen plasma and one unit of platelets with an estimated blood loss of 1500 cc .|packed red blood cells[1535,1557]||||||||||834201|834201|packed red blood cells
+36	During the operation , the patient received 13 units of packed red blood cells , four units of fresh frozen plasma and one unit of platelets with an estimated blood loss of 1500 cc .|fresh frozen plasma[1574,1593]||||||||||4563|4563|fresh frozen plasma
+42	He is discharged to home with pain medication which is percocet .|percocet[2310,2318]|||||||||C0086787|42844|161|paracetamol

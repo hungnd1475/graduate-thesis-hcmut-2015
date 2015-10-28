@@ -1,0 +1,107 @@
+c="her attending physiciana" 87:11 87:13||t="coref person"||c="dr. porriede friednantflirt" 87:15 87:17
+c="her primary doctor" 89:15 89:17||t="coref person"||c="dr. jescspald" 89:19 89:20
+c="the patient" 24:0 24:1||t="coref person"||c="the patient" 25:0 25:1
+c="the patient" 25:0 25:1||t="coref person"||c="the patient" 27:0 27:1
+c="the patient" 35:3 35:4||t="coref person"||c="she" 36:0 36:0
+c="she" 36:0 36:0||t="coref person"||c="the patient" 37:3 37:4
+c="amoxicillin" 43:14 43:14||t="coref treatment"||c="which" 43:15 43:15
+c="the patient" 45:0 45:1||t="coref person"||c="her" 45:10 45:10
+c="her" 45:10 45:10||t="coref person"||c="she" 48:0 48:0
+c="ca-125" 56:2 56:2||t="coref test"||c="which" 56:3 56:3
+c="the patient" 59:0 59:1||t="coref person"||c="her" 61:11 61:11
+c="she" 62:10 62:10||t="coref person"||c="her" 62:21 62:21
+c="she" 69:0 69:0||t="coref person"||c="her" 69:12 69:12
+c="her" 69:12 69:12||t="coref person"||c="the patient" 70:0 70:1
+c="the patient" 73:6 73:7||t="coref person"||c="her" 73:13 73:13
+c="her" 73:13 73:13||t="coref person"||c="her" 73:21 73:21
+c="she" 73:25 73:25||t="coref person"||c="her" 73:31 73:31
+c="her" 73:31 73:31||t="coref person"||c="her" 74:5 74:5
+c="her" 74:12 74:12||t="coref person"||c="her" 75:0 75:0
+c="she" 76:0 76:0||t="coref person"||c="her" 76:3 76:3
+c="her" 76:3 76:3||t="coref person"||c="the patient" 77:4 77:5
+c="the patient" 78:0 78:1||t="coref person"||c="the patient" 79:2 79:3
+c="the patient" 79:2 79:3||t="coref person"||c="her" 81:5 81:5
+c="her" 82:0 82:0||t="coref person"||c="her" 82:10 82:10
+c="her" 83:5 83:5||t="coref person"||c="her" 83:14 83:14
+c="she" 84:0 84:0||t="coref person"||c="the patient" 85:0 85:1
+c="the patient" 85:0 85:1||t="coref person"||c="her" 85:15 85:15
+c="her" 85:18 85:18||t="coref person"||c="her" 86:0 86:0
+c="the patient" 87:0 87:1||t="coref person"||c="her" 87:11 87:11
+c="she" 89:10 89:10||t="coref person"||c="her" 89:15 89:15
+c="stage iii-c ovarian cancer" 20:1 20:4||t="coref problem"||c="stage iii-c ovarian cancer" 24:15 24:18
+c="metastatic endometrial cancer" 24:20 24:22||t="coref problem"||c="metastatic endometrial cancer" 31:12 31:14
+c="her hematocrit" 57:0 57:1||t="coref test"||c="the patient 's hematocrit" 77:4 77:7
+c="squamous differentiation" 26:8 26:9||t="coref problem"||c="squamous differentiation" 29:10 29:11
+c="metastatic endometrial cancer" 31:12 31:14||t="coref problem"||c="metastatic endometrial for line ii" 59:12 59:16
+c="left leg dvt" 35:15 35:17||t="coref problem"||c="dvt" 61:4 61:4
+c="the patient" 70:0 70:1||t="coref person"||c="the patient" 71:4 71:5
+c="the patient" 71:9 71:10||t="coref person"||c="she" 71:14 71:14
+c="grade ii-iii adenocarcinoma" 26:4 26:6||t="coref problem"||c="grade ii-iii papillary adenocarcinoma of the endometrium" 29:2 29:8
+c="packed rbc" 80:9 80:10||t="coref treatment"||c="packed rbc" 85:23 85:24
+c="coumadin" 83:3 83:3||t="coref treatment"||c="coumadin" 84:4 84:4
+c="stage iv endometrial cancer" 19:1 19:4||t="coref problem"||c="stage iv endometrial cancer" 24:10 24:13
+c="mesna" 69:15 69:15||t="coref treatment"||c="mesna" 71:19 71:19
+c="her" 71:16 71:16||t="coref person"||c="the patient" 73:6 73:7
+c="ifex" 67:0 67:0||t="coref treatment"||c="her ifex" 69:12 69:13
+c="stage iii-c ovarian cancer" 17:1 17:4||t="coref problem"||c="stage iii-c ovarian cancer" 20:1 20:4
+c="her" 87:11 87:11||t="coref person"||c="the patient" 89:3 89:4
+c="ifex" 59:21 59:21||t="coref treatment"||c="ifex" 67:0 67:0
+c="her" 73:21 73:21||t="coref person"||c="she" 73:25 73:25
+c="her" 75:0 75:0||t="coref person"||c="she" 76:0 76:0
+c="the patient 's hematocrit" 77:4 77:7||t="coref test"||c="which" 77:12 77:12
+c="the patient" 27:0 27:1||t="coref person"||c="she" 31:7 31:7
+c="the patient" 66:0 66:1||t="coref person"||c="she" 68:0 68:0
+c="her" 62:21 62:21||t="coref person"||c="the patient" 64:15 64:16
+c="her" 85:15 85:15||t="coref person"||c="her" 85:18 85:18
+c="her" 86:0 86:0||t="coref person"||c="she" 86:10 86:10
+c="the patient" 32:0 32:1||t="coref person"||c="her" 34:0 34:0
+c="her" 61:11 61:11||t="coref person"||c="the patient" 62:0 62:1
+c="vp-16" 22:6 22:6||t="coref treatment"||c="vp-16" 59:25 59:25
+c="anxiety" 37:9 37:9||t="coref problem"||c="anxiety" 43:34 43:34
+c="mesna" 22:4 22:4||t="coref treatment"||c="mesna" 59:23 59:23
+c="chemotherapy" 66:3 66:3||t="coref treatment"||c="chemotherapy" 73:4 73:4
+c="the patient" 37:3 37:4||t="coref person"||c="the patient" 45:0 45:1
+c="coumadin therapy" 36:6 36:7||t="coref treatment"||c="coumadin" 61:8 61:8
+c="continuous iv infusion" 67:19 67:21||t="coref treatment"||c="iv infusion" 75:9 75:10
+c="packed rbc" 78:9 78:10||t="coref treatment"||c="packed rbc" 80:9 80:10
+c="hives" 45:3 45:3||t="coref problem"||c="hives" 45:11 45:11
+c="her" 57:0 57:0||t="coref person"||c="the patient" 59:0 59:1
+c="her ifex infusion" 73:21 73:23||t="coref treatment"||c="her ifex" 74:5 74:6
+c="stage iv endometrial cancer" 24:10 24:13||t="coref problem"||c="stage iv endometrial" 59:4 59:6
+c="the patient" 62:0 62:1||t="coref person"||c="she" 62:10 62:10
+c="cycle 1 chemotherapy" 24:27 24:29||t="coref treatment"||c="cycle i chemotherapy" 59:18 59:20
+c="she" 48:0 48:0||t="coref person"||c="she" 56:0 56:0
+c="she" 56:0 56:0||t="coref person"||c="her" 57:0 57:0
+c="which" 70:12 70:12||t="coref problem"||c="rbc 's" 72:7 72:8
+c="mesna" 67:10 67:10||t="coref treatment"||c="mesna dose" 69:3 69:4
+c="vp-16" 68:2 68:2||t="coref treatment"||c="her vp-16" 76:3 76:4
+c="the patient" 71:4 71:5||t="coref person"||c="the patient" 71:9 71:10
+c="she" 71:14 71:14||t="coref person"||c="her" 71:16 71:16
+c="the patient" 89:3 89:4||t="coref person"||c="she" 89:10 89:10
+c="mesna" 59:23 59:23||t="coref treatment"||c="mesna" 67:10 67:10
+c="chemotherapy" 22:0 22:0||t="coref treatment"||c="chemotherapy" 66:3 66:3
+c="her" 82:10 82:10||t="coref person"||c="she" 83:0 83:0
+c="the patient" 77:4 77:5||t="coref person"||c="the patient" 78:0 78:1
+c="her" 81:5 81:5||t="coref person"||c="her" 82:0 82:0
+c="anxiety" 43:34 43:34||t="coref problem"||c="anxious" 62:16 62:16
+c="squamous differentiation" 29:10 29:11||t="coref problem"||c="which" 29:12 29:12
+c="grade ii-iii papillary adenocarcinoma of the endometrium" 29:2 29:8||t="coref problem"||c="an endometroid adenocarcinoma" 30:11 30:13
+c="she" 31:7 31:7||t="coref person"||c="the patient" 32:0 32:1
+c="her" 83:14 83:14||t="coref person"||c="she" 84:0 84:0
+c="her ifex" 69:12 69:13||t="coref treatment"||c="ifex" 71:17 71:17
+c="she" 68:0 68:0||t="coref person"||c="she" 69:0 69:0
+c="her" 74:5 74:5||t="coref person"||c="her" 74:12 74:12
+c="she" 86:10 86:10||t="coref person"||c="the patient" 87:0 87:1
+c="her" 34:0 34:0||t="coref person"||c="the patient" 35:3 35:4
+c="the patient" 64:15 64:16||t="coref person"||c="the patient" 66:0 66:1
+c="she" 83:0 83:0||t="coref person"||c="her" 83:5 83:5
+c="her ifex" 74:5 74:6||t="coref treatment"||c="infusion" 74:16 74:16
+c="mesna dose" 69:3 69:4||t="coref treatment"||c="mesna" 69:15 69:15
+c="red blood cells" 70:9 70:11||t="coref problem"||c="which" 70:12 70:12
+c="mesna" 71:19 71:19||t="coref treatment"||c="her mesna" 75:0 75:1
+c="ifex" 71:17 71:17||t="coref treatment"||c="her ifex infusion" 73:21 73:23
+c="ifex" 22:2 22:2||t="coref treatment"||c="ifex" 59:21 59:21
+c="vp-16" 59:25 59:25||t="coref treatment"||c="vp-16" 68:2 68:2
+c="stage iv endometrial cancer" 16:1 16:4||t="coref problem"||c="stage iv endometrial cancer" 19:1 19:4
+c="stage iii-c ovarian cancer" 24:15 24:18||t="coref problem"||c="stage iii-c ovarian" 59:8 59:10
+c="her coumadin" 82:10 82:11||t="coref treatment"||c="coumadin" 83:3 83:3

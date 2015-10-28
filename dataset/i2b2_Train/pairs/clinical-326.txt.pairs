@@ -1,0 +1,38 @@
+c="name" 12:0 12:0||t="coref person"||c="wyndealb , auale" 13:0 13:2
+c="an echocardiogram" 34:0 34:1||t="coref test"||c="which" 34:6 34:6
+c="he" 38:5 38:5||t="coref person"||c="his" 39:0 39:0
+c="a urinalysis" 40:0 40:1||t="coref test"||c="which" 40:4 40:4
+c="myocardial infarction" 31:10 31:11||t="coref problem"||c="myocardial infarction" 36:5 36:6
+c="adult respiratory distress syndrome" 21:0 21:3||t="coref problem"||c="adult respiratory distress syndrome" 39:23 39:26
+c="pulmonary hypertension" 25:68 25:69||t="coref problem"||c="fairly severe pulmonary hypertension" 34:57 34:60
+c="acute renal failure" 25:64 25:66||t="coref problem"||c="acute renal insufficiency" 33:14 33:16
+c="pulmonary hypertension" 25:29 25:30||t="coref problem"||c="pulmonary hypertension" 25:68 25:69
+c="he" 36:12 36:12||t="coref person"||c="he" 38:5 38:5
+c="acute renal insufficiency" 23:0 23:2||t="coref problem"||c="acute renal failure" 25:64 25:66
+c="cvvh" 44:10 44:10||t="coref treatment"||c="cvvh" 46:1 46:1
+c="the patient" 41:0 41:1||t="coref person"||c="he" 42:0 42:0
+c="the patient" 30:3 30:4||t="coref person"||c="he" 30:12 30:12
+c="pneumonia" 31:23 31:23||t="coref problem"||c="pneumonia" 39:29 39:29
+c="an esophagogastroduodenoscopy" 27:7 27:8||t="coref test"||c="it" 27:11 27:11
+c="hypotensive" 32:23 32:23||t="coref problem"||c="quite hypotensive" 38:7 38:8
+c="the patient" 44:0 44:1||t="coref person"||c="his" 44:18 44:18
+c="he" 42:0 42:0||t="coref person"||c="the patient" 44:0 44:1
+c="the patient" 29:0 29:1||t="coref person"||c="the patient" 30:3 30:4
+c="he" 30:12 30:12||t="coref person"||c="he" 31:0 31:0
+c="his" 39:0 39:0||t="coref person"||c="the patient" 41:0 41:1
+c="the patient" 33:0 33:1||t="coref person"||c="the patient" 36:0 36:1
+c="his" 32:0 32:0||t="coref person"||c="the patient" 33:0 33:1
+c="he" 31:6 31:6||t="coref person"||c="his" 32:0 32:0
+c="the patient" 36:0 36:1||t="coref person"||c="he" 36:12 36:12
+c="the patient" 26:0 26:1||t="coref person"||c="the patient" 27:0 27:1
+c="diffuse patchy infiltrates on left lung" 39:4 39:9||t="coref problem"||c="left upper lung patchy infiltrates" 39:11 39:15
+c="a bronchoscopy" 42:2 42:3||t="coref test"||c="which" 42:6 42:6
+c="his" 44:18 44:18||t="coref person"||c="the patient" 45:12 45:13
+c="who" 25:52 25:52||t="coref person"||c="the patient" 26:0 26:1
+c="expanding pulmonary infiltrates" 33:6 33:8||t="coref problem"||c="diffuse patchy infiltrates on left lung" 39:4 39:9
+c="he" 31:0 31:0||t="coref person"||c="he" 31:6 31:6
+c="wyndealb , auale" 13:0 13:2||t="coref person"||c="the patient" 25:0 25:1
+c="the patient" 45:12 45:13||t="coref person"||c="the patient" 46:8 46:9
+c="the patient" 25:0 25:1||t="coref person"||c="who" 25:52 25:52
+c="adult respiratory distress syndrome" 6:0 6:3||t="coref problem"||c="adult respiratory distress syndrome" 21:0 21:3
+c="the patient" 27:0 27:1||t="coref person"||c="the patient" 29:0 29:1
