@@ -52,7 +52,7 @@ namespace EMRCorefResol.UITest
         {
             InitializeComponent();
 
-            txtEMRPath.Text = @"..\..\..\..\..\dataset\i2b2_Train\Beth";
+            txtEMRPath.Text = @"..\..\..\..\..\dataset\i2b2_Train";
             emrCollection = new EMRCollection(txtEMRPath.Text);
 
             txtEMR.ShowLineNumbers = true;
@@ -402,7 +402,7 @@ namespace EMRCorefResol.UITest
                 var reader = new I2B2DataReader();
                 var emr = currentEMR;
                 var chains = new CorefChainCollection(chainsPath, reader);
-                var instances = new SimplePreprocessor().Process(emr);
+                var instances = new Soon2001InstancesGenerator().Generate(emr, chains);
 
                 var extractor = new EnglishTrainingFeatureExtractor();
                 extractor.EMR = emr;

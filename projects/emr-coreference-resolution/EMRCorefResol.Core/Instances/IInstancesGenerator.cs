@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol
 {
-    public interface IPreprocessor
+    public interface IInstancesGenerator
     {
-        string Process(string concept);
+        IIndexedEnumerable<IClasInstance> Generate(EMR emr, CorefChainCollection groundTruth);
     }
 }

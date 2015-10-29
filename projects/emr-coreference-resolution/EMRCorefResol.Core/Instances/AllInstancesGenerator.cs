@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HCMUT.EMRCorefResol 
+namespace HCMUT.EMRCorefResol
 {
-    public class SimplePreprocessor : IPreprocessor
+    public class AllInstancesGenerator : IInstancesGenerator
     {
-        public IIndexedEnumerable<IClasInstance> Process(EMR emr)
+        public IIndexedEnumerable<IClasInstance> Generate(EMR emr, CorefChainCollection groundTruth)
         {
             var instances = new List<IClasInstance>();
 
@@ -27,11 +27,6 @@ namespace HCMUT.EMRCorefResol
                         var ana = emr.Concepts[j];
                         if (ante.Type == ana.Type)
                         {
-                            if (ana.Begin.CompareTo(ante.Begin) < 0)
-                            {
-                                GenericHelper.Swap(ref ante, ref ana);
-                            }
-
                             switch (ante.Type)
                             {
                                 case ConceptType.Person:
@@ -59,12 +54,5 @@ namespace HCMUT.EMRCorefResol
 
             return instances.ToIndexedEnumerable();
         }
-
-        //private void Swap(ref Concept c1, ref Concept c2)
-        //{
-        //    var t = c1;
-        //    c1 = c2;
-        //    c2 = t;
-        //}
     }
 }

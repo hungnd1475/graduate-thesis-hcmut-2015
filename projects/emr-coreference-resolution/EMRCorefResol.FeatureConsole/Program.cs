@@ -59,7 +59,7 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
             var dataReader = APISelector.SelectDataReader(args.EMRFormat);
             var fExtractor = APISelector.SelectFeatureExtractor(args.Language, args.Mode, 
                 args.ClasMethod, args.ModelsDir);
-            var preprocessor = new SimplePreprocessor();
+            var instancesGenerator = new Soon2001InstancesGenerator();
 
             if (args.Random > 0)
             {
@@ -67,12 +67,12 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
                 string[] emrPaths, conceptsPaths, chainsPaths;
                 emrCollections.First().GetRandom(args.Random, out emrPaths, out conceptsPaths, out chainsPaths);
                 FeatureExtractingSystem.Instance.ExtractAll(emrPaths, conceptsPaths, chainsPaths, dataReader,
-                    preprocessor, fExtractor, pCreator, types);
+                    instancesGenerator, fExtractor, pCreator, null, types);
             }
             else
             {
-                FeatureExtractingSystem.Instance.ExtractCollections(emrCollections, dataReader, preprocessor,
-                    fExtractor, pCreator, types);
+                FeatureExtractingSystem.Instance.ExtractCollections(emrCollections, dataReader, instancesGenerator,
+                    fExtractor, pCreator, null, types);
             }
 
             var serializer = APISelector.SelectProblemSerializer(args.ClasMethod);

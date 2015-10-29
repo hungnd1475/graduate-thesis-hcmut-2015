@@ -26,7 +26,8 @@ namespace HCMUT.EMRCorefResol
             get { return _concepts.Count; }
         }
 
-        public ConceptCollection(string conceptsFile, IDataReader dataReader)
+        public ConceptCollection(string conceptsFile, IDataReader dataReader, 
+            IPreprocessor preprocessor = null)
         {
             var fs = new FileStream(conceptsFile, FileMode.Open);
             using (var sr = new StreamReader(fs))
@@ -37,13 +38,23 @@ namespace HCMUT.EMRCorefResol
                     var line = sr.ReadLine();
                     var c = dataReader.ReadSingle(line);
                     if (c != null)
-                    {
-                        _concepts.Add(c);
+                    {                        
+                        _concepts.Add(Preprocess(c, preprocessor));
                     }
                 }
             }
 
             _concepts.Sort();
+        }
+
+        static Concept Preprocess(Concept concept, IPreprocessor preprocessor)
+        {
+            if (preprocessor != null)
+            {
+                var newLex = preprocessor.Process(concept.Lexicon);
+                return new Concept(newLex, concept.Begin, concept.End, concept.Type);
+            }
+            return concept;
         }
 
         public int IndexOf(Concept concept)

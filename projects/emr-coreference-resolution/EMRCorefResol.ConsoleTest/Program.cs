@@ -33,9 +33,7 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
             var conceptsFile = Path.Combine(path, "concepts", $"{emrName}.con");
             var chainsFile = Path.Combine(path, "chains", $"{emrName}.chains");
 
-            var classifier = new LibSVMClassifier(@"D:\Documents\HCMUT\AI Research\Testing\19102015\Models");
-            ClassificationSystem.Instance.ClassifyOne(emrFile, conceptsFile, chainsFile, new I2B2DataReader(),
-                new SimplePreprocessor(), new EnglishTrainingFeatureExtractor(), classifier);
+            var classifier = new LibSVMClassifier(@"D:\Documents\HCMUT\AI Research\Testing\19102015\Models");            
         }
 
         static void testCEAF(int[] c1, int[] c2)
