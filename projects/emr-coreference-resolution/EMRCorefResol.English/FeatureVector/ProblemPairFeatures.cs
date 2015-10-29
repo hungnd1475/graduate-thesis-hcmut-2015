@@ -11,7 +11,7 @@ namespace HCMUT.EMRCorefResol.English
     class ProblemPairFeatures : FeatureVector
     {
         public ProblemPairFeatures(ProblemPair instance, EMR emr, double classValue)
-            : base(size: 12, classValue: classValue)
+            : base(size: 11, classValue: classValue)
         {
             /*var anaNorm = EnglishNormalizer.Normalize(instance.Anaphora.Lexicon);
             var anteNorm = EnglishNormalizer.Normalize(instance.Antecedent.Lexicon);
@@ -35,7 +35,7 @@ namespace HCMUT.EMRCorefResol.English
             this[11] = new WikiAnchorLinkFeature(anaWiki, anteWiki);
             this[12] = new WikiBoldNameMatchFeature(anaWiki, anteWiki);*/
 
-            this[11] = new OperationFeature(instance);
+            //this[11] = new OperationFeature(instance);
         }
     }
 }

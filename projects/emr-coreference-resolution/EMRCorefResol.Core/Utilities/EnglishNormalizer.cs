@@ -15,7 +15,7 @@ namespace HCMUT.EMRCorefResol
         public static string Normalize(string term)
         {
             var searcher = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "stopwords.txt")));
-            var normalized = searcher.RemoveKeywords(term, Utilities.KWSearchOptions.WholeWordIngoreCase);
+            var normalized = searcher.RemoveKeywords(term, KWSearchOptions.WholeWordIngoreCase);
             normalized = RemovePreposition(normalized);
 
             return normalized;

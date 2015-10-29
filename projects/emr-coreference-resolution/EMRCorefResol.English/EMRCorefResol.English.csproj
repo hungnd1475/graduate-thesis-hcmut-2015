@@ -199,7 +199,9 @@
     <Content Include="Keywords\i.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Keywords\indicator-keywords.txt" />
+    <Content Include="Keywords\indicator-keywords.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Keywords\male-names.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -215,7 +217,9 @@
     <Content Include="Keywords\person-pronoun.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Keywords\position-keywords.txt" />
+    <Content Include="Keywords\position-keywords.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Keywords\pronouns.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -225,8 +229,12 @@
     <Content Include="Keywords\sign-information.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Keywords\modifier-keywords.txt" />
-    <Content Include="Keywords\stopwords.txt" />
+    <Content Include="Keywords\modifier-keywords.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\stopwords.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Keywords\they.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

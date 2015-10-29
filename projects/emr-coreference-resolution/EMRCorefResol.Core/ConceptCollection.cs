@@ -38,8 +38,9 @@ namespace HCMUT.EMRCorefResol
                     var line = sr.ReadLine();
                     var c = dataReader.ReadSingle(line);
                     if (c != null)
-                    {                        
-                        _concepts.Add(Preprocess(c, preprocessor));
+                    {
+                        c = Preprocess(c, preprocessor);   
+                        _concepts.Add(c);
                     }
                 }
             }

@@ -12,7 +12,7 @@ namespace HCMUT.EMRCorefResol.English
     class TreatmentPairFeatures : FeatureVector
     {
         public TreatmentPairFeatures(TreatmentPair instance, EMR emr, double classValue)
-            :base(size:17, classValue: classValue)
+            :base(size:16, classValue: classValue)
         {
             var emrInfo = new FileInfo(emr.Path);
             var datasetRoot = emrInfo.Directory.Parent.FullName;
@@ -48,7 +48,7 @@ namespace HCMUT.EMRCorefResol.English
             this[17] = new WikiAnchorLinkFeature(anaWiki, anteWiki);
             this[18] = new WikiBoldNameMatchFeature(anaWiki, anteWiki);*/
 
-            this[16] = new AnatomyFeature(instance);
+            //this[16] = new AnatomyFeature(instance);
         }
 
         private MedicationInfo GetMedicationInfo(Concept c, EMR emr, MedicationInfoCollection meds)

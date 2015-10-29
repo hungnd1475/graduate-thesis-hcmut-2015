@@ -15,7 +15,7 @@ namespace HCMUT.EMRCorefResol
         private FeatureExtractingSystem() { }
 
         public void ExtractOne(string emrPath, string conceptsPath, string chainsPath, IDataReader dataReader,
-            IInstancesGenerator instancesGenerator, IFeatureExtractor fExtractor, ClasProblemCollection pCreator, 
+            IInstancesGenerator instancesGenerator, IFeatureExtractor fExtractor, ClasProblemCollection pCreator,
             IPreprocessor preprocessor = null, ISet<Type> extractTypes = null)
         {
             var gtExists = File.Exists(chainsPath);

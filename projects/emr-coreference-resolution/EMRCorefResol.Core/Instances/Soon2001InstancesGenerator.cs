@@ -39,10 +39,13 @@ namespace HCMUT.EMRCorefResol
                                 for (int k = i + 1; k < j; k++)
                                 {
                                     var c = concepts[k];
-                                    inst = PairInstance(c, ana);
-                                    if (inst != null)
+                                    if (c.Type == ana.Type)
                                     {
-                                        instances.Add(inst);
+                                        inst = PairInstance(c, ana);
+                                        if (inst != null)
+                                        {
+                                            instances.Add(inst);
+                                        }
                                     }
                                 }
 

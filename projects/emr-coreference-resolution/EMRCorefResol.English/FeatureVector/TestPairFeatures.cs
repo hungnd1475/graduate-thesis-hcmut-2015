@@ -11,7 +11,7 @@ namespace HCMUT.EMRCorefResol.English
     class TestPairFeatures : FeatureVector
     {
         public TestPairFeatures(TestPair instance, EMR emr, double classValue)
-            :base(size:16, classValue: classValue)
+            :base(size:14, classValue: classValue)
         {
             /*var anaNorm = EnglishNormalizer.Normalize(instance.Anaphora.Lexicon);
             var anteNorm = EnglishNormalizer.Normalize(instance.Antecedent.Lexicon);
@@ -38,8 +38,8 @@ namespace HCMUT.EMRCorefResol.English
             this[15] = new WikiAnchorLinkFeature(anaWiki, anteWiki);
             this[16] = new WikiBoldNameMatchFeature(anaWiki, anteWiki);*/
 
-            this[14] = new AnatomyFeature(instance);
-            this[15] = new EquipmentFeature(instance);
+            //this[14] = new AnatomyFeature(instance);
+            //this[15] = new EquipmentFeature(instance);
         }
     }
 }
