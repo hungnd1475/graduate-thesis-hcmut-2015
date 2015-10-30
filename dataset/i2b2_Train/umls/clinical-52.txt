@@ -1,0 +1,6 @@
+rawTerm="mvi therapeutic w / minerals ( therap vits / minerals )|OPE"||cui="C0039796"||concept="Therapeutic"||prefer="The science and art of healing"||semantic=[topp]||confidence="645"
+rawTerm="mvi therapeutic w / minerals po|OPE"||cui="C0039796"||concept="Therapeutic"||prefer="The science and art of healing"||semantic=[topp]||confidence="637"
+rawTerm="sinus bradycardia|ANA"||cui="C0030471"||concept="Sinus"||prefer="Nasal sinus"||semantic=[bsoj]||confidence="861"
+rawTerm="significant cardiac|ANA"||cui="C0018787"||concept="Cardiac"||prefer="Heart"||semantic=[bpoc]||confidence="861"
+rawTerm="epigastric pain|ANA"||cui="C0521440"||concept="Epigastric"||prefer="Epigastric"||semantic=[blor]||confidence="694"
+rawTerm="cpap|OPE"||cui="C0199451"||concept="CPAP"||prefer="Continuous Positive Airway Pressure"||semantic=[topp]||confidence="1000"

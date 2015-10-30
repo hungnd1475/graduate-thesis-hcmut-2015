@@ -1,0 +1,2 @@
+rawTerm="r thumb injury|ANA"||cui="C0040067"||concept="Thumb"||prefer="Thumb structure"||semantic=[bpoc]||confidence="660"
+rawTerm="treatment|OPE"||cui="C0087111"||concept="Treatment"||prefer="Therapeutic procedure"||semantic=[topp]||confidence="1000"

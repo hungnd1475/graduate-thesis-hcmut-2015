@@ -1,0 +1,3 @@
+rawTerm="abdominal pain|ANA"||cui="C0000726"||concept="Abdominal"||prefer="Abdomen"||semantic=[blor]||confidence="861"
+rawTerm="bland diet|OPE"||cui="C1519433"||concept="DIET"||prefer="Special Diet Therapy"||semantic=[topp]||confidence="861"
+rawTerm="blood in stool|ANA"||cui="C0005847"||concept="Blood Vessel"||prefer="Blood Vessel"||semantic=[bpoc]||confidence="916"

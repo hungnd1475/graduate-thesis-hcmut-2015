@@ -1,0 +1,5 @@
+rawTerm="a new chemotherapy protocol|OPE"||cui="C0949219"||concept="chemotherapy protocol"||prefer="Antineoplastic Chemotherapy Protocols"||semantic=[topp]||confidence="901"
+rawTerm="hyper-cvad|OPE"||cui="C0279842"||concept="CVAD"||prefer="cyclophosphamide/dexamethasone/doxorubicin/verapamil/vincristine"||semantic=[topp]||confidence="861"
+rawTerm="his white blood cell count|ANA"||cui="C0005847"||concept="Blood Vessel"||prefer="Blood Vessel"||semantic=[bpoc]||confidence="729"
+rawTerm="his white blood cell count|EQP"||cui="C0005847"||concept="Blood Vessel"||prefer="Blood Vessel"||semantic=[bpoc]||confidence="729"
+rawTerm="a neutropenic diet|OPE"||cui="C1519433"||concept="DIET"||prefer="Special Diet Therapy"||semantic=[topp]||confidence="861"

@@ -1,0 +1,5 @@
+rawTerm="kidney stones|ANA"||cui="C0022646"||concept="Kidney"||prefer="Kidney"||semantic=[bpoc]||confidence="861"
+rawTerm="recently passed kidney stone|ANA"||cui="C0022646"||concept="Kidney"||prefer="Kidney"||semantic=[bpoc]||confidence="812"
+rawTerm="abdominal ct scan|ANA"||cui="C0000726"||concept="Abdominal"||prefer="Abdomen"||semantic=[blor]||confidence="827"
+rawTerm="abdominal ct scan|EQP"||cui="C0000726"||concept="Abdominal"||prefer="Abdomen"||semantic=[blor]||confidence="827"
+rawTerm="your kidney stones|ANA"||cui="C0022646"||concept="Kidney"||prefer="Kidney"||semantic=[bpoc]||confidence="861"

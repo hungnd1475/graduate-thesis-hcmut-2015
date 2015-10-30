@@ -22,5 +22,11 @@ namespace HCMUT.EMRCorefResol.Service
             Semantic = semantic;
             Confidence = confidence;
         }
+
+        public override string ToString()
+        {
+            string s = string.Join("|", Semantic);
+            return $"cui=\"{CUI}\"||concept=\"{Concept}\"||prefer=\"{Prefer}\"||semantic=[{s}]||confidence=\"{Confidence}\"";
+        }
     }
 }

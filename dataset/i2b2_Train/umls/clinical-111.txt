@@ -1,0 +1,2 @@
+rawTerm="pneumonia|ANA"||cui="C0024109"||concept="LUNGS"||prefer="Lung"||semantic=[bpoc]||confidence="907"
+rawTerm="splenectomy|OPE"||cui="C0037995"||concept="Splenectomy"||prefer="Splenectomy"||semantic=[topp]||confidence="1000"

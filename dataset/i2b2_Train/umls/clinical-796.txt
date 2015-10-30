@@ -1,0 +1,7 @@
+rawTerm="h.pylori|ANA"||cui="C0034196"||concept="Pylorus"||prefer="Pylorus"||semantic=[bpoc]||confidence="827"
+rawTerm="potassium chloride slow rel. ( kcl slow release )|OPE"||cui="C1963578"||concept="Release"||prefer="Release (procedure)"||semantic=[topp]||confidence="861"
+rawTerm="wellbutrin sr ( bupropion hcl sustained release )|OPE"||cui="C1963578"||concept="Release"||prefer="Release (procedure)"||semantic=[topp]||confidence="861"
+rawTerm="h. pylori positive|ANA"||cui="C0034196"||concept="Pylorus"||prefer="Pylorus"||semantic=[bpoc]||confidence="627"
+rawTerm="empiric treatment|OPE"||cui="C0087111"||concept="Treatment"||prefer="Therapeutic procedure"||semantic=[topp]||confidence="861"
+rawTerm="h. pylori treatment|OPE"||cui="C0087111"||concept="Treatment"||prefer="Therapeutic procedure"||semantic=[topp]||confidence="827"
+rawTerm="h. pylori|ANA"||cui="C0034196"||concept="Pylorus"||prefer="Pylorus"||semantic=[bpoc]||confidence="827"

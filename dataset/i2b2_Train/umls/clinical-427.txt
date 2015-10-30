@@ -1,0 +1,8 @@
+rawTerm="epigastric discomfort|ANA"||cui="C0521440"||concept="Epigastric"||prefer="Epigastric"||semantic=[blor]||confidence="694"
+rawTerm="rx|OPE"||cui="C2709207"||concept="Rx"||prefer="Rx therapy"||semantic=[topp]||confidence="1000"
+rawTerm="lung ca|ANA"||cui="C0024109"||concept="Lung"||prefer="Lung"||semantic=[bpoc]||confidence="694"
+rawTerm="mild epigastric tenderness|ANA"||cui="C0521440"||concept="Epigastric"||prefer="Epigastric"||semantic=[blor]||confidence="660"
+rawTerm="sinus tach|ANA"||cui="C0030471"||concept="Sinus"||prefer="Nasal sinus"||semantic=[bsoj]||confidence="694"
+rawTerm="general anesthesia|OPE"||cui="C0002915"||concept="General Anesthesia"||prefer="General Anesthesia"||semantic=[topp]||confidence="1000"
+rawTerm="pylori serology|ANA"||cui="C0034196"||concept="Pylorus"||prefer="Pylorus"||semantic=[bpoc]||confidence="661"
+rawTerm="pylori serology|EQP"||cui="C0034196"||concept="Pylorus"||prefer="Pylorus"||semantic=[bpoc]||confidence="661"

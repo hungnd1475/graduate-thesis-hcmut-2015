@@ -1,0 +1,5 @@
+rawTerm="prostate cancer|ANA"||cui="C0033572"||concept="Prostate"||prefer="Prostate"||semantic=[bpoc]||confidence="861"
+rawTerm="radical retropubic prostatectomy|OPE"||cui="C0194825"||concept="Radical retropubic prostatectomy"||prefer="Radical retropubic prostatectomy"||semantic=[topp]||confidence="1000"
+rawTerm="the procedure|OPE"||cui="C0184661"||concept="Procedure"||prefer="Interventional procedure"||semantic=[diap|topp]||confidence="1000"
+rawTerm="oral medication|OPE"||cui="C0175795"||concept="Oral Medication"||prefer="Oral Medication"||semantic=[topp]||confidence="1000"
+rawTerm="his penrose drain|OPE"||cui="C0013103"||concept="drain"||prefer="Drainage procedure"||semantic=[topp]||confidence="861"

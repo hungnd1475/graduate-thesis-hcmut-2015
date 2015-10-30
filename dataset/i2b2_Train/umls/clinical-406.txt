@@ -1,0 +1,6 @@
+rawTerm="tube feeds|OPE"||cui="C0041281"||concept="tube feed"||prefer="Tube feeding of patient"||semantic=[topp]||confidence="1000"
+rawTerm="h. pylori|ANA"||cui="C0034196"||concept="Pylorus"||prefer="Pylorus"||semantic=[bpoc]||confidence="827"
+rawTerm="neck ct|ANA"||cui="C0027530"||concept="Neck"||prefer="Neck"||semantic=[blor]||confidence="694"
+rawTerm="neck ct|EQP"||cui="C0027530"||concept="Neck"||prefer="Neck"||semantic=[blor]||confidence="694"
+rawTerm="neck pain|ANA"||cui="C0027530"||concept="Neck"||prefer="Neck"||semantic=[blor]||confidence="861"
+rawTerm="neck inflammation|ANA"||cui="C0027530"||concept="Neck"||prefer="Neck"||semantic=[blor]||confidence="694"

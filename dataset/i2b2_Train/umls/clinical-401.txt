@@ -1,0 +1,3 @@
+rawTerm="chest x-ray|ANA"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="827"
+rawTerm="chest x-ray|EQP"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="827"
+rawTerm="the lung nodule|ANA"||cui="C0024109"||concept="Lung"||prefer="Lung"||semantic=[bpoc]||confidence="694"

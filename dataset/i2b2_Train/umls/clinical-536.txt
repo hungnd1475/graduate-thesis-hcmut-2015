@@ -1,0 +1,1 @@
+rawTerm="l upper lip / l nostril abscess|ANA"||cui="C0226936"||concept="LIP, UPPER"||prefer="External upper lip"||semantic=[bpoc]||confidence="901"

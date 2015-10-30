@@ -15,7 +15,7 @@ namespace HCMUT.EMRCorefResol.Service
         public static int UMLS_EQUIPMENT = 1;
         public static int UMLS_OPERATION = 2;
 
-        private const string UMLS_ROOT = @"D:\Documents\HCMUT\public_mm\bin\metamap";
+        private const string UMLS_ROOT = @"E:\public_mm\bin\metamap";
 
         public UMLSData GetUMLSInfo(string term)
         {
@@ -35,7 +35,7 @@ namespace HCMUT.EMRCorefResol.Service
             switch (restrict)
             {
                 case 0:
-                    options = "-J anst,blor,bpoc,bsoj";
+                    options = "-J \"anst,blor,bpoc,bsoj\"";
                     break;
                 case 1:
                     options = "-J medd";
@@ -63,7 +63,7 @@ namespace HCMUT.EMRCorefResol.Service
             p.StartInfo.RedirectStandardOutput = true;
             p.StartInfo.FileName = "cmd.exe";
 
-            p.StartInfo.Arguments = $"/c echo '{term}' | {UMLS_ROOT} --XMLf --silent";
+            p.StartInfo.Arguments = $"/c echo \"{term}\" | {UMLS_ROOT} --XMLf --silent";
             p.Start();
             string output = p.StandardOutput.ReadToEnd();
             p.WaitForExit();
@@ -79,7 +79,7 @@ namespace HCMUT.EMRCorefResol.Service
             p.StartInfo.RedirectStandardOutput = true;
             p.StartInfo.FileName = "cmd.exe";
 
-            p.StartInfo.Arguments = $"/c echo '{term}' | {UMLS_ROOT} --XMLf --silent -a {options}";
+            p.StartInfo.Arguments = $"/c echo \"{term}\" | {UMLS_ROOT} --XMLf --silent {options}";
             p.Start();
             string output = p.StandardOutput.ReadToEnd();
             p.WaitForExit();
