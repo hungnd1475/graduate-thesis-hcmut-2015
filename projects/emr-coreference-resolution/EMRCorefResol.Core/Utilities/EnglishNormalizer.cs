@@ -51,7 +51,14 @@ namespace HCMUT.EMRCorefResol
             }
 
             var index = term.IndexOf(preposition);
-            return term.Substring(0, index-1);
+
+            if (index.Equals(0))
+            {
+                return term.Substring(preposition.Length + 1, term.Length - preposition.Length - 1);
+            } else
+            {
+                return term.Substring(0, index - 1);
+            }
         }
 
         private static IEnumerable<string> ReadKWFile(string filePath)
