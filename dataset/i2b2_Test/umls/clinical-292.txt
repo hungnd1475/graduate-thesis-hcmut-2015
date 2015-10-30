@@ -1,0 +1,3 @@
+rawTerm="atrial fibrillation|ANA"||cui="C0018792"||concept="Atrial"||prefer="Heart Atrium"||semantic=[bpoc]||confidence="861"
+rawTerm="this continued atrial fibrillation|ANA"||cui="C0018792"||concept="Atrial"||prefer="Heart Atrium"||semantic=[bpoc]||confidence="827"
+rawTerm="cabg|OPE"||cui="C0010055"||concept="CABG"||prefer="Coronary Artery Bypass Surgery"||semantic=[topp]||confidence="1000"

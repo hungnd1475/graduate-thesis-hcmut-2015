@@ -1,0 +1,2 @@
+rawTerm="epidural|OPE"||cui="C0812144"||concept="epidural"||prefer="Medication administration: epidural"||semantic=[topp]||confidence="1000"
+rawTerm="worsening abdominal pain|ANA"||cui="C0000726"||concept="Abdominal"||prefer="Abdomen"||semantic=[blor]||confidence="861"

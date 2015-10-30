@@ -1,0 +1,8 @@
+rawTerm="copd ( chronic obstructive pulmonary disease )|ANA"||cui="C0024109"||concept="pulmonary"||prefer="Lung"||semantic=[bpoc]||confidence="812"
+rawTerm="cervical djd|ANA"||cui="C0027530"||concept="Cervical"||prefer="Neck"||semantic=[blor]||confidence="694"
+rawTerm="cervical and lumbar djd|ANA"||cui="C0027530"||concept="Cervical"||prefer="Neck"||semantic=[blor]||confidence="1000"
+rawTerm="tb treatment|OPE"||cui="C0087111"||concept="Treatment"||prefer="Therapeutic procedure"||semantic=[topp]||confidence="861"
+rawTerm="urinary incontinence|ANA"||cui="C0042027"||concept="Urinary"||prefer="Urinary tract"||semantic=[bpoc]||confidence="861"
+rawTerm="home nocturnal cpap|OPE"||cui="C0199451"||concept="CPAP"||prefer="Continuous Positive Airway Pressure"||semantic=[topp]||confidence="827"
+rawTerm="bowel regimen|OPE"||cui="C0040808"||concept="Regimen"||prefer="Treatment Protocols"||semantic=[topp]||confidence="861"
+rawTerm="ada diet|OPE"||cui="C1519433"||concept="DIET"||prefer="Special Diet Therapy"||semantic=[topp]||confidence="861"

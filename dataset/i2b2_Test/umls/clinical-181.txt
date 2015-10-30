@@ -1,0 +1,2 @@
+rawTerm="total thyroidectomy|OPE"||cui="C0193788"||concept="Total thyroidectomy"||prefer="Total thyroidectomy (procedure)"||semantic=[topp]||confidence="1000"
+rawTerm="incision|ANA"||cui="C2338258"||concept="Incision"||prefer="Cranial incision point"||semantic=[blor]||confidence="1000"

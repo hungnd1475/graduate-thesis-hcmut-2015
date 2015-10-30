@@ -1,0 +1,2 @@
+rawTerm="mvi therapeutic w / minerals ( therap vits / minerals )|OPE"||cui="C0039796"||concept="Therapeutic"||prefer="The science and art of healing"||semantic=[topp]||confidence="645"
+rawTerm="light-headed|ANA"||cui="C0018670"||concept="Head"||prefer="Head"||semantic=[blor]||confidence="789"

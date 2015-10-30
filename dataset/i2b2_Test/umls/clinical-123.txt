@@ -1,0 +1,5 @@
+rawTerm="basal cell carcinoma resection|OPE"||cui="C0576763"||concept="basal cell carcinoma resection"||prefer="Excision of basal cell carcinoma"||semantic=[topp]||confidence="1000"
+rawTerm="an aquired defect of the right nasal ala and medial cheek region|ANA"||cui="C0458563"||concept="Nasal ala"||prefer="Alar structure"||semantic=[bpoc]||confidence="840"
+rawTerm="mental retardation|ANA"||cui="C0011980"||concept="Diaphragm"||prefer="Respiratory Diaphragm"||semantic=[bpoc]||confidence="761"
+rawTerm="npo|OPE"||cui="C0419179"||concept="NPO"||prefer="NPO - Nothing by mouth"||semantic=[topp]||confidence="1000"
+rawTerm="anesthesia|OPE"||cui="C0002903"||concept="Anesthesia"||prefer="Anesthesia procedures"||semantic=[topp]||confidence="1000"

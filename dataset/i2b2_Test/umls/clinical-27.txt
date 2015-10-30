@@ -1,0 +1,2 @@
+rawTerm="r elbow injury|ANA"||cui="C0013769"||concept="Elbow"||prefer="Elbow"||semantic=[blor]||confidence="660"
+rawTerm="r elbow strain|ANA"||cui="C0013769"||concept="Elbow"||prefer="Elbow"||semantic=[blor]||confidence="660"
