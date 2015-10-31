@@ -17,14 +17,7 @@ namespace HCMUT.EMRCorefResol
             var searcher = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "stopwords.txt")));
             var normalized = searcher.RemoveKeywords(term, KWSearchOptions.WholeWordIngoreCase);
 
-            if(string.IsNullOrEmpty(normalized))
-            {
-                return term;
-            }
-
-            normalized = RemovePreposition(normalized);
-
-            return normalized;
+            return string.IsNullOrEmpty(normalized) ? term : RemovePreposition(normalized);
         }
 
         private static string FindProposition(string term)

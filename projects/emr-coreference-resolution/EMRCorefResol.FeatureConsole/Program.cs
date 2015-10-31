@@ -28,9 +28,9 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
             }
 
             var args = argsParser.Object;
-            var emrCollections = args.EMRDirs.Split('|').Select(ep => new EMRCollection(ep));
+            var emrCollection = new EMRCollection(args.EMRDir);
 
-            if (args.Mode != Mode.Classify && emrCollections.Any(e => !e.HasGroundTruth))
+            if (args.Mode != Mode.Classify && !emrCollection.HasGroundTruth)
             {
                 Console.Write("EMR paths must contain chains directories in Train or Test mode.");
                 Console.ReadLine();
@@ -61,40 +61,49 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
                 args.ClasMethod, args.ModelsDir);
             var instancesGenerator = new Soon2001InstancesGenerator();
 
-            if (args.Random > 0)
+            if (!string.IsNullOrEmpty(args.EMRFile))
+            {
+                var index = emrCollection.IndexOf(args.EMRFile);
+                var emrPath = emrCollection.GetEMRPath(index);
+                var conceptsPath = emrCollection.GetConceptsPath(index);
+                var chainsPath = emrCollection.GetChainsPath(index);
+                FeatureExtractingSystem.Instance.ExtractOne(emrPath, conceptsPath, chainsPath, dataReader,
+                    instancesGenerator, fExtractor, pCreator, null, types);
+            }
+            else if (args.Random > 0)
             {
                 // TODO: refine this
                 string[] emrPaths, conceptsPaths, chainsPaths;
-                emrCollections.First().GetRandom(args.Random, out emrPaths, out conceptsPaths, out chainsPaths);
+                emrCollection.GetRandom(args.Random, out emrPaths, out conceptsPaths, out chainsPaths);
                 FeatureExtractingSystem.Instance.ExtractAll(emrPaths, conceptsPaths, chainsPaths, dataReader,
                     instancesGenerator, fExtractor, pCreator, null, types);
             }
             else
             {
-                FeatureExtractingSystem.Instance.ExtractCollections(emrCollections, dataReader, instancesGenerator,
+                FeatureExtractingSystem.Instance.ExtractCollection(emrCollection, dataReader, instancesGenerator,
                     fExtractor, pCreator, null, types);
             }
 
             var serializer = APISelector.SelectProblemSerializer(args.ClasMethod);
-            Directory.CreateDirectory(args.OutDir);
+            Directory.CreateDirectory(args.OutputDir);
 
             Console.WriteLine("Serializing...");
             var doScale = Convert.ToBoolean(args.DoScale);
 
             if (types == null || types.Count == 0)
             {
-                serializer.Serialize(pCreator.GetProblem<PersonPair>(), Path.Combine(args.OutDir, "PersonPair.prb"), doScale);
-                serializer.Serialize(pCreator.GetProblem<PersonInstance>(), Path.Combine(args.OutDir, "PersonInstance.prb"), doScale);
-                serializer.Serialize(pCreator.GetProblem<PronounInstance>(), Path.Combine(args.OutDir, "PronounInstance.prb"), doScale);
-                serializer.Serialize(pCreator.GetProblem<ProblemPair>(), Path.Combine(args.OutDir, "ProblemPair.prb"), doScale);
-                serializer.Serialize(pCreator.GetProblem<TreatmentPair>(), Path.Combine(args.OutDir, "TreatmentPair.prb"), doScale);
-                serializer.Serialize(pCreator.GetProblem<TestPair>(), Path.Combine(args.OutDir, "TestPair.prb"), doScale);
+                serializer.Serialize(pCreator.GetProblem<PersonPair>(), Path.Combine(args.OutputDir, "PersonPair.prb"), doScale);
+                serializer.Serialize(pCreator.GetProblem<PersonInstance>(), Path.Combine(args.OutputDir, "PersonInstance.prb"), doScale);
+                serializer.Serialize(pCreator.GetProblem<PronounInstance>(), Path.Combine(args.OutputDir, "PronounInstance.prb"), doScale);
+                serializer.Serialize(pCreator.GetProblem<ProblemPair>(), Path.Combine(args.OutputDir, "ProblemPair.prb"), doScale);
+                serializer.Serialize(pCreator.GetProblem<TreatmentPair>(), Path.Combine(args.OutputDir, "TreatmentPair.prb"), doScale);
+                serializer.Serialize(pCreator.GetProblem<TestPair>(), Path.Combine(args.OutputDir, "TestPair.prb"), doScale);
             }
             else
             {
                 foreach (var t in types)
                 {
-                    serializer.Serialize(pCreator.GetProblem(t), Path.Combine(args.OutDir, $"{t.Name}.prb"), doScale);
+                    serializer.Serialize(pCreator.GetProblem(t), Path.Combine(args.OutputDir, $"{t.Name}.prb"), doScale);
                 }
             }
         }
@@ -103,10 +112,15 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
         {
             var p = new FluentCommandLineParser<Arguments>();
 
-            p.Setup(arg => arg.EMRDirs)
-                .As('e', "emr")
+            p.Setup(arg => arg.EMRDir)
+                .As('d', "emrdir")
                 .Required()
-                .WithDescription("Set a collection of EMR directories, separated by | (required).");
+                .WithDescription("Set a collection of EMR directory.");
+
+            p.Setup(a => a.EMRFile)
+                .As('e', "emrfile")
+                .SetDefault(null)
+                .WithDescription("Set emr file name to extract (optional).");
 
             p.Setup(arg => arg.EMRFormat)
                 .As('f', "emrformat")
@@ -123,7 +137,7 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
                 .Required()
                 .WithDescription(Descriptions.Mode(null));
 
-            p.Setup(arg => arg.OutDir)
+            p.Setup(arg => arg.OutputDir)
                 .As('o', "outdir")
                 .Required()
                 .WithDescription("Set output directory (required).");
@@ -139,7 +153,7 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
                 .WithDescription("Set the number of random chosen EMR files to extract (default all).");
 
             p.Setup(arg => arg.ModelsDir)
-                .As('d', "models")
+                .As('t', "models")
                 .SetDefault(null)
                 .WithDescription("Set the path to trained models directory (required in Test or Classify mode).");
 
