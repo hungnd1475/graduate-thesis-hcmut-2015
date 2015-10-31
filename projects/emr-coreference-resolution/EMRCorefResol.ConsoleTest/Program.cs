@@ -29,8 +29,6 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
         {
             var dataReader = new I2B2DataReader();
             var collection = new UmlsDataDictionary(@"E:\graduate-thesis-hcmut-2015\dataset\i2b2_Train\umls\clinical-11.txt", dataReader);
-
-            var x = 1 + 1;
         }
 
         static void testClassifier()

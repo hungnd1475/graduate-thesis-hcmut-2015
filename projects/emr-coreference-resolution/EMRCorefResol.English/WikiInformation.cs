@@ -35,7 +35,7 @@ namespace HCMUT.EMRCorefResol.English
             }
         }
 
-        private static WikiDataDictionary GetWikiFile(string emrPath)
+        public static WikiDataDictionary GetWikiFile(string emrPath)
         {
             var fileInfo = new FileInfo(emrPath);
             var rootPath = fileInfo.Directory.Parent.FullName;
@@ -50,7 +50,7 @@ namespace HCMUT.EMRCorefResol.English
 
 
             var wikiDictionary = new WikiDataDictionary(wikiPath, dataReader);
-            _dictionary.Add(emrPath, wikiDictionary);
+            //_dictionary.Add(emrPath, wikiDictionary);
 
             return wikiDictionary;
         }

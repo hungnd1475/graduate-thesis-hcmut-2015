@@ -10,14 +10,15 @@ namespace HCMUT.EMRCorefResol.English
 
     class TestPairFeatures : FeatureVector
     {
-        public TestPairFeatures(TestPair instance, EMR emr, double classValue)
+        public TestPairFeatures(TestPair instance, EMR emr, double classValue,
+            WikiDataDictionary wikiData, UmlsDataDictionary umlsData)
             :base(size:19, classValue: classValue)
         {
-            var wikiDictionary = WikiInformation.GetWikiInfo(emr.Path);
-            var anaWiki = wikiDictionary.Get(instance.Anaphora.Lexicon);
-            var anteWiki = wikiDictionary.Get(instance.Antecedent.Lexicon);
+            //var wikiDictionary = WikiInformation.GetWikiInfo(emr.Path);
+            var anaWiki = wikiData.Get(instance.Anaphora.Lexicon);
+            var anteWiki = wikiData.Get(instance.Antecedent.Lexicon);
 
-            var umlsDictionary = UmlsInformation.GetUmlsInfo(emr.Path);
+            //var umlsDictionary = UmlsInformation.GetUmlsInfo(emr.Path);
 
             this[0] = new WordNetMatchFeature(instance);
             this[1] = new SentenceDistanceFeature(instance);
@@ -39,8 +40,8 @@ namespace HCMUT.EMRCorefResol.English
             this[15] = new WikiAnchorLinkFeature(anaWiki, anteWiki);
             this[16] = new WikiBoldNameMatchFeature(anaWiki, anteWiki);
 
-            this[17] = new AnatomyFeature(instance, umlsDictionary);
-            this[18] = new EquipmentFeature(instance, umlsDictionary);
+            this[17] = new AnatomyFeature(instance, umlsData);
+            this[18] = new EquipmentFeature(instance, umlsData);
         }
     }
 }

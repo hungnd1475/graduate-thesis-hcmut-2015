@@ -9,8 +9,25 @@ namespace HCMUT.EMRCorefResol.English
     public class EnglishTrainingFeatureExtractor : IFeatureExtractor
     {
         private IPatientDeterminer _patientDeterminer;
+        private UmlsDataDictionary _umlsData;
+        private WikiDataDictionary _wikiData;
+        private MedicationInfoCollection _medInfo;
 
-        public EMR EMR { get; set; }
+        private EMR _emr;
+        public EMR EMR
+        {
+            get { return _emr; }
+            set
+            {
+                if (_emr != value)
+                {
+                    _emr = value;
+                    _wikiData = WikiInformation.GetWikiFile(value.Path);
+                    _umlsData = UmlsInformation.GetWikiFile(value.Path);
+                    _medInfo = MedicationInformation.GetMedicationFile(value.Path);
+                }
+            }
+        }
 
         private CorefChainCollection _groundTruth;
         public CorefChainCollection GroundTruth
@@ -54,22 +71,19 @@ namespace HCMUT.EMRCorefResol.English
         public IFeatureVector Extract(TreatmentPair instance)
         {
             var classValue = _groundTruth.IsCoref(instance) ? 1.0 : 0.0;
-            return new TreatmentPairFeatures(instance, EMR, classValue);
-            //return null;
+            return new TreatmentPairFeatures(instance, EMR, classValue, _medInfo, _wikiData, _umlsData);
         }
 
         public IFeatureVector Extract(TestPair instance)
         {
             var classValue = _groundTruth.IsCoref(instance) ? 1.0 : 0.0;
-            return new TestPairFeatures(instance, EMR, classValue);
-            //return null;
+            return new TestPairFeatures(instance, EMR, classValue, _wikiData, _umlsData);
         }
 
         public IFeatureVector Extract(ProblemPair instance)
         {
             var classValue = _groundTruth.IsCoref(instance) ? 1.0 : 0.0;
-            return new ProblemPairFeatures(instance, EMR, classValue);
-            //return null;
+            return new ProblemPairFeatures(instance, EMR, classValue, _wikiData, _umlsData);
         }
 
         public IFeatureVector Extract(PersonPair instance)

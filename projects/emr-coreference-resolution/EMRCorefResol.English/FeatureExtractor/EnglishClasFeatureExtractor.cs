@@ -10,7 +10,30 @@ namespace HCMUT.EMRCorefResol.English
 {
     public class EnglishClasFeatureExtractor : IFeatureExtractor
     {
-        public EMR EMR { get; set; }
+        private WikiDataDictionary _wikiData;
+        private UmlsDataDictionary _umlsData;
+        private MedicationInfoCollection _medInfo;
+
+        private readonly IPatientDeterminer _patientDeterminer;
+
+        private readonly ICache<Concept, IFeatureVector> _personCache
+            = new UnlimitedCache<Concept, IFeatureVector>();
+
+        private EMR _emr;
+        public EMR EMR
+        {
+            get { return _emr; }
+            set
+            {
+                if (_emr != value)
+                {
+                    _emr = value;
+                    _wikiData = WikiInformation.GetWikiFile(value.Path);
+                    _umlsData = UmlsInformation.GetWikiFile(value.Path);
+                    _medInfo = MedicationInformation.GetMedicationFile(value.Path);
+                }
+            }
+        }
 
         public CorefChainCollection GroundTruth { get; set; }
 
@@ -18,16 +41,6 @@ namespace HCMUT.EMRCorefResol.English
         {
             get { return false; }
         }
-
-        private readonly IPatientDeterminer _patientDeterminer;
-
-        //private readonly Dictionary<Concept, IFeatureVector> _personCache
-        //    = new Dictionary<Concept, IFeatureVector>();
-
-        //private readonly object _syncRoot = new object();
-
-        private readonly ICache<Concept, IFeatureVector> _personCache
-            = new UnlimitedCache<Concept, IFeatureVector>();
 
         public EnglishClasFeatureExtractor(IClassifier classifier)
         {
@@ -38,27 +51,11 @@ namespace HCMUT.EMRCorefResol.English
         public IFeatureVector Extract(TestPair instance)
         {
             var classValue = GroundTruth != null ? (GroundTruth.IsCoref(instance) ? 1 : 0) : -1;
-            return new TestPairFeatures(instance, EMR, classValue);
-            //return null;
+            return new TestPairFeatures(instance, EMR, classValue, _wikiData, _umlsData);
         }
 
         public IFeatureVector Extract(PersonInstance instance)
         {
-            //lock (_syncRoot)
-            //{
-            //    if (!_personCache.ContainsKey(instance.Concept))
-            //    {
-            //        var classValue = -1d;
-            //        if (GroundTruth != null)
-            //        {
-            //            var patientChain = GroundTruth.GetPatientChain();
-            //            classValue = patientChain != null ? (patientChain.Contains(instance.Concept) ? 1.0 : 0.0) : 2.0;
-            //        }
-            //        _personCache.Add(instance.Concept, new PersonInstanceFeatures(instance, EMR, classValue));
-            //    }
-            //}
-            //return _personCache[instance.Concept];
-
             return _personCache.GetValue(instance.Concept, (c) =>
                 {
                     var classValue = -1d;
@@ -87,15 +84,13 @@ namespace HCMUT.EMRCorefResol.English
         public IFeatureVector Extract(TreatmentPair instance)
         {
             var classValue = GroundTruth != null ? (GroundTruth.IsCoref(instance) ? 1 : 0) : -1;
-            return new TreatmentPairFeatures(instance, EMR, classValue);
-            //return null;
+            return new TreatmentPairFeatures(instance, EMR, classValue, _medInfo, _wikiData, _umlsData);
         }
 
         public IFeatureVector Extract(ProblemPair instance)
         {
             var classValue = GroundTruth != null ? (GroundTruth.IsCoref(instance) ? 1 : 0) : -1;
-            return new ProblemPairFeatures(instance, EMR, classValue);
-            //return null;
+            return new ProblemPairFeatures(instance, EMR, classValue, _wikiData, _umlsData);
         }
 
         public IFeatureVector Extract(PersonPair instance)

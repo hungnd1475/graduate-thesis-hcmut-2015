@@ -35,7 +35,7 @@ namespace HCMUT.EMRCorefResol.English
             }
         }
 
-        private static MedicationInfoCollection GetMedicationFile(string emrPath)
+        public static MedicationInfoCollection GetMedicationFile(string emrPath)
         {
             var fileInfo = new FileInfo(emrPath);
             var rootPath = fileInfo.Directory.Parent.FullName;
@@ -47,7 +47,6 @@ namespace HCMUT.EMRCorefResol.English
             {
                 return null;
             }
-
 
             var medCollection = new MedicationInfoCollection(medPath, dataReader);
             _meds.Add(emrPath, medCollection);

@@ -36,7 +36,7 @@ namespace HCMUT.EMRCorefResol.English
             }
         }
 
-        private static UmlsDataDictionary GetWikiFile(string emrPath)
+        public static UmlsDataDictionary GetWikiFile(string emrPath)
         {
             var fileInfo = new FileInfo(emrPath);
             var rootPath = fileInfo.Directory.Parent.FullName;
@@ -51,7 +51,7 @@ namespace HCMUT.EMRCorefResol.English
 
 
             var umlsDictionary = new UmlsDataDictionary(umlsPath, dataReader);
-            _dictionary.Add(emrPath, umlsDictionary);
+            //_dictionary.Add(emrPath, umlsDictionary);
 
             return umlsDictionary;
         }
