@@ -21,8 +21,16 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
         static void Main(string[] args)
         {
-            testCEAF(new[] { 9, 7, 4, 3, 2 }, new[] { 11, 5, 8 });
+            ReadExtractedFile();
             Console.ReadLine();
+        }
+
+        static void ReadExtractedFile()
+        {
+            var dataReader = new I2B2DataReader();
+            var collection = new UmlsDataDictionary(@"E:\graduate-thesis-hcmut-2015\dataset\i2b2_Train\umls\clinical-11.txt", dataReader);
+
+            var x = 1 + 1;
         }
 
         static void testClassifier()

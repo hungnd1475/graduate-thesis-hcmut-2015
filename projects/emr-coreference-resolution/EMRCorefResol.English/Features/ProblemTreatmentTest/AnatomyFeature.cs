@@ -8,16 +8,16 @@ namespace HCMUT.EMRCorefResol.English.Features
 {
     class AnatomyFeature : Feature
     {
-        public AnatomyFeature(IConceptPair instance)
+        public AnatomyFeature(IConceptPair instance, UmlsDataDictionary dictionary)
             : base("Anatomy-Feature", 3, 2)
         {
             var anaNorm = EnglishNormalizer.Normalize(instance.Anaphora.Lexicon);
             var anteNorm = EnglishNormalizer.Normalize(instance.Antecedent.Lexicon);
 
-            var anaUMLS = Service.English.GetUMLSInformation(anaNorm, Service.UMLSUtil.UMLS_ANATOMY);
-            var anteUMLS = Service.English.GetUMLSInformation(anteNorm, Service.UMLSUtil.UMLS_ANATOMY);
+            var anaUMLS = dictionary.Get(instance.Anaphora.Lexicon + "|ANA");
+            var anteUMLS = dictionary.Get(instance.Antecedent.Lexicon + "|ANA");
 
-            if(anaUMLS == null || anteUMLS == null)
+            if (anaUMLS == null || anteUMLS == null)
             {
                 return;
             } else
