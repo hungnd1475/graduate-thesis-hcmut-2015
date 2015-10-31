@@ -1,0 +1,2 @@
+rawTerm="l shoulder inj|ANA"||cui="C0037004"||concept="Shoulder"||prefer="Shoulder"||semantic=[blor]||confidence="660"
+rawTerm="neck strains|ANA"||cui="C0027530"||concept="Neck"||prefer="Neck"||semantic=[blor]||confidence="1000"

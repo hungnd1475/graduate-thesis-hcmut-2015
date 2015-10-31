@@ -1,0 +1,2 @@
+rawTerm="douching|OPE"||cui="C0022100"||concept="douching"||prefer="Irrigation"||semantic=[topp]||confidence="1000"
+rawTerm="abdominal pain|ANA"||cui="C0000726"||concept="Abdominal"||prefer="Abdomen"||semantic=[blor]||confidence="861"

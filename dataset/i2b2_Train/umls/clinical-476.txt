@@ -1,0 +1,4 @@
+rawTerm="primary c / s|OPE"||cui="C0439631"||concept="Primary"||prefer="Primary operation"||semantic=[topp]||confidence="660"
+rawTerm="morphine administration|OPE"||cui="C1533734"||concept="Administration"||prefer="Administration procedure"||semantic=[topp]||confidence="861"
+rawTerm="vaginal delivery|OPE"||cui="C1541822"||concept="Vaginal Delivery"||prefer="Vaginal delivery procedure"||semantic=[topp]||confidence="1000"
+rawTerm="uterine incision type|OPE"||cui="C0020711"||concept="uterine incision"||prefer="Hysterotomy"||semantic=[topp]||confidence="734"

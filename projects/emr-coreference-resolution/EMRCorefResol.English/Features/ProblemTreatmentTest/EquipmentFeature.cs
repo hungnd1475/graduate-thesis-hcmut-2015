@@ -9,14 +9,14 @@ namespace HCMUT.EMRCorefResol.English.Features
     using Utilities;
     class EquipmentFeature : Feature
     {
-        public EquipmentFeature(IConceptPair instance)
+        public EquipmentFeature(IConceptPair instance, UmlsDataDictionary dictionary)
             :base("Equipment-Feature", 3, 2)
         {
             var anaNorm = EnglishNormalizer.Normalize(instance.Anaphora.Lexicon);
             var anteNorm = EnglishNormalizer.Normalize(instance.Antecedent.Lexicon);
 
-            var anaUMLS = Service.English.GetUMLSInformation(anaNorm, Service.UMLSUtil.UMLS_EQUIPMENT);
-            var anteUMLS = Service.English.GetUMLSInformation(anteNorm, Service.UMLSUtil.UMLS_EQUIPMENT);
+            var anaUMLS = dictionary.Get(instance.Anaphora.Lexicon + "|EQP");
+            var anteUMLS = dictionary.Get(instance.Antecedent.Lexicon + "|EQP");
 
             if (anaUMLS == null || anteUMLS == null)
             {

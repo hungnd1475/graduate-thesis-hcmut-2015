@@ -1,0 +1,2 @@
+rawTerm="head ct|ANA"||cui="C0018670"||concept="Head"||prefer="Head"||semantic=[blor]||confidence="694"
+rawTerm="head ct|EQP"||cui="C0018670"||concept="Head"||prefer="Head"||semantic=[blor]||confidence="694"

@@ -8,11 +8,15 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol.IO
 {
+    using Service;
     public class I2B2DataReader : IDataReader
     {
         private static Regex ConceptPattern = new Regex("c=\"(?<c>[^|]+)\" (?<begin>\\d+:\\d+) (?<end>\\d+:\\d+)");
         private static Regex ConceptTypePattern = new Regex("t=\"([^|]+)\"");
         private static Regex CorefTypePattern = new Regex("t=\"coref ([^|]+)\"");
+
+        private static Regex WikiDataPattern = new Regex("rawTerm=\"(.*?)\"\\|\\|term=\"(.*?)\"\\|\\|title=\"(.*?)\"\\|\\|links=\\[(.*?)\\]\\|\\|bolds=\\[(.*?)\\]");
+        private static Regex UmlsDataPatter = new Regex("rawTerm=\"(.*?)\"\\|\\|cui=\"(.*?)\"\\|\\|concept=\"(.*?)\"\\|\\|prefer=\"(.*?)\"\\|\\|semantic=\\[(.*?)\\]\\|\\|confidence=\"(.*?)\"");
 
         public IEnumerable<Concept> ReadMultiple(string line)
         {
@@ -40,6 +44,46 @@ namespace HCMUT.EMRCorefResol.IO
             var matchType = ConceptTypePattern.Match(line);
             var matchCoref = CorefTypePattern.Match(line);
             return ReadType(matchCoref, matchType);
+        }
+
+        public Tuple<string, WikiData> ReadWikiFile(string line)
+        {
+            var match = WikiDataPattern.Match(line);
+            if (match.Success)
+            {
+                var key = match.Groups[1].Value;
+                var term = match.Groups[2].Value;
+                var title = match.Groups[3].Value;
+                var links = match.Groups[4].Value.Split('|');
+                var bolds = match.Groups[5].Value.Split('|');
+                var wikiData = new WikiData(term, title, links, bolds);
+
+                return Tuple.Create(key, wikiData);
+            } else
+            {
+                return null;
+            }
+        }
+
+        public Tuple<string, UMLSData> ReadUmlsFile(string line)
+        {
+            var match = UmlsDataPatter.Match(line);
+            if (match.Success)
+            {
+                var key = match.Groups[1].Value;
+                var cui = match.Groups[2].Value;
+                var concept = match.Groups[3].Value;
+                var prefer = match.Groups[4].Value;
+                var semantic = match.Groups[5].Value.Split('|');
+                var confidence = int.Parse(match.Groups[6].Value);
+                var umlsData = new UMLSData(cui, concept, prefer, semantic, confidence);
+
+                return Tuple.Create(key, umlsData);
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public MedicationInfo ReadMedInfoLine(string line)

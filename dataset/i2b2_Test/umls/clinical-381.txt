@@ -1,0 +1,2 @@
+rawTerm="epidural|OPE"||cui="C0812144"||concept="epidural"||prefer="Medication administration: epidural"||semantic=[topp]||confidence="1000"
+rawTerm="bilateral tubal ligation|OPE"||cui="C0589114"||concept="Bilateral tubal ligation"||prefer="Bilateral tubal ligation"||semantic=[topp]||confidence="1000"

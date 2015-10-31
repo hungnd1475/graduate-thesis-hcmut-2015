@@ -1,0 +1,1 @@
+rawTerm="tucks ( witch hazel )|OPE"||cui="C0185026"||concept="tucks"||prefer="Plication"||semantic=[topp]||confidence="1000"

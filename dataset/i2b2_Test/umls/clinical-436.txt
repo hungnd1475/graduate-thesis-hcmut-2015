@@ -1,0 +1,7 @@
+rawTerm="epigastric pain|ANA"||cui="C0521440"||concept="Epigastric"||prefer="Epigastric"||semantic=[blor]||confidence="694"
+rawTerm="coca cola colored urine|ANA"||cui="C0009368"||concept="Colon"||prefer="Colon structure (body structure)"||semantic=[bpoc]||confidence="612"
+rawTerm="bright red blood per rectum|ANA"||cui="C0005847"||concept="Blood Vessel"||prefer="Blood Vessel"||semantic=[bpoc]||confidence="743"
+rawTerm="scleral icterus|ANA"||cui="C0036410"||concept="Scleral"||prefer="Sclera"||semantic=[bpoc]||confidence="694"
+rawTerm="incisional scars|ANA"||cui="C2338258"||concept="Incision"||prefer="Cranial incision point"||semantic=[blor]||confidence="623"
+rawTerm="a left renal mass|ANA"||cui="C0227614"||concept="left renal"||prefer="Left kidney"||semantic=[bpoc]||confidence="734"
+rawTerm="a whipple procedure|OPE"||cui="C0085162"||concept="Whipple procedure"||prefer="Pancreaticoduodenectomy"||semantic=[topp]||confidence="1000"

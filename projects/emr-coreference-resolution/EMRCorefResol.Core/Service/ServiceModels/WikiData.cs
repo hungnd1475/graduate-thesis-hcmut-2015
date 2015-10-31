@@ -21,5 +21,12 @@ namespace HCMUT.EMRCorefResol.Service
             links = l;
             bolds = b;
         }
+
+        public override string ToString()
+        {
+            string l = string.Join("|", links);
+            string b = string.Join("|", bolds);
+            return $"term=\"{term}\"||title=\"{title}\"||links=[{l}]||bolds=[{b}]";
+        }
     }
 }

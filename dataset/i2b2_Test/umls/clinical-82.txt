@@ -1,0 +1,3 @@
+rawTerm="perianal and perivaginal pruritis|ANA"||cui="C0442158"||concept="Perianal"||prefer="Perianal"||semantic=[blor]||confidence="1000"
+rawTerm="pelvic exam|ANA"||cui="C0030797"||concept="Pelvic"||prefer="Pelvis"||semantic=[blor]||confidence="694"
+rawTerm="pelvic exam|EQP"||cui="C0030797"||concept="Pelvic"||prefer="Pelvis"||semantic=[blor]||confidence="694"

@@ -1,0 +1,3 @@
+rawTerm="physical therapy|OPE"||cui="C0949766"||concept="Physical therapy"||prefer="Physical therapy"||semantic=[topp]||confidence="1000"
+rawTerm="a manipulation|OPE"||cui="C0185111"||concept="Manipulation, NOS"||prefer="Surgical Manipulation"||semantic=[topp]||confidence="1000"
+rawTerm="anesthesia|OPE"||cui="C0002903"||concept="Anesthesia"||prefer="Anesthesia procedures"||semantic=[topp]||confidence="1000"

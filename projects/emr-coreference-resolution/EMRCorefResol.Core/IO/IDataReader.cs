@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol
 {
+    using Service;
     public interface IDataReader
     {
         /// <summary>
@@ -42,5 +43,7 @@ namespace HCMUT.EMRCorefResol
 
 
         MedicationInfo ReadMedInfoLine(string line);
+        Tuple<string, WikiData> ReadWikiFile(string line);
+        Tuple<string, UMLSData> ReadUmlsFile(string line);
     }
 }

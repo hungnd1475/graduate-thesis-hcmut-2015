@@ -1,0 +1,5 @@
+rawTerm="abnormal fetal heart rate / rhythm|ANA"||cui="C0018787"||concept="Heart"||prefer="Heart"||semantic=[bpoc]||confidence="637"
+rawTerm="vacuum extraction|OPE"||cui="C0042225"||concept="Vacuum extraction"||prefer="Vacuum Extraction, Obstetrical"||semantic=[topp]||confidence="1000"
+rawTerm="heent|ANA"||cui="C1512338"||concept="HEENT"||prefer="HEENT"||semantic=[blor]||confidence="1000"
+rawTerm="heent|EQP"||cui="C1512338"||concept="HEENT"||prefer="HEENT"||semantic=[blor]||confidence="1000"
+rawTerm="her delivery|OPE"||cui="C0011209"||concept="Delivery"||prefer="Obstetric Delivery"||semantic=[topp]||confidence="1000"

@@ -11,12 +11,13 @@ namespace HCMUT.EMRCorefResol.English
     class TestPairFeatures : FeatureVector
     {
         public TestPairFeatures(TestPair instance, EMR emr, double classValue)
-            :base(size:14, classValue: classValue)
+            :base(size:19, classValue: classValue)
         {
-            /*var anaNorm = EnglishNormalizer.Normalize(instance.Anaphora.Lexicon);
-            var anteNorm = EnglishNormalizer.Normalize(instance.Antecedent.Lexicon);
-            var anaWiki = Service.English.GetAllWikiInformation(anaNorm);
-            var anteWiki = Service.English.GetAllWikiInformation(anteNorm);*/
+            var wikiDictionary = WikiInformation.GetWikiInfo(emr.Path);
+            var anaWiki = wikiDictionary.Get(instance.Anaphora.Lexicon);
+            var anteWiki = wikiDictionary.Get(instance.Antecedent.Lexicon);
+
+            var umlsDictionary = UmlsInformation.GetUmlsInfo(emr.Path);
 
             this[0] = new WordNetMatchFeature(instance);
             this[1] = new SentenceDistanceFeature(instance);
@@ -34,12 +35,12 @@ namespace HCMUT.EMRCorefResol.English
             this[12] = new SectionFeature(instance, emr);
             this[13] = new ModifierFeature(instance, emr);
 
-            /*this[14] = new WikiMatchFeature(anaWiki, anteWiki);
+            this[14] = new WikiMatchFeature(anaWiki, anteWiki);
             this[15] = new WikiAnchorLinkFeature(anaWiki, anteWiki);
-            this[16] = new WikiBoldNameMatchFeature(anaWiki, anteWiki);*/
+            this[16] = new WikiBoldNameMatchFeature(anaWiki, anteWiki);
 
-            //this[14] = new AnatomyFeature(instance);
-            //this[15] = new EquipmentFeature(instance);
+            this[17] = new AnatomyFeature(instance, umlsDictionary);
+            this[18] = new EquipmentFeature(instance, umlsDictionary);
         }
     }
 }

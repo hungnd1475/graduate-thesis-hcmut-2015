@@ -1,0 +1,7 @@
+rawTerm="pancreatic adenocarcinoma|ANA"||cui="C0030274"||concept="Pancreatic"||prefer="Pancreas"||semantic=[bpoc]||confidence="861"
+rawTerm="increased abdominal discomfort|ANA"||cui="C0000726"||concept="Abdominal"||prefer="Abdomen"||semantic=[blor]||confidence="660"
+rawTerm="his blood pressure|ANA"||cui="C0005847"||concept="Blood Vessel"||prefer="Blood Vessel"||semantic=[bpoc]||confidence="777"
+rawTerm="his blood pressure|EQP"||cui="C0005847"||concept="Blood Vessel"||prefer="Blood Vessel"||semantic=[bpoc]||confidence="777"
+rawTerm="multiple treatments|OPE"||cui="C0087111"||concept="Treatments"||prefer="Therapeutic procedure"||semantic=[topp]||confidence="861"
+rawTerm="platelet transfusion|OPE"||cui="C0086818"||concept="Platelet Transfusion"||prefer="Platelet Transfusion"||semantic=[topp]||confidence="1000"
+rawTerm="his known metastatic pancreatic cancer|ANA"||cui="C0030274"||concept="Pancreatic"||prefer="Pancreas"||semantic=[bpoc]||confidence="812"

@@ -100,6 +100,7 @@
     <Compile Include="Service\WikiUltil.cs" />
     <Compile Include="Instances\IInstancesGenerator.cs" />
     <Compile Include="Instances\Soon2001InstancesGenerator.cs" />
+    <Compile Include="UmlsDataDictionary.cs" />
     <Compile Include="Utilities\EnglishNormalizer.cs" />
     <Compile Include="Utilities\GenericConfig.cs" />
     <Compile Include="CorefChain.cs" />
@@ -151,6 +152,7 @@
     <Compile Include="Utilities\ConceptTypeHelper.cs" />
     <Compile Include="Utilities\EMRExtensions.cs" />
     <Compile Include="Utilities\HashCodeHelper.cs" />
+    <Compile Include="WikiDataDictionary.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Features\Feature.cs" />

@@ -1,0 +1,1 @@
+rawTerm="rehabilitation|OPE"||cui="C0034991"||concept="Rehabilitation"||prefer="Rehabilitation therapy"||semantic=[topp]||confidence="1000"

@@ -1,0 +1,4 @@
+rawTerm="chest pain|ANA"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="861"
+rawTerm="r lung mass|ANA"||cui="C0024109"||concept="Lung"||prefer="Lung"||semantic=[bpoc]||confidence="660"
+rawTerm="chest ct|ANA"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="861"
+rawTerm="chest ct|EQP"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="861"

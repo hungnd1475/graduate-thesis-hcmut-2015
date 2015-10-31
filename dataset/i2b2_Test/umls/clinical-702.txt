@@ -1,0 +1,4 @@
+rawTerm="a patent foramen ovale|ANA"||cui="C1110599"||concept="Foramen ovale"||prefer="Cranial foramen ovale"||semantic=[bsoj]||confidence="901"
+rawTerm="mildly dilated left atrium|ANA"||cui="C0225860"||concept="Left Atrium"||prefer="Left atrial structure"||semantic=[bpoc]||confidence="1000"
+rawTerm="the procedure|ANA"||cui="C0184661"||concept="Procedure"||prefer="Interventional procedure"||semantic=[diap|topp]||confidence="1000"
+rawTerm="the procedure|EQP"||cui="C0184661"||concept="Procedure"||prefer="Interventional procedure"||semantic=[diap|topp]||confidence="1000"

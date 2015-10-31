@@ -1,0 +1,7 @@
+rawTerm="right sided sciatica procedure|OPE"||cui="C0184661"||concept="Procedure"||prefer="Interventional procedure"||semantic=[diap|topp]||confidence="812"
+rawTerm="right laminectomy|OPE"||cui="C0022983"||concept="Laminectomy"||prefer="Laminectomy"||semantic=[topp]||confidence="861"
+rawTerm="discectomy|OPE"||cui="C0206078"||concept="Discectomy"||prefer="Diskectomy"||semantic=[topp]||confidence="1000"
+rawTerm="lower back pain|ANA"||cui="C0230102"||concept="Lower back"||prefer="Lower back structure"||semantic=[bpoc]||confidence="734"
+rawTerm="a lateral l-1 s-1 disc bulge|ANA"||cui="C1556138"||concept="Disc"||prefer="Disc - Body Part"||semantic=[bpoc]||confidence="629"
+rawTerm="l5-s1 right hemilaminectomy|OPE"||cui="C0442936"||concept="Hemilaminectomy"||prefer="Hemilaminectomy"||semantic=[topp]||confidence="812"
+rawTerm="physical therapy|OPE"||cui="C0949766"||concept="Physical therapy"||prefer="Physical therapy"||semantic=[topp]||confidence="1000"

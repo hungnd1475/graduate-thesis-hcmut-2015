@@ -1,0 +1,2 @@
+rawTerm="flank pain|ANA"||cui="C0230171"||concept="Flank"||prefer="Flank (surface region)"||semantic=[blor]||confidence="861"
+rawTerm="urinary tract infection|ANA"||cui="C0042027"||concept="Urinary tract"||prefer="Urinary tract"||semantic=[bpoc]||confidence="901"

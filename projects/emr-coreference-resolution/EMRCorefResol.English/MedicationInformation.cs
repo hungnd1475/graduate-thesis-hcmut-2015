@@ -10,60 +10,39 @@ namespace HCMUT.EMRCorefResol.English
     using IO;
     class MedicationInformation
     {
-        private static Dictionary<string, Dictionary<string, MedicationInfoCollection>> _meds;
+        private static Dictionary<string, MedicationInfoCollection> _meds;
 
         static MedicationInformation()
         {
-            _meds = new Dictionary<string, Dictionary<string, MedicationInfoCollection>>();
+            _meds = new Dictionary<string,MedicationInfoCollection>();
         }
 
-        public static MedicationInfoCollection GetMedicationInfo(string rootPath, string emrName)
+        public static MedicationInfoCollection GetMedicationInfo(string emrPath)
         {
-            if (!Directory.Exists(rootPath))
+            if (!File.Exists(emrPath))
             {
                 return null;
             }
 
-            var rootInfo = new DirectoryInfo(rootPath);
-
             lock (_meds)
             {
-                if (_meds.ContainsKey(rootInfo.Name))
+                if (_meds.ContainsKey(emrPath))
                 {
-                    return GetMedicationFile(rootInfo, emrName);
+                    return _meds[emrPath];
                 }
 
-                _meds[rootInfo.Name] = new Dictionary<string, MedicationInfoCollection>();
-                return GetMedicationFile(rootInfo, emrName);
+                return GetMedicationFile(emrPath);
             }
         }
 
-        private static DirectoryInfo GetSubFolder(DirectoryInfo root, string folderName)
+        private static MedicationInfoCollection GetMedicationFile(string emrPath)
         {
-            var childrenFolder = root.GetDirectories();
-
-            foreach(DirectoryInfo d in childrenFolder)
-            {
-                if(string.Equals(d.Name, folderName, StringComparison.InvariantCultureIgnoreCase))
-                {
-                    return d;
-                }
-            }
-
-            return null;
-        }
-
-        private static MedicationInfoCollection GetMedicationFile(DirectoryInfo datasetPath, string fileName)
-        {
-            var _dataset = _meds[datasetPath.Name];
-
-            if (_dataset.ContainsKey(fileName))
-            {
-                return _dataset[fileName];
-            }
+            var fileInfo = new FileInfo(emrPath);
+            var rootPath = fileInfo.Directory.Parent.FullName;
+            var fileName = fileInfo.Name;
 
             var dataReader = new I2B2DataReader();
-            var medPath = Path.Combine(new string[] { datasetPath.FullName, "medications", fileName });
+            var medPath = Path.Combine(new string[] { rootPath, "medications", fileName });
             if (!File.Exists(medPath))
             {
                 return null;
@@ -71,8 +50,7 @@ namespace HCMUT.EMRCorefResol.English
 
 
             var medCollection = new MedicationInfoCollection(medPath, dataReader);
-
-            _meds[datasetPath.Name][fileName] = medCollection;
+            _meds.Add(emrPath, medCollection);
 
             return medCollection;
         }
