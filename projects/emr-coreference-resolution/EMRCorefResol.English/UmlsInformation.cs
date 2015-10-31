@@ -38,6 +38,8 @@ namespace HCMUT.EMRCorefResol.English
 
         public static UmlsDataDictionary GetWikiFile(string emrPath)
         {
+            //Console.WriteLine("Loading umls data...");
+
             var fileInfo = new FileInfo(emrPath);
             var rootPath = fileInfo.Directory.Parent.FullName;
             var fileName = fileInfo.Name;

@@ -81,7 +81,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             int[] labels; double[] weights;
             LibSVM.CalcWeights(problem, out labels, out weights);
             Console.WriteLine("Cost weights: " +
-                $"{string.Join(" ", Enumerable.Range(0, labels.Length).Select(i => $"{labels[i]}:{weights[i]}"))}");
+                $"{string.Join(" ", Enumerable.Range(0, labels.Length).Select(i => $"{labels[i]}:{weights[i]:N2}"))}");
             
             var svmParam = new SVMParameter()
             {
@@ -90,7 +90,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
                 C = 1,
                 Gamma = 1d / problem.GetDimension(),
                 Probability = true,
-                Shrinking = false
+                Shrinking = true
             };
 
             bool applyWeights = false;

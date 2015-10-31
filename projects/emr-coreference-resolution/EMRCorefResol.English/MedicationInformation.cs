@@ -37,6 +37,8 @@ namespace HCMUT.EMRCorefResol.English
 
         public static MedicationInfoCollection GetMedicationFile(string emrPath)
         {
+            //Console.WriteLine("Loading medication information...");
+
             var fileInfo = new FileInfo(emrPath);
             var rootPath = fileInfo.Directory.Parent.FullName;
             var fileName = fileInfo.Name;

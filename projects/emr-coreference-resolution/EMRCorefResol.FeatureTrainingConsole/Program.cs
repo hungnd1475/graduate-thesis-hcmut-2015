@@ -106,7 +106,7 @@ namespace HCMUT.EMRCorefResol.FeatureTrainingConsole
             p.Setup(a => a.ShouldLog)
                 .As('l', "log")
                 .SetDefault(-1)
-                .WithDescription("Whether the console should print log (default 0).");
+                .WithDescription("Whether the trainer should print log (default 0).");
 
             p.Setup(a => a.ApplyWeights)
                 .As('w', "weights")
