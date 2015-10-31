@@ -1,6 +1,0 @@
-9	In the Medicine Intensive Care Unit , the patient was initially placed on high-flow 60% oxygen face mask and they diuresed approximately 5 liters off into the intravenous Lasix .|Lasix[435,440]|||5liters[401,409]||intravenous[423,434]||||C0699992|202991|4603|furosemide
-13	The patient continues to be diuresed with approximately 20 mg of Lasix a day and she has had good urine output .|Lasix[721,726]|||20mg[712,717]|||a day[727,732]|||C1597886|565450|4603|furosemide
-14	Anemia - The patient 's hematocrit dropped in the Intensive Care Unit to the mid 20s and she received one unit of packed red blood cells with a good response up to 30 .|packed red blood cells[883,905]||||||||||834201|834201|packed red blood cells
-15	Hypotension - On the night of 10-16 , the patient was diuresed with 20 mg of intravenous Lasix .|Lasix[1027,1032]|||20mg[1006,1011]||intravenous[1015,1026]||||C1597886|565450|4603|furosemide
-19	The patient was given 250 cc of normal saline and her blood pressure responded coming back up to the high 90 s.|normal saline[1242,1255]|||||||||C0445115|125464|125464|normal saline
-23	She continues on her Prednisone taper for her asthma and this is day # 14 of antibiotics .|Prednisone[1549,1559]|||||||||C0032952|8640|8640|prednisone

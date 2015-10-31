@@ -1,7 +1,0 @@
-15	Sats 96% on room air .|Sats[481,485]|||96[486,488]|||||||483980|483980|sats
-34	1. Levofloxacin 250 mg p.o. q.24h. x3 days .|Levofloxacin[1449,1461]|||250mg[1462,1468]||p.o.[1469,1473]|q.24h.[1474,1480]|x3 days[1481,1488]||C0693578|199884|82122|levofloxacin
-35	2. Dilantin 100 mg p.o. t.i.d.|Dilantin[1494,1502]|||100mg[1503,1509]||p.o.[1510,1514]|t.i.d.[1515,1521]|||C0874713|855859|8183|phenytoin
-36	3. Colace 100 mg p.o. b.i.d.|Colace[1525,1531]|||100mg[1532,1538]||p.o.[1539,1543]|b.i.d.[1544,1550]|||C0711644|1247756|82003|docusate
-37	4. Timoptic 0.25 one drop O.U. b.i.d.|Timoptic[1554,1562]|||0.25[1563,1567]|||b.i.d.[1582,1588]||||10601|10600|timolol
-39	6. Zantac 150 mg p.o. b.i.d.|Zantac 150[1653,1663]|||||p.o.[1667,1671]|b.i.d.[1672,1678]|||C0724451|220992|220992|zantac 150
-40	7. Insulin-sliding scale as well as 40 units of Humalog in the a.m. and 20 at night .|Humalog[1727,1734]|||sliding scale[1690,1703]||||||C0528249|135805|86009|insulin,lispro,human/rdna

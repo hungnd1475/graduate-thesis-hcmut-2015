@@ -1,2 +1,0 @@
-14	He was transferred to Fairm of Ijordcompmac Hospital , where seizures were stopped with 2 mg of Ativan .|Ativan[713,719]|||2mg[705,709]||||||C1600054|567636|6470|lorazepam
-15	He was loaded with IV Dilantin .|Dilantin[744,752]|||||IV[741,743]|||||202740|8183|phenytoin

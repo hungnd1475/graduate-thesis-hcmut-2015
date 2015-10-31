@@ -1,4 +1,0 @@
-19	Insulin , Celexa , Protonix , Ambien and Pancreas .|Celexa[481,487]||||||||||215928|2556|citalopram
-19	Insulin , Celexa , Protonix , Ambien and Pancreas .|Protonix[490,498]|||||||||C0876139|261624|40790|pantoprazole
-19	Insulin , Celexa , Protonix , Ambien and Pancreas .|Ambien[501,507]|||||||||C0487782|131725|39993|zolpidem
-40	He was treated with Octreotide to try to slow down the bleeding .|Octreotide[1498,1508]|||||||||C0028833|7617|7617|octreotide

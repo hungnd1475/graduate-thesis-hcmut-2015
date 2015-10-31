@@ -1,1 +1,0 @@
-31	Levofloxacin 500 mg every day for 7 days|Levofloxacin[689,701]|||500mg[702,708]|||every day[709,718]|7 days[723,729]||C0992502|317403|82122|levofloxacin

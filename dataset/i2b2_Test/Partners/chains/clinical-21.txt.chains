@@ -1,6 +1,0 @@
-c="neutropenia" 17:28 17:28||c="the neutropenia" 41:0 41:1||c="neutropenia" 44:1 44:1||t="coref problem"
-c="this" 17:0 17:0||c="he" 18:1 18:1||c="he" 21:0 21:0||c="who" 21:7 21:7||c="he" 32:0 32:0||c="he" 33:0 33:0||c="the patient" 38:0 38:1||c="he" 40:0 40:0||c="he" 41:4 41:4||c="he" 42:0 42:0||t="coref person"
-c="neupogen" 32:4 32:4||c="neupogen" 42:5 42:5||c="neupogen" 46:1 46:1||t="coref treatment"
-c="squamous cell carcinoma of the lung" 17:6 17:11||c="metastatic squamous cell carcinoma of the lung" 44:3 44:9||t="coref problem"
-c="fever" 17:26 17:26||c="fever" 44:0 44:0||t="coref problem"
-c="hypertension" 19:8 19:8||c="hypertension" 44:11 44:11||t="coref problem"

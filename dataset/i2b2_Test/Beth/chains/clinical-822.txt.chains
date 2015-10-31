@@ -1,4 +1,0 @@
-c="her" 11:0 11:0||c="her" 11:7 11:7||c="her" 12:3 12:3||c="her" 12:16 12:16||c="she" 13:0 13:0||c="she" 14:0 14:0||c="she" 15:0 15:0||t="coref person"
-c="osteomyelitis" 23:1 23:1||c="osteomyelitis" 33:13 33:13||c="osteomyelitis" 34:12 34:12||t="coref problem"
-c="her blood pressure" 12:3 12:5||c="which" 12:11 12:11||t="coref test"
-c="very mild left lower extremity pain" 15:2 15:7||c="which" 15:8 15:8||t="coref problem"

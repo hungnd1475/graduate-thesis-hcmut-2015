@@ -1,2 +1,0 @@
-31	Discharge Medications : .5 Risperdal|Risperdal[807,816]||||||||||152318|35636|risperidone
-33	Continue w/ Risperdal per new psychiatrist|Risperdal[883,892]||||||||||152318|35636|risperidone

@@ -1,2 +1,0 @@
-26	Prednisone , nebulizers .|Prednisone[466,476]||nebulizers[479,489]|||||||C0032952|8640|8640|prednisone
-29	Prednisone 60 mg daily for 4 days .|Prednisone[611,621]|||60mg[622,627]|||daily[628,633]|4 days[638,644]||C0032952|8640|8640|prednisone

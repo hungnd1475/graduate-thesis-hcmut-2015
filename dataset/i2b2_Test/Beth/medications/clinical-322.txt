@@ -1,1 +1,0 @@
-11	On Thursday - 2014-02-06 - the patient did have two episodes of chest discomfort ; for which he was given nitroglycerin and those resolved .|nitroglycerin[347,360]||||||Thursday[244,252]|||C0017887|4917|4917|glyceryl trinitrate

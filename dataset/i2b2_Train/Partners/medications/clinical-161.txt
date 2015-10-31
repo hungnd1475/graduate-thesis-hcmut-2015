@@ -1,2 +1,0 @@
-25	Discharge Medications : ibuoprofen 800 every 6-8 hrs as needed skelaxin 800mg for muscle relaxation vicodin 1 tab po every 4-6 hrs for severe pain|skelaxin[653,661]||||||every 6 - 8 hrs[629,642]||as needed[643,652]|C0702069|204315|59078|metaxalone
-25	Discharge Medications : ibuoprofen 800 every 6-8 hrs as needed skelaxin 800mg for muscle relaxation vicodin 1 tab po every 4-6 hrs for severe pain|vicodin[690,697]|||800mg[662,667]||||||C0483514|128793|161|paracetamol

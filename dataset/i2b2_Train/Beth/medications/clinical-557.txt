@@ -1,4 +1,0 @@
-13	She was found comatose at home by EMS and was brought to the Emergency Department .|EMS[647,650]||||||||||||
-31	1. Lopressor intravenous q 6 hours .|Lopressor[2146,2155]|||||intravenous[2156,2167]|q 6 hours[2168,2177]|||C0700776|203344|6918|metoprolol
-32	2. Morphine Sulfate 1 mg intravenous p.r.n.|Morphine Sulfate[2183,2199]|||1mg[2200,2204]||intravenous[2205,2216]|||p.r.n[2217,2222]|C1169894|892477|7052|morphine
-64	A low dose Morphine drip was initiated after further serious discussion with her husband and nieces and nephews .|Morphine[4012,4020]|||||drip[4021,4025]||||C0026549|7052|7052|morphine

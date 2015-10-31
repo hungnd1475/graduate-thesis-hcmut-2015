@@ -1,8 +1,0 @@
-27	MOUTH NORMAL NECK NORMAL thyroid wnl BREASTS NORMAL no distinct masses NIPPLES NORMAL inverted [ b ] , evert w / stimulation CHEST NORMAL LCTA COR NORMAL RRR ABDOMEN NORMAL gravid EXTREM NORMAL SKIN NORMAL NODES NORMAL VULVA NORMAL no lesions , white d / c at introitus VAGINA NORMAL sml amt thin white|COR[868,871]||||||||||1026934|1026934|cor
-28	d / c ph 4.5 , koh +amine , NS +clue , neg trich CERVIX NORMAL 1/100/0 srom clear OS NORMAL closed ADNEXAE NORMAL no palp masses , NT UTERUS NORMAL gravid UTERINE SIZE IN WEEKS NORMAL term RECTUM NORMAL no ext lesions|koh[1043,1046]||||||||||1306012|1306012|koh
-47	MEDICATION ( S ) ON DISCHARGE :|MEDICATION ( S )[2216,2232]|||||||||C1875470|693173|693173|medication organizer
-48	Metronidazole Tablets ( Flagyl ) ; Multivitamins And Folate Capsules ( Stuart Prenatal With Folate )|Flagyl[2272,2278]||Tablets[2262,2269]|||||||null|207287|6922|metronidazole
-48	Metronidazole Tablets ( Flagyl ) ; Multivitamins And Folate Capsules ( Stuart Prenatal With Folate )|Metronidazole[2248,2261]|||||||||C0025872|6922|6922|metronidazole
-48	Metronidazole Tablets ( Flagyl ) ; Multivitamins And Folate Capsules ( Stuart Prenatal With Folate )|Folate[2301,2307]||Capsules[2308,2316]||||||||107078|4511|folic acid
-48	Metronidazole Tablets ( Flagyl ) ; Multivitamins And Folate Capsules ( Stuart Prenatal With Folate )|Folate[2340,2346]|||||||||C0178638|62356|62356|folate
-48	Metronidazole Tablets ( Flagyl ) ; Multivitamins And Folate Capsules ( Stuart Prenatal With Folate )|Multivitamins[2283,2296]|||||||||C0301532|89905|89905|multiple vitamins

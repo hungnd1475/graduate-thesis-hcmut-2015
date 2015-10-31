@@ -1,6 +1,0 @@
-c="attending" 25:0 25:0||t="coref person"||c="bawnreef , centekaneeld , m.d." 26:0 26:4
-c="patient" 19:1 19:1||t="coref person"||c="you" 75:1 75:1
-c="you" 75:1 75:1||t="coref person"||c="your" 75:28 75:28
-c="hempwierst , e" 13:0 13:2||t="coref person"||c="patient" 19:1 19:1
-c="postdates pregnancy" 37:0 37:1||t="coref problem"||c="post dates" 58:0 58:1
-c="goingnethbumps , nanso r. , m.d." 52:0 52:5||t="coref person"||c="goingnethbumps , nanso r. , m.d." 81:0 81:5

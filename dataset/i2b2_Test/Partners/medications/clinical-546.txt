@@ -1,7 +1,0 @@
-28	Oxycontin 10 mg PO q.day .|Oxycontin[1183,1192]|||10mg[1193,1198]||PO[1199,1201]|q.day[1202,1207]||||1049506|7804|oxycodone
-29	Darvocet .|Darvocet[1210,1218]|||||||||C1514497|492810|161|paracetamol
-30	Estratab .|Estratab[1221,1229]|||||||||C0662514|190099|214549|estrogens,esterified
-31	Aspirin 325 mg PO q.day .|Aspirin[1232,1239]|||325mg[1240,1246]||PO[1247,1249]|q.day[1250,1255]||||1050241|1191|acetylsalicylic acid
-53	Included aspirin 325 mg PO q.day .|aspirin[2735,2742]|||325mg[2743,2749]||PO[2750,2752]|q.day[2753,2758]||||1050241|1191|acetylsalicylic acid
-54	Percocet one to two whenever necessary q. four to six hours for pain .|Percocet[2761,2769]|||||||||C0086787|42844|161|paracetamol
-55	Estratab one PO q.day .|Estratab[2832,2840]||||one[2841,2844]|PO[2845,2847]|q.day[2848,2853]|||C3223881|1169745|214549|estrogens,esterified

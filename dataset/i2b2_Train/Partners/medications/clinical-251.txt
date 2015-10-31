@@ -1,5 +1,0 @@
-20	COLACE ( DOCUSATE SODIUM ) 100 MG PO BID PERCOCET 1-2 TAB PO Q4H PRN pain|PERCOCET[502,510]||||1 - 2 TAB[511,518]|PO[495,497]|Q4H[522,525]||PRN[526,529]|C3239003|1185228|161|paracetamol
-20	COLACE ( DOCUSATE SODIUM ) 100 MG PO BID PERCOCET 1-2 TAB PO Q4H PRN pain|COLACE ( DOCUSATE SODIUM )[461,487]|||100MG[488,494]||PO[519,521]||||C0711644|1247756|82003|docusate
-57	You can take regular tylenol or motrin for pain and use the percocet for breakthrough pain .|tylenol[2106,2113]||||||||||202433|161|paracetamol
-57	You can take regular tylenol or motrin for pain and use the percocet for breakthrough pain .|motrin[2117,2123]|||||||||C0699203|202488|5640|ibuprofen
-57	You can take regular tylenol or motrin for pain and use the percocet for breakthrough pain .|percocet[2145,2153]|||||||||C0086787|42844|161|paracetamol

@@ -1,3 +1,0 @@
-67	Raymond did not receive any transfusions of blood products during admission .|blood products[3175,3189]||||||||||126145|126145|blood products
-92	Hepatitis B vaccine was administered at the time of birth on 2012-05-13 .|Hepatitis B vaccine[4140,4159]||||||||||816236|816236|hepatitis b vaccine
-94	1. Synagis RSV prophylaxis should be considered from October through April for infants who meet any of the following three criteria : 1) Born at less than 32 weeks , 2) born between 32 and 35 weeks with plans for daycare during RSV season , with a smoker in the household , or with preschool siblings|Synagis[4245,4252]|||||||32 weeks[4397,4405]||C0723567|220141|194279|palivizumab

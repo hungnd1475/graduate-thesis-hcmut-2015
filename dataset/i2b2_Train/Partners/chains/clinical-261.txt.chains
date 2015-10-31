@@ -1,8 +1,0 @@
-c="name" 13:0 13:0||c="elkschird , eberta r" 14:0 14:3||c="he" 23:11 23:11||c="the patient" 44:0 44:1||c="he" 46:1 46:1||c="he" 47:1 47:1||c="he" 49:9 49:9||c="he" 50:0 50:0||c="he" 52:0 52:0||c="his" 53:2 53:2||c="he" 53:8 53:8||c="he" 54:5 54:5||c="his" 55:0 55:0||c="he" 58:0 58:0||c="he" 59:6 59:6||c="he" 60:0 60:0||t="coref person"
-c="right hip pain" 22:3 22:5||c="the pain" 23:0 23:1||c="right hip pain" 42:0 42:2||t="coref problem"
-c="right total hip replacement" 42:7 42:10||c="total hip replacement" 44:15 44:17||c="this procedure" 45:4 45:5||t="coref treatment"
-c="emesis of coffee grounds" 47:6 47:9||c="this" 48:0 48:0||c="coffee ground emesis" 59:12 59:14||t="coref problem"
-c="esophagogastroduodenoscopy" 49:15 49:15||c="the esophagogastroduodenoscopy" 50:7 50:8||c="egd" 53:1 53:1||t="coref test"
-c="dr. rhalttland" 60:13 60:14||c="li rhalttland , m.d." 64:0 64:3||c="li rijarred rhalttland , m.d." 72:0 72:4||t="coref person"
-c="gi" 49:3 49:3||c="the gi service" 50:12 50:14||t="coref person"
-c="royneo walla , m.d." 62:0 62:3||c="royneo mamaire walla , m.d." 72:5 72:9||t="coref person"

@@ -1,9 +1,0 @@
-13	Metastatic melanoma .|melanoma[306,314]||||||||||1023577|1023577|melanoma
-15	This is the second Fairm of Ijordcompmac Hospital admission for Taroby Patient , a 70 year old male with a history of metastatic melanoma .|melanoma[475,483]||||||||||1023577|1023577|melanoma
-16	His melanoma was originally diagnosed last fall when he presented with lesions in the liver and spleen , and a chest CT showed left upper lobe nodules .|melanoma[490,498]||||||||||1023577|1023577|melanoma
-19	Approximately one week ago , he was admitted to the Fairm of Ijordcompmac Hospital for chemotherapy with DTIC and Tamoxifen .|DTIC[957,961]|||||||one week[866,874]|||3098|3098|dacarbazine
-19	Approximately one week ago , he was admitted to the Fairm of Ijordcompmac Hospital for chemotherapy with DTIC and Tamoxifen .|Tamoxifen[966,975]|||||||||C0039286|10324|10324|tamoxifen
-58	Patient was a poor candidate for anticoagulation because of his history of metastatic melanoma and the question of CNS metastases .|melanoma[3504,3512]||||||||||1023577|1023577|melanoma
-58	Patient was a poor candidate for anticoagulation because of his history of metastatic melanoma and the question of CNS metastases .|anticoagulation[3451,3466]||||||||||1024413|1024413|anticoagulation
-66	Decadron 4 mg PO bid , Dilantin 100 mg PO tid .|Decadron[3762,3770]|||4mg[3771,3775]||PO[3776,3778]|bid[3779,3782]|||C0706623|205712|3264|dexamethasone
-66	Decadron 4 mg PO bid , Dilantin 100 mg PO tid .|Dilantin[3785,3793]|||100mg[3794,3800]||PO[3801,3803]|tid[3804,3807]|||C0874713|855859|8183|phenytoin

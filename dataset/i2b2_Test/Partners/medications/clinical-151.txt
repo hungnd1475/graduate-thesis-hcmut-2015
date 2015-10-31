@@ -1,7 +1,0 @@
-38	Imitrex ; Indocin ; Celebrex ; Verapamil for migraines .|Imitrex[1495,1502]|||||||||C0721044|217713|37418|sumatriptan
-38	Imitrex ; Indocin ; Celebrex ; Verapamil for migraines .|Indocin[1505,1512]|||||||||C0700798|203365|5781|indometacin
-38	Imitrex ; Indocin ; Celebrex ; Verapamil for migraines .|Celebrex[1515,1523]||||||||||215927|140587|celecoxib
-38	Imitrex ; Indocin ; Celebrex ; Verapamil for migraines .|Verapamil[1526,1535]|||||||||C0042523|11170|11170|verapamil
-60	She underwent a TAH-BSO which was uncomplicated .|BSO[2312,2315]||||||||||||
-69	Percocet ; Colace .|Percocet[2888,2896]|||||||||C0086787|42844|161|paracetamol
-69	Percocet ; Colace .|Colace[2899,2905]|||||||||C0282139|82000|82003|docusate

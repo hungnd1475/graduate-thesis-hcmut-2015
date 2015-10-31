@@ -1,8 +1,0 @@
-20	ROCALTROL ( CALCITRIOL ) 0.5 MCG PO QD Starting Today ( 05/31 )|ROCALTROL ( CALCITRIOL )[474,498]|||0.5MCG[499,506]||PO[507,509]|QD[510,512]||||209007|1894|calcitriol
-23	SYNTHROID ( LEVOTHYROXINE SODIUM ) 125 MCG PO QD|SYNTHROID ( LEVOTHYROXINE SODIUM )[619,653]|||125MCG[654,661]||PO[662,664]|QD[665,667]|||C0707581|966191|10582|levothyroxine
-25	OXYCODONE 5-10 MG PO Q4H PRN Pain ADVAIR DISKUS 100/50 ( FLUTICASONE PROPIONATE/.|FLUTICASONE PROPIONATE[774,796]|||||||||C0117996|50121|50121|fluticasone propionate
-25	OXYCODONE 5-10 MG PO Q4H PRN Pain ADVAIR DISKUS 100/50 ( FLUTICASONE PROPIONATE/.|ADVAIR DISKUS 100 / 50[751,771]||||||||PRN[742,745]||896185|36117|salmeterol
-25	OXYCODONE 5-10 MG PO Q4H PRN Pain ADVAIR DISKUS 100/50 ( FLUTICASONE PROPIONATE/.|OXYCODONE[717,726]|||5 - 10MG[727,734]||PO[735,737]|Q4H[738,741]||||1049683|7804|oxycodone
-26	.. ) 1 PUFF INH BID CALCIUM CARBONATE 2,400 MG PO QID Starting Today ( 05/31 )|CALCIUM CARBONATE[818,835]||||1 PUFF[803,809]|INH[810,813]|BID[814,817]||||198535|1897|calcium (as carbonate)
-44	POD# 1 pt was tolerating regular diet , ambulating , afebrile , and calcium was stable .|calcium[1625,1632]|||||||||C0006675|1895|1895|calcium
-48	Do not drive if taking narcotics Call doctor if fever &gt; 101.5 , worsening pain , swelling , or redness of wound , numbness or tingling in extremities or face or any other concerns .|narcotics[1820,1829]|||||gt[1852,1854]|||||||

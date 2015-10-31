@@ -1,5 +1,0 @@
-12	The mother was followed closely and received betamethasone 2011-08-22 .|betamethasone[515,528]|||2011 - 08[529,536]||||||C0005308|1514|1514|betamethasone
-14	She was treated with bed rest and prn terbutaline .|terbutaline[660,671]||||||||prn[656,659]|C0039542|10368|10368|terbutaline
-15	Other medications including Prozac .|Prozac[702,708]|||||||||C0162373|58827|4493|fluoxetine
-67	2. Medications : Ferrous sulfate 0.15 cc po q day 25 mg / ml dilution .|Ferrous sulfate[3724,3739]|||0.15[3740,3744]||po[3748,3750]|q day[3751,3756]|||C3218690|1164414|24947|ferrous sulfate
-73	6. Immunizations recommended : Synagis RSV prophylaxis should be considered from October through April for infants who meet any of the following three criteria : 1) Born at less than 32 weeks , 2) born between 32 and 35 weeks with plans for daycare during RSV season , with a smoker in the household|Synagis[4192,4199]|||||||32 weeks[4344,4352]||C0723567|220141|194279|palivizumab

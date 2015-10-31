@@ -1,6 +1,0 @@
-31	Dilaudid 2mg PO x 1 Flexeril 10 mg x 1|Flexeril[725,733]|||10mg[734,739]|||x 1[721,724]|||C2370534|828349|21949|cyclobenzaprine
-31	Dilaudid 2mg PO x 1 Flexeril 10 mg x 1|Dilaudid[705,713]|||2mg[714,717]||PO[718,720]||||C0707716|897698|3423|hydromorphone
-33	Flexeril 10mg TID|Flexeril[768,776]|||10mg[777,781]|||TID[782,785]|||C2370534|828349|21949|cyclobenzaprine
-37	Take codeine prescribed by PCP with food and water to prevent nausea and constipation .|codeine[978,985]|||||||||C0009214|2670|2670|codeine
-38	Do not drive if taking flexeril and codeine .|flexeril[1084,1092]|||||||||C0936055|224954|21949|cyclobenzaprine
-38	Do not drive if taking flexeril and codeine .|codeine[1097,1104]|||||||||C0009214|2670|2670|codeine

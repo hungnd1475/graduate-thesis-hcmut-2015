@@ -1,5 +1,0 @@
-50	The patient had an extensive estimated blood loss requiring multiple blood products and fluid resuscitation therapy .|blood products[2984,2998]||||||||||126145|126145|blood products
-52	The patient was aggressively treated with fluid resuscitation and pressors for his septic physiology .|pressors[3243,3251]||||||||||||
-56	Because of the bleeding problems , however , it was felt that full heparinization would not be prudent , and the patient was treated with pneumo-boots and subcutaneous heparin .|subcutaneous heparin[3753,3773]||||||||||103984|103984|subcutaneous heparin
-60	He remained pressor dependent , as well as dependent upon mechanical ventilatory assistance .|pressor[4054,4061]||||||||||||
-78	KIVERL NA CANTSLEDDJESC , M.D.|NA[5229,5231]||||||||||56501|56501|na m-fluorphosphate

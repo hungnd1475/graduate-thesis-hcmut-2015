@@ -1,5 +1,0 @@
-16	In September 1992 CT myelogram showed a lateral L-1 S-1 disc bulge and small L-4-4 bulge .|S - 1[560,563]||||||||||||
-31	Over the next three days he increased his activity gradually , was able to do stairs with Physical Therapy and had pain which could be controlled with oral analgesics .|analgesics[1278,1288]|||||oral[1273,1277]||three days[1136,1146]||C0002771|760|760|analgesics
-34	He is discharged on Percocet , Colace and Motrin .|Percocet[1339,1347]|||||||||C0086787|42844|161|paracetamol
-34	He is discharged on Percocet , Colace and Motrin .|Colace[1350,1356]|||||||||C0282139|82000|82003|docusate
-34	He is discharged on Percocet , Colace and Motrin .|Motrin[1361,1367]|||||||||C0699203|202488|5640|ibuprofen

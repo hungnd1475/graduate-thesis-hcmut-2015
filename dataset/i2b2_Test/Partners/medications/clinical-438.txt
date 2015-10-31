@@ -1,3 +1,0 @@
-13	Steroid complications , including cataract , osteoporosis , diffuse fibrocystic breast disease , trigeminal neuralgia .|Steroid[275,282]||||||||||10072|10072|steroid
-18	The patient has been steroid dependent for two years and has been intubated in the past only once for a surgical repair of trigeminal neuralgia .|steroid[775,782]|||||||two years[797,806]|||10072|10072|steroid
-61	She was noted to have mild cataracts , possibly due to chronic steroids , as well as a subtle temporal disc pallor OD , possibly due to previous episode of optic neuritis .|steroids[3872,3880]||||||||||10072|10072|steroids
