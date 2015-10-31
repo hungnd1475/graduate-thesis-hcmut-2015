@@ -1,6 +1,0 @@
-22	Percocet and Naprosyn .|Percocet[893,901]|||||||||C0086787|42844|161|paracetamol
-22	Percocet and Naprosyn .|Naprosyn[906,914]|||||||||C0700017|203012|7258|naproxen
-41	The patient had a normal amylase and lipase , and a normal basic metabolic panel .|amylase[1679,1686]|||||||||C0002712|743|743|diastase
-41	The patient had a normal amylase and lipase , and a normal basic metabolic panel .|lipase[1691,1697]|||||||||C0023764|6406|6406|lipase
-49	The patient will be discharged home on Zantac , Simethicone , and preoperative medications with follow-up with Dr.|Zantac[2440,2446]|||||||||C0592278|152523|9143|ranitidine
-49	The patient will be discharged home on Zantac , Simethicone , and preoperative medications with follow-up with Dr.|Simethicone[2449,2460]|||||||||C0037138|9796|9796|simethicone

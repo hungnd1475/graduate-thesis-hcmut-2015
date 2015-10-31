@@ -1,8 +1,0 @@
-14	She received a full course of betamethasone complete on 12-17 , magnesium and erythromycin for latency through 12-21 .|betamethasone[695,708]|||||||||C0005308|1514|1514|betamethasone
-14	She received a full course of betamethasone complete on 12-17 , magnesium and erythromycin for latency through 12-21 .|magnesium[729,738]|||||||||C0024467|6574|6574|magnesium
-14	She received a full course of betamethasone complete on 12-17 , magnesium and erythromycin for latency through 12-21 .|erythromycin[743,755]|||||||||C0014806|4053|4053|erythromycin base
-52	She was initially started on 80 cc per kilo per day of D10W .|D10W[2722,2726]||||||per day[2711,2718]||||||
-70	The infant received 48 hours of ampicillin and gentamicin which were discontinued with a negative blood culture .|ampicillin[3733,3743]|||||||48 hours[3721,3729]||C0002680|733|733|ampicillin
-70	The infant received 48 hours of ampicillin and gentamicin which were discontinued with a negative blood culture .|gentamicin[3748,3758]|||||||||C0017436|662411|662411|gentamicins
-87	5. Immunizations received : Hepatitis B vaccine on 2020-01-19 .|Hepatitis B vaccine[4581,4600]||||||||||816236|816236|hepatitis b vaccine
-89	Synagis RSV prophylaxis should be considered from November through March for infants who meet any of the following 3 criteria :|Synagis[4648,4655]|||||||||C0723567|220141|194279|palivizumab

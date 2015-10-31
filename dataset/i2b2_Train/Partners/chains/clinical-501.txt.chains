@@ -1,6 +1,0 @@
-c="knolesa , via" 12:0 12:2||c="patient" 30:0 30:0||c="the patient" 33:0 33:1||c="your" 41:1 41:1||c="your" 41:5 41:5||c="patient" 42:7 42:7||t="coref person"
-c="your pcp" 41:1 41:2||c="pcp" 44:0 44:0||c="leebkayshaupkerth , maenzet n" 45:0 45:3||t="coref person"
-c="inachelle breutzbreunbreuncotfalke" 20:0 20:1||c="breutzbreunbreuncotfalke , inachelle" 48:5 48:7||t="coref person"
-c="acid reflux" 31:1 31:2||c="gerd" 35:0 35:0||t="coref problem"
-c="mylanta" 39:0 39:0||c="mylanta" 39:18 39:18||t="coref treatment"
-c="viscous lidocaine" 39:5 39:6||c="lidocaine" 39:20 39:20||t="coref treatment"

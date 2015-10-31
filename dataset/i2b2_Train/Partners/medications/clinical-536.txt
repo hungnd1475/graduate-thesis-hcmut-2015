@@ -1,1 +1,0 @@
-26	Augmentin 875 mg twice a day for 10 days .|Augmentin[621,630]|||875mg[631,637]|||a day[644,649]|10 days[654,661]||C2368797|824192|723|amoxicillin

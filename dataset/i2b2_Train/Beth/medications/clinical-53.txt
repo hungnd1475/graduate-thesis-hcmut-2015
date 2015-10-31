@@ -1,8 +1,0 @@
-11	By report , the patient was ejected from the vehicle on impact and found curled in the fetal position at the rear of the vehicle at the scene .|impact[381,387]|||||||||C0726639|222931|222931|impact
-14	She was immobilized in the C-spine collar at the scene of the accident and subsequently transported by EMS to the New England Sinai Hospital & Rehab Center Emergency Department for further management .|EMS[745,748]||||||||||||
-51	White blood cell 12.9 , hemoglobin 11.5 , hematocrit 32.8 , platelet count 197,000 , sodium 141 , potassium 3.6 , chloride 110 , bicarbonate 21 , BUN 20 , creatinine 0.7 , glucose 189 , PT 13.3 , INR 1.2 , PTT 30.0 , amylase 57 , arterial blood gas 7.32 , 35 , 159 , 19 , -7 .|amylase[3948,3955]|||141[3823,3826]||||||C0002712|743|743|diastase
-55	The patient was evaluated by the Trauma Service in the emergency room , where she received four liters crystalloid and four units packed red blood cells with good response .|crystalloid[4229,4240]|||fourliters[4217,4228]|||||||||
-55	The patient was evaluated by the Trauma Service in the emergency room , where she received four liters crystalloid and four units packed red blood cells with good response .|packed red blood cells[4256,4278]||||||||||834201|834201|packed red blood cells
-71	The patient was noted to be able to wiggle her fingers with intact flexor , extensor , abductor , and adductor function .|flexor[6251,6257]||||||||||1022341|1022341|flexor
-90	Percocet one to two tablets PO q.4h. to 6h.p.r.n. pain .|Percocet[7511,7519]||||one to two tablets[7520,7538]|PO[7539,7541]|q.4h.[7542,7547]||||1049650|161|paracetamol
-96	Percocet for pain as needed .|Percocet[8092,8100]||||||||as needed[8110,8119]|C0086787|42844|161|paracetamol

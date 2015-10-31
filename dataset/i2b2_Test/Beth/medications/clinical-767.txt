@@ -1,8 +1,0 @@
-13	She developed an ear ache , for which she saw her primary care physician , Evelyn was prescribed cortisone drops .|cortisone[431,440]|||||||||C0010137|2878|2878|cortisone
-18	She was given an oral prednisone taper .|prednisone[879,889]|||||oral[874,878]||||C1247651|373583|8640|prednisone
-28	She was never on an anticonvulsant due to her former beliefs as N.|anticonvulsant[1631,1645]||||||||||926|926|anticonvulsant
-32	Prednisone taper as above .|Prednisone[1753,1763]|||||||||C0032952|8640|8640|prednisone
-113	1. Gabapentin 100 mg po t.i.d. for paresthesias .|Gabapentin[6741,6751]|||100mg[6752,6758]||po[6759,6761]|t.i.d.[6762,6768]|||C0977057|310430|25480|gabapentin
-114	2. Colace 100 mg po b.i.d.|Colace[6791,6797]|||100mg[6798,6804]||po[6805,6807]|b.i.d.[6808,6814]|||C0711644|1247756|82003|docusate
-115	3. Zantac 150 mg po b.i.d.|Zantac 150[6818,6828]|||||po[6832,6834]|b.i.d.[6835,6841]|||C0724451|220992|220992|zantac 150
-116	4. Prednisone taper completed .|Prednisone[6845,6855]|||||||||C0032952|8640|8640|prednisone

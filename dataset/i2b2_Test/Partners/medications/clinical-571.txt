@@ -1,6 +1,0 @@
-24	Significant for non-insulin diabetes mellitus , for which he takes Diabeta , one QD ; right eye cataract , operated on three years ago .|Diabeta[1045,1052]||||||QD[1059,1061]|three years[1097,1108]|||203295|4815|glibenclamide
-28	Diabeta , one QD .|Diabeta[1181,1188]||||||QD[1195,1197]||||203295|4815|glibenclamide
-65	The remaining unit of autologous packed red blood cells was transfused .|packed red blood cells[3016,3038]||||||||||834201|834201|packed red blood cells
-73	He was discharged home on Percocet and Keflex .|Percocet[3551,3559]|||||||||C0086787|42844|161|paracetamol
-73	He was discharged home on Percocet and Keflex .|Keflex[3564,3570]|||||||||C0700517|203167|2231|cephalexin
-85	Na Dussmum|Na[3780,3782]||||||||||56501|56501|na m-fluorphosphate

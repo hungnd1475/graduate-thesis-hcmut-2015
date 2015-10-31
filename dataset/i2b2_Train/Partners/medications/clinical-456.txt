@@ -1,8 +1,0 @@
-27	HEIGHT NORMAL 66 HEENT NORMAL MOUTH NORMAL NECK NORMAL BREASTS NORMAL NIPPLES NORMAL CHEST NORMAL COR NORMAL ABDOMEN NORMAL EXTREM NORMAL SKIN mottled on both lower extremities .|COR[933,936]||||||||||1026934|1026934|cor
-47	POSTPARTUM RH IMMUNE GLOBULIN :|RH IMMUNE GLOBULIN[2178,2196]||||||||||35465|35465|anti-d (rh) immunoglobulin
-49	POSTPARTUM MEASLES / MUMPS/RUBELLA VACCINE :|MEASLES / MUMPS / RUBELLA VACCINE[2216,2247]|||||||||C2929435|1008531|1008531|measles / mumps / rubella vaccine
-51	MEDICATION ( S ) ON DISCHARGE :|MEDICATION ( S )[2264,2280]|||||||||C1875470|693173|693173|medication organizer
-52	Multivitamins And Folate ( Stuart Prenatal With Folate ) ; Fluoxetine ( Prozac )|Folate[2314,2320]|||||||||C0178638|62356|62356|folate
-52	Multivitamins And Folate ( Stuart Prenatal With Folate ) ; Fluoxetine ( Prozac )|Folate[2344,2350]|||||||||C0178638|62356|62356|folate
-52	Multivitamins And Folate ( Stuart Prenatal With Folate ) ; Fluoxetine ( Prozac )|Multivitamins[2296,2309]|||||||||C0301532|89905|89905|multiple vitamins
-52	Multivitamins And Folate ( Stuart Prenatal With Folate ) ; Fluoxetine ( Prozac )|Fluoxetine ( Prozac )[2355,2376]|||||||||C1237904|363958|4493|fluoxetine

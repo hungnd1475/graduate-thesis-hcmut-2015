@@ -1,2 +1,0 @@
-31	He received Rx for potassium to help with cramps .|potassium[784,793]|||||||||C0032821|8588|8588|potassium
-34	K-Dur 20meq PO QD|K - Dur[950,955]|||20meq[956,961]||PO[962,964]|QD[965,967]|||C3222069|1167898|8591|potassium chloride

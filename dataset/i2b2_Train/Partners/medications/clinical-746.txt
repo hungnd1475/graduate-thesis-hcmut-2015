@@ -1,2 +1,0 @@
-28	Discharge Medications : tylenol as needed .|tylenol[582,589]||||||||as needed[590,599]||202433|161|paracetamol
-29	refrain from motrin at this time .|motrin[615,621]|||||||||C0699203|202488|5640|ibuprofen

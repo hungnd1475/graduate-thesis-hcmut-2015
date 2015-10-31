@@ -1,2 +1,0 @@
-41	He was discharged to home on Percocet .|Percocet[1789,1797]|||||||||C0086787|42844|161|paracetamol
-48	Percocet 1-2 tablets PO q.4-6 hours prn pain .|Percocet[2052,2060]||||1 - 2 tablets[2061,2072]|PO[2073,2075]|q.4 - 6 hours[2076,2087]||prn[2088,2091]||1049650|161|paracetamol

@@ -1,9 +1,0 @@
-15	Mother 's medical history was notable for depression treated with Zoloft .|Zoloft[691,697]|||||||||C0284660|82728|36437|sertraline
-16	OB history notable for infertility treated with Clomid .|Clomid[748,754]|||||||||C0591268|151525|2596|clomiphene
-44	She received one dose of Survanta and then weaned well on ventilator settings .|Survanta[2403,2411]|||||||||C0699934|202963|46967|beractant
-53	Enteral feeds were started on day of life one and she advanced to full volume feeds of breast milk or special care formula on day of life six ( 2013-07-29 ) without problems .|special care[3013,3025]||||||||||669616|669616|special care
-54	She is presently receiving breast milk or special care formula 24 cal at 150 mls per kilo per day with tolerance .|special care[3129,3141]||||||per day[3177,3184]||||669616|669616|special care
-67	Received 48 hours of Ampicillin and gentamicin for rule out sepsis .|Ampicillin[3733,3743]|||||||48 hours[3721,3729]||C0002680|733|733|ampicillin
-67	Received 48 hours of Ampicillin and gentamicin for rule out sepsis .|gentamicin[3748,3758]|||||||||C0017436|662411|662411|gentamicins
-83	Breast milk or special care formula 24 calories per ounce at 150 mls per kilo per day with plans to advance calories .|special care[4307,4319]||||||per day[4370,4377]||||669616|669616|special care
-89	1. AGA 32-5/7 week pre-term female .|AGA[4586,4589]|||32 - 5[4590,4594]||||7 week[4595,4601]|||1023123|1023123|aga

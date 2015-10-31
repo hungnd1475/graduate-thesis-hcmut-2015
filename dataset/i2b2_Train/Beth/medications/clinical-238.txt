@@ -1,8 +1,0 @@
-11	The mother had received a complete course of betamethasone prior to delivery .|betamethasone[549,562]|||||||||C0005308|1514|1514|betamethasone
-24	The infant was intubated soon after admission to the CMED CSRU and received two doses of surfactant .|surfactant[1442,1452]||||||||||10260|10260|surfactants
-42	She is receiving supplemental iron to provide 2 mg per kilo per day as elemental iron .|elemental iron[2722,2736]|||2mg[2697,2701]|||per day[2711,2718]||||261510|261510|elemental iron
-43	She has never received any blood products during this CMED CSRU stay .|blood products[2766,2780]||||||||||126145|126145|blood products
-45	The infant was started on Ampicillin and Gentamycin at the time of admission for sepsis risk factor .|Ampicillin[2867,2877]|||||||||C0002680|733|733|ampicillin
-67	5. The infant received the hepatitis B vaccine on 2013-05-09 , and Synagis on 2013-05-11 .|hepatitis B vaccine[4080,4099]||||||||||816236|816236|hepatitis b vaccine
-67	5. The infant received the hepatitis B vaccine on 2013-05-09 , and Synagis on 2013-05-11 .|Synagis[4120,4127]|||||||||C0723567|220141|194279|palivizumab
-68	Immunization recommended : 1) Synagis RSV prophylaxis should be considered from October through April for infants who meet any of the following three criteria :|Synagis[4174,4181]|||||||||C0723567|220141|194279|palivizumab

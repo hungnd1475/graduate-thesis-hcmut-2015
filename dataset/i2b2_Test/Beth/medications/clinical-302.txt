@@ -1,6 +1,0 @@
-20	1. Prozac .|Prozac[793,799]|||||||||C0162373|58827|4493|fluoxetine
-21	2. Tetracycline for acne .|Tetracycline[805,817]|||||||||C0039644|10395|10395|tetracycline
-74	1. Tylenol #3 one to two tablets p.o. q 4-6 hours p.r.n.|Tylenol[3974,3981]||||one to two tablets[3985,4003]|p.o.[4004,4008]|q 4 - 6 hours[4009,4020]||p.r.n.[4021,4027]|C1243075|369070|161|paracetamol
-75	2. Motrin as needed .|Motrin[4031,4037]||||||||as needed[4038,4047]|C0699203|202488|5640|ibuprofen
-76	3. Prozac 20 mg p.o. once daily .|Prozac[4053,4059]|||20mg[4060,4065]||p.o.[4066,4070]|once daily[4071,4081]|||C0355323|104849|4493|fluoxetine
-77	4. Tetracycline which she was taking for her acne .|Tetracycline[4087,4099]|||||||||C0039644|10395|10395|tetracycline

@@ -1,2 +1,0 @@
-22	In the Oncology Floor he received Carboplatin and Etoposide to which he reacted well .|Carboplatin[727,738]|||||||||C0079083|40048|40048|carboplatin
-22	In the Oncology Floor he received Carboplatin and Etoposide to which he reacted well .|Etoposide[743,752]|||||||||C0015133|4179|4179|etoposide

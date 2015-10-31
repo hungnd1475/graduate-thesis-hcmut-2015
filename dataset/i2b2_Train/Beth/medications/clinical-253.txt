@@ -1,5 +1,0 @@
-14	Pregnancy was also complicated by maternal history of depression for which mother received Zoloft .|Zoloft[656,662]|||||||||C0284660|82728|36437|sertraline
-80	There were no blood products received during hospitalization .|blood products[4703,4717]||||||||||126145|126145|blood products
-82	A blood culture was obtained upon admission and Ampicillin and Gentamicin were given for 48 hours with blood cultures remaining sterile .|Ampicillin[4821,4831]|||||||||C0002680|733|733|ampicillin
-82	A blood culture was obtained upon admission and Ampicillin and Gentamicin were given for 48 hours with blood cultures remaining sterile .|Gentamicin[4836,4846]|||||||48 hours[4862,4870]||C0017436|662411|662411|gentamicins
-114	Immunizations received are hepatitis B vaccine given on 09-26 .|hepatitis B vaccine[6370,6389]||||||||||816236|816236|hepatitis b vaccine

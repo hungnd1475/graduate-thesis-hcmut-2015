@@ -1,9 +1,0 @@
-13	Betamethasone complete at approximately 26 weeks and 31 weeks .|Betamethasone[697,710]|||||||26 weeks[737,745]||C0005308|1514|1514|betamethasone
-14	Mother was on clindamycin since 11-04 .|clindamycin[775,786]|||||||||C0008947|2582|2582|clindamycin
-40	Caffeine citrate was initiated on 11-14 for apnea and bradycardia of prematurity .|Caffeine citrate[1857,1873]|||||||||C0054436|20033|20033|caffeine citrated
-49	Infant was initially started on 80 cc per kilo per day of D10W .|D10W[2340,2344]||||||per day[2329,2336]||||||
-52	She is currently receiving 150 cc per kilo per day of Special Care 20 .|Special Care[2510,2522]||||||per day[2499,2506]||||669616|669616|special care
-80	Continue 150 cc per kilo per day of Special Care 20 calories advancing caloric intake as required to maintain weight gain of 3 grams per kilogram per day .|Special Care[3743,3755]||||||per day[3732,3739]||||669616|669616|special care
-81	Medications , continue caffeine citrate of 11 mg po every day .|caffeine citrate[3886,3902]|||11mg[3906,3911]||po[3912,3914]|every day[3915,3924]|||C0975107|308856|1886|caffeine
-87	Immunizations : recommended Synagis RSV prophylaxis should be considered from November through March for infants who meet any of the following 3 criteria , born at less than 32 weeks , born between 32 and 35 weeks with 2 of the following , daycare during RSV season , a smoker in the household , neuromuscular|Synagis[4241,4248]|||||||32 weeks[4387,4395]||C0723567|220141|194279|palivizumab
-93	Rule out sepsis with antibiotic .|antibiotic[5019,5029]||||||||||896|896|antibiotic

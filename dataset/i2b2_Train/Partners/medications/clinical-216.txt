@@ -1,3 +1,0 @@
-26	Lorazepam 1 mg.|Lorazepam[1343,1352]|||1mg[1353,1357]||||||C0987272|316169|6470|lorazepam
-27	PO q6 hours PRN , and Timoptic 0.5% 1 drop b.i.d.|Timoptic[1381,1389]|||||PO[1359,1361]|q6 hours[1362,1370]||PRN[1371,1374]||10601|10600|timolol
-58	COR TLAND , M.D.|COR[3209,3212]||||||||||1026934|1026934|cor
