@@ -17,8 +17,12 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
         static void Main(string[] args)
         {
             var collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Test");
-            BatchUMLSProcess(collection);
-            //BatchWikiProcess(collection);
+            //BatchUMLSProcess(collection);
+            BatchWikiProcess(collection);
+
+            collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Train");
+            //BatchUMLSProcess(collection);
+            BatchWikiProcess(collection);
 
             Console.ReadLine();
         }

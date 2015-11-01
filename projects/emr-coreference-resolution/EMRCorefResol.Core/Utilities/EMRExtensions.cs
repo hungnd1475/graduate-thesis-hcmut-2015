@@ -73,17 +73,17 @@ namespace HCMUT.EMRCorefResol
             return lines[lineNumber - 1];
         }
 
-        public static int GetSectionIndex(this EMR emr, Concept c)
+        public static string GetSectionTitle(this EMR emr, Concept c)
         {
             for(int i=0; i<emr.Sections.Count; i++)
             {
                 var section = emr.Sections[i];
                 if(section.Begin <= c.Begin.Line && section.End >= c.End.Line)
                 {
-                    return i + 1;
+                    return section.Title;
                 }
             }
-            return 0;
+            return null;
         }
 
         public static Concept GetPrevConcept(this EMR emr, Concept c)

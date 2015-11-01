@@ -12,13 +12,17 @@ namespace HCMUT.EMRCorefResol.English.Features
         public PositionFeature(IConceptPair instance, EMR emr)
             :base("Position-Feature", 3, 2)
         {
-            var anaLine = emr.GetLine(instance.Anaphora);
-            var anaPos = GetPosition(instance.Anaphora, anaLine);
-            if (anaPos == 0) return;
+            var anaPos = GetPosition(instance.Anaphora.Lexicon);
+            if (anaPos == 0)
+            {
+                return;
+            }
 
-            var anteLine = emr.GetLine(instance.Antecedent);
-            var antePos = GetPosition(instance.Antecedent, anteLine);
-            if (antePos == 0) return;
+            var antePos = GetPosition(instance.Antecedent.Lexicon);
+            if (antePos == 0)
+            {
+                return;
+            }
 
             if(anaPos == antePos)
             {
@@ -29,10 +33,10 @@ namespace HCMUT.EMRCorefResol.English.Features
             }
         }
 
-        private int GetPosition(Concept c, string line)
+        private int GetPosition(string term)
         {
             var searcher = KeywordService.Instance.POSITION_KEYWORD;
-            var indices = searcher.SearchDictionaryIndices(line, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord);
+            var indices = searcher.SearchDictionaryIndices(term, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord);
 
             if(indices.Length == 0)
             {

@@ -215,11 +215,15 @@ namespace HCMUT.EMRCorefResol.Utilities
             var keywords = SearchKeywords(s, options);
 
             string pattern = options.HasFlag(KWSearchOptions.WholeWord) ? 
-                string.Join("|", keywords.Select(x => @"(^|\s)" + Regex.Escape(x) + @"(\s|$)")) :
+                "\\b(" + string.Join("|", keywords.Select(x => Regex.Escape(x))) + ")\\b":
                 string.Join("|", keywords.Select(x => Regex.Escape(x)));
 
 
-            return Regex.Replace(s, pattern, "", options.HasFlag(KWSearchOptions.IgnoreCase) ? RegexOptions.IgnoreCase : RegexOptions.None);
+            var normalized = Regex
+                .Replace(s, pattern, "", options.HasFlag(KWSearchOptions.IgnoreCase) ? RegexOptions.IgnoreCase : RegexOptions.None)
+                .Replace("/[ ]{2,}/", "");
+
+            return normalized.Trim();
         }
 
         private void SearchWithAction(string s, KWSearchOptions option, Func<int, TrieNode, bool> processResult)

@@ -33,11 +33,11 @@ namespace HCMUT.EMRCorefResol.English
             this[9] = new PositionFeature(instance, emr);
             this[10] = new SectionFeature(instance, emr);
 
-            this[10] = new WikiMatchFeature(anaWiki, anteWiki);
-            this[11] = new WikiAnchorLinkFeature(anaWiki, anteWiki);
-            this[12] = new WikiBoldNameMatchFeature(anaWiki, anteWiki);
+            this[11] = new WikiMatchFeature(anaWiki, anteWiki);
+            this[12] = new WikiAnchorLinkFeature(anaWiki, anteWiki);
+            this[13] = new WikiBoldNameMatchFeature(anaWiki, anteWiki);
 
-            this[13] = new AnatomyFeature(instance, umlsData);
+            this[14] = new AnatomyFeature(instance, umlsData);
         }
     }
 }
