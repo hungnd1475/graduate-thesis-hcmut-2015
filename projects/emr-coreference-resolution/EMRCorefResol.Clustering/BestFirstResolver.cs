@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HCMUT.EMRCorefResol.Classification;
-using System.Collections.Concurrent;
 
 namespace HCMUT.EMRCorefResol.CorefResolvers
 {
@@ -12,10 +11,6 @@ namespace HCMUT.EMRCorefResol.CorefResolvers
     {
         public CorefChainCollection Resolve(EMR emr, IFeatureExtractor fExtractor, IClassifier classifier)
         {
-            //Console.WriteLine("Resolving...");
-
-            var exceptions = new ConcurrentQueue<Exception>();
-
             fExtractor.EMR = emr;
             var concepts = emr.Concepts;
 
@@ -58,15 +53,18 @@ namespace HCMUT.EMRCorefResol.CorefResolvers
                     if (r != null)
                     {
                         var clasInt = Convert.ToInt32(r.Class);
-                        var pronType = (ConceptType)clasInt;
+                        ana.Type = (ConceptType)clasInt;
 
-                        for (int j = i - 1; j >= 0; j--)
+                        if (ana.Type != ConceptType.None)
                         {
-                            var ante = concepts[j];
-                            if (ante.Type == pronType)
+                            for (int j = i - 1; j >= 0; j--)
                             {
-                                pairs[i] = new[] { ante, ana };
-                                break;
+                                var ante = concepts[j];
+                                if (ante.Type == ana.Type)
+                                {
+                                    pairs[i] = new[] { ante, ana };
+                                    break;
+                                }
                             }
                         }
                     }
@@ -97,72 +95,6 @@ namespace HCMUT.EMRCorefResol.CorefResolvers
                 return chainsList;
             });
 
-            //var chains = new List<HashSet<Concept>>();
-            //for (int i = concepts.Count - 1; i >= 0; i--)
-            //{
-            //    var ana = concepts[i];
-            //    //Console.Write($"{ana}||t=\"{ana.Type.ToString().ToLower()}\" ");
-
-            //    if (ana.Type != ConceptType.Pronoun)
-            //    {
-            //        ClasResult bestResult = null;
-            //        Concept bestAnte = null;
-
-            //        for (int j = i - 1; j >= 0; j--)
-            //        {
-            //            var ante = concepts[j];
-            //            if (ante.Type != ana.Type)
-            //                continue;
-
-            //            var r = ClassifyPair(ante, ana, fExtractor, classifier);
-
-            //            if (r != null && r.Class == 1d)
-            //            {
-            //                if (bestResult == null || bestResult.Confidence < r.Confidence)
-            //                {
-            //                    bestResult = r;
-            //                    bestAnte = ante;
-            //                }                            
-            //            }
-            //        }
-
-            //        if (bestResult != null && bestAnte != null)
-            //        {
-            //            //Console.Write($"-> {bestAnte}:{bestResult.Confidence}");
-            //            AddToChains(chains, bestAnte, ana);                        
-            //        }
-
-            //        //Console.WriteLine();     
-            //    }
-            //    else
-            //    {
-            //        var r = ClassifyInstance(new PronounInstance(ana), fExtractor, classifier);
-            //        if (r != null)
-            //        {
-            //            var clasInt = Convert.ToInt32(r.Class);
-            //            var pronType = (ConceptType)clasInt;
-
-            //            for (int j = i - 1; j >= 0; j--)
-            //            {
-            //                var ante = concepts[j];
-            //                if (ante.Type == pronType)
-            //                {
-            //                    AddToChains(chains, ante, ana);
-            //                    break;
-            //                }
-            //            }
-            //        }
-            //    }
-            //}
-
-            //var resultChains = new List<CorefChain>();
-            //foreach (var ch in chains)
-            //{
-            //    var t = ch.OrderBy(c => c);
-            //    var ante = t.First();
-            //    resultChains.Add(new CorefChain(t, ante.Type));
-            //}
-
             fExtractor.ClearCache();
             var resultChains = chains.Select(s => new CorefChain(s.OrderBy(c => c), s.First().Type)).ToList();
             return new CorefChainCollection(resultChains);
@@ -174,8 +106,8 @@ namespace HCMUT.EMRCorefResol.CorefResolvers
             {
                 case ConceptType.Person:
                     return ClassifyInstance(new PersonPair(ante, ana), fExtractor, classifier);
-                //case ConceptType.Problem:
-                //    return ClassifyInstance(new ProblemPair(ante, ana), fExtractor, classifier);
+                case ConceptType.Problem:
+                    return ClassifyInstance(new ProblemPair(ante, ana), fExtractor, classifier);
                 case ConceptType.Test:
                     return ClassifyInstance(new TestPair(ante, ana), fExtractor, classifier);
                 case ConceptType.Treatment:
