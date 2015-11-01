@@ -228,6 +228,7 @@
     <Content Include="Keywords\relatives.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Keywords\section-titles.txt" />
     <Content Include="Keywords\sign-information.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

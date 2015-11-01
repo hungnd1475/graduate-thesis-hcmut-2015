@@ -92,6 +92,9 @@ namespace HCMUT.EMRCorefResol.English
         public IKeywordDictionary STOP_WORDS { get; }
             = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "stopwords.txt")));
 
+        public IKeywordDictionary SECTION_TITLES { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "section-titles.txt")));
+
         private KeywordService() { }
 
         private static IEnumerable<string> ReadKWFile(string filePath)

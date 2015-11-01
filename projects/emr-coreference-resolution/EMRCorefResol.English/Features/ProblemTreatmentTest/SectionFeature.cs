@@ -9,24 +9,27 @@ namespace HCMUT.EMRCorefResol.English.Features
     class SectionFeature : Feature
     {
         public SectionFeature(IConceptPair instance, EMR emr)
-            :base("Section-Feature")
+            :base("Section-Feature", 226, 0)
         {
-            var anaSection = EMRExtensions.GetSectionIndex(emr, instance.Anaphora);
-            var anteSection = EMRExtensions.GetSectionIndex(emr, instance.Antecedent);
+            var anaSection = EMRExtensions.GetSectionTitle(emr, instance.Anaphora);
+            var anteSection = EMRExtensions.GetSectionTitle(emr, instance.Antecedent);
 
-            if(anaSection == 0 || anteSection == 0)
+            if(string.IsNullOrEmpty(anaSection) || string.IsNullOrEmpty(anteSection))
             {
                 SetContinuousValue(0);
                 return;
             }
 
-            var sectionPairIndex = GetSectionPairIndex(anaSection, anteSection, emr);
-            SetContinuousValue(sectionPairIndex);
+            var sectionPairIndex = GetSectionPairIndex(anaSection, anteSection);
+            SetCategoricalValue(sectionPairIndex);
         }
 
-        private int GetSectionPairIndex(int s1, int s2, EMR emr)
+        private int GetSectionPairIndex(string s1, string s2)
         {
-            return (s1 - 1) * emr.Sections.Count + s2;
+            var s1Index = KeywordService.Instance.SECTION_TITLES.SearchDictionaryIndices(s1, Utilities.KWSearchOptions.WholeWordIngoreCase)[0];
+            var s2Index = KeywordService.Instance.SECTION_TITLES.SearchDictionaryIndices(s2, Utilities.KWSearchOptions.WholeWordIngoreCase)[0];
+            var maxSectionNumber = KeywordService.Instance.SECTION_TITLES.Count;
+            return (s1Index * maxSectionNumber) + s2Index + 1;
         }
     }
 }

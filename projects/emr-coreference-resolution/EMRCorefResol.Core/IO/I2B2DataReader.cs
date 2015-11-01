@@ -18,6 +18,23 @@ namespace HCMUT.EMRCorefResol.IO
         private static Regex WikiDataPattern = new Regex("rawTerm=\"(.*?)\"\\|\\|term=\"(.*?)\"\\|\\|title=\"(.*?)\"\\|\\|links=\\[(.*?)\\]\\|\\|bolds=\\[(.*?)\\]");
         private static Regex UmlsDataPatter = new Regex("rawTerm=\"(.*?)\"\\|\\|cui=\"(.*?)\"\\|\\|concept=\"(.*?)\"\\|\\|prefer=\"(.*?)\"\\|\\|semantic=\\[(.*?)\\]\\|\\|confidence=\"(.*?)\"");
 
+        private static string _history_of_illness_pattern = "(present illness|hospitalization)(.*?):";
+        private static string _allergy = "(allergies|allergy)(.*?):";
+        private static string _chief_complaint = "chief complaint(.*?):";
+        private static string _diagnosis = "(diagnosis|diagnoses)(.*?):";
+        private static string _hospital_course = "(hospital course|course(.*?)hospital)(.*?):";
+        private static string _laboratory = "(laboratory|laboratories|lab)(.*?):";
+        private static string _medication = "(medication|med)(.*?):";
+        private static string _past_medical = "past medical(.*?):";
+        private static string _physical_exam = "physical exam(.*?):";
+        private static string _followup = "(follow up|follow-up|followup)(.*?):";
+        private static string _procedure = "procedure(.*?):";
+        private static string _condition = "condition(.*?):";
+        private static string _radiology = "(radiology|radiographic|radiologic)(.*?):";
+        private static string _instruction = "discharge instruction(.*?):";
+        private static string _disposition = "disposition(.*?):";
+
+
         public IEnumerable<Concept> ReadMultiple(string line)
         {
             var matchConcept = ConceptPattern.Match(line);
@@ -121,17 +138,31 @@ namespace HCMUT.EMRCorefResol.IO
             for(int i=0; i<lines.Length; i++)
             {
                 var line = lines[i];
-                if(line.Length > 0 && char.IsUpper(line[0]) && line[line.Length -1]== ':')
+                var tuple = CheckHeading(line);
+                //if(line.Length > 0 && char.IsUpper(line[0]) && line[line.Length -1]== ':')
+                if (tuple.Item1)
                 {
-                    title = line;
+                    title = tuple.Item2;
                     begin = i + 1;
 
                     //Read section content until find a new section title
                     while (true)
                     {
                         i++;
+                        if (i.Equals(lines.Length))
+                        {
+                            end = i;
+                            var section = new EMRSection(title, content, begin, end);
+                            sections.Add(section);
+                            content = "";
+                            break;
+                        }
+
                         var nextLine = lines[i];
-                        if (i == lines.Length -1 || (nextLine.Length > 0 && char.IsUpper(nextLine[0]) && nextLine[nextLine.Length - 1] == ':'))
+
+                        tuple = CheckHeading(nextLine);
+                        //if (i == lines.Length -1 || (nextLine.Length > 0 && char.IsUpper(nextLine[0]) && nextLine[nextLine.Length - 1] == ':'))
+                        if (tuple.Item1)
                         {
                             i--;
                             end = i + 1;
@@ -146,6 +177,112 @@ namespace HCMUT.EMRCorefResol.IO
             }
 
             return sections;
+        }
+
+        private Tuple<bool, string> CheckHeading(string line)
+        {
+            if(string.IsNullOrEmpty(line) || !CheckCapitol(line) || line[line.Length - 1] != ':')
+            {
+                return Tuple.Create(false, "");
+            }
+
+            if (Regex.IsMatch(line, _history_of_illness_pattern, RegexOptions.IgnoreCase))
+            {
+                return Tuple.Create(true, "History of Present Illness :");
+            }
+
+            if (Regex.IsMatch(line, _allergy, RegexOptions.IgnoreCase))
+            {
+                return Tuple.Create(true, "Allergies :");
+            }
+
+            if (Regex.IsMatch(line, _chief_complaint, RegexOptions.IgnoreCase))
+            {
+                return Tuple.Create(true, "Chief Complaint :");
+            }
+
+            if (Regex.IsMatch(line, _diagnosis, RegexOptions.IgnoreCase))
+            {
+                return Tuple.Create(true, "Diagnosis :");
+            }
+
+            if (Regex.IsMatch(line, _hospital_course, RegexOptions.IgnoreCase))
+            {
+                return Tuple.Create(true, "Hospital Course :");
+            }
+
+            if (Regex.IsMatch(line, _laboratory, RegexOptions.IgnoreCase))
+            {
+                return Tuple.Create(true, "Laboratory Data :");
+            }
+
+            if (Regex.IsMatch(line, _past_medical, RegexOptions.IgnoreCase))
+            {
+                return Tuple.Create(true, "Past Medical History :");
+            }
+
+            if (Regex.IsMatch(line, _medication, RegexOptions.IgnoreCase))
+            {
+                return Tuple.Create(true, "Medication :");
+            }
+
+            if (Regex.IsMatch(line, _physical_exam, RegexOptions.IgnoreCase))
+            {
+                return Tuple.Create(true, "Physical Exam :");
+            }
+
+            if (Regex.IsMatch(line, _procedure, RegexOptions.IgnoreCase))
+            {
+                return Tuple.Create(true, "Procedure :");
+            }
+
+            if (Regex.IsMatch(line, _followup, RegexOptions.IgnoreCase))
+            {
+                return Tuple.Create(true, "Follow-up :");
+            }
+
+            if (Regex.IsMatch(line, _condition, RegexOptions.IgnoreCase))
+            {
+                return Tuple.Create(true, "Condition :");
+            }
+
+            if (Regex.IsMatch(line, _radiology, RegexOptions.IgnoreCase))
+            {
+                return Tuple.Create(true, "Radiology :");
+            }
+
+            if (Regex.IsMatch(line, _instruction, RegexOptions.IgnoreCase))
+            {
+                return Tuple.Create(true, "Instruction :");
+            }
+
+            if (Regex.IsMatch(line, _disposition, RegexOptions.IgnoreCase))
+            {
+                return Tuple.Create(true, "Disposition :");
+            }
+
+            return Tuple.Create(false, "");
+        }
+
+        private bool CheckCapitol(string title)
+        {
+            var words = title.Replace("\r", "").Replace("\n", "").Replace("  ", "").Split(' ');
+
+            var prepositions = new string[] { "of", "in" };
+
+            foreach (string word in words)
+            {
+                if (string.IsNullOrEmpty(word) || word.Equals(":"))
+                {
+                    continue;
+                }
+
+                if (!prepositions.Contains(word) && !char.IsUpper(word[0]))
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
         private Concept ReadConcept(Match matchConcept, Match matchCoref, Match matchType)
