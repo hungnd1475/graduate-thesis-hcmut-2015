@@ -16,7 +16,7 @@ namespace HCMUT.EMRCorefResol.English.Features
 
             if(string.IsNullOrEmpty(anaSection) || string.IsNullOrEmpty(anteSection))
             {
-                SetContinuousValue(0);
+                SetCategoricalValue(0);
                 return;
             }
 
