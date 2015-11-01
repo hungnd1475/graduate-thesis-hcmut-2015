@@ -15,7 +15,7 @@ namespace HCMUT.EMRCorefResol.English.Features
             var anaNorm = instance.Anaphora.Lexicon;
             var anteNorm = instance.Antecedent.Lexicon;
 
-            if(instance.GetType().Name != "PersonPair")
+            if (instance.GetType().Name != "PersonPair")
             {
                 anaNorm = EnglishNormalizer.Normalize(instance.Anaphora.Lexicon);
                 anteNorm = EnglishNormalizer.Normalize(instance.Antecedent.Lexicon);
