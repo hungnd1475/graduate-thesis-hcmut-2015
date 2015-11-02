@@ -109,6 +109,7 @@
     <Compile Include="Features\ProblemTreatmentTest\ModifierFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\OperationFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\PositionFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\ProcedureMatch.cs" />
     <Compile Include="Features\ProblemTreatmentTest\SectionFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\TemporalFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\WikiAnchorLinkFeature.cs" />
