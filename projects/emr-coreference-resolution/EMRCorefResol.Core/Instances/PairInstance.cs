@@ -45,6 +45,28 @@ namespace HCMUT.EMRCorefResol
         {
             return Equals(obj as PairInstance);
         }
+
+        public static IClasInstance Create(Concept ante, Concept ana)
+        {
+            if (ante.Type != ana.Type)
+            {
+                throw new ArgumentException("Types of the two concepts does not match.");
+            }
+
+            switch (ante.Type)
+            {
+                case ConceptType.Person:
+                    return new PersonPair(ante, ana);
+                case ConceptType.Problem:
+                    return new ProblemPair(ante, ana);
+                case ConceptType.Test:
+                    return new TestPair(ante, ana);
+                case ConceptType.Treatment:
+                    return new TreatmentPair(ante, ana);
+                default:
+                    throw new ArgumentException($"Cannot create pair instance with type {ante.Type}");
+            }
+        }
     }
 
     public class PersonPair : PairInstance 

@@ -30,22 +30,14 @@ namespace HCMUT.EMRCorefResol
                         {
                             if (groundTruth.IsCoref(ante, ana))
                             {
-                                var inst = PairInstance(ante, ana);
-                                if (inst != null)
-                                {
-                                    instances.Add(inst);
-                                }
+                                instances.Add(PairInstance.Create(ante, ana));
 
                                 for (int k = i + 1; k < j; k++)
                                 {
                                     var c = concepts[k];
                                     if (c.Type == ana.Type)
                                     {
-                                        inst = PairInstance(c, ana);
-                                        if (inst != null)
-                                        {
-                                            instances.Add(inst);
-                                        }
+                                        instances.Add(PairInstance.Create(c, ana));
                                     }
                                 }
 
@@ -62,23 +54,6 @@ namespace HCMUT.EMRCorefResol
             }
 
             return instances.ToIndexedEnumerable();
-        }
-
-        static IClasInstance PairInstance(Concept ante, Concept ana)
-        {
-            switch (ante.Type)
-            {
-                case ConceptType.Person:
-                    return new PersonPair(ante, ana);
-                case ConceptType.Problem:
-                    return new ProblemPair(ante, ana);
-                case ConceptType.Test:
-                    return new TestPair(ante, ana);
-                case ConceptType.Treatment:
-                    return new TreatmentPair(ante, ana);
-                default:
-                    return null;
-            }
         }
     }
 }
