@@ -49,19 +49,21 @@ namespace HCMUT.EMRCorefResol.English.Features
                 case 1:
                 case 2:
                 case 3:
-                    return indices.Max() + 1;
                 case 4:
                 case 5:
-                    return 5;
+                    return indices.Max() + 1;
                 case 6:
                 case 7:
-                    return 6;
+                    return 7;
                 case 8:
                 case 9:
-                    return 7;
+                    return 8;
                 case 10:
                 case 11:
-                    return 8;
+                    return 9;
+                case 12:
+                case 13:
+                    return 10;
                 default:
                     return 0;
             }

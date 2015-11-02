@@ -21,6 +21,5 @@ rawTerm="an immunosuppressive regimen|OPE"||cui="C0040808"||concept="Regimen"||p
 rawTerm="physical therapy|OPE"||cui="C0949766"||concept="Physical therapy"||prefer="Physical therapy"||semantic=[topp]||confidence="1000"
 rawTerm="tube feed supplements|OPE"||cui="C0041281"||concept="tube feed"||prefer="Tube feeding of patient"||semantic=[topp]||confidence="1000"
 rawTerm="the patient 's liver function tests|ANA"||cui="C0023884"||concept="Liver"||prefer="Liver"||semantic=[bpoc]||confidence="812"
-rawTerm="the patient 's liver function tests|EQP"||cui="C0023884"||concept="Liver"||prefer="Liver"||semantic=[bpoc]||confidence="812"
 rawTerm="the patient 's surgical incision|ANA"||cui="C2338258"||concept="Incision"||prefer="Cranial incision point"||semantic=[blor]||confidence="827"
 rawTerm="liver transplant|OPE"||cui="C0023911"||concept="Liver Transplant"||prefer="Transplantation of liver"||semantic=[topp]||confidence="1000"

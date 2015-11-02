@@ -1,4 +1,6 @@
 rawTerm="intubation|OPE"||cui="C0021925"||concept="Intubation"||prefer="Intubation"||semantic=[topp]||confidence="1000"
+rawTerm="fev1|ANA"||cui="C0849974"||concept="fev 1"||prefer="Pulmonary Function Test/Forced Expiratory Volume 1"||semantic=[diap]||confidence="1000"
+rawTerm="fev1|EQP"||cui="C0849974"||concept="fev 1"||prefer="Pulmonary Function Test/Forced Expiratory Volume 1"||semantic=[diap]||confidence="1000"
 rawTerm="upper respiratory tract infection symptoms|ANA"||cui="C0458578"||concept="Upper respiratory tract"||prefer="Upper respiratory tract"||semantic=[bpoc]||confidence="717"
 rawTerm="community-acquired pneumonia|ANA"||cui="C0024109"||concept="LUNGS"||prefer="Lung"||semantic=[bpoc]||confidence="734"
 rawTerm="chronic obstructive pulmonary disease exacerbation|ANA"||cui="C0024109"||concept="pulmonary"||prefer="Lung"||semantic=[bpoc]||confidence="637"

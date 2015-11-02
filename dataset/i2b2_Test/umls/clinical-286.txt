@@ -1,4 +1,5 @@
 rawTerm="abdominal pain|ANA"||cui="C0000726"||concept="Abdominal"||prefer="Abdomen"||semantic=[blor]||confidence="861"
+rawTerm="cpr|OPE"||cui="C0007203"||concept="CPR"||prefer="Cardiopulmonary Resuscitation"||semantic=[topp]||confidence="1000"
 rawTerm="intubation|OPE"||cui="C0021925"||concept="Intubation"||prefer="Intubation"||semantic=[topp]||confidence="1000"
 rawTerm="upset stomach|ANA"||cui="C0038351"||concept="Stomach"||prefer="Stomach"||semantic=[bpoc]||confidence="861"
 rawTerm="mvi therapeutic w / minerals ( therap vits / minerals )|OPE"||cui="C0039796"||concept="Therapeutic"||prefer="The science and art of healing"||semantic=[topp]||confidence="645"

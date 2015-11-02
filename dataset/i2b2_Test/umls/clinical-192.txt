@@ -16,5 +16,6 @@ rawTerm="an infusion of phenylephrine|OPE"||cui="C0574032"||concept="Infusion"||
 rawTerm="a bioprosthesis|OPE"||cui="C0687710"||concept="bioprosthesis"||prefer="Bioprosthesis procedure"||semantic=[topp]||confidence="1000"
 rawTerm="decannulation|OPE"||cui="C0398305"||concept="Decannulation"||prefer="Vascular cannula removal"||semantic=[topp]||confidence="1000"
 rawTerm="prosthetic aortic valve stenosis|ANA"||cui="C0003501"||concept="Aortic Valve"||prefer="Aortic valve structure"||semantic=[bpoc]||confidence="861"
-rawTerm="incision|ANA"||cui="C2338258"||concept="Incision"||prefer="Cranial incision point"||semantic=[blor]||confidence="1000"
+rawTerm="incision|ANA"||cui="C0184898"||concept="Incision"||prefer="Surgical incisions"||semantic=[topp]||confidence="1000"
 rawTerm="incisions|ANA"||cui="C2338258"||concept="Incision"||prefer="Cranial incision point"||semantic=[blor]||confidence="966"
+rawTerm="drainage|ANA"||cui="C0013103"||concept="Drainage"||prefer="Drainage procedure"||semantic=[topp]||confidence="1000"

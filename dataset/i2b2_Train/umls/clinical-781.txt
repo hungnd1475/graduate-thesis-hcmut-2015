@@ -5,6 +5,8 @@ rawTerm="abdominal ct|ANA"||cui="C0000726"||concept="Abdominal"||prefer="Abdomen
 rawTerm="abdominal ct|EQP"||cui="C0000726"||concept="Abdominal"||prefer="Abdomen"||semantic=[blor]||confidence="694"
 rawTerm="multiple liver metastases|ANA"||cui="C0023884"||concept="Liver"||prefer="Liver"||semantic=[bpoc]||confidence="660"
 rawTerm="packed red blood cells|OPE"||cui="C0184967"||concept="Packed"||prefer="Insertion of pack (procedure)"||semantic=[topp]||confidence="812"
+rawTerm="colonoscopy|ANA"||cui="C0009378"||concept="colonoscopy"||prefer="colonoscopy"||semantic=[diap|topp]||confidence="1000"
+rawTerm="colonoscopy|EQP"||cui="C0009378"||concept="colonoscopy"||prefer="colonoscopy"||semantic=[diap|topp]||confidence="1000"
 rawTerm="head ct|ANA"||cui="C0018670"||concept="Head"||prefer="Head"||semantic=[blor]||confidence="694"
 rawTerm="head ct|EQP"||cui="C0018670"||concept="Head"||prefer="Head"||semantic=[blor]||confidence="694"
 rawTerm="further treatment|OPE"||cui="C0087111"||concept="Treatment"||prefer="Therapeutic procedure"||semantic=[topp]||confidence="861"

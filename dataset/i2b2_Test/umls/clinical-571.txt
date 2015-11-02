@@ -9,7 +9,6 @@ rawTerm="transrectal ultrasound|EQP"||cui="C0524447"||concept="Transrectal"||pre
 rawTerm="right eye cataract|ANA"||cui="C0229089"||concept="Right eye"||prefer="Right eye"||semantic=[blor]||confidence="734"
 rawTerm="jugular venous distention|ANA"||cui="C0042449"||concept="Venous"||prefer="Veins"||semantic=[bpoc]||confidence="827"
 rawTerm="his white blood count|ANA"||cui="C0005847"||concept="Blood Vessel"||prefer="Blood Vessel"||semantic=[bpoc]||confidence="743"
-rawTerm="his white blood count|EQP"||cui="C0005847"||concept="Blood Vessel"||prefer="Blood Vessel"||semantic=[bpoc]||confidence="743"
 rawTerm="marked occult blood|ANA"||cui="C0005847"||concept="Blood Vessel"||prefer="Blood Vessel"||semantic=[bpoc]||confidence="743"
 rawTerm="positive white blood cell screen|ANA"||cui="C0005847"||concept="Blood Vessel"||prefer="Blood Vessel"||semantic=[bpoc]||confidence="554"
 rawTerm="his chest x-ray|ANA"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="827"
@@ -21,4 +20,5 @@ rawTerm="chest x-ray|ANA"||cui="C0817096"||concept="Chest"||prefer="Chest"||sema
 rawTerm="chest x-ray|EQP"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="827"
 rawTerm="autologous packed red blood cells|OPE"||cui="C0184967"||concept="Packed"||prefer="Insertion of pack (procedure)"||semantic=[topp]||confidence="804"
 rawTerm="chest pain|ANA"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="861"
+rawTerm="a repeat ekg|EQP"||cui="C1623258"||concept="EKG"||prefer="Electrocardiography"||semantic=[diap]||confidence="861"
 rawTerm="the transfusion|OPE"||cui="C0005841"||concept="Transfusion"||prefer="Blood Transfusion"||semantic=[topp]||confidence="1000"

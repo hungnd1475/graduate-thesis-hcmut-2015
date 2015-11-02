@@ -1,4 +1,6 @@
 rawTerm="tube feeds|OPE"||cui="C0041281"||concept="tube feed"||prefer="Tube feeding of patient"||semantic=[topp]||confidence="1000"
+rawTerm="ct of neck with contrast|ANA"||cui="C0027530"||concept="Neck"||prefer="Neck"||semantic=[blor]||confidence="623"
+rawTerm="erythema from the midline posterior neck|ANA"||cui="C0581758"||concept="posterior neck"||prefer="Nuchal region"||semantic=[blor]||confidence="623"
 rawTerm="h. pylori|ANA"||cui="C0034196"||concept="Pylorus"||prefer="Pylorus"||semantic=[bpoc]||confidence="827"
 rawTerm="neck ct|ANA"||cui="C0027530"||concept="Neck"||prefer="Neck"||semantic=[blor]||confidence="694"
 rawTerm="neck ct|EQP"||cui="C0027530"||concept="Neck"||prefer="Neck"||semantic=[blor]||confidence="694"

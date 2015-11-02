@@ -4,6 +4,8 @@ rawTerm="central line placement|OPE"||cui="C0919865"||concept="central line plac
 rawTerm="hepatic encephalopathy|ANA"||cui="C0205054"||concept="Hepatic"||prefer="Hepatic"||semantic=[blor]||confidence="861"
 rawTerm="abdominal pain|ANA"||cui="C0000726"||concept="Abdominal"||prefer="Abdomen"||semantic=[blor]||confidence="861"
 rawTerm="scleral icterus|ANA"||cui="C0036410"||concept="Scleral"||prefer="Sclera"||semantic=[bpoc]||confidence="694"
+rawTerm="ecg|ANA"||cui="C1623258"||concept="ECG NOS"||prefer="Electrocardiography"||semantic=[diap]||confidence="1000"
+rawTerm="ecg|EQP"||cui="C1623258"||concept="ECG NOS"||prefer="Electrocardiography"||semantic=[diap]||confidence="1000"
 rawTerm="intubation|OPE"||cui="C0021925"||concept="Intubation"||prefer="Intubation"||semantic=[topp]||confidence="1000"
 rawTerm="aspiration pneumonia|ANA"||cui="C0024109"||concept="LUNGS"||prefer="Lung"||semantic=[bpoc]||confidence="768"
 rawTerm="potential extubation|OPE"||cui="C0553891"||concept="Extubation"||prefer="Tracheal Extubation"||semantic=[topp]||confidence="861"

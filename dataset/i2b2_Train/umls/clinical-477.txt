@@ -1,5 +1,6 @@
 rawTerm="congestive heart failure|ANA"||cui="C0018787"||concept="Heart"||prefer="Heart"||semantic=[bpoc]||confidence="827"
 rawTerm="intrauterine pregnancy|ANA"||cui="C0694756"||concept="Intrauterine"||prefer="Intrauterine"||semantic=[bsoj]||confidence="861"
+rawTerm="a baseline ejection fraction|EQP"||cui="C0489482"||concept="ejection fraction"||prefer="Ejection fraction (procedure)"||semantic=[diap]||confidence="901"
 rawTerm="bilateral lower extremity edema|ANA"||cui="C0023216"||concept="Lower Extremity"||prefer="Lower Extremity"||semantic=[blor]||confidence="694"
 rawTerm="jugular venous distension|ANA"||cui="C0042449"||concept="Venous"||prefer="Veins"||semantic=[bpoc]||confidence="660"
 rawTerm="cesarean section|OPE"||cui="C0007876"||concept="Caesarean Section"||prefer="Cesarean section"||semantic=[topp]||confidence="1000"

@@ -6,6 +6,7 @@ rawTerm="heent exam|ANA"||cui="C1512338"||concept="HEENT"||prefer="HEENT"||seman
 rawTerm="heent exam|EQP"||cui="C1512338"||concept="HEENT"||prefer="HEENT"||semantic=[blor]||confidence="694"
 rawTerm="her pelvic exam|ANA"||cui="C0030797"||concept="Pelvic"||prefer="Pelvis"||semantic=[blor]||confidence="694"
 rawTerm="her pelvic exam|EQP"||cui="C0030797"||concept="Pelvic"||prefer="Pelvis"||semantic=[blor]||confidence="694"
+rawTerm="stage ii squamous cell carcinoma of the vulva|ANA"||cui="C0042993"||concept="Vulva"||prefer="Vulva"||semantic=[bpoc]||confidence="578"
 rawTerm="right radical vulvectomy|OPE"||cui="C0177252"||concept="Radical vulvectomy"||prefer="Radical vulvectomy"||semantic=[topp]||confidence="901"
 rawTerm="vulvectomy|OPE"||cui="C0195066"||concept="Vulvectomy"||prefer="Vulvectomy"||semantic=[topp]||confidence="1000"
 rawTerm="a right radical vulvectomy|OPE"||cui="C0177252"||concept="Radical vulvectomy"||prefer="Radical vulvectomy"||semantic=[topp]||confidence="901"

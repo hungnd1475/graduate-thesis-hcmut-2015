@@ -1,7 +1,7 @@
 rawTerm="right shoulder instability|ANA"||cui="C0524468"||concept="Right shoulder"||prefer="Structure of right shoulder region"||semantic=[blor]||confidence="734"
 rawTerm="knee surgery|OPE"||cui="C0187769"||concept="knee surgery"||prefer="Operative procedure on knee"||semantic=[topp]||confidence="1000"
 rawTerm="his cervical spine examination|ANA"||cui="C0728985"||concept="Cervical spine"||prefer="Cervical spine"||semantic=[bpoc]||confidence="734"
-rawTerm="his cervical spine examination|EQP"||cui="C0728985"||concept="Cervical spine"||prefer="Cervical spine"||semantic=[bpoc]||confidence="734"
+rawTerm="his cervical spine examination|EQP"||cui="C0562264"||concept="spine examination"||prefer="Examination of spine"||semantic=[diap]||confidence="901"
 rawTerm="shoulder elevation|ANA"||cui="C0037004"||concept="Shoulder"||prefer="Shoulder"||semantic=[blor]||confidence="694"
 rawTerm="shoulder elevation|EQP"||cui="C0037004"||concept="Shoulder"||prefer="Shoulder"||semantic=[blor]||confidence="694"
 rawTerm="1 cm. sulcus sign bilaterally|ANA"||cui="C1184482"||concept="Sulcus"||prefer="Groove"||semantic=[bsoj]||confidence="827"

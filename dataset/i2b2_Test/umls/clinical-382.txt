@@ -11,7 +11,7 @@ rawTerm="suction curettage|OPE"||cui="C0042223"||concept="Suction Curettage"||pr
 rawTerm="a supercervical hysterectomy|OPE"||cui="C0020699"||concept="Hysterectomy"||prefer="Hysterectomy"||semantic=[topp]||confidence="861"
 rawTerm="this procedure|OPE"||cui="C0184661"||concept="Procedure"||prefer="Interventional procedure"||semantic=[diap|topp]||confidence="1000"
 rawTerm="ligation|OPE"||cui="C0023690"||concept="Ligation"||prefer="Ligation"||semantic=[topp]||confidence="1000"
-rawTerm="a bleeding vaginal artery|ANA"||cui="C0226381"||concept="Vaginal artery"||prefer="Structure of vaginal artery"||semantic=[bpoc]||confidence="1000"
+rawTerm="a bleeding vaginal artery|ANA"||cui="C0226381"||concept="Vaginal artery"||prefer="Structure of vaginal artery"||semantic=[bpoc]||confidence="901"
 rawTerm="these procedures|OPE"||cui="C0184661"||concept="Procedures"||prefer="Interventional procedure"||semantic=[diap|topp]||confidence="1000"
 rawTerm="product transfusions|OPE"||cui="C0005841"||concept="Transfusions"||prefer="Blood Transfusion"||semantic=[topp]||confidence="861"
 rawTerm="uterine atony|ANA"||cui="C0042149"||concept="Uterine"||prefer="Uterus"||semantic=[bpoc]||confidence="694"

@@ -12,6 +12,8 @@ rawTerm="femoral pulses|EQP"||cui="C0015811"||concept="Femoral"||prefer="Femur"|
 rawTerm="blood pressures|ANA"||cui="C0005847"||concept="Blood Vessel"||prefer="Blood Vessel"||semantic=[bpoc]||confidence="777"
 rawTerm="blood pressures|EQP"||cui="C0005847"||concept="Blood Vessel"||prefer="Blood Vessel"||semantic=[bpoc]||confidence="777"
 rawTerm="npo|OPE"||cui="C0419179"||concept="NPO"||prefer="NPO - Nothing by mouth"||semantic=[topp]||confidence="1000"
+rawTerm="discharge weight|ANA"||cui="C1305866"||concept="weight"||prefer="Weighing patient"||semantic=[diap]||confidence="861"
+rawTerm="discharge weight|EQP"||cui="C1305866"||concept="weight"||prefer="Weighing patient"||semantic=[diap]||confidence="861"
 rawTerm="phototherapy|OPE"||cui="C0031765"||concept="Phototherapy"||prefer="Phototherapy"||semantic=[topp]||confidence="1000"
 rawTerm="immunizations|OPE"||cui="C0020971"||concept="Immunizations"||prefer="Immunization"||semantic=[topp]||confidence="1000"
 rawTerm="synagis rsv prophylaxis|OPE"||cui="C0199176"||concept="Prophylaxis"||prefer="Prophylactic treatment"||semantic=[topp]||confidence="827"

@@ -5,6 +5,7 @@ rawTerm="appendectomy|OPE"||cui="C0003611"||concept="Appendectomy"||prefer="Appe
 rawTerm="omental biopsy|ANA"||cui="C0028977"||concept="Omental"||prefer="Omentum"||semantic=[bpoc]||confidence="694"
 rawTerm="omental biopsy|EQP"||cui="C0028977"||concept="Omental"||prefer="Omentum"||semantic=[bpoc]||confidence="694"
 rawTerm="a pelvic mass|ANA"||cui="C0030797"||concept="Pelvic"||prefer="Pelvis"||semantic=[blor]||confidence="694"
+rawTerm="an ultrasound|EQP"||cui="C0041618"||concept="Ultrasound"||prefer="Ultrasonography"||semantic=[diap]||confidence="1000"
 rawTerm="an ovarian mass|ANA"||cui="C0205065"||concept="Ovarian"||prefer="Ovaro-"||semantic=[bpoc]||confidence="694"
 rawTerm="an abdominal ct|ANA"||cui="C0000726"||concept="Abdominal"||prefer="Abdomen"||semantic=[blor]||confidence="694"
 rawTerm="an abdominal ct|EQP"||cui="C0000726"||concept="Abdominal"||prefer="Abdomen"||semantic=[blor]||confidence="694"

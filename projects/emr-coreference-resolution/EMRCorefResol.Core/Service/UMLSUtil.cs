@@ -38,7 +38,7 @@ namespace HCMUT.EMRCorefResol.Service
                     options = "-J \"anst,blor,bpoc,bsoj\"";
                     break;
                 case 1:
-                    options = "-J medd";
+                    options = "-J medd,diap";
                     break;
                 case 2:
                     options = "-J topp";
