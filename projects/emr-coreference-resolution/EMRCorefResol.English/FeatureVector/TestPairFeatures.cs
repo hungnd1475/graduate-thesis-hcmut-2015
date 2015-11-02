@@ -12,7 +12,7 @@ namespace HCMUT.EMRCorefResol.English
     {
         public TestPairFeatures(TestPair instance, EMR emr, double classValue,
             WikiDataDictionary wikiData, UmlsDataDictionary umlsData)
-            :base(size:19, classValue: classValue)
+            :base(size:20, classValue: classValue)
         {
             //var wikiDictionary = WikiInformation.GetWikiInfo(emr.Path);
             var anaWiki = wikiData.Get(instance.Anaphora.Lexicon);
@@ -42,6 +42,7 @@ namespace HCMUT.EMRCorefResol.English
 
             this[17] = new AnatomyFeature(instance, umlsData);
             this[18] = new EquipmentFeature(instance, umlsData);
+            this[19] = new ProcedureMatch(instance);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace HCMUT.EMRCorefResol.English
     {
         public TreatmentPairFeatures(TreatmentPair instance, EMR emr, double classValue,
             MedicationInfoCollection medInfo, WikiDataDictionary wikiData, UmlsDataDictionary umlsData)
-            :base(size:20, classValue: classValue)
+            :base(size:21, classValue: classValue)
         {
             //var medicationCollections = MedicationInformation.GetMedicationInfo(emr.Path);
 
@@ -52,6 +52,7 @@ namespace HCMUT.EMRCorefResol.English
             this[18] = new WikiBoldNameMatchFeature(anaWiki, anteWiki);
 
             this[19] = new OperationFeature(instance, umlsData);
+            this[20] = new ProcedureMatch(instance);
         }
 
         private MedicationInfo GetMedicationInfo(Concept c, EMR emr, MedicationInfoCollection meds)
