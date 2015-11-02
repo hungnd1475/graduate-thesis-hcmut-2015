@@ -12,18 +12,10 @@ namespace HCMUT.EMRCorefResol.English.Features
         public ContainFeature(IConceptPair instance)
             :base("Contain-Feature", 2, 0)
         {
-            var searcher = new AhoCorasickKeywordDictionary(new string[] { instance.Anaphora.Lexicon });
-            if(searcher.Match(instance.Antecedent.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
+            if (instance.Anaphora.Lexicon.Contains(instance.Antecedent.Lexicon) ||
+                instance.Antecedent.Lexicon.Contains(instance.Anaphora.Lexicon))
             {
                 SetCategoricalValue(1);
-                return;
-            }
-
-            searcher = new AhoCorasickKeywordDictionary(new string[] { instance.Antecedent.Lexicon });
-            if (searcher.Match(instance.Anaphora.Lexicon, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
-            {
-                SetCategoricalValue(1);
-                return;
             }
         }
     }
