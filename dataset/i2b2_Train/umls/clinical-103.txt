@@ -14,4 +14,4 @@ rawTerm="blood|EQP"||cui="C0005847"||concept="Blood Vessel"||prefer="Blood Vesse
 rawTerm="a cabg|OPE"||cui="C0010055"||concept="CABG"||prefer="Coronary Artery Bypass Surgery"||semantic=[topp]||confidence="1000"
 rawTerm="this procedure|OPE"||cui="C0184661"||concept="Procedure"||prefer="Interventional procedure"||semantic=[diap|topp]||confidence="1000"
 rawTerm="your chest wound|ANA"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="694"
-rawTerm="incision|ANA"||cui="C2338258"||concept="Incision"||prefer="Cranial incision point"||semantic=[blor]||confidence="1000"
+rawTerm="incision|ANA"||cui="C0184898"||concept="Incision"||prefer="Surgical incisions"||semantic=[topp]||confidence="1000"

@@ -16,14 +16,15 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
 
         static void Main(string[] args)
         {
-            var collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Test");
-            //BatchUMLSProcess(collection);
-            BatchWikiProcess(collection);
+            var collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Train");
+            BatchUMLSProcess(collection);
+            //BatchWikiProcess(collection);
 
-            collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Train");
-            //BatchUMLSProcess(collection);
-            BatchWikiProcess(collection);
+            collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Test");
+            BatchUMLSProcess(collection);
+            //BatchWikiProcess(collection);
 
+            Console.WriteLine("========Finish========");
             Console.ReadLine();
         }
 
@@ -36,7 +37,6 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
             var emr = new EMR(emrPath, conceptPath, dataReader);
             var filename = new FileInfo(emr.Path).Name;
 
-            Console.WriteLine($"Processing file {filename}");
             var dictionary = ExtractUMLSData(emr);
             WriteToFile(emr.Path, dictionary);
             Console.WriteLine($"Finish processing file {filename}");
@@ -44,7 +44,22 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
 
         static void BatchUMLSProcess(EMRCollection collection)
         {
-            for (int i = 0; i < collection.Count; i++)
+            Parallel.For(0, collection.Count,
+                i =>
+                {
+                    var emrPath = collection.GetEMRPath(i);
+                    var conceptPath = collection.GetConceptsPath(i);
+                    var dataReader = new I2B2DataReader();
+
+                    var emr = new EMR(emrPath, conceptPath, dataReader);
+                    var filename = new FileInfo(emr.Path).Name;
+
+                    var dictionary = ExtractUMLSData(emr);
+                    WriteToFile(emr.Path, dictionary);
+                    Console.WriteLine($"Finish processing file {filename}");
+                });
+
+            /*for (int i = 0; i < collection.Count; i++)
             {
                 var emrPath = collection.GetEMRPath(i);
                 var conceptPath = collection.GetConceptsPath(i);
@@ -53,16 +68,30 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
                 var emr = new EMR(emrPath, conceptPath, dataReader);
                 var filename = new FileInfo(emr.Path).Name;
 
-                Console.WriteLine($"Processing file {filename}");
                 var dictionary = ExtractUMLSData(emr);
                 WriteToFile(emr.Path, dictionary);
                 Console.WriteLine($"Finish processing file {filename}");
-            }
+            }*/
         }
 
         static void BatchWikiProcess(EMRCollection collection)
         {
-            for (int i = 0; i < collection.Count; i++)
+            Parallel.For(0, collection.Count,
+                i =>
+                {
+                    var emrPath = collection.GetEMRPath(i);
+                    var conceptPath = collection.GetConceptsPath(i);
+                    var dataReader = new I2B2DataReader();
+
+                    var emr = new EMR(emrPath, conceptPath, dataReader);
+                    var filename = new FileInfo(emr.Path).Name;
+
+                    var dictionary = ExtractWikiData(emr);
+                    WriteToFile(emr.Path, dictionary);
+                    Console.WriteLine($"Finish processing file {filename}");
+                });
+
+            /*for (int i = 0; i < collection.Count; i++)
             {
                 var emrPath = collection.GetEMRPath(i);
                 var conceptPath = collection.GetConceptsPath(i);
@@ -71,11 +100,10 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
                 var emr = new EMR(emrPath, conceptPath, dataReader);
                 var filename = new FileInfo(emr.Path).Name;
 
-                Console.WriteLine($"Processing file {filename}");
                 var dictionary = ExtractWikiData(emr);
                 WriteToFile(emr.Path, dictionary);
                 Console.WriteLine($"Finish processing file {filename}");
-            }
+            }*/
         }
 
         static Dictionary<string, Service.WikiData> ExtractWikiData(EMR emr)
@@ -85,9 +113,6 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
             int num = 0;
             foreach(Concept c in emr.Concepts)
             {
-                Console.WriteLine($"Number of concept processed: {num}/{emr.Concepts.Count}");
-                Console.SetCursorPosition(0, Console.CursorTop-1);
-
                 if (c.Type == ConceptType.Problem || c.Type == ConceptType.Treatment || c.Type == ConceptType.Test)
                 {
                     if (!_wiki.ContainsKey(c.Lexicon))
@@ -100,7 +125,6 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
 
                 num++;
             }
-            Console.SetCursorPosition(0, Console.CursorTop + 1);
             return _wiki;
         }
 
@@ -111,16 +135,12 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
             int num = 0;
             foreach (Concept c in emr.Concepts)
             {
-                Console.WriteLine($"Number of concept processed: {num}/{emr.Concepts.Count}");
-                Console.SetCursorPosition(0, Console.CursorTop - 1);
-
                 if(c.Type == ConceptType.Problem)
                 {
                     var key = $"{c.Lexicon}|ANA";
                     if (!_umls.ContainsKey(key))
                     {
-                        var normalized = EnglishNormalizer.Normalize(c.Lexicon);
-                        var umlsData = Service.English.GetUMLSInformation(normalized, Service.UMLSUtil.UMLS_ANATOMY);
+                        var umlsData = Service.English.GetUMLSInformation(c.Lexicon, Service.UMLSUtil.UMLS_ANATOMY);
                         _umls.Add(key, umlsData);
                     }
                 }
@@ -141,8 +161,7 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
                     var key = $"{c.Lexicon}|ANA";
                     if (!_umls.ContainsKey(key))
                     {
-                        var normalized = EnglishNormalizer.Normalize(c.Lexicon);
-                        var umlsData = Service.English.GetUMLSInformation(normalized, Service.UMLSUtil.UMLS_ANATOMY);
+                        var umlsData = Service.English.GetUMLSInformation(c.Lexicon, Service.UMLSUtil.UMLS_ANATOMY);
                         _umls.Add(key, umlsData);
                     }
 
@@ -157,7 +176,6 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
 
                 num++;
             }
-            Console.SetCursorPosition(0, Console.CursorTop + 1);
             return _umls;
         }
 

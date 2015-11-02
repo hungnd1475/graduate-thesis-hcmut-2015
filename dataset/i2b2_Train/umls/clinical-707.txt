@@ -6,5 +6,7 @@ rawTerm="heart rates|EQP"||cui="C0018787"||concept="Heart"||prefer="Heart"||sema
 rawTerm="mean blood pressures|ANA"||cui="C0005847"||concept="Blood Vessel"||prefer="Blood Vessel"||semantic=[bpoc]||confidence="743"
 rawTerm="mean blood pressures|EQP"||cui="C0005847"||concept="Blood Vessel"||prefer="Blood Vessel"||semantic=[bpoc]||confidence="743"
 rawTerm="treatment|OPE"||cui="C0087111"||concept="Treatment"||prefer="Therapeutic procedure"||semantic=[topp]||confidence="1000"
+rawTerm="a hearing screen|EQP"||cui="C1705053"||concept="Screen"||prefer="Screen Device Component"||semantic=[medd]||confidence="1000"
 rawTerm="automated auditory brain stem responses|ANA"||cui="C0006121"||concept="Brain Stem"||prefer="Brain Stem"||semantic=[bpoc]||confidence="840"
 rawTerm="automated auditory brain stem responses|EQP"||cui="C0006121"||concept="Brain Stem"||prefer="Brain Stem"||semantic=[bpoc]||confidence="840"
+rawTerm="a state newborn screen|EQP"||cui="C1705053"||concept="Screen"||prefer="Screen Device Component"||semantic=[medd]||confidence="827"

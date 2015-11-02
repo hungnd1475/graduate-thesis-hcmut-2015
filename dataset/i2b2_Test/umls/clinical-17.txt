@@ -8,6 +8,8 @@ rawTerm="chest pain|ANA"||cui="C0817096"||concept="Chest"||prefer="Chest"||seman
 rawTerm="shoulder pain|ANA"||cui="C0037004"||concept="Shoulder"||prefer="Shoulder"||semantic=[blor]||confidence="861"
 rawTerm="jaw pain|ANA"||cui="C0022359"||concept="Jaw"||prefer="Jaw"||semantic=[bpoc]||confidence="694"
 rawTerm="lung resection|OPE"||cui="C0396565"||concept="lung resection"||prefer="Lung excision"||semantic=[topp]||confidence="1000"
+rawTerm="fev1|ANA"||cui="C0849974"||concept="fev 1"||prefer="Pulmonary Function Test/Forced Expiratory Volume 1"||semantic=[diap]||confidence="1000"
+rawTerm="fev1|EQP"||cui="C0849974"||concept="fev 1"||prefer="Pulmonary Function Test/Forced Expiratory Volume 1"||semantic=[diap]||confidence="1000"
 rawTerm="chronic pericardial effusion|ANA"||cui="C0031050"||concept="Pericardial"||prefer="Pericardial sac structure"||semantic=[bpoc]||confidence="827"
 rawTerm="r renal artery stenosis|ANA"||cui="C0035065"||concept="Renal Artery"||prefer="Structure of renal artery"||semantic=[bpoc]||confidence="861"
 rawTerm="small pleural effusion|ANA"||cui="C0032225"||concept="Pleural"||prefer="Pleura"||semantic=[bpoc]||confidence="827"

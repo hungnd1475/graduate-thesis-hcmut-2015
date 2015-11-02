@@ -3,6 +3,7 @@ rawTerm="alleyne blood type|EQP"||cui="C0005847"||concept="Blood Vessel"||prefer
 rawTerm="phototherapy|OPE"||cui="C0031765"||concept="Phototherapy"||prefer="Phototherapy"||semantic=[topp]||confidence="1000"
 rawTerm="the heart rate|ANA"||cui="C0018787"||concept="Heart"||prefer="Heart"||semantic=[bpoc]||confidence="861"
 rawTerm="the heart rate|EQP"||cui="C0018787"||concept="Heart"||prefer="Heart"||semantic=[bpoc]||confidence="861"
+rawTerm="his discharge weight|EQP"||cui="C1305866"||concept="weight"||prefer="Weighing patient"||semantic=[diap]||confidence="861"
 rawTerm="double phototherapy|OPE"||cui="C0031765"||concept="Phototherapy"||prefer="Phototherapy"||semantic=[topp]||confidence="861"
 rawTerm="immunization|OPE"||cui="C0020971"||concept="Immunisation"||prefer="Immunization"||semantic=[topp]||confidence="1000"
 rawTerm="influenza immunization|OPE"||cui="C0042200"||concept="Influenza immunisation"||prefer="Influenza vaccination"||semantic=[topp]||confidence="1000"

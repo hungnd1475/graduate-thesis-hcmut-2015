@@ -2,6 +2,8 @@
 right
 upper
 lower
+back
+front
 left upper
 upper left
 right upper

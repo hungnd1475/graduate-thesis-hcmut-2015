@@ -1,1 +1,2 @@
+rawTerm="an outpatient holter monitor|EQP"||cui="C0013801"||concept="Holter Monitor"||prefer="Holter Electrocardiography"||semantic=[diap]||confidence="901"
 rawTerm="chest pain|ANA"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="861"

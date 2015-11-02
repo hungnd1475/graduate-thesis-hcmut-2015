@@ -1,3 +1,4 @@
+rawTerm="minor fullness of the left renal pelvis|ANA"||cui="C0227668"||concept="Left renal pelvis"||prefer="Structure of left renal pelvis"||semantic=[bpoc]||confidence="647"
 rawTerm="delivery|OPE"||cui="C0011209"||concept="Delivery"||prefer="Obstetric Delivery"||semantic=[topp]||confidence="1000"
 rawTerm="repeat c-section|OPE"||cui="C1293097"||concept="Section, NOS"||prefer="Division (surgical procedure)"||semantic=[topp]||confidence="827"
 rawTerm="femoral pulses|ANA"||cui="C0015811"||concept="Femoral"||prefer="Femur"||semantic=[bpoc]||confidence="694"
@@ -8,7 +9,5 @@ rawTerm="chest x-ray|EQP"||cui="C0817096"||concept="Chest"||prefer="Chest"||sema
 rawTerm="streaky lung fields|ANA"||cui="C0225759"||concept="Lung field"||prefer="Lung field"||semantic=[blor]||confidence="884"
 rawTerm="retained fetal lung fluid|ANA"||cui="C0024109"||concept="Lung"||prefer="Lung"||semantic=[bpoc]||confidence="645"
 rawTerm="phototherapy|OPE"||cui="C0031765"||concept="Phototherapy"||prefer="Phototherapy"||semantic=[topp]||confidence="1000"
-rawTerm="blood culture|ANA"||cui="C0005847"||concept="Blood Vessel"||prefer="Blood Vessel"||semantic=[bpoc]||confidence="777"
-rawTerm="blood culture|EQP"||cui="C0005847"||concept="Blood Vessel"||prefer="Blood Vessel"||semantic=[bpoc]||confidence="777"
 rawTerm="transfusion|OPE"||cui="C0005841"||concept="Transfusion"||prefer="Blood Transfusion"||semantic=[topp]||confidence="1000"
 rawTerm="immunizations|OPE"||cui="C0020971"||concept="Immunizations"||prefer="Immunization"||semantic=[topp]||confidence="1000"

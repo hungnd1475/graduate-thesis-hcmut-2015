@@ -12,7 +12,7 @@ namespace HCMUT.EMRCorefResol.English
     {
         public ProblemPairFeatures(ProblemPair instance, EMR emr, double classValue,
             WikiDataDictionary wikiData, UmlsDataDictionary umlsData)
-            : base(size: 14, classValue: classValue)
+            : base(size: 15, classValue: classValue)
         {
             //var wikiDictionary = WikiInformation.GetWikiInfo(emr.Path);
             var anaWiki = wikiData.Get(instance.Anaphora.Lexicon);

@@ -2,6 +2,7 @@ rawTerm="chest pain|ANA"||cui="C0817096"||concept="Chest"||prefer="Chest"||seman
 rawTerm="chest pain unclear etiology|ANA"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="645"
 rawTerm="metastatic squamous cell lung ca|ANA"||cui="C0024109"||concept="Lung"||prefer="Lung"||semantic=[bpoc]||confidence="637"
 rawTerm="mets to spine , femur|ANA"||cui="C0037949"||concept="Spine"||prefer="Vertebral column"||semantic=[bpoc]||confidence="623"
+rawTerm="tumor invasive of pleura and rib|ANA"||cui="C0032225"||concept="Pleura"||prefer="Pleura"||semantic=[bpoc]||confidence="623"
 rawTerm="acute onset left chest pain|ANA"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="861"
 rawTerm="pneumonia|ANA"||cui="C0024109"||concept="LUNGS"||prefer="Lung"||semantic=[bpoc]||confidence="907"
 rawTerm="post-obstructive pneumonia|ANA"||cui="C0024109"||concept="LUNGS"||prefer="Lung"||semantic=[bpoc]||confidence="734"

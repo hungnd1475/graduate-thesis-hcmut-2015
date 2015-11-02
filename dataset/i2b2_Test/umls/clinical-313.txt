@@ -15,7 +15,6 @@ rawTerm="a previous nasal arterial embolization|OPE"||cui="C1332335"||concept="A
 rawTerm="treatment|OPE"||cui="C0087111"||concept="Treatment"||prefer="Therapeutic procedure"||semantic=[topp]||confidence="1000"
 rawTerm="a partial gastrectomy|OPE"||cui="C0030600"||concept="Partial gastrectomy"||prefer="Subtotal gastrectomy"||semantic=[topp]||confidence="1000"
 rawTerm="her jugular venous pulse|ANA"||cui="C0042449"||concept="Venous"||prefer="Veins"||semantic=[bpoc]||confidence="827"
-rawTerm="her jugular venous pulse|EQP"||cui="C0042449"||concept="Venous"||prefer="Veins"||semantic=[bpoc]||confidence="827"
 rawTerm="venous stasis changes on her legs|ANA"||cui="C0042449"||concept="Venous"||prefer="Veins"||semantic=[bpoc]||confidence="861"
 rawTerm="a mitral valve replacement|OPE"||cui="C0026268"||concept="Mitral Valve Replacement"||prefer="Replacement of mitral valve (procedure)"||semantic=[topp]||confidence="1000"
 rawTerm="a 27 mm . st. jude prosthesis|OPE"||cui="C0525024"||concept="prosthesis"||prefer="Prosthesis Implantation"||semantic=[topp]||confidence="804"

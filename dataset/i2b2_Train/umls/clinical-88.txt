@@ -1,6 +1,7 @@
 rawTerm="aspiration pneumonia|ANA"||cui="C0024109"||concept="LUNGS"||prefer="Lung"||semantic=[bpoc]||confidence="768"
 rawTerm="head trauma|ANA"||cui="C0018670"||concept="Head"||prefer="Head"||semantic=[blor]||confidence="861"
 rawTerm="tongue fasciculations|ANA"||cui="C0040408"||concept="Tongue"||prefer="Tongue"||semantic=[bpoc]||confidence="694"
+rawTerm="decreased bs over left middle lung|ANA"||cui="C0225730"||concept="Left lung"||prefer="Left lung"||semantic=[bpoc]||confidence="617"
 rawTerm="blood|ANA"||cui="C0005847"||concept="Blood Vessel"||prefer="Blood Vessel"||semantic=[bpoc]||confidence="916"
 rawTerm="blood|EQP"||cui="C0005847"||concept="Blood Vessel"||prefer="Blood Vessel"||semantic=[bpoc]||confidence="916"
 rawTerm="the nasogastric tube|OPE"||cui="C0812428"||concept="Nasogastric tube"||prefer="Nasogastric tube procedures"||semantic=[topp]||confidence="1000"
