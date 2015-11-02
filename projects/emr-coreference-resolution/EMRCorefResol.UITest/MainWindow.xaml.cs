@@ -402,7 +402,7 @@ namespace EMRCorefResol.UITest
                 var reader = new I2B2DataReader();
                 var emr = currentEMR;
                 var chains = new CorefChainCollection(chainsPath, reader);
-                var instances = new Soon2001InstancesGenerator().Generate(emr, chains);
+                var instances = new Soon2001ModInstancesGenerator().Generate(emr, chains);
 
                 var extractor = new EnglishTrainingFeatureExtractor();
                 extractor.EMR = emr;

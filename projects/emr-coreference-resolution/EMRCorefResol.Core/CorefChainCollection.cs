@@ -173,7 +173,7 @@ namespace HCMUT.EMRCorefResol
         public bool IsCoref(Concept first, Concept second, out CorefChain chain)
         {
             chain = FindChainContains(first);
-            return chain != null ? chain.Contains(second) : false;
+            return chain?.Contains(second) ?? false;
         }
 
         public CorefChainCollection GetChainsOfType(ConceptType type)

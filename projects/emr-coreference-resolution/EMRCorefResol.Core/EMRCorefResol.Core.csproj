@@ -95,6 +95,7 @@
     <Compile Include="Evaluations\Evaluation.cs" />
     <Compile Include="Evaluations\IPerfMetric.cs" />
     <Compile Include="Evaluations\MUCPerfMetric.cs" />
+    <Compile Include="Instances\Soon2001ModInstancesGenerator.cs" />
     <Compile Include="Service\ServiceModels\UMLSData.cs" />
     <Compile Include="Service\UMLSUtil.cs" />
     <Compile Include="Service\WikiUltil.cs" />

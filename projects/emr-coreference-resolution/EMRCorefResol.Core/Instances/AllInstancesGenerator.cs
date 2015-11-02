@@ -27,21 +27,7 @@ namespace HCMUT.EMRCorefResol
                         var ana = emr.Concepts[j];
                         if (ante.Type == ana.Type)
                         {
-                            switch (ante.Type)
-                            {
-                                case ConceptType.Person:
-                                    instances.Add(new PersonPair(ante, ana));
-                                    break;
-                                case ConceptType.Problem:
-                                    instances.Add(new ProblemPair(ante, ana));
-                                    break;
-                                case ConceptType.Test:
-                                    instances.Add(new TestPair(ante, ana));
-                                    break;
-                                case ConceptType.Treatment:
-                                    instances.Add(new TreatmentPair(ante, ana));
-                                    break;
-                            }
+                            instances.Add(PairInstance.Create(ante, ana));
                         }
                     }
                 }
