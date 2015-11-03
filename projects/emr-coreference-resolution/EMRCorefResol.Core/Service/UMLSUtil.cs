@@ -14,6 +14,7 @@ namespace HCMUT.EMRCorefResol.Service
         public static int UMLS_ANATOMY = 0;
         public static int UMLS_EQUIPMENT = 1;
         public static int UMLS_OPERATION = 2;
+        public static int UMLS_INDICATOR = 3;
 
         private const string UMLS_ROOT = @"E:\public_mm\bin\metamap";
 
@@ -35,13 +36,16 @@ namespace HCMUT.EMRCorefResol.Service
             switch (restrict)
             {
                 case 0:
-                    options = "-J \"anst,blor,bpoc,bsoj\"";
+                    options = "-J \"anst,blor,bpoc,bsoj,bdsu,bdsy\"";
                     break;
                 case 1:
                     options = "-J \"medd,diap\"";
                     break;
                 case 2:
                     options = "-J topp";
+                    break;
+                case 3:
+                    options = "-J \"qnco,phsu,elii,lbtr,chem,inch,orch,lbpr\"";
                     break;
             }
 
@@ -123,13 +127,13 @@ namespace HCMUT.EMRCorefResol.Service
 
         private UMLSData ParseUMLSData(XmlNode xml)
         {
-            var score = -int.Parse(xml["MappingScore"].InnerText);
-            var bestCandidate = GetBestCandidate(xml, score);
+            var bestCandidate = GetBestCandidate(xml);
             if (bestCandidate == null) return null;
 
             var concept = bestCandidate["CandidateMatched"].InnerText;
             var prefer = bestCandidate["CandidatePreferred"].InnerText;
             var cui = bestCandidate["CandidateCUI"].InnerText;
+            var score = -int.Parse(bestCandidate["CandidateScore"].InnerText);
 
             List<string> semantics = new List<string>();
             var semtypes = bestCandidate["SemTypes"].GetElementsByTagName("SemType");
@@ -141,20 +145,24 @@ namespace HCMUT.EMRCorefResol.Service
             return new UMLSData(cui, concept, prefer, semantics.ToArray(), score);
         }
 
-        private XmlNode GetBestCandidate(XmlNode xml, int score)
+        private XmlNode GetBestCandidate(XmlNode xml)
         {
             var candidates = xml["MappingCandidates"].GetElementsByTagName("Candidate");
+
+            var bestScore = 0;
+            XmlNode bestCandidate = null;
             foreach(XmlNode node in candidates)
             {
                 var candidateScore = -int.Parse(node["CandidateScore"].InnerText);
 
-                if (candidateScore.Equals(score))
+                if (candidateScore > bestScore)
                 {
-                    return node;
+                    bestScore = candidateScore;
+                    bestCandidate = node;
                 }
             }
 
-            return null;
+            return bestCandidate;
         }
     }
 }

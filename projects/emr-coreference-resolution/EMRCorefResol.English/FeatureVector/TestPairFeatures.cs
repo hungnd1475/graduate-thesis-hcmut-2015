@@ -31,7 +31,7 @@ namespace HCMUT.EMRCorefResol.English
             this[8] = new StringMatchFeature(instance);
 
             this[9] = new PositionFeature(instance, emr);
-            this[10] = new IndicatorFeature(instance);
+            this[10] = new IndicatorFeature(instance, umlsData, emr);
             this[11] = new TemporalFeature(instance, emr);
             this[12] = new SectionFeature(instance, emr);
             this[13] = new ModifierFeature(instance, emr);

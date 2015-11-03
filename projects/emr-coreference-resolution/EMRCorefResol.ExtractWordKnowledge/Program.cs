@@ -172,6 +172,13 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
                         var umlsData = Service.English.GetUMLSInformation(normalized, Service.UMLSUtil.UMLS_EQUIPMENT);
                         _umls.Add(key, umlsData);
                     }
+
+                    key = $"{c.Lexicon}|INDI";
+                    if (!_umls.ContainsKey(key))
+                    {
+                        var umlsData = Service.English.GetUMLSInformation(c.Lexicon, Service.UMLSUtil.UMLS_INDICATOR);
+                        _umls.Add(key, umlsData);
+                    }
                 }
 
                 num++;
