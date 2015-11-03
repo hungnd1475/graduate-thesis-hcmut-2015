@@ -64,15 +64,28 @@ namespace HCMUT.EMRCorefResol.English.Features
 
         private Tuple<string, string> GetIndicatorsPairValue(string line, string term)
         {
-            var pattern = term + "[ ]{0,}(-|of|was|were)?[ ]{0,}(\\d+\\.\\d?|\\d+,\\d?|\\d+)(%)?";
+            var pattern = term + "[ ]{0,}(-|of|was|were)?[ ]{0,}(\\d+\\.\\d?|\\d+,\\d?|\\d+)";
             var match = Regex.Match(line, pattern, RegexOptions.IgnoreCase);
-            if (!match.Success)
+            var value = "";
+            if (match.Success)
+            {
+                value = match.Groups[2].Value;
+            }
+
+            pattern = "(\\d+\\.\\d?|\\d+,\\d?|\\d+)[ ]{0,}(%)?[ ]{0,}" + term;
+            match = Regex.Match(line, pattern, RegexOptions.IgnoreCase);
+            if (match.Success)
+            {
+                value = match.Groups[1].Value;
+            }
+
+            if (!value.Equals(""))
+            {
+                return Tuple.Create(term, value);
+            } else
             {
                 return null;
             }
-            var value = match.Groups[2].Value;
-
-            return Tuple.Create(term, value);
         }
     }
 }
