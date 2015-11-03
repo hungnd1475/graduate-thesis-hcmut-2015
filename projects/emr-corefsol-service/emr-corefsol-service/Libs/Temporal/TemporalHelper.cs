@@ -15,7 +15,7 @@ namespace emr_corefsol_service.Libs
         private string year_re = @"[12][0-9][0-9][0-9]";
         private string month_re = @"([01][0-9]|[1-9])";
         private string day_re = @"([0123][0-9]|[1-9])";
-        private string delimiter = @"[\\/-\.]";
+        private string delimiter = @"[\\/-]";
         private string month_string = "(january|jan|february|feb|march|mar|april|apr|may|june|jun|july|jul|august|aug|september|sep|sept|october|oct|november|nov|december|dec)";
 
         private string pythonLib = HostingEnvironment.MapPath(@"~\Lib");
