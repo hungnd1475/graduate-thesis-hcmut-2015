@@ -13,8 +13,8 @@ namespace emr_corefsol_service.Libs
         private List<Regex> _inferred = null;
         private List<Regex> _explicit = null;
         private string year_re = @"[12][0-9][0-9][0-9]";
-        private string month_re = @"[01][0-9]";
-        private string day_re = @"[0123][0-9]";
+        private string month_re = @"([01][0-9]|[1-9])";
+        private string day_re = @"([0123][0-9]|[1-9])";
         private string delimiter = @"[\\/-\.]";
         private string month_string = "(january|jan|february|feb|march|mar|april|apr|may|june|jun|july|jul|august|aug|september|sep|sept|october|oct|november|nov|december|dec)";
 
@@ -32,7 +32,7 @@ namespace emr_corefsol_service.Libs
             _inferred.Add(new Regex(@"(?:early)? ?(?:post)? ?(?:-)? ?(operative|extubation) ?(?:course)"));
             _inferred.Add(new Regex(day_re + " " + month_string + " " + year_re));
             _inferred.Add(new Regex(month_string + " " + day_re + " " + year_re));
-            _inferred.Add(new Regex(month_string + " (of|in)?" + year_re));
+            _inferred.Add(new Regex(month_string + " (of |in )?" + year_re));
             _inferred.Add(new Regex(@"(next|previous|last) (day|month|year)"));
 
             _explicit = new List<Regex>();
