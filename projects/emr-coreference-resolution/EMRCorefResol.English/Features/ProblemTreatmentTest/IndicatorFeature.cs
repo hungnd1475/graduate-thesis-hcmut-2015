@@ -6,26 +6,73 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol.English.Features
 {
+    using System.Text.RegularExpressions;
     using Utilities;
+    using Service;
     class IndicatorFeature : Feature
     {
-        public IndicatorFeature(IConceptPair instance)
-            :base("Indicator-Feature", 2, 0)
+        public IndicatorFeature(IConceptPair instance, UmlsDataDictionary dictionary, EMR emr)
+            :base("Indicator-Feature", 3, 2)
         {
-            var searcher = KeywordService.Instance.INDICATOR_KEYWORD;
+            var anaIndi = dictionary.Get($"{instance.Anaphora.Lexicon}|INDI");
+            var anaLine = emr.GetLine(instance.Anaphora);
+            var anteIndi = dictionary.Get($"{instance.Antecedent.Lexicon}|INDI");
+            var anteLine = emr.GetLine(instance.Antecedent);
 
-            var anaIndex = searcher.SearchDictionaryIndices(instance.Anaphora.Lexicon.Replace('-', ' '), KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord);
-            var anteIndex = searcher.SearchDictionaryIndices(instance.Antecedent.Lexicon.Replace('-', ' '), KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord);
-
-            if(anaIndex.Length <=0 || anteIndex.Length <= 0)
+            if (anaIndi == null || anteIndi == null)
             {
                 return;
             }
 
-            if(anaIndex.Intersect(anteIndex).Count() > 0)
+            var anaValue = GetIndicatorsPairValue(anaLine, instance.Anaphora.Lexicon);
+            var anteValue = GetIndicatorsPairValue(anteLine, instance.Antecedent.Lexicon);
+
+            if(anaValue == null || anteValue == null)
+            {
+                return;
+            }
+
+            if(CheckMatchPair(anaValue, anteValue, anaIndi, anteIndi))
             {
                 SetCategoricalValue(1);
+            } else
+            {
+                SetCategoricalValue(0);
             }
+        }
+
+        private bool CheckMatchPair(Tuple<string, string> anaValue, Tuple<string, string> anteValue,
+            UMLSData anaUmls, UMLSData anteUmls)
+        {
+            //Difference value
+            if(anaValue.Item2 != anteValue.Item2)
+            {
+                return false;
+            }
+
+            //Difference indicator
+            if(anaValue.Item1 != anteValue.Item1 && anaValue.Item1 != anteUmls.Concept && anaValue.Item1 != anteUmls.Prefer &&
+                anteValue.Item1 != anaUmls.Concept && anteValue.Item1 != anaUmls.Prefer &&
+                anteUmls.Concept != anaUmls.Concept && anteUmls.Prefer != anaUmls.Prefer &&
+                anteUmls.Concept != anaUmls.Prefer && anteUmls.Prefer != anaUmls.Concept)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        private Tuple<string, string> GetIndicatorsPairValue(string line, string term)
+        {
+            var pattern = term + "[ ]{0,}(-|of|was|were)?[ ]{0,}(\\d+\\.\\d?|\\d+,\\d?|\\d+)(%)?";
+            var match = Regex.Match(line, pattern, RegexOptions.IgnoreCase);
+            if (!match.Success)
+            {
+                return null;
+            }
+            var value = match.Groups[2].Value;
+
+            return Tuple.Create(term, value);
         }
     }
 }

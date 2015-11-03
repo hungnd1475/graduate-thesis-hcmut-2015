@@ -182,10 +182,7 @@ namespace HCMUT.EMRCorefResol.Service
 
         public static UMLSData GetUMLSInformation(string term, int options)
         {
-            return _umlsCache.GetValue(term, (string search_term) =>
-            {
-                return _umls.GetUMLSInfo(search_term, options);
-            });
+            return _umls.GetUMLSInfo(term, options);
         }
     }
 }
