@@ -87,6 +87,7 @@
     <Compile Include="LibSVM\LibSVM.cs" />
     <Compile Include="LibSVM\Internal\SVMModel.cs" />
     <Compile Include="LibSVM\LibSVMConfig.cs" />
+    <Compile Include="LibSVM\LibSVMScalingFactor.cs" />
     <Compile Include="LibSVM\RBFKernelParameterOptimizer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LibSVM\LibSVMProblemSerializer.cs" />

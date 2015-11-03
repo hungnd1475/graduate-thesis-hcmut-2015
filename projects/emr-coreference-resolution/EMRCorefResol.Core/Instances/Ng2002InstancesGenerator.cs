@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol
 {
-    public class Soon2001ModInstancesGenerator : IInstancesGenerator
+    public class Ng2002InstancesGenerator : IInstancesGenerator
     {
         public IIndexedEnumerable<IClasInstance> Generate(EMR emr, CorefChainCollection groundTruth)
         {
@@ -21,8 +21,9 @@ namespace HCMUT.EMRCorefResol
                 {
                     instances.Add(new PronounInstance(ana));
                 }
-                else
+                else if (ana.Type == ConceptType.Person)
                 {
+                    instances.Add(new PersonInstance(ana));
                     for (int i = j - 1; i >= 0; i--)
                     {
                         var ante = concepts[i];
@@ -34,12 +35,31 @@ namespace HCMUT.EMRCorefResol
                                 break;
                             }
                         }
-                    }
+                    }                    
                 }
+            }
 
-                if (ana.Type == ConceptType.Person)
+            for (int i = 0; i < concepts.Count; i++)
+            {
+                var ante = concepts[i];
+                if (ante.Type != ConceptType.Pronoun && ante.Type != ConceptType.Person)
                 {
-                    instances.Add(new PersonInstance(ana));
+                    for (int j = i + 1; j < concepts.Count; j++)
+                    {
+                        var ana = concepts[j];
+                        if (ana.Type == ante.Type && groundTruth.IsCoref(ante, ana))
+                        {
+                            instances.Add(PairInstance.Create(ante, ana));
+                            for (int k = i + 1; k < j; k++)
+                            {
+                                var negAnte = concepts[k];
+                                if (negAnte.Type == ana.Type)
+                                {
+                                    instances.Add(PairInstance.Create(negAnte, ana));
+                                }
+                            }
+                        }
+                    }
                 }
             }
 

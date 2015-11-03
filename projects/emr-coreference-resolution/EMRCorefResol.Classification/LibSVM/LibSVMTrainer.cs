@@ -90,7 +90,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
                 C = 1,
                 Gamma = 1d / problem.GetDimension(),
                 Probability = true,
-                Shrinking = true
+                Shrinking = false
             };
 
             bool applyWeights = false;
