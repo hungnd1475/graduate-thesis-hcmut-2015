@@ -59,7 +59,7 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
             var dataReader = APISelector.SelectDataReader(args.EMRFormat);
             var fExtractor = APISelector.SelectFeatureExtractor(args.Language, args.Mode, 
                 args.ClasMethod, args.ModelsDir);
-            var instancesGenerator = new Ng2002InstancesGenerator();
+            var instancesGenerator = new AllInstancesGenerator();
 
             if (!string.IsNullOrEmpty(args.EMRFile))
             {

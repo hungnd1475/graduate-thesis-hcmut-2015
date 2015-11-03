@@ -13,12 +13,18 @@ namespace HCMUT.EMRCorefResol.English.Features
         public PronounTheyFeature(PersonInstance instance)
             :base("Pronoun-They", 2, 0)
         {
-            var kw_searcher = KeywordService.Instance.THEY_KEYWORDS;
-            var exist = kw_searcher.Match(instance.Concept.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
+            var conLex = instance.Concept.Lexicon;
+            var conArr = conLex.Split(' ');
 
-            if (exist)
+            if (conArr.Length == 1)
             {
-                SetCategoricalValue(1);
+                var kw_searcher = KeywordService.Instance.THEY_KEYWORDS;
+                var exist = kw_searcher.Match(conLex, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
+
+                if (exist)
+                {
+                    SetCategoricalValue(1);
+                }
             }
         }
     }

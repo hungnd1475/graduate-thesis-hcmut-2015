@@ -72,6 +72,9 @@
                 <TabItem Header="System Chains">
                     <avalonEdit:TextEditor x:Name="txtSystemChains" FontFamily="Consolas" FontSize="15" IsReadOnly="True"/>
                 </TabItem>
+                <TabItem Header="Scores">
+                    <avalonEdit:TextEditor x:Name="txtScores" FontFamily="Consolas" FontSize="15" IsReadOnly="True"/>
+                </TabItem>
                 <TabItem Header="Features">
                     <avalonEdit:TextEditor x:Name="txtFeatures" FontFamily="Consolas" FontSize="15" IsReadOnly="True"/>
                 </TabItem>

@@ -41,7 +41,6 @@ pediatrician
 plastic surgeon
 physiologist
 physiatrist
-plastic surgeon
 podiatrist
 psychiatrist
 pulmonologist

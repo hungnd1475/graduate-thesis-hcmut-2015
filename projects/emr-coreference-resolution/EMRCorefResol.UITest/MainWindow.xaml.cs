@@ -47,8 +47,6 @@ namespace EMRCorefResol.UITest
 
         private EMRCollection emrCollection;
 
-        private bool conChainMouseDown = false;
-
         public MainWindow()
         {
             InitializeComponent();
@@ -56,92 +54,37 @@ namespace EMRCorefResol.UITest
             txtEMRPath.Text = @"..\..\..\..\..\dataset\i2b2_Test";
             emrCollection = new EMRCollection(txtEMRPath.Text);
 
-            txtEMR.ShowLineNumbers = true;
-            txtEMR.TextArea.SelectionCornerRadius = 0;
-            txtEMR.TextArea.SelectionBorder = null;
-            txtEMR.TextArea.TextView.LineTransformers.Add(
-                new SelectionHighlighter(emrSelectionInfo, new SolidColorBrush(Color.FromRgb(112, 183, 255)),
-                    Brushes.White));
+            var emrHighlightBrush = new SolidColorBrush(Color.FromRgb(112, 183, 255));
+            var conceptHighlightBrush = new SolidColorBrush(Color.FromRgb(226, 230, 214));
 
-            txtCons.ShowLineNumbers = true;
-            txtCons.TextArea.SelectionBrush = null;
-            txtCons.TextArea.SelectionBorder = null;
-            txtCons.TextArea.SelectionForeground = null;
-            txtCons.TextArea.TextView.LineTransformers.Add(
-                new SelectionHighlighter(conceptSelectionInfo, new SolidColorBrush(Color.FromRgb(226, 230, 214)), null));
+            initTextEditor(txtEMR, false, emrSelectionInfo, emrHighlightBrush, Brushes.White, false);
+            initTextEditor(txtCons, true, conceptSelectionInfo, conceptHighlightBrush, null, true);
+            initTextEditor(txtChains, true, chainSelectionInfo, conceptHighlightBrush, null, true);
+            initTextEditor(txtSystemChains, true, systemChainsSelectionInfo, conceptHighlightBrush, null, true);
+            initTextEditor(txtFeatures, true, featuresSelectionInfo, conceptHighlightBrush, null, true);
 
-            txtChains.ShowLineNumbers = true;
-            txtChains.WordWrap = true;
-            txtChains.TextArea.SelectionForeground = null;
-            txtChains.TextArea.SelectionBorder = null;
-            txtChains.TextArea.SelectionBrush = null;
-            txtChains.TextArea.TextView.LineTransformers.Add(
-                new SelectionHighlighter(chainSelectionInfo, new SolidColorBrush(Color.FromRgb(226, 230, 214)), null));
-
-            txtSystemChains.ShowLineNumbers = true;
-            txtSystemChains.WordWrap = true;
-            txtSystemChains.TextArea.SelectionForeground = null;
-            txtSystemChains.TextArea.SelectionBorder = null;
-            txtSystemChains.TextArea.SelectionBrush = null;
-            txtSystemChains.TextArea.TextView.LineTransformers.Add(
-                new SelectionHighlighter(systemChainsSelectionInfo, new SolidColorBrush(Color.FromRgb(226, 230, 214)), null));
-
-            txtFeatures.ShowLineNumbers = true;
-            txtFeatures.WordWrap = true;
-            //txtFeatures.TextArea.SelectionBrush = null;
-            txtFeatures.TextArea.SelectionBorder = null;
-            //txtFeatures.TextArea.SelectionForeground = null;
-            txtFeatures.TextArea.SelectionCornerRadius = 0;
-            txtFeatures.TextArea.TextView.LineTransformers.Add(
-                new SelectionHighlighter(featuresSelectionInfo, new SolidColorBrush(Color.FromRgb(226, 230, 214)), null));
-
-            txtCons.TextArea.Caret.PositionChanged += txtCon_Caret_PositionChanged;
-            txtCons.PreviewMouseDoubleClick += txt_PreviewMouseDoubleClick;
-            txtCons.TextArea.PreviewMouseDown += txt_TextArea_PreviewMouseDown;
-            txtCons.TextArea.PreviewMouseUp += txt_TextArea_PreviewMouseUp;
-
-            txtChains.TextArea.Caret.PositionChanged += txtChains_Caret_PositionChanged;
-            txtChains.PreviewMouseDoubleClick += txt_PreviewMouseDoubleClick;
-            txtChains.TextArea.PreviewMouseDown += txt_TextArea_PreviewMouseDown;
-            txtChains.TextArea.PreviewMouseUp += txt_TextArea_PreviewMouseUp;
-
-            txtSystemChains.TextArea.Caret.PositionChanged += txtSystemChains_Caret_PositionChanged;
-            txtSystemChains.PreviewMouseDoubleClick += txt_PreviewMouseDoubleClick;
-            txtSystemChains.TextArea.PreviewMouseDown += txt_TextArea_PreviewMouseDown;
-            txtSystemChains.TextArea.PreviewMouseUp += txt_TextArea_PreviewMouseUp;
-
-            txtFeatures.TextArea.Caret.PositionChanged += txtFeatures_Caret_PositionChanged;
-            txtFeatures.PreviewMouseDoubleClick += txt_PreviewMouseDoubleClick;
-            //txtFeatures.TextArea.PreviewMouseDown += txt_TextArea_PreviewMouseDown;
-            //txtFeatures.TextArea.PreviewMouseUp += txt_TextArea_PreviewMouseUp;
-
-            SearchPanel.Install(txtEMR.TextArea);
-            SearchPanel.Install(txtCons.TextArea);
-            SearchPanel.Install(txtChains.TextArea);
-            SearchPanel.Install(txtFeatures.TextArea);
-            SearchPanel.Install(txtSystemChains.TextArea);
-
-            txtEMR.Document = new TextDocument();
-            txtCons.Document = new TextDocument();
-            txtChains.Document = new TextDocument();
-            txtSystemChains.Document = new TextDocument();          
+            txtScores.ShowLineNumbers = true;
+            txtScores.TextArea.SelectionCornerRadius = 0;
+            txtScores.Document = new TextDocument();  
         }
 
-        private void txt_TextArea_PreviewMouseUp(object sender, MouseButtonEventArgs e)
+        private void initTextEditor(TextEditor textEditor, bool wordWrap, SelectionInfo selectionInfo, 
+            Brush selectionBgBrush, Brush selectionFgBrush, bool registerHighlight)
         {
-            var txt = sender as TextEditor;
-            if (txt != null && e.LeftButton == MouseButtonState.Released && conChainMouseDown)
+            textEditor.ShowLineNumbers = true;
+            textEditor.WordWrap = wordWrap;
+            textEditor.TextArea.SelectionCornerRadius = 0;
+            textEditor.TextArea.TextView.LineTransformers
+                .Add(new SelectionHighlighter(selectionInfo, selectionBgBrush, selectionFgBrush));
+
+            if (registerHighlight)
             {
-                txt.TextArea.ClearSelection();
-                conChainMouseDown = false;
+                textEditor.TextArea.Caret.PositionChanged += (s, e) => txt_Caret_PositionChanged(textEditor, selectionInfo);
+                textEditor.PreviewMouseDoubleClick += txt_PreviewMouseDoubleClick;
             }
-        }
 
-        private void txt_TextArea_PreviewMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            var txt = sender as TextEditor;
-            if (txt != null && e.LeftButton == MouseButtonState.Pressed)
-                conChainMouseDown = true;
+            SearchPanel.Install(textEditor.TextArea);
+            textEditor.Document = new TextDocument();
         }
 
         private void txt_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -184,24 +127,9 @@ namespace EMRCorefResol.UITest
             }
         }
 
-        private void txtCon_Caret_PositionChanged(object sender, EventArgs e)
+        private void txt_Caret_PositionChanged(TextEditor textEditor, SelectionInfo selectionInfo)
         {
-            highlightConcept(txtCons, conceptSelectionInfo);
-        }
-
-        private void txtChains_Caret_PositionChanged(object sender, EventArgs e)
-        {
-            highlightConcept(txtChains, chainSelectionInfo);
-        }
-
-        private void txtFeatures_Caret_PositionChanged(object sender, EventArgs e)
-        {
-            highlightConcept(txtFeatures, featuresSelectionInfo);
-        }
-
-        private void txtSystemChains_Caret_PositionChanged(object sender, EventArgs e)
-        {
-            highlightConcept(txtSystemChains, systemChainsSelectionInfo);
+            highlightConcept(textEditor, selectionInfo);
         }
 
         private void highlightConcept(TextEditor txt, SelectionInfo selectionInfo)
@@ -356,10 +284,24 @@ namespace EMRCorefResol.UITest
                     {
                         var chainsFileName = IOPath.GetFileName(chainsPath);
                         var systemChainsPath = IOPath.Combine(txtSystemChainsPath.Text, chainsFileName);
-                        sr = new StreamReader(systemChainsPath);
-                        txtSystemChains.Document.Text = sr.ReadToEnd();
-                        txtSystemChains.ScrollTo(1, 1);
-                        sr.Close();
+
+                        if (File.Exists(systemChainsPath))
+                        {
+                            sr = new StreamReader(systemChainsPath);
+                            txtSystemChains.Document.Text = sr.ReadToEnd();
+                            txtSystemChains.ScrollTo(1, 1);
+                            sr.Close();
+                        }
+
+                        var emrFileName = IOPath.GetFileName(emrPath);
+                        var scoresPath = IOPath.Combine(txtSystemChainsPath.Text, $"{emrFileName}.scores");
+                        if (File.Exists(scoresPath))
+                        {
+                            sr = new StreamReader(scoresPath);
+                            txtScores.Document.Text = sr.ReadToEnd();
+                            txtScores.ScrollTo(1, 1);
+                            sr.Close();
+                        }
                     }
 
                     tabEMR.Header = IOPath.GetFileName(emrPath);

@@ -26,8 +26,8 @@ namespace HCMUT.EMRCorefResol.English.Features
 
         private int GetSectionPairIndex(string s1, string s2)
         {
-            var s1Index = KeywordService.Instance.SECTION_TITLES.SearchDictionaryIndices(s1, Utilities.KWSearchOptions.WholeWordIngoreCase)[0];
-            var s2Index = KeywordService.Instance.SECTION_TITLES.SearchDictionaryIndices(s2, Utilities.KWSearchOptions.WholeWordIngoreCase)[0];
+            var s1Index = KeywordService.Instance.SECTION_TITLES.SearchDictionaryIndices(s1, Utilities.KWSearchOptions.WholeWordIgnoreCase)[0];
+            var s2Index = KeywordService.Instance.SECTION_TITLES.SearchDictionaryIndices(s2, Utilities.KWSearchOptions.WholeWordIgnoreCase)[0];
             var maxSectionNumber = KeywordService.Instance.SECTION_TITLES.Count;
             return (s1Index * maxSectionNumber) + s2Index + 1;
         }

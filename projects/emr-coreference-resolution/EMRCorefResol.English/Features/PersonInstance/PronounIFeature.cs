@@ -13,12 +13,18 @@ namespace HCMUT.EMRCorefResol.English.Features
         public PronounIFeature(PersonInstance instance)
             : base("Prounoun-I", 2, 0)
         {
-            var kw_searcher = KeywordService.Instance.I_KEYWORDS;
-            var exist = kw_searcher.Match(instance.Concept.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
+            var conLex = instance.Concept.Lexicon;
+            var conArr = conLex.Split(' ');
 
-            if (exist)
+            if (conArr.Length == 1)
             {
-                SetCategoricalValue(1);
+                var kw_searcher = KeywordService.Instance.I_KEYWORDS;
+                var exist = kw_searcher.Match(conLex, KWSearchOptions.WholeWordIgnoreCase);
+
+                if (exist)
+                {
+                    SetCategoricalValue(1);
+                }
             }
         }
     }

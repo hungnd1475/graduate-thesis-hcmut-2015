@@ -21,7 +21,7 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
         static void Main(string[] args)
         {
-            ReadExtractedFile();
+            testRemoveKeywords();
             Console.ReadLine();
         }
 
@@ -29,6 +29,14 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
         {
             var dataReader = new I2B2DataReader();
             var collection = new UmlsDataDictionary(@"E:\graduate-thesis-hcmut-2015\dataset\i2b2_Train\umls\clinical-11.txt", dataReader);
+        }
+
+        static void testRemoveKeywords()
+        {
+            var keywords = new AhoCorasickKeywordDictionary("dr.", "dr");
+            var s = "dr.bean drthanh";
+            s = keywords.RemoveKeywords(s, KWSearchOptions.WholeWordIgnoreCase);
+            Console.WriteLine(s);
         }
 
         static void testClassifier()

@@ -51,7 +51,7 @@ namespace HCMUT.EMRCorefResol.English
             }
 
             var medCollection = new MedicationInfoCollection(medPath, dataReader);
-            _meds.Add(emrPath, medCollection);
+            //_meds.Add(emrPath, medCollection);
 
             return medCollection;
         }

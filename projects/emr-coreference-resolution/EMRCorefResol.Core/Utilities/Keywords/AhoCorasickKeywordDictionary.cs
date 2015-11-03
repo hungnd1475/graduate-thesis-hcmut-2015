@@ -122,13 +122,13 @@ namespace HCMUT.EMRCorefResol.Utilities
             {
                 if (options.HasFlag(KWSearchOptions.WholeWord))
                 {
-                    if (i == s.Length - 1 || s[i + 1] == ' ')
+                    if (i == s.Length - 1 || char.IsWhiteSpace(s, i + 1))
                     {
                         foreach (var kwi in node.KWIndices)
                         {
                             var kw = _kwList[kwi];
                             var bIndex = i - kw.Length;
-                            if (bIndex < 0 || s[bIndex] == ' ')
+                            if (bIndex < 0 || char.IsWhiteSpace(s, bIndex))
                             {
                                 found = true;
                                 break;
@@ -160,13 +160,13 @@ namespace HCMUT.EMRCorefResol.Utilities
             {
                 if (options.HasFlag(KWSearchOptions.WholeWord))
                 {
-                    if (i == s.Length - 1 || s[i + 1] == ' ')
+                    if (i == s.Length - 1 || char.IsWhiteSpace(s, i + 1))
                     {
                         foreach (var kwi in node.KWIndices)
                         {
                             var kw = _kwList[kwi];
                             var bIndex = i - kw.Length;
-                            if (bIndex < 0 || s[bIndex] == ' ')
+                            if (bIndex < 0 || char.IsWhiteSpace(s, bIndex))
                                 outIndices.Add(bIndex + 1);
                         }
                     }
@@ -189,13 +189,13 @@ namespace HCMUT.EMRCorefResol.Utilities
             {
                 if (options.HasFlag(KWSearchOptions.WholeWord))
                 {
-                    if (i == s.Length - 1 || s[i + 1] == ' ')
+                    if (i == s.Length - 1 || char.IsWhiteSpace(s, i + 1))
                     {
                         foreach (var kwi in node.KWIndices)
                         {
                             var kw = _kwList[kwi];
                             var bIndex = i - kw.Length;
-                            if (bIndex < 0 || s[bIndex] == ' ')
+                            if (bIndex < 0 || char.IsWhiteSpace(s, bIndex))
                                 outIndices.Add(kwi);
                         }
                     }
@@ -212,18 +212,81 @@ namespace HCMUT.EMRCorefResol.Utilities
 
         public string RemoveKeywords(string s, KWSearchOptions options)
         {
-            var keywords = SearchKeywords(s, options);
+            var keywords = new List<string>();
+            var indices = new List<int>();
 
-            string pattern = options.HasFlag(KWSearchOptions.WholeWord) ? 
-                "\\b(" + string.Join("|", keywords.Select(x => Regex.Escape(x))) + ")\\b":
-                string.Join("|", keywords.Select(x => Regex.Escape(x)));
+            SearchWithAction(s, options, (i, node) =>
+            {
+                string longestKW = null;
+                int index = -1;
 
+                if (i == s.Length - 1 || char.IsWhiteSpace(s, i + 1))
+                {
+                    foreach (var kwi in node.KWIndices)
+                    {
+                        var kw = _kwList[kwi];
+                        var bIndex = i - kw.Length;
+                        if (bIndex < 0 || char.IsWhiteSpace(s, bIndex))
+                        {
+                            if (longestKW == null || longestKW.Length < kw.Length)
+                            {
+                                index = bIndex + 1;
+                                longestKW = kw;
+                            }
+                        }
+                    }
+                }
 
-            var normalized = Regex
-                .Replace(s, pattern, "", options.HasFlag(KWSearchOptions.IgnoreCase) ? RegexOptions.IgnoreCase : RegexOptions.None)
-                .Replace("/[ ]{2,}/", "");
+                if (longestKW != null)
+                {
+                    keywords.Add(longestKW);
+                    indices.Add(index);
+                }
 
-            return normalized.Trim();
+                return false;
+            });
+
+            var newS = s;
+            var totalLength = 0;
+
+            for (int i = 0; i < keywords.Count; i++)
+            {
+                var index = indices[i] - totalLength;
+                var length = keywords[i].Length;
+
+                if (index >= 0 && index < newS.Length)
+                {
+                    var t = newS.Substring(index, length);
+                    if (string.Equals(t, keywords[i]))
+                    {
+                        newS = newS.Remove(index, length);
+                    }
+                }
+
+                totalLength += length;
+            }
+
+            var result = new StringBuilder();
+            var space = false;
+
+            for (int i = 0; i < newS.Length; i++)
+            {
+                if (char.IsWhiteSpace(newS, i))
+                {
+                    if (!space)
+                    {
+                        result.Append(newS[i]);
+                        space = true;
+                    }
+                }
+                else
+                {
+                    result.Append(newS[i]);
+                    space = false;
+                }
+            }
+
+            return result.ToString().Trim();
         }
 
         private void SearchWithAction(string s, KWSearchOptions option, Func<int, TrieNode, bool> processResult)

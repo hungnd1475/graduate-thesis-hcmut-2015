@@ -12,22 +12,28 @@ namespace HCMUT.EMRCorefResol.English.Features
         public PronounHeSheFeature(PersonInstance instance, int mostGender)
             : base("Pronoun-HeShe", 2, 0)
         {
-            var kw_searcher = KeywordService.Instance.HESHE_KEYWORDS;
-            var indices = kw_searcher.SearchDictionaryIndices(instance.Concept.Lexicon, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase);
+            var conLex = instance.Concept.Lexicon;
+            var conArr = conLex.Split(' ');
 
-            if (indices.Length <= 0)
+            if (conArr.Length == 1)
             {
-                return;
-            }
+                var kw_searcher = KeywordService.Instance.HESHE_KEYWORDS;
+                var indices = kw_searcher.SearchDictionaryIndices(conLex, KWSearchOptions.WholeWordIgnoreCase);
 
-            if (mostGender == 0 && indices[0] <= 3)
-            {
-                SetCategoricalValue(1);
-            }
+                if (indices.Length <= 0)
+                {
+                    return;
+                }
 
-            if (mostGender == 1 && indices[0] > 3)
-            {
-                SetCategoricalValue(1);
+                if (mostGender == 0 && indices[0] <= 3)
+                {
+                    SetCategoricalValue(1);
+                }
+
+                if (mostGender == 1 && indices[0] > 3)
+                {
+                    SetCategoricalValue(1);
+                }
             }
         }
     }
