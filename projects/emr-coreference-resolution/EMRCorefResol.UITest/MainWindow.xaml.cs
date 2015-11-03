@@ -84,7 +84,7 @@ namespace EMRCorefResol.UITest
             txtSystemChains.TextArea.SelectionBorder = null;
             txtSystemChains.TextArea.SelectionBrush = null;
             txtSystemChains.TextArea.TextView.LineTransformers.Add(
-                new SelectionHighlighter(chainSelectionInfo, new SolidColorBrush(Color.FromRgb(226, 230, 214)), null));
+                new SelectionHighlighter(systemChainsSelectionInfo, new SolidColorBrush(Color.FromRgb(226, 230, 214)), null));
 
             txtFeatures.ShowLineNumbers = true;
             txtFeatures.WordWrap = true;
@@ -434,13 +434,13 @@ namespace EMRCorefResol.UITest
                 var reader = new I2B2DataReader();
                 var emr = currentEMR;
                 var chains = new CorefChainCollection(chainsPath, reader);
-                var instances = new Soon2001ModInstancesGenerator().Generate(emr, chains);
+                var instances = new AllInstancesGenerator().Generate(emr, chains);
 
                 var extractor = new EnglishTrainingFeatureExtractor();
                 extractor.EMR = emr;
                 extractor.GroundTruth = chains;
 
-                tab.SelectedIndex = 2;
+                tab.SelectedIndex = 3;
                 txtFeatures.Text = "Extracting...";
 
                 var features = await ExtractFeatures(instances, extractor);
