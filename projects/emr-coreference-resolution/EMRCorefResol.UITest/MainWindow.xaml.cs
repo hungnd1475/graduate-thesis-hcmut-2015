@@ -119,6 +119,7 @@ namespace EMRCorefResol.UITest
             SearchPanel.Install(txtCons.TextArea);
             SearchPanel.Install(txtChains.TextArea);
             SearchPanel.Install(txtFeatures.TextArea);
+            SearchPanel.Install(txtSystemChains.TextArea);
 
             txtEMR.Document = new TextDocument();
             txtCons.Document = new TextDocument();
