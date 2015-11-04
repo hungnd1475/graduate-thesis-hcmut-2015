@@ -19,22 +19,28 @@
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="500"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            
-            <TextBlock Text="EMR Path: " VerticalAlignment="Center"/>            
-            <TextBox Grid.Column="1" Margin="5" x:Name="txtEMRPath" Height="21"/>            
+
+            <TextBlock Text="EMR Path: " VerticalAlignment="Center"/>
+            <TextBox Grid.Column="1" Margin="5" x:Name="txtEMRPath" Height="21"/>
             <Button Content="..." Width="20" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,4"
                     x:Name="btnEMRPath" Click="btnEMRPath_Click"/>
 
-            <TextBlock Text="System chains: " VerticalAlignment="Center" Grid.Row="1"/>
-            <TextBox Grid.Column="1" Margin="5" x:Name="txtSystemChainsPath" Height="21" Grid.Row="1"/>
+            <TextBlock Text="Models: " VerticalAlignment="Center" Grid.Row="1"/>
+            <TextBox Grid.Column="1" Margin="5" x:Name="txtModelsPath" Height="21" Grid.Row="1"/>
             <Button Content="..." Width="20" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,4"
-                    x:Name="btnSystemChainsPath" Click="btnSystemChainsPath_Click"  Grid.Row="1"/>
+                    x:Name="btnModelsPath" Click="btnModelsPath_Click" Grid.Row="1"/>
+
+            <TextBlock Text="System chains: " VerticalAlignment="Center" Grid.Row="2"/>
+            <TextBox Grid.Column="1" Margin="5" x:Name="txtSystemChainsPath" Height="21" Grid.Row="2"/>
+            <Button Content="..." Width="20" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,5"
+                    x:Name="btnSystemChainsPath" Click="btnSystemChainsPath_Click" Grid.Row="2"/>
         </Grid>
 
         <StackPanel Grid.Row="1" HorizontalAlignment="Center" Orientation="Horizontal">
@@ -49,6 +55,7 @@
 
         <StackPanel Grid.Row="2" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0, 5, 0, 0">
             <Button Content="Extract Features" x:Name="btnExtract" IsEnabled="False" Click="btnExtract_Click"/>
+            <Button Content="Classifiy" x:Name="btnClassify" Click="btnClassify_Click" Margin="5,0,0,0"/>
         </StackPanel>
 
         <Grid Grid.Row="3" Margin="0,5,0,0">
@@ -77,6 +84,9 @@
                 </TabItem>
                 <TabItem Header="Scores">
                     <avalonEdit:TextEditor x:Name="txtScores" FontFamily="Consolas" FontSize="15" IsReadOnly="True"/>
+                </TabItem>
+                <TabItem Header="Classification">
+                    <avalonEdit:TextEditor x:Name="txtClas" FontFamily="Consolas" FontSize="15" IsReadOnly="True"/>
                 </TabItem>
             </TabControl>
         </Grid>

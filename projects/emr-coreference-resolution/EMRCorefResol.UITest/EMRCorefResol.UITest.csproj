@@ -120,6 +120,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EMRCorefResol.Classification\EMRCorefResol.Classification.csproj">
+      <Project>{34b8ae46-9ab3-43b2-935d-1e8a8815fb04}</Project>
+      <Name>EMRCorefResol.Classification</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EMRCorefResol.Core\EMRCorefResol.Core.csproj">
       <Project>{66284726-8e94-4438-b366-f14b04874734}</Project>
       <Name>EMRCorefResol.Core</Name>

@@ -23,6 +23,8 @@ using ICSharpCode.AvalonEdit.Editing;
 using IOPath = System.IO.Path;
 using HCMUT.EMRCorefResol.English;
 using ICSharpCode.AvalonEdit.Search;
+using HCMUT.EMRCorefResol.Classification;
+using HCMUT.EMRCorefResol.Classification.LibSVM;
 
 namespace EMRCorefResol.UITest
 {
@@ -44,8 +46,12 @@ namespace EMRCorefResol.UITest
         private SelectionInfo emrSelectionInfo = new SelectionInfo(); // stores selection info on emr text area
         private SelectionInfo featuresSelectionInfo = new SelectionInfo();
         private SelectionInfo systemChainsSelectionInfo = new SelectionInfo();
+        private SelectionInfo clasSelectionInfo = new SelectionInfo();
 
         private EMRCollection emrCollection;
+        private IFeatureVector[] features;
+        private IIndexedEnumerable<IClasInstance> instances;
+        private IClassifier classifier;
 
         public MainWindow()
         {
@@ -62,13 +68,14 @@ namespace EMRCorefResol.UITest
             initTextEditor(txtChains, true, chainSelectionInfo, conceptHighlightBrush, null, true);
             initTextEditor(txtSystemChains, true, systemChainsSelectionInfo, conceptHighlightBrush, null, true);
             initTextEditor(txtFeatures, true, featuresSelectionInfo, conceptHighlightBrush, null, true);
+            initTextEditor(txtClas, true, clasSelectionInfo, conceptHighlightBrush, null, true);
 
             txtScores.ShowLineNumbers = true;
             txtScores.TextArea.SelectionCornerRadius = 0;
             txtScores.Document = new TextDocument();
         }
 
-        private void initTextEditor(TextEditor textEditor, bool wordWrap, SelectionInfo selectionInfo, 
+        private void initTextEditor(TextEditor textEditor, bool wordWrap, SelectionInfo selectionInfo,
             Brush selectionBgBrush, Brush selectionFgBrush, bool registerHighlight)
         {
             textEditor.ShowLineNumbers = true;
@@ -235,7 +242,7 @@ namespace EMRCorefResol.UITest
         {
             if (FolderDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                txtSystemChainsPath.Text = FolderDialog.SelectedPath;                
+                txtSystemChainsPath.Text = FolderDialog.SelectedPath;
             }
         }
 
@@ -263,7 +270,7 @@ namespace EMRCorefResol.UITest
 
                     var emrPath = emrCollection.GetEMRPath(nextEMRIndex);
                     var conceptsPath = emrCollection.GetConceptsPath(nextEMRIndex);
-                    var chainsPath = emrCollection.GetChainsPath(nextEMRIndex);                    
+                    var chainsPath = emrCollection.GetChainsPath(nextEMRIndex);
 
                     currentEMRIndex = nextEMRIndex;
                     currentEMR = new EMR(emrPath, conceptsPath, dataReader);
@@ -308,11 +315,15 @@ namespace EMRCorefResol.UITest
                     btnPrev.IsEnabled = nextEMRIndex > 0;
                     btnNext.IsEnabled = nextEMRIndex < emrCollection.Count - 1;
                     btnExtract.IsEnabled = nextEMRIndex >= 0 && nextEMRIndex <= emrCollection.Count - 1;
+
+                    instances = null;
+                    features = null;
+                    txtFeatures.Clear();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"{ex.Message}\nStack trace:\n{ex.StackTrace}", 
+                MessageBox.Show($"{ex.Message}\nStack trace:\n{ex.StackTrace}",
                     "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             finally
@@ -367,41 +378,45 @@ namespace EMRCorefResol.UITest
         }
 
         private async void btnExtract_Click(object sender, RoutedEventArgs e)
-        {            
+        {
             if (currentEMR != null)
             {
-                var conceptsPath = emrCollection.GetConceptsPath(currentEMRIndex);
                 var chainsPath = emrCollection.GetChainsPath(currentEMRIndex);
+                tab.SelectedIndex = 2;
 
-                var reader = new I2B2DataReader();
-                var emr = currentEMR;
-                var chains = new CorefChainCollection(chainsPath, reader);
-                var instances = new AllInstancesGenerator().Generate(emr, chains);
-
-                var extractor = new EnglishTrainingFeatureExtractor();
-                extractor.EMR = emr;
-                extractor.GroundTruth = chains;
-
-                tab.SelectedIndex = 2;                
-
-                var features = new IFeatureVector[instances.Count];
-                var sb = new StringBuilder();
-                var count = 0;
-
-                await ExtractFeatures(instances, extractor, features, 
-                    new Progress<int>(i =>
-                    {
-                        var fv = features[i];
-                        sb.Append($"{instances[i]}\nClass-Value:{fv.ClassValue} {string.Join(" ", fv.Select(f => f.ToString()))}\n\n");
-                        count += 1;
-                        txtFeatures.Text = $"Extracting features...\n{count}/{instances.Count}";
-                    }));
-
-                txtFeatures.Text = sb.ToString();
+                var result = await ExtractFeatures(currentEMR, chainsPath, txtFeatures);
+                instances = result.Item1;
+                features = result.Item2;
             }
         }
 
-        private static Task ExtractFeatures(IIndexedEnumerable<IClasInstance> instances, 
+        private static async Task<Tuple<IIndexedEnumerable<IClasInstance>, IFeatureVector[]>> ExtractFeatures(EMR emr, string chainsPath, TextEditor txtFeatures)
+        {
+            var reader = new I2B2DataReader();
+            var chains = new CorefChainCollection(chainsPath, reader);
+            var instances = new AllInstancesGenerator().Generate(emr, chains);
+
+            var extractor = new EnglishTrainingFeatureExtractor();
+            extractor.EMR = emr;
+            extractor.GroundTruth = chains;
+
+            var features = new IFeatureVector[instances.Count];
+            var sb = new StringBuilder();
+            var count = 0;
+
+            await ExtractFeatures(instances, extractor, features,
+                new Progress<int>(i =>
+                {
+                    var fv = features[i];
+                    sb.Append($"{i}. {instances[i]}\nClass-Value:{fv.ClassValue} {string.Join(" ", fv.Select(f => f.ToString()))}\n\n");
+                    txtFeatures.Text = $"Extracting features...\n{count++}/{instances.Count}";
+                }));
+
+            txtFeatures.Text = sb.ToString();
+            return Tuple.Create(instances, features);
+        }
+
+        private static Task ExtractFeatures(IIndexedEnumerable<IClasInstance> instances,
             IFeatureExtractor fExtractor, IFeatureVector[] features, IProgress<int> progress)
         {
             return Task.Run(() =>
@@ -413,6 +428,94 @@ namespace EMRCorefResol.UITest
                     progress.Report(k);
                 });
             });
+        }
+
+        private async void btnClassify_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (instances == null || features == null)
+                {
+                    if (currentEMR != null)
+                    {
+                        var chainsPath = emrCollection.GetChainsPath(currentEMRIndex);
+                        tab.SelectedIndex = 2;
+
+                        var result = await ExtractFeatures(currentEMR, chainsPath, txtFeatures);
+                        instances = result.Item1;
+                        features = result.Item2;
+                    }
+                }
+
+                if (classifier == null)
+                {
+                    classifier = new LibSVMClassifier(txtModelsPath.Text);
+                }
+
+                tab.SelectedIndex = 5;
+
+                var target = new ClasResult[instances.Count];
+                var count = 0;
+                var sb = new StringBuilder();
+
+                await Classify(instances, features, classifier, target,
+                    new Progress<int>(i =>
+                    {
+                        if (target[i] != null)
+                        {
+                            sb.AppendLine($"{i + ".",-6} {target[i]?.Class ?? -1d} | {target[i]?.Confidence ?? -1d:N3} {instances[i]}");
+                        }
+                        txtClas.Text = $"Classifying...\n{count++}/{instances.Count}";
+                    }));
+
+                txtClas.Text = sb.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message}\nStack trace:\n{ex.StackTrace}",
+                    "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private static Task Classify(IIndexedEnumerable<IClasInstance> instances,
+            IFeatureVector[] features, IClassifier classifier,
+            ClasResult[] target, IProgress<int> progress)
+        {
+            return Task.Run(() =>
+            {
+                Parallel.For(0, instances.Count, i =>
+                {
+                    var type = instances[i].GetType();
+
+                    if (type == typeof(PersonInstance) || type == typeof(PersonPair))
+                    {
+                        target[i] = instances[i].Classify(classifier, features[i]);
+                    }
+
+                    progress.Report(i);
+                });
+
+                //for (int i = 0; i < instances.Count; i++)
+                //{
+                //    var type = instances[i].GetType();
+
+                //    if (type == typeof(PersonInstance) || type == typeof(PersonPair))
+                //    {
+                //        target[i] = instances[i].Classify(classifier, features[i]);
+                //    }
+
+                //    progress.Report(i);
+                //}
+            });
+        }
+
+        private void btnModelsPath_Click(object sender, RoutedEventArgs e)
+        {
+            FolderDialog.SelectedPath = @"D:\Documents\HCMUT\AI Research\coref-resol\test";
+            if (FolderDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                txtModelsPath.Text = FolderDialog.SelectedPath;
+            }
         }
     }
 }

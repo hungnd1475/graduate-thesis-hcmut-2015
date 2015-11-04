@@ -122,25 +122,26 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
         private ClasResult ClassifyInstance(IClasInstance instance, IFeatureVector fVector)
         {
             var instanceType = instance.GetType();
-            //var sfPath = Path.Combine(_modelsDir, $"{instanceType.Name}.sf");
-            //var tmpDir = Path.Combine(_modelsDir, "tmp");
+            var sfPath = Path.Combine(_modelsDir, $"{instanceType.Name}.sf");
+            var tmpDir = Path.Combine(_modelsDir, "tmp");
 
-            //var pCreator = new ClasProblemCollection();
-            //pCreator.Add(instance, fVector);
-            //var rawPrb = pCreator.GetProblem(instanceType);
+            var pCreator = new ClasProblemCollection();
+            pCreator.Add(instance, fVector);
+            var rawPrb = pCreator.GetProblem(instanceType);
 
-            //string scaledPrbContent;
-            //lock (_syncRoot)
-            //{
-            //    Directory.CreateDirectory(tmpDir);
-            //    var tmpPrbPath = Path.Combine(_modelsDir, "tmp", $"{instanceType.Name}.prb");
-            //    ProblemSerializer.Serialize(rawPrb, tmpPrbPath);
-            //    scaledPrbContent = LibSVM.RunSVMScale(sfPath, tmpPrbPath);
-            //}
-            //var scaledPrb = LibSVM.ReadProblem(scaledPrbContent);
+            string scaledPrbContent;
+            lock (_syncRoot)
+            {
+                Directory.CreateDirectory(tmpDir);
+                var tmpPrbPath = Path.Combine(_modelsDir, "tmp", $"{instanceType.Name}.prb");
+                ProblemSerializer.Serialize(rawPrb, tmpPrbPath);
+                scaledPrbContent = LibSVM.RunSVMScale(sfPath, tmpPrbPath);
+            }
+            var scaledPrb = LibSVM.ReadProblem(scaledPrbContent);
 
-            var sf = GetScalingFactor(instanceType);
-            var nodes = Scale(fVector, sf);
+            //var sf = GetScalingFactor(instanceType);
+            //var nodes = Scale(fVector, sf);
+            var nodes = scaledPrb.X[0];
             var svmModel = GetModel(instanceType);
 
             double confidence;
