@@ -8,5 +8,7 @@ rawTerm="an acute change in mental status|ANA"||cui="C0011980"||concept="Diaphra
 rawTerm="an emergent head ct scan|ANA"||cui="C0018670"||concept="Head"||prefer="Head"||semantic=[blor]||confidence="645"
 rawTerm="an emergent head ct scan|EQP"||cui="C0202691"||concept="head ct scan"||prefer="CAT scan of head"||semantic=[diap]||confidence="923"
 rawTerm="bleeding in the subarachnoid space|ANA"||cui="C0038527"||concept="Subarachnoid Space"||prefer="Subarachnoid Space"||semantic=[bsoj]||confidence="640"
+rawTerm="follow up ct scan|EQP"||cui="C0040405"||concept="CT SCAN"||prefer="X-Ray Computed Tomography"||semantic=[diap]||confidence="861"
 rawTerm="a ventriculostomy|OPE"||cui="C0042517"||concept="Ventriculostomy"||prefer="Ventriculostomy"||semantic=[topp]||confidence="1000"
 rawTerm="the ventriculostomy|OPE"||cui="C0042517"||concept="Ventriculostomy"||prefer="Ventriculostomy"||semantic=[topp]||confidence="1000"
+rawTerm="autopsy|EQP"||cui="C0004398"||concept="Autopsy"||prefer="Autopsy"||semantic=[diap]||confidence="1000"

@@ -1,6 +1,7 @@
 rawTerm="body shaking|ANA"||cui="C0460148"||concept="Body"||prefer="Human body structure"||semantic=[anst]||confidence="694"
 rawTerm="back pain|ANA"||cui="C0004600"||concept="Back"||prefer="Back"||semantic=[blor]||confidence="861"
 rawTerm="back pain/|ANA"||cui="C0004600"||concept="Back"||prefer="Back"||semantic=[blor]||confidence="861"
+rawTerm="pt &apos;s labs|INDI"||cui="C0035100"||concept="Rennin"||prefer="Chymosin"||semantic=[aapp|enzy|phsu]||confidence="789"
 rawTerm="a spine mri|ANA"||cui="C0037949"||concept="Spine"||prefer="Vertebral column"||semantic=[bpoc]||confidence="694"
 rawTerm="a spine mri|EQP"||cui="C0177803"||concept="spine MRI"||prefer="Magnetic Resonance Imaging (MRI) of Spine"||semantic=[diap]||confidence="1000"
 rawTerm="rx|OPE"||cui="C2709207"||concept="Rx"||prefer="Rx therapy"||semantic=[topp]||confidence="1000"

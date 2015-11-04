@@ -1,3 +1,5 @@
 rawTerm="chest pain|ANA"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="861"
 rawTerm="noncardiac chest pain|ANA"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="827"
+rawTerm="labs|INDI"||cui="C0035100"||concept="Rennin"||prefer="Chymosin"||semantic=[aapp|enzy|phsu]||confidence="928"
 rawTerm="worsening chest pain|ANA"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="827"
+rawTerm="shortness of breath|ANA"||cui="C0225386"||concept="Breath"||prefer="Breath"||semantic=[bdsu]||confidence="623"

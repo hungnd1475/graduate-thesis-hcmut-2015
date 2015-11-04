@@ -1,3 +1,5 @@
 rawTerm="abdominal pain|ANA"||cui="C0000726"||concept="Abdominal"||prefer="Abdomen"||semantic=[blor]||confidence="861"
+rawTerm="labs|INDI"||cui="C0035100"||concept="Rennin"||prefer="Chymosin"||semantic=[aapp|enzy|phsu]||confidence="928"
 rawTerm="bland diet|OPE"||cui="C1519433"||concept="DIET"||prefer="Special Diet Therapy"||semantic=[topp]||confidence="861"
-rawTerm="blood in stool|ANA"||cui="C0005847"||concept="Blood Vessel"||prefer="Blood Vessel"||semantic=[bpoc]||confidence="706"
+rawTerm="black stools|ANA"||cui="C0015733"||concept="Stools"||prefer="Feces"||semantic=[bdsu]||confidence="861"
+rawTerm="blood in stool|ANA"||cui="C0005768"||concept="blood"||prefer="In Blood"||semantic=[bdsu]||confidence="790"

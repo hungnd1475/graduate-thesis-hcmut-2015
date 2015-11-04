@@ -1,5 +1,6 @@
 rawTerm="rehabilitation|OPE"||cui="C0034991"||concept="Rehabilitation"||prefer="Rehabilitation therapy"||semantic=[topp]||confidence="1000"
-rawTerm="the patient 's blood pressure|ANA"||cui="C0005847"||concept="Blood Vessel"||prefer="Blood Vessel"||semantic=[bpoc]||confidence="743"
+rawTerm="the patient 's blood pressure|ANA"||cui="C0005768"||concept="blood"||prefer="In Blood"||semantic=[bdsu]||confidence="827"
 rawTerm="his scrotal and lower extremity edema|ANA"||cui="C0036471"||concept="Scrotal"||prefer="Scrotum"||semantic=[bpoc]||confidence="1000"
 rawTerm="lower extremity ulcers|ANA"||cui="C0023216"||concept="Lower Extremity"||prefer="Lower Extremity"||semantic=[blor]||confidence="734"
 rawTerm="all former leg excoriations|ANA"||cui="C0023216"||concept="Leg"||prefer="Lower Extremity"||semantic=[blor]||confidence="660"
+rawTerm="his fluid status|ANA"||cui="C0005889"||concept="FLUID"||prefer="Body Fluids"||semantic=[bdsu]||confidence="694"

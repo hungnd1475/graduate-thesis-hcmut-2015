@@ -3,6 +3,8 @@ rawTerm="cord compression|ANA"||cui="C1550235"||concept="Cord"||prefer="Cord - B
 rawTerm="microscopic anterior cervical diskectomy at c5-6|OPE"||cui="C0408598"||concept="Cervical discectomy"||prefer="Excision of cervical intervertebral disc"||semantic=[topp]||confidence="861"
 rawTerm="fusion|OPE"||cui="C1293131"||concept="Fusion"||prefer="Fusion procedure"||semantic=[topp]||confidence="1000"
 rawTerm="bilateral hand numbness|ANA"||cui="C0018563"||concept="Hand"||prefer="Hand"||semantic=[bpoc]||confidence="660"
+rawTerm="a workup|EQP"||cui="C0750430"||concept="Work-up"||prefer="Work-up"||semantic=[diap]||confidence="1000"
+rawTerm="an mri|EQP"||cui="C0024485"||concept="MRI"||prefer="Magnetic Resonance Imaging"||semantic=[diap]||confidence="1000"
 rawTerm="a c5-6 disc herniation|ANA"||cui="C0223157"||concept="C5/6 disc"||prefer="Intervertebral disc structure of fifth cervical vertebra"||semantic=[bpoc]||confidence="756"
 rawTerm="3-5 beats in the left foot|ANA"||cui="C0230461"||concept="Left foot"||prefer="Structure of left foot"||semantic=[bpoc]||confidence="612"
 rawTerm="a postoperative ct scan|EQP"||cui="C0040405"||concept="CT SCAN"||prefer="X-Ray Computed Tomography"||semantic=[diap]||confidence="901"

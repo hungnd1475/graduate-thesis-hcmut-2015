@@ -1,4 +1,6 @@
 rawTerm="atypical chest pain|ANA"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="827"
+rawTerm="lead placement|EQP"||cui="C0181586"||concept="leads"||prefer="Leads (device)"||semantic=[medd]||confidence="611"
+rawTerm="lead placement|INDI"||cui="C0023175"||concept="???lead"||prefer="Lead"||semantic=[elii|hops]||confidence="694"
 rawTerm="chest ct|ANA"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="861"
-rawTerm="chest ct|EQP"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="861"
+rawTerm="chest ct|EQP"||cui="C0202823"||concept="Chest CT"||prefer="Chest CT"||semantic=[diap]||confidence="1000"
 rawTerm="back pain|ANA"||cui="C0004600"||concept="Back"||prefer="Back"||semantic=[blor]||confidence="861"

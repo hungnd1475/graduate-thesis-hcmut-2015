@@ -3,3 +3,7 @@ rawTerm="an aquired defect of the right nasal ala and medial cheek region|ANA"||
 rawTerm="mental retardation|ANA"||cui="C0011980"||concept="Diaphragm"||prefer="Respiratory Diaphragm"||semantic=[bpoc]||confidence="761"
 rawTerm="npo|OPE"||cui="C0419179"||concept="NPO"||prefer="NPO - Nothing by mouth"||semantic=[topp]||confidence="1000"
 rawTerm="anesthesia|OPE"||cui="C0002903"||concept="Anesthesia"||prefer="Anesthesia procedures"||semantic=[topp]||confidence="1000"
+rawTerm="observation|EQP"||cui="C1964257"||concept="Observation"||prefer="Observation - diagnostic procedure"||semantic=[diap]||confidence="1000"
+rawTerm="aquired deformity of the right ala / nose and medial cheek|ANA"||cui="C0930360"||concept="Right ala of nose"||prefer="Right ala of nose"||semantic=[bpoc]||confidence="664"
+rawTerm="purulent discharge from wound / incision site|ANA"||cui="C1305623"||concept="Purulent discharge"||prefer="Purulent discharge substance"||semantic=[bdsu]||confidence="790"
+rawTerm="incision site|ANA"||cui="C1515974"||concept="Site"||prefer="Anatomic Site"||semantic=[blor]||confidence="861"

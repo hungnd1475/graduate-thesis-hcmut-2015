@@ -1,4 +1,6 @@
+rawTerm="stage 1 sacral decubitus on her buttocks|ANA"||cui="C0036037"||concept="Sacral"||prefer="Bone structure of sacrum"||semantic=[bpoc]||confidence="581"
 rawTerm="wound care|OPE"||cui="C0886052"||concept="wound care"||prefer="wound care"||semantic=[topp]||confidence="1000"
 rawTerm="pain control|OPE"||cui="C0002766"||concept="Pain Control"||prefer="Pain management"||semantic=[topp]||confidence="1000"
 rawTerm="the patient 's chronic obstructive pulmonary disease|ANA"||cui="C0024109"||concept="pulmonary"||prefer="Lung"||semantic=[bpoc]||confidence="804"
+rawTerm="shortness of breath|ANA"||cui="C0225386"||concept="Breath"||prefer="Breath"||semantic=[bdsu]||confidence="623"
 rawTerm="intensive physical therapy|OPE"||cui="C0949766"||concept="Physical therapy"||prefer="Physical therapy"||semantic=[topp]||confidence="901"

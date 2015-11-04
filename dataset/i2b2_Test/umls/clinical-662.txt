@@ -1,4 +1,5 @@
-rawTerm="acute blood loss anemia|ANA"||cui="C0005847"||concept="Blood Vessel"||prefer="Blood Vessel"||semantic=[bpoc]||confidence="562"
+rawTerm="acute blood loss anemia|ANA"||cui="C0005768"||concept="blood"||prefer="In Blood"||semantic=[bdsu]||confidence="645"
 rawTerm="the gunshot wound to the right distal femur|ANA"||cui="C0448194"||concept="Distal femur"||prefer="Entire distal femur"||semantic=[bpoc]||confidence="604"
 rawTerm="urgent open reduction|OPE"||cui="C0185373"||concept="Open # reduction"||prefer="Open reduction of fracture"||semantic=[topp]||confidence="901"
 rawTerm="internal fixation|OPE"||cui="C0016642"||concept="Internal fixation"||prefer="Fracture Fixation, Internal"||semantic=[topp]||confidence="1000"
+rawTerm="his hematocrit|INDI"||cui="C0018935"||concept="Haematocrit"||prefer="Hematocrit procedure"||semantic=[lbpr]||confidence="1000"

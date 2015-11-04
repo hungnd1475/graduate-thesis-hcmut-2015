@@ -1,3 +1,7 @@
 rawTerm="chest pain|ANA"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="861"
+rawTerm="lt arm/ chest pain|ANA"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="812"
+rawTerm="ekg|EQP"||cui="C1623258"||concept="EKG"||prefer="Electrocardiography"||semantic=[diap]||confidence="1000"
+rawTerm="cxr|EQP"||cui="C0039985"||concept="cxr"||prefer="Chest X-ray"||semantic=[diap]||confidence="1000"
+rawTerm="ddimer|INDI"||cui="C2826333"||concept="DDIMER"||prefer="D-Dimer Measurement"||semantic=[lbpr]||confidence="1000"
 rawTerm="cardiac enzymes|ANA"||cui="C0018787"||concept="Cardiac"||prefer="Heart"||semantic=[bpoc]||confidence="694"
-rawTerm="cardiac enzymes|EQP"||cui="C0018787"||concept="Cardiac"||prefer="Heart"||semantic=[bpoc]||confidence="694"
+rawTerm="cardiac enzymes|INDI"||cui="C0014442"||concept="Enzymes"||prefer="Enzymes"||semantic=[enzy|orch]||confidence="861"
