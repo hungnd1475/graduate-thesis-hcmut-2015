@@ -3,18 +3,17 @@ allergist
 andrologist
 anesthesiologist
 cardiologist
-cardiovascular surgeon
-clinical neurophysiologis
+cardiovascular
+neurophysiologis
 dentist
 dermatologist
-dmergency doctors
 endocrinologist
 epidemiologist
 ent specialist
 family practitioner
 gastroenterologist
 gynecologist
-general psychiatrist
+psychiatrist
 hematologist
 hepatologist
 immunologist
@@ -26,28 +25,29 @@ microbiologist
 neonatologist
 nephrologists
 neurologist
+neurosurgeon
 neurosurgeons
+neurosurgery
 obstetrician
 oncologist
 ophthalmologist
 orthodontist
-orthopedic surgeon
+orthopedic
+orthopedics
 orthopedist
 primatologist
-pale pathologist
+pathologist
 parasitologist
 pathologist
 pediatrician
-plastic surgeon
+plastic
 physiologist
 physiatrist
 podiatrist
 psychiatrist
 pulmonologist
 radiologist
-reproductive endocrinologist
 rheumatologist
-surgeon
 thoracic oncologist
 urologist
 veterinarian

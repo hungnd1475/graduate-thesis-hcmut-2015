@@ -66,17 +66,17 @@
                 <TabItem Header="Concepts">
                     <avalonEdit:TextEditor x:Name="txtCons" FontFamily="Consolas" FontSize="15" IsReadOnly="True"/>
                 </TabItem>
-                <TabItem Header="Chains">
+                <TabItem Header="Ground Truth">
                     <avalonEdit:TextEditor x:Name="txtChains" FontFamily="Consolas" FontSize="15" IsReadOnly="True"/>
+                </TabItem>
+                <TabItem Header="Features">
+                    <avalonEdit:TextEditor x:Name="txtFeatures" FontFamily="Consolas" FontSize="15" IsReadOnly="True"/>
                 </TabItem>
                 <TabItem Header="System Chains">
                     <avalonEdit:TextEditor x:Name="txtSystemChains" FontFamily="Consolas" FontSize="15" IsReadOnly="True"/>
                 </TabItem>
                 <TabItem Header="Scores">
                     <avalonEdit:TextEditor x:Name="txtScores" FontFamily="Consolas" FontSize="15" IsReadOnly="True"/>
-                </TabItem>
-                <TabItem Header="Features">
-                    <avalonEdit:TextEditor x:Name="txtFeatures" FontFamily="Consolas" FontSize="15" IsReadOnly="True"/>
                 </TabItem>
             </TabControl>
         </Grid>

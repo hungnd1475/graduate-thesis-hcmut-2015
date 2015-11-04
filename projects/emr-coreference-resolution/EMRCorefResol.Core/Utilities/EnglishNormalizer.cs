@@ -20,20 +20,24 @@ namespace HCMUT.EMRCorefResol
             return string.IsNullOrEmpty(normalized) ? term : RemovePreposition(normalized);
         }
 
-        private static string FindProposition(string term)
+        public static string FindProposition(string term)
         {
             var chunks = Service.English.GetChunks(term);
-            foreach (string chunk in chunks)
-            {
-                var t = chunk.Split('|')[0];
-                var compoundTag = chunk.Split('|')[1];
 
-                if (!compoundTag.Equals("O", StringComparison.InvariantCultureIgnoreCase))
+            if (chunks != null)
+            {
+                foreach (string chunk in chunks)
                 {
-                    var tag = compoundTag.Split('-')[1];
-                    if (tag.Equals("PP", StringComparison.InvariantCultureIgnoreCase))
+                    var t = chunk.Split('|')[0];
+                    var compoundTag = chunk.Split('|')[1];
+
+                    if (!compoundTag.Equals("O", StringComparison.InvariantCultureIgnoreCase))
                     {
-                        return t;
+                        var tag = compoundTag.Split('-')[1];
+                        if (tag.Equals("PP", StringComparison.InvariantCultureIgnoreCase))
+                        {
+                            return t;
+                        }
                     }
                 }
             }
@@ -41,10 +45,10 @@ namespace HCMUT.EMRCorefResol
             return null;
         }
 
-        private static string RemovePreposition(string term)
+        public static string RemovePreposition(string term)
         {
             var preposition = FindProposition(term);
-            if(preposition == null)
+            if (preposition == null)
             {
                 return term;
             }
@@ -54,7 +58,8 @@ namespace HCMUT.EMRCorefResol
             if (index.Equals(0))
             {
                 return term.Substring(preposition.Length + 1, term.Length - preposition.Length - 1);
-            } else
+            }
+            else
             {
                 return term.Substring(0, index - 1);
             }

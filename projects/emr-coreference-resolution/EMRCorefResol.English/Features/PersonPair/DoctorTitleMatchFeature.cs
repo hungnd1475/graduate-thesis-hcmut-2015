@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity.Design.PluralizationServices;
 
 namespace HCMUT.EMRCorefResol.English.Features
 {
+    using System.Globalization;
     using Utilities;
     class DoctorTitleMatchFeature : Feature
     {
@@ -27,10 +29,8 @@ namespace HCMUT.EMRCorefResol.English.Features
                 return;
             }
 
-            kws1 = kws1.Select(x => x.Replace(".", "")).ToArray();
-            kws2 = kws2.Select(x => x.Replace(".", "")).ToArray();
-
-            if (kws1.Intersect(kws2).Count() > 0)
+            var p = PluralizationService.CreateService(new CultureInfo("en-US"));
+            if (kws1.Select(kw => p.Singularize(kw)).Intersect(kws2.Select(kw => p.Singularize(kw))).Count() > 0)
             {
                 SetCategoricalValue(1);
             }

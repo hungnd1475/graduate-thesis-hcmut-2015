@@ -65,7 +65,7 @@ namespace EMRCorefResol.UITest
 
             txtScores.ShowLineNumbers = true;
             txtScores.TextArea.SelectionCornerRadius = 0;
-            txtScores.Document = new TextDocument();  
+            txtScores.Document = new TextDocument();
         }
 
         private void initTextEditor(TextEditor textEditor, bool wordWrap, SelectionInfo selectionInfo, 
@@ -382,37 +382,36 @@ namespace EMRCorefResol.UITest
                 extractor.EMR = emr;
                 extractor.GroundTruth = chains;
 
-                tab.SelectedIndex = 3;
-                txtFeatures.Text = "Extracting...";
+                tab.SelectedIndex = 2;                
 
-                var features = await ExtractFeatures(instances, extractor);
+                var features = new IFeatureVector[instances.Count];
+                var sb = new StringBuilder();
+                var count = 0;
 
-                txtFeatures.Text = "";
-                for (int i = 0; i < instances.Count; i++)
-                {
-                    var fv = features[i];
-                    if (fv != null)
+                await ExtractFeatures(instances, extractor, features, 
+                    new Progress<int>(i =>
                     {
-                        txtFeatures.AppendText($"{instances[i]}\nClass-Value:{fv.ClassValue} {string.Join(" ", fv.Select(f => f.ToString()))}\n\n");
-                    }
-                }
+                        var fv = features[i];
+                        sb.Append($"{instances[i]}\nClass-Value:{fv.ClassValue} {string.Join(" ", fv.Select(f => f.ToString()))}\n\n");
+                        count += 1;
+                        txtFeatures.Text = $"Extracting features...\n{count}/{instances.Count}";
+                    }));
+
+                txtFeatures.Text = sb.ToString();
             }
         }
 
-        private static Task<IFeatureVector[]> ExtractFeatures(IIndexedEnumerable<IClasInstance> instances, 
-            IFeatureExtractor fExtractor)
+        private static Task ExtractFeatures(IIndexedEnumerable<IClasInstance> instances, 
+            IFeatureExtractor fExtractor, IFeatureVector[] features, IProgress<int> progress)
         {
             return Task.Run(() =>
             {
-                var features = new IFeatureVector[instances.Count];
-
                 Parallel.For(0, instances.Count, k =>
                 {
                     var i = instances[k];
                     features[k] = i.GetFeatures(fExtractor);
+                    progress.Report(k);
                 });
-
-                return features;
             });
         }
     }
