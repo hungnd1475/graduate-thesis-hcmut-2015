@@ -1,0 +1,6 @@
+rawTerm="2013-08-24"||temporal="2013-08-24"
+rawTerm="2013-08-27"||temporal="2013-08-27"
+rawTerm="1987-09-08"||temporal="1987-09-08"
+rawTerm="D : 2013-08-28 00:21"||temporal="2013-08-28"
+rawTerm="T : 2013-09-03 11:11"||temporal="2013-09-03"
+rawTerm="Signed electronically by : DR. Katherin Toth on : MON 2013-10-14 3:05 PM"||temporal="2013-10-14"

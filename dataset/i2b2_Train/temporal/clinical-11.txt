@@ -1,0 +1,8 @@
+rawTerm="025897906"||temporal="258979"
+rawTerm="81515170"||temporal="151517"
+rawTerm="06/11/1991 12:00:00 AM"||temporal="06/11/1991"
+rawTerm="06/11/1991"||temporal="06/11/1991"
+rawTerm="06/22/1991"||temporal="06/22/1991"
+rawTerm="She continued to have no change in her shortness of breath or cardiac examination and was discharged home on 06/22/91 after completing her 5-FU and Cisplatin chemotherapy ."||temporal="06/22/91"
+rawTerm="07/17/91"||temporal="07/17/91"
+rawTerm="07/21/91"||temporal="07/21/91"

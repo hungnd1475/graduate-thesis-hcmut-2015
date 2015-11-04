@@ -1,0 +1,6 @@
+rawTerm="788268693 DH"||temporal="268693"
+rawTerm="7258512"||temporal="258512"
+rawTerm="4/30/2005 12:00:00 AM"||temporal="4/30/2005"
+rawTerm="04/30/2005 02:55 PM"||temporal="04/30/2005"
+rawTerm="04/30/2005 15:49"||temporal="04/30/2005"
+rawTerm="This report was created by SHUFF , RONRIN 04/30/2005 03:52 PM"||temporal="04/30/2005"

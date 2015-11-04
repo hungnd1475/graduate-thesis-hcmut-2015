@@ -1,0 +1,6 @@
+rawTerm="5/25/2002 12:00:00 AM"||temporal="5/25/2002"
+rawTerm="05/25/2002"||temporal="05/25/2002"
+rawTerm="05/27/2002"||temporal="05/27/2002"
+rawTerm="05/27/02 AT 04:00 PM"||temporal="05/27/02"
+rawTerm="Labs only notable for CK 54 ( nl ) , Trop 0.03 , Hct 35.6 MCV 79 ."||temporal="2015-11-04"
+rawTerm="MEED , CILE PRILARA , M.D. , PH.D. ( RG185 ) 05/27/02 05:35 PM"||temporal="05/27/02"

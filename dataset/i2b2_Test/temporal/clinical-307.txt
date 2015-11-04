@@ -1,0 +1,5 @@
+rawTerm="2014-04-19"||temporal="2014-04-19"
+rawTerm="2014-04-20"||temporal="2014-04-20"
+rawTerm="D : 2014-04-20 07:20:44"||temporal="2014-04-20"
+rawTerm="T : 2014-04-20 10:08:45"||temporal="2014-04-20"
+rawTerm="Signed electronically by : DR. Jaqueline RHEIN on : SUN 2014-04-20 8:13 PM"||temporal="2014-04-20"

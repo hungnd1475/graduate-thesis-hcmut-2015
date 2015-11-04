@@ -1,0 +1,8 @@
+rawTerm="01719921"||temporal="1719921"
+rawTerm="1626859"||temporal="162685"
+rawTerm="3/13/2006 12:00:00 AM"||temporal="3/13/2006"
+rawTerm="03/13/2006"||temporal="03/13/2006"
+rawTerm="03/19/2006"||temporal="03/19/2006"
+rawTerm="03/19/06 AT 01:00 PM"||temporal="03/19/06"
+rawTerm="Dr. Pump 3/25/05 1:30 ,"||temporal="3/25/05"
+rawTerm="TIKWELD , WILLAIDE V. , M.D. ( QT296 ) 03/19/06 10:53 AM"||temporal="03/19/06"

@@ -1,0 +1,5 @@
+rawTerm="6/26/1994 12:00:00 AM"||temporal="6/26/1994"
+rawTerm="06/26/94"||temporal="06/26/94"
+rawTerm="06/30/94"||temporal="06/30/94"
+rawTerm="Her postoperative course was unremarkable ."||temporal="2015-11-05"
+rawTerm="07/01/94"||temporal="07/01/94"

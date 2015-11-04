@@ -1,0 +1,7 @@
+rawTerm="176318078_c"||temporal="17631807"
+rawTerm="4189699"||temporal="189699"
+rawTerm="8/21/1993 12:00:00 AM"||temporal="8/21/1993"
+rawTerm="8/21/93"||temporal="8/21/93"
+rawTerm="8/23/93"||temporal="8/23/93"
+rawTerm="The patient received Coumadin , 10 mg. , on the evening following the procedure , and is discharged the next day ."||temporal="2015-11-05"
+rawTerm="08/23/93"||temporal="08/23/93"

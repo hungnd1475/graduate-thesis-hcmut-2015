@@ -1,0 +1,7 @@
+rawTerm="2016-11-02"||temporal="2016-11-02"
+rawTerm="2016-11-15"||temporal="2016-11-15"
+rawTerm="1938-06-17"||temporal="1938-06-17"
+rawTerm="Please hold dose of warfarin on the night of the 16 , and please recheck INR on 2016-11-16 and dose warfarin appropriately for INR of 2 to 2.5."||temporal="2016-11-16"
+rawTerm="D : 2016-11-15 11:54"||temporal="2016-11-15"
+rawTerm="T : 2016-11-15 11:02"||temporal="2016-11-15"
+rawTerm="DR. Dolly N Wardlaw on : TUE 2016-12-27 5:21 PM"||temporal="2016-12-27"

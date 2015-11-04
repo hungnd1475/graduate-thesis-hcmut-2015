@@ -1,0 +1,6 @@
+rawTerm="289724916"||temporal="289724"
+rawTerm="6/30/1992 12:00:00 AM"||temporal="6/30/1992"
+rawTerm="6-30-92"||temporal="6-30-92"
+rawTerm="7-1-92 ( SOUTHOBASSKING&apos;S VILLEMARG HOSPITAL )"||temporal="7-1-92"
+rawTerm="7-30-92"||temporal="7-30-92"
+rawTerm="08/03/92"||temporal="08/03/92"

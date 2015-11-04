@@ -1,0 +1,7 @@
+rawTerm="2013-06-12"||temporal="2013-06-12"
+rawTerm="2013-06-25"||temporal="2013-06-25"
+rawTerm="1943-03-31"||temporal="1943-03-31"
+rawTerm="Patient was discharged to rehabilitation on 2013-06-25 ."||temporal="2013-06-25"
+rawTerm="D : 2013-06-25 07:58:05"||temporal="2013-06-25"
+rawTerm="T : 2013-06-25 08:07:03"||temporal="2013-06-25"
+rawTerm="Signed electronically by : DR. Clara M. Odell on : WED 2013-06-26 9:58 AM"||temporal="2013-06-26"

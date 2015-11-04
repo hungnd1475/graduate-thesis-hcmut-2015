@@ -1,0 +1,5 @@
+rawTerm="2013-11-21"||temporal="2013-11-21"
+rawTerm="2013-11-26"||temporal="2013-11-26"
+rawTerm="1949-07-18"||temporal="1949-07-18"
+rawTerm="Completed by : Mary Lisa MD 53-914 2013-11-26 @ 1134"||temporal="2013-11-26"
+rawTerm="Signed electronically by : DR. David Randazzo on : MON 2013-12-16 7:25 AM"||temporal="2013-12-16"

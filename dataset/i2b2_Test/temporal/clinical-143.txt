@@ -1,0 +1,7 @@
+rawTerm="2011-01-19"||temporal="2011-01-19"
+rawTerm="2011-01-25"||temporal="2011-01-25"
+rawTerm="1943-01-22"||temporal="1943-01-22"
+rawTerm="The results of this study indicated that this structure at the head of his pancreas is most likely a forming pseudocyst ; however , the suspicion of malignancy is still possible and the patient underwent an ultrasound guided biopsy of this mass on 2011-01-20 ."||temporal="2011-01-20"
+rawTerm="D : 2011-01-25 14:08"||temporal="2011-01-25"
+rawTerm="T : 2011-01-26 11:30"||temporal="2011-01-26"
+rawTerm="Signed electronically by : DR. Dorothy L. Brennan on : Russell 2011-01-27 11:38 AM"||temporal="2011-01-27"

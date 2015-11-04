@@ -1,0 +1,7 @@
+rawTerm="100469881 EH"||temporal="100469"
+rawTerm="06/09/1998 12:00:00 AM"||temporal="06/09/1998"
+rawTerm="06/09/1998"||temporal="06/09/1998"
+rawTerm="06/12/1998"||temporal="06/12/1998"
+rawTerm="Around 4:00 AM the next day , an acute decompensation in respiratory status was noted ."||temporal="2015-11-05"
+rawTerm="07/09/98"||temporal="07/09/98"
+rawTerm="07/10/98"||temporal="07/10/98"

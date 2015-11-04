@@ -1,0 +1,6 @@
+rawTerm="164312247"||temporal="16431224"
+rawTerm="1/19/2002 12:00:00 AM"||temporal="1/19/2002"
+rawTerm="01/19/2002"||temporal="01/19/2002"
+rawTerm="01/20/2002"||temporal="01/20/2002"
+rawTerm="01/20/02 AT 03:00 AM"||temporal="01/20/02"
+rawTerm="01/20/02 03:35 AM"||temporal="01/20/02"

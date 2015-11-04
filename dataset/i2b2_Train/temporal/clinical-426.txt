@@ -1,0 +1,8 @@
+rawTerm="32343989"||temporal="234398"
+rawTerm="10/14/2004 12:00:00 AM"||temporal="10/14/2004"
+rawTerm="10/14/2004"||temporal="10/14/2004"
+rawTerm="10/17/2004"||temporal="10/17/2004"
+rawTerm="She was seen in the emergency room here on 08/31/04 where they performed an abdominal CT that showed a 14 x 14 x 10 cm pelvic mass with multiple enlarged lymph nodes ."||temporal="08/31/04"
+rawTerm="The patient was taken to the operating room on hospital day # 1 where she underwent an uncomplicated total abdominal hysterectomy , bilateral salpingo-oophorectomy , right lymph node dissection , appendectomy , omental biopsy , pelvic washings , and Pap of the diaphragm ."||temporal="2015-11-05"
+rawTerm="By postoperative day #3 , the patient was tolerating p.o.&apos; s , tolerating oral pain medications , ambulating , passing flatus , and having a bowel movement ."||temporal="2004-09-03"
+rawTerm="10/17/04"||temporal="10/17/04"

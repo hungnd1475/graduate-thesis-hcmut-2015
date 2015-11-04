@@ -1,0 +1,7 @@
+rawTerm="284487129"||temporal="284487"
+rawTerm="42669672"||temporal="266967"
+rawTerm="01/16/1996 12:00:00 AM"||temporal="01/16/1996"
+rawTerm="01/16/1996"||temporal="01/16/1996"
+rawTerm="01/20/1996"||temporal="01/20/1996"
+rawTerm="It was felt that the patient possibly had a worsening of his coronary artery disease and therefore underwent cardiac catheterization on 01/17/96 ."||temporal="01/17/96"
+rawTerm="01/20/96"||temporal="01/20/96"

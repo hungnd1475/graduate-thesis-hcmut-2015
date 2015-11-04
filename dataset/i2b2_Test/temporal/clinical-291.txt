@@ -1,0 +1,7 @@
+rawTerm="2681723"||temporal="2681723"
+rawTerm="4/6/1995 12:00:00 AM"||temporal="4/6/1995"
+rawTerm="4/6/95"||temporal="4/6/95"
+rawTerm="4/16/95"||temporal="4/16/95"
+rawTerm="Percutaneous angioplasty of the right coronary artery , 4/9/95 ."||temporal="4/9/95"
+rawTerm="4/11/95 ."||temporal="4/11/95"
+rawTerm="On the day of admission , he was involved in a minor motor vehicle accident , and there was some apparent controversy with the driver of the other vehicle , during the course of which he developed substernal chest pain radiating to the left arm and shoulder ."||temporal="2015-11-04"

@@ -1,0 +1,7 @@
+rawTerm="2014-08-07"||temporal="2014-08-07"
+rawTerm="2014-08-09"||temporal="2014-08-09"
+rawTerm="1958-03-14"||temporal="1958-03-14"
+rawTerm="The past medical history was significant for left shoulder surgery in 2014-03-06 for repair of a " minor rotator cuff tear " and removal of osteophytes ."||temporal="2014-03-06"
+rawTerm="D : 2014-08-09 14:04"||temporal="2014-08-09"
+rawTerm="T : 2014-08-09 15:27"||temporal="2014-08-09"
+rawTerm="Signed electronically by : DR. Michael Jackson on : FRI 2014-09-05 11:39 AM"||temporal="2014-09-05"

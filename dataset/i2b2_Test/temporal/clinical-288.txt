@@ -1,0 +1,8 @@
+rawTerm="017480654"||temporal="1748065"
+rawTerm="6160323"||temporal="160323"
+rawTerm="2/15/1994 12:00:00 AM"||temporal="2/15/1994"
+rawTerm="2/15/94"||temporal="2/15/94"
+rawTerm="2/28/94"||temporal="2/28/94"
+rawTerm="They agreed with a do not resuscitate status early on in the hospitalization and in the course of being maintain on low dose Morphine , he ultimately expired on 2/28/94 with the family present ."||temporal="2/28/94"
+rawTerm="3/12/94"||temporal="3/12/94"
+rawTerm="03/13/94"||temporal="03/13/94"

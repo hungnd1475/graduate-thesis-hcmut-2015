@@ -1,0 +1,8 @@
+rawTerm="2887168"||temporal="2887168"
+rawTerm="132052"||temporal="132052"
+rawTerm="11/12/2002 12:00:00 AM"||temporal="11/12/2002"
+rawTerm="11/12/2002"||temporal="11/12/2002"
+rawTerm="11/15/2002"||temporal="11/15/2002"
+rawTerm="The patient was discharged to home on 11/15/02 with instructions to the family to observe her gait in her home environment and to observe her behavior in her home environment over the next day and to report back to the primary neurologist , Dr. Flythegach , as to changes ."||temporal="11/15/02"
+rawTerm="11/14/2002"||temporal="11/14/2002"
+rawTerm="11/19/2002 3:35 P"||temporal="11/19/2002"

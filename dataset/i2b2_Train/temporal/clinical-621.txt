@@ -1,0 +1,5 @@
+rawTerm="262182942"||temporal="2621829"
+rawTerm="2513486"||temporal="251348"
+rawTerm="05/08/2000 12:00:00 AM"||temporal="05/08/2000"
+rawTerm="05/08/2000 07:57 PM"||temporal="05/08/2000"
+rawTerm="This is to notify you that your patient , JEM , ON arrived in the Emergency Department at Bri Health on 05/08/2000 07:57 PM ."||temporal="05/08/2000"

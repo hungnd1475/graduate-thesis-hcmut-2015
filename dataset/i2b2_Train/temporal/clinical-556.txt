@@ -1,0 +1,8 @@
+rawTerm="130959255"||temporal="130959"
+rawTerm="1431063"||temporal="1431063"
+rawTerm="6/15/1994 12:00:00 AM"||temporal="6/15/1994"
+rawTerm="6-15-94"||temporal="6-15-94"
+rawTerm="6-26-94"||temporal="6-26-94"
+rawTerm="By 6-26-94 , the patient was felt to be ready for discharge ."||temporal="6-26-94"
+rawTerm="8-4-94"||temporal="8-4-94"
+rawTerm="08/06/94"||temporal="08/06/94"

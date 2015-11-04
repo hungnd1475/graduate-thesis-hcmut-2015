@@ -1,0 +1,6 @@
+rawTerm="288418"||temporal="288418"
+rawTerm="2823104"||temporal="2823104"
+rawTerm="7/31/2004 12:00:00 AM"||temporal="7/31/2004"
+rawTerm="07/31/2004 11:24 AM"||temporal="07/31/2004"
+rawTerm="07/31/2004 12:58"||temporal="07/31/2004"
+rawTerm="This report was created by MEEDHUANG , PADA 07/31/2004 12:59 PM"||temporal="07/31/2004"

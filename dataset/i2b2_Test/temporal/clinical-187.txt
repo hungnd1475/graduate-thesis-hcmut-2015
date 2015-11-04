@@ -1,0 +1,6 @@
+rawTerm="2011-03-06"||temporal="2011-03-06"
+rawTerm="2011-03-21"||temporal="2011-03-21"
+rawTerm="1945-09-15"||temporal="1945-09-15"
+rawTerm="The patient 's actual date of discharge was 2011-03-21 ."||temporal="2011-03-21"
+rawTerm="2011-03-23"||temporal="2011-03-23"
+rawTerm="Russell 2011-03-24 7:54 AM"||temporal="2011-03-24"

@@ -1,0 +1,7 @@
+rawTerm="2217927"||temporal="2217927"
+rawTerm="4257841"||temporal="257841"
+rawTerm="10/23/2005 12:00:00 AM"||temporal="10/23/2005"
+rawTerm="10/23/2005 09:30 AM"||temporal="10/23/2005"
+rawTerm="10/23/2005 10:35"||temporal="10/23/2005"
+rawTerm="None today Disposition ,"||temporal="2005-10-23"
+rawTerm="This report was created by POUSSCROOKESSEILLE , VONNELIBRY 10/23/2005 10:51 AM"||temporal="10/23/2005"

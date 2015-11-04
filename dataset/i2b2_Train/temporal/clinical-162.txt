@@ -1,0 +1,7 @@
+rawTerm="2015-09-14"||temporal="2015-09-14"
+rawTerm="2015-09-19"||temporal="2015-09-19"
+rawTerm="Nasal cannula was weaned off on day of life 3 and he initially was maintaining O2 sat above 94% and breathing comfortably ."||temporal="2015-09-16"
+rawTerm="The patient had been tolerating oral feeding as of day of life 2 and is currently taking Enfamil 20 p.o. ad lib ."||temporal="2015-09-15"
+rawTerm="His weight is 3015 gm on day of life 5 ."||temporal="2015-09-18"
+rawTerm="2015-09-17"||temporal="2015-09-17"
+rawTerm="SAT 2015-09-19 2:01 PM"||temporal="2015-09-19"

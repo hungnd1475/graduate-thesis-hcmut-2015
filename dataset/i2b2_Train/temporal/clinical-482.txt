@@ -1,0 +1,8 @@
+rawTerm="2020-05-23"||temporal="2020-05-23"
+rawTerm="2020-05-29"||temporal="2020-05-29"
+rawTerm="1955-11-14"||temporal="1955-11-14"
+rawTerm="Switched to Arimedex in 2019-02-10 due to vaginal bleeding on Tamoxifen ."||temporal="2019-02-10"
+rawTerm="Self discontinued Arimedex last month ."||temporal="2020-04"
+rawTerm="4. Bilateral small pleural effusion , which certainly could be malignant given today 's findings and history of breast cancer ."||temporal="2020-05-29"
+rawTerm="Completed by : Tony Cervantes MD 43-424 2020-05-29 @ 0951"||temporal="2020-05-29"
+rawTerm="Signed electronically by : DR. Patricia Noland on : SAT 2020-05-30 9:10 AM"||temporal="2020-05-30"

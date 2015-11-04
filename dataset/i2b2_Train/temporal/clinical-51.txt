@@ -1,0 +1,8 @@
+rawTerm="082738817"||temporal="2738817"
+rawTerm="19153629"||temporal="191536"
+rawTerm="6/3/1993 12:00:00 AM"||temporal="6/3/1993"
+rawTerm="06/03/1993"||temporal="06/03/1993"
+rawTerm="06/06/1993"||temporal="06/06/1993"
+rawTerm="Her post-operative course has been uncomplicated ."||temporal="2015-11-05"
+rawTerm="06/07/93"||temporal="06/07/93"
+rawTerm="06/11/93"||temporal="06/11/93"

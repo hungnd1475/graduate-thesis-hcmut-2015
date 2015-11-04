@@ -1,0 +1,7 @@
+rawTerm="2018-03-04"||temporal="2018-03-04"
+rawTerm="2018-03-09"||temporal="2018-03-09"
+rawTerm="1957-08-17"||temporal="1957-08-17"
+rawTerm="2018-03-04 01:02PM"||temporal="2018-03-04"
+rawTerm="Patient tolerated procedure on 2018-03-05 and was transferred to"||temporal="2018-03-05"
+rawTerm="Justin RAO MD 71-039 2018-03-09 @ 0842"||temporal="2018-03-09"
+rawTerm="FRI 2018-03-23 9:45 AM"||temporal="2018-03-23"

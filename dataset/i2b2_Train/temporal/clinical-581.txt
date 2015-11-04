@@ -1,0 +1,8 @@
+rawTerm="176318078_a"||temporal="17631807"
+rawTerm="4189699"||temporal="189699"
+rawTerm="11/03/1993 12:00:00 AM"||temporal="11/03/1993"
+rawTerm="11-03-93"||temporal="11-03-93"
+rawTerm="11-06-93"||temporal="11-06-93"
+rawTerm="Cardiac catheterization was performed without complication from the right neck and right groin on the day of admission ."||temporal="2015-11-04"
+rawTerm="11/07/93"||temporal="11/07/93"
+rawTerm="Copies to Dr. Bodejove at Valtawnprinceel Community Memorial Hospital , Dr. A Eu Wave , Dr. Riemund C. Wave , and three copies to Dr. Ca Shuff edited 12/31/93 qm"||temporal="12/31/93"

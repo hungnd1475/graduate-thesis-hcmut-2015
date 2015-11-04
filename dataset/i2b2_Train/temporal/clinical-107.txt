@@ -1,0 +1,8 @@
+rawTerm="2/1/2000 12:00:00 AM"||temporal="2/1/2000"
+rawTerm="342-07-28"||temporal="2-07-28"
+rawTerm="02/01/2000"||temporal="02/01/2000"
+rawTerm="02/08/2000"||temporal="02/08/2000"
+rawTerm="She is status post angiography today ."||temporal="2000-02-08"
+rawTerm="03/16/2000 13:21"||temporal="03/16/2000"
+rawTerm="02/09/2000"||temporal="02/09/2000"
+rawTerm="02/12/2000 1:41 P"||temporal="02/12/2000"

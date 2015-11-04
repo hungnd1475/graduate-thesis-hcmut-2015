@@ -1,0 +1,7 @@
+rawTerm="2017-09-22"||temporal="2017-09-22"
+rawTerm="2017-09-27"||temporal="2017-09-27"
+rawTerm="Pregnancy was uncomplicated until an occurrence of HSV outbreak occurred on 2017-09-13 approximately one week prior to delivery ."||temporal="2017-09-13"
+rawTerm="Neurology follow up with Dr. Workman is scheduled for 2017-10-20 at 12:30 pm  at the Addison Gilbert Hospital of Oak Bluffs , Ison 11 ."||temporal="2017-10-20"
+rawTerm="D : 2017-09-27 17:51:44"||temporal="2017-09-27"
+rawTerm="T : 2017-09-27 18:26:21"||temporal="2017-09-27"
+rawTerm="Signed electronically by : DR. Marcus N Schartz on : Maxine 2017-09-28 9:34 AM"||temporal="2017-09-28"

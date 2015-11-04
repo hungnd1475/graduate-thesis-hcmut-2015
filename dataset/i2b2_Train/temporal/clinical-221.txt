@@ -1,0 +1,8 @@
+rawTerm="305265793_g"||temporal="265793"
+rawTerm="2833679"||temporal="283367"
+rawTerm="09/21/1992 12:00:00 AM"||temporal="09/21/1992"
+rawTerm="09/21/92"||temporal="09/21/92"
+rawTerm="09/24/92"||temporal="09/24/92"
+rawTerm="She was given 10 mg. on hospital day # 1 , and 5 mg. on hospital day 2 , and back to 2.5 qhs ."||temporal="2015-11-05"
+rawTerm="The patient &apos;s pro time bumped to 19.5 on hospital day # 3 , and the patient was instructed to continue with 2 1/2 mg. qhs and is to followup with Anticoagulation Clinic in one week for further pro time checks and adjustments ."||temporal="2015-11-07"
+rawTerm="09/27/92"||temporal="09/27/92"

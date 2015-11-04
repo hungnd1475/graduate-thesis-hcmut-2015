@@ -1,0 +1,5 @@
+rawTerm="105732749"||temporal="1057327"
+rawTerm="9/10/1999 12:00:00 AM"||temporal="9/10/1999"
+rawTerm="09/10/1999"||temporal="09/10/1999"
+rawTerm="09/14/1999"||temporal="09/14/1999"
+rawTerm="09/17/1999 2:26 P"||temporal="09/17/1999"

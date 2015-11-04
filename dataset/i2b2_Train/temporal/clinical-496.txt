@@ -1,0 +1,6 @@
+rawTerm="17511921"||temporal="17511921"
+rawTerm="6/10/1999 12:00:00 AM"||temporal="6/10/1999"
+rawTerm="06/10/1999"||temporal="06/10/1999"
+rawTerm="06/26/1999"||temporal="06/26/1999"
+rawTerm="06/26/99"||temporal="06/26/99"
+rawTerm="06/29/99"||temporal="06/29/99"

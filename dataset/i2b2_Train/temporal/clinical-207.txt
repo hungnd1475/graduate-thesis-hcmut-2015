@@ -1,0 +1,8 @@
+rawTerm="2011-06-14"||temporal="2011-06-14"
+rawTerm="2011-06-18"||temporal="2011-06-18"
+rawTerm="1939-11-27"||temporal="1939-11-27"
+rawTerm="At 3 a.m. on the day of admission , she became much worse and after several days of increasing her meter-dosed inhaler use , she call Emergency Medical Services which assessed her as having heart failure with elevated jugular venous distention and rales ."||temporal="2011-06-14"
+rawTerm="It either ended in 2011-04-11 or continued through 2011-05-11 with use of Augmentin ; and , by report , lasted until 06-07 ."||temporal="2011-04-11"
+rawTerm="Pulmonary function tests most recently in 2009-01-10 were not obstructive ."||temporal="2009-01-10"
+rawTerm="2011-06-21"||temporal="2011-06-21"
+rawTerm="Jose 2011-06-23 12:09 PM"||temporal="2011-06-23"

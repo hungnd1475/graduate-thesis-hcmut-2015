@@ -1,0 +1,6 @@
+rawTerm="026350193 RWH"||temporal="2635019"
+rawTerm="6/5/2002 12:00:00 AM"||temporal="6/5/2002"
+rawTerm="06/05/2002 02:46 PM"||temporal="06/05/2002"
+rawTerm="06/05/2002 16:17"||temporal="06/05/2002"
+rawTerm="Please follow-up with your Orthopaedic physician on Wednesday 6/9/02 as previously arranged by patient ."||temporal="6/9/02"
+rawTerm="This report was created by SHOULDER , RYBAM 06/05/2002 04:26 PM"||temporal="06/05/2002"

@@ -1,0 +1,6 @@
+rawTerm="2010-07-15"||temporal="2010-07-15"
+rawTerm="2010-07-18"||temporal="2010-07-18"
+rawTerm="1978-01-25"||temporal="1978-01-25"
+rawTerm="D : 2010-07-20 21:01"||temporal="2010-07-20"
+rawTerm="T : 2010-07-20 21:01"||temporal="2010-07-20"
+rawTerm="Signed electronically by : DR. Timothy Clemons on : MON 2010-07-26 11:01 AM"||temporal="2010-07-26"

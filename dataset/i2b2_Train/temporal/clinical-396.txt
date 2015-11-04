@@ -1,0 +1,7 @@
+rawTerm="5/12/2000 12:00:00 AM"||temporal="5/12/2000"
+rawTerm="05/12/2000"||temporal="05/12/2000"
+rawTerm="05/20/2000"||temporal="05/20/2000"
+rawTerm="There were no major issues and he was discharged home on 5/20/00 ."||temporal="5/20/00"
+rawTerm="07/15/2000 21:36"||temporal="07/15/2000"
+rawTerm="07/06/2000"||temporal="07/06/2000"
+rawTerm="07/11/2000 12:44 P"||temporal="07/11/2000"

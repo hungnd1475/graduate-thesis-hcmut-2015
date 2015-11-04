@@ -1,0 +1,5 @@
+rawTerm="866196074 RWH"||temporal="196074"
+rawTerm="3/10/2003 12:00:00 AM"||temporal="3/10/2003"
+rawTerm="03/10/2003 06:42 PM"||temporal="03/10/2003"
+rawTerm="03/10/2003 23:26"||temporal="03/10/2003"
+rawTerm="This report was created by Breutzbreunbreuncotfalke , Inachelle 03/10/2003 11:28 PM"||temporal="03/10/2003"

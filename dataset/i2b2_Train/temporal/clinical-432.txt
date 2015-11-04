@@ -1,0 +1,5 @@
+rawTerm="2012-07-17"||temporal="2012-07-17"
+rawTerm="2012-07-22"||temporal="2012-07-22"
+rawTerm="1953-12-04"||temporal="1953-12-04"
+rawTerm="Thomas Louis MD 12-223 2012-07-22 @ 1423"||temporal="2012-07-22"
+rawTerm="Signed electronically by : DR. Edgar SCHNEIDER on : SUN 2012-07-22 2:47 PM"||temporal="2012-07-22"

@@ -1,0 +1,5 @@
+rawTerm="513119146"||temporal="1311914"
+rawTerm="2186824"||temporal="2186824"
+rawTerm="4/16/2001 12:00:00 AM"||temporal="4/16/2001"
+rawTerm="04/16/2001 03:46 PM"||temporal="04/16/2001"
+rawTerm="This is to notify you that your patient , FALMDREPSGREND , LINE arrived in the Emergency Department at Ph University Of Medical Center on 04/16/2001 03:46 PM ."||temporal="04/16/2001"

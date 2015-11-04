@@ -1,0 +1,7 @@
+rawTerm="2015-08-10"||temporal="2015-08-10"
+rawTerm="2015-08-15"||temporal="2015-08-15"
+rawTerm="1954-12-08"||temporal="1954-12-08"
+rawTerm="The patient was taken to the Operating Room the day of admission ."||temporal="2015-08-10"
+rawTerm="D : 2015-08-17 10:50"||temporal="2015-08-17"
+rawTerm="T : 2015-08-21 16:28"||temporal="2015-08-21"
+rawTerm="Signed electronically by : DR. Natasha Toth on : TUE 2015-10-06 5:11 PM"||temporal="2015-10-06"

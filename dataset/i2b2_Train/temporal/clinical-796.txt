@@ -1,0 +1,8 @@
+rawTerm="6261929"||temporal="261929"
+rawTerm="1/22/2005 12:00:00 AM"||temporal="1/22/2005"
+rawTerm="01/22/2005"||temporal="01/22/2005"
+rawTerm="01/24/2005"||temporal="01/24/2005"
+rawTerm="01/24/05 AT 07:00 PM"||temporal="01/24/05"
+rawTerm="Override added on 01/23/05 by DAINSAYLESNOORT , AGER , M.D. , PH.D."||temporal="01/23/05"
+rawTerm="Override added on 01/23/05 by DAINSAYLESNOORT , AGER , M.D. , PH.D. on order for CLARITHROMYCIN PO ( ref # 99052380 )"||temporal="01/23/05"
+rawTerm="DOUETSHUFF , DE CLEEE , M.D. ( CP85 ) 01/24/05 06:53 PM"||temporal="01/24/05"

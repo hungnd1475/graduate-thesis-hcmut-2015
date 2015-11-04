@@ -1,0 +1,7 @@
+rawTerm="2014-04-14"||temporal="2014-04-14"
+rawTerm="2014-04-19"||temporal="2014-04-19"
+rawTerm="Electrolytes on day of life 1 showed a sodium of 142 , potassium of 5.1 , chloride of 108 , and total CO2 of 23 ."||temporal="2014-04-14"
+rawTerm="4. State Newborn Screen was sent on day of life 3 ."||temporal="2014-04-16"
+rawTerm="2014-04-18 21:56:45"||temporal="2014-04-18"
+rawTerm="2014-04-18 22:38:39"||temporal="2014-04-18"
+rawTerm="SAT 2014-04-19 10:03 AM"||temporal="2014-04-19"

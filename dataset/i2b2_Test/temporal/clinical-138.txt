@@ -1,0 +1,6 @@
+rawTerm="2011-10-28"||temporal="2011-10-28"
+rawTerm="2011-12-01"||temporal="2011-12-01"
+rawTerm="1964-04-14"||temporal="1964-04-14"
+rawTerm="D : 2011-12-01 13:09"||temporal="2011-12-01"
+rawTerm="T : 2011-12-01 13:20"||temporal="2011-12-01"
+rawTerm="Signed electronically by : DR. Richard Blakey on : FRI 2011-12-23 9:54 AM"||temporal="2011-12-23"

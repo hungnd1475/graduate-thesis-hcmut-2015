@@ -1,0 +1,4 @@
+rawTerm="2/1/2002 12:00:00 AM"||temporal="2/1/2002"
+rawTerm="02/01/2002"||temporal="02/01/2002"
+rawTerm="02/08/2002"||temporal="02/08/2002"
+rawTerm="02/08/02"||temporal="02/08/02"

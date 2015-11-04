@@ -1,0 +1,8 @@
+rawTerm="2013-09-06"||temporal="2013-09-06"
+rawTerm="2013-09-18"||temporal="2013-09-18"
+rawTerm="1927-08-07"||temporal="1927-08-07"
+rawTerm="This is an 86 year old woman who has a history of atrial fibrillation , peripheral vascular disease , and a history of atrial emboli who was admitted on 2013-09-06 , to the Neurologic Intensive Care Unit service after collapsing at home at 8:30 p.m ."||temporal="2013-09-06"
+rawTerm="The patient passed away peacefully on 2013-09-18 ."||temporal="2013-09-18"
+rawTerm="D : 2013-11-11 18:47"||temporal="2013-11-11"
+rawTerm="T : 2013-11-11 19:46"||temporal="2013-11-11"
+rawTerm="Signed electronically by : DR. Ryann W. U. Galuszka on : TUE 2013-11-19 12:45 PM"||temporal="2013-11-19"

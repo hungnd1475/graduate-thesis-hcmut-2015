@@ -1,0 +1,8 @@
+rawTerm="176318078 "||temporal="17631807"
+rawTerm="4189699 "||temporal="189699"
+rawTerm="6/22/1994 12:00:00 AM "||temporal="6/22/1994"
+rawTerm="06/22/94 "||temporal="06/22/94"
+rawTerm="07/04/94 "||temporal="07/04/94"
+rawTerm="04/22/94 , mitral valve replacement and tricuspid valve reconstruction . "||temporal="04/22/94"
+rawTerm="7/12/94 "||temporal="7/12/94"
+rawTerm="07/13/94 "||temporal="07/13/94"

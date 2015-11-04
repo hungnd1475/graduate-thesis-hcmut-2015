@@ -1,0 +1,5 @@
+rawTerm="817406016 RWH"||temporal="1740601"
+rawTerm="3154334"||temporal="154334"
+rawTerm="7/6/2005 12:00:00 AM"||temporal="7/6/2005"
+rawTerm="07/06/2005 11:11 AM"||temporal="07/06/2005"
+rawTerm="This is to notify you that your patient , JEMSKOP , COT arrived in the Emergency Department at Ro Woodma Healthcare on 07/06/2005 11:11 AM ."||temporal="07/06/2005"

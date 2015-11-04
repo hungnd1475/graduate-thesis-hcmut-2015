@@ -1,0 +1,5 @@
+rawTerm="385215362"||temporal="215362"
+rawTerm="11/17/2003 12:00:00 AM"||temporal="11/17/2003"
+rawTerm="11/17/2003"||temporal="11/17/2003"
+rawTerm="12/03/03"||temporal="12/03/03"
+rawTerm="12/04/03"||temporal="12/04/03"

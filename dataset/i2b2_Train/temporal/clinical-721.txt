@@ -1,0 +1,7 @@
+rawTerm="425680098 SC"||temporal="2568009"
+rawTerm="8/7/1992 12:00:00 AM"||temporal="8/7/1992"
+rawTerm="08/07/1992"||temporal="08/07/1992"
+rawTerm="08/10/1992"||temporal="08/10/1992"
+rawTerm="The patient was taken to the Operting Room on 8/7/92 , where a right modified radical mastectomy was performed ."||temporal="8/7/92"
+rawTerm="08/08/92"||temporal="08/08/92"
+rawTerm="08/10/92"||temporal="08/10/92"

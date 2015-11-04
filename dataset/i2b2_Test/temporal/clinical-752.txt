@@ -1,0 +1,7 @@
+rawTerm="2015-06-05"||temporal="2015-06-05"
+rawTerm="2015-06-10"||temporal="2015-06-10"
+rawTerm="The pregnancy was unremarkable until 2015-06-01 when the mother presented to Shriner 's Hospital for Crippled Children for increased blood pressure and proteinuria ."||temporal="2015-06-01"
+rawTerm="His most recent bilirubin was 6.6 on day of life six , the day of discharge , and his phototherapy was discontinued. He will need a rebound bilirubin level in am ."||temporal="2015-06-10"
+rawTerm="The parents were updated throughout the admission and a family meeting was held on 2015-06-09 ."||temporal="2015-06-09"
+rawTerm="He is due to have his state screen sent today ."||temporal="2015-06-10"
+rawTerm="WED 2015-06-10 11:54 AM"||temporal="2015-06-10"

@@ -1,0 +1,6 @@
+rawTerm="2015-03-16"||temporal="2015-03-16"
+rawTerm="2015-03-19"||temporal="2015-03-19"
+rawTerm="He has been scheduled for follow-up with Dr. Martha on 2015-03-25 at 11:00 a.m."||temporal="2015-03-25"
+rawTerm="D : 2015-07-29 17:03:53"||temporal="2015-07-29"
+rawTerm="T : 2015-07-29 22:08:30"||temporal="2015-07-29"
+rawTerm="Signed electronically by : DR. Brenda JM. Espinosa on : Maxine 2015-09-10 1:57 PM"||temporal="2015-09-10"

@@ -1,0 +1,4 @@
+rawTerm="316810105"||temporal="16810105"
+rawTerm="03/17/2003 12:00:00 AM"||temporal="03/17/2003"
+rawTerm="03/17/2003 02:52 AM"||temporal="03/17/2003"
+rawTerm="This is to notify you that your patient , KAYSLANCE , ICEROYLN arrived in the Emergency Department at Bri Health on 03/17/2003 02:52 AM ."||temporal="03/17/2003"

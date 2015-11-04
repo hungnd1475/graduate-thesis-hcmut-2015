@@ -1,0 +1,5 @@
+rawTerm="100007275"||temporal="10000727"
+rawTerm="4153022"||temporal="153022"
+rawTerm="1/4/2001 12:00:00 AM"||temporal="1/4/2001"
+rawTerm="01/04/2001 07:21 PM"||temporal="01/04/2001"
+rawTerm="This is to notify you that your patient , RHALTDEALBBREUTZ , STA arrived in the Emergency Department at Oaksgekesser/ Memorial Hospital on 01/04/2001 07:21 PM ."||temporal="01/04/2001"

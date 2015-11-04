@@ -1,0 +1,8 @@
+rawTerm="2011-06-10"||temporal="2011-06-10"
+rawTerm="2011-06-13"||temporal="2011-06-13"
+rawTerm="1976-04-17"||temporal="1976-04-17"
+rawTerm="In clinic today , the patient desaturated to low 90 s with ambulation and also had complaints of progressive swelling " like my throat is going to close up " with increasing drooling , unable to swallow the HIV medications ."||temporal="2011-06-13"
+rawTerm="The patient was to take one 4 mg tablet dinner and at bedtime the day of discharge , then the next day take one 4 mg tablet in the morning , lunch time , and with dinner and then at bedtime , then the third day to take 4 mg tablet in the morning , lunch , and bedtime , the fourth day to take one tablet in the morning and dinner , and in the last day take one 4 mg tablet in the morning ."||temporal="2011-06-13"
+rawTerm="D : 2011-07-12 15:55:31"||temporal="2011-07-12"
+rawTerm="T : 2011-07-13 11:14:52"||temporal="2011-07-13"
+rawTerm="Signed electronically by : DR. Ruth Gibson on : MON 2011-07-18 7:48 AM"||temporal="2011-07-18"

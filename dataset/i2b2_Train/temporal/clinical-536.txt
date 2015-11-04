@@ -1,0 +1,5 @@
+rawTerm="224527"||temporal="224527"
+rawTerm="10/24/2001 12:00:00 AM"||temporal="10/24/2001"
+rawTerm="10/24/2001 07:57 AM"||temporal="10/24/2001"
+rawTerm="10/24/2001 10:07"||temporal="10/24/2001"
+rawTerm="This report was created by CHIRDKOTEKERTH , LICHEREANYVE 10/24/2001 10:09 AM"||temporal="10/24/2001"

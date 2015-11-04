@@ -1,0 +1,7 @@
+rawTerm="814743340 RWH"||temporal="1474334"
+rawTerm="5/13/2006 12:00:00 AM"||temporal="5/13/2006"
+rawTerm="05/13/2006"||temporal="05/13/2006"
+rawTerm="05/16/2006"||temporal="05/16/2006"
+rawTerm="On physical exam today , the patient did not have any swelling , and he states that he did not feel the swelling was present ."||temporal="2006-05-16"
+rawTerm="Prior to discharge today , he underwent PFTs ."||temporal="2006-05-16"
+rawTerm="05/17/2006 7:29 A 501370"||temporal="05/17/2006"

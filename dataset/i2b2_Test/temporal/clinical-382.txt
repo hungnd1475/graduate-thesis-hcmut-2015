@@ -1,0 +1,8 @@
+rawTerm="2016-12-15"||temporal="2016-12-15"
+rawTerm="2016-12-21"||temporal="2016-12-21"
+rawTerm="1980-08-17"||temporal="1980-08-17"
+rawTerm="2016-12-15 03:31 PM BLOOD WBC - 6.2 RBC - 3.82 * Hgb - 12.2 Hct - 34.5 * MCV - 91 MCH - 32.0 MCHC - 35.4 * RDW - 12.7 Plt Ct - 246"||temporal="2016-12-15"
+rawTerm="2016-12-21 07:45 AM BLOOD WBC - 6.6 RBC - 2.79 * Hgb - 8.5 * Hct - 23.9 * MCV - 86 MCH - 30.5 MCHC - 35.7 * RDW - 16.9 * Plt Ct - 222 #"||temporal="2016-12-21"
+rawTerm="For details of these procedures , please see op notes dictated by Dr. Day on 2016-12-16 ."||temporal="2016-12-16"
+rawTerm="Completed by : Greg Allen MD 53-372 2016-12-22 @ 1825"||temporal="2016-12-22"
+rawTerm="Signed electronically by : DR. Katherine Beaulieu Brush on : WED 2017-01-25 12:05 AM"||temporal="2017-01-25"
