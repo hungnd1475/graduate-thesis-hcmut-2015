@@ -37,7 +37,19 @@ namespace HCMUT.EMRCorefResol.English.Features
                 }
             }
 
-            if (anaTemporal.Equals(anteTemporal))
+            DateTime anaDate;
+            DateTime anteDate;
+
+            try
+            {
+                anaDate = DateTime.Parse(anaTemporal);
+                anteDate = DateTime.Parse(anteTemporal);
+            } catch(Exception e)
+            {
+                return;
+            }
+
+            if (anaDate.Equals(anteDate))
             {
                 SetCategoricalValue(1);
             } else
