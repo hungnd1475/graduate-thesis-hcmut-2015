@@ -122,12 +122,18 @@ namespace HCMUT.EMRCorefResol.Service
             return (string)res.Data;
         }
 
-        public static string GetTemporalValue(string emrPath, string line)
+        public static string GetTemporalValue(string emrPath, string line, string section)
         {
             return _temporalCache.GetValue(line, (string input_line) =>
             {
-                var url = API_URL + "extractor/temporal?path=" + HttpUtility.UrlEncode(emrPath) + "&line=" + HttpUtility.UrlEncode(line);
-                var res = _http.Request(url);
+                var url = API_URL + "extractor/temporal";
+
+                var data = new Dictionary<string, string>();
+                data.Add("Path", emrPath);
+                data.Add("Line", line);
+                data.Add("Section", section);
+
+                var res = _http.PostData(url, data);
 
                 if (!res.IsSuccess)
                 {

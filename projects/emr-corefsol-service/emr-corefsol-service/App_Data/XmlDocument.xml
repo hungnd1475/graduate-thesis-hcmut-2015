@@ -517,7 +517,7 @@
             <param name="term">Lookup term</param>
             <returns></returns>
         </member>
-        <member name="M:emr_corefsol_service.Controllers.ExtractorController.GetTemporalDate(System.String,System.String)">
+        <member name="M:emr_corefsol_service.Controllers.ExtractorController.PostTemporalDate(emr_corefsol_service.Controllers.TemporalRequest)">
             <summary>
             Get Temporal Value from line
             </summary>

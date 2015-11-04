@@ -34,6 +34,7 @@ namespace emr_corefsol_service.Libs
             _inferred.Add(new Regex(month_string + " " + day_re + " " + year_re));
             _inferred.Add(new Regex(month_string + " (of |in )?" + year_re));
             _inferred.Add(new Regex(@"(next|previous|last) (day|month|year)"));
+            _inferred.Add(new Regex(@"(today|tomorrow|yesterday)"));
 
             _explicit = new List<Regex>();
             //yyyymmdd
@@ -50,7 +51,7 @@ namespace emr_corefsol_service.Libs
             _explicit.Add(new Regex(month_re + delimiter + day_re + delimiter + @"[0-9][0-9]"));
         }
 
-        public string GetTemporalValue(string emrPath, string line)
+        public string GetTemporalValue(string emrPath, string line, string section)
         {
             try
             {
@@ -62,12 +63,63 @@ namespace emr_corefsol_service.Libs
                 }
 
                 //Get inferred date
-                return GetInferredDate(emrPath, line);
+                var infer = GetInferredDate(emrPath, line);
+                if(infer != null)
+                {
+                    return infer;
+                }
+
+                //return CheckFiveLineBefore(emrPath, line, section);
+                return null;
             }
             catch(Exception e)
             {
                 return null;
             }
+        }
+
+        private string CheckFiveLineBefore(string emrPath, string line, string section)
+        {
+            var lines = section.Split('\n');
+            List<string> fivePrevLine = new List<string>();
+
+            for (int i =0; i<lines.Length; i++)
+            {
+                var curLine = lines[i];
+                if (line.Equals(curLine))
+                {
+                    int count = 1;
+                    while((i- count)>=0 && count <= 5)
+                    {
+                        fivePrevLine.Add(lines[i - count]);
+                        count++;
+                    }
+                    break;
+                }
+            }
+
+            return GetTemporalValueMultiLine(fivePrevLine, emrPath);
+        }
+
+        private string GetTemporalValueMultiLine(List<string>lines, string emrPath)
+        {
+            foreach(string line in lines)
+            {
+                var expl = GetExplicitDate(line);
+                if (expl != null)
+                {
+                    return expl;
+                }
+
+                //Get inferred date
+                var infer = GetInferredDate(emrPath, line);
+                if (infer != null)
+                {
+                    return infer;
+                }
+            }
+
+            return null;
         }
 
         private string GetExplicitDate(string line)

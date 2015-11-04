@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,6 +31,18 @@ namespace HCMUT.EMRCorefResol.Service
             {
                 var res = r.ReadToEnd();
                 return res;
+            }
+        }
+
+        public CustomResponse PostData(string url, Dictionary<string, string> data)
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://localhost:6740");
+                var content = new FormUrlEncodedContent(data);
+                var result = client.PostAsync(url, content).Result;
+                string resultContent = result.Content.ReadAsStringAsync().Result;
+                return JsonConvert.DeserializeObject<CustomResponse>(resultContent);
             }
         }
     }

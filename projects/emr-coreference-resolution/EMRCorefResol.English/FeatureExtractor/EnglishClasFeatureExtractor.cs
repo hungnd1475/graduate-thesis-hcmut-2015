@@ -13,6 +13,7 @@ namespace HCMUT.EMRCorefResol.English
         private WikiDataDictionary _wikiData;
         private UmlsDataDictionary _umlsData;
         private MedicationInfoCollection _medInfo;
+        private TemporalDataDictionary _temporalData;
 
         private readonly IPatientDeterminer _patientDeterminer;
 
@@ -30,6 +31,7 @@ namespace HCMUT.EMRCorefResol.English
                     _emr = value;
                     _wikiData = WikiInformation.GetWikiFile(value.Path);
                     _umlsData = UmlsInformation.GetWikiFile(value.Path);
+                    _temporalData = TemporalInformation.GetTemporalFile(value.Path);
                     _medInfo = MedicationInformation.GetMedicationFile(value.Path);
                 }
             }
@@ -51,7 +53,7 @@ namespace HCMUT.EMRCorefResol.English
         public IFeatureVector Extract(TestPair instance)
         {
             var classValue = GroundTruth != null ? (GroundTruth.IsCoref(instance) ? 1 : 0) : -1;
-            return new TestPairFeatures(instance, EMR, classValue, _wikiData, _umlsData);
+            return new TestPairFeatures(instance, EMR, classValue, _wikiData, _umlsData, _temporalData);
         }
 
         public IFeatureVector Extract(PersonInstance instance)
@@ -84,7 +86,7 @@ namespace HCMUT.EMRCorefResol.English
         public IFeatureVector Extract(TreatmentPair instance)
         {
             var classValue = GroundTruth != null ? (GroundTruth.IsCoref(instance) ? 1 : 0) : -1;
-            return new TreatmentPairFeatures(instance, EMR, classValue, _medInfo, _wikiData, _umlsData);
+            return new TreatmentPairFeatures(instance, EMR, classValue, _medInfo, _wikiData, _umlsData, _temporalData);
         }
 
         public IFeatureVector Extract(ProblemPair instance)

@@ -45,5 +45,6 @@ namespace HCMUT.EMRCorefResol
         MedicationInfo ReadMedInfoLine(string line);
         Tuple<string, WikiData> ReadWikiFile(string line);
         Tuple<string, UMLSData> ReadUmlsFile(string line);
+        Tuple<string, string> ReadTemporalFile(string line);
     }
 }

@@ -11,8 +11,8 @@ namespace HCMUT.EMRCorefResol.English.Features
         public SectionFeature(IConceptPair instance, EMR emr)
             :base("Section-Feature", 226, 0)
         {
-            var anaSection = EMRExtensions.GetSectionTitle(emr, instance.Anaphora);
-            var anteSection = EMRExtensions.GetSectionTitle(emr, instance.Antecedent);
+            var anaSection = EMRExtensions.GetSection(emr, instance.Anaphora).Title;
+            var anteSection = EMRExtensions.GetSection(emr, instance.Antecedent).Title;
 
             if(string.IsNullOrEmpty(anaSection) || string.IsNullOrEmpty(anteSection))
             {

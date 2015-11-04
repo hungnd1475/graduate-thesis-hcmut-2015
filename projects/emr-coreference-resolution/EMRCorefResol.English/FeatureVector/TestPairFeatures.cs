@@ -11,7 +11,7 @@ namespace HCMUT.EMRCorefResol.English
     class TestPairFeatures : FeatureVector
     {
         public TestPairFeatures(TestPair instance, EMR emr, double classValue,
-            WikiDataDictionary wikiData, UmlsDataDictionary umlsData)
+            WikiDataDictionary wikiData, UmlsDataDictionary umlsData, TemporalDataDictionary temporalData)
             :base(size:20, classValue: classValue)
         {
             //var wikiDictionary = WikiInformation.GetWikiInfo(emr.Path);
@@ -32,7 +32,7 @@ namespace HCMUT.EMRCorefResol.English
 
             this[9] = new PositionFeature(instance, emr);
             this[10] = new IndicatorFeature(instance, umlsData, emr);
-            this[11] = new TemporalFeature(instance, emr);
+            this[11] = new TemporalFeature(instance, emr, temporalData);
             this[12] = new SectionFeature(instance, emr);
             this[13] = new ModifierFeature(instance, emr);
 
