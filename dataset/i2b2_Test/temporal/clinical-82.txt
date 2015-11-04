@@ -1,0 +1,6 @@
+rawTerm="891864133 RWH"||temporal="1864133"
+rawTerm="136986"||temporal="136986"
+rawTerm="3/17/2000 12:00:00 AM"||temporal="3/17/2000"
+rawTerm="03/17/2000 01:25 PM"||temporal="03/17/2000"
+rawTerm="03/17/2000 16:31"||temporal="03/17/2000"
+rawTerm="This report was created by LARDESPRABLEYL , VA 03/17/2000 04:33 PM"||temporal="03/17/2000"

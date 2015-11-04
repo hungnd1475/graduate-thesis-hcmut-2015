@@ -12,7 +12,7 @@ namespace HCMUT.EMRCorefResol.English
     class TreatmentPairFeatures : FeatureVector
     {
         public TreatmentPairFeatures(TreatmentPair instance, EMR emr, double classValue,
-            MedicationInfoCollection medInfo, WikiDataDictionary wikiData, UmlsDataDictionary umlsData)
+            MedicationInfoCollection medInfo, WikiDataDictionary wikiData, UmlsDataDictionary umlsData, TemporalDataDictionary temporalData)
             :base(size:21, classValue: classValue)
         {
             //var medicationCollections = MedicationInformation.GetMedicationInfo(emr.Path);
@@ -44,7 +44,7 @@ namespace HCMUT.EMRCorefResol.English
             this[11] = new DosageFeature(anaMedicationInfo, anteMedicationInfo);
             this[12] = new FrequencyFeature(anaMedicationInfo, anteMedicationInfo);
             this[13] = new DurationFeature(anteMedicationInfo, anteMedicationInfo);
-            this[14] = new TemporalFeature(instance, emr);
+            this[14] = new TemporalFeature(instance, emr, temporalData);
             this[15] = new SectionFeature(instance, emr);
 
             this[16] = new WikiMatchFeature(anaWiki, anteWiki);

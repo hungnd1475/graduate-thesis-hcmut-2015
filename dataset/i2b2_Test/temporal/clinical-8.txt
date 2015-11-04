@@ -1,0 +1,6 @@
+rawTerm="2011-02-08"||temporal="2011-02-08"
+rawTerm="2011-02-14"||temporal="2011-02-14"
+rawTerm="1953-05-15"||temporal="1953-05-15"
+rawTerm="D : 2011-02-19 10:21"||temporal="2011-02-19"
+rawTerm="T : 2011-02-21 18:42"||temporal="2011-02-21"
+rawTerm="Signed electronically by : DR. Kate Gentry on : MON 2011-03-07 4:08 PM"||temporal="2011-03-07"

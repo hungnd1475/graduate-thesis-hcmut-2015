@@ -1,0 +1,5 @@
+rawTerm="91287406"||temporal="1287406"
+rawTerm="6/19/1998 12:00:00 AM"||temporal="6/19/1998"
+rawTerm="06/19/1998"||temporal="06/19/1998"
+rawTerm="08/01/1998"||temporal="08/01/1998"
+rawTerm="08/01/98"||temporal="08/01/98"

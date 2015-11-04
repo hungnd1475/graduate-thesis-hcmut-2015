@@ -1,0 +1,6 @@
+rawTerm="271735"||temporal="271735"
+rawTerm="9/15/2000 12:00:00 AM"||temporal="9/15/2000"
+rawTerm="008-08-33"||temporal="08-08-33"
+rawTerm="09/15/2000"||temporal="09/15/2000"
+rawTerm="An ultrasound on 1/25/00 showed six gallstones without cholecystitis ."||temporal="1/25/00"
+rawTerm="09/21/2000 10:58 P"||temporal="09/21/2000"

@@ -1,0 +1,5 @@
+rawTerm="917989835 RWH"||temporal="179898"
+rawTerm="01/09/2002 12:00:00 AM"||temporal="01/09/2002"
+rawTerm="01/09/2002 01:27 PM"||temporal="01/09/2002"
+rawTerm="01/09/2002 17:02"||temporal="01/09/2002"
+rawTerm="This report was created by AYREKEMPE , NONOK 01/09/2002 05:09 PM"||temporal="01/09/2002"

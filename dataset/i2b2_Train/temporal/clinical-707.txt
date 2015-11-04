@@ -1,0 +1,6 @@
+rawTerm="2012-09-26"||temporal="2012-09-26"
+rawTerm="2012-10-01"||temporal="2012-10-01"
+rawTerm="4. Received hepatitis B vaccine on 2012-09-30 ."||temporal="2012-09-30"
+rawTerm="D : 2012-10-02 15:46:05"||temporal="2012-10-02"
+rawTerm="T : 2012-10-02 17:14:44"||temporal="2012-10-02"
+rawTerm="Signed electronically by : DR. Richard Stripling on : Maxine 2012-10-25 8:30 PM"||temporal="2012-10-25"

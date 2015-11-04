@@ -1,0 +1,8 @@
+rawTerm="399210956"||temporal="210956"
+rawTerm="08/27/1992 12:00:00 AM"||temporal="08/27/1992"
+rawTerm="08-27-92"||temporal="08-27-92"
+rawTerm="09-05-92"||temporal="09-05-92"
+rawTerm="08-27-92 , left foot film , correlation , patient consistent with osteomyelitis involving the first digit and possibly the second digit of the left foot ."||temporal="08-27-92"
+rawTerm="On 09-03-92 , patient underwent a left great toe buttontoe amputation under regional ankle block for chronic ulcer and osteomyelitis of the left great toe ."||temporal="09-03-92"
+rawTerm="10-21-92"||temporal="10-21-92"
+rawTerm="10/22/92"||temporal="10/22/92"

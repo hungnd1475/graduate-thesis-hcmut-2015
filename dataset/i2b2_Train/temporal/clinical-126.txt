@@ -1,0 +1,8 @@
+rawTerm="180414134"||temporal="18041413"
+rawTerm="09/08/1996 12:00:00 AM"||temporal="09/08/1996"
+rawTerm="09/08/96"||temporal="09/08/96"
+rawTerm="09/17/96"||temporal="09/17/96"
+rawTerm="He has been managing at home on restricted activity but able to get around with a walker but on the day before admission he became increasing dyspneic and on the day of admission he collapsed and was unable to walk to his bed ."||temporal="2015-11-04"
+rawTerm="His ambulation was minimal and always with assistance but he had a transurethral resection of the prostate on 09/14/96 ."||temporal="09/14/96"
+rawTerm="09/16/96"||temporal="09/16/96"
+rawTerm="09/16/96 4:10 P"||temporal="09/16/96"

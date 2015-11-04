@@ -1,0 +1,8 @@
+rawTerm="2016-02-14"||temporal="2016-02-14"
+rawTerm="1952-03-27"||temporal="1952-03-27"
+rawTerm="5. Status post cadaveric kidney transplant in 2012-09-21 ."||temporal="2012-09-21"
+rawTerm="On 2016-02-15 , the patient was taken to the operating room and had an off pump coronary artery bypass graft performed with the left internal mammary artery to the left anterior descending , saphenous vein graft to obtuse marginal and posterior descending artery ."||temporal="2016-02-15"
+rawTerm="He otherwise had a fairly uncomplicated postoperative course ."||temporal="2016-02-16"
+rawTerm="D : 2016-02-21 11:42"||temporal="2016-02-21"
+rawTerm="T : 2016-02-21 13:33"||temporal="2016-02-21"
+rawTerm="Signed electronically by : DR. Georgia K. Dover on : FRI 2016-03-18 3:35 PM"||temporal="2016-03-18"

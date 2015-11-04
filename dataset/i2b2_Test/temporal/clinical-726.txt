@@ -1,0 +1,6 @@
+rawTerm="81247987"||temporal="124798"
+rawTerm="08/16/1998 12:00:00 AM"||temporal="08/16/1998"
+rawTerm="08/16/1998"||temporal="08/16/1998"
+rawTerm="08/18/1998"||temporal="08/18/1998"
+rawTerm="The patient &apos;s mental status slowly began to recover , however on the morning of the first day of admission , August 16 , 1998 , the patient was found after having fallen ."||temporal="2015-11-04"
+rawTerm="08/18/98"||temporal="08/18/98"

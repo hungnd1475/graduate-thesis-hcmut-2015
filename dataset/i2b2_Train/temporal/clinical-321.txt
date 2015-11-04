@@ -1,0 +1,7 @@
+rawTerm="468211586"||temporal="211586"
+rawTerm="1/4/1996 12:00:00 AM"||temporal="1/4/1996"
+rawTerm="01/04/96"||temporal="01/04/96"
+rawTerm="01/10/96"||temporal="01/10/96"
+rawTerm="On the day of admission , she was generally stable and she had no evidence of disease in the pelvis , no bleeding and no other abnormality ."||temporal="2015-11-04"
+rawTerm="01/26/96"||temporal="01/26/96"
+rawTerm="01/30/96 12:18 P"||temporal="01/30/96"

@@ -1,0 +1,2 @@
+rawTerm="242460787 DH"||temporal="2424607"
+rawTerm="09/26/2004 12:00:00 AM"||temporal="09/26/2004"

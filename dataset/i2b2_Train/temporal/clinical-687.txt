@@ -1,0 +1,5 @@
+rawTerm="2016-03-18"||temporal="2016-03-18"
+rawTerm="2016-04-01"||temporal="2016-04-01"
+rawTerm="1929-07-27"||temporal="1929-07-27"
+rawTerm="Completed by : Shane Gabrielle MD 73-971 2016-04-01 @ 0836"||temporal="2016-04-01"
+rawTerm="Signed electronically by : DR. Robert Howell on: WED 2016-05-18 5:18 PM"||temporal="2016-05-18"

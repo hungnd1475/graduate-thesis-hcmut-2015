@@ -1,0 +1,7 @@
+rawTerm="2015-03-17"||temporal="2015-03-17"
+rawTerm="2015-03-23"||temporal="2015-03-23"
+rawTerm="1992-12-06"||temporal="1992-12-06"
+rawTerm="The initial part to this Discharge Summary confirmation number was 276836 ( I believe ) ."||temporal="276836"
+rawTerm="Please add this dictation to initial dictation done on 2015-03-26 ."||temporal="2015-03-26"
+rawTerm="2015-03-26"||temporal="2015-03-26"
+rawTerm="FRI 2015-03-27 11:01 AM"||temporal="2015-03-27"

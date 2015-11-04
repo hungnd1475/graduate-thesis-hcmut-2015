@@ -1,0 +1,7 @@
+rawTerm="2016-07-18"||temporal="2016-07-18"
+rawTerm="2016-07-21"||temporal="2016-07-21"
+rawTerm="1969-11-05"||temporal="1969-11-05"
+rawTerm="2016-07-18 05:30 PM"||temporal="2016-07-18"
+rawTerm="Please see Dr. Villani on Monday 2016-07-25 at 10:00 in Smith 7th ."||temporal="2016-07-25"
+rawTerm="Completed by : Terry Smith MD 12-201 2016-07-21 @ 1848"||temporal="2016-07-21"
+rawTerm="Signed electronically by : DR. Jennifer Applebee on : Sandra 2016-07-21 9:54 PM"||temporal="2016-07-21"

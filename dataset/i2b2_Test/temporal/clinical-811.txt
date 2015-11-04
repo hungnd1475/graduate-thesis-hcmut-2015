@@ -1,0 +1,8 @@
+rawTerm="688127038 EH"||temporal="127038"
+rawTerm="204512"||temporal="204512"
+rawTerm="3/5/2002 12:00:00 AM"||temporal="3/5/2002"
+rawTerm="03/05/2002"||temporal="03/05/2002"
+rawTerm="03/07/2002"||temporal="03/07/2002"
+rawTerm="03/07/02 AT 11:00 AM"||temporal="03/07/02"
+rawTerm="Transferred to floor on day of admission with no acute medical issues ; awaiting psych eval ."||temporal="2015-11-04"
+rawTerm="KOTEKEESECRANKBERF , LA A. , M.D. ( JG92 ) 03/07/02 10:56 AM"||temporal="03/07/02"

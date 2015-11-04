@@ -1,0 +1,6 @@
+rawTerm="274938"||temporal="274938"
+rawTerm="10/14/2004 12:00:00 AM"||temporal="10/14/2004"
+rawTerm="10/14/2004 03:51 PM"||temporal="10/14/2004"
+rawTerm="10/14/2004 21:17"||temporal="10/14/2004"
+rawTerm="call dr koorskote &apos;s office tomorrow"||temporal="2015-11-05"
+rawTerm="This report was created by STOCKADALELEEFNATHE , LISHE , M.D. 10/14/2004 09:35 PM"||temporal="10/14/2004"

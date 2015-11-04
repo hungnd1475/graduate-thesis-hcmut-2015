@@ -1,0 +1,7 @@
+rawTerm="2/8/1990 12:00:00 AM"||temporal="2/8/1990"
+rawTerm="02/08/1990"||temporal="02/08/1990"
+rawTerm="02/13/1990"||temporal="02/13/1990"
+rawTerm="The patient on 2/8/90 underwent a right radical vulvectomy with excellent results and negative margins on frozen section ."||temporal="2/8/90"
+rawTerm="Her postoperative course was unremarkble ."||temporal="2015-11-05"
+rawTerm="02/12/90"||temporal="02/12/90"
+rawTerm="02/13/90"||temporal="02/13/90"

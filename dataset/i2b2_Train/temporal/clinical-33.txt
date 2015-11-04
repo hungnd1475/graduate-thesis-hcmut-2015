@@ -1,0 +1,6 @@
+rawTerm="2019-01-09"||temporal="2019-01-09"
+rawTerm="2019-01-15"||temporal="2019-01-15"
+rawTerm="1973-11-18"||temporal="1973-11-18"
+rawTerm="Please follow-up with your Primary care doctor Larry Bock 2019-01-16 at 8:30 AM ."||temporal="2019-01-16"
+rawTerm="Completed by : Daniel Tapaha MD 73-060 2019-01-15 @ 0918"||temporal="2019-01-15"
+rawTerm="Signed electronically by : DR. Steven W. Weekley on : Sandra 2019-01-15 10:22 AM"||temporal="2019-01-15"

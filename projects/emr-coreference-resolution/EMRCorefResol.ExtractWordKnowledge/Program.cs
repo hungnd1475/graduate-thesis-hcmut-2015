@@ -17,12 +17,14 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
         static void Main(string[] args)
         {
             var collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Train");
-            BatchUMLSProcess(collection);
+            //BatchUMLSProcess(collection);
             //BatchWikiProcess(collection);
+            BatchTemporalProcess(collection);
 
             collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Test");
-            BatchUMLSProcess(collection);
+            //BatchUMLSProcess(collection);
             //BatchWikiProcess(collection);
+            BatchTemporalProcess(collection);
 
             Console.WriteLine("========Finish========");
             Console.ReadLine();
@@ -58,20 +60,24 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
                     WriteToFile(emr.Path, dictionary);
                     Console.WriteLine($"Finish processing file {filename}");
                 });
+        }
 
-            /*for (int i = 0; i < collection.Count; i++)
-            {
-                var emrPath = collection.GetEMRPath(i);
-                var conceptPath = collection.GetConceptsPath(i);
-                var dataReader = new I2B2DataReader();
+        static void BatchTemporalProcess(EMRCollection collection)
+        {
+            Parallel.For(0, collection.Count,
+                i =>
+                {
+                    var emrPath = collection.GetEMRPath(i);
+                    var conceptPath = collection.GetConceptsPath(i);
+                    var dataReader = new I2B2DataReader();
 
-                var emr = new EMR(emrPath, conceptPath, dataReader);
-                var filename = new FileInfo(emr.Path).Name;
+                    var emr = new EMR(emrPath, conceptPath, dataReader);
+                    var filename = new FileInfo(emr.Path).Name;
 
-                var dictionary = ExtractUMLSData(emr);
-                WriteToFile(emr.Path, dictionary);
-                Console.WriteLine($"Finish processing file {filename}");
-            }*/
+                    var dictionary = ExtractTemporalData(emr);
+                    WriteToFile(emr.Path, dictionary);
+                    Console.WriteLine($"Finish processing file {filename}");
+                });
         }
 
         static void BatchWikiProcess(EMRCollection collection)
@@ -90,20 +96,25 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
                     WriteToFile(emr.Path, dictionary);
                     Console.WriteLine($"Finish processing file {filename}");
                 });
+        }
 
-            /*for (int i = 0; i < collection.Count; i++)
+        static Dictionary<string, string> ExtractTemporalData(EMR emr)
+        {
+            Dictionary<string, string> _temporal = new Dictionary<string, string>();
+            var lines = emr.Content.Split('\n');
+
+            foreach(string line in lines)
             {
-                var emrPath = collection.GetEMRPath(i);
-                var conceptPath = collection.GetConceptsPath(i);
-                var dataReader = new I2B2DataReader();
+                var fullPath = new FileInfo(emr.Path).FullName;
+                var normLine = line.Replace("\n", "").Replace("\r", "");
+                var temporalValue = Service.English.GetTemporalValue(fullPath, normLine, "");
+                if(!string.IsNullOrEmpty(temporalValue) && !_temporal.ContainsKey(normLine))
+                {
+                    _temporal.Add(normLine, temporalValue);
+                }
+            }
 
-                var emr = new EMR(emrPath, conceptPath, dataReader);
-                var filename = new FileInfo(emr.Path).Name;
-
-                var dictionary = ExtractWikiData(emr);
-                WriteToFile(emr.Path, dictionary);
-                Console.WriteLine($"Finish processing file {filename}");
-            }*/
+            return _temporal;
         }
 
         static Dictionary<string, Service.WikiData> ExtractWikiData(EMR emr)
@@ -184,6 +195,25 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
                 num++;
             }
             return _umls;
+        }
+
+        static void WriteToFile(string path, Dictionary<string, string> dictionary)
+        {
+            FileInfo fileinfo = new FileInfo(path);
+            var root = fileinfo.Directory.Parent.FullName;
+            var emrName = fileinfo.Name;
+            var filePath = Path.Combine(root, "temporal", emrName);
+
+            StreamWriter sw = new StreamWriter(filePath);
+            foreach (var entry in dictionary)
+            {
+                if (entry.Value != null)
+                {
+                    var line = $"rawTerm=\"{entry.Key}\"||temporal=\"{entry.Value}\"";
+                    sw.WriteLine(line);
+                    sw.Flush();
+                }
+            }
         }
 
         static void WriteToFile(string path, Dictionary<string, Service.WikiData> dictionary)

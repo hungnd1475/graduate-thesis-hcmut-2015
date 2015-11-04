@@ -1,0 +1,8 @@
+rawTerm="2009-11-10"||temporal="2009-11-10"
+rawTerm="2009-11-12"||temporal="2009-11-12"
+rawTerm="1948-10-16"||temporal="1948-10-16"
+rawTerm="The patient is a 61 - year-old white male with a history of coronary artery disease , status post 5-vessel coronary artery bypass graft on 2009-09-11 , who presents for elective right heart catheterization and pericardiocentesis ."||temporal="2009-09-11"
+rawTerm="1. Coronary artery disease , status post 5-vessel coronary artery bypass graft on 2009-09-11 ."||temporal="2009-09-11"
+rawTerm="D : 2009-11-12 12:02"||temporal="2009-11-12"
+rawTerm="T : 2009-11-12 17:44"||temporal="2009-11-12"
+rawTerm="Signed electronically by : DR. Susan O. G. Aviles on : Robert 2010-01-14 7:23 PM"||temporal="2010-01-14"

@@ -43,7 +43,6 @@ namespace emr_corefsol_service.Libs
             }
             catch(Exception e)
             {
-                int x = 1 + 1;
                 return null;
             }
         }

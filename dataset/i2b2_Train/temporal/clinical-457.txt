@@ -1,0 +1,6 @@
+rawTerm="2013-02-11"||temporal="2013-02-11"
+rawTerm="2013-02-26"||temporal="2013-02-26"
+rawTerm="1932-07-08"||temporal="1932-07-08"
+rawTerm="D : 2013-05-01 10:33"||temporal="2013-05-01"
+rawTerm="T : 2013-05-01 12:59"||temporal="2013-05-01"
+rawTerm="Signed electronically by : DR. Edward Larue on : TUE 2013-05-14 5:11 AM"||temporal="2013-05-14"

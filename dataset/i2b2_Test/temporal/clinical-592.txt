@@ -1,0 +1,7 @@
+rawTerm="2012-05-08"||temporal="2012-05-08"
+rawTerm="2012-05-18"||temporal="2012-05-18"
+rawTerm="Estimated date of delivery was 2012-05-14 for estimated gestational age of 39-1/7 weeks ."||temporal="2012-05-14"
+rawTerm="A trough level at 20 hours after the bolus on day of discharge was 29 ."||temporal="2012-05-18"
+rawTerm="D : 2012-05-18 13:58"||temporal="2012-05-18"
+rawTerm="T : 2012-05-18 14:22"||temporal="2012-05-18"
+rawTerm="Signed electronically by : DR. George Sherwood on : MON 2012-05-21 11:57 AM"||temporal="2012-05-21"

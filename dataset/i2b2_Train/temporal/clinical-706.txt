@@ -1,0 +1,8 @@
+rawTerm="11/16/2005 12:00:00 AM"||temporal="11/16/2005"
+rawTerm="11/16/2005"||temporal="11/16/2005"
+rawTerm="11/19/2005"||temporal="11/19/2005"
+rawTerm="11/18/05 AT 02:00 PM"||temporal="11/18/05"
+rawTerm="12/02/05"||temporal="12/02/05"
+rawTerm="26793023"||temporal="2679302"
+rawTerm="11/16/05 02:21 PM"||temporal="11/16/05"
+rawTerm="11/17/05 08:24 AM"||temporal="11/17/05"

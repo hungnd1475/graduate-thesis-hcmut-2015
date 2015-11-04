@@ -1,0 +1,7 @@
+rawTerm="9260099"||temporal="260099"
+rawTerm="12/11/2003 12:00:00 AM"||temporal="12/11/2003"
+rawTerm="12/11/2003"||temporal="12/11/2003"
+rawTerm="01/08/2004"||temporal="01/08/2004"
+rawTerm="02/05/2004 17:03"||temporal="02/05/2004"
+rawTerm="01/23/2004"||temporal="01/23/2004"
+rawTerm="01/26/2004 2:16 A 612765"||temporal="01/26/2004"

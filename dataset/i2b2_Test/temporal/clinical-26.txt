@@ -1,0 +1,6 @@
+rawTerm="1835979"||temporal="183597"
+rawTerm="12/11/2005 12:00:00 AM"||temporal="12/11/2005"
+rawTerm="12/11/2005"||temporal="12/11/2005"
+rawTerm="12/13/2005"||temporal="12/13/2005"
+rawTerm="12/13/05 AT 12:00 PM"||temporal="12/13/05"
+rawTerm="FLOMKOTEWIERST , NEENIE LAURE , M.D. ( DK739 ) 12/13/05 01:01 PM"||temporal="12/13/05"

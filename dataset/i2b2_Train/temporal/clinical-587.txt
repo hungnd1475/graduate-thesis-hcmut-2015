@@ -1,0 +1,8 @@
+rawTerm="2015-11-22"||temporal="2015-11-22"
+rawTerm="2015-11-27"||temporal="2015-11-27"
+rawTerm="1942-03-04"||temporal="1942-03-04"
+rawTerm="A similar episode happened at 2 a.m. the same night and at 07:45 on the day of admission , the patient lost consciousness once again when he was trying to sit up ."||temporal="2015-11-22"
+rawTerm="Last total cholesterol was 168 in 2015-08-24 ."||temporal="2015-08-24"
+rawTerm="D : 2015-11-26 15:15"||temporal="2015-11-26"
+rawTerm="T : 2015-11-26 16:10"||temporal="2015-11-26"
+rawTerm="Signed electronically by : DR. Tammy Thompson on : FRI 2015-11-27 8:46 PM"||temporal="2015-11-27"

@@ -1,0 +1,5 @@
+rawTerm="614746156"||temporal="1474615"
+rawTerm="7/3/1999 12:00:00 AM"||temporal="7/3/1999"
+rawTerm="07/03/1999"||temporal="07/03/1999"
+rawTerm="Biopsy was taken at colonoscopy on 7/5/99 ."||temporal="7/5/99"
+rawTerm="07/05/99"||temporal="07/05/99"

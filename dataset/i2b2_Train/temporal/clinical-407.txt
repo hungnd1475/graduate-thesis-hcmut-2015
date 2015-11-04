@@ -1,0 +1,8 @@
+rawTerm="2017-04-26"||temporal="2017-04-26"
+rawTerm="2017-05-01"||temporal="2017-05-01"
+rawTerm="1955-02-25"||temporal="1955-02-25"
+rawTerm="The patient was admitted to Saint Vincent Hospital on 2017-04-26 and underwent a coronary artery bypass graft times four with left internal mammary artery to left anterior descending , saphenous vein graft to right coronary artery , saphenous vein graft to PDA and saphenous vein graft to obtuse marginal with Dr. Rota ."||temporal="2017-04-26"
+rawTerm="The patient was weaned the next day from mechanical ventilation on his first postoperative night ."||temporal="2017-04-27"
+rawTerm="D : 2017-05-01 15:06"||temporal="2017-05-01"
+rawTerm="T : 2017-05-01 15:37"||temporal="2017-05-01"
+rawTerm="Signed electronically by : DR. Kathy Brendel on : TUE 2017-05-02 8:08 AM"||temporal="2017-05-02"

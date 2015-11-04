@@ -1,0 +1,8 @@
+rawTerm="2831385"||temporal="283138"
+rawTerm="5/13/1992 12:00:00 AM"||temporal="5/13/1992"
+rawTerm="5-13-92"||temporal="5-13-92"
+rawTerm="5-22-92"||temporal="5-22-92"
+rawTerm="She needs to be given 5 mg of Coumadin tonight , 5/22/92 ."||temporal="5/22/92"
+rawTerm="Bacitracin ointment one drop O.D. q.h.s. Ciprofloxacin 500 mg. one p.o. b.i.d. x four more days [ until 5/25/92 ] , for recently discovered siderobacter UTI ."||temporal="5/25/92"
+rawTerm="She needs her dose on 5/22/92 ."||temporal="5/22/92"
+rawTerm="05/22/92"||temporal="05/22/92"

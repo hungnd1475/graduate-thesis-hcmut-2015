@@ -1,0 +1,4 @@
+rawTerm="190510002"||temporal="19051000"
+rawTerm="3/16/2003 12:00:00 AM"||temporal="3/16/2003"
+rawTerm="03/16/2003 05:16 PM"||temporal="03/16/2003"
+rawTerm="This is to notify you that your patient , KOTE , LYFRANKLAPALM arrived in the Emergency Department at Tecal Galecounxopt Community Hospital on 03/16/2003 05:16 PM ."||temporal="03/16/2003"

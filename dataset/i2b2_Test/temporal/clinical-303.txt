@@ -1,0 +1,8 @@
+rawTerm="142995994 SC"||temporal="142995"
+rawTerm="1/23/1992 12:00:00 AM"||temporal="1/23/1992"
+rawTerm="01/23/1992"||temporal="01/23/1992"
+rawTerm="01/26/1992"||temporal="01/26/1992"
+rawTerm="This was obtained on the day of discharge , however , due to residual contrast in the colon from the patient &apos;s prior abdominal CT scan , the exam was postponed after a scout film was obtained ."||temporal="1992-01-26"
+rawTerm="The patient fell well on the day of discharge ."||temporal="1992-01-26"
+rawTerm="01/26/92"||temporal="01/26/92"
+rawTerm="01/27/92"||temporal="01/27/92"

@@ -1,0 +1,5 @@
+rawTerm="2027705"||temporal="2027705"
+rawTerm="06/11/2005 12:00:00 AM"||temporal="06/11/2005"
+rawTerm="06/11/2005 12:08 PM"||temporal="06/11/2005"
+rawTerm="06/11/2005 21:46"||temporal="06/11/2005"
+rawTerm="This report was created by TROWELKS , BURLTIS 06/11/2005 09:52 PM"||temporal="06/11/2005"

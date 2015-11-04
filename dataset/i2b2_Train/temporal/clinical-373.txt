@@ -1,0 +1,6 @@
+rawTerm="06/29/1992 12:00:00 AM"||temporal="06/29/1992"
+rawTerm="06/29/92"||temporal="06/29/92"
+rawTerm="07/27/92"||temporal="07/27/92"
+rawTerm="The remainder of his preoperative course was benign ."||temporal="2015-11-05"
+rawTerm="Postoperatively , the patient continued to have a coagulopathy requiring re-exploration on postoperatively day 2 , with findings only of hematoma and no active bleeding ."||temporal="2015-11-06"
+rawTerm="07/28/92"||temporal="07/28/92"

@@ -1,0 +1,5 @@
+rawTerm="223159990"||temporal="223159"
+rawTerm="181083"||temporal="181083"
+rawTerm="7/31/2000 12:00:00 AM"||temporal="7/31/2000"
+rawTerm="07/31/2000 07:36 PM"||temporal="07/31/2000"
+rawTerm="This is to notify you that your patient , AKOTEBONTKAYS , JUANQUINTLEO arrived in the Emergency Department at Ph University Of Medical Center on 07/31/2000 07:36 PM ."||temporal="07/31/2000"

@@ -1,0 +1,7 @@
+rawTerm="506243692_b"||temporal="243692"
+rawTerm="11/4/2000 12:00:00 AM"||temporal="11/4/2000"
+rawTerm="413-18-46"||temporal="13-18-46"
+rawTerm="11/04/2000"||temporal="11/04/2000"
+rawTerm="11/09/2000"||temporal="11/09/2000"
+rawTerm="AKA G STATE , M.D. CARDIAC TRANSPLANT STEMSTRICTALLE MEDICAL CENTER Electronically Signed AKA G STATE , M.D. 11/17/2000 12:46 _____________________________ ??"||temporal="11/17/2000"
+rawTerm="11/14/2000 1:09 P"||temporal="11/14/2000"

@@ -1,0 +1,5 @@
+rawTerm="5/8/1995 12:00:00 AM"||temporal="5/8/1995"
+rawTerm="05/08/95"||temporal="05/08/95"
+rawTerm="05/14/95"||temporal="05/14/95"
+rawTerm="05/13/95"||temporal="05/13/95"
+rawTerm="05/17/95"||temporal="05/17/95"

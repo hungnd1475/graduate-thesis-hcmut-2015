@@ -1,0 +1,7 @@
+rawTerm="2013-02-12"||temporal="2013-02-12"
+rawTerm="2013-02-16"||temporal="2013-02-16"
+rawTerm="1937-03-25"||temporal="1937-03-25"
+rawTerm="Admitted to Bay State Medical Center Hospital in 2012-10-22 in congestive heart failure at that time ."||temporal="2012-10-22"
+rawTerm="D : 2013-02-15 18:35"||temporal="2013-02-15"
+rawTerm="T : 2013-02-16 01:03"||temporal="2013-02-16"
+rawTerm="Signed electronically by : DR. Richard Gray on : Tommy 2013-02-17 12:05 AM"||temporal="2013-02-17"

@@ -1,0 +1,4 @@
+rawTerm="12/28/1995 12:00:00 AM"||temporal="12/28/1995"
+rawTerm="12/28/95"||temporal="12/28/95"
+rawTerm="12-30-95"||temporal="12-30-95"
+rawTerm="01/02/96"||temporal="01/02/96"

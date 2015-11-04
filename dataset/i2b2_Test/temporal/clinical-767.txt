@@ -1,0 +1,7 @@
+rawTerm="2009-12-28"||temporal="2009-12-28"
+rawTerm="2009-12-31"||temporal="2009-12-31"
+rawTerm="1964-03-23"||temporal="1964-03-23"
+rawTerm="Follow-up CT was obtained the second day of admission ."||temporal="2009-12-28"
+rawTerm="D : 2009-12-31 14:05"||temporal="2009-12-31"
+rawTerm="T : 2009-12-31 14:57"||temporal="2009-12-31"
+rawTerm="Signed electronically by : DR. Juan R. RATAN on : TUE 2010-03-02 8:13 PM"||temporal="2010-03-02"

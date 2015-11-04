@@ -1,0 +1,6 @@
+rawTerm="014894512"||temporal="148945"
+rawTerm="10/27/1993 12:00:00 AM"||temporal="10/27/1993"
+rawTerm="10-27-93"||temporal="10-27-93"
+rawTerm="11-1-93"||temporal="11-1-93"
+rawTerm="He underwent right knee open synovectomy and debridement of synovial chondromatosis on 10-28-93 ."||temporal="10-28-93"
+rawTerm="11/01/93"||temporal="11/01/93"

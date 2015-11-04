@@ -16,7 +16,8 @@ namespace HCMUT.EMRCorefResol.IO
         private static Regex CorefTypePattern = new Regex("t=\"coref ([^|]+)\"");
 
         private static Regex WikiDataPattern = new Regex("rawTerm=\"(.*?)\"\\|\\|term=\"(.*?)\"\\|\\|title=\"(.*?)\"\\|\\|links=\\[(.*?)\\]\\|\\|bolds=\\[(.*?)\\]");
-        private static Regex UmlsDataPatter = new Regex("rawTerm=\"(.*?)\"\\|\\|cui=\"(.*?)\"\\|\\|concept=\"(.*?)\"\\|\\|prefer=\"(.*?)\"\\|\\|semantic=\\[(.*?)\\]\\|\\|confidence=\"(.*?)\"");
+        private static Regex UmlsDataPattern = new Regex("rawTerm=\"(.*?)\"\\|\\|cui=\"(.*?)\"\\|\\|concept=\"(.*?)\"\\|\\|prefer=\"(.*?)\"\\|\\|semantic=\\[(.*?)\\]\\|\\|confidence=\"(.*?)\"");
+        private static Regex TemporalDataPattern = new Regex("rawTerm=\"(.*?)\"\\|\\|temporal=\"(.*?)\"");
 
         private static string _history_of_illness_pattern = "(present illness|hospitalization)(.*?):";
         private static string _allergy = "(allergies|allergy)(.*?):";
@@ -82,9 +83,25 @@ namespace HCMUT.EMRCorefResol.IO
             }
         }
 
+        public Tuple<string, string> ReadTemporalFile(string line)
+        {
+            var match = TemporalDataPattern.Match(line);
+            if (match.Success)
+            {
+                var key = match.Groups[1].Value;
+                var temporal = match.Groups[2].Value;
+
+                return Tuple.Create(key, temporal);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         public Tuple<string, UMLSData> ReadUmlsFile(string line)
         {
-            var match = UmlsDataPatter.Match(line);
+            var match = UmlsDataPattern.Match(line);
             if (match.Success)
             {
                 var key = match.Groups[1].Value;

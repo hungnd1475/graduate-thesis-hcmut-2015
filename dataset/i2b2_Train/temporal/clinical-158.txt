@@ -1,0 +1,8 @@
+rawTerm="2011-12-26"||temporal="2011-12-26"
+rawTerm="2012-01-26"||temporal="2012-01-26"
+rawTerm="1958-04-03"||temporal="1958-04-03"
+rawTerm="This is an addendum to the discharge summary for the admission starting 2012-01-05 ."||temporal="2012-01-05"
+rawTerm="The patient was discharged on 2012-01-26 ."||temporal="2012-01-26"
+rawTerm="D : 2012-01-26 09:56"||temporal="2012-01-26"
+rawTerm="T : 2012-01-26 09:58"||temporal="2012-01-26"
+rawTerm="Signed electronically by : DR. Kevin Arthur on : Tony 2012-01-27 6:52 AM"||temporal="2012-01-27"

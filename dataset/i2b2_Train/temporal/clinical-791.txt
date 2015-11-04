@@ -1,0 +1,7 @@
+rawTerm="627258104"||temporal="2725810"
+rawTerm="1/8/2001 12:00:00 AM"||temporal="1/8/2001"
+rawTerm="01/08/2001"||temporal="01/08/2001"
+rawTerm="01/30/2001"||temporal="01/30/2001"
+rawTerm="On the day of discharge , he is stating approximately 91 to 92% on three to four liters ."||temporal="2001-01-30"
+rawTerm="LUPEVICKETTE FLOW , M.D. YA80 QO567/192247"||temporal="192247"
+rawTerm="01/30/01"||temporal="01/30/01"

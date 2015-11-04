@@ -1,0 +1,6 @@
+rawTerm="2016-02-15"||temporal="2016-02-15"
+rawTerm="2016-02-21"||temporal="2016-02-21"
+rawTerm="The most recent weight today is 1810 grams which was no change from the previous day ."||temporal="PAST_REF"
+rawTerm="D : 2016-02-21 09:53"||temporal="2016-02-21"
+rawTerm="T : 2016-02-21 10:12"||temporal="2016-02-21"
+rawTerm="Signed electronically by : DR. Cynthia Short on : MON 2016-02-22 8:16 AM"||temporal="2016-02-22"

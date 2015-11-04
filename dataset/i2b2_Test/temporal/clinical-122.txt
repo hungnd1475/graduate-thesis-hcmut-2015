@@ -1,0 +1,8 @@
+rawTerm="265076"||temporal="265076"
+rawTerm="05/09/2004 12:00:00 AM"||temporal="05/09/2004"
+rawTerm="05/09/2004"||temporal="05/09/2004"
+rawTerm="05/16/2004"||temporal="05/16/2004"
+rawTerm="The patient was consented for surgery and on the day of admission was taken to the operating room for transverse colectomy for tumor ."||temporal="2015-11-04"
+rawTerm="Her postoperative course was unremarkable ."||temporal="2015-11-05"
+rawTerm="Electronically Signed OIE LIMOR WARM , M.D. 05/18/2004 11:28"||temporal="05/18/2004"
+rawTerm="05/16/2004 7:28 A 265076"||temporal="265076"

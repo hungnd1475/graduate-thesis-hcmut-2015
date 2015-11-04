@@ -1,0 +1,6 @@
+rawTerm="2010-08-30"||temporal="2010-08-30"
+rawTerm="2010-09-06"||temporal="2010-09-06"
+rawTerm="1946-01-08"||temporal="1946-01-08"
+rawTerm="This is a 64-year-old man with a history of coronary artery disease , endocarditis status post coronary artery bypass grafting and mitral valve replacement on 2010-08-13 ."||temporal="2010-08-13"
+rawTerm="He was transferred to Erich Lindemann Mental Health Center from the rehabilitation center where he had been discharged to on 2010-08-25 following his CABG/MVR ."||temporal="2010-08-25"
+rawTerm="FRI 2010-10-01 3:26 PM"||temporal="2010-10-01"

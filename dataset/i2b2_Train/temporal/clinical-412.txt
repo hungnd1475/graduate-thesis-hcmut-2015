@@ -1,0 +1,7 @@
+rawTerm="2015-07-12"||temporal="2015-07-12"
+rawTerm="2015-07-19"||temporal="2015-07-19"
+rawTerm="1970-05-06"||temporal="1970-05-06"
+rawTerm="So , she was admitted to Shaugnessy-Kaplan Rehab Hospital on 2015-07-10 ."||temporal="2015-07-10"
+rawTerm="D : 2015-09-14 17:19:48"||temporal="2015-09-14"
+rawTerm="T : 2015-09-15 00:27:21"||temporal="2015-09-15"
+rawTerm="Signed electronically by : DR. Phillip Garcia on : WED 2015-09-16 5:10 PM"||temporal="2015-09-16"

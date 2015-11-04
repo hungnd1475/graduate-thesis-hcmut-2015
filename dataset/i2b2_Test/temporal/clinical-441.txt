@@ -1,0 +1,8 @@
+rawTerm="766212923 ELMVH"||temporal="212923"
+rawTerm="1264110"||temporal="1264110"
+rawTerm="11/9/2003 12:00:00 AM"||temporal="11/9/2003"
+rawTerm="11/09/2003"||temporal="11/09/2003"
+rawTerm="11/16/2003"||temporal="11/16/2003"
+rawTerm="The day prior to admission , he experienced dyspnea on exertion , and on the day of admission he collapsed and complained of substantial weakness ."||temporal="2015-11-04"
+rawTerm="Was discharged on 11/16/2003 in stable condition with the last recorded hematocrit of 31.3 ."||temporal="11/16/2003"
+rawTerm="12/22/03"||temporal="12/22/03"

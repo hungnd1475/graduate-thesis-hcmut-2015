@@ -1,0 +1,8 @@
+rawTerm="7191549"||temporal="191549"
+rawTerm="12/4/1995 12:00:00 AM"||temporal="12/4/1995"
+rawTerm="12/4/95"||temporal="12/4/95"
+rawTerm="12/8/95"||temporal="12/8/95"
+rawTerm="His date of birth is 11/7/32 ."||temporal="11/7/32"
+rawTerm="intravenous chemotherapy 12/4/95 through 12/8/95 ."||temporal="12/4/95"
+rawTerm="12/10/95"||temporal="12/10/95"
+rawTerm="12/13/95"||temporal="12/13/95"

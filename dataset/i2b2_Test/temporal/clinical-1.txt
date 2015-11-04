@@ -1,0 +1,8 @@
+rawTerm="68299235"||temporal="299235"
+rawTerm="9/29/1993 12:00:00 AM"||temporal="9/29/1993"
+rawTerm="09/29/1993"||temporal="09/29/1993"
+rawTerm="10/04/1993"||temporal="10/04/1993"
+rawTerm="She has had similar pain intermittently for last year ."||temporal="2014"
+rawTerm="She went for a debridement of her left calf lesion on 10/2/93 and was started empirically on IV ceftriaxone which was changed to po doxycycline on the day of discharge ."||temporal="10/2/93"
+rawTerm="10/03/93"||temporal="10/03/93"
+rawTerm="10/07/93"||temporal="10/07/93"

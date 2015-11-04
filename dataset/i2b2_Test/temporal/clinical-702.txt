@@ -1,0 +1,7 @@
+rawTerm="2015-01-19"||temporal="2015-01-19"
+rawTerm="2015-01-22"||temporal="2015-01-22"
+rawTerm="1948-02-29"||temporal="1948-02-29"
+rawTerm="DISCHARGE SUMMARY ADDENDUM : The patient during her admission from 2015-01-19 to 2015-01-22 during that admission she had an echocardiogram which revealed essentially an ejection fraction of 40% with a patent foramen ovale mildly dilated left atrium ."||temporal="2015-01-19"
+rawTerm="D : 2015-03-12 18:30"||temporal="2015-03-12"
+rawTerm="T : 2015-03-16 11:19"||temporal="2015-03-16"
+rawTerm="Signed electronically by : DR. Barbara Rogers on : WED 2015-03-25 9:51 AM"||temporal="2015-03-25"

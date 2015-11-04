@@ -1,0 +1,6 @@
+rawTerm="196768414 YC"||temporal="196768"
+rawTerm="5/7/2003 12:00:00 AM"||temporal="5/7/2003"
+rawTerm="05/07/2003"||temporal="05/07/2003"
+rawTerm="05/09/2003"||temporal="05/09/2003"
+rawTerm="05/09/03 AT 10:00 AM"||temporal="05/09/03"
+rawTerm="DOUETLEPSGISS , VALETO , M.D. ( MC71 ) 05/07/03 03:46 PM"||temporal="05/07/03"

@@ -1,0 +1,7 @@
+rawTerm="2014-10-14"||temporal="2014-10-14"
+rawTerm="2014-10-17"||temporal="2014-10-17"
+rawTerm="1959-12-09"||temporal="1959-12-09"
+rawTerm="An appointment was established for him to see his primary care doctor , Dr. Stella Booth on Maynard , 2014-10-20 and the patient was referred to Dr. Granville Hamers , at Ware in cardiology to be seen in two weeks ."||temporal="2014-10-20"
+rawTerm="D : 2014-10-18 12:39"||temporal="2014-10-18"
+rawTerm="T : 2014-10-21 12:42"||temporal="2014-10-21"
+rawTerm="Signed electronically by : DR. Steve PINTO on : SUN 2014-11-02 8:39 PM"||temporal="2014-11-02"

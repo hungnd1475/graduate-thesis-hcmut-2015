@@ -1,0 +1,4 @@
+rawTerm="7284844"||temporal="284844"
+rawTerm="9/21/2003 12:00:00 AM"||temporal="9/21/2003"
+rawTerm="09/21/2003 06:51 PM"||temporal="09/21/2003"
+rawTerm="This is to notify you that your patient , DOUETTWIDOUET , TAROBY arrived in the Emergency Department at Fairm of Ijordcompmac Hospital on 09/21/2003 06:51 PM ."||temporal="09/21/2003"

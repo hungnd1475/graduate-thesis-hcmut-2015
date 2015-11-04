@@ -1,0 +1,6 @@
+rawTerm="523704694"||temporal="237046"
+rawTerm="10/23/1999 12:00:00 AM"||temporal="10/23/1999"
+rawTerm="10/23/1999"||temporal="10/23/1999"
+rawTerm="11/02/1999"||temporal="11/02/1999"
+rawTerm="11/02/99"||temporal="11/02/99"
+rawTerm="11/02/99 KE9"||temporal="11/02/99"

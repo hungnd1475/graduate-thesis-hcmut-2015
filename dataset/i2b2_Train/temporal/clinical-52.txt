@@ -1,0 +1,7 @@
+rawTerm="11/01/2000 12:00:00 AM"||temporal="11/01/2000"
+rawTerm="11/01/2000"||temporal="11/01/2000"
+rawTerm="11/04/2000"||temporal="11/04/2000"
+rawTerm="DISCHARGE PATIENT ON : 11/04/00 AT 03:00 PM"||temporal="11/04/00"
+rawTerm="Override added on 11/03/00 by TWADA , STASTERL ETHESHI , M.D."||temporal="11/03/00"
+rawTerm="Override added on 11/03/00 by TWADA , STASTERL ETHESHI , M.D. on order for MVI THERAPEUTIC W / MINERALS PO ( ref # 90299469 )"||temporal="299469"
+rawTerm="LARDES , COLNKAY , M.D. ( IP09 ) 11/04/00 03:34 PM"||temporal="11/04/00"

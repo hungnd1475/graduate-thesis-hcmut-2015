@@ -1,0 +1,7 @@
+rawTerm="2013-11-04"||temporal="2013-11-04"
+rawTerm="2013-11-16"||temporal="2013-11-16"
+rawTerm="1930-12-19"||temporal="1930-12-19"
+rawTerm="2) You are scheduled to have your staples removed on 2013-11-20 3:00 with provider : Leah , Paula G. Wilson SURGERY ( NHB )"||temporal="2013-11-20"
+rawTerm="Date / Time : 2013-11-20 3:00 ."||temporal="2013-11-20"
+rawTerm="Completed by : Jill Kelly MD 47-482 2013-11-16 @ 1550"||temporal="2013-11-16"
+rawTerm="Signed electronically by : DR. Lee V. Young on : FRI 2013-12-20 4:59 PM"||temporal="2013-12-20"

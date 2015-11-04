@@ -1,0 +1,3 @@
+rawTerm="02/25/2001 12:00:00 AM"||temporal="02/25/2001"
+rawTerm="02/25/2001 12:20 PM"||temporal="02/25/2001"
+rawTerm="This is to notify you that your patient , GLYN , AEA arrived in the Emergency Department at Daughtersvillshamen&apos;s Hospital on 02/25/2001 12:20 PM ."||temporal="02/25/2001"

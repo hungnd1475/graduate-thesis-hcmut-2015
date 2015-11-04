@@ -1,0 +1,7 @@
+rawTerm="1/11/1996 12:00:00 AM"||temporal="1/11/1996"
+rawTerm="01/11/1996"||temporal="01/11/1996"
+rawTerm="01/19/1996"||temporal="01/19/1996"
+rawTerm="On 1/14/96 , she had a dialysis catheter ."||temporal="1/14/96"
+rawTerm="On 1/18/96 , she had an acute change in mental status and underwent an emergent head CT scan which showed a massive subarachnoid hemorrhage with bleeding in the subarachnoid space , and throughout the ventricles ."||temporal="1/18/96"
+rawTerm="The patient expired on 1/19/96 at 11:35 p.m."||temporal="1/19/96"
+rawTerm="01/19/96"||temporal="01/19/96"

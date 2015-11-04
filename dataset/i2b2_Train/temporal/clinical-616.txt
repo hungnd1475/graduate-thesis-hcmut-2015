@@ -1,0 +1,5 @@
+rawTerm="245317863 WGH"||temporal="2453178"
+rawTerm="04/20/2005 12:00:00 AM"||temporal="04/20/2005"
+rawTerm="04/20/2005 10:30 PM"||temporal="04/20/2005"
+rawTerm="04/21/2005 05:25"||temporal="04/21/2005"
+rawTerm="This report was created by HERDES , NEWSHALIE 04/21/2005 06:47 AM"||temporal="04/21/2005"

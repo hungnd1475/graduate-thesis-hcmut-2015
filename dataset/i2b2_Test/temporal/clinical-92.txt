@@ -1,0 +1,8 @@
+rawTerm="915093496 RWH"||temporal="150934"
+rawTerm="2923113"||temporal="2923113"
+rawTerm="12/13/2002 12:00:00 AM"||temporal="12/13/2002"
+rawTerm="12/13/2002"||temporal="12/13/2002"
+rawTerm="12/14/2002"||temporal="12/14/2002"
+rawTerm="Electronically Signed PADA MARONNESSGRE CHAIN , M.D. 04/25/2003 09:50"||temporal="04/25/2003"
+rawTerm="04/17/2003"||temporal="04/17/2003"
+rawTerm="04/18/2003 8:28 A 045989"||temporal="04/18/2003"

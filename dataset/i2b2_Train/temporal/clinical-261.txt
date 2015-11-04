@@ -1,0 +1,6 @@
+rawTerm="12/7/1996 12:00:00 AM"||temporal="12/7/1996"
+rawTerm="12/07/96"||temporal="12/07/96"
+rawTerm="12/14/96"||temporal="12/14/96"
+rawTerm="However he had a report of emesis of coffee grounds on postoperative night #1 ."||temporal="2015-11-05"
+rawTerm="12/12/96"||temporal="12/12/96"
+rawTerm="12/12/96 9:00 A"||temporal="12/12/96"

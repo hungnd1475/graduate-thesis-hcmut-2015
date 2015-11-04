@@ -1,0 +1,6 @@
+rawTerm="2014-03-22"||temporal="2014-03-22"
+rawTerm="2014-03-28"||temporal="2014-03-28"
+rawTerm="1983-03-15"||temporal="1983-03-15"
+rawTerm="D : 2014-04-11 13:18:08"||temporal="2014-04-11"
+rawTerm="T : 2014-04-12 09:36:49"||temporal="2014-04-12"
+rawTerm="Signed electronically by : DR. Josefa V. Wynn on : WED 2014-04-16 2:19 PM"||temporal="2014-04-16"

@@ -1,0 +1,5 @@
+rawTerm="2014-03-31"||temporal="2014-03-31"
+rawTerm="2014-04-01"||temporal="2014-04-01"
+rawTerm="D : 2014-04-01 01:57:51"||temporal="2014-04-01"
+rawTerm="T : 2014-04-01 02:59:13"||temporal="2014-04-01"
+rawTerm="Signed electronically by : DR. James GRAY on : Roger 2014-04-03 3:20 PM"||temporal="2014-04-03"

@@ -1,0 +1,8 @@
+rawTerm="11/24/1994 12:00:00 AM"||temporal="11/24/1994"
+rawTerm="11/24/1994"||temporal="11/24/1994"
+rawTerm="An MRI without gadolinium done on 11/20/94 of the spine showed a right posterior lateral epidural mass extending from T9 to T12 ."||temporal="11/20/94"
+rawTerm="The Tobramycin and Imipenem were started on 11/25/94 ."||temporal="11/25/94"
+rawTerm="Vancomycin was also added to his regimen on 11/28/94 and this was primarily to provide improved MRSA coverage as he continued to have erythema along the lateral right lower extremity ."||temporal="11/28/94"
+rawTerm="His Decadron dose was titrated down to 5 mg IV q6h on 12/3/94 ."||temporal="12/3/94"
+rawTerm="Tylenol 650 mg po q4h p.r.n. , Dulcolax 10 mg per rectum b.i.d. p.r.n. , Decadron 5 mg IV q6h , Digoxin 0.25 mg po q day , Colace 100 mg po t.i.d. , Florinef 0.1 mg po q day for presumed adrenal insufficiency , Imipenem 500 mg IV q6h , insulin NPH 60 units subcu q a.m. , insulin NPH 20 units subcu q p.m. , insulin CZI sliding scale regular , Synthroid 125 mcg po q day , magnesium sliding scale , potassium sliding scale today , morphine sulfate IV p.r.n. dressing changes and breakthrough pain , Carafate 1 gm po q.i.d. , Tobramycin 200 mg IV q30h , Vancomyin 1 mg IV q18h."||temporal="1994-11-24"
+rawTerm="12/03/94"||temporal="12/03/94"

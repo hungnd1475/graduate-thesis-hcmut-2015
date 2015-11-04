@@ -1,0 +1,6 @@
+rawTerm="2012-04-27"||temporal="2012-04-27"
+rawTerm="2012-04-30"||temporal="2012-04-30"
+rawTerm="1933-02-05"||temporal="1933-02-05"
+rawTerm="D : 2012-04-30 11:30"||temporal="2012-04-30"
+rawTerm="T : 2012-05-01 08:13"||temporal="2012-05-01"
+rawTerm="Signed electronically by : DR. Margarita Martin on : TUE 2012-06-05 8:08 AM"||temporal="2012-06-05"

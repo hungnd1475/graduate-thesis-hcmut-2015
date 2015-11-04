@@ -1,0 +1,8 @@
+rawTerm="2012-01-20"||temporal="2012-01-20"
+rawTerm="2012-01-23"||temporal="2012-01-23"
+rawTerm="1947-09-21"||temporal="1947-09-21"
+rawTerm="The patient underwent radical retropubic prostatectomy on 2012-01-20 ."||temporal="2012-01-20"
+rawTerm="On postoperative day number one , he was administered 1 mg Coumadin per protocol as well as on the operative day 1 mg of Coumadin ."||temporal="2012-01-21"
+rawTerm="D : 2012-04-28 17:18"||temporal="2012-04-28"
+rawTerm="T : 2012-05-01 20:32"||temporal="2012-05-01"
+rawTerm="Signed electronically by : DR. Antonio Hall on : FRI 2012-05-04 7:48 AM"||temporal="2012-05-04"

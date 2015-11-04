@@ -1,0 +1,5 @@
+rawTerm="712282401"||temporal="122824"
+rawTerm="10/24/1996 12:00:00 AM"||temporal="10/24/1996"
+rawTerm="10/24/96"||temporal="10/24/96"
+rawTerm="He will be discharged to rehab on a regimen of Coumadin 5 mg po today then daily for an INR goal of 2-3 , Ofloxacin 400 mg po bid to be discontinued on 11/05/96 , Dexedrine 5 mg po qd , Omeprazole 20mg po qd , Erythromycin eye ointment OU bid , Heparin at its present rate adjusting per partial thromboplastin time bid , and discontinuing when the Coumadin is therapeutic , Tylenol 650 mg po q4 prn , Colace 100 mg po bid ."||temporal="11/05/96"
+rawTerm="10/31/96 2:55"||temporal="10/31/96"

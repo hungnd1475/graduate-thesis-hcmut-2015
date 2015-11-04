@@ -1,0 +1,7 @@
+rawTerm="2012-11-06"||temporal="2012-11-06"
+rawTerm="2012-11-11"||temporal="2012-11-11"
+rawTerm="1965-09-22"||temporal="1965-09-22"
+rawTerm="Of note , he had a negative stress test in 2012-07-03 ."||temporal="2012-07-03"
+rawTerm="Creatine kinases trended from 11:15 on the day of admission from 83 to 3021 at 5 p.m. to 3450 at 11 p.m. , to 1734 at 5:30 a.m. on 11-07 , to 1277 at 11:30 a.m. on 11-07 , to 83 at 9:30 a.m. on 11-11 ."||temporal="2012-11-06"
+rawTerm="D : 2012-11-12 21:57"||temporal="2012-11-12"
+rawTerm="T : 2012-11-15 14:05"||temporal="2012-11-15"
