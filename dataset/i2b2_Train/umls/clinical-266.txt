@@ -1,2 +1,3 @@
 rawTerm="l shoulder inj|ANA"||cui="C0037004"||concept="Shoulder"||prefer="Shoulder"||semantic=[blor]||confidence="660"
 rawTerm="neck strains|ANA"||cui="C0027530"||concept="Neck"||prefer="Neck"||semantic=[blor]||confidence="1000"
+rawTerm="left shoulder / neck strain / sprain|ANA"||cui="C0524469"||concept="Left shoulder"||prefer="Structure of left shoulder region"||semantic=[blor]||confidence="673"

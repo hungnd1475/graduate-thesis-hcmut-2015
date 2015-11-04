@@ -1,0 +1,1 @@
+rawTerm="psychological assessment|EQP"||cui="C0204452"||concept="Psychological assessment"||prefer="Psychological assessment"||semantic=[diap]||confidence="1000"

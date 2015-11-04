@@ -1,0 +1,1 @@
+rawTerm="inr|INDI"||cui="C0525032"||concept="INR"||prefer="International Normalized Ratio"||semantic=[lbpr]||confidence="1000"

@@ -1,3 +1,4 @@
 rawTerm="perianal and perivaginal pruritis|ANA"||cui="C0442158"||concept="Perianal"||prefer="Perianal"||semantic=[blor]||confidence="1000"
 rawTerm="pelvic exam|ANA"||cui="C0030797"||concept="Pelvic"||prefer="Pelvis"||semantic=[blor]||confidence="694"
-rawTerm="pelvic exam|EQP"||cui="C0030797"||concept="Pelvic"||prefer="Pelvis"||semantic=[blor]||confidence="694"
+rawTerm="pelvic exam|EQP"||cui="C0200045"||concept="Pelvic Exam"||prefer="Manual pelvic examination (procedure)"||semantic=[diap]||confidence="1000"
+rawTerm="the lab tests|INDI"||cui="C0035100"||concept="Rennin"||prefer="Chymosin"||semantic=[aapp|enzy|phsu]||confidence="944"

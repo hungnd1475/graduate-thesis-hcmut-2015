@@ -1,3 +1,4 @@
 rawTerm="chest x-ray|ANA"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="827"
-rawTerm="chest x-ray|EQP"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="827"
+rawTerm="chest x-ray|EQP"||cui="C0039985"||concept="Chest X-ray"||prefer="Chest X-ray"||semantic=[diap]||confidence="1000"
+rawTerm="a pulmonary nodule in the right lower lobe|ANA"||cui="C2334322"||concept="right nodule"||prefer="Right flocculus of cerebellum"||semantic=[bpoc]||confidence="767"
 rawTerm="the lung nodule|ANA"||cui="C0024109"||concept="Lung"||prefer="Lung"||semantic=[bpoc]||confidence="694"

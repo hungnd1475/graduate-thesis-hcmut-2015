@@ -34,6 +34,7 @@ namespace HCMUT.EMRCorefResol.English.Features
                     anaUMLS.Concept.Equals(anteUMLS.Concept, StringComparison.InvariantCultureIgnoreCase) ||
                     anaUMLS.Concept.Equals(anteUMLS.Prefer, StringComparison.InvariantCultureIgnoreCase) ||
                     anteUMLS.Concept.Equals(anaUMLS.Prefer, StringComparison.InvariantCultureIgnoreCase) ||
+                    anaUMLS.Prefer.Equals(anteUMLS.Prefer, StringComparison.InvariantCulture) ||
                     anteUMLS.Concept.Equals(anaNorm, StringComparison.InvariantCultureIgnoreCase))
                 {
                     SetCategoricalValue(1);

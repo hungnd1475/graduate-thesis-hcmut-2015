@@ -1,4 +1,5 @@
 rawTerm="total thyroidectomy|OPE"||cui="C0193788"||concept="Total thyroidectomy"||prefer="Total thyroidectomy (procedure)"||semantic=[topp]||confidence="1000"
 rawTerm="hurtle cell tumor of thyroid|ANA"||cui="C0040132"||concept="Thyroid, NOS"||prefer="Thyroid Gland"||semantic=[bpoc]||confidence="604"
-rawTerm="incision|ANA"||cui="C0184898"||concept="Incision"||prefer="Surgical incisions"||semantic=[topp]||confidence="1000"
+rawTerm="calcium|INDI"||cui="C0006675"||concept="Calcium"||prefer="Calcium"||semantic=[bacs|elii|phsu]||confidence="1000"
+rawTerm="incision|ANA"||cui="C2338258"||concept="Incision"||prefer="Cranial incision point"||semantic=[blor]||confidence="1000"
 rawTerm="numbness or tingling in extremities|ANA"||cui="C0015385"||concept="Extremities"||prefer="Limb structure"||semantic=[bpoc]||confidence="623"

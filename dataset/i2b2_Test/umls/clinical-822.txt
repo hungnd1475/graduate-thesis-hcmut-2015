@@ -1,4 +1,6 @@
-rawTerm="her blood pressure|ANA"||cui="C0005847"||concept="Blood Vessel"||prefer="Blood Vessel"||semantic=[bpoc]||confidence="777"
+rawTerm="her discharge creatinine|ANA"||cui="C0012621"||concept="Discharge"||prefer="Body Fluid Discharge"||semantic=[bdsu]||confidence="694"
+rawTerm="her discharge creatinine|INDI"||cui="C0010294"||concept="Creatinine"||prefer="Creatinine"||semantic=[bacs|orch]||confidence="861"
+rawTerm="her blood pressure|ANA"||cui="C0005768"||concept="blood"||prefer="In Blood"||semantic=[bdsu]||confidence="861"
 rawTerm="physical therapy|OPE"||cui="C0949766"||concept="Physical therapy"||prefer="Physical therapy"||semantic=[topp]||confidence="1000"
 rawTerm="occupational therapy|OPE"||cui="C0087111"||concept="Therapy"||prefer="Therapeutic procedure"||semantic=[topp]||confidence="861"
 rawTerm="very mild left lower extremity pain|ANA"||cui="C0230416"||concept="Left lower extremity"||prefer="Left lower extremity"||semantic=[bpoc]||confidence="694"

@@ -1,3 +1,2 @@
 rawTerm="chest discomfort|ANA"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="694"
-rawTerm="electrocardiogram|ANA"||cui="C1623258"||concept="Electrocardiogram"||prefer="Electrocardiography"||semantic=[diap]||confidence="1000"
 rawTerm="electrocardiogram|EQP"||cui="C1623258"||concept="Electrocardiogram"||prefer="Electrocardiography"||semantic=[diap]||confidence="1000"

@@ -1,0 +1,1 @@
+rawTerm="xray|EQP"||cui="C0043299"||concept="X-ray, NOS"||prefer="Diagnostic radiologic examination"||semantic=[diap]||confidence="1000"

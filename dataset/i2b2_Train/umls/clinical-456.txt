@@ -1,5 +1,6 @@
 rawTerm="vaginal delivery|OPE"||cui="C1541822"||concept="Vaginal Delivery"||prefer="Vaginal delivery procedure"||semantic=[topp]||confidence="1000"
 rawTerm="spontaneous vertex vaginal delivery|OPE"||cui="C0269694"||concept="spontaneous vaginal delivery"||prefer="Normal delivery procedure"||semantic=[topp]||confidence="923"
-rawTerm="skin mottled on both lower extremities|ANA"||cui="C0023216"||concept="LOWER EXTREMITIES"||prefer="Lower Extremity"||semantic=[blor]||confidence="806"
+rawTerm="skin mottled on both lower extremities|ANA"||cui="C0444099"||concept="Skin"||prefer="Skin Specimen"||semantic=[bdsu]||confidence="1000"
 rawTerm="uterine size|ANA"||cui="C0042149"||concept="Uterine"||prefer="Uterus"||semantic=[bpoc]||confidence="694"
-rawTerm="uterine size|EQP"||cui="C0042149"||concept="Uterine"||prefer="Uterus"||semantic=[bpoc]||confidence="694"
+rawTerm="apgar scores|EQP"||cui="C0741195"||concept="Apgar"||prefer="Apgar"||semantic=[diap]||confidence="861"
+rawTerm="apgar scores|INDI"||cui="C0449820"||concept="Scores"||prefer="Score"||semantic=[qnco]||confidence="861"

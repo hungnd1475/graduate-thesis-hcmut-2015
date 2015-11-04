@@ -9,3 +9,4 @@ rawTerm="tah|OPE"||cui="C0404079"||concept="tah"||prefer="Total abdominal hyster
 rawTerm="reoperation|OPE"||cui="C0035110"||concept="Re-operation"||prefer="Repeat Surgery"||semantic=[topp]||confidence="1000"
 rawTerm="transplant nephrectomy|OPE"||cui="C0401186"||concept="Transplant nephrectomy"||prefer="Transplant nephrectomy"||semantic=[topp]||confidence="1000"
 rawTerm="a cadaveric renal allograft to the left iliac fossa|OPE"||cui="C0040739"||concept="allograft"||prefer="Transplantation, Homologous"||semantic=[topp]||confidence="827"
+rawTerm="her creatinine|INDI"||cui="C0010294"||concept="Creatinine"||prefer="Creatinine"||semantic=[bacs|orch]||confidence="1000"

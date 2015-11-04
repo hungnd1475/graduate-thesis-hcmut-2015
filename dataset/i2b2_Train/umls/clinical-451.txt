@@ -1,0 +1,1 @@
+rawTerm="no stool|ANA"||cui="C0015733"||concept="Stool"||prefer="Feces"||semantic=[bdsu]||confidence="1000"
