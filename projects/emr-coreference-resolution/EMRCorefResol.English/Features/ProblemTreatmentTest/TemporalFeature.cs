@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol.English.Features
@@ -37,24 +38,39 @@ namespace HCMUT.EMRCorefResol.English.Features
                 }
             }
 
-            DateTime anaDate;
-            DateTime anteDate;
-
-            try
-            {
-                anaDate = DateTime.Parse(anaTemporal);
-                anteDate = DateTime.Parse(anteTemporal);
-            } catch(Exception e)
-            {
-                return;
-            }
-
-            if (anaDate.Equals(anteDate))
+            if (CheckDateTime(anaTemporal, anteTemporal))
             {
                 SetCategoricalValue(1);
             } else
             {
                 SetCategoricalValue(0);
+            }
+        }
+
+        private bool CheckDateTime(string date1, string date2)
+        {
+            DateTime d1, d2;
+            var success1 = DateTime.TryParse(date1, out d1);
+            var success2 = DateTime.TryParse(date2, out d2);
+
+            if(success1 && success2 && d1.Equals(d2))
+            {
+                return true;
+            } else
+            {
+                var date1RemovedNumber = Regex.Replace(date1, "[0-9]", "");
+                var date1Delimiter = date1RemovedNumber.ToCharArray().Distinct().ToArray();
+
+                var date2RemovedNumber = Regex.Replace(date2, "[0-9]", "");
+                var date2Delimiter = date2RemovedNumber.ToCharArray().Distinct().ToArray();
+
+                if (date1.Equals(date2) && date1Delimiter.Length <= 1 && date2Delimiter.Length <= 1)
+                {
+                    return true;
+                } else
+                {
+                    return false;
+                }
             }
         }
 
