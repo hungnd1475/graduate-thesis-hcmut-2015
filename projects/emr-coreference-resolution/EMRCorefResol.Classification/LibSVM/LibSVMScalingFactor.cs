@@ -10,7 +10,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
     class LibSVMScalingFactor
     {
         private readonly double lower, upper;
-        private readonly Range<double>[] featureRanges;        
+        private readonly Dictionary<int, Range<double>> featureRanges;        
         
         public LibSVMScalingFactor(string restoreFile)
         {            
@@ -22,6 +22,8 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
                 lower = double.Parse(t[0]);
                 upper = double.Parse(t[1]);
 
+                featureRanges = new Dictionary<int, Range<double>>();
+
                 while (!sr.EndOfStream)
                 {
                     s = sr.ReadLine();
@@ -29,34 +31,37 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
                     var index = int.Parse(t[0]) - 1;
                     var fMin = double.Parse(t[1]);
                     var fMax = double.Parse(t[2]);
-                                        
+                    featureRanges.Add(index, Range.Create(fMin, fMax));                         
                 }
             }
         }
 
         public double Scale(int index, double value)
         {
-            var fMin = featureRanges[index].Min;
-            var fMax = featureRanges[index].Max;
+            if (featureRanges.ContainsKey(index))
+            {
+                var fMin = featureRanges[index].Min;
+                var fMax = featureRanges[index].Max;
 
-            if (fMin == fMax)
-            {
-                return 0d;
+                if (fMin == fMax)
+                {
+                    return 0d;
+                }
+                else if (value == fMin)
+                {
+                    return lower;
+                }
+                else if (value == fMax)
+                {
+                    return upper;
+                }
+                else
+                {
+                    return lower + (upper - lower) * (value - fMin) / (fMax - fMin);
+                }
             }
-            else if (value == fMin)
-            {
-                return lower;
-            }
-            else if (value == fMax)
-            {
-                return upper;
-            }
-            else
-            {
-                return lower + (upper - lower) * (value - fMin) / (fMax - fMin);
-            }
+
+            return value;
         }
-
-
     }
 }

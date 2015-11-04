@@ -9,7 +9,7 @@ namespace HCMUT.EMRCorefResol.English.Features
     class PatientClassFeature : Feature
     {
         public PatientClassFeature(PersonPair instance, IPatientDeterminer patientDeterminer)
-            : base("Patient-Class", 3)
+            : base("Patient-Class", 2)
         {
             var anaIsPatient = patientDeterminer.IsPatient(instance.Anaphora);
             var anteIsPatient = patientDeterminer.IsPatient(instance.Antecedent);

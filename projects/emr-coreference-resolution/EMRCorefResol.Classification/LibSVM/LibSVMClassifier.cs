@@ -20,6 +20,9 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
         private readonly Dictionary<Type, SVMModel> _svmModels
             = new Dictionary<Type, SVMModel>();
 
+        private readonly Dictionary<Type, LibSVMScalingFactor> _svmScalingFactors
+            = new Dictionary<Type, LibSVMScalingFactor>();
+
         public string ModelsDir { get { return _modelsDir; } }
 
         public LibSVMClassifier(string modelsDir)
@@ -119,28 +122,53 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
         private ClasResult ClassifyInstance(IClasInstance instance, IFeatureVector fVector)
         {
             var instanceType = instance.GetType();
-            var sfPath = Path.Combine(_modelsDir, $"{instanceType.Name}.sf");
-            var tmpDir = Path.Combine(_modelsDir, "tmp");
+            //var sfPath = Path.Combine(_modelsDir, $"{instanceType.Name}.sf");
+            //var tmpDir = Path.Combine(_modelsDir, "tmp");
 
-            var pCreator = new ClasProblemCollection();
-            pCreator.Add(instance, fVector);
-            var rawPrb = pCreator.GetProblem(instanceType);
+            //var pCreator = new ClasProblemCollection();
+            //pCreator.Add(instance, fVector);
+            //var rawPrb = pCreator.GetProblem(instanceType);
 
-            string scaledPrbContent;
-            lock (_syncRoot)
-            {
-                Directory.CreateDirectory(tmpDir);
-                var tmpPrbPath = Path.Combine(_modelsDir, "tmp", $"{instanceType.Name}.prb");
-                ProblemSerializer.Serialize(rawPrb, tmpPrbPath);
-                scaledPrbContent = LibSVM.RunSVMScale(sfPath, tmpPrbPath);
-            }
+            //string scaledPrbContent;
+            //lock (_syncRoot)
+            //{
+            //    Directory.CreateDirectory(tmpDir);
+            //    var tmpPrbPath = Path.Combine(_modelsDir, "tmp", $"{instanceType.Name}.prb");
+            //    ProblemSerializer.Serialize(rawPrb, tmpPrbPath);
+            //    scaledPrbContent = LibSVM.RunSVMScale(sfPath, tmpPrbPath);
+            //}
+            //var scaledPrb = LibSVM.ReadProblem(scaledPrbContent);
 
-            var scaledPrb = LibSVM.ReadProblem(scaledPrbContent);
+            var sf = GetScalingFactor(instanceType);
+            var nodes = Scale(fVector, sf);
             var svmModel = GetModel(instanceType);
 
-            double confidence, label;
-            label = LibSVM.Predict(svmModel, scaledPrb.X[0], out confidence);
+            double confidence;
+            var label = LibSVM.Predict(svmModel, nodes, out confidence);
             return new ClasResult(label, confidence);
+        }
+
+        private static SVMNode[] Scale(IFeatureVector fVector, LibSVMScalingFactor scalingFactors)
+        {
+            var nodes = new List<SVMNode>();
+            var index = -1;
+
+            for (int i = 0; i < fVector.Size; i++)
+            {
+                var f = fVector[i];
+                for (int j = 0; j < f.Value.Length; j++)
+                {
+                    index += 1;
+                    var v = scalingFactors.Scale(index, f.Value[j]);
+
+                    if (v != 0)
+                    {
+                        nodes.Add(new SVMNode(index, v));
+                    }
+                }
+            }
+
+            return nodes.ToArray();
         }
 
         private SVMModel GetModel(Type instanceType)
@@ -155,6 +183,20 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
                 }
             }
             return _svmModels[instanceType];
+        }
+
+        private LibSVMScalingFactor GetScalingFactor(Type instanceType)
+        {
+            lock (_syncRoot)
+            {
+                if (!_svmScalingFactors.ContainsKey(instanceType))
+                {
+                    var sfPath = Path.Combine(_modelsDir, $"{instanceType.Name}.sf");
+                    var sf = new LibSVMScalingFactor(sfPath);
+                    _svmScalingFactors.Add(instanceType, sf);
+                }
+            }
+            return _svmScalingFactors[instanceType];
         }
 
         public void ClearCache()

@@ -12,5 +12,6 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
         public const string Gamma = "gamma";
         public const string ShouldLog = "shouldlog";
         public const string ApplyWeights = "apply-weights";
+        public const string CacheSize = "cache-size";
     }
 }

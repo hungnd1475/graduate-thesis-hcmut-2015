@@ -93,17 +93,25 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
                 Shrinking = false
             };
 
-            bool applyWeights = false;
-            if (config != null)
             {
-                config.TryGetConfig(LibSVMConfig.ApplyWeights, out applyWeights);
+                bool applyWeights = false;
+                if (config != null && config.TryGetConfig(LibSVMConfig.ApplyWeights, out applyWeights))
+                {                    
+                    if (applyWeights)
+                    {
+                        Console.WriteLine("Applying the above weights...");
+                        svmParam.WeightLabels = labels;
+                        svmParam.Weights = weights;
+                    }
+                }
             }
 
-            if (applyWeights)
             {
-                Console.WriteLine("Applying the above weights...");
-                svmParam.WeightLabels = labels;
-                svmParam.Weights = weights;
+                var cacheSize = 100;
+                if (config != null && config.TryGetConfig(LibSVMConfig.CacheSize, out cacheSize))
+                {
+                    svmParam.CacheSize = cacheSize;
+                }
             }
 
             {
@@ -133,7 +141,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
                 config.TryGetConfig(LibSVMConfig.ShouldLog, out shouldLog);
             }
 
-            Console.WriteLine($"Training using parameters: c={svmParam.C}, g={svmParam.Gamma}...");
+            Console.WriteLine($"Training using parameters: c={svmParam.C}, g={svmParam.Gamma}, cacheSize={svmParam.CacheSize}...");
             LibSVM.RunSVMTrain(svmParam, problemPath, modelPath, shouldLog);
             Console.WriteLine("Done!");
         }

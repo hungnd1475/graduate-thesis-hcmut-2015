@@ -18,5 +18,6 @@ namespace HCMUT.EMRCorefResol.FeatureTrainingConsole
         public double Gamma { get; set; } // for LibSVM only
         public int ApplyWeights { get; set; } // for LibSVM only
         public int ShouldLog { get; set; } // for LibSVM only
+        public int CacheSize { get; set; } // for LibSVM only
     }
 }

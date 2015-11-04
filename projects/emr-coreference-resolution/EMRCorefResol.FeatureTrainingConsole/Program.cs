@@ -64,6 +64,12 @@ namespace HCMUT.EMRCorefResol.FeatureTrainingConsole
                 config.SetConfig(LibSVMConfig.ApplyWeights, Convert.ToBoolean(args.ApplyWeights));
             }
 
+            if (args.CacheSize > 0)
+            {
+                config = config ?? new GenericConfig();
+                config.SetConfig(LibSVMConfig.CacheSize, args.CacheSize);
+            }
+
             var trainer = APISelector.SelectTrainer(args.ClasMethod, args.OutputDir);
             var instanceType = APISelector.SelectInstanceType(args.Instance);
             trainer.Train(instanceType, args.FeaturePath, config);
@@ -112,6 +118,11 @@ namespace HCMUT.EMRCorefResol.FeatureTrainingConsole
                 .As('w', "weights")
                 .SetDefault(-1)
                 .WithDescription("Whether the trainer should apply class weights (LibSVM only, default 0).");
+
+            p.Setup(a => a.CacheSize)
+                .As('s', "cache")
+                .SetDefault(-1)
+                .WithDescription("Set cache size in MB (LibSVM only, default 100)");
 
             p.SetupHelp("?").Callback(() => DescHelpOption.ShowHelp(p.Options));
 
