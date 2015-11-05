@@ -78,7 +78,15 @@ namespace HCMUT.EMRCorefResol.English.Features
         {
             var line = emr.GetLine(c);
             var section = emr.GetSection(c);
-            var sectionLines = section.Content.Split('\n');
+
+            string[] sectionLines;
+            if(section == null)
+            {
+                sectionLines = emr.Content.Split('\n');
+            } else
+            {
+                sectionLines = section.Content.Split('\n');
+            }
 
             for(int i=0; i<sectionLines.Length; i++)
             {
