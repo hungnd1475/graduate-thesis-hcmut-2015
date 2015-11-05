@@ -59,7 +59,7 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
             var dataReader = APISelector.SelectDataReader(args.EMRFormat);
             var fExtractor = APISelector.SelectFeatureExtractor(args.Language, args.Mode, 
                 args.ClasMethod, args.ModelsDir);
-            var instancesGenerator = new AllInstancesGenerator();
+            var instancesGenerator = APISelector.SelectInstancesGenerator(args.InstancesGenerator);
 
             if (!string.IsNullOrEmpty(args.EMRFile))
             {
@@ -166,6 +166,11 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
                 .As('i', "instances")
                 .SetDefault(null)
                 .WithDescription("Set intance types to extract.");
+
+            p.Setup(a => a.InstancesGenerator)
+                .As('g', "instgen")
+                .SetDefault(InstancesGenerator.All)
+                .WithDescription(Descriptions.InstancesGenerator("1"));
 
             p.SetupHelp("?").Callback(() => DescHelpOption.ShowHelp(p.Options));
 

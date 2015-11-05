@@ -20,5 +20,6 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
         public int DoScale { get; set; }
         public string Instances { get; set; }
         public string EMRFile { get; set; }
+        public InstancesGenerator InstancesGenerator { get; set; }
     }
 }

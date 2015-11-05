@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol
 {
-    public class Ng2002InstancesGenerator : IInstancesGenerator
+    public class ModNg2002InstancesGenerator : IInstancesGenerator
     {
         public IIndexedEnumerable<IClasInstance> Generate(EMR emr, CorefChainCollection groundTruth)
         {

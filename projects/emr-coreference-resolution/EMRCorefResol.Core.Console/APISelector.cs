@@ -116,5 +116,22 @@ namespace HCMUT.EMRCorefResol.Core.Console
                     throw new ArgumentException("method");
             }
         }
+
+        public static IInstancesGenerator SelectInstancesGenerator(InstancesGenerator instGen)
+        {
+            switch (instGen)
+            {
+                case InstancesGenerator.All:
+                    return new AllInstancesGenerator();
+                case InstancesGenerator.ModNg2002:
+                    return new ModNg2002InstancesGenerator();
+                case InstancesGenerator.ModSoon2001:
+                    return new ModSoon2001ModInstancesGenerator();
+                case InstancesGenerator.Soon2001:
+                    return new Soon2001InstancesGenerator();
+                default:
+                    throw new ArgumentException("instGen");
+            }
+        }
     }
 }

@@ -51,10 +51,11 @@ namespace HCMUT.EMRCorefResol
 
         public static string GetLine(this EMR emr, Concept concept)
         {
-            if(concept.Begin.Line == concept.End.Line)
+            if (concept.Begin.Line == concept.End.Line)
             {
                 return GetLine(emr, concept.Begin.Line).Replace("  ", " ").Replace("\r", "").Replace("\n", "");
-            } else
+            }
+            else
             {
                 var beginLine = GetLine(emr, concept.Begin.Line).Replace("  ", " ").Replace("\r", "").Replace("\n", "");
                 var endLine = GetLine(emr, concept.End.Line).Replace("  ", " ").Replace("\r", "").Replace("\n", "");
@@ -75,10 +76,10 @@ namespace HCMUT.EMRCorefResol
 
         public static EMRSection GetSection(this EMR emr, Concept c)
         {
-            for(int i=0; i<emr.Sections.Count; i++)
+            for (int i = 0; i < emr.Sections.Count; i++)
             {
                 var section = emr.Sections[i];
-                if(section.Begin <= c.Begin.Line && section.End >= c.End.Line)
+                if (section.Begin <= c.Begin.Line && section.End >= c.End.Line)
                 {
                     return section;
                 }

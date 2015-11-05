@@ -122,26 +122,27 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
         private ClasResult ClassifyInstance(IClasInstance instance, IFeatureVector fVector)
         {
             var instanceType = instance.GetType();
-            var sfPath = Path.Combine(_modelsDir, $"{instanceType.Name}.sf");
-            var tmpDir = Path.Combine(_modelsDir, "tmp");
+            //var sfPath = Path.Combine(_modelsDir, $"{instanceType.Name}.sf");
+            //var tmpDir = Path.Combine(_modelsDir, "tmp");
 
-            var pCreator = new ClasProblemCollection();
-            pCreator.Add(instance, fVector);
-            var rawPrb = pCreator.GetProblem(instanceType);
+            //var pCreator = new ClasProblemCollection();
+            //pCreator.Add(instance, fVector);
+            //var rawPrb = pCreator.GetProblem(instanceType);
 
-            string scaledPrbContent;
-            lock (_syncRoot)
-            {
-                Directory.CreateDirectory(tmpDir);
-                var tmpPrbPath = Path.Combine(_modelsDir, "tmp", $"{instanceType.Name}.prb");
-                ProblemSerializer.Serialize(rawPrb, tmpPrbPath);
-                scaledPrbContent = LibSVM.RunSVMScale(sfPath, tmpPrbPath);
-            }
-            var scaledPrb = LibSVM.ReadProblem(scaledPrbContent);
+            //string scaledPrbContent;
+            //lock (_syncRoot)
+            //{
+            //    Directory.CreateDirectory(tmpDir);
+            //    var tmpPrbPath = Path.Combine(_modelsDir, "tmp", $"{instanceType.Name}.prb");
+            //    ProblemSerializer.Serialize(rawPrb, tmpPrbPath);
+            //    scaledPrbContent = LibSVM.RunSVMScale(sfPath, tmpPrbPath);
+            //}
 
-            //var sf = GetScalingFactor(instanceType);
-            //var nodes = Scale(fVector, sf);
-            var nodes = scaledPrb.X[0];
+            //var scaledPrb = LibSVM.ReadProblem(scaledPrbContent);
+            //var nodes = scaledPrb.X[0];
+
+            var sf = GetScalingFactor(instanceType);
+            var nodes = Scale(fVector, sf);
             var svmModel = GetModel(instanceType);
 
             double confidence;
@@ -164,7 +165,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
 
                     if (v != 0)
                     {
-                        nodes.Add(new SVMNode(index, v));
+                        nodes.Add(new SVMNode(index + 1, v));
                     }
                 }
             }
@@ -174,30 +175,44 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
 
         private SVMModel GetModel(Type instanceType)
         {
-            lock (_syncRoot)
+            try
             {
-                if (!_svmModels.ContainsKey(instanceType))
+                lock (_syncRoot)
                 {
-                    var modelPath = Path.Combine(_modelsDir, $"{instanceType.Name}.model");
-                    var model = LibSVM.LoadModel(modelPath);
-                    _svmModels.Add(instanceType, model);
+                    if (!_svmModels.ContainsKey(instanceType))
+                    {
+                        var modelPath = Path.Combine(_modelsDir, $"{instanceType.Name}.model");
+                        var model = LibSVM.LoadModel(modelPath);
+                        _svmModels.Add(instanceType, model);
+                    }
                 }
+                return _svmModels[instanceType];
             }
-            return _svmModels[instanceType];
+            catch (IOException ex)
+            {
+                throw new IOException($"Cannot read {instanceType.Name} model file", ex);
+            }
         }
 
         private LibSVMScalingFactor GetScalingFactor(Type instanceType)
         {
-            lock (_syncRoot)
+            try
             {
-                if (!_svmScalingFactors.ContainsKey(instanceType))
+                lock (_syncRoot)
                 {
-                    var sfPath = Path.Combine(_modelsDir, $"{instanceType.Name}.sf");
-                    var sf = new LibSVMScalingFactor(sfPath);
-                    _svmScalingFactors.Add(instanceType, sf);
+                    if (!_svmScalingFactors.ContainsKey(instanceType))
+                    {
+                        var sfPath = Path.Combine(_modelsDir, $"{instanceType.Name}.sf");
+                        var sf = new LibSVMScalingFactor(sfPath);
+                        _svmScalingFactors.Add(instanceType, sf);
+                    }
                 }
+                return _svmScalingFactors[instanceType];
             }
-            return _svmScalingFactors[instanceType];
+            catch (IOException ex)
+            {
+                throw new IOException($"Cannot read {instanceType.Name} scaling factor file.", ex);
+            }
         }
 
         public void ClearCache()

@@ -86,6 +86,7 @@
     <Compile Include="EMRFormat.cs" />
     <Compile Include="FeatureFormat.cs" />
     <Compile Include="Instance.cs" />
+    <Compile Include="InstancesGenerator.cs" />
     <Compile Include="Language.cs" />
     <Compile Include="Mode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -46,6 +46,14 @@ namespace HCMUT.EMRCorefResol.Core.Console
             "    + Best first: 1"
         };
 
+        static readonly string[] InstancesGenDescs = new string[]
+        {
+            "    + All: 1",
+            "    + Soon2001: 2",
+            "    + ModSoon2001: 3",
+            "    + ModNg2002: 4"
+        };
+
         public static string ClasMethod(string defVal)
         {
             return $"Set classification method. Can be one of the followings ({GetDefVal(defVal)}):\n" +
@@ -80,6 +88,12 @@ namespace HCMUT.EMRCorefResol.Core.Console
         {
             return $"Set resolution method. Can be one of the followings ({GetDefVal(defVal)}):\n"
                 + string.Join(Environment.NewLine, ResolMethodDescs);
+        }
+
+        public static string InstancesGenerator(string defVal)
+        {
+            return $"Set instances generator. Can be one of the flowings ({GetDefVal(defVal)}:\n"
+                + string.Join(Environment.NewLine, InstancesGenDescs);
         }
 
         private static string GetDefVal(string defVal)
