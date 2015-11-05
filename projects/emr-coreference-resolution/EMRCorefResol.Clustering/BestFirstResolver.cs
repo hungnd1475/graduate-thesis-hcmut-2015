@@ -53,16 +53,18 @@ namespace HCMUT.EMRCorefResol.CorefResolvers
                     if (r != null)
                     {
                         var clasInt = Convert.ToInt32(r.Class);
-                        ana.Type = (ConceptType)clasInt;
+                        var type = (ConceptType)clasInt;
 
-                        if (ana.Type != ConceptType.None)
+                        if (type != ConceptType.None)
                         {
+                            var cloneAna = ana.Clone(type);
+
                             for (int j = i - 1; j >= 0; j--)
                             {
                                 var ante = concepts[j];
-                                if (ante.Type == ana.Type)
+                                if (ante.Type == cloneAna.Type)
                                 {
-                                    pairs[i] = new[] { ante, ana };
+                                    pairs[i] = new[] { ante, cloneAna };
                                     break;
                                 }
                             }
@@ -106,12 +108,12 @@ namespace HCMUT.EMRCorefResol.CorefResolvers
             {
                 case ConceptType.Person:
                     return ClassifyInstance(new PersonPair(ante, ana), fExtractor, classifier);
-                case ConceptType.Problem:
-                    return ClassifyInstance(new ProblemPair(ante, ana), fExtractor, classifier);
-                case ConceptType.Test:
-                    return ClassifyInstance(new TestPair(ante, ana), fExtractor, classifier);
-                case ConceptType.Treatment:
-                    return ClassifyInstance(new TreatmentPair(ante, ana), fExtractor, classifier);
+                //case ConceptType.Problem:
+                //    return ClassifyInstance(new ProblemPair(ante, ana), fExtractor, classifier);
+                //case ConceptType.Test:
+                //    return ClassifyInstance(new TestPair(ante, ana), fExtractor, classifier);
+                //case ConceptType.Treatment:
+                //    return ClassifyInstance(new TreatmentPair(ante, ana), fExtractor, classifier);
                 default:
                     return null;
             }

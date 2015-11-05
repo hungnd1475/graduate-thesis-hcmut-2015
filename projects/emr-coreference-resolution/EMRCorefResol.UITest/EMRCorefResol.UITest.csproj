@@ -124,6 +124,10 @@
       <Project>{34b8ae46-9ab3-43b2-935d-1e8a8815fb04}</Project>
       <Name>EMRCorefResol.Classification</Name>
     </ProjectReference>
+    <ProjectReference Include="..\EMRCorefResol.Clustering\EMRCorefResol.CorefResolvers.csproj">
+      <Project>{cf679dc9-72ce-4726-a2b2-211718ed657d}</Project>
+      <Name>EMRCorefResol.CorefResolvers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EMRCorefResol.Core\EMRCorefResol.Core.csproj">
       <Project>{66284726-8e94-4438-b366-f14b04874734}</Project>
       <Name>EMRCorefResol.Core</Name>

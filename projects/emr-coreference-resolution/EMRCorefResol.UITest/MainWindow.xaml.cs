@@ -25,6 +25,9 @@ using HCMUT.EMRCorefResol.English;
 using ICSharpCode.AvalonEdit.Search;
 using HCMUT.EMRCorefResol.Classification;
 using HCMUT.EMRCorefResol.Classification.LibSVM;
+using HCMUT.EMRCorefResol.CorefResolvers;
+using HCMUT.EMRCorefResol.Evaluations;
+using System.ComponentModel;
 
 namespace EMRCorefResol.UITest
 {
@@ -52,6 +55,12 @@ namespace EMRCorefResol.UITest
         private IFeatureVector[] features;
         private IIndexedEnumerable<IClasInstance> instances;
         private IClassifier classifier;
+        private ICorefResolver resolver = new BestFirstResolver();
+        private List<TypeItem> types = new List<TypeItem>()
+        {
+            new TypeItem(typeof(PersonInstance), true),
+            new TypeItem(typeof(PersonPair), true)
+        };
 
         public MainWindow()
         {
@@ -73,6 +82,7 @@ namespace EMRCorefResol.UITest
             txtScores.ShowLineNumbers = true;
             txtScores.TextArea.SelectionCornerRadius = 0;
             txtScores.Document = new TextDocument();
+            lbTypes.ItemsSource = types;
         }
 
         private void initTextEditor(TextEditor textEditor, bool wordWrap, SelectionInfo selectionInfo,
@@ -384,19 +394,20 @@ namespace EMRCorefResol.UITest
                 var chainsPath = emrCollection.GetChainsPath(currentEMRIndex);
                 tab.SelectedIndex = 2;
 
-                var result = await ExtractFeatures(currentEMR, chainsPath, txtFeatures);
+                var result = await ExtractFeatures(currentEMR, chainsPath,
+                    new EnglishTrainingFeatureExtractor(), txtFeatures);
                 instances = result.Item1;
                 features = result.Item2;
             }
         }
 
-        private static async Task<Tuple<IIndexedEnumerable<IClasInstance>, IFeatureVector[]>> ExtractFeatures(EMR emr, string chainsPath, TextEditor txtFeatures)
+        private static async Task<Tuple<IIndexedEnumerable<IClasInstance>, IFeatureVector[]>>
+            ExtractFeatures(EMR emr, string chainsPath, IFeatureExtractor extractor, TextEditor txtFeatures)
         {
             var reader = new I2B2DataReader();
             var chains = new CorefChainCollection(chainsPath, reader);
             var instances = new AllInstancesGenerator().Generate(emr, chains);
 
-            var extractor = new EnglishTrainingFeatureExtractor();
             extractor.EMR = emr;
             extractor.GroundTruth = chains;
 
@@ -434,6 +445,12 @@ namespace EMRCorefResol.UITest
         {
             try
             {
+                if (classifier == null)
+                {
+                    classifier = new LibSVMClassifier(txtModelsPath.Text);
+                }
+
+                var extractor = new EnglishClasFeatureExtractor(classifier);
                 if (instances == null || features == null)
                 {
                     if (currentEMR != null)
@@ -441,16 +458,15 @@ namespace EMRCorefResol.UITest
                         var chainsPath = emrCollection.GetChainsPath(currentEMRIndex);
                         tab.SelectedIndex = 2;
 
-                        var result = await ExtractFeatures(currentEMR, chainsPath, txtFeatures);
+                        var result = await ExtractFeatures(currentEMR, chainsPath, extractor, txtFeatures);
                         instances = result.Item1;
                         features = result.Item2;
                     }
                 }
 
-                if (classifier == null)
-                {
-                    classifier = new LibSVMClassifier(txtModelsPath.Text);
-                }
+                var selectedTypes = new HashSet<Type>(
+                    types.Where(t => t.IsChecked).Select(t => t.Type), 
+                    EqualityComparer<Type>.Default);
 
                 tab.SelectedIndex = 5;
 
@@ -458,12 +474,12 @@ namespace EMRCorefResol.UITest
                 var count = 0;
                 var sb = new StringBuilder();
 
-                await Classify(instances, features, classifier, target,
+                await Classify(instances, features, classifier, target, selectedTypes,
                     new Progress<int>(i =>
                     {
                         if (target[i] != null)
                         {
-                            sb.AppendLine($"{i + ".",-6} {target[i]?.Class ?? -1d} | {target[i]?.Confidence ?? -1d:N3} {instances[i]}");
+                            sb.AppendLine($"{i + ".",-6} {target[i].Class}|{target[i].Confidence:N3} {instances[i]}");
                         }
                         txtClas.Text = $"Classifying...\n{count++}/{instances.Count}";
                     }));
@@ -479,7 +495,7 @@ namespace EMRCorefResol.UITest
 
         private static Task Classify(IIndexedEnumerable<IClasInstance> instances,
             IFeatureVector[] features, IClassifier classifier,
-            ClasResult[] target, IProgress<int> progress)
+            ClasResult[] target, HashSet<Type> types, IProgress<int> progress)
         {
             return Task.Run(() =>
             {
@@ -487,7 +503,7 @@ namespace EMRCorefResol.UITest
                 {
                     var type = instances[i].GetType();
 
-                    if (type == typeof(PersonInstance) || type == typeof(PersonPair))
+                    if (types == null || types.Count == 0 || types.Contains(type))
                     {
                         target[i] = instances[i].Classify(classifier, features[i]);
                     }
@@ -515,7 +531,149 @@ namespace EMRCorefResol.UITest
             if (FolderDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 txtModelsPath.Text = FolderDialog.SelectedPath;
+                classifier = null;
             }
+        }
+
+        private async void btnResolve_Click(object sender, RoutedEventArgs e)
+        {
+            if (currentEMR != null)
+            {
+                if (classifier == null)
+                {
+                    classifier = new LibSVMClassifier(txtModelsPath.Text);
+                }
+
+                tab.SelectedIndex = 3;
+                txtSystemChains.Text = "Resolving...";
+
+                var extractor = new EnglishClasFeatureExtractor(classifier);
+                var systemChains = await Resolve(currentEMR, extractor, classifier, resolver);
+                txtSystemChains.Text = string.Join(Environment.NewLine, systemChains.Select(ch => ch.ToString()));
+
+                var chainsPath = emrCollection.GetChainsPath(currentEMRIndex);
+                var reader = new I2B2DataReader();
+                var groundTruth = new CorefChainCollection(chainsPath, reader);
+                var evals = Evaluation.Metrics.Select(m => m.Evaluate(currentEMR, groundTruth, systemChains)).ToArray();
+                txtScores.Text = StringifyScores(evals);
+            }
+        }
+
+        private static Task<CorefChainCollection> Resolve(EMR emr, IFeatureExtractor extractor,
+            IClassifier classifier, ICorefResolver resolver)
+        {
+            return Task.Run(() =>
+            {
+                return resolver.Resolve(emr, extractor, classifier);
+            });
+        }
+
+        static string StringifyScores(Dictionary<ConceptType, Evaluation>[] scores)
+        {
+            var sb = new StringBuilder();
+            var metrics = scores.Select(s => s[ConceptType.None].MetricName).ToArray();
+
+            sb.Append('-', 11);
+            for (int i = 0; i < metrics.Length; i++)
+            {
+                sb.Append('-', 32);
+            }
+
+            sb.AppendLine();
+            sb.Append(' ', 11);
+            foreach (var m in metrics)
+            {
+                sb.Append($"{m,-32}");
+            }
+
+            sb.AppendLine();
+            sb.Append(' ', 11);
+            for (int i = 0; i < metrics.Length; i++)
+            {
+                sb.Append('-', 30);
+                sb.Append(' ', 2);
+            }
+
+            sb.AppendLine();
+            sb.Append(' ', 11);
+            for (int i = 0; i < metrics.Length; i++)
+            {
+                sb.Append($"{"P",-10}{"R",-10}{"F",-10}  ");
+            }
+
+            sb.AppendLine();
+            sb.Append('-', 11);
+            for (int i = 0; i < metrics.Length; i++)
+            {
+                sb.Append('-', 32);
+            }
+
+            foreach (var type in Evaluation.ConceptTypes)
+            {
+                sb.AppendLine();
+
+                var name = type == ConceptType.None ? "All" : type.ToString();
+                sb.Append($"{name,-11}");
+
+                foreach (var evals in scores)
+                {
+                    double p = 0d, r = 0d, f = 0d;
+
+                    if (evals.ContainsKey(type))
+                    {
+                        p = evals[type].Precision;
+                        r = evals[type].Recall;
+                        f = evals[type].FMeasure;
+                    }
+
+                    sb.Append($"{p,-10:N3}");
+                    sb.Append($"{r,-10:N3}");
+                    sb.Append($"{f,-10:N3}");
+                    sb.Append(' ', 2);
+                }
+            }
+
+            sb.AppendLine();
+            sb.Append('-', 11);
+            for (int i = 0; i < metrics.Length; i++)
+            {
+                sb.Append('-', 32);
+            }
+
+            return sb.ToString();
+        }
+
+        class TypeItem : INotifyPropertyChanged
+        {
+            public Type Type { get; }
+            public string Text { get { return Type.Name; } }
+
+            private bool _isChecked;
+            public bool IsChecked
+            {
+                get { return _isChecked; }
+                set
+                {
+                    if (_isChecked != value)
+                    {
+                        _isChecked = value;
+
+                        var handler = PropertyChanged;
+                        if (handler != null)
+                        {
+                            handler(this, new PropertyChangedEventArgs(nameof(IsChecked)));
+                        }
+                    }
+                }
+            }
+
+            public TypeItem(Type type, bool isChecked)
+            {
+                Type = type;
+                IsChecked = isChecked;
+            }
+
+            public event PropertyChangedEventHandler PropertyChanged;
         }
     }
 }

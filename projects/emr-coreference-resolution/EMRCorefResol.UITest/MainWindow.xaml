@@ -53,10 +53,36 @@
             <Button Content="Next" Width="60" Height="25" x:Name="btnNext" Click="btnNext_Click" Margin="0,0,5,0"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="2" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0, 5, 0, 0">
-            <Button Content="Extract Features" x:Name="btnExtract" IsEnabled="False" Click="btnExtract_Click"/>
-            <Button Content="Classifiy" x:Name="btnClassify" Click="btnClassify_Click" Margin="5,0,0,0"/>
-        </StackPanel>
+        <Grid Grid.Row="2" Margin="0,5,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <ListBox BorderThickness="0" x:Name="lbTypes" HorizontalAlignment="Center"
+                     VerticalAlignment="Center" SelectionMode="Multiple">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox VerticalContentAlignment="Center" Content="{Binding Text, Mode=OneTime}" 
+                                  IsChecked="{Binding IsChecked, Mode=TwoWay}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="{x:Type ListBoxItem}">
+                        <Setter Property="IsSelected" Value="{Binding IsChecked, Mode=TwoWay}"/>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+            </ListBox>
+            <StackPanel Grid.Row="1" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0, 5, 0, 0">
+                <Button Content="Extract Features" x:Name="btnExtract" IsEnabled="False" Click="btnExtract_Click"/>
+                <Button Content="Classifiy" x:Name="btnClassify" Click="btnClassify_Click" Margin="5,0,0,0"/>
+                <Button Content="Resolve" x:Name="btnResolve" Click="btnResolve_Click" Margin="5,0,0,0"/>
+            </StackPanel>
+        </Grid>
 
         <Grid Grid.Row="3" Margin="0,5,0,0">
             <Grid.ColumnDefinitions>

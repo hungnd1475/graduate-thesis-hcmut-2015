@@ -10,8 +10,6 @@ namespace HCMUT.EMRCorefResol.English
     using IO;
     class TemporalInformation
     {
-        private static Dictionary<string, string> _dictionary;
-
         public static TemporalDataDictionary GetTemporalFile(string emrPath)
         {
             //Console.WriteLine("Loading medication information...");

@@ -27,7 +27,7 @@ namespace HCMUT.EMRCorefResol
         /// <summary>
         /// The type of concept.
         /// </summary>
-        public ConceptType Type { get; set; }
+        public ConceptType Type { get; }
 
         /// <summary>
         /// Initializes a <see cref="Concept"/> instance.
@@ -94,6 +94,16 @@ namespace HCMUT.EMRCorefResol
         public int CompareTo(object obj)
         {
             return CompareTo(obj as Concept);
+        }
+
+        public Concept Clone()
+        {
+            return Clone(Type);
+        }
+
+        public Concept Clone(ConceptType conceptType)
+        {
+            return new Concept(Lexicon, Begin, End, conceptType);
         }
     }
 }

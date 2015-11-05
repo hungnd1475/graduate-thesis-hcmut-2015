@@ -33,7 +33,13 @@ namespace HCMUT.EMRCorefResol.English.Features
 
                     if (string.Equals(s.Trim(), ","))
                     {
-                        SetCategoricalValue(1);
+                        var anteNameFeat = new NameFeature(new PersonInstance(instance.Antecedent), emr);
+                        var anaNameFeat = new NameFeature(new PersonInstance(instance.Anaphora), emr);
+
+                        if (anteNameFeat.GetCategoricalValue() == 1 ^ anaNameFeat.GetCategoricalValue() == 1)
+                        {
+                            SetCategoricalValue(1);
+                        }
                     }
                 }
             }
