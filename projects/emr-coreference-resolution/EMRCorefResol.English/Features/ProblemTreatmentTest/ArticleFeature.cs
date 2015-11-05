@@ -10,13 +10,13 @@ namespace HCMUT.EMRCorefResol.English.Features
     class ArticleFeature : Feature
     {
         public ArticleFeature(IConceptPair instance)
-            :base("Article-Feature")
+            :base("Article-Feature", 9, 8)
         {
             var anaIndex = GetArticleWordIndex(instance.Anaphora.Lexicon);
             var anteIndex = GetArticleWordIndex(instance.Antecedent.Lexicon);
 
-            var pairIndex = (anaIndex - 1) * 3 + anteIndex;
-            SetContinuousValue(pairIndex);
+            var pairIndex = anaIndex * 3 + anteIndex;
+            SetCategoricalValue(pairIndex);
         }
 
         private int GetArticleWordIndex(string term)
@@ -24,16 +24,16 @@ namespace HCMUT.EMRCorefResol.English.Features
             var searcher = new AhoCorasickKeywordDictionary(new string[] { "a", "an" });
             if(searcher.Match(term, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
             {
-                return 1;
+                return 0;
             }
 
             searcher = new AhoCorasickKeywordDictionary(new string[] { "the", "his", "her", "my", "their", "that" });
             if (searcher.Match(term, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord))
             {
-                return 2;
+                return 1;
             }
 
-            return 3;
+            return 2;
         }
     }
 }
