@@ -103,6 +103,7 @@
     <Compile Include="Service\WikiUltil.cs" />
     <Compile Include="Instances\IInstancesGenerator.cs" />
     <Compile Include="Instances\Soon2001InstancesGenerator.cs" />
+    <Compile Include="TemporalData.cs" />
     <Compile Include="TemporalDataDictionary.cs" />
     <Compile Include="UmlsDataDictionary.cs" />
     <Compile Include="Utilities\EnglishNormalizer.cs" />
