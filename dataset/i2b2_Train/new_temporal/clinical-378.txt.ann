@@ -1,0 +1,12 @@
+<TIMEX3 id="T0" start="33" end="52" text="10/24/1996 12:00:00" type="TIME" val="1996-10-24T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="207" end="221" text="ADMISSION DATE" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T3" start="225" end="233" text="10/24/96" type="DATE" val="1996-10-24" mod="NA" />
+<TIMEX3 id="T4" start="776" end="780" text="1992" type="DATE" val="1992" mod="NA" />
+<TIMEX3 id="T5" start="5015" end="5037" text="the first hospital day" type="DATE" val="1996-10-24" mod="NA" />
+<TIMEX3 id="T6" start="5174" end="5199" text="the time of his admission" type="DATE" val="1996-10-24" mod="NA" />
+<TIMEX3 id="T7" start="5773" end="5785" text="several days" type="DATE" val="1996-10-24" mod="APPROX" />
+<TIMEX3 id="T8" start="6599" end="6602" text="3/5" type="DATE" val="1996-03-05" mod="NA" />
+<TIMEX3 id="T9" start="7968" end="7977" text="this time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T10" start="8367" end="8372" text="today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T11" start="8455" end="8463" text="11/05/96" type="DATE" val="1996-11-05" mod="NA" />
+<TIMEX3 id="T12" start="8990" end="9003" text="10/31/96 2:55" type="TIME" val="1996-10-31T02:55" mod="NA" />

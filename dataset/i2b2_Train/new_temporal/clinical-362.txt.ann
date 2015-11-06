@@ -1,0 +1,23 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2017-05-08" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2017-05-08" type="DATE" val="2017-05-08" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2017-05-16" type="DATE" val="2017-05-16" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1931-10-04" type="DATE" val="1931-10-04" mod="NA" />
+<TIMEX3 id="T4" start="396" end="401" text="05-08" type="DATE" val="2031-05-08" mod="NA" />
+<TIMEX3 id="T5" start="866" end="870" text="1992" type="DATE" val="1992" mod="NA" />
+<TIMEX3 id="T6" start="1130" end="1146" text="2017-05-16 06:20" type="TIME" val="2017-05-16T06:20" mod="NA" />
+<TIMEX3 id="T8" start="1262" end="1278" text="2017-05-16 06:20" type="TIME" val="2017-05-16T06:20" mod="NA" />
+<TIMEX3 id="T10" start="1302" end="1318" text="2017-05-16 06:20" type="TIME" val="2017-05-16T06:20" mod="NA" />
+<TIMEX3 id="T12" start="1357" end="1373" text="2017-05-16 09:50" type="TIME" val="2017-05-16T09:50" mod="NA" />
+<TIMEX3 id="T14" start="1551" end="1556" text="05-08" type="DATE" val="2031-05-08" mod="NA" />
+<TIMEX3 id="T15" start="1814" end="1819" text="POD#1" type="DATE" val="2031-05-09" mod="NA" />
+<TIMEX3 id="T16" start="1899" end="1904" text="POD#2" type="DATE" val="2031-05-10" mod="NA" />
+<TIMEX3 id="T17" start="1991" end="1996" text="POD#2" type="DATE" val="2031-05-10" mod="NA" />
+<TIMEX3 id="T18" start="2115" end="2120" text="POD#5" type="DATE" val="2031-05-13" mod="NA" />
+<TIMEX3 id="T19" start="2127" end="2132" text="POD#7" type="DATE" val="2031-05-15" mod="NA" />
+<TIMEX3 id="T20" start="2197" end="2202" text="POD#8" type="DATE" val="2031-05-16" mod="NA" />
+<TIMEX3 id="T21" start="2733" end="2739" text="day ) " type="DATE" val="2017-05-08" mod="NA" />
+<TIMEX3 id="T22" start="2886" end="2892" text="day ) " type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T23" start="3175" end="3181" text="day ) " type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T24" start="3509" end="3515" text="day ) " type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T25" start="3751" end="3757" text="day ) " type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T26" start="3956" end="3961" text="04-18" type="DATE" val="2031-04-18" mod="NA" />

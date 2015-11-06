@@ -1,0 +1,17 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2019-09-27" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2019-09-27" type="DATE" val="2019-09-27" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2019-10-07" type="DATE" val="2019-10-07" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1959-01-27" type="DATE" val="1959-01-27" mod="NA" />
+<TIMEX3 id="T4" start="309" end="314" text="10-01" type="DATE" val="1959-10-01" mod="NA" />
+<TIMEX3 id="T5" start="883" end="899" text="2019-10-07 05:30" type="TIME" val="2019-10-07T05:30" mod="NA" />
+<TIMEX3 id="T7" start="1016" end="1032" text="2019-10-07 05:30" type="TIME" val="2019-10-07T05:30" mod="NA" />
+<TIMEX3 id="T9" start="1058" end="1074" text="2019-10-04 06:50" type="TIME" val="2019-10-04T06:50" mod="NA" />
+<TIMEX3 id="T11" start="1124" end="1140" text="2019-10-07 05:30" type="TIME" val="2019-10-07T05:30" mod="NA" />
+<TIMEX3 id="T13" start="1299" end="1309" text="2019-10-01" type="DATE" val="2019-10-01" mod="NA" />
+<TIMEX3 id="T14" start="1434" end="1440" text="POD #1" type="DATE" val="2019-10-02" mod="NA" />
+<TIMEX3 id="T15" start="1516" end="1522" text="POD #2" type="DATE" val="2019-10-03" mod="NA" />
+<TIMEX3 id="T16" start="1828" end="1833" text="10-04" type="DATE" val="1958-10-04" mod="NA" />
+<TIMEX3 id="T17" start="1900" end="1910" text="2019-10-07" type="DATE" val="2019-10-07" mod="NA" />
+<TIMEX3 id="T18" start="2485" end="2491" text="day )." type="DATE" val="2019-09-27" mod="NA" />
+<TIMEX3 id="T19" start="2608" end="2614" text="day )." type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T20" start="3086" end="3092" text="day )." type="DATE" val="TPZ+0000-00-00" mod="NA" />

@@ -1,0 +1,23 @@
+<TIMEX3 id="T0" start="48" end="66" text="4/17/1995 12:00:00" type="TIME" val="1995-04-17T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="141" end="155" text="ADMISSION DATE" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T3" start="159" end="166" text="4/17/95" type="DATE" val="1995-04-17" mod="NA" />
+<TIMEX3 id="T4" start="186" end="194" text="07/16/95" type="DATE" val="1995-07-16" mod="NA" />
+<TIMEX3 id="T5" start="213" end="221" text="7/2/1928" type="DATE" val="1928-07-02" mod="NA" />
+<TIMEX3 id="T6" start="412" end="416" text="1993" type="DATE" val="1993" mod="NA" />
+<TIMEX3 id="T7" start="420" end="421" text="3" type="TIME" val="1928-07-02T03:00" mod="NA" />
+<TIMEX3 id="T8" start="741" end="748" text="4/28/95" type="DATE" val="1995-04-28" mod="NA" />
+<TIMEX3 id="T9" start="1302" end="1314" text="January 1994" type="DATE" val="1994-01" mod="NA" />
+<TIMEX3 id="T10" start="1321" end="1332" text="August 1994" type="DATE" val="1994-08" mod="NA" />
+<TIMEX3 id="T11" start="1477" end="1493" text="hospital day #10" type="DATE" val="1995-04-26" mod="NA" />
+<TIMEX3 id="T12" start="1500" end="1509" text="that time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T13" start="1625" end="1632" text="4/16/95" type="DATE" val="1995-04-16" mod="NA" />
+<TIMEX3 id="T14" start="1887" end="1891" text="1993" type="DATE" val="1993" mod="NA" />
+<TIMEX3 id="T15" start="1935" end="1939" text="1993" type="DATE" val="1993" mod="NA" />
+<TIMEX3 id="T16" start="4217" end="4224" text="4/17/95" type="DATE" val="1995-04-17" mod="NA" />
+<TIMEX3 id="T17" start="4982" end="4989" text="4/28/95" type="DATE" val="1995-04-28" mod="NA" />
+<TIMEX3 id="T18" start="5101" end="5105" text="4/27" type="DATE" val="1995-04-27" mod="NA" />
+<TIMEX3 id="T19" start="5456" end="5463" text="4/28/95" type="DATE" val="1995-04-28" mod="NA" />
+<TIMEX3 id="T20" start="6048" end="6068" text="postoperative day #2" type="DATE" val="1995-04-30" mod="NA" />
+<TIMEX3 id="T21" start="6987" end="6995" text="07/15/95" type="DATE" val="1995-07-15" mod="NA" />
+<TIMEX3 id="T22" start="7815" end="7830" text="the end of June" type="DATE" val="1995-06" mod="END" />
+<TIMEX3 id="T23" start="8773" end="8786" text="several weeks" type="DATE" val="TPZ-0000-W03" mod="APPROX" />

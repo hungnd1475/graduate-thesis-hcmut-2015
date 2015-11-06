@@ -1,0 +1,15 @@
+<TIMEX3 id="T0" start="36" end="55" text="10/22/2000 12:00:00" type="TIME" val="2000-10-22T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="103" end="117" text="Admission Date" type="DATE" val="2000-10-22" mod="NA" />
+<TIMEX3 id="T3" start="121" end="131" text="10/22/2000" type="DATE" val="2000-10-22" mod="NA" />
+<TIMEX3 id="T4" start="176" end="186" text="11/17/2000" type="DATE" val="2000-11-17" mod="NA" />
+<TIMEX3 id="T5" start="584" end="589" text="06/98" type="DATE" val="1998-06" mod="NA" />
+<TIMEX3 id="T6" start="780" end="796" text="six months later" type="DATE" val="TPZ+0000-06" mod="NA" />
+<TIMEX3 id="T7" start="1254" end="1259" text="08/22" type="DATE" val="1998-08-22" mod="NA" />
+<TIMEX3 id="T8" start="1402" end="1411" text="that time" type="DATE" val="2000-10-22" mod="NA" />
+<TIMEX3 id="T9" start="1797" end="1801" text="1996" type="DATE" val="1996" mod="NA" />
+<TIMEX3 id="T10" start="1805" end="1806" text="2" type="TIME" val="2000-10-22T02:00" mod="NA" />
+<TIMEX3 id="T11" start="2135" end="2145" text="many years" type="DATE" val="TPZ-0003" mod="APPROX" />
+<TIMEX3 id="T12" start="4019" end="4027" text="10/22/00" type="DATE" val="2000-10-22" mod="NA" />
+<TIMEX3 id="T13" start="4136" end="4144" text="10/29/00" type="DATE" val="2000-10-29" mod="NA" />
+<TIMEX3 id="T14" start="4753" end="4765" text="several days" type="DATE" val="TPZ-0000-00-03" mod="APPROX" />
+<TIMEX3 id="T15" start="5643" end="5664" text="11/18/00 at 9:30 a.m." type="TIME" val="2000-11-18T09:30" mod="NA" />

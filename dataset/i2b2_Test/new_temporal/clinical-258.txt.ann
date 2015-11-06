@@ -1,0 +1,22 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2011-02-06" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2011-02-06" type="DATE" val="2011-02-06" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2011-02-08" type="DATE" val="2011-02-08" mod="NA" />
+<TIMEX3 id="T3" start="341" end="358" text="the evening prior" type="DATE" val="2011-02-05" mod="END" />
+<TIMEX3 id="T4" start="2346" end="2350" text="2007" type="DATE" val="2007" mod="NA" />
+<TIMEX3 id="T5" start="2382" end="2386" text="2010" type="DATE" val="2010" mod="NA" />
+<TIMEX3 id="T6" start="2390" end="2433" text="3. History of right inguinal hernia in 2002" type="TIME" val="2002T03:00" mod="NA" />
+<TIMEX3 id="T7" start="5229" end="5234" text="02-07" type="DATE" val="2011-02-07" mod="NA" />
+<TIMEX3 id="T8" start="5381" end="5386" text="02-06" type="DATE" val="2011-02-06" mod="NA" />
+<TIMEX3 id="T9" start="5408" end="5413" text="02-06" type="DATE" val="2011-02-06" mod="NA" />
+<TIMEX3 id="T10" start="5931" end="5946" text="hospital day #2" type="DATE" val="2011-02-07" mod="NA" />
+<TIMEX3 id="T11" start="6153" end="6158" text="02-07" type="DATE" val="2011-02-07" mod="NA" />
+<TIMEX3 id="T12" start="6742" end="6749" text="12 p.m." type="TIME" val="2011-02-07T24:00" mod="NA" />
+<TIMEX3 id="T13" start="7965" end="7970" text="02-08" type="DATE" val="2011-02-08" mod="NA" />
+<TIMEX3 id="T14" start="8169" end="8184" text="hospital day #2" type="DATE" val="2011-02-07" mod="NA" />
+<TIMEX3 id="T15" start="8323" end="8338" text="hospital day #2" type="DATE" val="2011-02-07" mod="NA" />
+<TIMEX3 id="T16" start="8347" end="8362" text="hospital day #3" type="DATE" val="2011-02-08" mod="NA" />
+<TIMEX3 id="T17" start="8642" end="8657" text="Hospital day #2" type="DATE" val="2011-02-07" mod="NA" />
+<TIMEX3 id="T18" start="8666" end="8681" text="hospital day #3" type="DATE" val="2011-02-08" mod="NA" />
+<TIMEX3 id="T19" start="9352" end="9356" text="2007" type="DATE" val="2007" mod="NA" />
+<TIMEX3 id="T20" start="9385" end="9389" text="2010" type="DATE" val="2010" mod="NA" />
+<TIMEX3 id="T21" start="9393" end="9436" text="4. History of right inguinal hernia in 2002" type="TIME" val="2002T04:00" mod="NA" />

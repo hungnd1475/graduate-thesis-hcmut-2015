@@ -1,0 +1,50 @@
+<TIMEX3 id="T0" start="33" end="52" text="10/10/1997 12:00:00" type="TIME" val="1997-10-10T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="203" end="217" text="ADMISSION DATE" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T3" start="221" end="229" text="10/10/97" type="DATE" val="1997-10-10" mod="NA" />
+<TIMEX3 id="T4" start="249" end="257" text="10/23/97" type="DATE" val="1997-10-23" mod="NA" />
+<TIMEX3 id="T5" start="473" end="477" text="1987" type="DATE" val="1987" mod="NA" />
+<TIMEX3 id="T6" start="613" end="618" text="03/97" type="DATE" val="1997-03" mod="NA" />
+<TIMEX3 id="T7" start="1923" end="1927" text="1987" type="DATE" val="1987" mod="NA" />
+<TIMEX3 id="T8" start="1985" end="2012" text="approximately ten years ago" type="DATE" val="TPZ-0010" mod="APPROX" />
+<TIMEX3 id="T9" start="2144" end="2172" text="approximately six months ago" type="DATE" val="TPZ-0000-06" mod="APPROX" />
+<TIMEX3 id="T10" start="2285" end="2314" text="approximately 1-1/2 years ago" type="DATE" val="TPZ-0002" mod="APPROX" />
+<TIMEX3 id="T11" start="2661" end="2681" text="the day of admission" type="DATE" val="1997-10-10" mod="NA" />
+<TIMEX3 id="T12" start="3224" end="3251" text="approximately ten years ago" type="DATE" val="TPZ-0010" mod="APPROX" />
+<TIMEX3 id="T13" start="3392" end="3396" text="1987" type="DATE" val="1987" mod="NA" />
+<TIMEX3 id="T14" start="3598" end="3627" text="approximately eight years ago" type="DATE" val="TPZ-0008" mod="APPROX" />
+<TIMEX3 id="T15" start="3926" end="3953" text="approximately two years ago" type="DATE" val="TPZ-0002" mod="APPROX" />
+<TIMEX3 id="T16" start="3990" end="3995" text="05/97" type="DATE" val="1997-05" mod="NA" />
+<TIMEX3 id="T17" start="4470" end="4496" text="approximately 27 years ago" type="DATE" val="TPZ-0027" mod="APPROX" />
+<TIMEX3 id="T18" start="6110" end="6118" text="10/10/97" type="DATE" val="1997-10-10" mod="NA" />
+<TIMEX3 id="T19" start="6345" end="6353" text="10/10/97" type="DATE" val="1997-10-10" mod="NA" />
+<TIMEX3 id="T20" start="6649" end="6657" text="10/10/97" type="DATE" val="1997-10-10" mod="NA" />
+<TIMEX3 id="T21" start="7557" end="7565" text="10/17/97" type="DATE" val="1997-10-17" mod="NA" />
+<TIMEX3 id="T22" start="8564" end="8572" text="10/12/97" type="DATE" val="1997-10-12" mod="NA" />
+<TIMEX3 id="T23" start="9392" end="9400" text="10/17/97" type="DATE" val="1997-10-17" mod="NA" />
+<TIMEX3 id="T24" start="9431" end="9439" text="10/19/97" type="DATE" val="1997-10-19" mod="NA" />
+<TIMEX3 id="T25" start="9443" end="9451" text="10/20/97" type="DATE" val="1997-10-20" mod="NA" />
+<TIMEX3 id="T26" start="9651" end="9659" text="10/19/97" type="DATE" val="1997-10-19" mod="NA" />
+<TIMEX3 id="T27" start="9735" end="9743" text="10/15/97" type="DATE" val="1997-10-15" mod="NA" />
+<TIMEX3 id="T28" start="9869" end="9877" text="10/15/97" type="DATE" val="1997-10-15" mod="NA" />
+<TIMEX3 id="T29" start="10136" end="10154" text="several days later" type="DATE" val="TPZ+0000-00-03" mod="APPROX" />
+<TIMEX3 id="T30" start="10338" end="10347" text="this time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T31" start="11539" end="11544" text="today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T32" start="11547" end="11555" text="10/23/97" type="DATE" val="1997-10-23" mod="NA" />
+<TIMEX3 id="T33" start="11693" end="11701" text="10/19/97" type="DATE" val="1997-10-19" mod="NA" />
+<TIMEX3 id="T34" start="11803" end="11808" text="10-20" type="DATE" val="1997-10-20" mod="NA" />
+<TIMEX3 id="T35" start="11952" end="11964" text="the same day" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T36" start="12011" end="12025" text="two days later" type="DATE" val="TPZ+0000-00-02" mod="NA" />
+<TIMEX3 id="T37" start="12052" end="12060" text="10/22/97" type="DATE" val="1997-10-22" mod="NA" />
+<TIMEX3 id="T38" start="12330" end="12338" text="10/18/97" type="DATE" val="1997-10-18" mod="NA" />
+<TIMEX3 id="T39" start="12429" end="12437" text="10/18/97" type="DATE" val="1997-10-18" mod="NA" />
+<TIMEX3 id="T40" start="12451" end="12459" text="10/18/97" type="DATE" val="1997-10-18" mod="NA" />
+<TIMEX3 id="T41" start="12463" end="12478" text="22/9.1 to today" type="TIME" val="TPZ+0000-00-00T22:00" mod="NA" />
+<TIMEX3 id="T42" start="12514" end="12522" text="10/23/97" type="DATE" val="1997-10-23" mod="NA" />
+<TIMEX3 id="T43" start="12526" end="12527" text="9" type="TIME" val="1997-10-23T09:00" mod="NA" />
+<TIMEX3 id="T44" start="12577" end="12585" text="10/15/97" type="DATE" val="1997-10-15" mod="NA" />
+<TIMEX3 id="T45" start="12648" end="12656" text="10/16/97" type="DATE" val="1997-10-16" mod="NA" />
+<TIMEX3 id="T46" start="12719" end="12727" text="10/18/97" type="DATE" val="1997-10-18" mod="NA" />
+<TIMEX3 id="T47" start="12789" end="12797" text="10/19/97" type="DATE" val="1997-10-19" mod="NA" />
+<TIMEX3 id="T48" start="12860" end="12868" text="10/20/97" type="DATE" val="1997-10-20" mod="NA" />
+<TIMEX3 id="T49" start="13015" end="13037" text="over the past few days" type="DATE" val="TPZ-0000-00-03" mod="APPROX" />
+<TIMEX3 id="T50" start="14268" end="14281" text="10/23/97 3:05" type="TIME" val="1997-10-23T03:05" mod="NA" />

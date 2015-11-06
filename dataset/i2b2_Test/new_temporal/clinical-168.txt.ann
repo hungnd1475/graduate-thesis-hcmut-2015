@@ -1,0 +1,11 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2017-08-12" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2017-08-12" type="DATE" val="2017-08-12" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2017-08-16" type="DATE" val="2017-08-16" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1995-02-03" type="DATE" val="1995-02-03" mod="NA" />
+<TIMEX3 id="T4" start="846" end="862" text="2017-08-12 11:41" type="TIME" val="2017-08-12T11:41" mod="NA" />
+<TIMEX3 id="T6" start="978" end="996" text="2017-08-12 11:41PM" type="TIME" val="2017-08-12T23:41" mod="NA" />
+<TIMEX3 id="T7" start="1064" end="1080" text="2017-08-12 11:41" type="TIME" val="2017-08-12T11:41" mod="NA" />
+<TIMEX3 id="T9" start="1134" end="1150" text="2017-08-12 03:15" type="TIME" val="2017-08-12T03:15" mod="NA" />
+<TIMEX3 id="T11" start="1267" end="1283" text="2017-08-12 03:15" type="TIME" val="2017-08-12T03:15" mod="NA" />
+<TIMEX3 id="T13" start="1354" end="1370" text="2017-08-12 03:15" type="TIME" val="2017-08-12T03:15" mod="NA" />
+<TIMEX3 id="T15" start="1468" end="1484" text="2017-08-12 03:15" type="TIME" val="2017-08-12T03:15" mod="NA" />

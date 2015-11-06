@@ -1,0 +1,54 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2013-10-27" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2013-10-27" type="DATE" val="2013-10-27" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2013-11-03" type="DATE" val="2013-11-03" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1971-05-13" type="DATE" val="1971-05-13" mod="NA" />
+<TIMEX3 id="T4" start="391" end="395" text="2009" type="DATE" val="2009" mod="NA" />
+<TIMEX3 id="T5" start="461" end="467" text="9/2004" type="DATE" val="2004-09" mod="NA" />
+<TIMEX3 id="T6" start="528" end="533" text="10-18" type="DATE" val="1970-10-18" mod="NA" />
+<TIMEX3 id="T7" start="576" end="582" text="Monday" type="DATE" val="1970-10-12" mod="NA" />
+<TIMEX3 id="T8" start="585" end="590" text="10-21" type="DATE" val="1970-10-21" mod="NA" />
+<TIMEX3 id="T9" start="1007" end="1012" text="08-31" type="DATE" val="1970-08-31" mod="NA" />
+<TIMEX3 id="T10" start="1290" end="1300" text="2010-08-28" type="DATE" val="2010-08-28" mod="NA" />
+<TIMEX3 id="T11" start="1344" end="1354" text="2010-10-01" type="DATE" val="2010-10-01" mod="NA" />
+<TIMEX3 id="T12" start="1682" end="1687" text="08-06" type="DATE" val="1970-08-06" mod="NA" />
+<TIMEX3 id="T13" start="1717" end="1722" text="10-18" type="DATE" val="1970-10-18" mod="NA" />
+<TIMEX3 id="T14" start="1939" end="1949" text="2013-09-20" type="DATE" val="2013-09-20" mod="NA" />
+<TIMEX3 id="T15" start="2271" end="2276" text="10-09" type="DATE" val="1970-10-09" mod="NA" />
+<TIMEX3 id="T16" start="3583" end="3599" text="2013-10-27 01:30" type="TIME" val="2013-10-27T01:30" mod="NA" />
+<TIMEX3 id="T18" start="3718" end="3734" text="2013-10-27 01:30" type="TIME" val="2013-10-27T01:30" mod="NA" />
+<TIMEX3 id="T20" start="3822" end="3838" text="2013-10-27 01:30" type="TIME" val="2013-10-27T01:30" mod="NA" />
+<TIMEX3 id="T22" start="3856" end="3872" text="2013-10-27 01:30" type="TIME" val="2013-10-27T01:30" mod="NA" />
+<TIMEX3 id="T24" start="3888" end="3904" text="2013-10-27 01:30" type="TIME" val="2013-10-27T01:30" mod="NA" />
+<TIMEX3 id="T26" start="3955" end="3971" text="2013-10-27 01:30" type="TIME" val="2013-10-27T01:30" mod="NA" />
+<TIMEX3 id="T28" start="4070" end="4086" text="2013-10-27 01:30" type="TIME" val="2013-10-27T01:30" mod="NA" />
+<TIMEX3 id="T30" start="4167" end="4183" text="2013-10-27 01:30" type="TIME" val="2013-10-27T01:30" mod="NA" />
+<TIMEX3 id="T32" start="4306" end="4322" text="2013-10-27 01:30" type="TIME" val="2013-10-27T01:30" mod="NA" />
+<TIMEX3 id="T34" start="4345" end="4361" text="2013-10-27 01:30" type="TIME" val="2013-10-27T01:30" mod="NA" />
+<TIMEX3 id="T36" start="4402" end="4418" text="2013-10-27 01:30" type="TIME" val="2013-10-27T01:30" mod="NA" />
+<TIMEX3 id="T38" start="4440" end="4456" text="2013-10-27 01:30" type="TIME" val="2013-10-27T01:30" mod="NA" />
+<TIMEX3 id="T40" start="4517" end="4533" text="2013-10-27 01:30" type="TIME" val="2013-10-27T01:30" mod="NA" />
+<TIMEX3 id="T42" start="4661" end="4677" text="2013-10-27 01:30" type="TIME" val="2013-10-27T01:30" mod="NA" />
+<TIMEX3 id="T44" start="4742" end="4747" text="03-01" type="DATE" val="1971-03-01" mod="NA" />
+<TIMEX3 id="T45" start="4765" end="4781" text="2013-10-27 01:30" type="TIME" val="2013-10-27T01:30" mod="NA" />
+<TIMEX3 id="T47" start="4817" end="4827" text="2013-10-17" type="DATE" val="2013-10-17" mod="NA" />
+<TIMEX3 id="T48" start="5297" end="5313" text="2013-11-03 07:30" type="TIME" val="2013-11-03T07:30" mod="NA" />
+<TIMEX3 id="T50" start="5434" end="5450" text="2013-10-31 06:00" type="TIME" val="2013-10-31T06:00" mod="NA" />
+<TIMEX3 id="T52" start="5535" end="5551" text="2013-11-03 07:30" type="TIME" val="2013-11-03T07:30" mod="NA" />
+<TIMEX3 id="T54" start="5600" end="5616" text="2013-11-03 07:30" type="TIME" val="2013-11-03T07:30" mod="NA" />
+<TIMEX3 id="T56" start="5713" end="5729" text="2013-11-03 07:30" type="TIME" val="2013-11-03T07:30" mod="NA" />
+<TIMEX3 id="T58" start="5773" end="5789" text="2013-11-03 07:30" type="TIME" val="2013-11-03T07:30" mod="NA" />
+<TIMEX3 id="T60" start="5837" end="5853" text="2013-10-27 01:30" type="TIME" val="2013-10-27T01:30" mod="NA" />
+<TIMEX3 id="T62" start="6533" end="6538" text="10-28" type="DATE" val="1970-10-28" mod="NA" />
+<TIMEX3 id="T63" start="6683" end="6688" text="10-29" type="DATE" val="1970-10-29" mod="NA" />
+<TIMEX3 id="T64" start="6898" end="6903" text="10-30" type="DATE" val="1970-10-30" mod="NA" />
+<TIMEX3 id="T65" start="7137" end="7142" text="11-02" type="DATE" val="1970-11-02" mod="NA" />
+<TIMEX3 id="T66" start="7261" end="7265" text="7-10" type="DATE" val="1970-07-10" mod="NA" />
+<TIMEX3 id="T67" start="7886" end="7895" text="this time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T68" start="8422" end="8428" text="day )." type="DATE" val="2013-10-27" mod="NA" />
+<TIMEX3 id="T69" start="8542" end="8548" text="day )." type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T70" start="8780" end="8786" text="day )." type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T71" start="9296" end="9302" text="Monday" type="DATE" val="2013-10-21" mod="NA" />
+<TIMEX3 id="T72" start="9303" end="9308" text="11-04" type="DATE" val="1970-11-04" mod="NA" />
+<TIMEX3 id="T73" start="9747" end="9756" text="Wednesday" type="DATE" val="1970-11-04" mod="NA" />
+<TIMEX3 id="T74" start="9795" end="9801" text="Monday" type="DATE" val="1970-11-02" mod="NA" />
+<TIMEX3 id="T75" start="9870" end="9873" text="May" type="DATE" val="1970-05" mod="NA" />

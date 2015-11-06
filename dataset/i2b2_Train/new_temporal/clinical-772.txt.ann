@@ -1,0 +1,10 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2016-03-04" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2016-03-04" type="DATE" val="2016-03-04" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2016-03-22" type="DATE" val="2016-03-22" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1930-03-23" type="DATE" val="1930-03-23" mod="NA" />
+<TIMEX3 id="T4" start="641" end="655" text="five years ago" type="DATE" val="TPZ-0005" mod="NA" />
+<TIMEX3 id="T5" start="1408" end="1418" text="2016-03-10" type="DATE" val="2016-03-10" mod="NA" />
+<TIMEX3 id="T6" start="1559" end="1569" text="2016-03-14" type="DATE" val="2016-03-14" mod="NA" />
+<TIMEX3 id="T7" start="1719" end="1729" text="2016-03-14" type="DATE" val="2016-03-14" mod="NA" />
+<TIMEX3 id="T8" start="2176" end="2196" text="postoperative day #5" type="DATE" val="2016-03-09" mod="NA" />
+<TIMEX3 id="T9" start="2296" end="2316" text="postoperative day #7" type="DATE" val="2016-03-11" mod="NA" />

@@ -1,0 +1,14 @@
+<TIMEX3 id="T0" start="36" end="53" text="3/3/1999 12:00:00" type="TIME" val="1999-03-03T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="106" end="120" text="Admission Date" type="DATE" val="1999-03-03" mod="NA" />
+<TIMEX3 id="T3" start="124" end="134" text="03/03/1999" type="DATE" val="1999-03-03" mod="NA" />
+<TIMEX3 id="T4" start="179" end="189" text="03/08/1999" type="DATE" val="1999-03-08" mod="NA" />
+<TIMEX3 id="T5" start="817" end="821" text="1998" type="DATE" val="1998" mod="NA" />
+<TIMEX3 id="T6" start="877" end="889" text="one year ago" type="DATE" val="TPZ-0001" mod="NA" />
+<TIMEX3 id="T7" start="1024" end="1042" text="February 23 , 1999" type="DATE" val="1999-02-23" mod="NA" />
+<TIMEX3 id="T8" start="1583" end="1601" text="February 28 , 1999" type="DATE" val="1999-02-28" mod="NA" />
+<TIMEX3 id="T9" start="2196" end="2210" text="March 3 , 1999" type="DATE" val="1999-03-03" mod="NA" />
+<TIMEX3 id="T10" start="5119" end="5133" text="the second day" type="DATE" val="TPZ+0000-00-01" mod="APPROX" />
+<TIMEX3 id="T12" start="5978" end="5998" text="the day of discharge" type="DATE" val="1999-03-03" mod="NA" />
+<TIMEX3 id="T13" start="6215" end="6235" text="the day of discharge" type="DATE" val="1999-03-03" mod="NA" />
+<TIMEX3 id="T14" start="7050" end="7064" text="March 8 , 1999" type="DATE" val="1999-03-08" mod="NA" />
+<TIMEX3 id="T15" start="7188" end="7194" text="Sunday" type="DATE" val="1999-03-07" mod="NA" />

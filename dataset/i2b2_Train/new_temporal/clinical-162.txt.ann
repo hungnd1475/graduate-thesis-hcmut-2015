@@ -1,0 +1,10 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2015-09-14" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2015-09-14" type="DATE" val="2015-09-14" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2015-09-19" type="DATE" val="2015-09-19" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="2015-09-14" type="DATE" val="2015-09-14" mod="NA" />
+<TIMEX3 id="T4" start="1787" end="1800" text="day of life 3" type="DATE" val="2015-09-16" mod="NA" />
+<TIMEX3 id="T5" start="1993" end="2014" text="the time of discharge" type="DATE" val="2015-09-14" mod="NA" />
+<TIMEX3 id="T6" start="2238" end="2251" text="day of life 2" type="DATE" val="2015-09-15" mod="NA" />
+<TIMEX3 id="T7" start="2439" end="2452" text="day of life 5" type="DATE" val="2015-09-18" mod="NA" />
+<TIMEX3 id="T8" start="2456" end="2457" text="4" type="TIME" val="2015-09-18T04:00" mod="NA" />
+<TIMEX3 id="T9" start="3428" end="3433" text="09-16" type="DATE" val="2015-09-16" mod="NA" />

@@ -1,0 +1,5 @@
+<TIMEX3 id="T0" start="36" end="55" text="06/16/1997 12:00:00" type="TIME" val="1997-06-16T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="94" end="108" text="Admission Date" type="DATE" val="1997-06-16" mod="NA" />
+<TIMEX3 id="T3" start="112" end="122" text="06/16/1997" type="DATE" val="1997-06-16" mod="NA" />
+<TIMEX3 id="T4" start="167" end="177" text="06/18/1997" type="DATE" val="1997-06-18" mod="NA" />
+<TIMEX3 id="T5" start="2410" end="2426" text="The next morning" type="DATE" val="1997-06-17" mod="START" />

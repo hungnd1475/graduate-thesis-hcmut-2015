@@ -1,0 +1,14 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2011-06-10" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2011-06-10" type="DATE" val="2011-06-10" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2011-06-13" type="DATE" val="2011-06-13" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1976-04-17" type="DATE" val="1976-04-17" mod="NA" />
+<TIMEX3 id="T4" start="568" end="573" text="today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T5" start="1354" end="1365" text="last winter" type="DATE" val="0" mod="APPROX" />
+<TIMEX3 id="T6" start="2951" end="2956" text="05-04" type="DATE" val="2011-05-04" mod="NA" />
+<TIMEX3 id="T7" start="4963" end="4984" text="the time of discharge" type="DATE" val="2011-06-10" mod="NA" />
+<TIMEX3 id="T8" start="5508" end="5529" text="the time of discharge" type="DATE" val="2011-06-10" mod="NA" />
+<TIMEX3 id="T9" start="5957" end="5977" text="the day of discharge" type="DATE" val="2011-06-10" mod="NA" />
+<TIMEX3 id="T10" start="5985" end="5997" text="the next day" type="DATE" val="2011-06-11" mod="NA" />
+<TIMEX3 id="T11" start="6036" end="6108" text="lunch time , and with dinner and then at bedtime , then the third day to" type="TIME" val="TPZ+0000-00-00T14:00" mod="APPROX" />
+<TIMEX3 id="T12" start="6143" end="6182" text="lunch , and bedtime , the fourth day to" type="TIME" val="TPZ+0000-00-00T14:00" mod="APPROX" />
+<TIMEX3 id="T13" start="6234" end="6246" text="the last day" type="DATE" val="2011-06-10" mod="NA" />

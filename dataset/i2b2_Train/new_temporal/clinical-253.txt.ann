@@ -1,0 +1,13 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2017-09-22" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2017-09-22" type="DATE" val="2017-09-22" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2017-09-27" type="DATE" val="2017-09-27" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="2017-09-22" type="DATE" val="2017-09-22" mod="NA" />
+<TIMEX3 id="T4" start="527" end="537" text="2017-09-13" type="DATE" val="2017-09-13" mod="NA" />
+<TIMEX3 id="T5" start="1461" end="1470" text="that time" type="DATE" val="2017-09-22" mod="NA" />
+<TIMEX3 id="T6" start="4413" end="4430" text="day of life three" type="DATE" val="2017-09-24" mod="NA" />
+<TIMEX3 id="T7" start="5030" end="5047" text="day of life three" type="DATE" val="2017-09-24" mod="NA" />
+<TIMEX3 id="T8" start="5616" end="5621" text="09-23" type="DATE" val="2017-09-23" mod="NA" />
+<TIMEX3 id="T9" start="6248" end="6253" text="10-30" type="DATE" val="2017-10-30" mod="NA" />
+<TIMEX3 id="T10" start="6415" end="6432" text="day of life three" type="DATE" val="2017-09-24" mod="NA" />
+<TIMEX3 id="T11" start="6515" end="6520" text="09-26" type="DATE" val="2017-09-26" mod="NA" />
+<TIMEX3 id="T12" start="6614" end="6636" text="2017-10-20 at 12:30 pm" type="TIME" val="2017-10-20T24:30" mod="NA" />

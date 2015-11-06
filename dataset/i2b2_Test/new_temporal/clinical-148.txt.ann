@@ -1,0 +1,12 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2010-10-04" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2010-10-04" type="DATE" val="2010-10-04" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2010-10-17" type="DATE" val="2010-10-17" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1929-11-09" type="DATE" val="1929-11-09" mod="NA" />
+<TIMEX3 id="T4" start="171" end="176" text="10-12" type="DATE" val="2010-10-12" mod="NA" />
+<TIMEX3 id="T5" start="523" end="528" text="10-14" type="DATE" val="2010-10-14" mod="NA" />
+<TIMEX3 id="T6" start="593" end="598" text="today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T7" start="601" end="606" text="10-17" type="DATE" val="2010-10-17" mod="NA" />
+<TIMEX3 id="T8" start="859" end="870" text="the mid 20s" type="DATE" val="1920" mod="MID" />
+<TIMEX3 id="T9" start="987" end="992" text="10-16" type="DATE" val="2010-10-16" mod="NA" />
+<TIMEX3 id="T10" start="1433" end="1443" text="2010-10-17" type="DATE" val="2010-10-17" mod="NA" />
+<TIMEX3 id="T11" start="1620" end="1628" text="day # 14" type="DATE" val="2010-10-17" mod="NA" />

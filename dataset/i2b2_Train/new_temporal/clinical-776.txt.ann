@@ -1,0 +1,21 @@
+<TIMEX3 id="T0" start="36" end="55" text="02/08/1991 12:00:00" type="TIME" val="1991-02-08T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="92" end="106" text="Admission Date" type="DATE" val="1991-02-08" mod="NA" />
+<TIMEX3 id="T3" start="110" end="120" text="02/08/1991" type="DATE" val="1991-02-08" mod="NA" />
+<TIMEX3 id="T4" start="165" end="175" text="02/18/1991" type="DATE" val="1991-02-18" mod="NA" />
+<TIMEX3 id="T5" start="763" end="771" text="01/17/91" type="DATE" val="1991-01-17" mod="NA" />
+<TIMEX3 id="T6" start="830" end="839" text="that time" type="DATE" val="1991-02-08" mod="NA" />
+<TIMEX3 id="T7" start="1292" end="1300" text="02/06/91" type="DATE" val="1991-02-06" mod="NA" />
+<TIMEX3 id="T8" start="1463" end="1472" text="that time" type="DATE" val="1991-02-08" mod="NA" />
+<TIMEX3 id="T9" start="1608" end="1616" text="02/08/91" type="DATE" val="1991-02-08" mod="NA" />
+<TIMEX3 id="T10" start="2009" end="2018" text="that time" type="DATE" val="1991-02-08" mod="NA" />
+<TIMEX3 id="T11" start="3750" end="3755" text="02/06" type="DATE" val="1991-02-06" mod="NA" />
+<TIMEX3 id="T12" start="5037" end="5045" text="02/10/91" type="DATE" val="1991-02-10" mod="NA" />
+<TIMEX3 id="T13" start="5372" end="5380" text="02/10/91" type="DATE" val="1991-02-10" mod="NA" />
+<TIMEX3 id="T14" start="5387" end="5395" text="02/11/91" type="DATE" val="1991-02-11" mod="NA" />
+<TIMEX3 id="T15" start="5552" end="5560" text="02/11/91" type="DATE" val="1991-02-11" mod="NA" />
+<TIMEX3 id="T16" start="5613" end="5621" text="12/12/90" type="DATE" val="1990-12-12" mod="NA" />
+<TIMEX3 id="T17" start="6224" end="6232" text="02/13/91" type="DATE" val="1991-02-13" mod="NA" />
+<TIMEX3 id="T18" start="6917" end="6925" text="02/16/91" type="DATE" val="1991-02-16" mod="NA" />
+<TIMEX3 id="T19" start="7133" end="7141" text="02/15/91" type="DATE" val="1991-02-15" mod="NA" />
+<TIMEX3 id="T20" start="7659" end="7667" text="02/18/91" type="DATE" val="1991-02-18" mod="NA" />
+<TIMEX3 id="T21" start="7732" end="7741" text="6:40 p.m." type="TIME" val="1991-02-18T18:40" mod="NA" />

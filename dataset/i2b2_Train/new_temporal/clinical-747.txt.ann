@@ -1,0 +1,20 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2015-10-05" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2015-10-05" type="DATE" val="2015-10-05" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2015-10-08" type="DATE" val="2015-10-08" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1815-10-05" type="DATE" val="1815-10-05" mod="NA" />
+<TIMEX3 id="T4" start="1365" end="1370" text="02-26" type="DATE" val="2015-02-26" mod="NA" />
+<TIMEX3 id="T5" start="1404" end="1408" text="2002" type="DATE" val="2002" mod="NA" />
+<TIMEX3 id="T6" start="2369" end="2374" text="10-07" type="DATE" val="2015-10-07" mod="NA" />
+<TIMEX3 id="T7" start="2625" end="2643" text="2015-10-05 09:00PM" type="TIME" val="2015-10-05T21:00" mod="NA" />
+<TIMEX3 id="T8" start="2717" end="2735" text="2015-10-06 04:47PM" type="TIME" val="2015-10-06T16:47" mod="NA" />
+<TIMEX3 id="T9" start="2809" end="2827" text="2015-10-07 07:30AM" type="TIME" val="2015-10-07T07:30" mod="NA" />
+<TIMEX3 id="T10" start="2919" end="2937" text="2015-10-08 08:35AM" type="TIME" val="2015-10-08T08:35" mod="NA" />
+<TIMEX3 id="T11" start="3710" end="3724" text="hospital day 1" type="DATE" val="2015-10-05" mod="NA" />
+<TIMEX3 id="T12" start="3759" end="3773" text="hospital day 2" type="DATE" val="2015-10-06" mod="NA" />
+<TIMEX3 id="T13" start="4426" end="4435" text="next week" type="DATE" val="2015-W42" mod="NA" />
+<TIMEX3 id="T14" start="5125" end="5130" text="12-14" type="DATE" val="2015-12-14" mod="NA" />
+<TIMEX3 id="T15" start="6137" end="6143" text="day ) " type="DATE" val="2015-10-05" mod="NA" />
+<TIMEX3 id="T16" start="6146" end="6147" text="8" type="TIME" val="2015-10-05T08:00" mod="NA" />
+<TIMEX3 id="T17" start="6298" end="6304" text="day ) " type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T18" start="6307" end="6387" text="10. Acetaminophen 325 mg Tablet Sig : Two ( 2 ) Tablet PO BID ( 2 times a day ) " type="TIME" val="TPZ+0000-00-00T10:00" mod="NA" />
+<TIMEX3 id="T19" start="6558" end="6564" text="day as" type="DATE" val="TPZ+0000-00-00" mod="NA" />

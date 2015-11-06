@@ -1,0 +1,53 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2019-06-14" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2019-06-14" type="DATE" val="2019-06-14" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2019-06-19" type="DATE" val="2019-06-19" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1968-01-21" type="DATE" val="1968-01-21" mod="NA" />
+<TIMEX3 id="T4" start="449" end="459" text="2018-03-21" type="DATE" val="2018-03-21" mod="NA" />
+<TIMEX3 id="T5" start="540" end="550" text="2018-12-21" type="DATE" val="2018-12-21" mod="NA" />
+<TIMEX3 id="T6" start="612" end="622" text="2019-06-14" type="DATE" val="2019-06-14" mod="NA" />
+<TIMEX3 id="T7" start="728" end="732" text="9/25" type="DATE" val="1967-09-25" mod="NA" />
+<TIMEX3 id="T8" start="733" end="737" text="10/6" type="DATE" val="1967-10-06" mod="NA" />
+<TIMEX3 id="T9" start="1015" end="1035" text="the day of admission" type="DATE" val="2019-06-14" mod="NA" />
+<TIMEX3 id="T10" start="1173" end="1183" text="2 days PTA" type="DATE" val="2019-06-12" mod="NA" />
+<TIMEX3 id="T11" start="2209" end="2219" text="2018-03-21" type="DATE" val="2018-03-21" mod="NA" />
+<TIMEX3 id="T12" start="2307" end="2314" text="03/2006" type="DATE" val="2006-03" mod="NA" />
+<TIMEX3 id="T13" start="2822" end="2832" text="2018-12-21" type="DATE" val="2018-12-21" mod="NA" />
+<TIMEX3 id="T14" start="3618" end="3634" text="2019-06-14 10:30" type="TIME" val="2019-06-14T10:30" mod="NA" />
+<TIMEX3 id="T16" start="3757" end="3773" text="2019-06-19 07:20" type="TIME" val="2019-06-19T07:20" mod="NA" />
+<TIMEX3 id="T18" start="3896" end="3912" text="2019-06-14 10:30" type="TIME" val="2019-06-14T10:30" mod="NA" />
+<TIMEX3 id="T20" start="3958" end="3974" text="2019-06-14 10:30" type="TIME" val="2019-06-14T10:30" mod="NA" />
+<TIMEX3 id="T22" start="4001" end="4017" text="2019-06-14 10:30" type="TIME" val="2019-06-14T10:30" mod="NA" />
+<TIMEX3 id="T24" start="4121" end="4137" text="2019-06-19 07:20" type="TIME" val="2019-06-19T07:20" mod="NA" />
+<TIMEX3 id="T26" start="4231" end="4247" text="2019-06-14 10:30" type="TIME" val="2019-06-14T10:30" mod="NA" />
+<TIMEX3 id="T28" start="4338" end="4354" text="2019-06-14 06:03" type="TIME" val="2019-06-14T06:03" mod="NA" />
+<TIMEX3 id="T30" start="4381" end="4397" text="2019-06-14 10:30" type="TIME" val="2019-06-14T10:30" mod="NA" />
+<TIMEX3 id="T32" start="4435" end="4451" text="2019-06-14 06:03" type="TIME" val="2019-06-14T06:03" mod="NA" />
+<TIMEX3 id="T34" start="4488" end="4504" text="2019-06-17 05:30" type="TIME" val="2019-06-17T05:30" mod="NA" />
+<TIMEX3 id="T36" start="4530" end="4546" text="2019-06-14 06:03" type="TIME" val="2019-06-14T06:03" mod="NA" />
+<TIMEX3 id="T38" start="4593" end="4609" text="2019-06-18 07:55" type="TIME" val="2019-06-18T07:55" mod="NA" />
+<TIMEX3 id="T40" start="4667" end="4683" text="2019-06-16 07:35" type="TIME" val="2019-06-16T07:35" mod="NA" />
+<TIMEX3 id="T42" start="4705" end="4721" text="2019-06-16 07:35" type="TIME" val="2019-06-16T07:35" mod="NA" />
+<TIMEX3 id="T44" start="4749" end="4765" text="2019-06-19 07:20" type="TIME" val="2019-06-19T07:20" mod="NA" />
+<TIMEX3 id="T46" start="4888" end="4904" text="2019-06-19 07:20" type="TIME" val="2019-06-19T07:20" mod="NA" />
+<TIMEX3 id="T48" start="5030" end="5046" text="2019-06-18 07:55" type="TIME" val="2019-06-18T07:55" mod="NA" />
+<TIMEX3 id="T50" start="5081" end="5097" text="2019-06-19 07:20" type="TIME" val="2019-06-19T07:20" mod="NA" />
+<TIMEX3 id="T52" start="5191" end="5207" text="2019-06-19 07:20" type="TIME" val="2019-06-19T07:20" mod="NA" />
+<TIMEX3 id="T54" start="5300" end="5305" text="06-14" type="DATE" val="1967-06-14" mod="NA" />
+<TIMEX3 id="T55" start="5398" end="5403" text="06-14" type="DATE" val="1967-06-14" mod="NA" />
+<TIMEX3 id="T56" start="5600" end="5605" text="06-17" type="DATE" val="1967-06-17" mod="NA" />
+<TIMEX3 id="T57" start="6580" end="6585" text="06-18" type="DATE" val="1967-06-18" mod="NA" />
+<TIMEX3 id="T58" start="6862" end="6867" text="06-18" type="DATE" val="1967-06-18" mod="NA" />
+<TIMEX3 id="T59" start="7141" end="7151" text="2018-12-21" type="DATE" val="2018-12-21" mod="NA" />
+<TIMEX3 id="T60" start="7414" end="7430" text="time of transfer" type="DATE" val="2019-06-14" mod="NA" />
+<TIMEX3 id="T61" start="8334" end="8345" text="next Monday" type="DATE" val="2019-06-17" mod="NA" />
+<TIMEX3 id="T62" start="8349" end="8350" text="3" type="TIME" val="2019-06-17T03:00" mod="NA" />
+<TIMEX3 id="T63" start="9395" end="9400" text="06-23" type="DATE" val="1967-06-23" mod="NA" />
+<TIMEX3 id="T64" start="9519" end="9525" text="day ):" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T65" start="9661" end="9666" text="06-24" type="DATE" val="1967-06-24" mod="NA" />
+<TIMEX3 id="T66" start="9670" end="9671" text="5" type="TIME" val="1967-06-24T05:00" mod="NA" />
+<TIMEX3 id="T67" start="10430" end="10438" text="last day" type="DATE" val="1967-06-23" mod="NA" />
+<TIMEX3 id="T68" start="10455" end="10460" text="06-23" type="DATE" val="1967-06-23" mod="NA" />
+<TIMEX3 id="T69" start="10464" end="10465" text="3" type="TIME" val="1967-06-23T03:00" mod="NA" />
+<TIMEX3 id="T70" start="10586" end="10591" text="06-24" type="DATE" val="1967-06-24" mod="NA" />
+<TIMEX3 id="T71" start="11182" end="11197" text="2019-07-03 3:30" type="TIME" val="2019-07-03T3:30" mod="NA" />
+<TIMEX3 id="T72" start="11269" end="11284" text="2019-07-03 3:30" type="TIME" val="2019-07-03T3:30" mod="NA" />

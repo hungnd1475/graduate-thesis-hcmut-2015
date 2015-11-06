@@ -1,0 +1,19 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2015-11-22" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2015-11-22" type="DATE" val="2015-11-22" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2015-11-27" type="DATE" val="2015-11-27" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1942-03-04" type="DATE" val="1942-03-04" mod="NA" />
+<TIMEX3 id="T4" start="642" end="653" text="A few weeks" type="DATE" val="TPZ-0000-W03" mod="APPROX" />
+<TIMEX3 id="T6" start="818" end="833" text="The night prior" type="DATE" val="2015-11-21" mod="END" />
+<TIMEX3 id="T7" start="1084" end="1090" text="2 a.m." type="TIME" val="2015-11-21T02:00" mod="NA" />
+<TIMEX3 id="T8" start="1113" end="1142" text="07:45 on the day of admission" type="TIME" val="2015-11-22T07:45" mod="NA" />
+<TIMEX3 id="T9" start="2458" end="2468" text="2015-08-24" type="DATE" val="2015-08-24" mod="NA" />
+<TIMEX3 id="T10" start="2472" end="2473" text="4" type="TIME" val="2015-08-24T04:00" mod="NA" />
+<TIMEX3 id="T11" start="2949" end="2961" text="20 years ago" type="DATE" val="TPZ-0020" mod="NA" />
+<TIMEX3 id="T12" start="5636" end="5645" text="Wednesday" type="DATE" val="2015-08-19" mod="NA" />
+<TIMEX3 id="T13" start="5648" end="5653" text="11-25" type="DATE" val="2015-11-25" mod="NA" />
+<TIMEX3 id="T14" start="7466" end="7487" text="the time of discharge" type="DATE" val="2015-11-22" mod="NA" />
+<TIMEX3 id="T15" start="7529" end="7557" text="four days prior to discharge" type="DATE" val="2015-11-18" mod="NA" />
+<TIMEX3 id="T16" start="7561" end="7562" text="4" type="TIME" val="2015-11-18T04:00" mod="NA" />
+<TIMEX3 id="T17" start="8069" end="8090" text="the time of discharge" type="DATE" val="2015-11-22" mod="NA" />
+<TIMEX3 id="T18" start="8094" end="8095" text="6" type="TIME" val="2015-11-22T06:00" mod="NA" />
+<TIMEX3 id="T19" start="8523" end="8544" text="the time of discharge" type="DATE" val="2015-11-22" mod="NA" />

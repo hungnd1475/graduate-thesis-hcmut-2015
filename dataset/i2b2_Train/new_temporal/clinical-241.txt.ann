@@ -1,0 +1,17 @@
+<TIMEX3 id="T0" start="46" end="64" text="12/5/1993 12:00:00" type="TIME" val="1993-12-05T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="130" end="144" text="ADMISSION DATE" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T3" start="148" end="156" text="12/05/93" type="DATE" val="1993-12-05" mod="NA" />
+<TIMEX3 id="T4" start="176" end="184" text="12/17/93" type="DATE" val="1993-12-17" mod="NA" />
+<TIMEX3 id="T5" start="568" end="572" text="1978" type="DATE" val="1978" mod="NA" />
+<TIMEX3 id="T6" start="699" end="703" text="1986" type="DATE" val="1986" mod="NA" />
+<TIMEX3 id="T7" start="710" end="714" text="1991" type="DATE" val="1991" mod="NA" />
+<TIMEX3 id="T8" start="976" end="990" text="early December" type="DATE" val="1991-12" mod="START" />
+<TIMEX3 id="T9" start="993" end="997" text="1993" type="DATE" val="1993" mod="NA" />
+<TIMEX3 id="T10" start="2794" end="2806" text="several days" type="DATE" val="TPZ-0000-00-03" mod="APPROX" />
+<TIMEX3 id="T11" start="3418" end="3429" text="December 12" type="DATE" val="1993-12-12" mod="NA" />
+<TIMEX3 id="T12" start="3948" end="3969" text="postoperative day # 1" type="DATE" val="1993-12-06" mod="NA" />
+<TIMEX3 id="T13" start="4343" end="4350" text="day # 2" type="DATE" val="1993-12-06" mod="NA" />
+<TIMEX3 id="T14" start="4858" end="4879" text="postoperative day # 3" type="DATE" val="1993-12-08" mod="NA" />
+<TIMEX3 id="T15" start="5950" end="5973" text="the evening of the 18th" type="DATE" val="TPZ+0000-00-00" mod="END" />
+<TIMEX3 id="T16" start="6180" end="6203" text="approximately 7:50 a.m." type="TIME" val="1993-12-08T07:50" mod="APPROX" />
+<TIMEX3 id="T17" start="7516" end="7525" text="8:30 a.m." type="TIME" val="1993-12-08T08:30" mod="NA" />

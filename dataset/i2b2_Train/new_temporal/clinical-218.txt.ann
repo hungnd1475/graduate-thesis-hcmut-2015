@@ -1,0 +1,21 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2011-09-23" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2011-09-23" type="DATE" val="2011-09-23" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2011-10-06" type="DATE" val="2011-10-06" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="2011-09-23" type="DATE" val="2011-09-23" mod="NA" />
+<TIMEX3 id="T4" start="544" end="554" text="2011-08-22" type="DATE" val="2011-08-22" mod="NA" />
+<TIMEX3 id="T5" start="578" end="588" text="2011-08-25" type="DATE" val="2011-08-25" mod="NA" />
+<TIMEX3 id="T6" start="2025" end="2029" text="8-12" type="DATE" val="2011-08-12" mod="NA" />
+<TIMEX3 id="T7" start="2472" end="2486" text="day of life #1" type="DATE" val="2011-09-23" mod="NA" />
+<TIMEX3 id="T8" start="2589" end="2610" text="the time of discharge" type="DATE" val="2011-09-23" mod="NA" />
+<TIMEX3 id="T9" start="2905" end="2922" text="day of life three" type="DATE" val="2011-09-25" mod="NA" />
+<TIMEX3 id="T10" start="3056" end="3070" text="day of life #7" type="DATE" val="2011-09-29" mod="NA" />
+<TIMEX3 id="T11" start="3250" end="3271" text="the time of discharge" type="DATE" val="2011-09-23" mod="NA" />
+<TIMEX3 id="T12" start="3275" end="3276" text="6" type="TIME" val="2011-09-23T06:00" mod="NA" />
+<TIMEX3 id="T13" start="3688" end="3709" text="THE TIME OF DISCHARGE" type="DATE" val="2011-09-23" mod="NA" />
+<TIMEX3 id="T14" start="3713" end="3714" text="1" type="TIME" val="2011-09-23T01:00" mod="NA" />
+<TIMEX3 id="T15" start="3821" end="3827" text="day 25" type="DATE" val="2011-10-17" mod="NA" />
+<TIMEX3 id="T16" start="4027" end="4032" text="09-27" type="DATE" val="2011-09-27" mod="NA" />
+<TIMEX3 id="T17" start="4037" end="4047" text="2011-10-05" type="DATE" val="2011-10-05" mod="NA" />
+<TIMEX3 id="T18" start="4316" end="4323" text="October" type="DATE" val="2011-10" mod="NA" />
+<TIMEX3 id="T19" start="4332" end="4337" text="April" type="DATE" val="2011-04" mod="NA" />
+<TIMEX3 id="T20" start="4925" end="4930" text="10-10" type="DATE" val="2011-10-10" mod="NA" />

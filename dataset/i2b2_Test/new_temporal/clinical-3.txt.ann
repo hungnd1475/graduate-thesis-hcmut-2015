@@ -1,0 +1,38 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2015-10-28" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2015-10-28" type="DATE" val="2015-10-28" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2015-11-13" type="DATE" val="2015-11-13" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1941-08-30" type="DATE" val="1941-08-30" mod="NA" />
+<TIMEX3 id="T4" start="271" end="281" text="2015-10-30" type="DATE" val="2015-10-30" mod="NA" />
+<TIMEX3 id="T5" start="305" end="315" text="2015-11-02" type="DATE" val="2015-11-02" mod="NA" />
+<TIMEX3 id="T6" start="470" end="480" text="2015-10-21" type="DATE" val="2015-10-21" mod="NA" />
+<TIMEX3 id="T7" start="1666" end="1671" text="10-29" type="DATE" val="2041-10-29" mod="NA" />
+<TIMEX3 id="T8" start="1675" end="1676" text="1" type="TIME" val="2041-10-29T01:00" mod="NA" />
+<TIMEX3 id="T9" start="1797" end="1802" text="11-02" type="DATE" val="2041-11-02" mod="NA" />
+<TIMEX3 id="T10" start="2418" end="2423" text="11-04" type="DATE" val="2041-11-04" mod="NA" />
+<TIMEX3 id="T11" start="3075" end="3080" text="11-06" type="DATE" val="2041-11-06" mod="NA" />
+<TIMEX3 id="T12" start="3411" end="3427" text="2015-11-13 06:15" type="TIME" val="2015-11-13T06:15" mod="NA" />
+<TIMEX3 id="T14" start="3546" end="3562" text="2015-11-12 06:00" type="TIME" val="2015-11-12T06:00" mod="NA" />
+<TIMEX3 id="T16" start="3679" end="3695" text="2015-11-13 06:15" type="TIME" val="2015-11-13T06:15" mod="NA" />
+<TIMEX3 id="T18" start="3721" end="3737" text="2015-11-13 06:15" type="TIME" val="2015-11-13T06:15" mod="NA" />
+<TIMEX3 id="T20" start="3789" end="3805" text="2015-11-12 06:00" type="TIME" val="2015-11-12T06:00" mod="NA" />
+<TIMEX3 id="T22" start="3857" end="3873" text="2015-11-11 05:45" type="TIME" val="2015-11-11T05:45" mod="NA" />
+<TIMEX3 id="T24" start="3925" end="3941" text="2015-11-13 06:15" type="TIME" val="2015-11-13T06:15" mod="NA" />
+<TIMEX3 id="T26" start="4037" end="4053" text="2015-11-12 06:00" type="TIME" val="2015-11-12T06:00" mod="NA" />
+<TIMEX3 id="T28" start="4149" end="4165" text="2015-11-11 05:45" type="TIME" val="2015-11-11T05:45" mod="NA" />
+<TIMEX3 id="T30" start="4198" end="4214" text="2015-10-28 03:30" type="TIME" val="2015-10-28T03:30" mod="NA" />
+<TIMEX3 id="T32" start="4588" end="4593" text="10-30" type="DATE" val="2041-10-30" mod="NA" />
+<TIMEX3 id="T33" start="4633" end="4638" text="11-02" type="DATE" val="2041-11-02" mod="NA" />
+<TIMEX3 id="T34" start="4908" end="4914" text="op day" type="DATE" val="2015-10-28" mod="NA" />
+<TIMEX3 id="T35" start="4993" end="5008" text="post-op day one" type="DATE" val="2041-10-31" mod="NA" />
+<TIMEX3 id="T36" start="5145" end="5153" text="this day" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T37" start="5197" end="5212" text="post-op day two" type="DATE" val="2041-11-01" mod="NA" />
+<TIMEX3 id="T38" start="5542" end="5558" text="post-op day four" type="DATE" val="2041-11-03" mod="NA" />
+<TIMEX3 id="T39" start="5601" end="5613" text="several days" type="DATE" val="TPZ-0000-00-03" mod="APPROX" />
+<TIMEX3 id="T40" start="5684" end="5700" text="post-op day four" type="DATE" val="2041-11-03" mod="NA" />
+<TIMEX3 id="T41" start="5962" end="5974" text="several days" type="DATE" val="TPZ-0000-00-03" mod="APPROX" />
+<TIMEX3 id="T42" start="6042" end="6056" text="post-op day 11" type="DATE" val="2041-11-10" mod="NA" />
+<TIMEX3 id="T43" start="7399" end="7405" text="day )." type="DATE" val="2015-10-28" mod="NA" />
+<TIMEX3 id="T44" start="7634" end="7640" text="day )." type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T45" start="7759" end="7765" text="day )." type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T46" start="7881" end="7886" text="11-15" type="DATE" val="2040-11-15" mod="NA" />
+<TIMEX3 id="T47" start="8200" end="8206" text="day as" type="DATE" val="TPZ+0000-00-00" mod="NA" />

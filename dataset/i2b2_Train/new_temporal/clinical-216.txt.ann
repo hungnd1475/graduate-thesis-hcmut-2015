@@ -1,0 +1,8 @@
+<TIMEX3 id="T0" start="48" end="66" text="5/14/1992 12:00:00" type="TIME" val="1992-05-14T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="132" end="146" text="ADMISSION DATE" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T3" start="150" end="157" text="5/14/92" type="DATE" val="1992-05-14" mod="NA" />
+<TIMEX3 id="T4" start="177" end="184" text="5/19/92" type="DATE" val="1992-05-19" mod="NA" />
+<TIMEX3 id="T5" start="745" end="778" text="8:30 p.m. on the day of admission" type="TIME" val="1992-05-14T20:30" mod="NA" />
+<TIMEX3 id="T6" start="1265" end="1269" text="1988" type="DATE" val="1988" mod="NA" />
+<TIMEX3 id="T7" start="2190" end="2197" text="5/14/92" type="DATE" val="1992-05-14" mod="NA" />
+<TIMEX3 id="T8" start="2957" end="2961" text="5/19" type="DATE" val="1992-05-19" mod="NA" />

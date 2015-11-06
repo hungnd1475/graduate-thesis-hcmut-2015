@@ -1,0 +1,21 @@
+<TIMEX3 id="T0" start="4" end="18" text="Admission Date" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T1" start="22" end="32" text="2016-03-18" type="DATE" val="2016-03-18" mod="NA" />
+<TIMEX3 id="T2" start="52" end="62" text="2016-04-01" type="DATE" val="2016-04-01" mod="NA" />
+<TIMEX3 id="T3" start="81" end="91" text="1929-07-27" type="DATE" val="1929-07-27" mod="NA" />
+<TIMEX3 id="T4" start="313" end="318" text="03-17" type="DATE" val="2029-03-17" mod="NA" />
+<TIMEX3 id="T5" start="340" end="345" text="03-18" type="DATE" val="2029-03-18" mod="NA" />
+<TIMEX3 id="T6" start="518" end="524" text="Sunday" type="DATE" val="2029-03-18" mod="NA" />
+<TIMEX3 id="T7" start="829" end="834" text="03-17" type="DATE" val="2029-03-17" mod="NA" />
+<TIMEX3 id="T8" start="909" end="914" text="03-18" type="DATE" val="2029-03-18" mod="NA" />
+<TIMEX3 id="T9" start="1481" end="1486" text="03-21" type="DATE" val="2029-03-21" mod="NA" />
+<TIMEX3 id="T10" start="1490" end="1491" text="1" type="TIME" val="2029-03-21T01:00" mod="NA" />
+<TIMEX3 id="T11" start="2186" end="2191" text="03-21" type="DATE" val="2029-03-21" mod="NA" />
+<TIMEX3 id="T12" start="2195" end="2196" text="1" type="TIME" val="2029-03-21T01:00" mod="NA" />
+<TIMEX3 id="T13" start="3246" end="3250" text="HD#2" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T14" start="3557" end="3561" text="HD#4" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T15" start="3753" end="3757" text="HD#5" type="DATE" val="2029-03-21" mod="NA" />
+<TIMEX3 id="T16" start="3850" end="3855" text="POD#1" type="DATE" val="2029-03-22" mod="NA" />
+<TIMEX3 id="T17" start="4028" end="4033" text="01-28" type="DATE" val="2029-01-28" mod="NA" />
+<TIMEX3 id="T18" start="4189" end="4195" text="POD #6" type="DATE" val="2029-03-27" mod="NA" />
+<TIMEX3 id="T19" start="4247" end="4252" text="POD#7" type="DATE" val="2029-03-28" mod="NA" />
+<TIMEX3 id="T20" start="4296" end="4317" text="the time of discharge" type="DATE" val="" mod="NA" />

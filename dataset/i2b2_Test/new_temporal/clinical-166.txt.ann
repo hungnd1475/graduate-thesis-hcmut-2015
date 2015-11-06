@@ -1,0 +1,9 @@
+<TIMEX3 id="T0" start="26" end="43" text="7/4/1999 12:00:00" type="TIME" val="1999-07-04T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="80" end="94" text="Admission Date" type="DATE" val="1999-07-04" mod="NA" />
+<TIMEX3 id="T3" start="98" end="108" text="07/04/1999" type="DATE" val="1999-07-04" mod="NA" />
+<TIMEX3 id="T4" start="153" end="163" text="07/09/1999" type="DATE" val="1999-07-09" mod="NA" />
+<TIMEX3 id="T5" start="371" end="382" text="May of 1998" type="DATE" val="1998-05" mod="NA" />
+<TIMEX3 id="T6" start="506" end="517" text="May of 1999" type="DATE" val="1999-05" mod="NA" />
+<TIMEX3 id="T7" start="619" end="690" text="10:30 on the day of admission with increase during the day of admission" type="TIME" val="1999-07-04T10:30" mod="NA" />
+<TIMEX3 id="T8" start="2114" end="2125" text="hsp day # 3" type="DATE" val="1999-07-06" mod="NA" />
+<TIMEX3 id="T9" start="2244" end="2250" text="7/9/99" type="DATE" val="1999-07-09" mod="NA" />

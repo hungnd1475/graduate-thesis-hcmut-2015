@@ -1,0 +1,63 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2017-09-03" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2017-09-03" type="DATE" val="2017-09-03" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2017-10-10" type="DATE" val="2017-10-10" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1946-12-27" type="DATE" val="1946-12-27" mod="NA" />
+<TIMEX3 id="T4" start="591" end="601" text="2017-09-03" type="DATE" val="2017-09-03" mod="NA" />
+<TIMEX3 id="T5" start="768" end="775" text="This AM" type="DATE" val="2017-09-03" mod="START" />
+<TIMEX3 id="T6" start="1839" end="1849" text="2017-07-24" type="DATE" val="2017-07-24" mod="NA" />
+<TIMEX3 id="T7" start="1891" end="1901" text="2017-06-22" type="DATE" val="2017-06-22" mod="NA" />
+<TIMEX3 id="T8" start="1978" end="1990" text="33 years ago" type="DATE" val="TPZ-0033" mod="NA" />
+<TIMEX3 id="T9" start="2081" end="2085" text="1999" type="DATE" val="1999" mod="NA" />
+<TIMEX3 id="T10" start="2666" end="2671" text="02-23" type="DATE" val="2046-02-23" mod="NA" />
+<TIMEX3 id="T11" start="2909" end="2919" text="2017-09-03" type="DATE" val="2017-09-03" mod="NA" />
+<TIMEX3 id="T12" start="2962" end="2972" text="2017-09-03" type="DATE" val="2017-09-03" mod="NA" />
+<TIMEX3 id="T13" start="2992" end="3002" text="2017-09-03" type="DATE" val="2017-09-03" mod="NA" />
+<TIMEX3 id="T14" start="3043" end="3044" text="2" type="TIME" val="2017-09-03T02:00" mod="NA" />
+<TIMEX3 id="T15" start="3047" end="3057" text="2017-09-03" type="DATE" val="2017-09-03" mod="NA" />
+<TIMEX3 id="T16" start="3125" end="3135" text="2017-09-03" type="DATE" val="2017-09-03" mod="NA" />
+<TIMEX3 id="T17" start="3232" end="3242" text="2017-09-03" type="DATE" val="2017-09-03" mod="NA" />
+<TIMEX3 id="T18" start="3279" end="3289" text="2017-09-03" type="DATE" val="2017-09-03" mod="NA" />
+<TIMEX3 id="T19" start="3302" end="3304" text="16" type="TIME" val="2017-09-03T16:00" mod="NA" />
+<TIMEX3 id="T20" start="3308" end="3318" text="2017-09-03" type="DATE" val="2017-09-03" mod="NA" />
+<TIMEX3 id="T21" start="3437" end="3439" text="12" type="TIME" val="2017-09-03T12:00" mod="NA" />
+<TIMEX3 id="T22" start="3441" end="3451" text="2017-09-03" type="DATE" val="2017-09-03" mod="NA" />
+<TIMEX3 id="T23" start="3489" end="3499" text="2017-09-03" type="DATE" val="2017-09-03" mod="NA" />
+<TIMEX3 id="T24" start="3534" end="3544" text="2017-10-10" type="DATE" val="2017-10-10" mod="NA" />
+<TIMEX3 id="T25" start="3617" end="3627" text="2017-09-03" type="DATE" val="2017-09-03" mod="NA" />
+<TIMEX3 id="T26" start="3790" end="3800" text="2017-09-04" type="DATE" val="2017-09-04" mod="NA" />
+<TIMEX3 id="T27" start="4232" end="4242" text="2017-09-04" type="DATE" val="2017-09-04" mod="NA" />
+<TIMEX3 id="T28" start="5405" end="5415" text="2017-08-14" type="DATE" val="2017-08-14" mod="NA" />
+<TIMEX3 id="T29" start="5477" end="5487" text="2017-09-14" type="DATE" val="2017-09-14" mod="NA" />
+<TIMEX3 id="T30" start="5841" end="5851" text="2017-09-04" type="DATE" val="2017-09-04" mod="NA" />
+<TIMEX3 id="T31" start="6010" end="6020" text="2017-09-16" type="DATE" val="2017-09-16" mod="NA" />
+<TIMEX3 id="T32" start="6024" end="6025" text="1" type="TIME" val="2017-09-16T01:00" mod="NA" />
+<TIMEX3 id="T33" start="8075" end="8085" text="2017-09-03" type="DATE" val="2017-09-03" mod="NA" />
+<TIMEX3 id="T34" start="8192" end="8202" text="2017-09-03" type="DATE" val="2017-09-03" mod="NA" />
+<TIMEX3 id="T35" start="8233" end="8243" text="2017-09-05" type="DATE" val="2017-09-05" mod="NA" />
+<TIMEX3 id="T36" start="8259" end="8269" text="2017-09-10" type="DATE" val="2017-09-10" mod="NA" />
+<TIMEX3 id="T37" start="8331" end="8341" text="2017-09-10" type="DATE" val="2017-09-10" mod="NA" />
+<TIMEX3 id="T38" start="8805" end="8817" text="several days" type="DATE" val="TPZ-0000-00-03" mod="APPROX" />
+<TIMEX3 id="T39" start="9828" end="9838" text="2017-09-04" type="DATE" val="2017-09-04" mod="NA" />
+<TIMEX3 id="T40" start="9909" end="9919" text="2017-08-14" type="DATE" val="2017-08-14" mod="NA" />
+<TIMEX3 id="T41" start="10032" end="10042" text="2017-09-14" type="DATE" val="2017-09-14" mod="NA" />
+<TIMEX3 id="T42" start="11109" end="11114" text="02-24" type="DATE" val="2046-02-24" mod="NA" />
+<TIMEX3 id="T43" start="11118" end="11119" text="2" type="TIME" val="2046-02-24T02:00" mod="NA" />
+<TIMEX3 id="T44" start="11283" end="11289" text="summer" type="DATE" val="0" mod="NA" />
+<TIMEX3 id="T45" start="11846" end="11856" text="2017-09-18" type="DATE" val="2017-09-18" mod="NA" />
+<TIMEX3 id="T46" start="12210" end="12220" text="a few days" type="DATE" val="TPZ-0000-00-03" mod="APPROX" />
+<TIMEX3 id="T47" start="12393" end="12403" text="2017-09-06" type="DATE" val="2017-09-06" mod="NA" />
+<TIMEX3 id="T48" start="14203" end="14213" text="2017-09-05" type="DATE" val="2017-09-05" mod="NA" />
+<TIMEX3 id="T49" start="16115" end="16121" text="day ) " type="DATE" val="2017-09-03" mod="NA" />
+<TIMEX3 id="T50" start="16124" end="16253" text="5. Fluticasone - Salmeterol 100-50 mcg / Dose Disk with Device Sig : One ( 1 ) Disk with Device Inhalation BID ( 2 times a day ) " type="TIME" val="TPZ+0000-00-00T05:00" mod="NA" />
+<TIMEX3 id="T51" start="17048" end="17054" text="day ) " type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T52" start="17057" end="17059" text="12" type="TIME" val="2017-09-03T12:00" mod="NA" />
+<TIMEX3 id="T53" start="17841" end="17847" text="day ) " type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T54" start="18094" end="18100" text="Monday" type="DATE" val="2017-08-28" mod="NA" />
+<TIMEX3 id="T55" start="18103" end="18112" text="Wednesday" type="DATE" val="2017-08-23" mod="NA" />
+<TIMEX3 id="T56" start="18115" end="18121" text="Friday" type="DATE" val="2017-08-18" mod="NA" />
+<TIMEX3 id="T57" start="18710" end="18716" text="day ) " type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T58" start="18854" end="18859" text="02-24" type="DATE" val="2046-02-24" mod="NA" />
+<TIMEX3 id="T59" start="19820" end="19836" text="10-10 at 1:00 PM" type="TIME" val="2046-10-10T13:00" mod="NA" />
+<TIMEX3 id="T60" start="19909" end="19925" text="10-17 at 4:45 PM" type="TIME" val="2046-10-17T16:45" mod="NA" />
+<TIMEX3 id="T61" start="19997" end="20013" text="10-09 at 2:15 PM" type="TIME" val="2046-10-09T14:15" mod="NA" />
+<TIMEX3 id="T62" start="20050" end="20065" text="10-16 @ 1:50 PM" type="TIME" val="2046-10-16T13:50" mod="NA" />

@@ -1,0 +1,15 @@
+<TIMEX3 id="T0" start="36" end="55" text="08/16/1998 12:00:00" type="TIME" val="1998-08-16T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="108" end="122" text="Admission Date" type="DATE" val="1998-08-16" mod="NA" />
+<TIMEX3 id="T3" start="126" end="136" text="08/16/1998" type="DATE" val="1998-08-16" mod="NA" />
+<TIMEX3 id="T4" start="181" end="191" text="08/18/1998" type="DATE" val="1998-08-18" mod="NA" />
+<TIMEX3 id="T5" start="986" end="1001" text="August 1 , 1998" type="DATE" val="1998-08-01" mod="NA" />
+<TIMEX3 id="T6" start="1109" end="1130" text="the time of admission" type="DATE" val="1998-08-16" mod="NA" />
+<TIMEX3 id="T7" start="1610" end="1622" text="July of 1998" type="DATE" val="1998-07" mod="NA" />
+<TIMEX3 id="T8" start="1879" end="1891" text="July of 1998" type="DATE" val="1998-07" mod="NA" />
+<TIMEX3 id="T9" start="4318" end="4327" text="this time" type="DATE" val="1998-08-16" mod="NA" />
+<TIMEX3 id="T10" start="6070" end="6094" text="the morning of the first" type="DATE" val="TPZ+0000-00-00" mod="START" />
+<TIMEX3 id="T11" start="6095" end="6111" text="day of admission" type="DATE" val="1998-08-16" mod="NA" />
+<TIMEX3 id="T12" start="6114" end="6130" text="August 16 , 1998" type="DATE" val="1998-08-16" mod="NA" />
+<TIMEX3 id="T13" start="6479" end="6500" text="the time of discharge" type="DATE" val="1998-08-16" mod="NA" />
+<TIMEX3 id="T14" start="7220" end="7241" text="the time of discharge" type="DATE" val="1998-08-16" mod="NA" />
+<TIMEX3 id="T15" start="7245" end="7246" text="5" type="TIME" val="1998-08-16T05:00" mod="NA" />

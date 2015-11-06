@@ -1,0 +1,16 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2009-11-10" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2009-11-10" type="DATE" val="2009-11-10" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2009-11-12" type="DATE" val="2009-11-12" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1948-10-16" type="DATE" val="1948-10-16" mod="NA" />
+<TIMEX3 id="T4" start="285" end="295" text="2009-09-11" type="DATE" val="2009-09-11" mod="NA" />
+<TIMEX3 id="T5" start="444" end="449" text="10-14" type="DATE" val="2009-10-14" mod="NA" />
+<TIMEX3 id="T6" start="602" end="611" text="this time" type="DATE" val="2009-11-10" mod="NA" />
+<TIMEX3 id="T7" start="742" end="747" text="11-04" type="DATE" val="2009-11-04" mod="NA" />
+<TIMEX3 id="T8" start="792" end="808" text="A few days later" type="DATE" val="TPZ+0000-00-03" mod="APPROX" />
+<TIMEX3 id="T9" start="814" end="819" text="11-07" type="DATE" val="2009-11-07" mod="NA" />
+<TIMEX3 id="T10" start="984" end="989" text="11-08" type="DATE" val="2009-11-08" mod="NA" />
+<TIMEX3 id="T11" start="1803" end="1813" text="2009-09-11" type="DATE" val="2009-09-11" mod="NA" />
+<TIMEX3 id="T12" start="2314" end="2331" text="over 20 years ago" type="DATE" val="TPZ-0020" mod="MORE" />
+<TIMEX3 id="T13" start="4452" end="4457" text="11-10" type="DATE" val="2009-11-10" mod="NA" />
+<TIMEX3 id="T14" start="5322" end="5338" text="the next morning" type="DATE" val="2009-11-11" mod="START" />
+<TIMEX3 id="T15" start="6328" end="6352" text="the morning of admission" type="DATE" val="2009-11-10" mod="START" />

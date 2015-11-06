@@ -1,0 +1,22 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2018-04-23" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2018-04-23" type="DATE" val="2018-04-23" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2018-05-01" type="DATE" val="2018-05-01" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1818-04-23" type="DATE" val="1818-04-23" mod="NA" />
+<TIMEX3 id="T4" start="513" end="523" text="2018-04-22" type="DATE" val="2018-04-22" mod="NA" />
+<TIMEX3 id="T5" start="666" end="678" text="last October" type="DATE" val="2017-10" mod="NA" />
+<TIMEX3 id="T6" start="1018" end="1021" text="Oct" type="DATE" val="2017-10" mod="NA" />
+<TIMEX3 id="T7" start="1035" end="1040" text="04-05" type="DATE" val="2017-04-05" mod="NA" />
+<TIMEX3 id="T8" start="1093" end="1104" text="2 weeks ago" type="DATE" val="TPZ-0000-W02" mod="NA" />
+<TIMEX3 id="T9" start="1105" end="1110" text="04-05" type="DATE" val="2017-04-05" mod="NA" />
+<TIMEX3 id="T10" start="1188" end="1201" text="2-3 weeks ago" type="DATE" val="TPZ-0000-W03" mod="APPROX" />
+<TIMEX3 id="T11" start="1399" end="1409" text="2 days PTA" type="DATE" val="2018-04-21" mod="NA" />
+<TIMEX3 id="T12" start="1448" end="1473" text="2 days prior to admission" type="DATE" val="2018-04-21" mod="NA" />
+<TIMEX3 id="T13" start="1540" end="1549" text="1 day PTA" type="DATE" val="2018-04-22" mod="NA" />
+<TIMEX3 id="T14" start="2152" end="2166" text="several months" type="DATE" val="TPZ-0000-03" mod="APPROX" />
+<TIMEX3 id="T15" start="2315" end="2327" text="10 years ago" type="DATE" val="TPZ-0010" mod="NA" />
+<TIMEX3 id="T16" start="2420" end="2430" text="2017-12-02" type="DATE" val="2017-12-02" mod="NA" />
+<TIMEX3 id="T17" start="2469" end="2479" text="2018-04-04" type="DATE" val="2018-04-04" mod="NA" />
+<TIMEX3 id="T18" start="3249" end="3254" text="04-15" type="DATE" val="2018-04-15" mod="NA" />
+<TIMEX3 id="T19" start="3264" end="3269" text="07-06" type="DATE" val="2018-07-06" mod="NA" />
+<TIMEX3 id="T20" start="4875" end="4885" text="2018-04-24" type="DATE" val="2018-04-24" mod="NA" />
+<TIMEX3 id="T21" start="5559" end="5569" text="2018-05-01" type="DATE" val="2018-05-01" mod="NA" />

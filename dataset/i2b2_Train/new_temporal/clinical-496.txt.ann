@@ -1,0 +1,10 @@
+<TIMEX3 id="T0" start="26" end="44" text="6/10/1999 12:00:00" type="TIME" val="1999-06-10T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="86" end="100" text="Admission Date" type="DATE" val="1999-06-10" mod="NA" />
+<TIMEX3 id="T3" start="104" end="114" text="06/10/1999" type="DATE" val="1999-06-10" mod="NA" />
+<TIMEX3 id="T4" start="159" end="169" text="06/26/1999" type="DATE" val="1999-06-26" mod="NA" />
+<TIMEX3 id="T5" start="480" end="508" text="four days prior to admission" type="DATE" val="1999-06-06" mod="NA" />
+<TIMEX3 id="T6" start="1540" end="1554" text="few days prior" type="DATE" val="TPZ-0000-00-03" mod="APPROX" />
+<TIMEX3 id="T7" start="1633" end="1647" text="June 25 , 1999" type="DATE" val="1999-06-25" mod="NA" />
+<TIMEX3 id="T8" start="1714" end="1722" text="That day" type="DATE" val="1970" mod="NA" />
+<TIMEX3 id="T9" start="1824" end="1841" text="the mid seventies" type="DATE" val="1970" mod="MID" />
+<TIMEX3 id="T10" start="2910" end="2932" text="2:30 on June 26 , 1999" type="TIME" val="1999-06-26T02:30" mod="NA" />

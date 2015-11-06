@@ -1,0 +1,12 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2013-04-25" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2013-04-25" type="DATE" val="2013-04-25" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2013-05-11" type="DATE" val="2013-05-11" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1963-05-10" type="DATE" val="1963-05-10" mod="NA" />
+<TIMEX3 id="T4" start="2329" end="2345" text="early last month" type="DATE" val="1963-04" mod="START" />
+<TIMEX3 id="T5" start="3214" end="3235" text="the time of admission" type="DATE" val="2013-04-25" mod="NA" />
+<TIMEX3 id="T6" start="3632" end="3653" text="the time of admission" type="DATE" val="2013-04-25" mod="NA" />
+<TIMEX3 id="T7" start="3845" end="3855" text="2013-04-26" type="DATE" val="2013-04-26" mod="NA" />
+<TIMEX3 id="T8" start="5607" end="5632" text="the time of his admission" type="DATE" val="2013-04-25" mod="NA" />
+<TIMEX3 id="T9" start="5662" end="5672" text="2013-05-03" type="DATE" val="2013-05-03" mod="NA" />
+<TIMEX3 id="T10" start="5702" end="5712" text="2013-05-10" type="DATE" val="2013-05-10" mod="NA" />
+<TIMEX3 id="T11" start="6241" end="6251" text="2013-05-11" type="DATE" val="2013-05-11" mod="NA" />

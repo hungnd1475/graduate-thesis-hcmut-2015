@@ -1,0 +1,35 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2013-09-22" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2013-09-22" type="DATE" val="2013-09-22" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2013-09-26" type="DATE" val="2013-09-26" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1934-05-15" type="DATE" val="1934-05-15" mod="NA" />
+<TIMEX3 id="T4" start="1190" end="1206" text="2013-09-22 04:20" type="TIME" val="2013-09-22T04:20" mod="NA" />
+<TIMEX3 id="T6" start="1324" end="1340" text="2013-09-24 03:15" type="TIME" val="2013-09-24T03:15" mod="NA" />
+<TIMEX3 id="T8" start="1457" end="1473" text="2013-09-25 02:41" type="TIME" val="2013-09-25T02:41" mod="NA" />
+<TIMEX3 id="T10" start="1590" end="1606" text="2013-09-23 03:07" type="TIME" val="2013-09-23T03:07" mod="NA" />
+<TIMEX3 id="T12" start="1658" end="1674" text="2013-09-22 04:20" type="TIME" val="2013-09-22T04:20" mod="NA" />
+<TIMEX3 id="T14" start="1771" end="1787" text="2013-09-24 09:36" type="TIME" val="2013-09-24T09:36" mod="NA" />
+<TIMEX3 id="T16" start="1889" end="1905" text="2013-09-25 02:41" type="TIME" val="2013-09-25T02:41" mod="NA" />
+<TIMEX3 id="T18" start="2006" end="2022" text="2013-09-22 04:20" type="TIME" val="2013-09-22T04:20" mod="NA" />
+<TIMEX3 id="T20" start="2116" end="2132" text="2013-09-22 12:38" type="TIME" val="2013-09-22T12:38" mod="NA" />
+<TIMEX3 id="T22" start="2162" end="2178" text="2013-09-22 09:45" type="TIME" val="2013-09-22T09:45" mod="NA" />
+<TIMEX3 id="T24" start="2207" end="2223" text="2013-09-25 02:41" type="TIME" val="2013-09-25T02:41" mod="NA" />
+<TIMEX3 id="T26" start="2252" end="2268" text="2013-09-22 04:20" type="TIME" val="2013-09-22T04:20" mod="NA" />
+<TIMEX3 id="T28" start="2296" end="2312" text="2013-09-22 12:38" type="TIME" val="2013-09-22T12:38" mod="NA" />
+<TIMEX3 id="T30" start="2367" end="2383" text="2013-09-22 09:45" type="TIME" val="2013-09-22T09:45" mod="NA" />
+<TIMEX3 id="T32" start="2420" end="2436" text="2013-09-23 04:26" type="TIME" val="2013-09-23T04:26" mod="NA" />
+<TIMEX3 id="T34" start="2489" end="2505" text="2013-09-25 02:41" type="TIME" val="2013-09-25T02:41" mod="NA" />
+<TIMEX3 id="T36" start="2543" end="2559" text="2013-09-22 04:20" type="TIME" val="2013-09-22T04:20" mod="NA" />
+<TIMEX3 id="T38" start="2606" end="2622" text="2013-09-25 02:41" type="TIME" val="2013-09-25T02:41" mod="NA" />
+<TIMEX3 id="T40" start="2671" end="2687" text="2013-09-23 07:36" type="TIME" val="2013-09-23T07:36" mod="NA" />
+<TIMEX3 id="T42" start="2713" end="2729" text="2013-09-24 10:26" type="TIME" val="2013-09-24T10:26" mod="NA" />
+<TIMEX3 id="T44" start="2812" end="2828" text="2013-09-24 11:05" type="TIME" val="2013-09-24T11:05" mod="NA" />
+<TIMEX3 id="T46" start="2913" end="2929" text="2013-09-24 11:31" type="TIME" val="2013-09-24T11:31" mod="NA" />
+<TIMEX3 id="T48" start="3014" end="3030" text="2013-09-24 07:42" type="TIME" val="2013-09-24T07:42" mod="NA" />
+<TIMEX3 id="T50" start="3116" end="3132" text="2013-09-24 09:19" type="TIME" val="2013-09-24T09:19" mod="NA" />
+<TIMEX3 id="T52" start="3216" end="3232" text="2013-09-25 01:50" type="TIME" val="2013-09-25T01:50" mod="NA" />
+<TIMEX3 id="T54" start="3317" end="3333" text="2013-09-25 02:54" type="TIME" val="2013-09-25T02:54" mod="NA" />
+<TIMEX3 id="T56" start="3538" end="3543" text="09-23" type="DATE" val="2033-09-23" mod="NA" />
+<TIMEX3 id="T57" start="4088" end="4093" text="09-25" type="DATE" val="2033-09-25" mod="NA" />
+<TIMEX3 id="T58" start="5131" end="5135" text="HD 3" type="DATE" val="2013-09-24" mod="NA" />
+<TIMEX3 id="T59" start="5540" end="5544" text="HD 4" type="DATE" val="2013-09-25" mod="NA" />
+<TIMEX3 id="T60" start="5667" end="5670" text="6pm" type="TIME" val="2013-09-25T18:00" mod="NA" />

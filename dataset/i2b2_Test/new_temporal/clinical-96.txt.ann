@@ -1,0 +1,34 @@
+<TIMEX3 id="T0" start="27" end="46" text="11/17/2003 12:00:00" type="TIME" val="2003-11-17T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="77" end="91" text="Admission Date" type="DATE" val="2003-11-17" mod="NA" />
+<TIMEX3 id="T3" start="95" end="105" text="11/17/2003" type="DATE" val="2003-11-17" mod="NA" />
+<TIMEX3 id="T4" start="150" end="160" text="12/22/2003" type="DATE" val="2003-12-22" mod="NA" />
+<TIMEX3 id="T5" start="218" end="226" text="12/21/03" type="DATE" val="2003-12-21" mod="NA" />
+<TIMEX3 id="T6" start="511" end="516" text="06/22" type="DATE" val="2003-06-22" mod="NA" />
+<TIMEX3 id="T7" start="618" end="623" text="07/24" type="DATE" val="2003-07-24" mod="NA" />
+<TIMEX3 id="T8" start="646" end="654" text="08/27/03" type="DATE" val="2003-08-27" mod="NA" />
+<TIMEX3 id="T9" start="778" end="786" text="10/18/03" type="DATE" val="2003-10-18" mod="NA" />
+<TIMEX3 id="T10" start="881" end="889" text="11/16/03" type="DATE" val="2003-11-16" mod="NA" />
+<TIMEX3 id="T11" start="1572" end="1576" text="1980" type="DATE" val="1980" mod="NA" />
+<TIMEX3 id="T12" start="1642" end="1647" text="06/22" type="DATE" val="2003-06-22" mod="NA" />
+<TIMEX3 id="T13" start="2379" end="2387" text="11/17/03" type="DATE" val="2003-11-17" mod="NA" />
+<TIMEX3 id="T14" start="2450" end="2458" text="11/20/03" type="DATE" val="2003-11-20" mod="NA" />
+<TIMEX3 id="T15" start="2810" end="2818" text="11/21/03" type="DATE" val="2003-11-21" mod="NA" />
+<TIMEX3 id="T16" start="2996" end="3004" text="12/14/03" type="DATE" val="2003-12-14" mod="NA" />
+<TIMEX3 id="T17" start="3391" end="3399" text="12/13/03" type="DATE" val="2003-12-13" mod="NA" />
+<TIMEX3 id="T18" start="3683" end="3703" text="the time of transfer" type="DATE" val="2003-11-17" mod="NA" />
+<TIMEX3 id="T19" start="3825" end="3833" text="11/22/03" type="DATE" val="2003-11-22" mod="NA" />
+<TIMEX3 id="T20" start="4075" end="4083" text="12/15/03" type="DATE" val="2003-12-15" mod="NA" />
+<TIMEX3 id="T21" start="4197" end="4216" text="postoperative day 4" type="DATE" val="2003-11-21" mod="NA" />
+<TIMEX3 id="T23" start="4476" end="4488" text="postop day 5" type="DATE" val="2003-11-22" mod="NA" />
+<TIMEX3 id="T24" start="4624" end="4636" text="postop day 9" type="DATE" val="2003-11-26" mod="NA" />
+<TIMEX3 id="T26" start="5057" end="5070" text="postop day 14" type="DATE" val="2003-12-01" mod="NA" />
+<TIMEX3 id="T27" start="5279" end="5299" text="the time of transfer" type="DATE" val="2003-11-17" mod="NA" />
+<TIMEX3 id="T28" start="6034" end="6042" text="12/01/03" type="DATE" val="2003-12-01" mod="NA" />
+<TIMEX3 id="T29" start="6085" end="6093" text="12/11/03" type="DATE" val="2003-12-11" mod="NA" />
+<TIMEX3 id="T30" start="6256" end="6267" text="the mid 20s" type="DATE" val="1920" mod="MID" />
+<TIMEX3 id="T31" start="6336" end="6356" text="the time of transfer" type="DATE" val="2003-11-17" mod="NA" />
+<TIMEX3 id="T32" start="6569" end="6581" text="postop day 6" type="DATE" val="2003-11-23" mod="NA" />
+<TIMEX3 id="T34" start="6645" end="6657" text="postop day 8" type="DATE" val="2003-11-25" mod="NA" />
+<TIMEX3 id="T36" start="6734" end="6746" text="postop day 9" type="DATE" val="2003-11-26" mod="NA" />
+<TIMEX3 id="T38" start="6889" end="6897" text="12/09/03" type="DATE" val="2003-12-09" mod="NA" />
+<TIMEX3 id="T39" start="7234" end="7242" text="12/21/03" type="DATE" val="2003-12-21" mod="NA" />

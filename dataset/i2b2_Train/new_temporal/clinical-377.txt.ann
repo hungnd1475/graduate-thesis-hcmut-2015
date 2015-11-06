@@ -1,0 +1,30 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2013-08-26" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2013-08-26" type="DATE" val="2013-08-26" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2013-09-17" type="DATE" val="2013-09-17" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1945-02-07" type="DATE" val="1945-02-07" mod="NA" />
+<TIMEX3 id="T4" start="118" end="136" text="The Discharge Date" type="DATE" val="2013-08-26" mod="NA" />
+<TIMEX3 id="T5" start="140" end="150" text="2013-09-17" type="DATE" val="2013-09-17" mod="NA" />
+<TIMEX3 id="T6" start="433" end="443" text="2013-08-28" type="DATE" val="2013-08-28" mod="NA" />
+<TIMEX3 id="T7" start="487" end="496" text="that time" type="DATE" val="2013-08-26" mod="NA" />
+<TIMEX3 id="T8" start="648" end="657" text="that time" type="DATE" val="2013-08-26" mod="NA" />
+<TIMEX3 id="T9" start="681" end="690" text="that time" type="DATE" val="2013-08-26" mod="NA" />
+<TIMEX3 id="T10" start="1185" end="1189" text="2006" type="DATE" val="2006" mod="NA" />
+<TIMEX3 id="T11" start="1194" end="1198" text="1997" type="DATE" val="1997" mod="NA" />
+<TIMEX3 id="T12" start="2703" end="2724" text="the time of discharge" type="DATE" val="2013-08-26" mod="NA" />
+<TIMEX3 id="T13" start="2833" end="2846" text="the same time" type="DATE" val="TPZ+0000-00-00" mod="APPROX" />
+<TIMEX3 id="T14" start="3068" end="3077" text="that time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T15" start="3317" end="3326" text="that time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T16" start="3693" end="3703" text="2013-09-04" type="DATE" val="2013-09-04" mod="NA" />
+<TIMEX3 id="T17" start="4742" end="4751" text="that time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T18" start="5213" end="5243" text="postoperative day number three" type="DATE" val="2013-08-29" mod="NA" />
+<TIMEX3 id="T19" start="5855" end="5884" text="postoperative day number five" type="DATE" val="2013-08-31" mod="NA" />
+<TIMEX3 id="T20" start="5907" end="5916" text="that time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T21" start="7162" end="7171" text="this time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T22" start="7435" end="7445" text="2013-09-13" type="DATE" val="2013-09-13" mod="NA" />
+<TIMEX3 id="T23" start="7905" end="7914" text="that time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T24" start="8228" end="8238" text="2013-08-28" type="DATE" val="2013-08-28" mod="NA" />
+<TIMEX3 id="T25" start="8449" end="8458" text="that time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T26" start="8466" end="8480" text="discharge date" type="DATE" val="2013-08-26" mod="NA" />
+<TIMEX3 id="T27" start="9028" end="9033" text="09-10" type="DATE" val="2013-09-10" mod="NA" />
+<TIMEX3 id="T28" start="9037" end="9039" text="10" type="TIME" val="2013-09-10T10:00" mod="NA" />
+<TIMEX3 id="T29" start="10552" end="10566" text="DISCHARGE DATE" type="DATE" val="2013-08-26" mod="NA" />

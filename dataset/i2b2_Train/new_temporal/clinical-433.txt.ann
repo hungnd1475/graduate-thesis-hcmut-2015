@@ -1,0 +1,10 @@
+<TIMEX3 id="T0" start="25" end="31" text="175762" type="DATE" val="1757-06-02" mod="NA" />
+<TIMEX3 id="T1" start="33" end="52" text="02/04/1990 12:00:00" type="TIME" val="1990-02-04T12:00:00" mod="NA" />
+<TIMEX3 id="T3" start="89" end="103" text="Admission Date" type="DATE" val="1990-02-04" mod="NA" />
+<TIMEX3 id="T4" start="107" end="117" text="02/04/1990" type="DATE" val="1990-02-04" mod="NA" />
+<TIMEX3 id="T5" start="162" end="172" text="02/13/1990" type="DATE" val="1990-02-13" mod="NA" />
+<TIMEX3 id="T6" start="307" end="316" text="many year" type="DATE" val="TPZ-0003" mod="APPROX" />
+<TIMEX3 id="T7" start="1059" end="1062" text="May" type="DATE" val="1990-05" mod="NA" />
+<TIMEX3 id="T8" start="1927" end="1947" text="the day of admission" type="DATE" val="1990-02-04" mod="NA" />
+<TIMEX3 id="T9" start="2583" end="2613" text="postoperative day number eight" type="DATE" val="1990-02-12" mod="NA" />
+<TIMEX3 id="T10" start="3715" end="3745" text="postoperative day number eight" type="DATE" val="1990-02-12" mod="NA" />

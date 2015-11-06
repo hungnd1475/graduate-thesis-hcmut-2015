@@ -1,0 +1,21 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2008-12-24" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2008-12-24" type="DATE" val="2008-12-24" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2009-02-06" type="DATE" val="2009-02-06" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="2008-12-24" type="DATE" val="2008-12-24" mod="NA" />
+<TIMEX3 id="T4" start="193" end="198" text="05-03" type="DATE" val="2008-05-03" mod="NA" />
+<TIMEX3 id="T5" start="475" end="479" text="2001" type="DATE" val="2001" mod="NA" />
+<TIMEX3 id="T6" start="2061" end="2075" text="day of life #1" type="DATE" val="2008-12-24" mod="NA" />
+<TIMEX3 id="T7" start="2132" end="2146" text="day of life #6" type="DATE" val="2008-12-29" mod="NA" />
+<TIMEX3 id="T8" start="2179" end="2194" text="day of life #19" type="DATE" val="2009-01-11" mod="NA" />
+<TIMEX3 id="T9" start="2550" end="2564" text="day of life #2" type="DATE" val="2008-12-25" mod="NA" />
+<TIMEX3 id="T10" start="3087" end="3092" text="05-25" type="DATE" val="2008-05-25" mod="NA" />
+<TIMEX3 id="T11" start="3397" end="3407" text="2009-01-08" type="DATE" val="2009-01-08" mod="NA" />
+<TIMEX3 id="T12" start="3411" end="3412" text="8" type="TIME" val="2009-01-08T08:00" mod="NA" />
+<TIMEX3 id="T13" start="3544" end="3554" text="2009-01-21" type="DATE" val="2009-01-21" mod="NA" />
+<TIMEX3 id="T14" start="3652" end="3662" text="2009-01-14" type="DATE" val="2009-01-14" mod="NA" />
+<TIMEX3 id="T15" start="4354" end="4360" text="day to" type="DATE" val="2008-12-24" mod="NA" />
+<TIMEX3 id="T16" start="4454" end="4464" text="2009-01-07" type="DATE" val="2009-01-07" mod="NA" />
+<TIMEX3 id="T17" start="4548" end="4558" text="2009-01-22" type="DATE" val="2009-01-22" mod="NA" />
+<TIMEX3 id="T18" start="4562" end="4563" text="6" type="TIME" val="2009-01-22T06:00" mod="NA" />
+<TIMEX3 id="T19" start="4668" end="4675" text="October" type="DATE" val="2009-10" mod="NA" />
+<TIMEX3 id="T20" start="4684" end="4689" text="April" type="DATE" val="2009-04" mod="NA" />

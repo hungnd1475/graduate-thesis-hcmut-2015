@@ -1,0 +1,30 @@
+<TIMEX3 id="T0" start="26" end="43" text="1/5/1994 12:00:00" type="TIME" val="1994-01-05T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="80" end="94" text="Admission Date" type="DATE" val="1994-01-05" mod="NA" />
+<TIMEX3 id="T3" start="98" end="108" text="01/05/1994" type="DATE" val="1994-01-05" mod="NA" />
+<TIMEX3 id="T4" start="153" end="163" text="01/25/1994" type="DATE" val="1994-01-25" mod="NA" />
+<TIMEX3 id="T5" start="267" end="274" text="1-13-94" type="DATE" val="1994-01-13" mod="NA" />
+<TIMEX3 id="T6" start="278" end="308" text="2. PULMONARY EMBOLUS , 1-14-94" type="TIME" val="1994-01-14T02:00" mod="NA" />
+<TIMEX3 id="T7" start="312" end="313" text="3" type="TIME" val="1994-01-14T03:00" mod="NA" />
+<TIMEX3 id="T8" start="396" end="400" text="1975" type="DATE" val="1975" mod="NA" />
+<TIMEX3 id="T9" start="592" end="601" text="June 1994" type="DATE" val="1994-06" mod="NA" />
+<TIMEX3 id="T10" start="625" end="631" text="1-5-94" type="DATE" val="1994-01-05" mod="NA" />
+<TIMEX3 id="T11" start="730" end="742" text="October 1991" type="DATE" val="1991-10" mod="NA" />
+<TIMEX3 id="T12" start="800" end="813" text="November 1990" type="DATE" val="1990-11" mod="NA" />
+<TIMEX3 id="T13" start="864" end="876" text="October 1991" type="DATE" val="1991-10" mod="NA" />
+<TIMEX3 id="T14" start="964" end="981" text="October 23 , 1991" type="DATE" val="1991-10-23" mod="NA" />
+<TIMEX3 id="T15" start="1390" end="1407" text="November 4 , 1991" type="DATE" val="1991-11-04" mod="NA" />
+<TIMEX3 id="T16" start="2772" end="2785" text="December 1993" type="DATE" val="1993-12" mod="NA" />
+<TIMEX3 id="T17" start="3336" end="3346" text="April 1993" type="DATE" val="1993-04" mod="NA" />
+<TIMEX3 id="T18" start="3462" end="3470" text="May 1994" type="DATE" val="1994-05" mod="NA" />
+<TIMEX3 id="T19" start="3591" end="3598" text="mid May" type="DATE" val="1994-05" mod="MID" />
+<TIMEX3 id="T20" start="3649" end="3658" text="that time" type="DATE" val="1994-01-05" mod="NA" />
+<TIMEX3 id="T21" start="3723" end="3728" text="today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T22" start="3822" end="3830" text="November" type="DATE" val="1994-11" mod="NA" />
+<TIMEX3 id="T23" start="4246" end="4250" text="1975" type="DATE" val="1975" mod="NA" />
+<TIMEX3 id="T24" start="6894" end="6915" text="the time of admission" type="DATE" val="1994-01-05" mod="NA" />
+<TIMEX3 id="T25" start="7420" end="7426" text="1-6-94" type="DATE" val="1994-01-06" mod="NA" />
+<TIMEX3 id="T26" start="8110" end="8124" text="8th of January" type="DATE" val="1994-01-08" mod="NA" />
+<TIMEX3 id="T27" start="8521" end="8531" text="January 13" type="DATE" val="1994-01-13" mod="NA" />
+<TIMEX3 id="T28" start="9077" end="9098" text="the time of discharge" type="DATE" val="1994-01-05" mod="NA" />
+<TIMEX3 id="T29" start="9386" end="9401" text="14th of January" type="DATE" val="1994-01-14" mod="NA" />
+<TIMEX3 id="T30" start="9613" end="9625" text="the next day" type="DATE" val="1994-01-15" mod="NA" />

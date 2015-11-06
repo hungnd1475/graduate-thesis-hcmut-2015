@@ -1,0 +1,14 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2015-06-10" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2015-06-10" type="DATE" val="2015-06-10" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2015-06-11" type="DATE" val="2015-06-11" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1970-12-08" type="DATE" val="1970-12-08" mod="NA" />
+<TIMEX3 id="T4" start="251" end="255" text="9/02" type="DATE" val="2014-09-02" mod="NA" />
+<TIMEX3 id="T5" start="341" end="346" text="05-04" type="DATE" val="2014-05-04" mod="NA" />
+<TIMEX3 id="T6" start="756" end="761" text="today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T7" start="937" end="941" text="9/02" type="DATE" val="2014-09-02" mod="NA" />
+<TIMEX3 id="T8" start="1228" end="1232" text="9/02" type="DATE" val="2014-09-02" mod="NA" />
+<TIMEX3 id="T9" start="2277" end="2287" text="2015-06-10" type="DATE" val="2015-06-10" mod="NA" />
+<TIMEX3 id="T10" start="2323" end="2333" text="2015-06-11" type="DATE" val="2015-06-11" mod="NA" />
+<TIMEX3 id="T11" start="2525" end="2546" text="Postoperative day one" type="DATE" val="2015-06-11" mod="NA" />
+<TIMEX3 id="T12" start="2646" end="2667" text="the following morning" type="DATE" val="TPZ+0000-00-01" mod="START" />
+<TIMEX3 id="T13" start="3066" end="3076" text="2015-06-15" type="DATE" val="2015-06-15" mod="NA" />

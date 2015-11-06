@@ -1,0 +1,14 @@
+<TIMEX3 id="T0" start="43" end="62" text="10/14/1996 12:00:00" type="TIME" val="1996-10-14T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="237" end="251" text="ADMISSION DATE" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T3" start="255" end="263" text="10/14/96" type="DATE" val="1996-10-14" mod="NA" />
+<TIMEX3 id="T4" start="283" end="291" text="10/27/96" type="DATE" val="1996-10-27" mod="NA" />
+<TIMEX3 id="T5" start="308" end="327" text="September 30 , 1917" type="DATE" val="1917-09-30" mod="NA" />
+<TIMEX3 id="T6" start="649" end="657" text="10/18/96" type="DATE" val="1996-10-18" mod="NA" />
+<TIMEX3 id="T7" start="708" end="716" text="10/14/96" type="DATE" val="1996-10-14" mod="NA" />
+<TIMEX3 id="T8" start="735" end="743" text="10/14/96" type="DATE" val="1996-10-14" mod="NA" />
+<TIMEX3 id="T9" start="2043" end="2067" text="approximately 11:30 a.m." type="TIME" val="1996-10-14T11:30" mod="APPROX" />
+<TIMEX3 id="T10" start="6587" end="6601" text="the second day" type="DATE" val="TPZ+0000-00-01" mod="APPROX" />
+<TIMEX3 id="T12" start="7332" end="7349" text="October 18 , 1996" type="DATE" val="1996-10-18" mod="NA" />
+<TIMEX3 id="T13" start="9745" end="9754" text="that time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T14" start="10159" end="10176" text="October 19 , 1996" type="DATE" val="1996-10-19" mod="NA" />
+<TIMEX3 id="T15" start="10993" end="11002" text="this time" type="DATE" val="TPZ+0000-00-00" mod="NA" />

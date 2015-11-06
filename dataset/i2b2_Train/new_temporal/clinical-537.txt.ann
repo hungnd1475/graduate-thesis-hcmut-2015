@@ -1,0 +1,29 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2014-01-20" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2014-01-20" type="DATE" val="2014-01-20" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2014-01-21" type="DATE" val="2014-01-21" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1928-01-02" type="DATE" val="1928-01-02" mod="NA" />
+<TIMEX3 id="T4" start="736" end="742" text="day ,"" type="DATE" val="2014-01-20" mod="NA" />
+<TIMEX3 id="T5" start="819" end="824" text="today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T6" start="1527" end="1531" text="1996" type="DATE" val="1996" mod="NA" />
+<TIMEX3 id="T7" start="1646" end="1650" text="1992" type="DATE" val="1992" mod="NA" />
+<TIMEX3 id="T8" start="1678" end="1682" text="2000" type="DATE" val="2000" mod="NA" />
+<TIMEX3 id="T9" start="2238" end="2243" text="10-23" type="DATE" val="2027-10-23" mod="NA" />
+<TIMEX3 id="T10" start="2648" end="2653" text="01-20" type="DATE" val="2027-01-20" mod="NA" />
+<TIMEX3 id="T11" start="2965" end="2981" text="2014-01-20 05:30" type="TIME" val="2014-01-20T05:30" mod="NA" />
+<TIMEX3 id="T13" start="3098" end="3114" text="2014-01-20 05:30" type="TIME" val="2014-01-20T05:30" mod="NA" />
+<TIMEX3 id="T15" start="3189" end="3205" text="2014-01-20 02:08" type="TIME" val="2014-01-20T02:08" mod="NA" />
+<TIMEX3 id="T17" start="3253" end="3269" text="2014-01-20 05:30" type="TIME" val="2014-01-20T05:30" mod="NA" />
+<TIMEX3 id="T19" start="3295" end="3311" text="2014-01-20 05:30" type="TIME" val="2014-01-20T05:30" mod="NA" />
+<TIMEX3 id="T21" start="3410" end="3426" text="2014-01-20 02:08" type="TIME" val="2014-01-20T02:08" mod="NA" />
+<TIMEX3 id="T23" start="3455" end="3471" text="2014-01-20 05:30" type="TIME" val="2014-01-20T05:30" mod="NA" />
+<TIMEX3 id="T25" start="3566" end="3582" text="2014-01-20 02:08" type="TIME" val="2014-01-20T02:08" mod="NA" />
+<TIMEX3 id="T27" start="3620" end="3636" text="2014-01-20 05:30" type="TIME" val="2014-01-20T05:30" mod="NA" />
+<TIMEX3 id="T29" start="3664" end="3680" text="2014-01-20 05:30" type="TIME" val="2014-01-20T05:30" mod="NA" />
+<TIMEX3 id="T31" start="3701" end="3717" text="2014-01-20 05:30" type="TIME" val="2014-01-20T05:30" mod="NA" />
+<TIMEX3 id="T33" start="3786" end="3802" text="2014-01-20 10:46" type="TIME" val="2014-01-20T10:46" mod="NA" />
+<TIMEX3 id="T35" start="3889" end="3905" text="2014-01-20 11:49" type="TIME" val="2014-01-20T11:49" mod="NA" />
+<TIMEX3 id="T37" start="4043" end="4059" text="2014-01-20 10:46" type="TIME" val="2014-01-20T10:46" mod="NA" />
+<TIMEX3 id="T39" start="4108" end="4124" text="2014-01-20 11:49" type="TIME" val="2014-01-20T11:49" mod="NA" />
+<TIMEX3 id="T41" start="4159" end="4175" text="2014-01-20 11:49" type="TIME" val="2014-01-20T11:49" mod="NA" />
+<TIMEX3 id="T43" start="4907" end="4917" text="the day he" type="DATE" val="2014-01-20" mod="NA" />
+<TIMEX3 id="T44" start="5006" end="5026" text="the day of admission" type="DATE" val="2014-01-20" mod="NA" />

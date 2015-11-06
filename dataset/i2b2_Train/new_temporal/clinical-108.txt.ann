@@ -1,0 +1,30 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2020-03-11" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2020-03-11" type="DATE" val="2020-03-11" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2020-03-23" type="DATE" val="2020-03-23" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1946-04-03" type="DATE" val="1946-04-03" mod="NA" />
+<TIMEX3 id="T4" start="745" end="749" text="9/03" type="DATE" val="2045-09-03" mod="NA" />
+<TIMEX3 id="T5" start="807" end="817" text="1 week ago" type="DATE" val="TPZ-0000-W01" mod="NA" />
+<TIMEX3 id="T6" start="857" end="868" text="5 weeks ago" type="DATE" val="TPZ-0000-W05" mod="NA" />
+<TIMEX3 id="T7" start="917" end="926" text="Last week" type="DATE" val="2045-W35" mod="NA" />
+<TIMEX3 id="T8" start="1117" end="1123" text="Friday" type="DATE" val="2045-09-01" mod="NA" />
+<TIMEX3 id="T9" start="1659" end="1669" text="2020-03-11" type="DATE" val="2020-03-11" mod="NA" />
+<TIMEX3 id="T10" start="2083" end="2088" text="09-07" type="DATE" val="2045-09-07" mod="NA" />
+<TIMEX3 id="T11" start="2464" end="2468" text="2003" type="DATE" val="2003" mod="NA" />
+<TIMEX3 id="T12" start="2541" end="2552" text="8 years ago" type="DATE" val="TPZ-0008" mod="NA" />
+<TIMEX3 id="T13" start="3265" end="3270" text="02-17" type="DATE" val="2046-02-17" mod="NA" />
+<TIMEX3 id="T14" start="3778" end="3788" text="2020-03-10" type="DATE" val="2020-03-10" mod="NA" />
+<TIMEX3 id="T15" start="4199" end="4209" text="2020-03-09" type="DATE" val="2020-03-09" mod="NA" />
+<TIMEX3 id="T16" start="5207" end="5212" text="03-12" type="DATE" val="2046-03-12" mod="NA" />
+<TIMEX3 id="T17" start="6055" end="6060" text="02-07" type="DATE" val="2046-02-07" mod="NA" />
+<TIMEX3 id="T18" start="6516" end="6522" text="Friday" type="DATE" val="2046-02-02" mod="NA" />
+<TIMEX3 id="T19" start="7221" end="7227" text="day )." type="DATE" val="2020-03-11" mod="NA" />
+<TIMEX3 id="T20" start="7229" end="7230" text="5" type="TIME" val="2020-03-11T05:00" mod="NA" />
+<TIMEX3 id="T21" start="7509" end="7515" text="day )." type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T22" start="7517" end="7518" text="8" type="TIME" val="2020-03-11T08:00" mod="NA" />
+<TIMEX3 id="T23" start="7678" end="7684" text="day )." type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T24" start="7686" end="7688" text="10" type="TIME" val="2020-03-11T10:00" mod="NA" />
+<TIMEX3 id="T25" start="8437" end="8447" text="2020-05-12" type="DATE" val="2020-05-12" mod="NA" />
+<TIMEX3 id="T26" start="8451" end="8453" text="17" type="TIME" val="2020-05-12T17:00" mod="NA" />
+<TIMEX3 id="T27" start="9181" end="9186" text="09-07" type="DATE" val="2045-09-07" mod="NA" />
+<TIMEX3 id="T28" start="9849" end="9870" text="2020-04-30 at 11:00am" type="TIME" val="2020-04-30T11:00" mod="NA" />
+<TIMEX3 id="T29" start="9905" end="9923" text="3/30/07 at 10:00am" type="TIME" val="2007-03-30T10:00" mod="NA" />

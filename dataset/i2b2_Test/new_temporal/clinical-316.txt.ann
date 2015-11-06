@@ -1,0 +1,25 @@
+<TIMEX3 id="T0" start="25" end="31" text="158979" type="DATE" val="1589-07-09" mod="NA" />
+<TIMEX3 id="T1" start="33" end="50" text="3/7/2002 12:00:00" type="TIME" val="2002-03-07T12:00:00" mod="NA" />
+<TIMEX3 id="T3" start="183" end="197" text="ADMISSION DATE" type="DATE" val="2002-03-07" mod="NA" />
+<TIMEX3 id="T4" start="201" end="211" text="03/07/2002" type="DATE" val="2002-03-07" mod="NA" />
+<TIMEX3 id="T5" start="231" end="241" text="03/13/2002" type="DATE" val="2002-03-13" mod="NA" />
+<TIMEX3 id="T6" start="383" end="389" text="3/7/02" type="DATE" val="2002-03-07" mod="NA" />
+<TIMEX3 id="T7" start="421" end="428" text="3/10/02" type="DATE" val="2002-03-10" mod="NA" />
+<TIMEX3 id="T8" start="447" end="454" text="3/11/02" type="DATE" val="2002-03-11" mod="NA" />
+<TIMEX3 id="T9" start="671" end="678" text="2/11/02" type="DATE" val="2002-02-11" mod="NA" />
+<TIMEX3 id="T10" start="840" end="859" text="postoperative day 8" type="DATE" val="2002-03-15" mod="NA" />
+<TIMEX3 id="T11" start="1063" end="1069" text="3/7/02" type="DATE" val="2002-03-07" mod="NA" />
+<TIMEX3 id="T12" start="1100" end="1106" text="Monday" type="DATE" val="2002-03-04" mod="NA" />
+<TIMEX3 id="T13" start="1107" end="1113" text="3/2/02" type="DATE" val="2002-03-02" mod="NA" />
+<TIMEX3 id="T14" start="1159" end="1168" text="Wednesday" type="DATE" val="2002-02-27" mod="NA" />
+<TIMEX3 id="T15" start="1366" end="1390" text="the morning of admission" type="DATE" val="2002-03-07" mod="START" />
+<TIMEX3 id="T16" start="2481" end="2487" text="3/5/02" type="DATE" val="2002-03-05" mod="NA" />
+<TIMEX3 id="T17" start="2792" end="2806" text="hospital day 2" type="DATE" val="2002-03-08" mod="NA" />
+<TIMEX3 id="T19" start="3016" end="3025" text="that time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T20" start="3089" end="3103" text="hospital day 4" type="DATE" val="2002-03-10" mod="NA" />
+<TIMEX3 id="T22" start="3427" end="3435" text="that day" type="DATE" val="2002-03-10" mod="NA" />
+<TIMEX3 id="T23" start="3794" end="3801" text="3/10/02" type="DATE" val="2002-03-10" mod="NA" />
+<TIMEX3 id="T24" start="3940" end="3957" text="the following day" type="DATE" val="TPZ+0000-00-01" mod="NA" />
+<TIMEX3 id="T25" start="3960" end="3967" text="3/11/02" type="DATE" val="2002-03-11" mod="NA" />
+<TIMEX3 id="T26" start="4565" end="4579" text="hospital day 7" type="DATE" val="2002-03-13" mod="NA" />
+<TIMEX3 id="T28" start="5149" end="5165" text="04/21/2002 10:49" type="TIME" val="2002-04-21T10:49" mod="NA" />
