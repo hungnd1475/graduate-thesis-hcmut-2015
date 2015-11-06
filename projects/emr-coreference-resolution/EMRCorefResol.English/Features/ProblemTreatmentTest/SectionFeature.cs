@@ -11,16 +11,16 @@ namespace HCMUT.EMRCorefResol.English.Features
         public SectionFeature(IConceptPair instance, EMR emr)
             :base("Section-Feature", 226, 0)
         {
-            var anaSection = EMRExtensions.GetSection(emr, instance.Anaphora).Title;
-            var anteSection = EMRExtensions.GetSection(emr, instance.Antecedent).Title;
+            var anaSection = EMRExtensions.GetSection(emr, instance.Anaphora);
+            var anteSection = EMRExtensions.GetSection(emr, instance.Antecedent);
 
-            if(string.IsNullOrEmpty(anaSection) || string.IsNullOrEmpty(anteSection))
+            if(anaSection == null || anteSection == null)
             {
                 SetCategoricalValue(0);
                 return;
             }
 
-            var sectionPairIndex = GetSectionPairIndex(anaSection, anteSection);
+            var sectionPairIndex = GetSectionPairIndex(anaSection.Title, anteSection.Title);
             SetCategoricalValue(sectionPairIndex);
         }
 
