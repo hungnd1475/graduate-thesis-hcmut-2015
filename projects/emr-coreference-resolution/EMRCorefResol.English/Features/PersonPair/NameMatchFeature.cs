@@ -34,7 +34,7 @@ namespace HCMUT.EMRCorefResol.English.Features
             var anaArr = anaNorm.Split(' ');
             var anteArr = anteNorm.Split(' ');
 
-            if (anteArr.Intersect(anaArr).Any())
+            if (anteArr.Where(s => s.Length > 1).Intersect(anaArr).Any())
             {
                 SetCategoricalValue(1);
             }

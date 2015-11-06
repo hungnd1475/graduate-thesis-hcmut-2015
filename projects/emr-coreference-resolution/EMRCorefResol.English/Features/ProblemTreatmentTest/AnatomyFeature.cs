@@ -20,9 +20,10 @@ namespace HCMUT.EMRCorefResol.English.Features
             if (anaUMLS == null || anteUMLS == null)
             {
                 return;
-            } else
+            }
+            else
             {
-                if(anaUMLS.Concept.Equals(anteNorm, StringComparison.InvariantCultureIgnoreCase) || 
+                if (anaUMLS.Concept.Equals(anteNorm, StringComparison.InvariantCultureIgnoreCase) ||
                     anaUMLS.Concept.Equals(anteUMLS.Concept, StringComparison.InvariantCultureIgnoreCase) ||
                     anaUMLS.Concept.Equals(anteUMLS.Prefer, StringComparison.InvariantCultureIgnoreCase) ||
                     anteUMLS.Concept.Equals(anaUMLS.Prefer, StringComparison.InvariantCultureIgnoreCase) ||
@@ -30,7 +31,8 @@ namespace HCMUT.EMRCorefResol.English.Features
                     anteUMLS.Concept.Equals(anaNorm, StringComparison.InvariantCultureIgnoreCase))
                 {
                     SetCategoricalValue(1);
-                } else
+                }
+                else
                 {
                     SetCategoricalValue(0);
                 }

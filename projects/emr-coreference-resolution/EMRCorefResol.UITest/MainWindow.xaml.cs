@@ -419,7 +419,7 @@ namespace EMRCorefResol.UITest
                 new Progress<int>(i =>
                 {
                     var fv = features[i];
-                    sb.Append($"{i}. {instances[i]}\nClass-Value:{fv.ClassValue} {string.Join(" ", fv.Select(f => f.ToString()))}\n\n");
+                    sb.Append($" {i}. {instances[i]}\nClass-Value:{fv.ClassValue} {string.Join(" ", fv.Select(f => f.ToString()))}\n\n");
                     txtFeatures.Text = $"Extracting features...\n{count++}/{instances.Count}";
                 }));
 
@@ -479,7 +479,7 @@ namespace EMRCorefResol.UITest
                     {
                         if (target[i] != null)
                         {
-                            sb.AppendLine($"{i + ".",-6} {target[i].Class}|{target[i].Confidence:N3} {instances[i]}");
+                            sb.AppendLine($"{i + ".",6}  {target[i].Class}|{target[i].Confidence:N3} {instances[i]}");
                         }
                         txtClas.Text = $"Classifying...\n{count++}/{instances.Count}";
                     }));
