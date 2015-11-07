@@ -1,0 +1,24 @@
+<TIMEX3 id="T0" start="42" end="61" text="08/15/1998 12:00:00" type="TIME" val="1998-08-15T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="198" end="200" text="03" type="TIME" val="1998-08-15T03:00" mod="NA" />
+<TIMEX3 id="T3" start="202" end="216" text="ADMISSION DATE" type="DATE" val="1998-08-15" mod="NA" />
+<TIMEX3 id="T4" start="220" end="230" text="08/15/1998" type="DATE" val="1998-08-15" mod="NA" />
+<TIMEX3 id="T5" start="250" end="260" text="08/22/1998" type="DATE" val="1998-08-22" mod="NA" />
+<TIMEX3 id="T6" start="515" end="523" text="08/20/98" type="DATE" val="1998-08-20" mod="NA" />
+<TIMEX3 id="T7" start="617" end="625" text="08/15/98" type="DATE" val="1998-08-15" mod="NA" />
+<TIMEX3 id="T8" start="660" end="668" text="08/15/98" type="DATE" val="1998-08-15" mod="NA" />
+<TIMEX3 id="T9" start="693" end="701" text="08/15/98" type="DATE" val="1998-08-15" mod="NA" />
+<TIMEX3 id="T10" start="735" end="743" text="08/15/98" type="DATE" val="1998-08-15" mod="NA" />
+<TIMEX3 id="T11" start="771" end="779" text="08/15/98" type="DATE" val="1998-08-15" mod="NA" />
+<TIMEX3 id="T12" start="1396" end="1400" text="1980" type="DATE" val="1980" mod="NA" />
+<TIMEX3 id="T13" start="1407" end="1411" text="1980" type="DATE" val="1980" mod="NA" />
+<TIMEX3 id="T14" start="1539" end="1543" text="1988" type="DATE" val="1988" mod="NA" />
+<TIMEX3 id="T15" start="1658" end="1665" text="October" type="DATE" val="1998-10" mod="NA" />
+<TIMEX3 id="T16" start="1668" end="1672" text="1989" type="DATE" val="1989" mod="NA" />
+<TIMEX3 id="T17" start="1896" end="1900" text="1993" type="DATE" val="1993" mod="NA" />
+<TIMEX3 id="T18" start="1982" end="1991" text="that time" type="DATE" val="1998-08-15" mod="NA" />
+<TIMEX3 id="T19" start="1998" end="2006" text="November" type="DATE" val="1998-11" mod="NA" />
+<TIMEX3 id="T20" start="2009" end="2013" text="1997" type="DATE" val="1997" mod="NA" />
+<TIMEX3 id="T21" start="2552" end="2561" text="that time" type="DATE" val="1998-08-15" mod="NA" />
+<TIMEX3 id="T22" start="2746" end="2749" text="May" type="DATE" val="1998-05" mod="NA" />
+<TIMEX3 id="T23" start="2752" end="2756" text="1998" type="DATE" val="1998" mod="NA" />
+<TIMEX3 id="T24" start="6650" end="6659" text="August 20" type="DATE" val="1998-08-20" mod="NA" />

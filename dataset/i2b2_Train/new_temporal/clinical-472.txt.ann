@@ -1,0 +1,48 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2017-06-16" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2017-06-16" type="DATE" val="2017-06-16" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2017-07-27" type="DATE" val="2017-07-27" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1959-03-24" type="DATE" val="1959-03-24" mod="NA" />
+<TIMEX3 id="T4" start="494" end="510" text="day of discharge" type="DATE" val="2017-06-16" mod="NA" />
+<TIMEX3 id="T5" start="995" end="1015" text="the day of admission" type="DATE" val="2017-06-16" mod="NA" />
+<TIMEX3 id="T6" start="1198" end="1202" text="2003" type="DATE" val="2003" mod="NA" />
+<TIMEX3 id="T7" start="1215" end="1220" text="05-23" type="DATE" val="1959-05-23" mod="NA" />
+<TIMEX3 id="T8" start="2312" end="2317" text="06-18" type="DATE" val="1959-06-18" mod="NA" />
+<TIMEX3 id="T9" start="2350" end="2355" text="06-19" type="DATE" val="1959-06-19" mod="NA" />
+<TIMEX3 id="T10" start="2435" end="2440" text="06-20" type="DATE" val="1959-06-20" mod="NA" />
+<TIMEX3 id="T11" start="2671" end="2676" text="06-21" type="DATE" val="1959-06-21" mod="NA" />
+<TIMEX3 id="T12" start="2757" end="2762" text="06-22" type="DATE" val="1959-06-22" mod="NA" />
+<TIMEX3 id="T13" start="3020" end="3025" text="06-23" type="DATE" val="1959-06-23" mod="NA" />
+<TIMEX3 id="T14" start="3126" end="3131" text="06-25" type="DATE" val="1959-06-25" mod="NA" />
+<TIMEX3 id="T15" start="3251" end="3256" text="06-26" type="DATE" val="1959-06-26" mod="NA" />
+<TIMEX3 id="T16" start="3284" end="3289" text="06-27" type="DATE" val="1959-06-27" mod="NA" />
+<TIMEX3 id="T17" start="3378" end="3383" text="06-28" type="DATE" val="1959-06-28" mod="NA" />
+<TIMEX3 id="T18" start="3711" end="3716" text="06-29" type="DATE" val="1959-06-29" mod="NA" />
+<TIMEX3 id="T19" start="4732" end="4737" text="07-05" type="DATE" val="1959-07-05" mod="NA" />
+<TIMEX3 id="T20" start="4860" end="4865" text="07-06" type="DATE" val="1959-07-06" mod="NA" />
+<TIMEX3 id="T21" start="4942" end="4947" text="07-07" type="DATE" val="1959-07-07" mod="NA" />
+<TIMEX3 id="T22" start="5031" end="5036" text="07-12" type="DATE" val="1959-07-12" mod="NA" />
+<TIMEX3 id="T23" start="5130" end="5135" text="07-18" type="DATE" val="1959-07-18" mod="NA" />
+<TIMEX3 id="T24" start="5221" end="5226" text="07-19" type="DATE" val="1959-07-19" mod="NA" />
+<TIMEX3 id="T25" start="5995" end="6000" text="07-17" type="DATE" val="1959-07-17" mod="NA" />
+<TIMEX3 id="T26" start="6115" end="6124" text="this time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T27" start="6472" end="6477" text="07-24" type="DATE" val="1959-07-24" mod="NA" />
+<TIMEX3 id="T28" start="6992" end="6997" text="07-25" type="DATE" val="1959-07-25" mod="NA" />
+<TIMEX3 id="T29" start="7074" end="7079" text="07-26" type="DATE" val="1959-07-26" mod="NA" />
+<TIMEX3 id="T30" start="7196" end="7201" text="07-27" type="DATE" val="1959-07-27" mod="NA" />
+<TIMEX3 id="T31" start="7524" end="7529" text="02-19" type="DATE" val="1959-02-19" mod="NA" />
+<TIMEX3 id="T32" start="7956" end="7962" text="day ) " type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T33" start="7965" end="7966" text="6" type="TIME" val="1959-02-19T06:00" mod="NA" />
+<TIMEX3 id="T34" start="8429" end="8435" text="day ) " type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T35" start="8438" end="8523" text="11. Metoprolol Tartrate 50 mg Tablet Sig : One ( 1 ) Tablet PO BID ( 2 times a day ) " type="TIME" val="TPZ+0000-00-00T11:00" mod="NA" />
+<TIMEX3 id="T36" start="8795" end="8803" text="Last day" type="DATE" val="1959-02-18" mod="NA" />
+<TIMEX3 id="T38" start="8804" end="8814" text="2017-07-25" type="DATE" val="2017-07-25" mod="NA" />
+<TIMEX3 id="T39" start="8818" end="8820" text="15" type="TIME" val="2017-07-25T15:00" mod="NA" />
+<TIMEX3 id="T40" start="9298" end="9306" text="Last day" type="DATE" val="2017-07-24" mod="NA" />
+<TIMEX3 id="T42" start="9307" end="9312" text="08-07" type="DATE" val="1958-08-07" mod="NA" />
+<TIMEX3 id="T43" start="9316" end="9433" text="20. Vancomycin HCl in Dextrose 1 g / 200 mL Piggyback Sig : One ( 1 ) Intravenous Q 12H ( Every 12 Hours ) : Last day" type="TIME" val="1958-08-06T20:00" mod="NA" />
+<TIMEX3 id="T45" start="9434" end="9439" text="08-07" type="DATE" val="1958-08-07" mod="NA" />
+<TIMEX3 id="T46" start="9443" end="9522" text="21. Gabapentin 300 mg Capsule Sig : One ( 1 ) Capsule PO TID ( 3 times a day ) " type="TIME" val="TPZ+0000-00-00T21:00" mod="NA" />
+<TIMEX3 id="T47" start="9695" end="9700" text="02-19" type="DATE" val="1958-02-19" mod="NA" />
+<TIMEX3 id="T48" start="10892" end="10902" text="2017-08-08" type="DATE" val="2017-08-08" mod="NA" />
+<TIMEX3 id="T49" start="10904" end="10909" text="10:45" type="TIME" val="2017-08-08T10:45" mod="NA" />
+<TIMEX3 id="T50" start="10996" end="11012" text="2017-08-08 10:45" type="TIME" val="2017-08-08T10:45" mod="NA" />

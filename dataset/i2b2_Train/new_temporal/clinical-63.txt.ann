@@ -1,0 +1,18 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2012-01-07" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2012-01-07" type="DATE" val="2012-01-07" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2012-03-10" type="DATE" val="2012-03-10" mod="NA" />
+<TIMEX3 id="T3" start="105" end="115" text="2012-02-26" type="DATE" val="2012-02-26" mod="NA" />
+<TIMEX3 id="T4" start="531" end="541" text="2012-02-29" type="DATE" val="2012-02-29" mod="NA" />
+<TIMEX3 id="T5" start="578" end="587" text="that time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T6" start="739" end="757" text="the following days" type="DATE" val="TPZ+0000-00-01" mod="NA" />
+<TIMEX3 id="T7" start="813" end="823" text="2012-03-09" type="DATE" val="2012-03-09" mod="NA" />
+<TIMEX3 id="T8" start="998" end="1008" text="2012-03-06" type="DATE" val="2012-03-06" mod="NA" />
+<TIMEX3 id="T9" start="1303" end="1313" text="2012-03-10" type="DATE" val="2012-03-10" mod="NA" />
+<TIMEX3 id="T10" start="1544" end="1550" text="Monday" type="DATE" val="2012-03-05" mod="NA" />
+<TIMEX3 id="T11" start="1553" end="1563" text="2012-03-12" type="DATE" val="2012-03-12" mod="NA" />
+<TIMEX3 id="T12" start="1848" end="1860" text="several days" type="DATE" val="TPZ-0000-00-03" mod="APPROX" />
+<TIMEX3 id="T13" start="2019" end="2025" text="Monday" type="DATE" val="2012-03-12" mod="NA" />
+<TIMEX3 id="T14" start="2028" end="2037" text="Wednesday" type="DATE" val="2012-03-07" mod="NA" />
+<TIMEX3 id="T15" start="2042" end="2048" text="Friday" type="DATE" val="2012-03-02" mod="NA" />
+<TIMEX3 id="T16" start="2052" end="2053" text="2" type="TIME" val="2012-03-02T02:00" mod="NA" />
+<TIMEX3 id="T17" start="2197" end="2203" text="Monday" type="DATE" val="2012-02-27" mod="NA" />

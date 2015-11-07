@@ -1,0 +1,41 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2014-03-31" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2014-03-31" type="DATE" val="2014-03-31" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2014-04-09" type="DATE" val="2014-04-09" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1964-04-26" type="DATE" val="1964-04-26" mod="NA" />
+<TIMEX3 id="T4" start="472" end="477" text="11-30" type="DATE" val="2013-11-30" mod="NA" />
+<TIMEX3 id="T5" start="526" end="536" text="2014-03-19" type="DATE" val="2014-03-19" mod="NA" />
+<TIMEX3 id="T6" start="540" end="550" text="2014-03-22" type="DATE" val="2014-03-22" mod="NA" />
+<TIMEX3 id="T7" start="694" end="699" text="Today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T8" start="705" end="715" text="2014-03-03" type="DATE" val="2014-03-03" mod="NA" />
+<TIMEX3 id="T9" start="1155" end="1160" text="today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T10" start="1173" end="1183" text="2014-03-31" type="DATE" val="2014-03-31" mod="NA" />
+<TIMEX3 id="T11" start="1424" end="1436" text="10 years ago" type="DATE" val="TPZ-0010" mod="NA" />
+<TIMEX3 id="T12" start="1553" end="1563" text="2013-12-08" type="DATE" val="2013-12-08" mod="NA" />
+<TIMEX3 id="T13" start="2338" end="2350" text="20 years ago" type="DATE" val="TPZ-0020" mod="NA" />
+<TIMEX3 id="T14" start="2444" end="2456" text="20 years ago" type="DATE" val="TPZ-0020" mod="NA" />
+<TIMEX3 id="T15" start="3407" end="3417" text="2014-04-01" type="DATE" val="2014-04-01" mod="NA" />
+<TIMEX3 id="T16" start="3424" end="3434" text="2014-04-02" type="DATE" val="2014-04-02" mod="NA" />
+<TIMEX3 id="T17" start="3708" end="3718" text="2014-04-01" type="DATE" val="2014-04-01" mod="NA" />
+<TIMEX3 id="T18" start="3884" end="3894" text="2014-04-04" type="DATE" val="2014-04-04" mod="NA" />
+<TIMEX3 id="T19" start="4013" end="4023" text="2014-04-04" type="DATE" val="2014-04-04" mod="NA" />
+<TIMEX3 id="T20" start="4067" end="4077" text="2014-04-04" type="DATE" val="2014-04-04" mod="NA" />
+<TIMEX3 id="T21" start="4541" end="4551" text="2014-04-04" type="DATE" val="2014-04-04" mod="NA" />
+<TIMEX3 id="T22" start="4800" end="4826" text="postoperative day number 1" type="DATE" val="2014-04-01" mod="NA" />
+<TIMEX3 id="T23" start="5712" end="5722" text="2014-04-07" type="DATE" val="2014-04-07" mod="NA" />
+<TIMEX3 id="T24" start="5849" end="5875" text="postoperative day number 2" type="DATE" val="2014-04-02" mod="NA" />
+<TIMEX3 id="T25" start="6045" end="6055" text="2014-04-08" type="DATE" val="2014-04-08" mod="NA" />
+<TIMEX3 id="T26" start="6266" end="6276" text="2014-04-08" type="DATE" val="2014-04-08" mod="NA" />
+<TIMEX3 id="T27" start="6352" end="6362" text="2014-04-07" type="DATE" val="2014-04-07" mod="NA" />
+<TIMEX3 id="T28" start="6392" end="6402" text="2014-04-09" type="DATE" val="2014-04-09" mod="NA" />
+<TIMEX3 id="T29" start="6586" end="6596" text="2014-04-10" type="DATE" val="2014-04-10" mod="NA" />
+<TIMEX3 id="T30" start="6821" end="6847" text="postoperative day number 1" type="DATE" val="2014-04-01" mod="NA" />
+<TIMEX3 id="T31" start="6881" end="6891" text="2014-04-09" type="DATE" val="2014-04-09" mod="NA" />
+<TIMEX3 id="T32" start="6931" end="6941" text="2014-04-09" type="DATE" val="2014-04-09" mod="NA" />
+<TIMEX3 id="T33" start="7449" end="7459" text="2014-04-14" type="DATE" val="2014-04-14" mod="NA" />
+<TIMEX3 id="T34" start="7463" end="7482" text="9 a.m. , 2014-04-24" type="TIME" val="2014-04-24T09:00" mod="NA" />
+<TIMEX3 id="T35" start="7486" end="7496" text="10:20 a.m." type="TIME" val="2014-05-01T10:20" mod="NA" />
+<TIMEX3 id="T36" start="7501" end="7525" text="2014-05-01 at 10:20 a.m." type="TIME" val="2014-05-01T10:20" mod="NA" />
+<TIMEX3 id="T37" start="7842" end="7848" text="Monday" type="DATE" val="2014-04-28" mod="NA" />
+<TIMEX3 id="T38" start="7853" end="7861" text="Thursday" type="DATE" val="2014-04-24" mod="NA" />
+<TIMEX3 id="T39" start="8099" end="8109" text="2014-03-31" type="DATE" val="2014-03-31" mod="NA" />
+<TIMEX3 id="T40" start="8171" end="8181" text="2014-04-03" type="DATE" val="2014-04-03" mod="NA" />

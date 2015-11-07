@@ -1,0 +1,22 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2015-03-26" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2015-03-26" type="DATE" val="2015-03-26" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2015-03-30" type="DATE" val="2015-03-30" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1967-03-08" type="DATE" val="1967-03-08" mod="NA" />
+<TIMEX3 id="T4" start="1672" end="1679" text="this am" type="DATE" val="2015-03-26" mod="START" />
+<TIMEX3 id="T5" start="1697" end="1706" text="yesterday" type="DATE" val="TPZ-0000-00-01" mod="NA" />
+<TIMEX3 id="T6" start="1784" end="1789" text="02-23" type="DATE" val="1967-02-23" mod="NA" />
+<TIMEX3 id="T7" start="1792" end="1797" text="03-04" type="DATE" val="1967-03-04" mod="NA" />
+<TIMEX3 id="T8" start="2786" end="2791" text="08-10" type="DATE" val="1967-08-10" mod="NA" />
+<TIMEX3 id="T9" start="3380" end="3385" text="05-09" type="DATE" val="1967-05-09" mod="NA" />
+<TIMEX3 id="T10" start="3490" end="3506" text="2015-03-26 10:10" type="TIME" val="2015-03-26T10:10" mod="NA" />
+<TIMEX3 id="T12" start="3626" end="3642" text="2015-03-26 10:10" type="TIME" val="2015-03-26T10:10" mod="NA" />
+<TIMEX3 id="T14" start="3724" end="3740" text="2015-03-26 10:10" type="TIME" val="2015-03-26T10:10" mod="NA" />
+<TIMEX3 id="T16" start="3916" end="3932" text="2015-03-26 10:10" type="TIME" val="2015-03-26T10:10" mod="NA" />
+<TIMEX3 id="T18" start="3982" end="3998" text="2015-03-26 10:10" type="TIME" val="2015-03-26T10:10" mod="NA" />
+<TIMEX3 id="T20" start="4096" end="4112" text="2015-03-26 10:10" type="TIME" val="2015-03-26T10:10" mod="NA" />
+<TIMEX3 id="T22" start="4204" end="4220" text="2015-03-26 10:10" type="TIME" val="2015-03-26T10:10" mod="NA" />
+<TIMEX3 id="T24" start="4247" end="4263" text="2015-03-26 10:10" type="TIME" val="2015-03-26T10:10" mod="NA" />
+<TIMEX3 id="T26" start="5070" end="5085" text="hospital day #4" type="DATE" val="2015-03-29" mod="NA" />
+<TIMEX3 id="T27" start="5442" end="5461" text="several hours later" type="DATE" val="2015-03-29" mod="APPROX" />
+<TIMEX3 id="T28" start="5765" end="5770" text="04-09" type="DATE" val="1967-04-09" mod="NA" />
+<TIMEX3 id="T29" start="6491" end="6505" text="this afternoon" type="DATE" val="TPZ+0000-00-00" mod="MIDDLE" />

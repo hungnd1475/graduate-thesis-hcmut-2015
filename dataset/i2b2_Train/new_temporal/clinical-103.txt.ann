@@ -1,0 +1,20 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2013-10-29" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2013-10-29" type="DATE" val="2013-10-29" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2013-11-04" type="DATE" val="2013-11-04" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1943-01-06" type="DATE" val="1943-01-06" mod="NA" />
+<TIMEX3 id="T4" start="708" end="720" text="23 years ago" type="DATE" val="TPZ-0023" mod="NA" />
+<TIMEX3 id="T5" start="794" end="806" text="12 years ago" type="DATE" val="TPZ-0012" mod="NA" />
+<TIMEX3 id="T6" start="1166" end="1182" text="2013-10-29 11:37" type="TIME" val="2013-10-29T11:37" mod="NA" />
+<TIMEX3 id="T8" start="1304" end="1320" text="2013-10-29 11:37" type="TIME" val="2013-10-29T11:37" mod="NA" />
+<TIMEX3 id="T10" start="1368" end="1384" text="2013-10-29 11:37" type="TIME" val="2013-10-29T11:37" mod="NA" />
+<TIMEX3 id="T12" start="1408" end="1424" text="2013-10-29 01:09" type="TIME" val="2013-10-29T01:09" mod="NA" />
+<TIMEX3 id="T14" start="1504" end="1520" text="2013-10-29 01:09" type="TIME" val="2013-10-29T01:09" mod="NA" />
+<TIMEX3 id="T16" start="1612" end="1622" text="2013-10-29" type="DATE" val="2013-10-29" mod="NA" />
+<TIMEX3 id="T17" start="1805" end="1815" text="that night" type="DATE" val="TPZ+0000-00-00" mod="END" />
+<TIMEX3 id="T18" start="1895" end="1909" text="post-op day #2" type="DATE" val="2013-10-31" mod="NA" />
+<TIMEX3 id="T19" start="1969" end="1983" text="post-op day #3" type="DATE" val="2013-11-01" mod="NA" />
+<TIMEX3 id="T20" start="2065" end="2079" text="post-op day #4" type="DATE" val="2013-11-02" mod="NA" />
+<TIMEX3 id="T21" start="2206" end="2220" text="post-op day #6" type="DATE" val="2013-11-04" mod="NA" />
+<TIMEX3 id="T22" start="3218" end="3224" text="day )." type="DATE" val="2013-10-29" mod="NA" />
+<TIMEX3 id="T23" start="3226" end="3227" text="7" type="TIME" val="2013-10-29T07:00" mod="NA" />
+<TIMEX3 id="T24" start="3481" end="3487" text="day )." type="DATE" val="TPZ+0000-00-00" mod="NA" />

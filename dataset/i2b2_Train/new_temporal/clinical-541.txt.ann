@@ -1,0 +1,28 @@
+<TIMEX3 id="T0" start="43" end="61" text="4/30/2005 12:00:00" type="TIME" val="2005-04-30T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="189" end="203" text="ADMISSION DATE" type="DATE" val="2005-04-30" mod="NA" />
+<TIMEX3 id="T3" start="207" end="217" text="04/30/2005" type="DATE" val="2005-04-30" mod="NA" />
+<TIMEX3 id="T4" start="237" end="244" text="5/14/05" type="DATE" val="2005-05-14" mod="NA" />
+<TIMEX3 id="T5" start="245" end="255" text="05/14/2005" type="DATE" val="2005-05-14" mod="NA" />
+<TIMEX3 id="T6" start="346" end="352" text="5/5/05" type="DATE" val="2005-05-05" mod="NA" />
+<TIMEX3 id="T7" start="672" end="676" text="2000" type="DATE" val="2000" mod="NA" />
+<TIMEX3 id="T8" start="681" end="685" text="2001" type="DATE" val="2001" mod="NA" />
+<TIMEX3 id="T9" start="695" end="699" text="2001" type="DATE" val="2001" mod="NA" />
+<TIMEX3 id="T10" start="703" end="707" text="2002" type="DATE" val="2002" mod="NA" />
+<TIMEX3 id="T11" start="895" end="915" text="about six months ago" type="DATE" val="TPZ-0000-06" mod="APPROX" />
+<TIMEX3 id="T12" start="1063" end="1073" text="many years" type="DATE" val="TPZ-0003" mod="APPROX" />
+<TIMEX3 id="T13" start="1366" end="1389" text="four to five months ago" type="DATE" val="TPZ-0000-05" mod="APPROX" />
+<TIMEX3 id="T14" start="2492" end="2496" text="2001" type="DATE" val="2001" mod="NA" />
+<TIMEX3 id="T15" start="2499" end="2503" text="2002" type="DATE" val="2002" mod="NA" />
+<TIMEX3 id="T16" start="2960" end="2972" text="30 years ago" type="DATE" val="TPZ-0030" mod="NA" />
+<TIMEX3 id="T17" start="4889" end="4898" text="June 2004" type="DATE" val="2004-06" mod="NA" />
+<TIMEX3 id="T18" start="5752" end="5764" text="May 5 , 2005" type="DATE" val="2005-05-05" mod="NA" />
+<TIMEX3 id="T19" start="6704" end="6710" text="5/9/05" type="DATE" val="2005-05-09" mod="NA" />
+<TIMEX3 id="T20" start="6915" end="6935" text="the time of transfer" type="DATE" val="2005-04-30" mod="NA" />
+<TIMEX3 id="T21" start="7203" end="7224" text="the time of discharge" type="DATE" val="2005-04-30" mod="NA" />
+<TIMEX3 id="T22" start="7329" end="7336" text="5/11/05" type="DATE" val="2005-05-11" mod="NA" />
+<TIMEX3 id="T23" start="7696" end="7717" text="the time of discharge" type="DATE" val="2005-04-30" mod="NA" />
+<TIMEX3 id="T24" start="8079" end="8091" text="several days" type="DATE" val="TPZ-0000-00-03" mod="APPROX" />
+<TIMEX3 id="T25" start="8131" end="8138" text="5/12/05" type="DATE" val="2005-05-12" mod="NA" />
+<TIMEX3 id="T26" start="8226" end="8233" text="5/14/05" type="DATE" val="2005-05-14" mod="NA" />
+<TIMEX3 id="T27" start="8282" end="8302" text="the time of transfer" type="DATE" val="2005-04-30" mod="NA" />
+<TIMEX3 id="T28" start="10329" end="10345" text="05/14/2005 16:02" type="TIME" val="2005-05-14T16:02" mod="NA" />

@@ -1,0 +1,9 @@
+<TIMEX3 id="T0" start="48" end="66" text="12/4/1995 12:00:00" type="TIME" val="1995-12-04T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="141" end="155" text="ADMISSION DATE" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T3" start="159" end="166" text="12/4/95" type="DATE" val="1995-12-04" mod="NA" />
+<TIMEX3 id="T4" start="186" end="193" text="12/8/95" type="DATE" val="1995-12-08" mod="NA" />
+<TIMEX3 id="T5" start="216" end="223" text="11/7/32" type="DATE" val="2032-11-07" mod="NA" />
+<TIMEX3 id="T6" start="427" end="434" text="12/4/95" type="DATE" val="1995-12-04" mod="NA" />
+<TIMEX3 id="T7" start="443" end="450" text="12/8/95" type="DATE" val="1995-12-08" mod="NA" />
+<TIMEX3 id="T8" start="635" end="640" text="02/95" type="DATE" val="1995-02" mod="NA" />
+<TIMEX3 id="T9" start="846" end="851" text="06/95" type="DATE" val="1995-06" mod="NA" />

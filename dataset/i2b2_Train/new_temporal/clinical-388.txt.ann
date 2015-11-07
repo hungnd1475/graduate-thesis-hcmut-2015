@@ -1,0 +1,9 @@
+<TIMEX3 id="T0" start="30" end="49" text="04/21/1994 12:00:00" type="TIME" val="1994-04-21T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="90" end="104" text="Admission Date" type="DATE" val="1994-04-21" mod="NA" />
+<TIMEX3 id="T3" start="109" end="119" text="04/21/1994" type="DATE" val="1994-04-21" mod="NA" />
+<TIMEX3 id="T4" start="168" end="178" text="04/29/1994" type="DATE" val="1994-04-29" mod="NA" />
+<TIMEX3 id="T5" start="866" end="889" text="over the past few weeks" type="DATE" val="TPZ-0000-W03" mod="APPROX" />
+<TIMEX3 id="T6" start="921" end="934" text="the past week" type="DATE" val="1994-W17" mod="NA" />
+<TIMEX3 id="T7" start="1157" end="1170" text="six years ago" type="DATE" val="TPZ-0006" mod="NA" />
+<TIMEX3 id="T8" start="2442" end="2450" text="April 21" type="DATE" val="1994-04-21" mod="NA" />
+<TIMEX3 id="T9" start="3084" end="3099" text="April 29 , 1994" type="DATE" val="1994-04-29" mod="NA" />

@@ -1,0 +1,33 @@
+<TIMEX3 id="T0" start="33" end="52" text="10/25/1997 12:00:00" type="TIME" val="1997-10-25T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="119" end="133" text="Admission Date" type="DATE" val="1997-10-25" mod="NA" />
+<TIMEX3 id="T3" start="137" end="147" text="10/25/1997" type="DATE" val="1997-10-25" mod="NA" />
+<TIMEX3 id="T4" start="192" end="202" text="11/03/1997" type="DATE" val="1997-11-03" mod="NA" />
+<TIMEX3 id="T5" start="616" end="621" text="12/96" type="DATE" val="1996-12" mod="NA" />
+<TIMEX3 id="T6" start="626" end="631" text="08/97" type="DATE" val="1997-08" mod="NA" />
+<TIMEX3 id="T7" start="724" end="729" text="09/96" type="DATE" val="1996-09" mod="NA" />
+<TIMEX3 id="T8" start="761" end="765" text="1993" type="DATE" val="1993" mod="NA" />
+<TIMEX3 id="T9" start="851" end="856" text="09/97" type="DATE" val="1997-09" mod="NA" />
+<TIMEX3 id="T10" start="946" end="955" text="this time" type="DATE" val="1997-10-25" mod="NA" />
+<TIMEX3 id="T11" start="1108" end="1112" text="1996" type="DATE" val="1996" mod="NA" />
+<TIMEX3 id="T12" start="1362" end="1367" text="11/96" type="DATE" val="1996-11" mod="NA" />
+<TIMEX3 id="T13" start="1447" end="1451" text="1984" type="DATE" val="1984" mod="NA" />
+<TIMEX3 id="T14" start="3269" end="3280" text="the mid 80s" type="DATE" val="1980" mod="MID" />
+<TIMEX3 id="T15" start="3408" end="3424" text="hospital day # 3" type="DATE" val="1997-10-27" mod="NA" />
+<TIMEX3 id="T16" start="3427" end="3435" text="10/28/97" type="DATE" val="1997-10-28" mod="NA" />
+<TIMEX3 id="T17" start="3442" end="3451" text="that time" type="DATE" val="1997-10-25" mod="NA" />
+<TIMEX3 id="T18" start="3909" end="3930" text="postoperative day # 2" type="DATE" val="1997-10-27" mod="NA" />
+<TIMEX3 id="T19" start="4108" end="4129" text="postoperative day # 2" type="DATE" val="1997-10-27" mod="NA" />
+<TIMEX3 id="T20" start="4595" end="4616" text="postoperative day # 3" type="DATE" val="1997-10-28" mod="NA" />
+<TIMEX3 id="T21" start="4623" end="4644" text="postoperative day # 1" type="DATE" val="1997-10-26" mod="NA" />
+<TIMEX3 id="T22" start="4740" end="4761" text="postoperative day # 2" type="DATE" val="1997-10-27" mod="NA" />
+<TIMEX3 id="T23" start="4835" end="4856" text="postoperative day # 4" type="DATE" val="1997-10-29" mod="NA" />
+<TIMEX3 id="T24" start="4863" end="4872" text="this time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T25" start="5141" end="5162" text="the time of discharge" type="DATE" val="1997-10-25" mod="NA" />
+<TIMEX3 id="T26" start="5211" end="5223" text="the next day" type="DATE" val="1997-10-26" mod="NA" />
+<TIMEX3 id="T27" start="5363" end="5384" text="postoperative day # 6" type="DATE" val="1997-10-31" mod="NA" />
+<TIMEX3 id="T28" start="5552" end="5573" text="postoperative day # 1" type="DATE" val="1997-10-26" mod="NA" />
+<TIMEX3 id="T29" start="5667" end="5688" text="postoperative day # 1" type="DATE" val="1997-10-26" mod="NA" />
+<TIMEX3 id="T30" start="5727" end="5748" text="postoperative day # 3" type="DATE" val="1997-10-28" mod="NA" />
+<TIMEX3 id="T31" start="5798" end="5819" text="postoperative day # 5" type="DATE" val="1997-10-30" mod="NA" />
+<TIMEX3 id="T32" start="6190" end="6211" text="postoperative day # 6" type="DATE" val="1997-10-31" mod="NA" />
+<TIMEX3 id="T33" start="6267" end="6288" text="the time of discharge" type="DATE" val="1997-10-25" mod="NA" />

@@ -1,0 +1,35 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2013-05-09" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2013-05-09" type="DATE" val="2013-05-09" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2013-06-02" type="DATE" val="2013-06-02" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1966-03-19" type="DATE" val="1966-03-19" mod="NA" />
+<TIMEX3 id="T4" start="458" end="462" text="2013" type="DATE" val="2013" mod="NA" />
+<TIMEX3 id="T5" start="598" end="608" text="2013-05-06" type="DATE" val="2013-05-06" mod="NA" />
+<TIMEX3 id="T6" start="633" end="643" text="2013-05-09" type="DATE" val="2013-05-09" mod="NA" />
+<TIMEX3 id="T7" start="726" end="746" text="the day of discharge" type="DATE" val="2013-05-09" mod="NA" />
+<TIMEX3 id="T8" start="752" end="762" text="2013-05-06" type="DATE" val="2013-05-06" mod="NA" />
+<TIMEX3 id="T9" start="812" end="822" text="2013-05-08" type="DATE" val="2013-05-08" mod="NA" />
+<TIMEX3 id="T10" start="860" end="870" text="2013-05-09" type="DATE" val="2013-05-09" mod="NA" />
+<TIMEX3 id="T11" start="1560" end="1564" text="1996" type="DATE" val="1996" mod="NA" />
+<TIMEX3 id="T12" start="1640" end="1644" text="1996" type="DATE" val="1996" mod="NA" />
+<TIMEX3 id="T13" start="1714" end="1724" text="2013-05-09" type="DATE" val="2013-05-09" mod="NA" />
+<TIMEX3 id="T14" start="1728" end="1738" text="2013-05-23" type="DATE" val="2013-05-23" mod="NA" />
+<TIMEX3 id="T15" start="1819" end="1829" text="2013-05-23" type="DATE" val="2013-05-23" mod="NA" />
+<TIMEX3 id="T16" start="1833" end="1843" text="2013-06-02" type="DATE" val="2013-06-02" mod="NA" />
+<TIMEX3 id="T17" start="1902" end="1923" text="the time of admission" type="DATE" val="2013-05-09" mod="NA" />
+<TIMEX3 id="T18" start="2742" end="2752" text="2013-05-16" type="DATE" val="2013-05-16" mod="NA" />
+<TIMEX3 id="T19" start="2755" end="2765" text="2013-05-21" type="DATE" val="2013-05-21" mod="NA" />
+<TIMEX3 id="T20" start="2772" end="2782" text="2013-05-24" type="DATE" val="2013-05-24" mod="NA" />
+<TIMEX3 id="T21" start="2848" end="2858" text="2013-05-25" type="DATE" val="2013-05-25" mod="NA" />
+<TIMEX3 id="T22" start="3591" end="3603" text="postop day 1" type="DATE" val="2013-05-17" mod="NA" />
+<TIMEX3 id="T24" start="3718" end="3730" text="postop day 1" type="DATE" val="2013-05-17" mod="NA" />
+<TIMEX3 id="T25" start="3854" end="3866" text="postop day 1" type="DATE" val="2013-05-17" mod="NA" />
+<TIMEX3 id="T27" start="4031" end="4043" text="postop day 1" type="DATE" val="2013-05-17" mod="NA" />
+<TIMEX3 id="T29" start="4156" end="4168" text="postop day 2" type="DATE" val="2013-05-18" mod="NA" />
+<TIMEX3 id="T31" start="4204" end="4216" text="postop day 3" type="DATE" val="2013-05-19" mod="NA" />
+<TIMEX3 id="T33" start="4269" end="4281" text="postop day 3" type="DATE" val="2013-05-19" mod="NA" />
+<TIMEX3 id="T35" start="4616" end="4637" text="the time of discharge" type="DATE" val="2013-05-09" mod="NA" />
+<TIMEX3 id="T36" start="4763" end="4784" text="the time of discharge" type="DATE" val="2013-05-09" mod="NA" />
+<TIMEX3 id="T37" start="4935" end="4956" text="the time of discharge" type="DATE" val="2013-05-09" mod="NA" />
+<TIMEX3 id="T38" start="5018" end="5039" text="the time of discharge" type="DATE" val="2013-05-09" mod="NA" />
+<TIMEX3 id="T39" start="5130" end="5149" text="postoperative day 8" type="DATE" val="2013-05-24" mod="NA" />
+<TIMEX3 id="T41" start="5785" end="5795" text="2013-05-25" type="DATE" val="2013-05-25" mod="NA" />

@@ -1,0 +1,10 @@
+<TIMEX3 id="T0" start="48" end="67" text="09/21/1992 12:00:00" type="TIME" val="1992-09-21T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="166" end="180" text="ADMISSION DATE" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T3" start="184" end="192" text="09/21/92" type="DATE" val="1992-09-21" mod="NA" />
+<TIMEX3 id="T4" start="212" end="220" text="09/24/92" type="DATE" val="1992-09-24" mod="NA" />
+<TIMEX3 id="T5" start="373" end="377" text="1980" type="DATE" val="1980" mod="NA" />
+<TIMEX3 id="T6" start="853" end="862" text="June 1992" type="DATE" val="1992-06" mod="NA" />
+<TIMEX3 id="T7" start="1357" end="1366" text="June 1992" type="DATE" val="1992-06" mod="NA" />
+<TIMEX3 id="T8" start="2866" end="2882" text="hospital day # 1" type="DATE" val="1992-09-21" mod="NA" />
+<TIMEX3 id="T9" start="2898" end="2912" text="hospital day 2" type="DATE" val="1992-09-22" mod="NA" />
+<TIMEX3 id="T11" start="2985" end="3001" text="hospital day # 3" type="DATE" val="1992-09-23" mod="NA" />

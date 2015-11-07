@@ -1,0 +1,28 @@
+<TIMEX3 id="T0" start="26" end="32" text="235967" type="DATE" val="2359-06-07" mod="NA" />
+<TIMEX3 id="T1" start="42" end="60" text="8/24/1998 12:00:00" type="TIME" val="1998-08-24T12:00:00" mod="NA" />
+<TIMEX3 id="T3" start="189" end="203" text="ADMISSION DATE" type="DATE" val="1998-08-24" mod="NA" />
+<TIMEX3 id="T4" start="207" end="217" text="08/24/1998" type="DATE" val="1998-08-24" mod="NA" />
+<TIMEX3 id="T5" start="237" end="247" text="09/14/1998" type="DATE" val="1998-09-14" mod="NA" />
+<TIMEX3 id="T6" start="387" end="395" text="08/31/98" type="DATE" val="1998-08-31" mod="NA" />
+<TIMEX3 id="T7" start="489" end="497" text="09/02/98" type="DATE" val="1998-09-02" mod="NA" />
+<TIMEX3 id="T8" start="797" end="801" text="1991" type="DATE" val="1991" mod="NA" />
+<TIMEX3 id="T9" start="830" end="839" text="that time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T10" start="1147" end="1156" text="June 1998" type="DATE" val="1998-06" mod="NA" />
+<TIMEX3 id="T11" start="1370" end="1385" text="two weeks later" type="DATE" val="TPZ+0000-W02" mod="NA" />
+<TIMEX3 id="T12" start="1582" end="1591" text="that time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T13" start="1860" end="1867" text="8/24/98" type="DATE" val="1998-08-24" mod="NA" />
+<TIMEX3 id="T14" start="2390" end="2403" text="the same time" type="DATE" val="TPZ+0000-00-00" mod="APPROX" />
+<TIMEX3 id="T15" start="3434" end="3448" text="several months" type="DATE" val="TPZ-0000-03" mod="APPROX" />
+<TIMEX3 id="T16" start="5784" end="5792" text="08/30/98" type="DATE" val="1998-08-30" mod="NA" />
+<TIMEX3 id="T17" start="5912" end="5920" text="08/31/98" type="DATE" val="1998-08-31" mod="NA" />
+<TIMEX3 id="T18" start="6879" end="6887" text="09/02/98" type="DATE" val="1998-09-02" mod="NA" />
+<TIMEX3 id="T19" start="6964" end="6972" text="that day" type="DATE" val="1998-09-02" mod="NA" />
+<TIMEX3 id="T20" start="8450" end="8456" text="day no" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T21" start="8458" end="8459" text="8" type="TIME" val="1998-09-02T08:00" mod="NA" />
+<TIMEX3 id="T22" start="8905" end="8913" text="09/08/98" type="DATE" val="1998-09-08" mod="NA" />
+<TIMEX3 id="T23" start="9460" end="9466" text="day no" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T24" start="9468" end="9469" text="9" type="TIME" val="1998-09-08T09:00" mod="NA" />
+<TIMEX3 id="T25" start="9499" end="9512" text="the same time" type="DATE" val="TPZ+0000-00-00" mod="APPROX" />
+<TIMEX3 id="T26" start="9761" end="9767" text="day no" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T27" start="9769" end="9771" text="12" type="TIME" val="1998-09-08T12:00" mod="NA" />
+<TIMEX3 id="T28" start="11050" end="11060" text="09/13/1998" type="DATE" val="1998-09-13" mod="NA" />

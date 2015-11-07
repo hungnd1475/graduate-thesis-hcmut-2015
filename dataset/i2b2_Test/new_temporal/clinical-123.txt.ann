@@ -1,0 +1,10 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2013-11-21" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2013-11-21" type="DATE" val="2013-11-21" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2013-11-26" type="DATE" val="2013-11-26" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1949-07-18" type="DATE" val="1949-07-18" mod="NA" />
+<TIMEX3 id="T4" start="1342" end="1358" text="THE NEXT MORNING" type="DATE" val="2013-11-22" mod="START" />
+<TIMEX3 id="T5" start="1523" end="1536" text="POST-OP DAY 2" type="DATE" val="2013-11-23" mod="NA" />
+<TIMEX3 id="T6" start="1796" end="1801" text="TODAY" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T7" start="1897" end="1900" text="1:1" type="TIME" val="TPZ+0000-00-00T01:01" mod="NA" />
+<TIMEX3 id="T8" start="2574" end="2580" text="day )." type="DATE" val="2013-11-21" mod="NA" />
+<TIMEX3 id="T9" start="2582" end="2583" text="6" type="TIME" val="2013-11-21T06:00" mod="NA" />

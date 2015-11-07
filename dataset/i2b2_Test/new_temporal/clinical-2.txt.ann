@@ -1,0 +1,21 @@
+<TIMEX3 id="T0" start="34" end="52" text="3/30/1999 12:00:00" type="TIME" val="1999-03-30T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="190" end="192" text="20" type="TIME" val="1999-03-30T20:00" mod="NA" />
+<TIMEX3 id="T3" start="194" end="208" text="ADMISSION DATE" type="DATE" val="1999-03-30" mod="NA" />
+<TIMEX3 id="T4" start="212" end="222" text="03/30/1999" type="DATE" val="1999-03-30" mod="NA" />
+<TIMEX3 id="T5" start="242" end="252" text="09/16/2006" type="DATE" val="2006-09-16" mod="NA" />
+<TIMEX3 id="T6" start="864" end="872" text="03/06/99" type="DATE" val="1999-03-06" mod="NA" />
+<TIMEX3 id="T7" start="962" end="970" text="03/20/99" type="DATE" val="1999-03-20" mod="NA" />
+<TIMEX3 id="T8" start="1021" end="1047" text="one day prior to admission" type="DATE" val="1999-03-29" mod="NA" />
+<TIMEX3 id="T9" start="1303" end="1329" text="one day prior to admission" type="DATE" val="1999-03-29" mod="NA" />
+<TIMEX3 id="T10" start="1411" end="1420" text="that time" type="DATE" val="1999-03-30" mod="NA" />
+<TIMEX3 id="T11" start="1485" end="1505" text="the day of admission" type="DATE" val="1999-03-30" mod="NA" />
+<TIMEX3 id="T12" start="4977" end="4981" text="1/29" type="DATE" val="1999-01-29" mod="NA" />
+<TIMEX3 id="T13" start="5430" end="5444" text="the second day" type="DATE" val="TPZ+0000-00-01" mod="APPROX" />
+<TIMEX3 id="T14" start="5458" end="5464" text="day in" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T15" start="6113" end="6119" text="4/2/99" type="DATE" val="1999-04-02" mod="NA" />
+<TIMEX3 id="T16" start="6658" end="6664" text="4/4/99" type="DATE" val="1999-04-04" mod="NA" />
+<TIMEX3 id="T17" start="7091" end="7104" text="the next week" type="DATE" val="1999-W16" mod="NA" />
+<TIMEX3 id="T18" start="8257" end="8263" text="day to" type="DATE" val="1999-03-30" mod="NA" />
+<TIMEX3 id="T19" start="8283" end="8290" text="4/12/99" type="DATE" val="1999-04-12" mod="NA" />
+<TIMEX3 id="T20" start="8294" end="8295" text="6" type="TIME" val="1999-04-12T06:00" mod="NA" />
+<TIMEX3 id="T21" start="8344" end="8350" text="day to" type="DATE" val="TPZ+0000-00-00" mod="NA" />

@@ -1,0 +1,20 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2011-06-14" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2011-06-14" type="DATE" val="2011-06-14" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2011-06-18" type="DATE" val="2011-06-18" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1939-11-27" type="DATE" val="1939-11-27" mod="NA" />
+<TIMEX3 id="T4" start="394" end="407" text="several years" type="DATE" val="TPZ-0003" mod="APPROX" />
+<TIMEX3 id="T5" start="478" end="490" text="several days" type="DATE" val="TPZ-0000-00-03" mod="APPROX" />
+<TIMEX3 id="T6" start="659" end="689" text="3 a.m. on the day of admission" type="TIME" val="2011-06-14T03:00" mod="NA" />
+<TIMEX3 id="T7" start="724" end="736" text="several days" type="DATE" val="TPZ-0000-00-03" mod="APPROX" />
+<TIMEX3 id="T8" start="2055" end="2065" text="2011-04-11" type="DATE" val="2011-04-11" mod="NA" />
+<TIMEX3 id="T9" start="2087" end="2097" text="2011-05-11" type="DATE" val="2011-05-11" mod="NA" />
+<TIMEX3 id="T10" start="2153" end="2158" text="06-07" type="DATE" val="2011-06-07" mod="NA" />
+<TIMEX3 id="T11" start="2225" end="2238" text="several weeks" type="DATE" val="TPZ-0000-W03" mod="APPROX" />
+<TIMEX3 id="T12" start="2411" end="2415" text="2001" type="DATE" val="2001" mod="NA" />
+<TIMEX3 id="T13" start="2908" end="2918" text="2009-01-10" type="DATE" val="2009-01-10" mod="NA" />
+<TIMEX3 id="T14" start="3045" end="3049" text="2003" type="DATE" val="2003" mod="NA" />
+<TIMEX3 id="T15" start="4381" end="4384" text="May" type="DATE" val="2011-05" mod="NA" />
+<TIMEX3 id="T16" start="4522" end="4534" text="two days ago" type="DATE" val="TPZ-0000-00-02" mod="NA" />
+<TIMEX3 id="T17" start="6849" end="6853" text="2007" type="DATE" val="2007" mod="NA" />
+<TIMEX3 id="T18" start="7082" end="7103" text="the time of discharge" type="DATE" val="2011-06-14" mod="NA" />
+<TIMEX3 id="T19" start="9559" end="9580" text="the time of discharge" type="DATE" val="2011-06-14" mod="NA" />

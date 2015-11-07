@@ -1,0 +1,28 @@
+<TIMEX3 id="T0" start="33" end="51" text="9/26/2001 12:00:00" type="TIME" val="2001-09-26T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="76" end="90" text="Admission Date" type="DATE" val="2001-09-26" mod="NA" />
+<TIMEX3 id="T3" start="94" end="104" text="09/26/2001" type="DATE" val="2001-09-26" mod="NA" />
+<TIMEX3 id="T4" start="149" end="159" text="10/06/2001" type="DATE" val="2001-10-06" mod="NA" />
+<TIMEX3 id="T5" start="372" end="376" text="2001" type="DATE" val="2001" mod="NA" />
+<TIMEX3 id="T6" start="414" end="418" text="7/21" type="DATE" val="2001-07-21" mod="NA" />
+<TIMEX3 id="T7" start="463" end="472" text="this time" type="DATE" val="2001-09-26" mod="NA" />
+<TIMEX3 id="T8" start="524" end="553" text="approximately one month later" type="DATE" val="TPZ+0000-01" mod="APPROX" />
+<TIMEX3 id="T9" start="800" end="804" text="2/21" type="DATE" val="2001-02-21" mod="NA" />
+<TIMEX3 id="T10" start="830" end="835" text="02/89" type="DATE" val="1989-02" mod="NA" />
+<TIMEX3 id="T11" start="845" end="849" text="2/21" type="DATE" val="2001-02-21" mod="NA" />
+<TIMEX3 id="T12" start="1068" end="1072" text="7/22" type="DATE" val="2001-07-22" mod="NA" />
+<TIMEX3 id="T13" start="1297" end="1301" text="July" type="DATE" val="2001-07" mod="NA" />
+<TIMEX3 id="T14" start="1305" end="1331" text="10 days prior to admission" type="DATE" val="2001-09-16" mod="NA" />
+<TIMEX3 id="T15" start="1615" end="1639" text="The day before admission" type="DATE" val="2001-09-25" mod="NA" />
+<TIMEX3 id="T16" start="2185" end="2212" text="two days prior to admission" type="DATE" val="2001-09-24" mod="NA" />
+<TIMEX3 id="T17" start="2809" end="2814" text="02/89" type="DATE" val="1989-02" mod="NA" />
+<TIMEX3 id="T18" start="2819" end="2823" text="2/21" type="DATE" val="2001-02-21" mod="NA" />
+<TIMEX3 id="T19" start="4967" end="4974" text="7/12/01" type="DATE" val="2001-07-12" mod="NA" />
+<TIMEX3 id="T20" start="5598" end="5605" text="9/28/01" type="DATE" val="2001-09-28" mod="NA" />
+<TIMEX3 id="T21" start="5612" end="5619" text="9/30/01" type="DATE" val="2001-09-30" mod="NA" />
+<TIMEX3 id="T22" start="5699" end="5706" text="10/3/01" type="DATE" val="2001-10-03" mod="NA" />
+<TIMEX3 id="T23" start="6912" end="6919" text="10/3/01" type="DATE" val="2001-10-03" mod="NA" />
+<TIMEX3 id="T24" start="7076" end="7090" text="the second day" type="DATE" val="TPZ+0000-00-01" mod="APPROX" />
+<TIMEX3 id="T26" start="7178" end="7184" text="day to" type="DATE" val="2001-09-26" mod="NA" />
+<TIMEX3 id="T27" start="7600" end="7608" text="10/11/01" type="DATE" val="2001-10-11" mod="NA" />
+<TIMEX3 id="T28" start="7728" end="7736" text="10/11/01" type="DATE" val="2001-10-11" mod="NA" />
+<TIMEX3 id="T29" start="7781" end="7789" text="10/13/01" type="DATE" val="2001-10-13" mod="NA" />

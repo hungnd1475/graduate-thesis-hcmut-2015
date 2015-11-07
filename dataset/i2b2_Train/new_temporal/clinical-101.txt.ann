@@ -1,0 +1,14 @@
+<TIMEX3 id="T0" start="26" end="44" text="7/10/1991 12:00:00" type="TIME" val="1991-07-10T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="83" end="97" text="Admission Date" type="DATE" val="1991-07-10" mod="NA" />
+<TIMEX3 id="T3" start="101" end="111" text="07/10/1991" type="DATE" val="1991-07-10" mod="NA" />
+<TIMEX3 id="T4" start="158" end="168" text="07/18/1991" type="DATE" val="1991-07-18" mod="NA" />
+<TIMEX3 id="T5" start="440" end="447" text="7-12-91" type="DATE" val="1991-07-12" mod="NA" />
+<TIMEX3 id="T6" start="905" end="913" text="04-17-92" type="DATE" val="1992-04-17" mod="NA" />
+<TIMEX3 id="T7" start="1324" end="1331" text="5-21-91" type="DATE" val="1991-05-21" mod="NA" />
+<TIMEX3 id="T8" start="1658" end="1665" text="6-12-91" type="DATE" val="1991-06-12" mod="NA" />
+<TIMEX3 id="T9" start="1977" end="1984" text="6-12-91" type="DATE" val="1991-06-12" mod="NA" />
+<TIMEX3 id="T10" start="1988" end="1994" text="7-9-91" type="DATE" val="1991-07-09" mod="NA" />
+<TIMEX3 id="T11" start="2661" end="2667" text="7-9-91" type="DATE" val="1991-07-09" mod="NA" />
+<TIMEX3 id="T12" start="2672" end="2684" text="the next day" type="DATE" val="1991-07-10" mod="NA" />
+<TIMEX3 id="T14" start="2994" end="2998" text="5-10" type="DATE" val="1991-05-10" mod="NA" />
+<TIMEX3 id="T15" start="4254" end="4258" text="1990" type="DATE" val="1990" mod="NA" />

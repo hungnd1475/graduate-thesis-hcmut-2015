@@ -1,0 +1,21 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2012-06-07" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2012-06-07" type="DATE" val="2012-06-07" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2012-06-09" type="DATE" val="2012-06-09" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1963-12-03" type="DATE" val="1963-12-03" mod="NA" />
+<TIMEX3 id="T4" start="486" end="490" text="4/05" type="DATE" val="1963-04-05" mod="NA" />
+<TIMEX3 id="T5" start="673" end="678" text="02-26" type="DATE" val="1963-02-26" mod="NA" />
+<TIMEX3 id="T6" start="1697" end="1714" text="several years ago" type="DATE" val="TPZ-0003" mod="APPROX" />
+<TIMEX3 id="T7" start="3016" end="3032" text="2012-06-07 09:55" type="TIME" val="2012-06-07T09:55" mod="NA" />
+<TIMEX3 id="T9" start="3142" end="3158" text="2012-06-07 09:55" type="TIME" val="2012-06-07T09:55" mod="NA" />
+<TIMEX3 id="T11" start="3233" end="3249" text="2012-06-07 09:55" type="TIME" val="2012-06-07T09:55" mod="NA" />
+<TIMEX3 id="T13" start="3273" end="3289" text="2012-06-07 09:55" type="TIME" val="2012-06-07T09:55" mod="NA" />
+<TIMEX3 id="T15" start="3335" end="3351" text="2012-06-07 09:55" type="TIME" val="2012-06-07T09:55" mod="NA" />
+<TIMEX3 id="T17" start="3454" end="3470" text="2012-06-07 09:55" type="TIME" val="2012-06-07T09:55" mod="NA" />
+<TIMEX3 id="T19" start="3529" end="3545" text="2012-06-07 09:55" type="TIME" val="2012-06-07T09:55" mod="NA" />
+<TIMEX3 id="T21" start="3605" end="3621" text="2012-06-07 09:55" type="TIME" val="2012-06-07T09:55" mod="NA" />
+<TIMEX3 id="T23" start="3717" end="3722" text="today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T24" start="3726" end="3742" text="2012-06-08 09:30" type="TIME" val="2012-06-08T09:30" mod="NA" />
+<TIMEX3 id="T26" start="3861" end="3877" text="2012-06-08 09:30" type="TIME" val="2012-06-08T09:30" mod="NA" />
+<TIMEX3 id="T28" start="3975" end="3991" text="2012-06-08 09:30" type="TIME" val="2012-06-08T09:30" mod="NA" />
+<TIMEX3 id="T30" start="4039" end="4049" text="2012-06-08" type="DATE" val="2012-06-08" mod="NA" />
+<TIMEX3 id="T31" start="5525" end="5533" text="tomorrow" type="DATE" val="TPZ+0000-00-01" mod="NA" />

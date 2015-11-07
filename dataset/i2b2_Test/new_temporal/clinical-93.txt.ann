@@ -1,0 +1,15 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2013-02-12" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2013-02-12" type="DATE" val="2013-02-12" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2013-02-16" type="DATE" val="2013-02-16" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1937-03-25" type="DATE" val="1937-03-25" mod="NA" />
+<TIMEX3 id="T4" start="347" end="357" text="2012-10-22" type="DATE" val="2012-10-22" mod="NA" />
+<TIMEX3 id="T5" start="389" end="398" text="that time" type="DATE" val="2013-02-12" mod="NA" />
+<TIMEX3 id="T6" start="603" end="608" text="01-07" type="DATE" val="2013-01-07" mod="NA" />
+<TIMEX3 id="T7" start="1496" end="1503" text="October" type="DATE" val="2013-10" mod="NA" />
+<TIMEX3 id="T8" start="3144" end="3149" text="02-12" type="DATE" val="2013-02-12" mod="NA" />
+<TIMEX3 id="T9" start="3933" end="3954" text="postoperative day one" type="DATE" val="2013-02-13" mod="NA" />
+<TIMEX3 id="T10" start="3961" end="3982" text="postoperative day two" type="DATE" val="2013-02-14" mod="NA" />
+<TIMEX3 id="T11" start="4432" end="4444" text="several days" type="DATE" val="TPZ-0000-00-03" mod="APPROX" />
+<TIMEX3 id="T12" start="4635" end="4657" text="postoperative day four" type="DATE" val="2013-02-16" mod="NA" />
+<TIMEX3 id="T13" start="4790" end="4810" text="the time of transfer" type="DATE" val="2013-02-12" mod="NA" />
+<TIMEX3 id="T14" start="5096" end="5101" text="02-15" type="DATE" val="2013-02-15" mod="NA" />

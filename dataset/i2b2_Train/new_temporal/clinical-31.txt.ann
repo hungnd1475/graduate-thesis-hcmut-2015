@@ -1,0 +1,21 @@
+<TIMEX3 id="T0" start="33" end="51" text="2/17/2000 12:00:00" type="TIME" val="2000-02-17T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="89" end="103" text="Admission Date" type="DATE" val="2000-02-17" mod="NA" />
+<TIMEX3 id="T3" start="107" end="117" text="02/17/2000" type="DATE" val="2000-02-17" mod="NA" />
+<TIMEX3 id="T4" start="162" end="172" text="02/29/2000" type="DATE" val="2000-02-29" mod="NA" />
+<TIMEX3 id="T5" start="469" end="483" text="seven days ago" type="DATE" val="TPZ-0000-00-07" mod="NA" />
+<TIMEX3 id="T6" start="486" end="493" text="2/11/00" type="DATE" val="2000-02-11" mod="NA" />
+<TIMEX3 id="T7" start="695" end="699" text="1/25" type="DATE" val="2000-01-25" mod="NA" />
+<TIMEX3 id="T8" start="1342" end="1346" text="1999" type="DATE" val="1999" mod="NA" />
+<TIMEX3 id="T9" start="3199" end="3206" text="2/21/00" type="DATE" val="2000-02-21" mod="NA" />
+<TIMEX3 id="T10" start="3472" end="3479" text="2/23/00" type="DATE" val="2000-02-23" mod="NA" />
+<TIMEX3 id="T11" start="3623" end="3630" text="2/23/00" type="DATE" val="2000-02-23" mod="NA" />
+<TIMEX3 id="T12" start="3734" end="3741" text="2/25/00" type="DATE" val="2000-02-25" mod="NA" />
+<TIMEX3 id="T13" start="4094" end="4101" text="2/17/00" type="DATE" val="2000-02-17" mod="NA" />
+<TIMEX3 id="T14" start="4105" end="4112" text="2/21/00" type="DATE" val="2000-02-21" mod="NA" />
+<TIMEX3 id="T15" start="4812" end="4819" text="2/22/00" type="DATE" val="2000-02-22" mod="NA" />
+<TIMEX3 id="T16" start="5079" end="5086" text="2/23/00" type="DATE" val="2000-02-23" mod="NA" />
+<TIMEX3 id="T17" start="5315" end="5322" text="2/24/00" type="DATE" val="2000-02-24" mod="NA" />
+<TIMEX3 id="T18" start="5646" end="5650" text="2/25" type="DATE" val="2000-02-25" mod="NA" />
+<TIMEX3 id="T19" start="5653" end="5660" text="2/27/00" type="DATE" val="2000-02-27" mod="NA" />
+<TIMEX3 id="T20" start="5818" end="5825" text="2/28/00" type="DATE" val="2000-02-28" mod="NA" />
+<TIMEX3 id="T21" start="5986" end="5993" text="2/29/00" type="DATE" val="2000-02-29" mod="NA" />

@@ -1,0 +1,18 @@
+<TIMEX3 id="T0" start="36" end="55" text="10/23/1999 12:00:00" type="TIME" val="1999-10-23T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="92" end="106" text="Admission Date" type="DATE" val="1999-10-23" mod="NA" />
+<TIMEX3 id="T3" start="110" end="120" text="10/23/1999" type="DATE" val="1999-10-23" mod="NA" />
+<TIMEX3 id="T4" start="165" end="175" text="11/02/1999" type="DATE" val="1999-11-02" mod="NA" />
+<TIMEX3 id="T5" start="435" end="442" text="January" type="DATE" val="1999-01" mod="NA" />
+<TIMEX3 id="T6" start="445" end="449" text="1998" type="DATE" val="1998" mod="NA" />
+<TIMEX3 id="T7" start="666" end="673" text="January" type="DATE" val="1998-01" mod="NA" />
+<TIMEX3 id="T8" start="676" end="680" text="1998" type="DATE" val="1998" mod="NA" />
+<TIMEX3 id="T9" start="1241" end="1267" text="the beginning of September" type="DATE" val="1998-09" mod="START" />
+<TIMEX3 id="T10" start="1270" end="1274" text="1999" type="DATE" val="1999" mod="NA" />
+<TIMEX3 id="T11" start="2037" end="2064" text="Over the past several weeks" type="DATE" val="TPZ-0000-W03" mod="APPROX" />
+<TIMEX3 id="T12" start="3167" end="3184" text="October 23 , 1999" type="DATE" val="1999-10-23" mod="NA" />
+<TIMEX3 id="T13" start="4234" end="4237" text="4/5" type="DATE" val="1999-04-05" mod="NA" />
+<TIMEX3 id="T14" start="4969" end="4974" text="10-12" type="DATE" val="1999-10-12" mod="NA" />
+<TIMEX3 id="T15" start="5800" end="5810" text="October 21" type="DATE" val="1999-10-21" mod="NA" />
+<TIMEX3 id="T16" start="6658" end="6675" text="October 31 , 1999" type="DATE" val="1999-10-31" mod="NA" />
+<TIMEX3 id="T17" start="6994" end="6998" text="5-10" type="DATE" val="1999-05-10" mod="NA" />
+<TIMEX3 id="T18" start="7267" end="7276" text="this time" type="DATE" val="TPZ+0000-00-00" mod="NA" />

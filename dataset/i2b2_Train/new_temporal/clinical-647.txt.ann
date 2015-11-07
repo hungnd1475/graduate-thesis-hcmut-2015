@@ -1,0 +1,22 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2016-02-15" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2016-02-15" type="DATE" val="2016-02-15" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2016-02-21" type="DATE" val="2016-02-21" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="2016-02-15" type="DATE" val="2016-02-15" mod="NA" />
+<TIMEX3 id="T4" start="177" end="182" text="03-05" type="DATE" val="2016-03-05" mod="NA" />
+<TIMEX3 id="T5" start="1524" end="1540" text="day of life four" type="DATE" val="2016-02-18" mod="NA" />
+<TIMEX3 id="T6" start="1544" end="1545" text="2" type="TIME" val="2016-02-18T02:00" mod="NA" />
+<TIMEX3 id="T7" start="1911" end="1926" text="day of life one" type="DATE" val="2016-02-15" mod="NA" />
+<TIMEX3 id="T8" start="1967" end="1983" text="day of life four" type="DATE" val="2016-02-18" mod="NA" />
+<TIMEX3 id="T9" start="2096" end="2102" text="day by" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T10" start="2103" end="2119" text="day of life four" type="DATE" val="2016-02-18" mod="NA" />
+<TIMEX3 id="T11" start="2269" end="2284" text="day of life two" type="DATE" val="2016-02-16" mod="NA" />
+<TIMEX3 id="T12" start="2532" end="2537" text="today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T13" start="2577" end="2593" text="the previous day" type="DATE" val="2016-02-15" mod="NA" />
+<TIMEX3 id="T14" start="2597" end="2683" text="4. Gastrointestinal - The infant was started on single phototherapy on day of life two" type="TIME" val="2016-02-16T04:00" mod="NA" />
+<TIMEX3 id="T15" start="2778" end="2794" text="day of life five" type="DATE" val="2016-02-19" mod="NA" />
+<TIMEX3 id="T16" start="2830" end="2845" text="day of life six" type="DATE" val="2016-02-20" mod="NA" />
+<TIMEX3 id="T17" start="2923" end="2938" text="day of life two" type="DATE" val="2016-02-16" mod="NA" />
+<TIMEX3 id="T18" start="3354" end="3369" text="day of life two" type="DATE" val="2016-02-16" mod="NA" />
+<TIMEX3 id="T19" start="4094" end="4109" text="day of life six" type="DATE" val="2016-02-20" mod="NA" />
+<TIMEX3 id="T20" start="4740" end="4747" text="October" type="DATE" val="2016-10" mod="NA" />
+<TIMEX3 id="T21" start="4756" end="4761" text="April" type="DATE" val="2016-04" mod="NA" />

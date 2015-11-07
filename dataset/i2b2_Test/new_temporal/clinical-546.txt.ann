@@ -1,0 +1,7 @@
+<TIMEX3 id="T0" start="41" end="59" text="9/10/1999 12:00:00" type="TIME" val="1999-09-10T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="204" end="218" text="ADMISSION DATE" type="DATE" val="1999-09-10" mod="NA" />
+<TIMEX3 id="T3" start="222" end="232" text="09/10/1999" type="DATE" val="1999-09-10" mod="NA" />
+<TIMEX3 id="T4" start="252" end="262" text="09/14/1999" type="DATE" val="1999-09-14" mod="NA" />
+<TIMEX3 id="T5" start="1629" end="1637" text="same day" type="DATE" val="1999-09-10" mod="NA" />
+<TIMEX3 id="T6" start="2578" end="2601" text="postoperative day three" type="DATE" val="1999-09-13" mod="NA" />
+<TIMEX3 id="T7" start="2919" end="2940" text="the time of discharge" type="DATE" val="1999-09-10" mod="NA" />

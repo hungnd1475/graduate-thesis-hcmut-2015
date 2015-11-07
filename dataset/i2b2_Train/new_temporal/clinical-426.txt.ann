@@ -1,0 +1,7 @@
+<TIMEX3 id="T0" start="34" end="53" text="10/14/2004 12:00:00" type="TIME" val="2004-10-14T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="84" end="98" text="Admission Date" type="DATE" val="2004-10-14" mod="NA" />
+<TIMEX3 id="T3" start="102" end="112" text="10/14/2004" type="DATE" val="2004-10-14" mod="NA" />
+<TIMEX3 id="T4" start="157" end="167" text="10/17/2004" type="DATE" val="2004-10-17" mod="NA" />
+<TIMEX3 id="T5" start="747" end="755" text="08/31/04" type="DATE" val="2004-08-31" mod="NA" />
+<TIMEX3 id="T6" start="1497" end="1513" text="hospital day # 1" type="DATE" val="2004-10-14" mod="NA" />
+<TIMEX3 id="T7" start="1845" end="1865" text="postoperative day #3" type="DATE" val="2004-10-17" mod="NA" />

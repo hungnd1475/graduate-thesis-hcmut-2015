@@ -1,0 +1,20 @@
+<TIMEX3 id="T0" start="28" end="34" text="279659" type="DATE" val="2796-05-09" mod="NA" />
+<TIMEX3 id="T1" start="36" end="54" text="8/31/1992 12:00:00" type="TIME" val="1992-08-31T12:00:00" mod="NA" />
+<TIMEX3 id="T3" start="91" end="105" text="Admission Date" type="DATE" val="1992-08-31" mod="NA" />
+<TIMEX3 id="T4" start="109" end="119" text="08/31/1992" type="DATE" val="1992-08-31" mod="NA" />
+<TIMEX3 id="T5" start="164" end="174" text="09/07/1992" type="DATE" val="1992-09-07" mod="NA" />
+<TIMEX3 id="T6" start="589" end="597" text="08/23/92" type="DATE" val="1992-08-23" mod="NA" />
+<TIMEX3 id="T7" start="601" end="609" text="08/25/92" type="DATE" val="1992-08-25" mod="NA" />
+<TIMEX3 id="T8" start="852" end="867" text="the night prior" type="DATE" val="1992-08-30" mod="END" />
+<TIMEX3 id="T9" start="1092" end="1107" text="three weeks ago" type="DATE" val="TPZ-0000-W03" mod="NA" />
+<TIMEX3 id="T10" start="1257" end="1278" text="the time of admission" type="DATE" val="1992-08-31" mod="NA" />
+<TIMEX3 id="T11" start="1309" end="1315" text="Monday" type="DATE" val="1992-08-31" mod="NA" />
+<TIMEX3 id="T12" start="1318" end="1327" text="Wednesday" type="DATE" val="1992-08-26" mod="NA" />
+<TIMEX3 id="T13" start="1332" end="1338" text="Friday" type="DATE" val="1992-08-21" mod="NA" />
+<TIMEX3 id="T14" start="1528" end="1549" text="the time of admission" type="DATE" val="1992-08-31" mod="NA" />
+<TIMEX3 id="T15" start="2488" end="2496" text="08/08/92" type="DATE" val="1992-08-08" mod="NA" />
+<TIMEX3 id="T16" start="3028" end="3036" text="09/06/92" type="DATE" val="1992-09-06" mod="NA" />
+<TIMEX3 id="T17" start="3310" end="3331" text="the time of discharge" type="DATE" val="1992-08-31" mod="NA" />
+<TIMEX3 id="T18" start="3456" end="3462" text="Monday" type="DATE" val="1992-08-31" mod="NA" />
+<TIMEX3 id="T19" start="3465" end="3474" text="Wednesday" type="DATE" val="1992-08-26" mod="NA" />
+<TIMEX3 id="T20" start="3479" end="3485" text="Friday" type="DATE" val="1992-08-21" mod="NA" />

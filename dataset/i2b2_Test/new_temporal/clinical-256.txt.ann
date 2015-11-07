@@ -1,0 +1,8 @@
+<TIMEX3 id="T0" start="46" end="64" text="4/14/1994 12:00:00" type="TIME" val="1994-04-14T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="155" end="169" text="ADMISSION DATE" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T3" start="173" end="180" text="4/14/94" type="DATE" val="1994-04-14" mod="NA" />
+<TIMEX3 id="T4" start="200" end="207" text="4/20/94" type="DATE" val="1994-04-20" mod="NA" />
+<TIMEX3 id="T5" start="407" end="422" text="April 14 , 1994" type="DATE" val="1994-04-14" mod="NA" />
+<TIMEX3 id="T6" start="5533" end="5554" text="the time of discharge" type="DATE" val="1994-04-14" mod="NA" />
+<TIMEX3 id="T7" start="6463" end="6483" text="the 7th hospital day" type="DATE" val="1994-04-20" mod="NA" />
+<TIMEX3 id="T8" start="6780" end="6800" text="the 7th hospital day" type="DATE" val="1994-04-20" mod="NA" />

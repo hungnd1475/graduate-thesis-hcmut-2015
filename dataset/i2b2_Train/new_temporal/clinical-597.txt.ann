@@ -1,0 +1,30 @@
+<TIMEX3 id="T0" start="4" end="18" text="Admission Date" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T1" start="22" end="32" text="1989-03-20" type="DATE" val="1989-03-20" mod="NA" />
+<TIMEX3 id="T2" start="52" end="62" text="2015-12-31" type="DATE" val="2015-12-31" mod="NA" />
+<TIMEX3 id="T3" start="81" end="91" text="1931-12-09" type="DATE" val="1931-12-09" mod="NA" />
+<TIMEX3 id="T4" start="177" end="197" text="earlier this morning" type="DATE" val="1931-12-09" mod="START" />
+<TIMEX3 id="T5" start="851" end="856" text="11-18" type="DATE" val="2015-11-18" mod="NA" />
+<TIMEX3 id="T6" start="1124" end="1132" text="this day" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T7" start="1139" end="1153" text="early November" type="DATE" val="2015-11" mod="START" />
+<TIMEX3 id="T8" start="1311" end="1316" text="12-23" type="DATE" val="2015-12-23" mod="NA" />
+<TIMEX3 id="T9" start="1498" end="1503" text="11-23" type="DATE" val="2015-11-23" mod="NA" />
+<TIMEX3 id="T10" start="1510" end="1515" text="11-24" type="DATE" val="2015-11-24" mod="NA" />
+<TIMEX3 id="T11" start="1686" end="1691" text="today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T12" start="1695" end="1700" text="12-31" type="DATE" val="2015-12-31" mod="NA" />
+<TIMEX3 id="T13" start="2100" end="2105" text="today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T14" start="2487" end="2496" text="this week" type="DATE" val="2015-W1" mod="NA" />
+<TIMEX3 id="T15" start="3044" end="3050" text="Monday" type="DATE" val="2015-12-28" mod="NA" />
+<TIMEX3 id="T16" start="3053" end="3062" text="Wednesday" type="DATE" val="2015-12-23" mod="NA" />
+<TIMEX3 id="T17" start="3067" end="3073" text="Friday" type="DATE" val="2015-12-18" mod="NA" />
+<TIMEX3 id="T18" start="3149" end="3162" text="the past week" type="DATE" val="2015-W50" mod="NA" />
+<TIMEX3 id="T19" start="3206" end="3217" text="the mid-30s" type="DATE" val="1930" mod="MID" />
+<TIMEX3 id="T20" start="3321" end="3326" text="12-29" type="DATE" val="2015-12-29" mod="NA" />
+<TIMEX3 id="T21" start="3533" end="3538" text="today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T22" start="3610" end="3615" text="today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T23" start="4039" end="4045" text="day 23" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T24" start="4847" end="4853" text="day 23" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T25" start="5706" end="5718" text="30 years ago" type="DATE" val="TPZ-0030" mod="NA" />
+<TIMEX3 id="T26" start="5722" end="5784" text="14. Colon cancer status post colectomy with XRT four years ago" type="TIME" val="TPZ-0004T14:00" mod="NA" />
+<TIMEX3 id="T27" start="5952" end="5960" text="Thursday" type="DATE" val="2015-12-24" mod="NA" />
+<TIMEX3 id="T28" start="5963" end="5968" text="12-31" type="DATE" val="2015-12-31" mod="NA" />
+<TIMEX3 id="T29" start="6005" end="6025" text="postoperative day 93" type="DATE" val="" mod="NA" />

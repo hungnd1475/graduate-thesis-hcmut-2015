@@ -1,0 +1,40 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2016-05-05" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2016-05-05" type="DATE" val="2016-05-05" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2016-06-15" type="DATE" val="2016-06-15" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="2016-05-05" type="DATE" val="2016-05-05" mod="NA" />
+<TIMEX3 id="T4" start="178" end="183" text="08-01" type="DATE" val="2016-08-01" mod="NA" />
+<TIMEX3 id="T5" start="419" end="429" text="2016-07-08" type="DATE" val="2016-07-08" mod="NA" />
+<TIMEX3 id="T6" start="763" end="772" text="that time" type="DATE" val="2016-05-05" mod="NA" />
+<TIMEX3 id="T7" start="2130" end="2145" text="day of life two" type="DATE" val="2016-05-06" mod="NA" />
+<TIMEX3 id="T8" start="2244" end="2260" text="day of life four" type="DATE" val="2016-05-08" mod="NA" />
+<TIMEX3 id="T9" start="2301" end="2316" text="day of life six" type="DATE" val="2016-05-10" mod="NA" />
+<TIMEX3 id="T10" start="2422" end="2437" text="day of life six" type="DATE" val="2016-05-10" mod="NA" />
+<TIMEX3 id="T11" start="2462" end="2467" text="05-23" type="DATE" val="2016-05-23" mod="NA" />
+<TIMEX3 id="T12" start="2470" end="2484" text="day of life 18" type="DATE" val="2016-05-22" mod="NA" />
+<TIMEX3 id="T13" start="2527" end="2532" text="06-10" type="DATE" val="2016-06-10" mod="NA" />
+<TIMEX3 id="T14" start="2536" end="2537" text="2" type="TIME" val="2016-06-10T02:00" mod="NA" />
+<TIMEX3 id="T15" start="2890" end="2906" text="day of life four" type="DATE" val="2016-05-08" mod="NA" />
+<TIMEX3 id="T16" start="2971" end="2977" text="day by" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T17" start="2978" end="2995" text="day of life seven" type="DATE" val="2016-05-11" mod="NA" />
+<TIMEX3 id="T18" start="3266" end="3280" text="day of life 11" type="DATE" val="2016-05-15" mod="NA" />
+<TIMEX3 id="T19" start="3508" end="3524" text="day of life five" type="DATE" val="2016-05-09" mod="NA" />
+<TIMEX3 id="T20" start="3589" end="3603" text="day of life 25" type="DATE" val="2016-05-29" mod="NA" />
+<TIMEX3 id="T21" start="3734" end="3749" text="day of life two" type="DATE" val="2016-05-06" mod="NA" />
+<TIMEX3 id="T22" start="3888" end="3903" text="day of life six" type="DATE" val="2016-05-10" mod="NA" />
+<TIMEX3 id="T23" start="3934" end="3951" text="day of life seven" type="DATE" val="2016-05-11" mod="NA" />
+<TIMEX3 id="T24" start="4105" end="4120" text="day of life two" type="DATE" val="2016-05-06" mod="NA" />
+<TIMEX3 id="T25" start="4257" end="4272" text="day of life two" type="DATE" val="2016-05-06" mod="NA" />
+<TIMEX3 id="T26" start="4383" end="4400" text="day of life three" type="DATE" val="2016-05-07" mod="NA" />
+<TIMEX3 id="T27" start="4663" end="4680" text="day of life seven" type="DATE" val="2016-05-11" mod="NA" />
+<TIMEX3 id="T28" start="4750" end="4764" text="day of life 33" type="DATE" val="2016-06-06" mod="NA" />
+<TIMEX3 id="T29" start="4765" end="4770" text="06-07" type="DATE" val="2016-06-07" mod="NA" />
+<TIMEX3 id="T30" start="5197" end="5202" text="05-30" type="DATE" val="2016-05-30" mod="NA" />
+<TIMEX3 id="T31" start="5333" end="5338" text="06-20" type="DATE" val="2016-06-20" mod="NA" />
+<TIMEX3 id="T32" start="5957" end="5963" text="day po" type="DATE" val="2016-05-05" mod="NA" />
+<TIMEX3 id="T33" start="6080" end="6085" text="06-07" type="DATE" val="2016-06-07" mod="NA" />
+<TIMEX3 id="T34" start="6114" end="6124" text="2016-06-07" type="DATE" val="2016-06-07" mod="NA" />
+<TIMEX3 id="T35" start="6163" end="6168" text="05-08" type="DATE" val="2016-05-08" mod="NA" />
+<TIMEX3 id="T36" start="6173" end="6178" text="05-19" type="DATE" val="2016-05-19" mod="NA" />
+<TIMEX3 id="T37" start="6283" end="6293" text="2016-06-02" type="DATE" val="2016-06-02" mod="NA" />
+<TIMEX3 id="T38" start="6375" end="6382" text="October" type="DATE" val="2016-10" mod="NA" />
+<TIMEX3 id="T39" start="6391" end="6396" text="April" type="DATE" val="2016-04" mod="NA" />

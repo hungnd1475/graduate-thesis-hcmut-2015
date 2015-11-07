@@ -1,0 +1,7 @@
+<TIMEX3 id="T0" start="43" end="61" text="12/7/1996 12:00:00" type="TIME" val="1996-12-07T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="198" end="200" text="20" type="TIME" val="1996-12-07T20:00" mod="NA" />
+<TIMEX3 id="T3" start="202" end="216" text="ADMISSION DATE" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T4" start="220" end="228" text="12/07/96" type="DATE" val="1996-12-07" mod="NA" />
+<TIMEX3 id="T5" start="248" end="256" text="12/14/96" type="DATE" val="1996-12-14" mod="NA" />
+<TIMEX3 id="T6" start="1094" end="1104" text="December 7" type="DATE" val="1996-12-07" mod="NA" />
+<TIMEX3 id="T7" start="1792" end="1813" text="the time of discharge" type="DATE" val="1996-12-07" mod="NA" />

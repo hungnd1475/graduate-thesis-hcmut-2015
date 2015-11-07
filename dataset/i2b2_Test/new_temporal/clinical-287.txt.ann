@@ -1,0 +1,33 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2018-08-02" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2018-08-02" type="DATE" val="2018-08-02" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2018-08-08" type="DATE" val="2018-08-08" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1941-03-03" type="DATE" val="1941-03-03" mod="NA" />
+<TIMEX3 id="T4" start="550" end="564" text="Three days ago" type="DATE" val="TPZ-0000-00-03" mod="NA" />
+<TIMEX3 id="T5" start="828" end="844" text="day of admission" type="DATE" val="2018-08-02" mod="NA" />
+<TIMEX3 id="T6" start="1636" end="1641" text="03-30" type="DATE" val="2041-03-30" mod="NA" />
+<TIMEX3 id="T7" start="1808" end="1812" text="2014" type="DATE" val="2014" mod="NA" />
+<TIMEX3 id="T8" start="1851" end="1856" text="01-28" type="DATE" val="2041-01-28" mod="NA" />
+<TIMEX3 id="T9" start="1958" end="1962" text="2001" type="DATE" val="2001" mod="NA" />
+<TIMEX3 id="T10" start="1967" end="1971" text="2000" type="DATE" val="2000" mod="NA" />
+<TIMEX3 id="T11" start="3264" end="3280" text="2018-08-07 12:56" type="TIME" val="2018-08-07T12:56" mod="NA" />
+<TIMEX3 id="T13" start="3403" end="3419" text="2018-08-02 12:29" type="TIME" val="2018-08-02T12:29" mod="NA" />
+<TIMEX3 id="T15" start="3444" end="3460" text="2018-08-02 04:40" type="TIME" val="2018-08-02T04:40" mod="NA" />
+<TIMEX3 id="T17" start="3585" end="3601" text="2018-08-06 04:52" type="TIME" val="2018-08-06T04:52" mod="NA" />
+<TIMEX3 id="T19" start="3653" end="3669" text="2018-08-07 12:56" type="TIME" val="2018-08-07T12:56" mod="NA" />
+<TIMEX3 id="T21" start="3757" end="3773" text="2018-08-06 04:52" type="TIME" val="2018-08-06T04:52" mod="NA" />
+<TIMEX3 id="T23" start="3875" end="3891" text="2018-08-02 04:40" type="TIME" val="2018-08-02T04:40" mod="NA" />
+<TIMEX3 id="T25" start="3996" end="4012" text="2018-08-07 12:56" type="TIME" val="2018-08-07T12:56" mod="NA" />
+<TIMEX3 id="T27" start="4095" end="4105" text="2018-08-02" type="DATE" val="2018-08-02" mod="NA" />
+<TIMEX3 id="T28" start="4326" end="4336" text="2017-10-12" type="DATE" val="2017-10-12" mod="NA" />
+<TIMEX3 id="T29" start="4511" end="4526" text="2018-08-03 5:40" type="TIME" val="2018-08-03T5:40" mod="NA" />
+<TIMEX3 id="T31" start="4588" end="4598" text="2018-08-06" type="DATE" val="2018-08-06" mod="NA" />
+<TIMEX3 id="T32" start="4645" end="4655" text="2018-08-06" type="DATE" val="2018-08-06" mod="NA" />
+<TIMEX3 id="T33" start="5910" end="5935" text="4 days prior to discharge" type="DATE" val="2018-07-29" mod="NA" />
+<TIMEX3 id="T34" start="6354" end="6363" text="this week" type="DATE" val="2018-W31" mod="NA" />
+<TIMEX3 id="T35" start="6793" end="6814" text="the time of discharge" type="DATE" val="2018-08-02" mod="NA" />
+<TIMEX3 id="T36" start="8193" end="8203" text="2018-08-10" type="DATE" val="2018-08-10" mod="NA" />
+<TIMEX3 id="T37" start="8207" end="8286" text="11. Metoprolol Tartrate 25 mg Tablet Sig : 0.5 Tablet PO BID ( 2 times a day ) " type="TIME" val="TPZ+0000-00-00T11:00" mod="NA" />
+<TIMEX3 id="T38" start="8871" end="8877" text="Friday" type="DATE" val="2018-08-10" mod="NA" />
+<TIMEX3 id="T39" start="8878" end="8888" text="2018-08-10" type="DATE" val="2018-08-10" mod="NA" />
+<TIMEX3 id="T40" start="8950" end="8956" text="Friday" type="DATE" val="2018-08-10" mod="NA" />
+<TIMEX3 id="T41" start="8971" end="8979" text="same day" type="DATE" val="TPZ+0000-00-00" mod="NA" />

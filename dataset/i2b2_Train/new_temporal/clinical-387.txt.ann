@@ -1,0 +1,19 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2013-08-24" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2013-08-24" type="DATE" val="2013-08-24" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2013-08-27" type="DATE" val="2013-08-27" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1987-09-08" type="DATE" val="1987-09-08" mod="NA" />
+<TIMEX3 id="T4" start="3137" end="3153" text="hospital day two" type="DATE" val="2013-08-25" mod="NA" />
+<TIMEX3 id="T5" start="3575" end="3593" text="hospital day three" type="DATE" val="2013-08-26" mod="NA" />
+<TIMEX3 id="T6" start="3997" end="4014" text="hospital day four" type="DATE" val="2013-08-27" mod="NA" />
+<TIMEX3 id="T7" start="4246" end="4271" text="the time of his admission" type="DATE" val="2013-08-24" mod="NA" />
+<TIMEX3 id="T8" start="4426" end="4444" text="hospital day three" type="DATE" val="2013-08-26" mod="NA" />
+<TIMEX3 id="T9" start="5802" end="5807" text="08-25" type="DATE" val="2013-08-25" mod="NA" />
+<TIMEX3 id="T10" start="5858" end="5863" text="08-25" type="DATE" val="2013-08-25" mod="NA" />
+<TIMEX3 id="T11" start="5901" end="5906" text="08-27" type="DATE" val="2013-08-27" mod="NA" />
+<TIMEX3 id="T12" start="5962" end="5967" text="08-27" type="DATE" val="2013-08-27" mod="NA" />
+<TIMEX3 id="T13" start="6150" end="6167" text="hospital day four" type="DATE" val="2013-08-27" mod="NA" />
+<TIMEX3 id="T14" start="7220" end="7238" text="hospital day three" type="DATE" val="2013-08-26" mod="NA" />
+<TIMEX3 id="T15" start="7394" end="7411" text="hospital day four" type="DATE" val="2013-08-27" mod="NA" />
+<TIMEX3 id="T16" start="7549" end="7566" text="hospital day four" type="DATE" val="2013-08-27" mod="NA" />
+<TIMEX3 id="T17" start="8779" end="8783" text="1914" type="DATE" val="1914" mod="NA" />
+<TIMEX3 id="T18" start="8787" end="8792" text="08-27" type="DATE" val="2013-08-27" mod="NA" />

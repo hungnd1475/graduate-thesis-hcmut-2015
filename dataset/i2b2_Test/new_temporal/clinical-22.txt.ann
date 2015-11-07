@@ -1,0 +1,9 @@
+<TIMEX3 id="T0" start="36" end="55" text="12/11/2003 12:00:00" type="TIME" val="2003-12-11T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="183" end="197" text="ADMISSION DATE" type="DATE" val="2003-12-11" mod="NA" />
+<TIMEX3 id="T3" start="201" end="211" text="12/11/2003" type="DATE" val="2003-12-11" mod="NA" />
+<TIMEX3 id="T4" start="231" end="241" text="01/08/2004" type="DATE" val="2004-01-08" mod="NA" />
+<TIMEX3 id="T5" start="325" end="334" text="this time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T6" start="471" end="492" text="THE TIME OF ADMISSION" type="DATE" val="2003-12-11" mod="NA" />
+<TIMEX3 id="T7" start="1097" end="1118" text="the time of admission" type="DATE" val="2003-12-11" mod="NA" />
+<TIMEX3 id="T8" start="1151" end="1167" text="one week earlier" type="DATE" val="TPZ-0000-W01" mod="NA" />
+<TIMEX3 id="T9" start="2205" end="2221" text="02/05/2004 17:03" type="TIME" val="2004-02-05T17:03" mod="NA" />

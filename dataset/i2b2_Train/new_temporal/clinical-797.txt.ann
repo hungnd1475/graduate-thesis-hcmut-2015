@@ -1,0 +1,30 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2012-11-06" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2012-11-06" type="DATE" val="2012-11-06" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2012-11-11" type="DATE" val="2012-11-11" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1965-09-22" type="DATE" val="1965-09-22" mod="NA" />
+<TIMEX3 id="T4" start="310" end="314" text="2005" type="DATE" val="2005" mod="NA" />
+<TIMEX3 id="T5" start="317" end="380" text="3-vessel percutaneous transluminal coronary angioplasty in 2009" type="TIME" val="2009T03:00" mod="NA" />
+<TIMEX3 id="T6" start="583" end="607" text="the morning of admission" type="DATE" val="2012-11-06" mod="START" />
+<TIMEX3 id="T7" start="774" end="785" text="many months" type="DATE" val="TPZ-0000-03" mod="APPROX" />
+<TIMEX3 id="T8" start="840" end="845" text="07-12" type="DATE" val="2012-07-12" mod="NA" />
+<TIMEX3 id="T9" start="863" end="868" text="10-12" type="DATE" val="2012-10-12" mod="NA" />
+<TIMEX3 id="T10" start="1268" end="1278" text="2012-07-03" type="DATE" val="2012-07-03" mod="NA" />
+<TIMEX3 id="T11" start="1525" end="1534" text="that time" type="DATE" val="2012-11-06" mod="NA" />
+<TIMEX3 id="T12" start="2095" end="2104" text="this time" type="DATE" val="2012-11-06" mod="NA" />
+<TIMEX3 id="T13" start="2258" end="2262" text="2009" type="DATE" val="2009" mod="NA" />
+<TIMEX3 id="T14" start="2372" end="2376" text="2005" type="DATE" val="2005" mod="NA" />
+<TIMEX3 id="T15" start="2672" end="2681" text="this time" type="DATE" val="2012-11-06" mod="NA" />
+<TIMEX3 id="T16" start="2692" end="2704" text="20 years ago" type="DATE" val="TPZ-0020" mod="NA" />
+<TIMEX3 id="T17" start="4779" end="4786" text="11 a.m." type="TIME" val="2012-11-06T11:00" mod="NA" />
+<TIMEX3 id="T18" start="4799" end="4805" text="5 p.m." type="TIME" val="2012-11-06T17:00" mod="NA" />
+<TIMEX3 id="T19" start="4840" end="4847" text="11 a.m." type="TIME" val="2012-11-06T11:00" mod="NA" />
+<TIMEX3 id="T20" start="4897" end="4926" text="11:15 on the day of admission" type="TIME" val="2012-11-06T11:15" mod="NA" />
+<TIMEX3 id="T21" start="4946" end="4952" text="5 p.m." type="TIME" val="2012-11-06T17:00" mod="NA" />
+<TIMEX3 id="T22" start="4964" end="4971" text="11 p.m." type="TIME" val="2012-11-06T23:00" mod="NA" />
+<TIMEX3 id="T23" start="4985" end="5003" text="5:30 a.m. on 11-07" type="TIME" val="2012-11-07T05:30" mod="NA" />
+<TIMEX3 id="T24" start="5017" end="5036" text="11:30 a.m. on 11-07" type="TIME" val="2012-11-07T11:30" mod="NA" />
+<TIMEX3 id="T25" start="5048" end="5066" text="9:30 a.m. on 11-11" type="TIME" val="2012-11-11T09:30" mod="NA" />
+<TIMEX3 id="T26" start="6236" end="6243" text="day one" type="DATE" val="2012-11-06" mod="NA" />
+<TIMEX3 id="T27" start="6297" end="6304" text="day two" type="DATE" val="2012-11-07" mod="NA" />
+<TIMEX3 id="T28" start="6408" end="6425" text="hospital day four" type="DATE" val="2012-11-09" mod="NA" />
+<TIMEX3 id="T29" start="6771" end="6789" text="hospital day three" type="DATE" val="2012-11-08" mod="NA" />

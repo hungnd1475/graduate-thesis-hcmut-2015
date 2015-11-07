@@ -1,0 +1,12 @@
+<TIMEX3 id="T0" start="46" end="64" text="2/23/1993 12:00:00" type="TIME" val="1993-02-23T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="162" end="176" text="ADMISSION DATE" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T3" start="180" end="187" text="2-23-93" type="DATE" val="1993-02-23" mod="NA" />
+<TIMEX3 id="T4" start="207" end="214" text="2-24-93" type="DATE" val="1993-02-24" mod="NA" />
+<TIMEX3 id="T5" start="546" end="555" text="last fall" type="DATE" val="0" mod="APPROX" />
+<TIMEX3 id="T6" start="877" end="903" text="Approximately one week ago" type="DATE" val="TPZ-0000-W01" mod="APPROX" />
+<TIMEX3 id="T7" start="1007" end="1016" text="that time" type="DATE" val="1993-02-23" mod="NA" />
+<TIMEX3 id="T8" start="1135" end="1146" text="February 23" type="DATE" val="1993-02-23" mod="NA" />
+<TIMEX3 id="T9" start="2961" end="2979" text="February 23 , 1993" type="DATE" val="1993-02-23" mod="NA" />
+<TIMEX3 id="T10" start="3163" end="3172" text="yesterday" type="DATE" val="TPZ-0000-00-01" mod="NA" />
+<TIMEX3 id="T11" start="3444" end="3453" text="next week" type="DATE" val="1993-W10" mod="NA" />
+<TIMEX3 id="T12" start="3693" end="3704" text="February 24" type="DATE" val="1993-02-24" mod="NA" />

@@ -1,0 +1,24 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2017-06-13" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2017-06-13" type="DATE" val="2017-06-13" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2017-06-17" type="DATE" val="2017-06-17" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1956-02-17" type="DATE" val="1956-02-17" mod="NA" />
+<TIMEX3 id="T4" start="762" end="767" text="today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T5" start="1197" end="1215" text="2017-06-14 02:06AM" type="TIME" val="2017-06-14T02:06" mod="NA" />
+<TIMEX3 id="T6" start="1326" end="1344" text="2017-06-17 05:14AM" type="TIME" val="2017-06-17T05:14" mod="NA" />
+<TIMEX3 id="T7" start="1365" end="1383" text="2017-06-14 02:06AM" type="TIME" val="2017-06-14T02:06" mod="NA" />
+<TIMEX3 id="T8" start="1405" end="1423" text="2017-06-13 08:05PM" type="TIME" val="2017-06-13T20:05" mod="NA" />
+<TIMEX3 id="T9" start="1472" end="1490" text="2017-06-17 05:14AM" type="TIME" val="2017-06-17T05:14" mod="NA" />
+<TIMEX3 id="T10" start="1531" end="1549" text="2017-06-15 02:02PM" type="TIME" val="2017-06-15T14:02" mod="NA" />
+<TIMEX3 id="T11" start="1598" end="1608" text="2017-06-17" type="DATE" val="2017-06-17" mod="NA" />
+<TIMEX3 id="T12" start="1624" end="1634" text="2017-06-14" type="DATE" val="2017-06-14" mod="NA" />
+<TIMEX3 id="T13" start="2431" end="2446" text="2017-06-17 8:20" type="TIME" val="2017-06-17T8:20" mod="NA" />
+<TIMEX3 id="T15" start="2466" end="2476" text="2017-06-17" type="DATE" val="2017-06-17" mod="NA" />
+<TIMEX3 id="T16" start="4441" end="4446" text="06-13" type="DATE" val="2017-06-13" mod="NA" />
+<TIMEX3 id="T17" start="4549" end="4565" text="the next morning" type="DATE" val="TPZ+0000-00-01" mod="START" />
+<TIMEX3 id="T18" start="4732" end="4738" text="POD #2" type="DATE" val="2017-06-15" mod="NA" />
+<TIMEX3 id="T19" start="4791" end="4803" text="the next day" type="DATE" val="2017-06-16" mod="NA" />
+<TIMEX3 id="T20" start="4924" end="4930" text="POD #4" type="DATE" val="2017-06-17" mod="NA" />
+<TIMEX3 id="T21" start="5215" end="5221" text="day ) " type="DATE" val="2017-06-13" mod="NA" />
+<TIMEX3 id="T22" start="5544" end="5550" text="day ) " type="DATE" val="2017-06-13" mod="NA" />
+<TIMEX3 id="T23" start="5668" end="5674" text="day ) " type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T24" start="6478" end="6481" text="may" type="DATE" val="2017-05" mod="NA" />

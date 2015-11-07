@@ -1,0 +1,42 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2011-12-17" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2011-12-17" type="DATE" val="2011-12-17" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2012-01-14" type="DATE" val="2012-01-14" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1932-12-18" type="DATE" val="1932-12-18" mod="NA" />
+<TIMEX3 id="T4" start="409" end="413" text="8/04" type="DATE" val="2032-08-04" mod="NA" />
+<TIMEX3 id="T5" start="512" end="530" text="several months ago" type="DATE" val="TPZ-0000-03" mod="APPROX" />
+<TIMEX3 id="T6" start="589" end="594" text="12-14" type="DATE" val="2032-12-14" mod="NA" />
+<TIMEX3 id="T7" start="768" end="780" text="several days" type="DATE" val="TPZ-0000-00-03" mod="APPROX" />
+<TIMEX3 id="T8" start="1047" end="1064" text="the past few days" type="DATE" val="TPZ-0000-00-03" mod="APPROX" />
+<TIMEX3 id="T9" start="1519" end="1524" text="12-20" type="DATE" val="2032-12-20" mod="NA" />
+<TIMEX3 id="T10" start="1660" end="1675" text="day of transfer" type="DATE" val="2011-12-17" mod="NA" />
+<TIMEX3 id="T11" start="1912" end="1924" text="20 years ago" type="DATE" val="TPZ-0020" mod="NA" />
+<TIMEX3 id="T12" start="1926" end="1927" text="2" type="TIME" val="2011-12-17T02:00" mod="NA" />
+<TIMEX3 id="T13" start="2421" end="2426" text="03-07" type="DATE" val="2032-03-07" mod="NA" />
+<TIMEX3 id="T14" start="2529" end="2545" text="2011-12-23 07:54" type="TIME" val="2011-12-23T07:54" mod="NA" />
+<TIMEX3 id="T16" start="2665" end="2681" text="2011-12-23 07:54" type="TIME" val="2011-12-23T07:54" mod="NA" />
+<TIMEX3 id="T18" start="2790" end="2806" text="2011-12-23 07:54" type="TIME" val="2011-12-23T07:54" mod="NA" />
+<TIMEX3 id="T20" start="2868" end="2884" text="2011-12-23 07:54" type="TIME" val="2011-12-23T07:54" mod="NA" />
+<TIMEX3 id="T22" start="2989" end="3005" text="2011-12-18 06:15" type="TIME" val="2011-12-18T06:15" mod="NA" />
+<TIMEX3 id="T24" start="3079" end="3095" text="2011-12-23 11:16" type="TIME" val="2011-12-23T11:16" mod="NA" />
+<TIMEX3 id="T26" start="3179" end="3195" text="2011-12-20 07:53" type="TIME" val="2011-12-20T07:53" mod="NA" />
+<TIMEX3 id="T28" start="3597" end="3601" text="HD 5" type="DATE" val="2011-12-21" mod="NA" />
+<TIMEX3 id="T29" start="3900" end="3905" text="11-22" type="DATE" val="2032-11-22" mod="NA" />
+<TIMEX3 id="T30" start="4085" end="4090" text="03-07" type="DATE" val="2032-03-07" mod="NA" />
+<TIMEX3 id="T31" start="4221" end="4226" text="01-03" type="DATE" val="2032-01-03" mod="NA" />
+<TIMEX3 id="T32" start="4910" end="4915" text="10/12" type="DATE" val="2032-10-12" mod="NA" />
+<TIMEX3 id="T33" start="5129" end="5134" text="01-15" type="DATE" val="2032-01-15" mod="NA" />
+<TIMEX3 id="T34" start="6377" end="6382" text="12-28" type="DATE" val="2032-12-28" mod="NA" />
+<TIMEX3 id="T35" start="6759" end="6764" text="11-24" type="DATE" val="2032-11-24" mod="NA" />
+<TIMEX3 id="T36" start="7216" end="7230" text="the second day" type="DATE" val="TPZ+0000-00-01" mod="APPROX" />
+<TIMEX3 id="T37" start="7656" end="7668" text="the next day" type="DATE" val="2032-11-25" mod="NA" />
+<TIMEX3 id="T38" start="7812" end="7817" text="03-07" type="DATE" val="2032-03-07" mod="NA" />
+<TIMEX3 id="T39" start="7951" end="7956" text="01-16" type="DATE" val="2032-01-16" mod="NA" />
+<TIMEX3 id="T40" start="7960" end="7961" text="5" type="TIME" val="2032-01-16T05:00" mod="NA" />
+<TIMEX3 id="T41" start="8549" end="8554" text="today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T42" start="8556" end="8558" text="17" type="TIME" val="2032-01-16T17:00" mod="NA" />
+<TIMEX3 id="T43" start="8932" end="8938" text="day ) " type="DATE" val="2011-12-17" mod="NA" />
+<TIMEX3 id="T44" start="8941" end="8942" text="2" type="TIME" val="2011-12-17T02:00" mod="NA" />
+<TIMEX3 id="T45" start="9475" end="9481" text="day ) " type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T46" start="9484" end="9570" text="8. Nystatin 100,000 unit / mL Suspension Sig : Five ( 5 ) ML PO QID ( 4 times a day ) " type="TIME" val="TPZ+0000-00-00T08:00" mod="NA" />
+<TIMEX3 id="T47" start="9949" end="9955" text="day ) " type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T48" start="9958" end="9960" text="13" type="TIME" val="2011-12-17T13:00" mod="NA" />

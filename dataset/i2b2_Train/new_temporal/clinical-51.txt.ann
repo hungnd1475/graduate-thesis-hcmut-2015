@@ -1,0 +1,11 @@
+<TIMEX3 id="T0" start="27" end="44" text="6/3/1993 12:00:00" type="TIME" val="1993-06-03T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="81" end="95" text="Admission Date" type="DATE" val="1993-06-03" mod="NA" />
+<TIMEX3 id="T3" start="99" end="109" text="06/03/1993" type="DATE" val="1993-06-03" mod="NA" />
+<TIMEX3 id="T4" start="154" end="164" text="06/06/1993" type="DATE" val="1993-06-06" mod="NA" />
+<TIMEX3 id="T5" start="464" end="478" text="four years ago" type="DATE" val="TPZ-0004" mod="NA" />
+<TIMEX3 id="T6" start="691" end="705" text="Two months ago" type="DATE" val="TPZ-0000-02" mod="NA" />
+<TIMEX3 id="T7" start="886" end="895" text="this time" type="DATE" val="1993-06-03" mod="NA" />
+<TIMEX3 id="T8" start="1410" end="1422" text="May 2 , 1993" type="DATE" val="1993-05-02" mod="NA" />
+<TIMEX3 id="T9" start="3911" end="3924" text="June 4 , 1993" type="DATE" val="1993-06-04" mod="NA" />
+<TIMEX3 id="T10" start="4098" end="4120" text="post-operative day two" type="DATE" val="1993-06-06" mod="NA" />
+<TIMEX3 id="T11" start="4143" end="4156" text="June 6 , 1993" type="DATE" val="1993-06-06" mod="NA" />

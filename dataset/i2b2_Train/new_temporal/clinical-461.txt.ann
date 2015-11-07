@@ -1,0 +1,25 @@
+<TIMEX3 id="T0" start="36" end="54" text="9/16/2000 12:00:00" type="TIME" val="2000-09-16T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="98" end="112" text="Admission Date" type="DATE" val="2000-09-16" mod="NA" />
+<TIMEX3 id="T3" start="116" end="126" text="09/16/2000" type="DATE" val="2000-09-16" mod="NA" />
+<TIMEX3 id="T4" start="171" end="181" text="11/03/2000" type="DATE" val="2000-11-03" mod="NA" />
+<TIMEX3 id="T5" start="548" end="555" text="9/15/00" type="DATE" val="2000-09-15" mod="NA" />
+<TIMEX3 id="T6" start="1708" end="1712" text="1987" type="DATE" val="1987" mod="NA" />
+<TIMEX3 id="T7" start="1755" end="1759" text="1988" type="DATE" val="1988" mod="NA" />
+<TIMEX3 id="T8" start="3835" end="3842" text="9/16/00" type="DATE" val="2000-09-16" mod="NA" />
+<TIMEX3 id="T9" start="4142" end="4149" text="9/22/00" type="DATE" val="2000-09-22" mod="NA" />
+<TIMEX3 id="T10" start="4501" end="4513" text="several days" type="DATE" val="TPZ-0000-00-03" mod="APPROX" />
+<TIMEX3 id="T11" start="4967" end="4976" text="this time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T12" start="5114" end="5121" text="10/5/00" type="DATE" val="2000-10-05" mod="NA" />
+<TIMEX3 id="T13" start="7337" end="7358" text="the time of discharge" type="DATE" val="2000-09-16" mod="NA" />
+<TIMEX3 id="T14" start="7645" end="7666" text="the time of discharge" type="DATE" val="2000-09-16" mod="NA" />
+<TIMEX3 id="T15" start="8511" end="8520" text="Last week" type="DATE" val="2000-W36" mod="NA" />
+<TIMEX3 id="T16" start="9160" end="9172" text="several days" type="DATE" val="TPZ-0000-00-03" mod="APPROX" />
+<TIMEX3 id="T17" start="9799" end="9820" text="the time of discharge" type="DATE" val="2000-09-16" mod="NA" />
+<TIMEX3 id="T18" start="10175" end="10196" text="the time of discharge" type="DATE" val="2000-09-16" mod="NA" />
+<TIMEX3 id="T19" start="10592" end="10612" text="the day of discharge" type="DATE" val="2000-09-16" mod="NA" />
+<TIMEX3 id="T20" start="10705" end="10729" text="the day before discharge" type="DATE" val="2000-09-15" mod="NA" />
+<TIMEX3 id="T21" start="10733" end="10734" text="8" type="TIME" val="2000-09-15T08:00" mod="NA" />
+<TIMEX3 id="T22" start="10906" end="10926" text="the day of discharge" type="DATE" val="2000-09-16" mod="NA" />
+<TIMEX3 id="T23" start="11205" end="11211" text="Nov 18" type="DATE" val="2000-11-18" mod="NA" />
+<TIMEX3 id="T24" start="11595" end="11602" text="11/3/00" type="DATE" val="2000-11-03" mod="NA" />
+<TIMEX3 id="T25" start="11750" end="11770" text="the day of discharge" type="DATE" val="2000-09-16" mod="NA" />

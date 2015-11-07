@@ -1,0 +1,21 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2012-05-13" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2012-05-13" type="DATE" val="2012-05-13" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2012-05-22" type="DATE" val="2012-05-22" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="2012-05-13" type="DATE" val="2012-05-13" mod="NA" />
+<TIMEX3 id="T4" start="206" end="209" text="1/7" type="DATE" val="2012-01-07" mod="NA" />
+<TIMEX3 id="T5" start="2395" end="2409" text="day of life #4" type="DATE" val="2012-05-16" mod="NA" />
+<TIMEX3 id="T6" start="2438" end="2452" text="day of life #5" type="DATE" val="2012-05-17" mod="NA" />
+<TIMEX3 id="T7" start="2459" end="2480" text="the time of discharge" type="DATE" val="2012-05-13" mod="NA" />
+<TIMEX3 id="T8" start="2832" end="2847" text="day of life two" type="DATE" val="2012-05-14" mod="NA" />
+<TIMEX3 id="T9" start="3047" end="3061" text="day of life #4" type="DATE" val="2012-05-16" mod="NA" />
+<TIMEX3 id="T10" start="3116" end="3126" text="2012-05-19" type="DATE" val="2012-05-19" mod="NA" />
+<TIMEX3 id="T11" start="3402" end="3423" text="the time of discharge" type="DATE" val="2012-05-13" mod="NA" />
+<TIMEX3 id="T12" start="3427" end="3428" text="8" type="TIME" val="2012-05-13T08:00" mod="NA" />
+<TIMEX3 id="T13" start="3818" end="3839" text="THE TIME OF DISCHARGE" type="DATE" val="2012-05-13" mod="NA" />
+<TIMEX3 id="T14" start="3843" end="3844" text="1" type="TIME" val="2012-05-13T01:00" mod="NA" />
+<TIMEX3 id="T15" start="4005" end="4019" text="day of life #3" type="DATE" val="2012-05-15" mod="NA" />
+<TIMEX3 id="T16" start="4114" end="4119" text="05-21" type="DATE" val="2012-05-21" mod="NA" />
+<TIMEX3 id="T17" start="4294" end="4304" text="2012-05-13" type="DATE" val="2012-05-13" mod="NA" />
+<TIMEX3 id="T18" start="4390" end="4397" text="October" type="DATE" val="2012-10" mod="NA" />
+<TIMEX3 id="T19" start="4406" end="4411" text="April" type="DATE" val="2012-04" mod="NA" />
+<TIMEX3 id="T20" start="5083" end="5086" text="1/7" type="DATE" val="2012-01-07" mod="NA" />

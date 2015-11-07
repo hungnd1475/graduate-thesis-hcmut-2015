@@ -1,0 +1,40 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2014-10-21" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2014-10-21" type="DATE" val="2014-10-21" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2014-11-21" type="DATE" val="2014-11-21" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1942-03-10" type="DATE" val="1942-03-10" mod="NA" />
+<TIMEX3 id="T4" start="282" end="292" text="2014-11-11" type="DATE" val="2014-11-11" mod="NA" />
+<TIMEX3 id="T5" start="307" end="317" text="2014-11-05" type="DATE" val="2014-11-05" mod="NA" />
+<TIMEX3 id="T6" start="467" end="471" text="2012" type="DATE" val="2012" mod="NA" />
+<TIMEX3 id="T7" start="644" end="660" text="2014-10-21 08:10" type="TIME" val="2014-10-21T08:10" mod="NA" />
+<TIMEX3 id="T9" start="778" end="794" text="2014-10-21 08:10" type="TIME" val="2014-10-21T08:10" mod="NA" />
+<TIMEX3 id="T11" start="850" end="866" text="2014-10-21 08:10" type="TIME" val="2014-10-21T08:10" mod="NA" />
+<TIMEX3 id="T13" start="966" end="982" text="2014-10-21 08:10" type="TIME" val="2014-10-21T08:10" mod="NA" />
+<TIMEX3 id="T15" start="1004" end="1020" text="2014-10-21 08:10" type="TIME" val="2014-10-21T08:10" mod="NA" />
+<TIMEX3 id="T17" start="1063" end="1079" text="2014-10-21 02:56" type="TIME" val="2014-10-21T02:56" mod="NA" />
+<TIMEX3 id="T19" start="1275" end="1291" text="2014-10-21 09:35" type="TIME" val="2014-10-21T09:35" mod="NA" />
+<TIMEX3 id="T21" start="1383" end="1399" text="2014-10-21 09:35" type="TIME" val="2014-10-21T09:35" mod="NA" />
+<TIMEX3 id="T23" start="1525" end="1540" text="2014-10-21 9:59" type="TIME" val="2014-10-21T9:59" mod="NA" />
+<TIMEX3 id="T25" start="1944" end="1954" text="2014-10-21" type="DATE" val="2014-10-21" mod="NA" />
+<TIMEX3 id="T26" start="2097" end="2107" text="2014-10-22" type="DATE" val="2014-10-22" mod="NA" />
+<TIMEX3 id="T27" start="3298" end="3313" text="2014-10-21 9:42" type="TIME" val="2014-10-21T9:42" mod="NA" />
+<TIMEX3 id="T29" start="3929" end="3934" text="10-21" type="DATE" val="2041-10-21" mod="NA" />
+<TIMEX3 id="T30" start="3977" end="3982" text="10-22" type="DATE" val="2041-10-22" mod="NA" />
+<TIMEX3 id="T31" start="4071" end="4076" text="10-21" type="DATE" val="2041-10-21" mod="NA" />
+<TIMEX3 id="T32" start="5415" end="5425" text="2014-10-21" type="DATE" val="2014-10-21" mod="NA" />
+<TIMEX3 id="T33" start="5451" end="5467" text="2014-11-14 12:34" type="TIME" val="2014-11-14T12:34" mod="NA" />
+<TIMEX3 id="T35" start="5851" end="5861" text="2014-10-27" type="DATE" val="2014-10-27" mod="NA" />
+<TIMEX3 id="T36" start="6790" end="6805" text="2014-11-12 9:10" type="TIME" val="2014-11-12T9:10" mod="NA" />
+<TIMEX3 id="T38" start="7189" end="7206" text="five days earlier" type="DATE" val="TPZ-0000-00-05" mod="NA" />
+<TIMEX3 id="T39" start="8086" end="8096" text="2014-10-27" type="DATE" val="2014-10-27" mod="NA" />
+<TIMEX3 id="T40" start="8147" end="8157" text="2014-10-22" type="DATE" val="2014-10-22" mod="NA" />
+<TIMEX3 id="T41" start="8485" end="8495" text="2014-11-11" type="DATE" val="2014-11-11" mod="NA" />
+<TIMEX3 id="T42" start="9288" end="9298" text="2014-11-14" type="DATE" val="2014-11-14" mod="NA" />
+<TIMEX3 id="T43" start="9415" end="9421" text="day )." type="DATE" val="2014-10-21" mod="NA" />
+<TIMEX3 id="T44" start="9423" end="9424" text="2" type="TIME" val="2014-10-21T02:00" mod="NA" />
+<TIMEX3 id="T45" start="9674" end="9684" text="2014-11-20" type="DATE" val="2014-11-20" mod="NA" />
+<TIMEX3 id="T46" start="9688" end="9772" text="5. Metoprolol Tartrate 25 mg Tablet Sig : One ( 1 ) Tablet PO TID ( 3 times a day )." type="TIME" val="TPZ+0000-00-00T05:00" mod="NA" />
+<TIMEX3 id="T47" start="9920" end="9926" text="day )." type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T48" start="9928" end="9929" text="8" type="TIME" val="2014-11-20T08:00" mod="NA" />
+<TIMEX3 id="T49" start="10502" end="10507" text="05-22" type="DATE" val="2042-05-22" mod="NA" />
+<TIMEX3 id="T50" start="10644" end="10649" text="12-11" type="DATE" val="2042-12-11" mod="NA" />
+<TIMEX3 id="T51" start="10953" end="10966" text="late November" type="DATE" val="2042-11" mod="END" />

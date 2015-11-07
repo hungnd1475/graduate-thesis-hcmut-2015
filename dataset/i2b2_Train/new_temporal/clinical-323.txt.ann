@@ -1,0 +1,6 @@
+<TIMEX3 id="T0" start="27" end="45" text="10/8/1994 12:00:00" type="TIME" val="1994-10-08T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="82" end="96" text="Admission Date" type="DATE" val="1994-10-08" mod="NA" />
+<TIMEX3 id="T3" start="100" end="110" text="10/08/1994" type="DATE" val="1994-10-08" mod="NA" />
+<TIMEX3 id="T4" start="155" end="165" text="10/18/1994" type="DATE" val="1994-10-18" mod="NA" />
+<TIMEX3 id="T5" start="235" end="242" text="10/8/94" type="DATE" val="1994-10-08" mod="NA" />
+<TIMEX3 id="T6" start="508" end="515" text="10/9/94" type="DATE" val="1994-10-09" mod="NA" />

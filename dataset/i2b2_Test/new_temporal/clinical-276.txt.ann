@@ -1,0 +1,29 @@
+<TIMEX3 id="T0" start="37" end="56" text="11/17/2003 12:00:00" type="TIME" val="2003-11-17T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="93" end="107" text="Admission Date" type="DATE" val="2003-11-17" mod="NA" />
+<TIMEX3 id="T3" start="111" end="121" text="11/17/2003" type="DATE" val="2003-11-17" mod="NA" />
+<TIMEX3 id="T4" start="771" end="775" text="1991" type="DATE" val="1991" mod="NA" />
+<TIMEX3 id="T5" start="861" end="865" text="1997" type="DATE" val="1997" mod="NA" />
+<TIMEX3 id="T6" start="941" end="949" text="November" type="DATE" val="2003-11" mod="NA" />
+<TIMEX3 id="T7" start="952" end="956" text="2001" type="DATE" val="2001" mod="NA" />
+<TIMEX3 id="T8" start="1040" end="1044" text="July" type="DATE" val="2001-07" mod="NA" />
+<TIMEX3 id="T9" start="1047" end="1051" text="2001" type="DATE" val="2001" mod="NA" />
+<TIMEX3 id="T10" start="1157" end="1165" text="December" type="DATE" val="2001-12" mod="NA" />
+<TIMEX3 id="T11" start="1168" end="1172" text="2002" type="DATE" val="2002" mod="NA" />
+<TIMEX3 id="T12" start="1213" end="1219" text="August" type="DATE" val="2002-08" mod="NA" />
+<TIMEX3 id="T13" start="1222" end="1226" text="2003" type="DATE" val="2003" mod="NA" />
+<TIMEX3 id="T14" start="1549" end="1561" text="September 26" type="DATE" val="2003-09-26" mod="NA" />
+<TIMEX3 id="T15" start="1565" end="1576" text="November 11" type="DATE" val="2003-11-11" mod="NA" />
+<TIMEX3 id="T16" start="3281" end="3292" text="November 11" type="DATE" val="2003-11-11" mod="NA" />
+<TIMEX3 id="T17" start="3491" end="3504" text="the past week" type="DATE" val="2003-W45" mod="NA" />
+<TIMEX3 id="T18" start="3904" end="3912" text="December" type="DATE" val="2003-12" mod="NA" />
+<TIMEX3 id="T19" start="3915" end="3919" text="2002" type="DATE" val="2002" mod="NA" />
+<TIMEX3 id="T20" start="4183" end="4193" text="October 16" type="DATE" val="2002-10-16" mod="NA" />
+<TIMEX3 id="T21" start="4804" end="4809" text="10-15" type="DATE" val="2002-10-15" mod="NA" />
+<TIMEX3 id="T22" start="4996" end="5000" text="5-10" type="DATE" val="2002-05-10" mod="NA" />
+<TIMEX3 id="T23" start="5145" end="5149" text="5-10" type="DATE" val="2002-05-10" mod="NA" />
+<TIMEX3 id="T24" start="7370" end="7381" text="November 20" type="DATE" val="2002-11-20" mod="NA" />
+<TIMEX3 id="T25" start="7674" end="7684" text="November 9" type="DATE" val="2002-11-09" mod="NA" />
+<TIMEX3 id="T26" start="8385" end="8396" text="November 20" type="DATE" val="2002-11-20" mod="NA" />
+<TIMEX3 id="T27" start="9318" end="9329" text="November 20" type="DATE" val="2002-11-20" mod="NA" />
+<TIMEX3 id="T28" start="9805" end="9816" text="November 30" type="DATE" val="2002-11-30" mod="NA" />
+<TIMEX3 id="T29" start="10899" end="10909" text="December 3" type="DATE" val="2002-12-03" mod="NA" />

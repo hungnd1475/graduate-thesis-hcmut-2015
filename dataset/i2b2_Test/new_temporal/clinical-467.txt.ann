@@ -1,0 +1,19 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2014-12-29" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2014-12-29" type="DATE" val="2014-12-29" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2015-01-20" type="DATE" val="2015-01-20" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1944-09-05" type="DATE" val="1944-09-05" mod="NA" />
+<TIMEX3 id="T4" start="755" end="765" text="2013-12-04" type="DATE" val="2013-12-04" mod="NA" />
+<TIMEX3 id="T5" start="811" end="815" text="2011" type="DATE" val="2011" mod="NA" />
+<TIMEX3 id="T6" start="1065" end="1075" text="2009-11-11" type="DATE" val="2009-11-11" mod="NA" />
+<TIMEX3 id="T7" start="1306" end="1310" text="1998" type="DATE" val="1998" mod="NA" />
+<TIMEX3 id="T8" start="1647" end="1651" text="2009" type="DATE" val="2009" mod="NA" />
+<TIMEX3 id="T9" start="2394" end="2410" text="2014-12-30 10:34" type="TIME" val="2014-12-30T10:34" mod="NA" />
+<TIMEX3 id="T11" start="2488" end="2504" text="2015-01-01 11:46" type="TIME" val="2015-01-01T11:46" mod="NA" />
+<TIMEX3 id="T13" start="2570" end="2586" text="2015-01-19 04:47" type="TIME" val="2015-01-19T04:47" mod="NA" />
+<TIMEX3 id="T15" start="2978" end="2988" text="a few days" type="DATE" val="2009-11-11" mod="APPROX" />
+<TIMEX3 id="T16" start="5123" end="5129" text="day ) " type="DATE" val="2014-12-29" mod="NA" />
+<TIMEX3 id="T17" start="5476" end="5482" text="day ) " type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T18" start="5485" end="5564" text="7. Metoprolol Tartrate 25 mg Tablet Sig : 1.5 Tablets PO BID ( 2 times a day ) " type="TIME" val="TPZ+0000-00-00T07:00" mod="NA" />
+<TIMEX3 id="T19" start="5835" end="5839" text="3 AM" type="TIME" val="2014-12-29T03:00" mod="NA" />
+<TIMEX3 id="T20" start="5932" end="5937" text="Lunch" type="TIME" val="2014-12-29T14:00" mod="APPROX" />
+<TIMEX3 id="T21" start="7742" end="7745" text="May" type="DATE" val="2044-05" mod="NA" />

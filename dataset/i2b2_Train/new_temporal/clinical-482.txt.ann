@@ -1,0 +1,10 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2020-05-23" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2020-05-23" type="DATE" val="2020-05-23" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2020-05-29" type="DATE" val="2020-05-29" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1955-11-14" type="DATE" val="1955-11-14" mod="NA" />
+<TIMEX3 id="T4" start="519" end="526" text="January" type="DATE" val="1955-01" mod="NA" />
+<TIMEX3 id="T5" start="1763" end="1767" text="2002" type="DATE" val="2002" mod="NA" />
+<TIMEX3 id="T6" start="2084" end="2094" text="2019-02-10" type="DATE" val="2019-02-10" mod="NA" />
+<TIMEX3 id="T7" start="2162" end="2172" text="last month" type="DATE" val="2019-01" mod="NA" />
+<TIMEX3 id="T8" start="2389" end="2393" text="2008" type="DATE" val="2008" mod="NA" />
+<TIMEX3 id="T9" start="4199" end="4204" text="today" type="DATE" val="TPZ+0000-00-00" mod="NA" />

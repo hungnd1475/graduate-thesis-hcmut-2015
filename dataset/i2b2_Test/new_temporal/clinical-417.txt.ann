@@ -1,0 +1,21 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2017-09-13" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2017-09-13" type="DATE" val="2017-09-13" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2017-09-15" type="DATE" val="2017-09-15" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1972-05-09" type="DATE" val="1972-05-09" mod="NA" />
+<TIMEX3 id="T4" start="636" end="640" text="1986" type="DATE" val="1986" mod="NA" />
+<TIMEX3 id="T5" start="657" end="661" text="1992" type="DATE" val="1992" mod="NA" />
+<TIMEX3 id="T6" start="666" end="670" text="1998" type="DATE" val="1998" mod="NA" />
+<TIMEX3 id="T7" start="699" end="703" text="1989" type="DATE" val="1989" mod="NA" />
+<TIMEX3 id="T8" start="829" end="840" text="4 years ago" type="DATE" val="TPZ-0004" mod="NA" />
+<TIMEX3 id="T9" start="1044" end="1054" text="2017-08-29" type="DATE" val="2017-08-29" mod="NA" />
+<TIMEX3 id="T10" start="1080" end="1090" text="2017-09-13" type="DATE" val="2017-09-13" mod="NA" />
+<TIMEX3 id="T11" start="2034" end="2039" text="05-31" type="DATE" val="2017-05-31" mod="NA" />
+<TIMEX3 id="T12" start="2237" end="2246" text="that time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T13" start="2401" end="2410" text="that time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T14" start="2500" end="2519" text="postoperative day 1" type="DATE" val="2017-09-14" mod="NA" />
+<TIMEX3 id="T16" start="2954" end="2963" text="that time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T17" start="3041" end="3051" text="2017-09-14" type="DATE" val="2017-09-14" mod="NA" />
+<TIMEX3 id="T18" start="3102" end="3103" text="5" type="TIME" val="2017-09-14T05:00" mod="NA" />
+<TIMEX3 id="T19" start="3107" end="3126" text="Postoperative day 2" type="DATE" val="2017-09-15" mod="NA" />
+<TIMEX3 id="T21" start="3432" end="3437" text="today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T22" start="4036" end="4060" text="2017-09-29 at 11:30 a.m." type="TIME" val="2017-09-29T11:30" mod="NA" />

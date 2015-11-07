@@ -1,0 +1,9 @@
+<TIMEX3 id="T0" start="33" end="50" text="8/7/1992 12:00:00" type="TIME" val="1992-08-07T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="89" end="103" text="Admission Date" type="DATE" val="1992-08-07" mod="NA" />
+<TIMEX3 id="T3" start="107" end="117" text="08/07/1992" type="DATE" val="1992-08-07" mod="NA" />
+<TIMEX3 id="T4" start="164" end="174" text="08/10/1992" type="DATE" val="1992-08-10" mod="NA" />
+<TIMEX3 id="T5" start="355" end="367" text="fall of 1991" type="DATE" val="1991" mod="NA" />
+<TIMEX3 id="T6" start="771" end="787" text="twenty years ago" type="DATE" val="TPZ-0020" mod="NA" />
+<TIMEX3 id="T7" start="1020" end="1024" text="1990" type="DATE" val="1990" mod="NA" />
+<TIMEX3 id="T8" start="1093" end="1099" text="8/7/92" type="DATE" val="1992-08-07" mod="NA" />
+<TIMEX3 id="T9" start="1331" end="1359" text="postoperative day number two" type="DATE" val="1992-08-09" mod="NA" />

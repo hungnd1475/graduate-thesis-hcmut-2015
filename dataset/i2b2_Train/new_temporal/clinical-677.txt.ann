@@ -1,0 +1,24 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2016-09-05" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2016-09-05" type="DATE" val="2016-09-05" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2016-09-14" type="DATE" val="2016-09-14" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1940-08-17" type="DATE" val="1940-08-17" mod="NA" />
+<TIMEX3 id="T4" start="392" end="396" text="2005" type="DATE" val="2005" mod="NA" />
+<TIMEX3 id="T5" start="540" end="550" text="2016-09-02" type="DATE" val="2016-09-02" mod="NA" />
+<TIMEX3 id="T6" start="782" end="786" text="2005" type="DATE" val="2005" mod="NA" />
+<TIMEX3 id="T7" start="1139" end="1149" text="2016-09-03" type="DATE" val="2016-09-03" mod="NA" />
+<TIMEX3 id="T8" start="1314" end="1323" text="that time" type="DATE" val="2016-09-05" mod="NA" />
+<TIMEX3 id="T9" start="1621" end="1625" text="2005" type="DATE" val="2005" mod="NA" />
+<TIMEX3 id="T10" start="1755" end="1759" text="2005" type="DATE" val="2005" mod="NA" />
+<TIMEX3 id="T11" start="4185" end="4190" text="09-06" type="DATE" val="2016-09-06" mod="NA" />
+<TIMEX3 id="T12" start="4650" end="4670" text="the time of transfer" type="DATE" val="2016-09-05" mod="NA" />
+<TIMEX3 id="T13" start="5045" end="5058" text="operative day" type="DATE" val="2016-09-05" mod="NA" />
+<TIMEX3 id="T14" start="5065" end="5084" text="postoperative day 1" type="DATE" val="2016-09-06" mod="NA" />
+<TIMEX3 id="T16" start="5305" end="5324" text="postoperative day 1" type="DATE" val="2016-09-06" mod="NA" />
+<TIMEX3 id="T18" start="5376" end="5395" text="postoperative day 2" type="DATE" val="2016-09-07" mod="NA" />
+<TIMEX3 id="T20" start="5633" end="5652" text="postoperative day 3" type="DATE" val="2016-09-08" mod="NA" />
+<TIMEX3 id="T22" start="6002" end="6021" text="postoperative day 4" type="DATE" val="2016-09-09" mod="NA" />
+<TIMEX3 id="T24" start="6247" end="6266" text="postoperative day 5" type="DATE" val="2016-09-10" mod="NA" />
+<TIMEX3 id="T26" start="6409" end="6415" text="day to" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T27" start="6447" end="6466" text="postoperative day 6" type="DATE" val="2016-09-11" mod="NA" />
+<TIMEX3 id="T29" start="6799" end="6818" text="postoperative day 7" type="DATE" val="2016-09-12" mod="NA" />
+<TIMEX3 id="T31" start="6907" end="6924" text="the following day" type="DATE" val="TPZ+0000-00-01" mod="NA" />

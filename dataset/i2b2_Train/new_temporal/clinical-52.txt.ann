@@ -1,0 +1,13 @@
+<TIMEX3 id="T0" start="33" end="52" text="11/01/2000 12:00:00" type="TIME" val="2000-11-01T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="87" end="101" text="Admission Date" type="DATE" val="2000-11-01" mod="NA" />
+<TIMEX3 id="T3" start="105" end="115" text="11/01/2000" type="DATE" val="2000-11-01" mod="NA" />
+<TIMEX3 id="T4" start="152" end="162" text="11/04/2000" type="DATE" val="2000-11-04" mod="NA" />
+<TIMEX3 id="T5" start="304" end="324" text="11/04/00 AT 03:00 PM" type="TIME" val="2000-11-04T15:00" mod="NA" />
+<TIMEX3 id="T6" start="706" end="710" text="11/5" type="DATE" val="2000-11-05" mod="NA" />
+<TIMEX3 id="T7" start="818" end="826" text="11/03/00" type="DATE" val="2000-11-03" mod="NA" />
+<TIMEX3 id="T8" start="1068" end="1076" text="11/03/00" type="DATE" val="2000-11-03" mod="NA" />
+<TIMEX3 id="T9" start="1490" end="1494" text="11/6" type="DATE" val="2000-11-06" mod="NA" />
+<TIMEX3 id="T10" start="1498" end="1563" text="9am scheduled , Cialneinsisters Hospital And Medical Center 11/16" type="TIME" val="2000-11-16T09:00" mod="NA" />
+<TIMEX3 id="T11" start="1567" end="1604" text="8:15pm scheduled , Dr. Condnort 12/04" type="TIME" val="2000-12-04T20:15" mod="NA" />
+<TIMEX3 id="T12" start="1608" end="1611" text="2pm" type="TIME" val="2000-12-01T14:00" mod="NA" />
+<TIMEX3 id="T13" start="1645" end="1660" text="12/01 at 1:50pm" type="TIME" val="2000-12-01T13:50" mod="NA" />

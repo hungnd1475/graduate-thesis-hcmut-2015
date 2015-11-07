@@ -1,0 +1,19 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2019-12-28" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2019-12-28" type="DATE" val="2019-12-28" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2020-01-20" type="DATE" val="2020-01-20" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="2019-12-28" type="DATE" val="2019-12-28" mod="NA" />
+<TIMEX3 id="T4" start="194" end="199" text="06-30" type="DATE" val="2019-06-30" mod="NA" />
+<TIMEX3 id="T5" start="529" end="534" text="12-15" type="DATE" val="2019-12-15" mod="NA" />
+<TIMEX3 id="T6" start="738" end="743" text="12-17" type="DATE" val="2019-12-17" mod="NA" />
+<TIMEX3 id="T7" start="793" end="798" text="12-21" type="DATE" val="2019-12-21" mod="NA" />
+<TIMEX3 id="T8" start="956" end="961" text="12-27" type="DATE" val="2019-12-27" mod="NA" />
+<TIMEX3 id="T9" start="2544" end="2554" text="2020-01-14" type="DATE" val="2020-01-14" mod="NA" />
+<TIMEX3 id="T10" start="2820" end="2834" text="day of life #1" type="DATE" val="2019-12-28" mod="NA" />
+<TIMEX3 id="T11" start="2877" end="2891" text="day of life #7" type="DATE" val="2020-01-03" mod="NA" />
+<TIMEX3 id="T12" start="3301" end="3315" text="day of life #2" type="DATE" val="2019-12-29" mod="NA" />
+<TIMEX3 id="T13" start="3614" end="3623" text="that time" type="DATE" val="2019-12-28" mod="NA" />
+<TIMEX3 id="T14" start="4596" end="4601" text="01-11" type="DATE" val="2019-01-11" mod="NA" />
+<TIMEX3 id="T15" start="4693" end="4703" text="2020-01-19" type="DATE" val="2020-01-19" mod="NA" />
+<TIMEX3 id="T16" start="4707" end="4708" text="6" type="TIME" val="2020-01-19T06:00" mod="NA" />
+<TIMEX3 id="T17" start="4789" end="4797" text="November" type="DATE" val="2020-11" mod="NA" />
+<TIMEX3 id="T18" start="4806" end="4811" text="March" type="DATE" val="2020-03" mod="NA" />

@@ -1,0 +1,12 @@
+<TIMEX3 id="T0" start="28" end="46" text="7/20/1999 12:00:00" type="TIME" val="1999-07-20T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="82" end="96" text="Admission Date" type="DATE" val="1999-07-20" mod="NA" />
+<TIMEX3 id="T3" start="100" end="110" text="07/20/1999" type="DATE" val="1999-07-20" mod="NA" />
+<TIMEX3 id="T4" start="155" end="165" text="07/26/1999" type="DATE" val="1999-07-26" mod="NA" />
+<TIMEX3 id="T5" start="292" end="300" text="07/21/99" type="DATE" val="1999-07-21" mod="NA" />
+<TIMEX3 id="T6" start="340" end="348" text="07/24/99" type="DATE" val="1999-07-24" mod="NA" />
+<TIMEX3 id="T7" start="910" end="914" text="7/10" type="DATE" val="1999-07-10" mod="NA" />
+<TIMEX3 id="T8" start="3402" end="3410" text="07/20/99" type="DATE" val="1999-07-20" mod="NA" />
+<TIMEX3 id="T9" start="3711" end="3719" text="07/21/99" type="DATE" val="1999-07-21" mod="NA" />
+<TIMEX3 id="T10" start="4182" end="4190" text="07/23/99" type="DATE" val="1999-07-23" mod="NA" />
+<TIMEX3 id="T11" start="4712" end="4718" text="day in" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T12" start="4778" end="4786" text="07/26/99" type="DATE" val="1999-07-26" mod="NA" />

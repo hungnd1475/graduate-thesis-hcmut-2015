@@ -1,0 +1,21 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2014-05-08" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2014-05-08" type="DATE" val="2014-05-08" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2014-05-19" type="DATE" val="2014-05-19" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1946-01-06" type="DATE" val="1946-01-06" mod="NA" />
+<TIMEX3 id="T4" start="324" end="334" text="2014-05-11" type="DATE" val="2014-05-11" mod="NA" />
+<TIMEX3 id="T5" start="596" end="601" text="05-07" type="DATE" val="2045-05-07" mod="NA" />
+<TIMEX3 id="T6" start="878" end="882" text="2000" type="DATE" val="2000" mod="NA" />
+<TIMEX3 id="T7" start="1590" end="1600" text="2014-05-11" type="DATE" val="2014-05-11" mod="NA" />
+<TIMEX3 id="T8" start="2241" end="2259" text="2014-05-18 05:45AM" type="TIME" val="2014-05-18T05:45" mod="NA" />
+<TIMEX3 id="T9" start="2280" end="2298" text="2014-05-17 04:40AM" type="TIME" val="2014-05-17T04:40" mod="NA" />
+<TIMEX3 id="T10" start="2411" end="2429" text="2014-05-18 05:45AM" type="TIME" val="2014-05-18T05:45" mod="NA" />
+<TIMEX3 id="T11" start="2479" end="2497" text="2014-05-19 07:10AM" type="TIME" val="2014-05-19T07:10" mod="NA" />
+<TIMEX3 id="T12" start="2627" end="2632" text="05-08" type="DATE" val="2045-05-08" mod="NA" />
+<TIMEX3 id="T13" start="2973" end="2978" text="05-11" type="DATE" val="2045-05-11" mod="NA" />
+<TIMEX3 id="T14" start="3089" end="3095" text="POD #2" type="DATE" val="2045-05-13" mod="NA" />
+<TIMEX3 id="T15" start="3133" end="3145" text="that evening" type="DATE" val="TPZ+0000-00-00" mod="END" />
+<TIMEX3 id="T16" start="3221" end="3227" text="POD #3" type="DATE" val="2045-05-14" mod="NA" />
+<TIMEX3 id="T17" start="3618" end="3623" text="12-27" type="DATE" val="2045-12-27" mod="NA" />
+<TIMEX3 id="T18" start="3759" end="3765" text="day ) " type="DATE" val="2014-05-08" mod="NA" />
+<TIMEX3 id="T19" start="4850" end="4855" text="05-20" type="DATE" val="2045-05-20" mod="NA" />
+<TIMEX3 id="T20" start="5372" end="5376" text="2000" type="DATE" val="2000" mod="NA" />

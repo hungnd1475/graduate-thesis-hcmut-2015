@@ -1,0 +1,16 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2013-01-03" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2013-01-03" type="DATE" val="2013-01-03" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2013-01-09" type="DATE" val="2013-01-09" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1954-07-20" type="DATE" val="1954-07-20" mod="NA" />
+<TIMEX3 id="T4" start="448" end="456" text="Saturday" type="DATE" val="1954-07-17" mod="NA" />
+<TIMEX3 id="T5" start="1227" end="1237" text="2013-01-04" type="DATE" val="2013-01-04" mod="NA" />
+<TIMEX3 id="T6" start="1563" end="1580" text="several years ago" type="DATE" val="TPZ-0003" mod="APPROX" />
+<TIMEX3 id="T7" start="1684" end="1688" text="2010" type="DATE" val="2010" mod="NA" />
+<TIMEX3 id="T8" start="2827" end="2837" text="2013-01-03" type="DATE" val="2013-01-03" mod="NA" />
+<TIMEX3 id="T9" start="3597" end="3607" text="2013-01-04" type="DATE" val="2013-01-04" mod="NA" />
+<TIMEX3 id="T10" start="4138" end="4165" text="the first postoperative day" type="DATE" val="2013-01-04" mod="NA" />
+<TIMEX3 id="T11" start="4172" end="4199" text="the first postoperative day" type="DATE" val="2013-01-04" mod="NA" />
+<TIMEX3 id="T12" start="4291" end="4311" text="postoperative day #2" type="DATE" val="2013-01-05" mod="NA" />
+<TIMEX3 id="T13" start="4371" end="4391" text="postoperative day #3" type="DATE" val="2013-01-06" mod="NA" />
+<TIMEX3 id="T14" start="4475" end="4495" text="postoperative day #5" type="DATE" val="2013-01-08" mod="NA" />
+<TIMEX3 id="T15" start="4766" end="4776" text="2013-01-04" type="DATE" val="2013-01-04" mod="NA" />

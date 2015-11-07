@@ -1,0 +1,12 @@
+<TIMEX3 id="T0" start="34" end="52" text="5/30/2005 12:00:00" type="TIME" val="2005-05-30T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="88" end="102" text="Admission Date" type="DATE" val="2005-05-30" mod="NA" />
+<TIMEX3 id="T3" start="106" end="116" text="05/30/2005" type="DATE" val="2005-05-30" mod="NA" />
+<TIMEX3 id="T4" start="153" end="163" text="05/31/2005" type="DATE" val="2005-05-31" mod="NA" />
+<TIMEX3 id="T5" start="298" end="318" text="05/31/05 AT 02:00 PM" type="TIME" val="2005-05-31T14:00" mod="NA" />
+<TIMEX3 id="T6" start="552" end="557" text="Today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T7" start="560" end="565" text="05/31" type="DATE" val="2005-05-31" mod="NA" />
+<TIMEX3 id="T8" start="763" end="767" text="5-10" type="DATE" val="2005-05-10" mod="NA" />
+<TIMEX3 id="T9" start="897" end="902" text="Today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T10" start="905" end="910" text="05/31" type="DATE" val="2005-05-31" mod="NA" />
+<TIMEX3 id="T11" start="1372" end="1380" text="05/30/05" type="DATE" val="2005-05-30" mod="NA" />
+<TIMEX3 id="T12" start="1613" end="1619" text="POD# 1" type="DATE" val="2005-05-31" mod="NA" />

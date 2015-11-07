@@ -18,14 +18,13 @@ namespace HCMUT.EMRCorefResol.English
             var rootPath = fileInfo.Directory.Parent.FullName;
             var fileName = fileInfo.Name;
 
-            var dataReader = new I2B2DataReader();
-            var temporalPath = Path.Combine(new string[] { rootPath, "temporal", fileName });
+            var temporalPath = Path.Combine(new string[] { rootPath, "new_temporal", fileName + ".ann" });
             if (!File.Exists(temporalPath))
             {
                 return null;
             }
 
-            var tempCollection = new TemporalDataDictionary(temporalPath, dataReader);
+            var tempCollection = new TemporalDataDictionary(temporalPath);
 
             return tempCollection;
         }

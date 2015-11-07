@@ -1,0 +1,23 @@
+<TIMEX3 id="T0" start="36" end="53" text="9/7/1992 12:00:00" type="TIME" val="1992-09-07T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="90" end="104" text="Admission Date" type="DATE" val="1992-09-07" mod="NA" />
+<TIMEX3 id="T3" start="108" end="118" text="09/07/1992" type="DATE" val="1992-09-07" mod="NA" />
+<TIMEX3 id="T4" start="163" end="173" text="09/12/1992" type="DATE" val="1992-09-12" mod="NA" />
+<TIMEX3 id="T5" start="901" end="910" text="that time" type="DATE" val="1992-09-07" mod="NA" />
+<TIMEX3 id="T6" start="1562" end="1569" text="6-27-91" type="DATE" val="1991-06-27" mod="NA" />
+<TIMEX3 id="T7" start="1587" end="1594" text="8-29-91" type="DATE" val="1991-08-29" mod="NA" />
+<TIMEX3 id="T8" start="2996" end="3017" text="the time of discharge" type="DATE" val="1992-09-07" mod="NA" />
+<TIMEX3 id="T9" start="3576" end="3584" text="11-06-90" type="DATE" val="1990-11-06" mod="NA" />
+<TIMEX3 id="T10" start="4386" end="4390" text="8-10" type="DATE" val="1990-08-10" mod="NA" />
+<TIMEX3 id="T11" start="4418" end="4432" text="the second day" type="DATE" val="TPZ+0000-00-01" mod="APPROX" />
+<TIMEX3 id="T12" start="4671" end="4680" text="that time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T13" start="4858" end="4862" text="9-10" type="DATE" val="1990-09-10" mod="NA" />
+<TIMEX3 id="T14" start="4935" end="4944" text="that time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T15" start="5027" end="5031" text="9-11" type="DATE" val="1990-09-11" mod="NA" />
+<TIMEX3 id="T16" start="5066" end="5075" text="this time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T17" start="5374" end="5395" text="the time of discharge" type="DATE" val="1992-09-07" mod="NA" />
+<TIMEX3 id="T18" start="5502" end="5522" text="the day of discharge" type="DATE" val="1992-09-07" mod="NA" />
+<TIMEX3 id="T19" start="5627" end="5647" text="the day of discharge" type="DATE" val="1992-09-07" mod="NA" />
+<TIMEX3 id="T20" start="5749" end="5756" text="9-12-92" type="DATE" val="1992-09-12" mod="NA" />
+<TIMEX3 id="T21" start="5859" end="5866" text="9-28-92" type="DATE" val="1992-09-28" mod="NA" />
+<TIMEX3 id="T22" start="6012" end="6018" text="Monday" type="DATE" val="1992-09-28" mod="NA" />
+<TIMEX3 id="T23" start="6021" end="6028" text="9-14-02" type="DATE" val="2002-09-14" mod="NA" />
