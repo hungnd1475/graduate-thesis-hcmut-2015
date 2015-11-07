@@ -11,13 +11,24 @@ namespace HCMUT.EMRCorefResol.English.Features
     using Utilities;
     class GenderFeature : Feature
     {
+        static readonly IKeywordDictionary MALE_KEYWORDS =
+            new AhoCorasickKeywordDictionary("father", "brother", "he", "his", "himself", "husband", "son", "uncle", "nephew", "dad");
+
+        static readonly IKeywordDictionary FEMALE_KEYWORDS =
+            new AhoCorasickKeywordDictionary("mother", "sister", "she", "her", "herself", "wife", "daughter", "aunt", "niece", "mom");
+
+        enum Gender
+        {
+            Male, Female, Unknown
+        }
+
         public GenderFeature(PersonPair instance, EMR emr)
             : base("Gender-Information", 3, 0)
         {
-            int anaGen = getGender(instance.Anaphora.Lexicon, emr);
-            int anteGen = getGender(instance.Antecedent.Lexicon, emr);
+            var anaGen = getGender(instance.Anaphora, emr);
+            var anteGen = getGender(instance.Antecedent, emr);
 
-            if (anaGen == 2 || anteGen == 2)
+            if (anaGen == Gender.Unknown || anteGen == Gender.Unknown)
             {
                 SetCategoricalValue(2);
             }
@@ -27,108 +38,116 @@ namespace HCMUT.EMRCorefResol.English.Features
             }
         }
 
-        private int getGender(string name, EMR emr)
+        private Gender getGender(Concept concept, EMR emr)
         {
-            int keyword = containKeyword(name);
-            if(keyword != 2)
+            var gender = Gender.Unknown;
+
+            gender = checkKeywords(concept.Lexicon);
+            if (gender != Gender.Unknown)
             {
-                return keyword;
+                return gender;
             }
 
-            var appeared = appearedBefore(name, emr);
-            if(appeared != 2)
+            gender = checkOtherMatchingConcepts(concept, emr);
+            if (gender != Gender.Unknown)
             {
-                return appeared;
+                return gender;
             }
 
-            var fromDB = getGender(name);
-            if(fromDB != 2)
-            {
-                return fromDB;
-            }
-
-            return 2;
+            return checkCommonProperNames(concept.Lexicon);
         }
 
-        private int containKeyword(string name)
+        private Gender checkKeywords(string name)
         {
-            var s = new AhoCorasickKeywordDictionary(new string[] { "father", "brother", "he", "him", "himself", "husband", "son", "uncle", "nephew", "dad" });
-            if (s.Match(name, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
-            {
-                return 0;
-            }
+            var head = Service.English.GetHeadNoun(name);
 
-            s = new AhoCorasickKeywordDictionary(new string[] { "mother", "sister", "she", "her", "herself", "wife", "daughter", "aunt", "niece", "mom" });
-            if (s.Match(name, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
+            if (head != null)
             {
-                return 1;
-            }
-
-            var searcher = KeywordService.Instance.MALE_TITLES;
-            if(searcher.Match(name, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
-            {
-                return 0;
-            }
-
-            searcher = KeywordService.Instance.FEMALE_TITLES;
-            if (searcher.Match(name, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
-            {
-                return 1;
-            }
-
-            return 2;
-        }
-
-        private int appearedBefore(string name, EMR emr)
-        {
-            foreach(Concept c in emr.Concepts)
-            {
-                if(c.Type == ConceptType.Person)
+                var searcher = KeywordService.Instance.MALE_TITLES;
+                if (searcher.Match(head, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
                 {
-                    var nameArr = name.Split(' ');
-                    var conceptArr = c.Lexicon.Split(' ');
+                    return Gender.Male;
+                }
 
-                    if(conceptArr.Intersect(nameArr).Count() == 0)
-                    {
-                        continue;
-                    }
+                searcher = KeywordService.Instance.FEMALE_TITLES;
+                if (searcher.Match(head, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
+                {
+                    return Gender.Female;
+                }
 
-                    var keyword = containKeyword(c.Lexicon);
-                    if (keyword == 2)
-                    {
-                        continue;
-                    }
+                if (MALE_KEYWORDS.Match(head, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
+                {
+                    return Gender.Male;
+                }
 
-                    return keyword;
+                if (FEMALE_KEYWORDS.Match(head, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
+                {
+                    return Gender.Female;
                 }
             }
-            return 2;
+            else
+            {
+                if (string.Equals(name, "her"))
+                {
+                    return Gender.Female;
+                }
+                else if (string.Equals(name, "his"))
+                {
+                    return Gender.Male;
+                }
+            }
+
+            return Gender.Unknown;
         }
 
-        private int getGender(string name)
+        private Gender checkOtherMatchingConcepts(Concept concept, EMR emr)
+        {
+            foreach (Concept c in emr.Concepts)
+            {
+                if (c.Type == ConceptType.Person)
+                {
+                    var pair = c.CompareTo(concept) < 0 ? new PersonPair(c, concept) : new PersonPair(concept, c);
+                    var nameMatch = new NameMatchFeature(pair, emr);
+
+                    if (nameMatch.GetCategoricalValue() == 1)
+                    {
+                        var keyword = checkKeywords(c.Lexicon);
+                        if (keyword != Gender.Unknown)
+                        {
+                            return keyword;
+                        }
+                    }
+                }
+            }
+
+            return Gender.Unknown;
+        }
+
+        private Gender checkCommonProperNames(string name)
         {
             var searcher = KeywordService.Instance.DOCTOR_KEYWORDS;
             var nameNormal = searcher.RemoveKeywords(name, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord);
 
-            if(Service.English.Tokenize(nameNormal) == null)
+            var tokens = Service.English.Tokenize(nameNormal);
+            if (tokens == null || tokens.Length == 0)
             {
-                return 2;
+                return Gender.Unknown;
             }
-            nameNormal = Service.English.Tokenize(nameNormal)[0];
 
+            nameNormal = tokens[0];
             searcher = KeywordService.Instance.MALE_NAMES;
-            if(searcher.Match(nameNormal, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
+            if (searcher.Match(nameNormal, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
             {
-                return 0;
+                return Gender.Male;
             }
 
             searcher = KeywordService.Instance.FEMALE_NAMES;
             if (searcher.Match(nameNormal, KWSearchOptions.WholeWord | KWSearchOptions.IgnoreCase))
             {
-                return 1;
+                return Gender.Female;
             }
 
-            return 2;
+            return Gender.Unknown;
         }
     }
 }
