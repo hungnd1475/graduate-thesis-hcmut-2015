@@ -134,7 +134,7 @@ namespace HCMUT.EMRCorefResol
 
         public TemporalDataDictionary(string infosFile)
         {
-            var content = File.ReadAllText(infosFile);
+            /*var content = File.ReadAllText(infosFile);
 
             XmlDocument doc = new XmlDocument();
             doc.LoadXml($"<temporal>{content}</temporal>");
@@ -149,6 +149,29 @@ namespace HCMUT.EMRCorefResol
                 var temporalData = new TemporalData(start, end, text, value);
 
                 _temporals.Add(temporalData);
+            }*/
+
+            var lines = File.ReadAllLines(infosFile);
+            foreach(string line in lines)
+            {
+                XmlDocument doc = new XmlDocument();
+                try
+                {
+                    doc.LoadXml(line);
+                }
+                catch { }
+
+                var node = doc.FirstChild;
+                if (node != null)
+                {
+                    var start = int.Parse(node.Attributes["start"].Value);
+                    var end = int.Parse(node.Attributes["end"].Value);
+                    var text = node.Attributes["text"].Value;
+                    var value = node.Attributes["val"].Value;
+                    var temporalData = new TemporalData(start, end, text, value);
+
+                    _temporals.Add(temporalData);
+                }
             }
         }
     }
