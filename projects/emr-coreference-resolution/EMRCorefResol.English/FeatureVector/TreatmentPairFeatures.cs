@@ -13,7 +13,7 @@ namespace HCMUT.EMRCorefResol.English
     {
         public TreatmentPairFeatures(TreatmentPair instance, EMR emr, double classValue,
             MedicationInfoCollection medInfo, WikiDataDictionary wikiData, UmlsDataDictionary umlsData, TemporalDataDictionary temporalData)
-            :base(size:21, classValue: classValue)
+            :base(size:20, classValue: classValue)
         {
             //var medicationCollections = MedicationInformation.GetMedicationInfo(emr.Path);
 
@@ -37,22 +37,22 @@ namespace HCMUT.EMRCorefResol.English
             this[5] = new CapitolMatchFeature(instance);
             this[6] = new SubstringFeature(instance);
             this[7] = new CosineDistanceFeature(instance);
-            this[8] = new StringMatchFeature(instance);
+            //this[8] = new StringMatchFeature(instance);
 
-            this[9] = new PositionFeature(instance, emr);
-            this[10] = new DrugFeature(anaMedicationInfo, anteMedicationInfo);
-            this[11] = new DosageFeature(anaMedicationInfo, anteMedicationInfo);
-            this[12] = new FrequencyFeature(anaMedicationInfo, anteMedicationInfo);
-            this[13] = new DurationFeature(anteMedicationInfo, anteMedicationInfo);
-            this[14] = new TemporalFeature(instance, emr, temporalData);
-            this[15] = new SectionFeature(instance, emr);
+            this[8] = new PositionFeature(instance, emr);
+            this[9] = new DrugFeature(anaMedicationInfo, anteMedicationInfo);
+            this[10] = new DosageFeature(anaMedicationInfo, anteMedicationInfo);
+            this[11] = new FrequencyFeature(anaMedicationInfo, anteMedicationInfo);
+            this[12] = new DurationFeature(anteMedicationInfo, anteMedicationInfo);
+            this[13] = new TemporalFeature(instance, emr, temporalData);
+            this[14] = new SectionFeature(instance, emr);
 
-            this[16] = new WikiMatchFeature(anaWiki, anteWiki);
-            this[17] = new WikiAnchorLinkFeature(anaWiki, anteWiki);
-            this[18] = new WikiBoldNameMatchFeature(anaWiki, anteWiki);
+            this[15] = new WikiMatchFeature(anaWiki, anteWiki);
+            this[16] = new WikiAnchorLinkFeature(anaWiki, anteWiki);
+            this[17] = new WikiBoldNameMatchFeature(anaWiki, anteWiki);
 
-            this[19] = new OperationFeature(instance, umlsData);
-            this[20] = new ProcedureMatch(instance);
+            this[18] = new OperationFeature(instance, umlsData);
+            this[19] = new ProcedureMatch(instance);
         }
 
         private MedicationInfo GetMedicationInfo(Concept c, EMR emr, MedicationInfoCollection meds)

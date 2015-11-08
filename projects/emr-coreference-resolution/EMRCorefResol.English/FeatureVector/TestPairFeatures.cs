@@ -12,7 +12,7 @@ namespace HCMUT.EMRCorefResol.English
     {
         public TestPairFeatures(TestPair instance, EMR emr, double classValue,
             WikiDataDictionary wikiData, UmlsDataDictionary umlsData, TemporalDataDictionary temporalData)
-            :base(size:20, classValue: classValue)
+            :base(size:19, classValue: classValue)
         {
             //var wikiDictionary = WikiInformation.GetWikiInfo(emr.Path);
             var anaWiki = wikiData.Get(instance.Anaphora.Lexicon);
@@ -28,21 +28,21 @@ namespace HCMUT.EMRCorefResol.English
             this[5] = new CapitolMatchFeature(instance);
             this[6] = new SubstringFeature(instance);
             this[7] = new CosineDistanceFeature(instance);
-            this[8] = new StringMatchFeature(instance);
+            //this[8] = new StringMatchFeature(instance);
 
-            this[9] = new PositionFeature(instance, emr);
-            this[10] = new IndicatorFeature(instance, umlsData, emr);
-            this[11] = new TemporalFeature(instance, emr, temporalData);
-            this[12] = new SectionFeature(instance, emr);
-            this[13] = new ModifierFeature(instance, emr);
+            this[8] = new PositionFeature(instance, emr);
+            this[9] = new IndicatorFeature(instance, umlsData, emr);
+            this[10] = new TemporalFeature(instance, emr, temporalData);
+            this[11] = new SectionFeature(instance, emr);
+            this[12] = new ModifierFeature(instance, emr);
 
-            this[14] = new WikiMatchFeature(anaWiki, anteWiki);
-            this[15] = new WikiAnchorLinkFeature(anaWiki, anteWiki);
-            this[16] = new WikiBoldNameMatchFeature(anaWiki, anteWiki);
+            this[13] = new WikiMatchFeature(anaWiki, anteWiki);
+            this[14] = new WikiAnchorLinkFeature(anaWiki, anteWiki);
+            this[15] = new WikiBoldNameMatchFeature(anaWiki, anteWiki);
 
-            this[17] = new AnatomyFeature(instance, umlsData);
-            this[18] = new EquipmentFeature(instance, umlsData);
-            this[19] = new ProcedureMatch(instance);
+            this[16] = new AnatomyFeature(instance, umlsData);
+            this[17] = new EquipmentFeature(instance, umlsData);
+            this[18] = new ProcedureMatch(instance);
         }
     }
 }
