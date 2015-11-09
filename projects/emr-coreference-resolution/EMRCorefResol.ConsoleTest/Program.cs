@@ -15,13 +15,18 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 {
     using English;
     using System.IO;
+    using System.Text.RegularExpressions;
 
     class Program
     {
 
         static void Main(string[] args)
         {
-            testRemoveKeywords();
+            var anaPattern = "wbc" + "[ ]{0,}(-|of|was|were)?[ ]{0,}(\\d+\\.\\d?|\\d+,\\d?|\\d+)(%)?";
+            var match = Regex.Match("WBC 23.5*# RBC - 3.81* HGB - 9.4* HCT - 29.2*", anaPattern, RegexOptions.IgnoreCase);
+
+
+            ReadExtractedFile();
             Console.ReadLine();
         }
 
@@ -29,14 +34,6 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
         {
             var dataReader = new I2B2DataReader();
             var collection = new UmlsDataDictionary(@"E:\graduate-thesis-hcmut-2015\dataset\i2b2_Train\umls\clinical-11.txt", dataReader);
-        }
-
-        static void testRemoveKeywords()
-        {
-            var keywords = new AhoCorasickKeywordDictionary("dr.", "dr");
-            var s = "dr.bean drthanh";
-            s = keywords.RemoveKeywords(s, KWSearchOptions.WholeWordIgnoreCase);
-            Console.WriteLine(s);
         }
 
         static void testClassifier()

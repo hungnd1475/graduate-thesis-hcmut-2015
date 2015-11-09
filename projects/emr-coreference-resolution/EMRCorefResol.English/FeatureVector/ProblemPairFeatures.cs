@@ -12,7 +12,7 @@ namespace HCMUT.EMRCorefResol.English
     {
         public ProblemPairFeatures(ProblemPair instance, EMR emr, double classValue,
             WikiDataDictionary wikiData, UmlsDataDictionary umlsData)
-            : base(size: 15, classValue: classValue)
+            : base(size: 16, classValue: classValue)
         {
             //var wikiDictionary = WikiInformation.GetWikiInfo(emr.Path);
             var anaWiki = wikiData.Get(instance.Anaphora.Lexicon);
@@ -28,17 +28,17 @@ namespace HCMUT.EMRCorefResol.English
             this[5] = new CapitolMatchFeature(instance);
             this[6] = new SubstringFeature(instance);
             this[7] = new CosineDistanceFeature(instance);
-            //this[8] = new StringMatchFeature(instance);
+            this[8] = new StringMatchFeature(instance);
 
-            this[8] = new PositionFeature(instance, emr);
-            this[9] = new SectionFeature(instance, emr);
+            this[9] = new PositionFeature(instance, emr);
+            this[10] = new SectionFeature(instance, emr);
 
-            this[10] = new WikiMatchFeature(anaWiki, anteWiki);
-            this[11] = new WikiAnchorLinkFeature(anaWiki, anteWiki);
-            this[12] = new WikiBoldNameMatchFeature(anaWiki, anteWiki);
+            this[11] = new WikiMatchFeature(anaWiki, anteWiki);
+            this[12] = new WikiAnchorLinkFeature(anaWiki, anteWiki);
+            this[13] = new WikiBoldNameMatchFeature(anaWiki, anteWiki);
 
-            this[13] = new AnatomyFeature(instance, umlsData);
-            this[14] = new ProcedureMatch(instance);
+            this[14] = new AnatomyFeature(instance, umlsData);
+            this[15] = new ProcedureMatch(instance);
         }
     }
 }
