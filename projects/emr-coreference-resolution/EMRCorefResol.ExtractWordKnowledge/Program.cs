@@ -18,17 +18,45 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
         {
             var collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Train");
             //BatchUMLSProcess(collection);
-            //BatchWikiProcess(collection);
-            BatchTemporalProcess(collection);
+            BatchWikiProcess(collection);
+            //BatchTemporalProcess(collection);
+            //CollectMedicalRoute(collection);
 
             collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Test");
             //BatchUMLSProcess(collection);
-            //BatchWikiProcess(collection);
-            BatchTemporalProcess(collection);
+            BatchWikiProcess(collection);
+            //BatchTemporalProcess(collection);
+            //CollectMedicalRoute(collection);
 
             Console.WriteLine("========Finish========");
             Console.ReadLine();
         }
+
+        /*static void CollectMedicalRoute(EMRCollection collection)
+        {
+            List<string> allRoute = new List<string>();
+
+            for(int i=0; i<collection.Count; i++)
+            {
+                var emrPath = collection.GetEMRPath(i);
+                var conceptPath = collection.GetConceptsPath(i);
+                var dataReader = new I2B2DataReader();
+
+                var emr = new EMR(emrPath, conceptPath, dataReader);
+
+                var meds = English.MedicationInformation.GetMedicationFile(emr.Path);
+                for(int j=0; j<meds.Count; j++)
+                {
+                    var medInfo = meds[j];
+                    if(!string.IsNullOrEmpty(medInfo.Route) && !allRoute.Contains(medInfo.Route))
+                    {
+                        allRoute.Add(medInfo.Route);
+                    }
+                }
+            }
+
+            File.WriteAllLines(@"C:\Users\Hp\Desktop\emr_route\routes2.txt", allRoute);
+        }*/
 
         static void ProcessFile(EMRCollection collection)
         {
@@ -129,8 +157,17 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
                     if (!_wiki.ContainsKey(c.Lexicon))
                     {
                         var normalized = EnglishNormalizer.Normalize(c.Lexicon);
+
                         var wikiData = Service.English.GetAllWikiInformation(normalized);
-                        _wiki.Add(c.Lexicon, wikiData);
+                        if(wikiData != null)
+                        {
+                            _wiki.Add(c.Lexicon, wikiData);
+                        } else
+                        {
+                            normalized = EnglishNormalizer.RemoveSemanticData(normalized);
+                            wikiData = Service.English.GetAllWikiInformation(normalized);
+                            _wiki.Add(c.Lexicon, wikiData);
+                        }
                     }
                 }
 
