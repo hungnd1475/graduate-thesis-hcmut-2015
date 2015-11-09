@@ -64,7 +64,7 @@ namespace HCMUT.EMRCorefResol.English.Features
 
         private Tuple<string, string> GetIndicatorsPairValue(string line, string term)
         {
-            var pattern = term + "[ ]{0,}(-|of|was|were|is|are)?[ ]{0,}(\\d+\\.\\d?|\\d+,\\d?|\\d+)";
+            var pattern = term + "[ ]{0,}(-|of|was|were|is|are|rise to|rises to|rise|rises|rised to|rising to|down to|downed to|downs to|drop to|dropped to|drops to|drop|drops)?[ ]{0,}(\\d+\\.\\d?|\\d+,\\d?|\\d+)";
             var match = Regex.Match(line, pattern, RegexOptions.IgnoreCase);
             var value = "";
             if (match.Success)
