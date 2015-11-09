@@ -52,6 +52,20 @@ namespace HCMUT.EMRCorefResol.Core.Console
             }
         }
 
+        public static IFeatureExtractor SelectFeatureExtractor(Language language, IClassifier classifier)
+        {
+            switch (language)
+            {
+                case Language.English:
+                    return new EnglishClasFeatureExtractor(classifier);
+                case Language.Vietnamese:
+                    throw new NotImplementedException();
+                default:
+                    throw new ArgumentException();
+            }
+        }
+
+
         public static IClasProblemSerializer SelectProblemSerializer(ClasMethod fformat)
         {
             switch (fformat)
@@ -124,7 +138,7 @@ namespace HCMUT.EMRCorefResol.Core.Console
                 case InstancesGenerator.All:
                     return new AllInstancesGenerator();
                 case InstancesGenerator.ModNg2002:
-                    return new ModNg2002InstancesGenerator();
+                    return new ModNg2002InstancesGenerator(new SubstringMatchFilterRule());
                 case InstancesGenerator.ModSoon2001:
                     return new ModSoon2001ModInstancesGenerator();
                 case InstancesGenerator.Soon2001:

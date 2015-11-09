@@ -7,28 +7,12 @@ using Fclp;
 using HCMUT.EMRCorefResol.Core.Console;
 using System.IO;
 using HCMUT.EMRCorefResol.Classification;
-using HCMUT.EMRCorefResol.Evaluations;
+using HCMUT.EMRCorefResol.Scoring;
 
 namespace HCMUT.EMRCorefResol.ResolvingConsole
 {
     class Program
     {
-        static readonly IPerfMetric[] PerfMetrics =
-        {
-            new MUCPerfMetric(),
-            new BCubedPerfMetric(),
-            new CEAFPerfMetric()
-        };
-
-        static readonly ConceptType[] Types =
-        {
-            ConceptType.None,
-            ConceptType.Person,
-            ConceptType.Problem,
-            ConceptType.Test,
-            ConceptType.Treatment
-        };
-
         static void Main(string[] rawArgs)
         {
             var argsParser = PrepareParser();
@@ -60,7 +44,7 @@ namespace HCMUT.EMRCorefResol.ResolvingConsole
 
             var dataReader = APISelector.SelectDataReader(args.EMRFormat);
             var classifier = APISelector.SelectClassifier(args.ClasMethod, args.ModelsDir);
-            var fExtractor = APISelector.SelectFeatureExtractor(args.Language, Mode.Classify, args.ClasMethod, args.ModelsDir);
+            var fExtractor = APISelector.SelectFeatureExtractor(args.Language, classifier);
             var resolver = APISelector.SelectResolver(args.ResolMethod);
 
             if (!string.IsNullOrEmpty(args.EMRName))
@@ -97,7 +81,7 @@ namespace HCMUT.EMRCorefResol.ResolvingConsole
                     var emrFile = emrCollection.GetEMRPath(i);                    
                     var emrName = Path.GetFileName(emrFile);
 
-                    Console.WriteLine($"Resolving {emrName}...");
+                    Console.WriteLine($"Resolving {emrName} ({i}/{emrCollection.Count})...");
                     var conceptsFile = emrCollection.GetConceptsPath(i);
                     var emr = new EMR(emrFile, conceptsFile, dataReader);
 

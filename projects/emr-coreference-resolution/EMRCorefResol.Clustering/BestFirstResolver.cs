@@ -98,6 +98,8 @@ namespace HCMUT.EMRCorefResol.CorefResolvers
             });
 
             fExtractor.ClearCache();
+            classifier.ClearCache();
+
             var resultChains = chains.Select(s => new CorefChain(s.OrderBy(c => c), s.First().Type)).ToList();
             return new CorefChainCollection(resultChains);
         }
@@ -108,12 +110,12 @@ namespace HCMUT.EMRCorefResol.CorefResolvers
             {
                 case ConceptType.Person:
                     return ClassifyInstance(new PersonPair(ante, ana), fExtractor, classifier);
-                //case ConceptType.Problem:
-                //    return ClassifyInstance(new ProblemPair(ante, ana), fExtractor, classifier);
-                //case ConceptType.Test:
-                //    return ClassifyInstance(new TestPair(ante, ana), fExtractor, classifier);
-                //case ConceptType.Treatment:
-                //    return ClassifyInstance(new TreatmentPair(ante, ana), fExtractor, classifier);
+                case ConceptType.Problem:
+                    return ClassifyInstance(new ProblemPair(ante, ana), fExtractor, classifier);
+                case ConceptType.Test:
+                    return ClassifyInstance(new TestPair(ante, ana), fExtractor, classifier);
+                case ConceptType.Treatment:
+                    return ClassifyInstance(new TreatmentPair(ante, ana), fExtractor, classifier);
                 default:
                     return null;
             }

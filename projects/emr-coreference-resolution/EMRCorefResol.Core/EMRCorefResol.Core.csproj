@@ -82,6 +82,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Instances\IFilterRule.cs" />
     <Compile Include="Instances\AllInstancesGenerator.cs" />
     <Compile Include="Classification\ClasConfig.cs" />
     <Compile Include="Classification\ClasResult.cs" />
@@ -91,11 +92,12 @@
     <Compile Include="Classification\IClasProblemSerializer.cs" />
     <Compile Include="Concept.cs" />
     <Compile Include="ConceptCollection.cs" />
-    <Compile Include="Evaluations\BCubedPerfMetric.cs" />
-    <Compile Include="Evaluations\CEAFPerfMetric.cs" />
-    <Compile Include="Evaluations\Evaluation.cs" />
-    <Compile Include="Evaluations\IPerfMetric.cs" />
-    <Compile Include="Evaluations\MUCPerfMetric.cs" />
+    <Compile Include="Scoring\BCubedPerfMetric.cs" />
+    <Compile Include="Scoring\CEAFPerfMetric.cs" />
+    <Compile Include="Scoring\Evaluation.cs" />
+    <Compile Include="Scoring\Evaluations.cs" />
+    <Compile Include="Scoring\IPerfMetric.cs" />
+    <Compile Include="Scoring\MUCPerfMetric.cs" />
     <Compile Include="Instances\ModNg2002InstancesGenerator.cs" />
     <Compile Include="Instances\ModSoon2001InstancesGenerator.cs" />
     <Compile Include="Service\ServiceModels\UMLSData.cs" />
@@ -105,6 +107,7 @@
     <Compile Include="Instances\Soon2001InstancesGenerator.cs" />
     <Compile Include="TemporalData.cs" />
     <Compile Include="TemporalDataDictionary.cs" />
+    <Compile Include="Instances\TrueFilterRule.cs" />
     <Compile Include="UmlsDataDictionary.cs" />
     <Compile Include="Utilities\EnglishNormalizer.cs" />
     <Compile Include="Utilities\GenericConfig.cs" />

@@ -12,7 +12,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
 {
     public class LibSVMTrainer : ITrainer
     {
-        private readonly LibSVMClassifier _classifier;
+        private LibSVMClassifier _classifier;
         private readonly string _saveDir;
 
         public string ModelsDir { get { return _saveDir; } }
@@ -20,7 +20,6 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
         public LibSVMTrainer(string saveDir)
         {
             _saveDir = saveDir;
-            _classifier = new LibSVMClassifier(_saveDir);
         }
 
         public LibSVMTrainer() : this(string.Empty) { }
@@ -32,6 +31,10 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
 
         public IClassifier GetClassifier()
         {
+            if (_classifier == null)
+            {
+                _classifier = new LibSVMClassifier(_saveDir);
+            }
             return _classifier;
         }
 

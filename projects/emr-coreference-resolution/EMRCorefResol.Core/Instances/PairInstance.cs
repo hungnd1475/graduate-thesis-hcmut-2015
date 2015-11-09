@@ -46,7 +46,7 @@ namespace HCMUT.EMRCorefResol
             return Equals(obj as PairInstance);
         }
 
-        public static IClasInstance Create(Concept ante, Concept ana)
+        public static PairInstance Create(Concept ante, Concept ana)
         {
             if (ante.Type != ana.Type)
             {

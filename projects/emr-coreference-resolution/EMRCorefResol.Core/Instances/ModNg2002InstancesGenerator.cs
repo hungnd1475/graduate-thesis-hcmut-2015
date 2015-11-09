@@ -8,6 +8,17 @@ namespace HCMUT.EMRCorefResol
 {
     public class ModNg2002InstancesGenerator : IInstancesGenerator
     {
+        private readonly IFilterRule _singletonFilterRule;
+
+        public ModNg2002InstancesGenerator()
+            : this(new TrueFilterRule())
+        { }
+
+        public ModNg2002InstancesGenerator(IFilterRule singletonFilterRule)
+        {
+            _singletonFilterRule = singletonFilterRule;
+        }
+
         public IIndexedEnumerable<IClasInstance> Generate(EMR emr, CorefChainCollection groundTruth)
         {
             var instances = new List<IClasInstance>();
@@ -16,50 +27,54 @@ namespace HCMUT.EMRCorefResol
             for (int j = concepts.Count - 1; j >= 0; j--)
             {
                 var ana = concepts[j];
-
                 if (ana.Type == ConceptType.Pronoun)
                 {
                     instances.Add(new PronounInstance(ana));
                 }
-                else if (ana.Type == ConceptType.Person)
+                else
                 {
-                    instances.Add(new PersonInstance(ana));
-                    for (int i = j - 1; i >= 0; i--)
+                    if (groundTruth.IsSingleton(ana))
                     {
-                        var ante = concepts[i];
-                        if (ana.Type == ante.Type)
+                        for (int i = 0; i < j; i++)
                         {
-                            instances.Add(PairInstance.Create(ante, ana));
+                            var ante = concepts[i];
+                            if (ana.Type == ante.Type && groundTruth.IsSingleton(ante)
+                                && _singletonFilterRule.IsSatisfied(ante, ana))
+                            {
+                                instances.Add(PairInstance.Create(ante, ana));
+                            }
+                        }
+                    }
+                    else
+                    {
+                        int fIndex = -1;
+                        for (int i = 0; i < j; i++)
+                        {
+                            var ante = concepts[i];
                             if (groundTruth.IsCoref(ante, ana))
                             {
+                                fIndex = i;
                                 break;
                             }
                         }
-                    }                    
-                }
-            }
 
-            for (int i = 0; i < concepts.Count; i++)
-            {
-                var ante = concepts[i];
-                if (ante.Type != ConceptType.Pronoun && ante.Type != ConceptType.Person)
-                {
-                    for (int j = i + 1; j < concepts.Count; j++)
-                    {
-                        var ana = concepts[j];
-                        if (ana.Type == ante.Type && groundTruth.IsCoref(ante, ana))
+                        if (fIndex > 0)
                         {
-                            instances.Add(PairInstance.Create(ante, ana));
-                            for (int k = i + 1; k < j; k++)
+                            for (int i = fIndex; i < j; i++)
                             {
-                                var negAnte = concepts[k];
-                                if (negAnte.Type == ana.Type)
+                                var ante = concepts[i];
+                                if (ante.Type == ana.Type)
                                 {
-                                    instances.Add(PairInstance.Create(negAnte, ana));
+                                    instances.Add(PairInstance.Create(ante, ana));
                                 }
                             }
                         }
                     }
+                }
+
+                if (ana.Type == ConceptType.Person)
+                {
+                    instances.Add(new PersonInstance(ana));
                 }
             }
 

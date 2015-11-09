@@ -22,26 +22,40 @@ namespace HCMUT.EMRCorefResol
                 }
                 else
                 {
-                    for (int j = i + 1; j < concepts.Count; j++)
+                    if (groundTruth.IsSingleton(ante))
                     {
-                        var ana = concepts[j];
-
-                        if (ante.Type == ana.Type)
+                        for (int j = i + 1; j < concepts.Count; j++)
                         {
-                            if (groundTruth.IsCoref(ante, ana))
+                            var ana = concepts[j];
+                            if (ante.Type == ana.Type && groundTruth.IsSingleton(ana))
                             {
                                 instances.Add(PairInstance.Create(ante, ana));
+                            }
+                        }
+                    }
+                    else
+                    {
+                        for (int j = i + 1; j < concepts.Count; j++)
+                        {
+                            var ana = concepts[j];
 
-                                for (int k = i + 1; k < j; k++)
+                            if (ante.Type == ana.Type)
+                            {
+                                if (groundTruth.IsCoref(ante, ana))
                                 {
-                                    var c = concepts[k];
-                                    if (c.Type == ana.Type)
-                                    {
-                                        instances.Add(PairInstance.Create(c, ana));
-                                    }
-                                }
+                                    instances.Add(PairInstance.Create(ante, ana));
 
-                                break;
+                                    for (int k = i + 1; k < j; k++)
+                                    {
+                                        var c = concepts[k];
+                                        if (c.Type == ana.Type)
+                                        {
+                                            instances.Add(PairInstance.Create(c, ana));
+                                        }
+                                    }
+
+                                    break;
+                                }
                             }
                         }
                     }

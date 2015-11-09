@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Fclp;
 using HCMUT.EMRCorefResol.Core.Console;
 using System.IO;
-using HCMUT.EMRCorefResol.Evaluations;
+using HCMUT.EMRCorefResol.Scoring;
 
 namespace HCMUT.EMRCorefResol.EvaluatingConsole
 {
@@ -67,9 +67,9 @@ namespace HCMUT.EMRCorefResol.EvaluatingConsole
                 var emr = new EMR(emrFile, conceptsFile, dataReader);
                 var groundTruth = new CorefChainCollection(gtFile, dataReader);
                 var systemChains = new CorefChainCollection(scFile, dataReader);
-                var evals = Evaluation.Metrics.Select(m => m.Evaluate(emr, groundTruth, systemChains)).ToArray();
+                var evals = Evaluations.Evaluate(emr, groundTruth, systemChains);
 
-                var s = StringifyScores(evals);
+                var s = Evaluations.Stringify(evals);
                 Console.WriteLine(s);
                 File.WriteAllText(Path.Combine(args.OutputDir, $"{args.EMRFile}.scores"), s);
             }
@@ -77,7 +77,7 @@ namespace HCMUT.EMRCorefResol.EvaluatingConsole
             {
                 var emrCollection = new EMRCollection(args.EMRDir);
                 var emrCount = emrCollection.Count;
-                var evals = new Dictionary<ConceptType, Evaluation>[emrCount][];
+                var evals = new IIndexedEnumerable<Dictionary<ConceptType, Evaluation>>[emrCount];
 
                 Parallel.For(0, emrCount, i =>
                 {
@@ -99,14 +99,14 @@ namespace HCMUT.EMRCorefResol.EvaluatingConsole
                         var emr = new EMR(emrPath, emrCollection.GetConceptsPath(i), dataReader);
                         var groundTruth = new CorefChainCollection(gtPath, dataReader);
                         var systemChains = new CorefChainCollection(scPath, dataReader);
-                        evals[i] = Evaluation.Metrics.Select(m => m.Evaluate(emr, groundTruth, systemChains)).ToArray();
+                        evals[i] = Evaluations.Evaluate(emr, groundTruth, systemChains);
                     }
 
                     File.WriteAllText(Path.Combine(args.OutputDir, $"{emrFile}.scores"),
-                        StringifyScores(evals[i]));
+                        Evaluations.Stringify(evals[i]));
                 });
 
-                var nMetrics = Evaluation.Metrics.Count;
+                var nMetrics = Evaluations.Metrics.Count;
                 var avgEvals = evals.Aggregate(new Dictionary<ConceptType, Evaluation>[nMetrics + 1],
                     (avg, eval) =>
                     {
@@ -119,9 +119,9 @@ namespace HCMUT.EMRCorefResol.EvaluatingConsole
                                     avg[i] = new Dictionary<ConceptType, Evaluation>();
                                 }
 
-                                foreach (var t in Evaluation.ConceptTypes)
+                                foreach (var t in Evaluations.ConceptTypes)
                                 {
-                                    var e = eval[i].ContainsKey(t) ? eval[i][t] : new Evaluation(0d, 0d, 0d, Evaluation.Metrics[i].Name);
+                                    var e = eval[i].ContainsKey(t) ? eval[i][t] : new Evaluation(0d, 0d, 0d, Evaluations.Metrics[i].Name);
 
                                     if (!avg[i].ContainsKey(t))
                                     {
@@ -150,7 +150,7 @@ namespace HCMUT.EMRCorefResol.EvaluatingConsole
                 avgEvals[nMetrics] = new Dictionary<ConceptType, Evaluation>();
                 for (int i = 0; i < nMetrics; i++)
                 {
-                    foreach (var t in Evaluation.ConceptTypes)
+                    foreach (var t in Evaluations.ConceptTypes)
                     {
                         var a = avgEvals[i][t];
                         avgEvals[i][t] = new Evaluation(a.Precision / emrCount,
@@ -163,32 +163,18 @@ namespace HCMUT.EMRCorefResol.EvaluatingConsole
                     }
                 }
 
-                foreach (var t in Evaluation.ConceptTypes)
+                foreach (var t in Evaluations.ConceptTypes)
                 {
                     var e = avgEvals[nMetrics][t];
                     avgEvals[nMetrics][t] = new Evaluation(e.Precision / nMetrics,
                         e.Recall / nMetrics, e.FMeasure / nMetrics, e.MetricName);
                 }
 
-                var s = StringifyScores(avgEvals);
+                var s = Evaluations.Stringify(avgEvals.ToIndexedEnumerable());
                 Console.WriteLine("Average scores:");
                 Console.WriteLine(s);
                 File.WriteAllText(args.AverageFile, s);
             }
-        }
-
-        static Dictionary<ConceptType, Evaluation>[] ZeroEvaluations()
-        {
-            var evals = new Dictionary<ConceptType, Evaluation>[Evaluation.Metrics.Count];
-            for (int i = 0; i < Evaluation.Metrics.Count; i++)
-            {
-                foreach (var t in Evaluation.ConceptTypes)
-                {
-                    evals[i] = new Dictionary<ConceptType, Evaluation>();
-                    evals[i][t] = Evaluation.Zero(Evaluation.Metrics[i].Name);
-                }
-            }
-            return evals;
         }
 
         static FluentCommandLineParser<Arguments> PrepareParser()
@@ -228,81 +214,6 @@ namespace HCMUT.EMRCorefResol.EvaluatingConsole
             p.SetupHelp("?").Callback(() => DescHelpOption.ShowHelp(p.Options));
 
             return p;
-        }
-
-        static string StringifyScores(Dictionary<ConceptType, Evaluation>[] scores)
-        {
-            var sb = new StringBuilder();
-            var metrics = scores.Select(s => s[ConceptType.None].MetricName).ToArray();
-
-            sb.Append('-', 11);
-            for (int i = 0; i < metrics.Length; i++)
-            {
-                sb.Append('-', 32);
-            }
-
-            sb.AppendLine();
-            sb.Append(' ', 11);
-            foreach (var m in metrics)
-            {
-                sb.Append($"{m,-32}");
-            }
-
-            sb.AppendLine();
-            sb.Append(' ', 11);
-            for (int i = 0; i < metrics.Length; i++)
-            {
-                sb.Append('-', 30);
-                sb.Append(' ', 2);
-            }
-
-            sb.AppendLine();
-            sb.Append(' ', 11);
-            for (int i = 0; i < metrics.Length; i++)
-            {
-                sb.Append($"{"P",-10}{"R",-10}{"F",-10}  ");
-            }
-
-            sb.AppendLine();
-            sb.Append('-', 11);
-            for (int i = 0; i < metrics.Length; i++)
-            {
-                sb.Append('-', 32);
-            }
-
-            foreach (var type in Evaluation.ConceptTypes)
-            {
-                sb.AppendLine();
-
-                var name = type == ConceptType.None ? "All" : type.ToString();
-                sb.Append($"{name,-11}");
-
-                foreach (var evals in scores)
-                {
-                    double p = 0d, r = 0d, f = 0d;
-
-                    if (evals.ContainsKey(type))
-                    {
-                        p = evals[type].Precision;
-                        r = evals[type].Recall;
-                        f = evals[type].FMeasure;
-                    }
-
-                    sb.Append($"{p,-10:N3}");
-                    sb.Append($"{r,-10:N3}");
-                    sb.Append($"{f,-10:N3}");
-                    sb.Append(' ', 2);
-                }
-            }
-
-            sb.AppendLine();
-            sb.Append('-', 11);
-            for (int i = 0; i < metrics.Length; i++)
-            {
-                sb.Append('-', 32);
-            }
-
-            return sb.ToString();
         }
     }
 }

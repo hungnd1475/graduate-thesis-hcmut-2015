@@ -176,6 +176,12 @@ namespace HCMUT.EMRCorefResol
             return chain?.Contains(second) ?? false;
         }
 
+        public bool IsSingleton(Concept concept)
+        {
+            var chain = FindChainContains(concept);
+            return chain == null;
+        }
+
         public CorefChainCollection GetChainsOfType(ConceptType type)
         {
             if (type == ConceptType.None)

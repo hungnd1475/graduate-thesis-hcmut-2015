@@ -6,14 +6,25 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.IO;
 using HCMUT.EMRCorefResol.Classification.LibSVM.Internal;
+using HCMUT.EMRCorefResol.Utilities;
 
 namespace HCMUT.EMRCorefResol.Classification.LibSVM
 {
     public class LibSVMClassifier : IClassifier
     {
+        private static readonly Type[] InstanceTypes = new[]
+        {
+            typeof(PersonInstance),
+            typeof(PersonPair),
+            typeof(PronounInstance),
+            typeof(ProblemPair),
+            typeof(TestPair),
+            typeof(TreatmentPair)
+        };
+
         private readonly string _modelsDir;
-        private readonly Dictionary<Concept, ClasResult> _cache
-            = new Dictionary<Concept, ClasResult>();
+        private readonly ICache<Concept, ClasResult> _cache
+            = new UnlimitedCache<Concept, ClasResult>();
 
         private readonly object _syncRoot = new object();
 
@@ -28,6 +39,18 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
         public LibSVMClassifier(string modelsDir)
         {
             _modelsDir = modelsDir;
+
+            Console.WriteLine("Loading models...");
+            foreach (var t in InstanceTypes)
+            {
+                var modelPath = Path.Combine(_modelsDir, $"{t.Name}.model");
+                var model = LibSVM.LoadModel(modelPath);
+                _svmModels.Add(t, model);
+
+                var sfPath = Path.Combine(_modelsDir, $"{t.Name}.sf");
+                var sf = LibSVMScalingFactor.Load(sfPath);
+                _svmScalingFactors.Add(t, sf);
+            }
         }
 
         public IClasProblemSerializer ProblemSerializer
@@ -57,14 +80,10 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
 
         public ClasResult Classify(PersonInstance instance, IFeatureVector f)
         {
-            lock (_syncRoot)
+            return _cache.GetValue(instance.Concept, c =>
             {
-                if (!_cache.ContainsKey(instance.Concept))
-                {
-                    _cache.Add(instance.Concept, ClassifyInstance(instance, f));
-                }
-            }
-            return _cache[instance.Concept];
+                return ClassifyInstance(instance, f);
+            });
         }
 
         public ClasResult Classify(PersonPair instance, IFeatureVector f)
@@ -141,13 +160,20 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             //var scaledPrb = LibSVM.ReadProblem(scaledPrbContent);
             //var nodes = scaledPrb.X[0];
 
-            var sf = GetScalingFactor(instanceType);
-            var nodes = Scale(fVector, sf);
-            var svmModel = GetModel(instanceType);
+            var sf = _svmScalingFactors[instanceType];            
+            var svmModel = _svmModels[instanceType];
 
-            double confidence;
-            var label = LibSVM.Predict(svmModel, nodes, out confidence);
-            return new ClasResult(label, confidence);
+            if (sf != null && svmModel != null)
+            {
+                var nodes = Scale(fVector, sf);
+                double confidence;
+                var label = LibSVM.Predict(svmModel, nodes, out confidence);
+                return new ClasResult(label, confidence);
+            }
+            else
+            {
+                return null;
+            }
         }
 
         private static SVMNode[] Scale(IFeatureVector fVector, LibSVMScalingFactor scalingFactors)
@@ -171,48 +197,6 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
             }
 
             return nodes.ToArray();
-        }
-
-        private SVMModel GetModel(Type instanceType)
-        {
-            try
-            {
-                lock (_syncRoot)
-                {
-                    if (!_svmModels.ContainsKey(instanceType))
-                    {
-                        var modelPath = Path.Combine(_modelsDir, $"{instanceType.Name}.model");
-                        var model = LibSVM.LoadModel(modelPath);
-                        _svmModels.Add(instanceType, model);
-                    }
-                }
-                return _svmModels[instanceType];
-            }
-            catch (IOException ex)
-            {
-                throw new IOException($"Cannot read {instanceType.Name} model file", ex);
-            }
-        }
-
-        private LibSVMScalingFactor GetScalingFactor(Type instanceType)
-        {
-            try
-            {
-                lock (_syncRoot)
-                {
-                    if (!_svmScalingFactors.ContainsKey(instanceType))
-                    {
-                        var sfPath = Path.Combine(_modelsDir, $"{instanceType.Name}.sf");
-                        var sf = new LibSVMScalingFactor(sfPath);
-                        _svmScalingFactors.Add(instanceType, sf);
-                    }
-                }
-                return _svmScalingFactors[instanceType];
-            }
-            catch (IOException ex)
-            {
-                throw new IOException($"Cannot read {instanceType.Name} scaling factor file.", ex);
-            }
         }
 
         public void ClearCache()

@@ -167,7 +167,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
                 return model;
             }
         }
-
+        
         public static double Predict(SVMModel model, SVMNode[] x)
         {
             double confidence;

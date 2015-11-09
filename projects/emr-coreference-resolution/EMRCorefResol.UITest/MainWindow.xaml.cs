@@ -26,7 +26,7 @@ using ICSharpCode.AvalonEdit.Search;
 using HCMUT.EMRCorefResol.Classification;
 using HCMUT.EMRCorefResol.Classification.LibSVM;
 using HCMUT.EMRCorefResol.CorefResolvers;
-using HCMUT.EMRCorefResol.Evaluations;
+using HCMUT.EMRCorefResol.Scoring;
 using System.ComponentModel;
 
 namespace EMRCorefResol.UITest
@@ -59,7 +59,11 @@ namespace EMRCorefResol.UITest
         private List<TypeItem> types = new List<TypeItem>()
         {
             new TypeItem(typeof(PersonInstance), true),
-            new TypeItem(typeof(PersonPair), true)
+            new TypeItem(typeof(PersonPair), true),
+            new TypeItem(typeof(ProblemPair), true),
+            new TypeItem(typeof(TreatmentPair), true),
+            new TypeItem(typeof(TestPair), true),
+            new TypeItem(typeof(PronounInstance), true)
         };
 
         public MainWindow()
@@ -554,8 +558,8 @@ namespace EMRCorefResol.UITest
                 var chainsPath = emrCollection.GetChainsPath(currentEMRIndex);
                 var reader = new I2B2DataReader();
                 var groundTruth = new CorefChainCollection(chainsPath, reader);
-                var evals = Evaluation.Metrics.Select(m => m.Evaluate(currentEMR, groundTruth, systemChains)).ToArray();
-                txtScores.Text = StringifyScores(evals);
+                var evals = Evaluations.Evaluate(currentEMR, groundTruth, systemChains);
+                txtScores.Text = Evaluations.Stringify(evals);
             }
         }
 
@@ -566,81 +570,6 @@ namespace EMRCorefResol.UITest
             {
                 return resolver.Resolve(emr, extractor, classifier);
             });
-        }
-
-        static string StringifyScores(Dictionary<ConceptType, Evaluation>[] scores)
-        {
-            var sb = new StringBuilder();
-            var metrics = scores.Select(s => s[ConceptType.None].MetricName).ToArray();
-
-            sb.Append('-', 11);
-            for (int i = 0; i < metrics.Length; i++)
-            {
-                sb.Append('-', 32);
-            }
-
-            sb.AppendLine();
-            sb.Append(' ', 11);
-            foreach (var m in metrics)
-            {
-                sb.Append($"{m,-32}");
-            }
-
-            sb.AppendLine();
-            sb.Append(' ', 11);
-            for (int i = 0; i < metrics.Length; i++)
-            {
-                sb.Append('-', 30);
-                sb.Append(' ', 2);
-            }
-
-            sb.AppendLine();
-            sb.Append(' ', 11);
-            for (int i = 0; i < metrics.Length; i++)
-            {
-                sb.Append($"{"P",-10}{"R",-10}{"F",-10}  ");
-            }
-
-            sb.AppendLine();
-            sb.Append('-', 11);
-            for (int i = 0; i < metrics.Length; i++)
-            {
-                sb.Append('-', 32);
-            }
-
-            foreach (var type in Evaluation.ConceptTypes)
-            {
-                sb.AppendLine();
-
-                var name = type == ConceptType.None ? "All" : type.ToString();
-                sb.Append($"{name,-11}");
-
-                foreach (var evals in scores)
-                {
-                    double p = 0d, r = 0d, f = 0d;
-
-                    if (evals.ContainsKey(type))
-                    {
-                        p = evals[type].Precision;
-                        r = evals[type].Recall;
-                        f = evals[type].FMeasure;
-                    }
-
-                    sb.Append($"{p,-10:N3}");
-                    sb.Append($"{r,-10:N3}");
-                    sb.Append($"{f,-10:N3}");
-                    sb.Append(' ', 2);
-                }
-            }
-
-            sb.AppendLine();
-            sb.Append('-', 11);
-            for (int i = 0; i < metrics.Length; i++)
-            {
-                sb.Append('-', 32);
-            }
-
-            return sb.ToString();
         }
 
         class TypeItem : INotifyPropertyChanged

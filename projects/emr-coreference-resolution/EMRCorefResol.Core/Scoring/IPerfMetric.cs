@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HCMUT.EMRCorefResol.Evaluations
+namespace HCMUT.EMRCorefResol.Scoring
 {
     public interface IPerfMetric
     {

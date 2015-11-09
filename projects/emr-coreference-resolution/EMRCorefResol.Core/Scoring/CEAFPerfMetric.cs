@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HCMUT.EMRCorefResol.Evaluations
+namespace HCMUT.EMRCorefResol.Scoring
 {
     public class CEAFPerfMetric : IPerfMetric
     {
@@ -18,7 +18,7 @@ namespace HCMUT.EMRCorefResol.Evaluations
         {
             var evals = new Dictionary<ConceptType, Evaluation>();
 
-            foreach (var type in Evaluation.ConceptTypes)
+            foreach (var type in Evaluations.ConceptTypes)
             {
                 var tGroundTruth = groundTruth.GetChainsOfType(type);
                 var tSystemChains = systemChains.GetChainsOfType(type);
