@@ -22,10 +22,6 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
         static void Main(string[] args)
         {
-            var anaPattern = "wbc" + "[ ]{0,}(-|of|was|were)?[ ]{0,}(\\d+\\.\\d?|\\d+,\\d?|\\d+)(%)?";
-            var match = Regex.Match("WBC 23.5*# RBC - 3.81* HGB - 9.4* HCT - 29.2*", anaPattern, RegexOptions.IgnoreCase);
-
-
             ReadExtractedFile();
             Console.ReadLine();
         }
