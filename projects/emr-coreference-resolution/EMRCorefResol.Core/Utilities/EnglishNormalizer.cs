@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol
 {
+    using System.Text.RegularExpressions;
     using Utilities;
     public class EnglishNormalizer
     {
@@ -18,6 +19,42 @@ namespace HCMUT.EMRCorefResol
             var normalized = searcher.RemoveKeywords(term, KWSearchOptions.WholeWordIgnoreCase);
 
             return string.IsNullOrEmpty(normalized) ? term : RemovePreposition(normalized);
+        }
+
+        public static string RemoveSemanticData(string term)
+        {
+            var number_literal = new string[] { "one", "ones", "two", "twos",
+                "three", "threes", "four", "fours", "five", "fives", "six", "seven", "sevens",
+                "eight", "eights", "nine", "nines", "ten", "tens", "eleven", "elevens", "twelve",
+                "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen",
+                "thirteens", "fourteens", "fifteens", "sixteens", "seventeens", "eighteens", "nineteens",
+                "twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"
+            };
+
+            var position_literal = new string[] { "left", "right", "upper", "lower", "back", "front", "behind",
+                "left upper", "upper left", "right upper", "upper right", "left lower", "lower left",
+                "right lower", "lower right"
+            };
+
+            var normalized = term;
+
+            var searcher = new AhoCorasickKeywordDictionary(number_literal);
+            while(searcher.Match(normalized, KWSearchOptions.WholeWordIgnoreCase))
+            {
+                normalized = searcher.RemoveKeywords(normalized, KWSearchOptions.WholeWordIgnoreCase);
+            }
+
+            searcher = new AhoCorasickKeywordDictionary(position_literal);
+            while (searcher.Match(normalized, KWSearchOptions.WholeWordIgnoreCase))
+            {
+                normalized = searcher.RemoveKeywords(normalized, KWSearchOptions.WholeWordIgnoreCase);
+            }
+
+            normalized = Regex.Replace(normalized, @"\b[\d]\b", string.Empty);
+            normalized = Regex.Replace(normalized, @"[ ]{2,}", string.Empty);
+            normalized = normalized.Trim();
+
+            return normalized;
         }
 
         public static string FindProposition(string term)

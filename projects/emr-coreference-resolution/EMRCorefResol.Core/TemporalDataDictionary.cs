@@ -93,7 +93,7 @@ namespace HCMUT.EMRCorefResol
             {
                 if(c == null)
                 {
-                    return tempInline[0];
+                    return tempInline.Last();
                 } else
                 {
                     return GetBestResultInLine(c, line, tempInline);

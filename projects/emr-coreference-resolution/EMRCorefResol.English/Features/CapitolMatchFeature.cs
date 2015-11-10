@@ -13,8 +13,11 @@ namespace HCMUT.EMRCorefResol.English.Features
         {
             if (!checkPhrase(instance)) return;
 
-            var anaAbbre = getAbbre(instance.Anaphora.Lexicon);
-            var anteAbbre = getAbbre(instance.Antecedent.Lexicon);
+            var anaNormalized = EnglishNormalizer.Normalize(instance.Anaphora.Lexicon);
+            var anteNormalized = EnglishNormalizer.Normalize(instance.Antecedent.Lexicon);
+
+            var anaAbbre = getAbbre(anaNormalized);
+            var anteAbbre = getAbbre(anteNormalized);
 
             if (string.Equals(anaAbbre, anteAbbre, StringComparison.InvariantCultureIgnoreCase))
             {

@@ -28,5 +28,22 @@ namespace HCMUT.EMRCorefResol
         {
 
         }
+
+        public override bool Equals(object obj)
+        {
+            var tempData = obj as TemporalData;
+
+            if(tempData == null)
+            {
+                return false;
+            } else
+            {
+                return tempData.Start == this.Start &&
+                    tempData.End == this.End &&
+                    tempData.Line == this.Line &&
+                    tempData.Text.Equals(this.Text) &&
+                    tempData.Value.Equals(this.Value);
+            }
+        }
     }
 }
