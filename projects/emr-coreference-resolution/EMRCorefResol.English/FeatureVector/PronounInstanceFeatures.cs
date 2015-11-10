@@ -22,10 +22,12 @@ namespace HCMUT.EMRCorefResol.English
             this[6] = new FirstNextMentionDistanceFeature(instance, emr);
             this[7] = new FirstPreviousMentionDistanceFeature(instance, emr);
             this[8] = new SecondPreviousMentionDistanceFeature(instance, emr);
-            this[9] = new FirstChunkBeforeMention(instance, emr);
-            this[10] = new FirstChunkAfterMention(instance, emr);
-            this[11] = new FirstChunkBeforeIsPreposition((FirstChunkBeforeMention)this[9]);
-            this[12] = new FirstNextChunkIsVerb((FirstChunkAfterMention)this[10]);
+            //this[9] = new FirstChunkBeforeMention(instance, emr);
+            //this[10] = new FirstChunkAfterMention(instance, emr);
+            this[9] = new FirstChunkBeforeIsPreposition(/*(FirstChunkBeforeMention)this[9]*/new FirstChunkBeforeMention(instance, emr));
+            this[10] = new FirstNextChunkIsVerb(/*(FirstChunkAfterMention)this[10]*/new FirstChunkAfterMention(instance, emr));
+            this[11] = new First123WordsBoW(instance, emr, true, KeywordService.Instance.PRONOUN_BEFORE_WORDS);
+            this[12] = new First123WordsBoW(instance, emr, false, KeywordService.Instance.PRONOUN_AFTER_WORDS);
         }
     }
 }

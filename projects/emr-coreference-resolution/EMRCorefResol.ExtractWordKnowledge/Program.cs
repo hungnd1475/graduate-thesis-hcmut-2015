@@ -6,25 +6,44 @@ using System.Threading.Tasks;
 
 using HCMUT.EMRCorefResol.IO;
 using System.IO;
+using HCMUT.EMRCorefResol.Utilities;
 
 namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
 {
     class Program
     {
-        static readonly int WIKI = 0;
-        static readonly int UMLS = 1;
+        const string KWPath = @"D:\Documents\Visual Studio 2015\Projects\graduate-thesis-hcmut-2015\projects\emr-coreference-resolution\EMRCorefResol.English\Keywords";
+
+        public static IKeywordDictionary PATIENT_KEYWORDS { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "patients.txt")));
+
+        public static IKeywordDictionary RELATIVES { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "relatives.txt")));
+
+        private static IEnumerable<string> ReadKWFile(string filePath)
+        {
+            using (var sr = new StreamReader(filePath))
+            {
+                while (!sr.EndOfStream)
+                {
+                    yield return sr.ReadLine();
+                }
+            }
+        }
 
         static void Main(string[] args)
         {
             var collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Train");
             //BatchUMLSProcess(collection);
             //BatchWikiProcess(collection);
-            BatchTemporalProcess(collection);
+            //BatchTemporalProcess(collection);
+            BatchExtractWordsPerson(collection);
+            BatchExtractWordsPronoun(collection);
 
             collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Test");
             //BatchUMLSProcess(collection);
             //BatchWikiProcess(collection);
-            BatchTemporalProcess(collection);
+            //BatchTemporalProcess(collection);
 
             Console.WriteLine("========Finish========");
             Console.ReadLine();
@@ -103,12 +122,12 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
             Dictionary<string, string> _temporal = new Dictionary<string, string>();
             var lines = emr.Content.Split('\n');
 
-            foreach(string line in lines)
+            foreach (string line in lines)
             {
                 var fullPath = new FileInfo(emr.Path).FullName;
                 var normLine = line.Replace("\n", "").Replace("\r", "");
                 var temporalValue = Service.English.GetTemporalValue(fullPath, normLine, "");
-                if(!string.IsNullOrEmpty(temporalValue) && !_temporal.ContainsKey(normLine))
+                if (!string.IsNullOrEmpty(temporalValue) && !_temporal.ContainsKey(normLine))
                 {
                     _temporal.Add(normLine, temporalValue);
                 }
@@ -122,7 +141,7 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
             Dictionary<string, Service.WikiData> _wiki = new Dictionary<string, Service.WikiData>();
 
             int num = 0;
-            foreach(Concept c in emr.Concepts)
+            foreach (Concept c in emr.Concepts)
             {
                 if (c.Type == ConceptType.Problem || c.Type == ConceptType.Treatment || c.Type == ConceptType.Test)
                 {
@@ -146,7 +165,7 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
             int num = 0;
             foreach (Concept c in emr.Concepts)
             {
-                if(c.Type == ConceptType.Problem)
+                if (c.Type == ConceptType.Problem)
                 {
                     var key = $"{c.Lexicon}|ANA";
                     if (!_umls.ContainsKey(key))
@@ -224,9 +243,9 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
             var filePath = Path.Combine(root, "wiki", emrName);
 
             StreamWriter sw = new StreamWriter(filePath);
-            foreach(var entry in dictionary)
+            foreach (var entry in dictionary)
             {
-                if(entry.Value != null)
+                if (entry.Value != null)
                 {
                     var line = $"rawTerm=\"{entry.Key}\"||{entry.Value.ToString()}";
                     sw.WriteLine(line);
@@ -253,6 +272,248 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
                 }
             }
             sw.Close();
+        }
+
+        static void BatchExtractWordsPronoun(EMRCollection emrColl)
+        {
+            var before = new HashSet<string>[emrColl.Count];
+            var after = new HashSet<string>[emrColl.Count];
+
+            Parallel.For(0, emrColl.Count,
+                i =>
+                {
+                    var emrPath = emrColl.GetEMRPath(i);
+                    var conceptsPath = emrColl.GetConceptsPath(i);
+                    var emr = new EMR(emrPath, conceptsPath, new I2B2DataReader());
+
+                    before[i] = ExtractWords(emr, IsPronoun, (e, c) => GetNWordsNearBy(e, c, 3, true));
+                    after[i] = ExtractWords(emr, IsPronoun, (e, c) => GetNWordsNearBy(e, c, 3, false));
+                });
+
+            var saveDir = @"D:\Documents\Visual Studio 2015\Projects\graduate-thesis-hcmut-2015\projects\emr-coreference-resolution\EMRCorefResol.English\Keywords";
+            Parallel.Invoke(
+                () => WriteWords(before, Path.Combine(saveDir, "pronoun-before.txt")),
+                () => WriteWords(after, Path.Combine(saveDir, "pronoun-after.txt"))
+            );
+        }
+
+        static void BatchExtractWordsPerson(EMRCollection emrColl)
+        {
+            var before = new HashSet<string>[emrColl.Count];
+            var after = new HashSet<string>[emrColl.Count];
+
+            var firstBetweenProblem = new HashSet<string>[emrColl.Count];
+            var lastBetweenProblem = new HashSet<string>[emrColl.Count];
+
+            var firstBetweenTreatment = new HashSet<string>[emrColl.Count];
+            var lastBetweenTreatment = new HashSet<string>[emrColl.Count];
+
+            var firstBetweenTest = new HashSet<string>[emrColl.Count];
+            var lastBetweenTest = new HashSet<string>[emrColl.Count];
+
+            Parallel.For(0, emrColl.Count,
+                i =>
+                {
+                    var emrPath = emrColl.GetEMRPath(i);
+                    var conceptsPath = emrColl.GetConceptsPath(i);
+                    var emr = new EMR(emrPath, conceptsPath, new I2B2DataReader());
+
+                    var gt = new CorefChainCollection(emrColl.GetChainsPath(i), new I2B2DataReader());
+                    Func<Concept, bool> isPatient = c => IsPatient(c, gt);
+
+                    before[i] = ExtractWords(emr, isPatient, (e, c) => GetNWordsNearBy(e, c, 3, true));
+                    after[i] = ExtractWords(emr, isPatient, (e, c) => GetNWordsNearBy(e, c, 3, false));
+
+                    firstBetweenProblem[i] = ExtractWords(emr, isPatient,
+                        (e, c1) => GetFirstOneTwoThreeWordsBetween(e, c1, c2 => c2.Type == ConceptType.Problem));
+                    lastBetweenProblem[i] = ExtractWords(emr, isPatient,
+                        (e, c1) => GetLastOneTwoThreeWordsBetween(e, c1, c2 => c2.Type == ConceptType.Problem));
+
+                    firstBetweenTest[i] = ExtractWords(emr, isPatient,
+                        (e, c1) => GetFirstOneTwoThreeWordsBetween(e, c1, c2 => c2.Type == ConceptType.Test));
+                    lastBetweenTest[i] = ExtractWords(emr, isPatient,
+                        (e, c1) => GetLastOneTwoThreeWordsBetween(e, c1, c2 => c2.Type == ConceptType.Test));
+
+                    firstBetweenTreatment[i] = ExtractWords(emr, isPatient,
+                        (e, c1) => GetFirstOneTwoThreeWordsBetween(e, c1, c2 => c2.Type == ConceptType.Treatment));
+                    lastBetweenTreatment[i] = ExtractWords(emr, isPatient,
+                        (e, c1) => GetLastOneTwoThreeWordsBetween(e, c1, c2 => c2.Type == ConceptType.Treatment));
+                });
+
+            var saveDir = @"D:\Documents\Visual Studio 2015\Projects\graduate-thesis-hcmut-2015\projects\emr-coreference-resolution\EMRCorefResol.English\Keywords";
+            Parallel.Invoke(
+                () => WriteWords(before, Path.Combine(saveDir, "person-before.txt")),
+                () => WriteWords(after, Path.Combine(saveDir, "person-after.txt")),
+
+                () => WriteWords(firstBetweenProblem, Path.Combine(saveDir, "first-between-problem.txt")),
+                () => WriteWords(lastBetweenProblem, Path.Combine(saveDir, "last-between-problem.txt")),
+
+                () => WriteWords(firstBetweenTest, Path.Combine(saveDir, "first-between-test.txt")),
+                () => WriteWords(lastBetweenTest, Path.Combine(saveDir, "last-between-test.txt")),
+
+                () => WriteWords(firstBetweenTreatment, Path.Combine(saveDir, "first-between-treatment.txt")),
+                () => WriteWords(lastBetweenTreatment, Path.Combine(saveDir, "last-between-treatment.txt"))
+            );
+        }
+
+        static void WriteWords(IEnumerable<HashSet<string>> values, string filePath)
+        {
+            using (var sr = new StreamWriter(filePath))
+            {
+                var words = new HashSet<string>();
+                foreach (var s in values)
+                {
+                    foreach (var w in s)
+                    {
+                        if (!words.Contains(w))
+                        {
+                            sr.WriteLine(w);
+                            words.Add(w);
+                        }
+                    }
+                }
+            }
+        }
+
+        static HashSet<string> ExtractWords(EMR emr, Func<Concept, bool> isInterest,
+            Func<EMR, Concept, HashSet<string>> getNearByWords)
+        {
+            var words = new HashSet<string>();
+            foreach (var c in emr.Concepts)
+            {
+                if (isInterest(c))
+                {
+                    var s = getNearByWords(emr, c);
+                    words.UnionWith(s);
+                }
+            }
+            return words;
+        }
+
+        static bool IsPatient(Concept c, CorefChainCollection groundTruth)
+        {
+            //var ptChain = groundTruth.GetPatientChain(PATIENT_KEYWORDS, RELATIVES);
+            //return ptChain?.Contains(c) ?? false;
+            return c.Type == ConceptType.Person;
+        }
+
+        static bool IsPronoun(Concept c)
+        {
+            return c.Type == ConceptType.Pronoun;
+        }
+
+        static HashSet<string> GetNWordsNearBy(EMR e, Concept c, int n, bool left)
+        {
+            var words = new HashSet<string>();
+
+            var lineNumber = left ? c.Begin.Line : c.End.Line;
+            var line = removeNewLine(e.GetLine(lineNumber)).Trim();
+            var tokens = line.Split(' ');
+
+            var step = left ? -1 : 1;
+            var begin = left ? c.Begin.WordIndex : c.End.WordIndex;
+
+            for (int i = 1; i < tokens.Length && words.Count < n; i++)
+            {
+                var wi = begin + i * step;
+                if (wi >= 0 && wi < tokens.Length)
+                {
+                    var w = tokens[wi].ToLower();
+                    if (!isStopChar(w))
+                        words.Add(w);
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            return words;
+        }
+
+        static HashSet<string> GetFirstOneTwoThreeWordsBetween(EMR emr, Concept c1, Func<Concept, bool> isInterest)
+        {
+            var c1Index = emr.Concepts.IndexOf(c1);
+            var words = new HashSet<string>();
+
+            for (int i = c1Index + 1; i < emr.Concepts.Count; i++)
+            {
+                var c2 = emr.Concepts[i];
+                if (isInterest(c2))
+                {
+                    var s = removeNewLine(emr.ContentBetween(c1, c2)).Trim();
+                    var tokens = s.Split(' ');
+
+                    for (int j = 0; j < tokens.Length && words.Count < 3; j++)
+                    {
+                        var w = tokens[j].ToLower();
+                        if (!isStopChar(w))
+                            words.Add(w);
+                    }
+
+                    break;
+                }
+            }
+
+            return words;
+        }
+
+        static HashSet<string> GetLastOneTwoThreeWordsBetween(EMR emr, Concept c1, Func<Concept, bool> isInterest)
+        {
+            var c1Index = emr.Concepts.IndexOf(c1);
+            var words = new HashSet<string>();
+
+            for (int i = c1Index + 1; i < emr.Concepts.Count; i++)
+            {
+                var c2 = emr.Concepts[i];
+                if (isInterest(c2))
+                {
+                    var s = removeNewLine(emr.ContentBetween(c1, c2)).Trim();
+                    var tokens = s.Split(' ');
+
+                    for (int j = tokens.Length - 1; j >= 0 && words.Count < 3; j--)
+                    {
+                        var w = tokens[j].ToLower();
+                        if (!isStopChar(w))
+                            words.Add(w);
+                    }
+
+                    break;
+                }
+            }
+
+            return words;
+        }
+
+        static HashSet<string> STOP_CHARS = new HashSet<string>()
+        {
+            ",", ";", ".", ":", "-", "*", "(", ")",
+            "[", "]", "!", "?", ">", "<", "\"", "'",
+            "{", "}", "\\", "|", "&", "^", "%", "$",
+            "#", "@", "_", "+", "=", "~", "`",
+            "/"
+        };
+
+        static bool isStopChar(string s)
+        {
+            var c = s.Select(t => t.ToString());
+            return s == string.Empty || STOP_CHARS.Contains(s) || STOP_CHARS.IsSupersetOf(c);
+        }
+
+        static bool containsNumber(string s)
+        {
+            var numbers = new string[]
+            {
+                "0", "1", "2", "3", "4", "5",
+                "6", "7", "8", "9"
+            };
+
+            return numbers.Where(n => s.Contains(n)).Any();
+        }
+
+        static string removeNewLine(string s)
+        {
+            return s.Replace(Environment.NewLine, " ");
         }
     }
 }

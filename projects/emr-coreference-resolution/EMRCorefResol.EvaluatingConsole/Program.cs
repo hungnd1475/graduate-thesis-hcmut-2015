@@ -75,6 +75,16 @@ namespace HCMUT.EMRCorefResol.EvaluatingConsole
             }
             else
             {
+                if (string.IsNullOrEmpty(args.OutputDir))
+                {
+                    args.OutputDir = args.SystemChainsDir;
+                }
+                
+                if (string.IsNullOrEmpty(args.AverageFile))
+                {
+                    args.AverageFile = Path.Combine(args.OutputDir, "average.txt");
+                }
+
                 var emrCollection = new EMRCollection(args.EMRDir);
                 var emrCount = emrCollection.Count;
                 var evals = new IIndexedEnumerable<Dictionary<ConceptType, Evaluation>>[emrCount];
@@ -198,7 +208,7 @@ namespace HCMUT.EMRCorefResol.EvaluatingConsole
 
             p.Setup(a => a.OutputDir)
                 .As('o', "outdir")
-                .Required()
+                .SetDefault(null)
                 .WithDescription("Set output file path (required).");
 
             p.Setup(a => a.AverageFile)

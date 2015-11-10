@@ -34,8 +34,10 @@ namespace HCMUT.EMRCorefResol.English
             this[16] = new GeneralDepartmentKeywordFeature(instance);
             this[17] = new GeneralDoctorKeywordFeature(instance);
             this[18] = new RelativeKeywordFeature(instance);
-            this[19] = new FirstChunkAfterMention(instance, emr);
-            this[20] = new FirstChunkBeforeMention(instance, emr);
+            //this[19] = new FirstChunkAfterMention(instance, emr);
+            //this[20] = new FirstChunkBeforeMention(instance, emr);
+            this[19] = new First123WordsBoW(instance, emr, true, KeywordService.Instance.PERSON_BEFORE_WORDS);
+            this[20] = new First123WordsBoW(instance, emr, false, KeywordService.Instance.PERSON_AFTER_WORDS);
         }
     }
 }

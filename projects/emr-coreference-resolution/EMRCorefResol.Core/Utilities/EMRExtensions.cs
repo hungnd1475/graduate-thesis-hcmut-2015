@@ -67,7 +67,7 @@ namespace HCMUT.EMRCorefResol
         {
             var lines = emr.Content.Split('\n');
 
-            if (lineNumber > lines.Count() - 1)
+            if (lineNumber >= lines.Length || lineNumber < 0)
             {
                 return null;
             }

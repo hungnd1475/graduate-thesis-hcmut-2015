@@ -138,7 +138,7 @@ namespace HCMUT.EMRCorefResol.Core.Console
                 case InstancesGenerator.All:
                     return new AllInstancesGenerator();
                 case InstancesGenerator.ModNg2002:
-                    return new ModNg2002InstancesGenerator(new SubstringMatchFilterRule());
+                    return new ModNg2002InstancesGenerator(new FalseFilterRule());
                 case InstancesGenerator.ModSoon2001:
                     return new ModSoon2001ModInstancesGenerator();
                 case InstancesGenerator.Soon2001:

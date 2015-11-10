@@ -12,7 +12,7 @@ namespace HCMUT.EMRCorefResol.English
     {
         public static KeywordService Instance { get; private set; } = null;
 
-        private const string KWPath = @"..\..\..\EMRCorefResol.English\Keywords";
+        private const string KWPath = "Keywords";
 
         public IKeywordDictionary I_KEYWORDS { get; }
             = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "i.txt")));
@@ -94,6 +94,18 @@ namespace HCMUT.EMRCorefResol.English
 
         public IKeywordDictionary SECTION_TITLES { get; }
             = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "section-titles.txt")));
+
+        public IKeywordDictionary PERSON_BEFORE_WORDS { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "person-before.txt")));
+
+        public IKeywordDictionary PERSON_AFTER_WORDS { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "person-after.txt")));
+
+        public IKeywordDictionary PRONOUN_BEFORE_WORDS { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "pronoun-before.txt")));
+
+        public IKeywordDictionary PRONOUN_AFTER_WORDS { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "pronoun-after.txt")));       
 
         private KeywordService() { }
 

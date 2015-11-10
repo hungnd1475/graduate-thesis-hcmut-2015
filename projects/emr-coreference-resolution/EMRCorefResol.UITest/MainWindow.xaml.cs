@@ -70,7 +70,7 @@ namespace EMRCorefResol.UITest
         {
             InitializeComponent();
 
-            txtEMRPath.Text = @"..\..\..\..\..\dataset\i2b2_Test";
+            txtEMRPath.Text = @"..\..\..\..\..\dataset\i2b2_Train";
             emrCollection = new EMRCollection(txtEMRPath.Text);
 
             var emrHighlightBrush = new SolidColorBrush(Color.FromRgb(112, 183, 255));

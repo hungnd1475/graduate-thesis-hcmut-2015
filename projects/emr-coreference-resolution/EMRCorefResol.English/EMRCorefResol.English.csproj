@@ -86,8 +86,10 @@
     <Compile Include="Features\PersonInstance\DoctorKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\DoctorLastNLineFeature.cs" />
     <Compile Include="Features\PersonInstance\DoctorTitleKeywordFeature.cs" />
+    <Compile Include="Features\First123WordsBoW.cs" />
     <Compile Include="Features\PersonInstance\GeneralDepartmentKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\GeneralDoctorKeywordFeature.cs" />
+    <Compile Include="Features\PersonInstance\Last123WordsBetween.cs" />
     <Compile Include="Features\PersonInstance\NameFeature.cs" />
     <Compile Include="Features\PersonInstance\PatientKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\PreceededNonPatientFeature.cs" />
@@ -97,6 +99,7 @@
     <Compile Include="Features\PersonInstance\PronounWeFeature.cs" />
     <Compile Include="Features\PersonInstance\PronounYouFeature.cs" />
     <Compile Include="Features\FirstChunkAfterMention.cs" />
+    <Compile Include="Features\First123WordsBinary.cs" />
     <Compile Include="Features\ProblemTreatmentTest\AnatomyFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\ArticleFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\DosageFeature.cs" />
@@ -189,6 +192,15 @@
     <Content Include="Keywords\female-titles.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Keywords\first-between-problem.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\first-between-test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\first-between-treatment.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Keywords\general-department.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -207,6 +219,15 @@
     <Content Include="Keywords\indicator-keywords.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Keywords\last-between-problem.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\last-between-test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\last-between-treatment.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Keywords\male-names.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -219,10 +240,22 @@
     <Content Include="Keywords\patients.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Keywords\person-after.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\person-before.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Keywords\person-pronoun.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Keywords\position-keywords.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\pronoun-after.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\pronoun-before.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Keywords\pronouns.txt">
@@ -231,7 +264,9 @@
     <Content Include="Keywords\relatives.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Keywords\section-titles.txt" />
+    <Content Include="Keywords\section-titles.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Keywords\sign-information.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

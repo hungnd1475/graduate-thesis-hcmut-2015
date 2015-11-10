@@ -82,6 +82,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Instances\FalseFilterRule.cs" />
     <Compile Include="Instances\IFilterRule.cs" />
     <Compile Include="Instances\AllInstancesGenerator.cs" />
     <Compile Include="Classification\ClasConfig.cs" />
