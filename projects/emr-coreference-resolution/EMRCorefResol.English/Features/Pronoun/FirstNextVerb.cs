@@ -15,7 +15,7 @@ namespace HCMUT.EMRCorefResol.English.Features
             var line = emr.GetLine(instance.Concept.End.Line);
             var tokens = line.Split(' ');
 
-            if(instance.Concept.End.WordIndex == tokens.Length - 1)
+            if(instance.Concept.End.WordIndex >= tokens.Length - 1)
             {
                 return;
             } else
