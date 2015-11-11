@@ -56,10 +56,6 @@
       <Project>{66284726-8e94-4438-b366-f14b04874734}</Project>
       <Name>EMRCorefResol.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\EMRCorefResol.English\EMRCorefResol.English.csproj">
-      <Project>{431ba8ee-38d6-4aa1-97af-8e94889aaecc}</Project>
-      <Name>EMRCorefResol.English</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
