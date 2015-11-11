@@ -12,7 +12,7 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
 {
     class Program
     {
-        const string KWPath = @"D:\Documents\Visual Studio 2015\Projects\graduate-thesis-hcmut-2015\projects\emr-coreference-resolution\EMRCorefResol.English\Keywords";
+        const string KWPath = @"..\..\..\EMRCorefResol.English\Keywords";
 
         public static IKeywordDictionary PATIENT_KEYWORDS { get; }
             = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "patients.txt")));
@@ -42,7 +42,7 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
             BatchExtractVerbAfterMention(collection);
             //BatchExtractWordsPerson(collection);
             //BatchExtractWordsPronoun(collection);
-            BatchExtractSentencePatient(collection);
+            //BatchExtractSentencePatient(collection);
 
             //collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Test");
             //BatchUMLSProcess(collection);
