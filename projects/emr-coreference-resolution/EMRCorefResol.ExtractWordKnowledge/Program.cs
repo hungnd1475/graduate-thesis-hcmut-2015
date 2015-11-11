@@ -12,35 +12,17 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
 {
     class Program
     {
-        const string KWPath = @"D:\Documents\Visual Studio 2015\Projects\graduate-thesis-hcmut-2015\projects\emr-coreference-resolution\EMRCorefResol.English\Keywords";
-
-        public static IKeywordDictionary PATIENT_KEYWORDS { get; }
-            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "patients.txt")));
-
-        public static IKeywordDictionary RELATIVES { get; }
-            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "relatives.txt")));
-
-        private static IEnumerable<string> ReadKWFile(string filePath)
-        {
-            using (var sr = new StreamReader(filePath))
-            {
-                while (!sr.EndOfStream)
-                {
-                    yield return sr.ReadLine();
-                }
-            }
-        }
-
         static void Main(string[] args)
         {
             var collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Train");
             //BatchUMLSProcess(collection);
             //BatchWikiProcess(collection);
             //BatchTemporalProcess(collection);
-            BatchExtractWordsPerson(collection);
-            BatchExtractWordsPronoun(collection);
+            //BatchExtractWordsPerson(collection);
+            //BatchExtractWordsPronoun(collection);
+            BatchExtractVerbAfterMention(collection);
 
-            collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Test");
+            //collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Test");
             //BatchUMLSProcess(collection);
             //BatchWikiProcess(collection);
             //BatchTemporalProcess(collection);
@@ -356,6 +338,26 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
             );
         }
 
+        static void BatchExtractVerbAfterMention(EMRCollection emrColl)
+        {
+            var verbs = new HashSet<string>[emrColl.Count];
+
+            Parallel.For(0, emrColl.Count,
+                i =>
+                {
+                    var emrPath = emrColl.GetEMRPath(i);
+                    var conceptsPath = emrColl.GetConceptsPath(i);
+                    var emr = new EMR(emrPath, conceptsPath, new I2B2DataReader());
+
+                    verbs[i] = ExtractWords(emr, IsPronoun, (e, c) => GetNextVerb(e, c));
+                });
+
+            var saveDir = @"E:\graduate-thesis-hcmut-2015\projects\emr-coreference-resolution\EMRCorefResol.English\Keywords";
+            Parallel.Invoke(
+                () => WriteWords(verbs, Path.Combine(saveDir, "verbs-after.txt"))
+            );
+        }
+
         static void WriteWords(IEnumerable<HashSet<string>> values, string filePath)
         {
             using (var sr = new StreamWriter(filePath))
@@ -400,6 +402,31 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
         static bool IsPronoun(Concept c)
         {
             return c.Type == ConceptType.Pronoun;
+        }
+
+        static HashSet<string> GetNextVerb(EMR e, Concept c)
+        {
+            var words = new HashSet<string>();
+
+            var line = e.GetLine(c);
+            var posTag = Service.English.POSTag(line);
+
+            var conceptIndex = GetConceptIndex(c, posTag);
+
+            if (conceptIndex != (posTag.Length - 1))
+            {
+                var nextTag = posTag[conceptIndex + 1];
+                var tag = nextTag.Split('|')[1];
+                if (tag.Equals("MD") || tag.Equals("VB") || tag.Equals("VBZ") ||
+                    tag.Equals("VBP") || tag.Equals("VBD") || tag.Equals("VBN") ||
+                    tag.Equals("VBG"))
+                {
+                    var term = nextTag.Split('|')[0];
+                    words.Add(term.ToLower());
+                }
+            }
+
+            return words;
         }
 
         static HashSet<string> GetNWordsNearBy(EMR e, Concept c, int n, bool left)
@@ -514,6 +541,44 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
         static string removeNewLine(string s)
         {
             return s.Replace(Environment.NewLine, " ");
+        }
+
+        private static int GetConceptIndex(Concept c, string[] postTag)
+        {
+            int start = 0;
+            if (c.Begin.WordIndex == 0)
+            {
+                return 0;
+            }
+            else if (c.Begin.WordIndex < 3)
+            {
+                start = 0;
+            }
+            else
+            {
+                start = c.Begin.WordIndex - 3;
+            }
+
+            var end = 0;
+            if(start + 6 < postTag.Length - 1)
+            {
+                end = start + 6;
+            } else
+            {
+                end = postTag.Length - 1;
+            }
+
+            for (int i = start; i < end; i++)
+            {
+                var tag = postTag[i];
+                var term = tag.Split('|')[0];
+                if (term.Equals(c.Lexicon))
+                {
+                    return i;
+                }
+            }
+
+            return c.Begin.WordIndex;
         }
     }
 }

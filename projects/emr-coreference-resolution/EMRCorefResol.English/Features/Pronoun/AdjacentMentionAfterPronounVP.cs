@@ -89,7 +89,17 @@ namespace HCMUT.EMRCorefResol.English.Features
                 start = c.Begin.WordIndex - 3;
             }
 
-            for(int i=start; i<start + 6; i++)
+            var end = 0;
+            if (start + 6 < postTag.Length - 1)
+            {
+                end = start + 6;
+            }
+            else
+            {
+                end = postTag.Length - 1;
+            }
+
+            for (int i=start; i<end; i++)
             {
                 var tag = postTag[i];
                 var term = GetTerm(tag);
