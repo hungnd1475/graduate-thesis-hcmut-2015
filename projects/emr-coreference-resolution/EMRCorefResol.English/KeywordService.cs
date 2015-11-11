@@ -105,7 +105,10 @@ namespace HCMUT.EMRCorefResol.English
             = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "pronoun-before.txt")));
 
         public IKeywordDictionary PRONOUN_AFTER_WORDS { get; }
-            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "pronoun-after.txt")));       
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "pronoun-after.txt")));
+
+        public IKeywordDictionary VERBS_AFTER_WORDS { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "verbs-after.txt")));
 
         private KeywordService() { }
 
