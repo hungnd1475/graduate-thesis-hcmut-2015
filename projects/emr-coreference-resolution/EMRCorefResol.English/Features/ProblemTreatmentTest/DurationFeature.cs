@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol.English.Features
@@ -13,8 +14,8 @@ namespace HCMUT.EMRCorefResol.English.Features
         {
             if (ana == null || ante == null) return;
 
-            if(ana.Duration.Length > 0 &&
-                ante.Duration.Length > 0 &&
+            if(!string.IsNullOrEmpty(ana.Duration) &&
+                !string.IsNullOrEmpty(ante.Duration) &&
                 string.Equals(ana.Duration, ante.Duration, StringComparison.InvariantCultureIgnoreCase))
             {
                 SetCategoricalValue(1);
