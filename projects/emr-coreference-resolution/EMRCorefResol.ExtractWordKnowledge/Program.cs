@@ -483,21 +483,30 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
         {
             var words = new HashSet<string>();
 
-            var line = e.GetLine(c);
-            var posTag = Service.English.POSTag(line);
+            var line = e.GetLine(c.End.Line);
+            var tokens = line.Split(' ');
 
-            var conceptIndex = GetConceptIndex(c, posTag);
+            //var posTag = Service.English.POSTag(line);
 
-            if (conceptIndex != (posTag.Length - 1))
+            //var conceptIndex = GetConceptIndex(c, posTag);
+
+            if (c.End.WordIndex < tokens.Length - 1)
             {
-                var nextTag = posTag[conceptIndex + 1];
-                var tag = nextTag.Split('|')[1];
-                if (tag.Equals("MD") || tag.Equals("VB") || tag.Equals("VBZ") ||
-                    tag.Equals("VBP") || tag.Equals("VBD") || tag.Equals("VBN") ||
-                    tag.Equals("VBG"))
+                var nextWord = tokens[c.End.WordIndex + 1];
+                nextWord = nextWord.Trim();
+                var posTag = Service.English.POSTag(nextWord);
+
+                if (posTag != null)
                 {
-                    var term = nextTag.Split('|')[0];
-                    words.Add(term.ToLower());
+                    var nextTag = posTag[0];
+                    var tag = nextTag.Split('|')[1];
+                    if (tag.Equals("MD") || tag.Equals("VB") || tag.Equals("VBZ") ||
+                        tag.Equals("VBP") || tag.Equals("VBD") || tag.Equals("VBN") ||
+                        tag.Equals("VBG"))
+                    {
+                        var term = nextTag.Split('|')[0];
+                        words.Add(term.ToLower());
+                    }
                 }
             }
 
