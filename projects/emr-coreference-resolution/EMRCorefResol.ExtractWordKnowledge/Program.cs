@@ -39,10 +39,10 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
             //BatchTemporalProcess(collection);
             //BatchExtractWordsPerson(collection);
             //BatchExtractWordsPronoun(collection);
-            BatchExtractVerbAfterMention(collection);
-            //BatchExtractWordsPerson(collection);
+            //BatchExtractVerbAfterMention(collection);
+            BatchExtractWordsPerson(collection);
             //BatchExtractWordsPronoun(collection);
-            BatchExtractSentencePatient(collection);
+            //BatchExtractSentencePatient(collection);
 
             //collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Test");
             //BatchUMLSProcess(collection);
@@ -469,9 +469,9 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
 
         static bool IsPatient(Concept c, CorefChainCollection groundTruth)
         {
-            var ptChain = groundTruth.GetPatientChain(PATIENT_KEYWORDS, RELATIVES);
-            return ptChain?.Contains(c) ?? false;
-            //return c.Type == ConceptType.Person;
+            //var ptChain = groundTruth.GetPatientChain(PATIENT_KEYWORDS, RELATIVES);
+            //return ptChain?.Contains(c) ?? false;
+            return c.Type == ConceptType.Person;
         }
 
         static bool IsPronoun(Concept c)

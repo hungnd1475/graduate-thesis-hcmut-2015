@@ -26,6 +26,7 @@ namespace HCMUT.EMRCorefResol.English
             //this[10] = new FirstChunkAfterMention(instance, emr);
             this[9] = new FirstChunkBeforeIsPreposition(/*(FirstChunkBeforeMention)this[9]*/new FirstChunkBeforeMention(instance, emr));
             this[10] = new FirstNextVerb(instance, emr, KeywordService.Instance.VERBS_AFTER_WORDS);
+
             this[11] = new First123WordsBoW(instance, emr, true, KeywordService.Instance.PRONOUN_BEFORE_WORDS);
             this[12] = new First123WordsBoW(instance, emr, false, KeywordService.Instance.PRONOUN_AFTER_WORDS);
 

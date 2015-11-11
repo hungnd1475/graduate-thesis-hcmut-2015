@@ -88,9 +88,11 @@
     <Compile Include="Features\PersonInstance\DoctorTitleKeywordFeature.cs" />
     <Compile Include="Features\First123WordsBoW.cs" />
     <Compile Include="Features\PersonInstance\First123WordsBetweenBinary.cs" />
+    <Compile Include="Features\PersonInstance\First123WordsBetweenBoW.cs" />
     <Compile Include="Features\PersonInstance\GeneralDepartmentKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\GeneralDoctorKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\Last123WordsBetweenBinary.cs" />
+    <Compile Include="Features\PersonInstance\Last123WordsBetweenBoW.cs" />
     <Compile Include="Features\PersonInstance\NameFeature.cs" />
     <Compile Include="Features\PersonInstance\NextSentence.cs" />
     <Compile Include="Features\PersonInstance\PatientKeywordFeature.cs" />
@@ -292,7 +294,9 @@
     <Content Include="Keywords\twin-triplet.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Keywords\verbs-after.txt" />
+    <Content Include="Keywords\verbs-after.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Keywords\we.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -10,20 +10,19 @@ namespace HCMUT.EMRCorefResol.English.Features
     class FirstNextVerb : Feature
     {
         public FirstNextVerb(PronounInstance instance, EMR emr, IKeywordDictionary keywords)
-            :base("FirstNext-Verb", keywords.Count + 1, 0)
+            : base("FirstNext-Verb", keywords.Count + 1, 0)
         {
             var line = emr.GetLine(instance.Concept.End.Line);
             var tokens = line.Split(' ');
+            var wi = instance.Concept.End.WordIndex + 1;
 
-            if(instance.Concept.End.WordIndex == tokens.Length - 1)
+            if (wi >= 0 && wi < tokens.Length)
             {
-                return;
-            } else
-            {
-                var nextWord = tokens[instance.Concept.End.WordIndex + 1];
+                var nextWord = tokens[wi];
                 nextWord = nextWord.Trim();
+
                 var index = keywords.SearchDictionaryIndices(nextWord, KWSearchOptions.WholeWordIgnoreCase);
-                if(index.Length > 0)
+                if (index.Length > 0)
                 {
                     SetCategoricalValue(index[0] + 1);
                 }

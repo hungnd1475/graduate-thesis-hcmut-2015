@@ -67,7 +67,11 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
                     {
                         for (int xx = 0; xx < X[x].Length; xx++)
                         {
-                            sw.Write($"{j++}:{X[x][xx]} ");
+                            j += 1;
+                            if (X[x][xx] != 0d)
+                            {
+                                sw.Write($"{j}:{X[x][xx]} ");
+                            }
                         }
                     }
                     sw.WriteLine();
