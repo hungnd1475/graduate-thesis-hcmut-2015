@@ -37,8 +37,8 @@ namespace HCMUT.EMRCorefResol.Utilities
 
         public AhoCorasickKeywordDictionary(string fileName)
         {
-            var keywordRoot = @"..\..\..\EMRCorefResol.English\Keywords\";
-            var keywords = File.ReadAllLines(keywordRoot + fileName).AsEnumerable();
+            //var keywordRoot = @"..\..\..\EMRCorefResol.English\Keywords\";
+            var keywords = File.ReadAllLines(fileName).AsEnumerable();
             _kwList = new List<string>(keywords);
             BuildTree();
             BuildACAutomaton();

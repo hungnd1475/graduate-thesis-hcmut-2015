@@ -8,9 +8,9 @@ namespace HCMUT.EMRCorefResol.English.Features
 {
     using Utilities;
 
-    class Last123WordsBetween : Feature
+    class First123WordsBetweenBinary : Feature
     {
-        public Last123WordsBetween(PersonInstance instance, EMR emr, ConceptType c2Type,
+        public First123WordsBetweenBinary(PersonInstance instance, EMR emr, ConceptType c2Type,
             IKeywordDictionary checker)
             : base("Last-123-Words-Between-" + c2Type.ToString(), 2, 1)
         {
@@ -26,7 +26,7 @@ namespace HCMUT.EMRCorefResol.English.Features
                     var s = First123WordsBoW.RemoveNewLine(emr.ContentBetween(c1, c2)).Trim();
                     var tokens = s.Split(' ');
 
-                    for (int j = tokens.Length - 1; j >= 0 && words.Count < 3; j--)
+                    for (int j = 0; j < tokens.Length && words.Count < 3; j++)
                     {
                         var w = tokens[j].ToLower();
                         if (!First123WordsBoW.IsStopChar(w))

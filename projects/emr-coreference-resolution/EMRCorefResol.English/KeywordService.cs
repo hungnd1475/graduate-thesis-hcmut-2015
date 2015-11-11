@@ -105,7 +105,31 @@ namespace HCMUT.EMRCorefResol.English
             = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "pronoun-before.txt")));
 
         public IKeywordDictionary PRONOUN_AFTER_WORDS { get; }
-            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "pronoun-after.txt")));       
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "pronoun-after.txt")));
+
+        public HashSet<string> PREV_SENTENCES { get; }
+            = new HashSet<string>(ReadKWFile(Path.Combine(KWPath, "prev-sentences.txt")));
+
+        public HashSet<string> NEXT_SENTENCES { get; }
+            = new HashSet<string>(ReadKWFile(Path.Combine(KWPath, "next-sentences.txt")));
+
+        public IKeywordDictionary FIRST_BETWEEN_PROBLEM { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "first-between-problem.txt")));
+
+        public IKeywordDictionary FIRST_BETWEEN_TEST { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "first-between-test.txt")));
+
+        public IKeywordDictionary FIRST_BETWEEN_TREATMENT { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "first-between-treatment.txt")));
+
+        public IKeywordDictionary LAST_BETWEEN_PROBLEM { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "last-between-problem.txt")));
+
+        public IKeywordDictionary LAST_BETWEEN_TEST { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "last-between-test.txt")));
+
+        public IKeywordDictionary LAST_BETWEEN_TREATMENT { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "last-between-treatment.txt")));
 
         private KeywordService() { }
 

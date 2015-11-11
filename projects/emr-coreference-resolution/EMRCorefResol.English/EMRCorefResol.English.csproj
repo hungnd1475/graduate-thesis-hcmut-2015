@@ -87,12 +87,15 @@
     <Compile Include="Features\PersonInstance\DoctorLastNLineFeature.cs" />
     <Compile Include="Features\PersonInstance\DoctorTitleKeywordFeature.cs" />
     <Compile Include="Features\First123WordsBoW.cs" />
+    <Compile Include="Features\PersonInstance\First123WordsBetweenBinary.cs" />
     <Compile Include="Features\PersonInstance\GeneralDepartmentKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\GeneralDoctorKeywordFeature.cs" />
-    <Compile Include="Features\PersonInstance\Last123WordsBetween.cs" />
+    <Compile Include="Features\PersonInstance\Last123WordsBetweenBinary.cs" />
     <Compile Include="Features\PersonInstance\NameFeature.cs" />
+    <Compile Include="Features\PersonInstance\NextSentence.cs" />
     <Compile Include="Features\PersonInstance\PatientKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\PreceededNonPatientFeature.cs" />
+    <Compile Include="Features\PersonInstance\PreviousSentence.cs" />
     <Compile Include="Features\PersonInstance\PronounHeSheFeature.cs" />
     <Compile Include="Features\PersonInstance\PronounIFeature.cs" />
     <Compile Include="Features\PersonInstance\PronounTheyFeature.cs" />
@@ -234,6 +237,9 @@
     <Content Include="Keywords\male-titles.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Keywords\next-sentences.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Keywords\nline-keywords.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -250,6 +256,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Keywords\position-keywords.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\prev-sentences.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Keywords\pronoun-after.txt">

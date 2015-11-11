@@ -37,8 +37,9 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
             //BatchUMLSProcess(collection);
             //BatchWikiProcess(collection);
             //BatchTemporalProcess(collection);
-            BatchExtractWordsPerson(collection);
-            BatchExtractWordsPronoun(collection);
+            //BatchExtractWordsPerson(collection);
+            //BatchExtractWordsPronoun(collection);
+            BatchExtractSentencePatient(collection);
 
             collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Test");
             //BatchUMLSProcess(collection);
@@ -356,6 +357,59 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
             );
         }
 
+        static void BatchExtractSentencePatient(EMRCollection emrColl)
+        {
+            var before = new HashSet<string>[emrColl.Count];
+            var after = new HashSet<string>[emrColl.Count];
+
+            var headers = new HashSet<string>();
+            using (var sr = new StreamReader("sections.txt"))
+            {
+                while (!sr.EndOfStream)
+                {
+                    headers.Add(sr.ReadLine());
+                }
+            }
+
+            Parallel.For(0, emrColl.Count,
+                i =>
+                {
+                    var emrPath = emrColl.GetEMRPath(i);
+                    var conceptsPath = emrColl.GetConceptsPath(i);
+                    var emr = new EMR(emrPath, conceptsPath, new I2B2DataReader());
+                    var gt = new CorefChainCollection(emrColl.GetChainsPath(i), new I2B2DataReader());
+
+                    before[i] = new HashSet<string>();
+                    after[i] = new HashSet<string>();
+
+                    foreach (var c in emr.Concepts)
+                    {
+                        if (IsPatient(c, gt))
+                        {
+                            var prevLine = emr.GetLine(c.Begin.Line - 1)?.Replace("\r", "");
+                            var nextLine = emr.GetLine(c.End.Line + 1)?.Replace("\r", "");
+
+                            if (prevLine != null && headers.Contains(prevLine))
+                            {
+                                before[i].Add(prevLine);
+                            }
+
+                            if (nextLine != null && headers.Contains(nextLine))
+                            {
+                                after[i].Add(nextLine);
+                            }
+                        }
+                    }
+                });
+
+            var saveDir = @"D:\Documents\Visual Studio 2015\Projects\graduate-thesis-hcmut-2015\projects\emr-coreference-resolution\EMRCorefResol.English\Keywords";
+            Parallel.Invoke
+            (
+                () => WriteWords(before, Path.Combine(saveDir, "prev-sentences.txt")),
+                () => WriteWords(after, Path.Combine(saveDir, "next-sentences.txt"))
+            );
+        }
+
         static void WriteWords(IEnumerable<HashSet<string>> values, string filePath)
         {
             using (var sr = new StreamWriter(filePath))
@@ -392,9 +446,9 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
 
         static bool IsPatient(Concept c, CorefChainCollection groundTruth)
         {
-            //var ptChain = groundTruth.GetPatientChain(PATIENT_KEYWORDS, RELATIVES);
-            //return ptChain?.Contains(c) ?? false;
-            return c.Type == ConceptType.Person;
+            var ptChain = groundTruth.GetPatientChain(PATIENT_KEYWORDS, RELATIVES);
+            return ptChain?.Contains(c) ?? false;
+            //return c.Type == ConceptType.Person;
         }
 
         static bool IsPronoun(Concept c)
