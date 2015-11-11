@@ -122,9 +122,10 @@
     <Compile Include="Features\ProblemTreatmentTest\WikiBoldNameMatchFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\WikiMatchFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\WordNetMatchFeature.cs" />
+    <Compile Include="Features\Pronoun\AdjacentMentionAfterPronounVP.cs" />
     <Compile Include="Features\Pronoun\FirstChunkBeforeIsPreposition.cs" />
     <Compile Include="Features\FirstChunkBeforeMention.cs" />
-    <Compile Include="Features\Pronoun\FirstNextChunkIsVerb.cs" />
+    <Compile Include="Features\Pronoun\FirstNextVerb.cs" />
     <Compile Include="Features\RelativeKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\SignedInformationFeature.cs" />
     <Compile Include="Features\PersonPair\GenderFeature.cs" />
@@ -291,6 +292,7 @@
     <Content Include="Keywords\twin-triplet.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Keywords\verbs-after.txt" />
     <Content Include="Keywords\we.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

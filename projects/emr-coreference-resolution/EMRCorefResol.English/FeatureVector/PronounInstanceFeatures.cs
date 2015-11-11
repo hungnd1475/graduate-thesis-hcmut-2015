@@ -11,7 +11,7 @@ namespace HCMUT.EMRCorefResol.English
     class PronounInstanceFeatures : FeatureVector
     {
         public PronounInstanceFeatures(PronounInstance instance, EMR emr, double classValue)
-            : base(size: 13, classValue: classValue)
+            : base(size: 14, classValue: classValue)
         {
             this[0] = new FirstPreviousMentionTypeFeature(instance, emr);
             this[1] = new SecondPreviousMentionTypeFeature(instance, emr);
@@ -25,9 +25,11 @@ namespace HCMUT.EMRCorefResol.English
             //this[9] = new FirstChunkBeforeMention(instance, emr);
             //this[10] = new FirstChunkAfterMention(instance, emr);
             this[9] = new FirstChunkBeforeIsPreposition(/*(FirstChunkBeforeMention)this[9]*/new FirstChunkBeforeMention(instance, emr));
-            this[10] = new FirstNextChunkIsVerb(/*(FirstChunkAfterMention)this[10]*/new FirstChunkAfterMention(instance, emr));
+            this[10] = new FirstNextVerb(instance, emr, KeywordService.Instance.VERBS_AFTER_WORDS);
             this[11] = new First123WordsBoW(instance, emr, true, KeywordService.Instance.PRONOUN_BEFORE_WORDS);
             this[12] = new First123WordsBoW(instance, emr, false, KeywordService.Instance.PRONOUN_AFTER_WORDS);
+
+            this[13] = new AdjacentMentionAfterPronounVP(instance, emr);
         }
     }
 }

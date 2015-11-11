@@ -105,7 +105,7 @@ namespace HCMUT.EMRCorefResol.English
             = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "pronoun-before.txt")));
 
         public IKeywordDictionary PRONOUN_AFTER_WORDS { get; }
-            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "pronoun-after.txt")));
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "pronoun-after.txt")));       
 
         public HashSet<string> PREV_SENTENCES { get; }
             = new HashSet<string>(ReadKWFile(Path.Combine(KWPath, "prev-sentences.txt")));
@@ -130,6 +130,9 @@ namespace HCMUT.EMRCorefResol.English
 
         public IKeywordDictionary LAST_BETWEEN_TREATMENT { get; }
             = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "last-between-treatment.txt")));
+
+        public IKeywordDictionary VERBS_AFTER_WORDS { get; }
+            = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "verbs-after.txt")));
 
         private KeywordService() { }
 
