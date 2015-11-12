@@ -31,7 +31,7 @@ namespace HCMUT.EMRCorefResol.English
             this[8] = new StringMatchFeature(instance);
 
             this[9] = new PositionFeature(instance, emr);
-            this[10] = new SectionFeature(instance, emr);
+            this[10] = new SectionFeature(instance, emr, KeywordService.Instance.SECTION_TITLES);
 
             this[11] = new WikiMatchFeature(anaWiki, anteWiki);
             this[12] = new WikiAnchorLinkFeature(anaWiki, anteWiki);

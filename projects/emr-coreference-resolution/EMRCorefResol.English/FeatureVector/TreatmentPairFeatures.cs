@@ -45,7 +45,7 @@ namespace HCMUT.EMRCorefResol.English
             this[12] = new FrequencyFeature(anaMedicationInfo, anteMedicationInfo);
             this[13] = new DurationFeature(anteMedicationInfo, anteMedicationInfo);
             this[14] = new TemporalFeature(instance, emr, temporalData);
-            this[15] = new SectionFeature(instance, emr);
+            this[15] = new SectionFeature(instance, emr, KeywordService.Instance.SECTION_TITLES);
 
             this[16] = new WikiMatchFeature(anaWiki, anteWiki);
             this[17] = new WikiAnchorLinkFeature(anaWiki, anteWiki);

@@ -33,7 +33,7 @@ namespace HCMUT.EMRCorefResol.English
             this[9] = new PositionFeature(instance, emr);
             this[10] = new IndicatorFeature(instance, umlsData, emr);
             this[11] = new TemporalFeature(instance, emr, temporalData);
-            this[12] = new SectionFeature(instance, emr);
+            this[12] = new SectionFeature(instance, emr, KeywordService.Instance.SECTION_TITLES);
             this[13] = new ModifierFeature(instance, emr);
 
             this[14] = new WikiMatchFeature(anaWiki, anteWiki);

@@ -146,7 +146,7 @@ namespace HCMUT.EMRCorefResol.IO
         public List<EMRSection> ReadSection(string EMRContent)
         {
             var sections = new List<EMRSection>();
-            var lines = EMRContent.Replace("\r", "").Split('\n');
+            var lines = EMRContent.Split('\n');
 
             var content = "";
             var title = "";
@@ -154,7 +154,7 @@ namespace HCMUT.EMRCorefResol.IO
             var end = 1;
             for(int i=0; i<lines.Length; i++)
             {
-                var line = lines[i];
+                var line = lines[i].Replace("\r", "").Trim();
                 var tuple = CheckHeading(line);
                 //if(line.Length > 0 && char.IsUpper(line[0]) && line[line.Length -1]== ':')
                 if (tuple.Item1)
@@ -175,7 +175,7 @@ namespace HCMUT.EMRCorefResol.IO
                             break;
                         }
 
-                        var nextLine = lines[i];
+                        var nextLine = lines[i].Replace("\r", "").Trim();
 
                         tuple = CheckHeading(nextLine);
                         //if (i == lines.Length -1 || (nextLine.Length > 0 && char.IsUpper(nextLine[0]) && nextLine[nextLine.Length - 1] == ':'))
@@ -202,6 +202,8 @@ namespace HCMUT.EMRCorefResol.IO
             {
                 return Tuple.Create(false, "");
             }
+
+            //return Tuple.Create(true, line);
 
             if (Regex.IsMatch(line, _history_of_illness_pattern, RegexOptions.IgnoreCase))
             {
@@ -283,9 +285,9 @@ namespace HCMUT.EMRCorefResol.IO
 
         private bool CheckCapitol(string title)
         {
-            var words = title.Replace("\r", "").Replace("\n", "").Replace("  ", "").Split(' ');
+            var words = title.Replace("\r", "").Replace("\n", "").Split(' ');
 
-            var prepositions = new string[] { "of", "in" };
+            var prepositions = new string[] { "of", "in", "at", "on" };
 
             foreach (string word in words)
             {
