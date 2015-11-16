@@ -35,7 +35,7 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
         {
             var collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Train");
             //BatchUMLSProcess(collection);
-            //BatchWikiProcess(collection);
+            BatchWikiProcess(collection);
             //BatchTemporalProcess(collection);
             //BatchExtractWordsPerson(collection);
             //BatchExtractWordsPronoun(collection);
@@ -43,11 +43,11 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
             //BatchExtractWordsPerson(collection);
             //BatchExtractWordsPronoun(collection);
             //BatchExtractSentencePatient(collection);
-            BatchSectionProcess(collection);
+            //BatchSectionProcess(collection);
 
-            //collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Test");
+            collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Test");
             //BatchUMLSProcess(collection);
-            //BatchWikiProcess(collection);
+            BatchWikiProcess(collection);
             //BatchTemporalProcess(collection);
 
             Console.WriteLine("========Finish========");
@@ -159,6 +159,13 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
                     {
                         var normalized = EnglishNormalizer.Normalize(c.Lexicon);
                         var wikiData = Service.English.GetAllWikiInformation(normalized);
+
+                        if(wikiData == null)
+                        {
+                            normalized = EnglishNormalizer.RemoveSemanticData(normalized);
+                            wikiData = Service.English.GetAllWikiInformation(normalized);
+                        }
+
                         _wiki.Add(c.Lexicon, wikiData);
                     }
                 }

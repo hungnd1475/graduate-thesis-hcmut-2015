@@ -12,7 +12,6 @@ namespace HCMUT.EMRCorefResol.Service
     class WikiUltil
     {
         private const string WIKI_URL = "http://localhost:8080/wikipedia-miner/services/";
-        private double _minPriorProbability = 0.3;
 
         private readonly HttpUtil _http;
 
@@ -21,15 +20,9 @@ namespace HCMUT.EMRCorefResol.Service
             _http = new HttpUtil();
         }
 
-        public WikiUltil(double minProbability)
-        {
-            _http = new HttpUtil();
-            _minPriorProbability = minProbability;
-        }
-
         public string QueryTitle(string term)
         {
-            var url = WIKI_URL + $"search?minPriorProbability={_minPriorProbability}&query=" + HttpUtility.UrlEncode(term);
+            var url = WIKI_URL + $"search?query=" + HttpUtility.UrlEncode(term);
             var res = _http.RequestRaw(url);
 
             if (res == null) return null;
@@ -47,13 +40,13 @@ namespace HCMUT.EMRCorefResol.Service
             double highestProbability = 0.0;
             foreach(XmlNode sense in senses)
             {
-                var title = sense.Attributes["title"].Value;
+                var id = sense.Attributes["id"].Value;
                 var priorProbability = double.Parse(sense.Attributes["priorProbability"].Value, System.Globalization.CultureInfo.InvariantCulture);
 
                 if(priorProbability > highestProbability)
                 {
                     highestProbability = priorProbability;
-                    bestResult = title;
+                    bestResult = id;
                 }
 
             }
@@ -61,7 +54,49 @@ namespace HCMUT.EMRCorefResol.Service
             return bestResult;
         }
 
-        public WikiData GetPageInfo(string title)
+        public WikiData QueryPageInfo(string term)
+        {
+            var pageId = QueryTitle(term);
+            if (string.IsNullOrEmpty(pageId))
+            {
+                return null;
+            }
+
+            var url = WIKI_URL + "exploreArticle?outLinks=true&labels=true&id=" + HttpUtility.UrlEncode(pageId);
+            var res = _http.RequestRaw(url);
+
+            if (res == null || res.Length <= 0) return null;
+
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.LoadXml(res);
+
+            var response = xmlDoc.GetElementsByTagName("Response");
+            if (response[0].InnerXml == null || response[0].InnerXml.Length <= 0)
+            {
+                return null;
+            }
+
+            var pageTitle = response[0].Attributes["title"].Value.ToLower();
+
+            var label = new List<string>();
+            var labels = xmlDoc.GetElementsByTagName("Label");
+            foreach (XmlNode node in labels)
+            {
+                label.Add(node.InnerText.ToLower());
+            }
+
+            var outLink = new List<string>();
+            var links = xmlDoc.GetElementsByTagName("OutLink");
+            foreach (XmlNode node in links)
+            {
+                outLink.Add(node.Attributes["title"].Value.ToLower());
+            }
+
+            return new WikiData(term, pageTitle, outLink.ToArray(), label.ToArray());
+        }
+
+
+        public WikiData GetPageInfoByTitle(string title)
         {
             var url = WIKI_URL + "exploreArticle?outLinks=true&labels=true&title=" + HttpUtility.UrlEncode(title);
             var res = _http.RequestRaw(url);

@@ -172,10 +172,24 @@ namespace HCMUT.EMRCorefResol.Service
         {
             return _wikiCache.GetValue(term, (string search_term) =>
             {
-                return _wiki.GetPageInfo(search_term);
-            });
+                var result = _wiki.GetPageInfoByTitle(search_term);
+                if(result == null)
+                {
+                    result = _wiki.GetPageInfoByTitle(search_term.ToUpper());
+                }
 
-            //return _wiki.GetPageInfo(term);
+                if(result == null)
+                {
+                    result = _wiki.QueryPageInfo(search_term);
+                }
+
+                if(result == null)
+                {
+                    result = _wiki.QueryPageInfo(search_term.ToUpper());
+                }
+
+                return result;
+            });
         }
 
         public static UMLSData GetUMLSInformation(string term)
