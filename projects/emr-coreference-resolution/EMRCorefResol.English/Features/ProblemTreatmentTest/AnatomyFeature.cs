@@ -11,8 +11,8 @@ namespace HCMUT.EMRCorefResol.English.Features
         public AnatomyFeature(IConceptPair instance, UmlsDataDictionary dictionary)
             : base("Anatomy-Feature", 3, 2)
         {
-            var anaNorm = EnglishNormalizer.Normalize(instance.Anaphora.Lexicon);
-            var anteNorm = EnglishNormalizer.Normalize(instance.Antecedent.Lexicon);
+            var anaNorm = EnglishNormalizer.Normalize(instance.Anaphora.Lexicon, KeywordService.Instance.STOP_WORDS);
+            var anteNorm = EnglishNormalizer.Normalize(instance.Antecedent.Lexicon, KeywordService.Instance.STOP_WORDS);
 
             var anaUMLS = dictionary.Get(instance.Anaphora.Lexicon + "|ANA");
             var anteUMLS = dictionary.Get(instance.Antecedent.Lexicon + "|ANA");

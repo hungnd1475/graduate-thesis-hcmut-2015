@@ -209,12 +209,12 @@ namespace HCMUT.EMRCorefResol.EvaluatingConsole
             p.Setup(a => a.OutputDir)
                 .As('o', "outdir")
                 .SetDefault(null)
-                .WithDescription("Set output file path (required).");
+                .WithDescription("Set output file path (default -s).");
 
             p.Setup(a => a.AverageFile)
                 .As('a', "avgfile")
                 .SetDefault(null)
-                .WithDescription("Set score file path (required if many EMRs to be resolved).");
+                .WithDescription("Set score file path (default average.txt in -s).");
 
             p.Setup(a => a.EMRFile)
                 .As('e', "emr")

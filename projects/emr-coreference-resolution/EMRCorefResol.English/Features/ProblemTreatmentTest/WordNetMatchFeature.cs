@@ -12,8 +12,8 @@ namespace HCMUT.EMRCorefResol.English.Features
         public WordNetMatchFeature(IConceptPair instance)
             :base("WordNet-Match", 2, 0)
         {
-            var anaNorm = EnglishNormalizer.Normalize(instance.Anaphora.Lexicon);
-            var anteNorm = EnglishNormalizer.Normalize(instance.Antecedent.Lexicon);
+            var anaNorm = EnglishNormalizer.Normalize(instance.Anaphora.Lexicon, KeywordService.Instance.STOP_WORDS);
+            var anteNorm = EnglishNormalizer.Normalize(instance.Antecedent.Lexicon, KeywordService.Instance.STOP_WORDS);
 
             var anaDefs = Service.English.GetSyncSets(anaNorm);
 

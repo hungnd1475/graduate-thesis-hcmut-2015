@@ -11,13 +11,12 @@ namespace HCMUT.EMRCorefResol
     using Utilities;
     public class EnglishNormalizer
     {
-        private const string KWPath = @"..\..\..\EMRCorefResol.English\Keywords";
+        //private const string KWPath = @"..\..\..\EMRCorefResol.English\Keywords";
 
-        public static string Normalize(string term)
+        public static string Normalize(string term, IKeywordDictionary stopWords)
         {
-            var searcher = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "stopwords.txt")));
-            var normalized = searcher.RemoveKeywords(term, KWSearchOptions.WholeWordIgnoreCase);
-
+            //var searcher = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "stopwords.txt")));
+            var normalized = stopWords.RemoveKeywords(term, KWSearchOptions.WholeWordIgnoreCase);
             return string.IsNullOrEmpty(normalized) ? term : RemovePreposition(normalized);
         }
 

@@ -40,17 +40,17 @@ namespace HCMUT.EMRCorefResol.English
             this[19] = new PreviousSentence(instance, emr);
             this[20] = new NextSentence(instance, emr);
 
-            this[21] = new First123WordsBoW(instance, emr, true, KeywordService.Instance.PERSON_BEFORE_WORDS);
-            this[22] = new First123WordsBoW(instance, emr, false, KeywordService.Instance.PERSON_AFTER_WORDS);
+            this[21] = new First123WordsBinary(instance, emr, true, KeywordService.Instance.PERSON_BEFORE_WORDS);
+            this[22] = new First123WordsBinary(instance, emr, false, KeywordService.Instance.PERSON_AFTER_WORDS);
 
-            this[23] = new First123WordsBetweenBoW(instance, emr, ConceptType.Problem, KeywordService.Instance.FIRST_BETWEEN_PROBLEM);
-            this[24] = new Last123WordsBetweenBoW(instance, emr, ConceptType.Problem, KeywordService.Instance.LAST_BETWEEN_PROBLEM);
+            this[23] = new First123WordsBetweenBinary(instance, emr, ConceptType.Problem, KeywordService.Instance.FIRST_BETWEEN_PROBLEM);
+            this[24] = new Last123WordsBetweenBinary(instance, emr, ConceptType.Problem, KeywordService.Instance.LAST_BETWEEN_PROBLEM);
 
-            this[25] = new First123WordsBetweenBoW(instance, emr, ConceptType.Test, KeywordService.Instance.FIRST_BETWEEN_TEST);
-            this[26] = new Last123WordsBetweenBoW(instance, emr, ConceptType.Test, KeywordService.Instance.LAST_BETWEEN_TEST);
+            this[25] = new First123WordsBetweenBinary(instance, emr, ConceptType.Test, KeywordService.Instance.FIRST_BETWEEN_TEST);
+            this[26] = new Last123WordsBetweenBinary(instance, emr, ConceptType.Test, KeywordService.Instance.LAST_BETWEEN_TEST);
 
-            this[27] = new First123WordsBetweenBoW(instance, emr, ConceptType.Treatment, KeywordService.Instance.FIRST_BETWEEN_TREATMENT);
-            this[28] = new Last123WordsBetweenBoW(instance, emr, ConceptType.Treatment, KeywordService.Instance.LAST_BETWEEN_TREATMENT);
+            this[27] = new First123WordsBetweenBinary(instance, emr, ConceptType.Treatment, KeywordService.Instance.FIRST_BETWEEN_TREATMENT);
+            this[28] = new Last123WordsBetweenBinary(instance, emr, ConceptType.Treatment, KeywordService.Instance.LAST_BETWEEN_TREATMENT);
         }
     }
 }

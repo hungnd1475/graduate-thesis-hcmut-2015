@@ -45,5 +45,10 @@ namespace HCMUT.EMRCorefResol
                     tempData.Value.Equals(this.Value);
             }
         }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 }

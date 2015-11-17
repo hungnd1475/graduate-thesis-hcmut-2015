@@ -12,8 +12,8 @@ namespace HCMUT.EMRCorefResol.English.Features
         public EquipmentFeature(IConceptPair instance, UmlsDataDictionary dictionary)
             :base("Equipment-Feature", 3, 2)
         {
-            var anaNorm = EnglishNormalizer.Normalize(instance.Anaphora.Lexicon);
-            var anteNorm = EnglishNormalizer.Normalize(instance.Antecedent.Lexicon);
+            var anaNorm = EnglishNormalizer.Normalize(instance.Anaphora.Lexicon, KeywordService.Instance.STOP_WORDS);
+            var anteNorm = EnglishNormalizer.Normalize(instance.Antecedent.Lexicon, KeywordService.Instance.STOP_WORDS);
 
             var anaUMLS = dictionary.Get(instance.Anaphora.Lexicon + "|EQP");
             var anteUMLS = dictionary.Get(instance.Antecedent.Lexicon + "|EQP");

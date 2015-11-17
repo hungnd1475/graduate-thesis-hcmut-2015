@@ -14,11 +14,14 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
     {
         const string KWPath = @"..\..\..\EMRCorefResol.English\Keywords";
 
-        public static IKeywordDictionary PATIENT_KEYWORDS { get; }
+        public static readonly IKeywordDictionary PATIENT_KEYWORDS 
             = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "patients.txt")));
 
-        public static IKeywordDictionary RELATIVES { get; }
+        public static readonly IKeywordDictionary RELATIVES 
             = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "relatives.txt")));
+
+        public static readonly IKeywordDictionary STOP_WORDS
+            = new AhoCorasickKeywordDictionary(Path.Combine(KWPath, "stopwords.txt"));
 
         private static IEnumerable<string> ReadKWFile(string filePath)
         {
@@ -151,7 +154,7 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
                 {
                     if (!_wiki.ContainsKey(c.Lexicon))
                     {
-                        var normalized = EnglishNormalizer.Normalize(c.Lexicon);
+                        var normalized = EnglishNormalizer.Normalize(c.Lexicon, STOP_WORDS);
                         var wikiData = Service.English.GetAllWikiInformation(normalized);
                         _wiki.Add(c.Lexicon, wikiData);
                     }
@@ -184,7 +187,7 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
                     var key = $"{c.Lexicon}|OPE";
                     if (!_umls.ContainsKey(key))
                     {
-                        var normalized = EnglishNormalizer.Normalize(c.Lexicon);
+                        var normalized = EnglishNormalizer.Normalize(c.Lexicon, STOP_WORDS);
                         var umlsData = Service.English.GetUMLSInformation(normalized, Service.UMLSUtil.UMLS_OPERATION);
                         _umls.Add(key, umlsData);
                     }
@@ -202,7 +205,7 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
                     key = $"{c.Lexicon}|EQP";
                     if (!_umls.ContainsKey(key))
                     {
-                        var normalized = EnglishNormalizer.Normalize(c.Lexicon);
+                        var normalized = EnglishNormalizer.Normalize(c.Lexicon, STOP_WORDS);
                         var umlsData = Service.English.GetUMLSInformation(normalized, Service.UMLSUtil.UMLS_EQUIPMENT);
                         _umls.Add(key, umlsData);
                     }
@@ -469,9 +472,9 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
 
         static bool IsPatient(Concept c, CorefChainCollection groundTruth)
         {
-            //var ptChain = groundTruth.GetPatientChain(PATIENT_KEYWORDS, RELATIVES);
-            //return ptChain?.Contains(c) ?? false;
-            return c.Type == ConceptType.Person;
+            var ptChain = groundTruth.GetPatientChain(PATIENT_KEYWORDS, RELATIVES);
+            return ptChain?.Contains(c) ?? false;
+            //return c.Type == ConceptType.Person;
         }
 
         static bool IsPronoun(Concept c)

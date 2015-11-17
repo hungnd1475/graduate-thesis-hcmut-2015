@@ -80,7 +80,7 @@ namespace HCMUT.EMRCorefResol.English.Features
                 return $"q{number}h";
             }
 
-            var every = @"every (\d+) (hours|hour|hrs|h)";
+            //var every = @"every (\d+) (hours|hour|hrs|h)";
             match = Regex.Match(normalized, qtimes, RegexOptions.IgnoreCase);
             if (match.Success)
             {

@@ -12,8 +12,8 @@ namespace HCMUT.EMRCorefResol.English.Features
         public OperationFeature(IConceptPair instance, UmlsDataDictionary dictionary)
             :base("Operation-Feature",3, 2)
         {
-            var anaNorm = EnglishNormalizer.Normalize(instance.Anaphora.Lexicon);
-            var anteNorm = EnglishNormalizer.Normalize(instance.Antecedent.Lexicon);
+            var anaNorm = EnglishNormalizer.Normalize(instance.Anaphora.Lexicon, KeywordService.Instance.STOP_WORDS);
+            var anteNorm = EnglishNormalizer.Normalize(instance.Antecedent.Lexicon, KeywordService.Instance.STOP_WORDS);
 
             var anaUMLS = dictionary.Get(instance.Anaphora.Lexicon + "|OPE");
             var anteUMLS = dictionary.Get(instance.Antecedent.Lexicon + "|OPE");

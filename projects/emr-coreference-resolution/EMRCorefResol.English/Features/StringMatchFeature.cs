@@ -17,8 +17,8 @@ namespace HCMUT.EMRCorefResol.English.Features
 
             if (instance.GetType().Name != "PersonPair")
             {
-                anaNorm = EnglishNormalizer.Normalize(instance.Anaphora.Lexicon);
-                anteNorm = EnglishNormalizer.Normalize(instance.Antecedent.Lexicon);
+                anaNorm = EnglishNormalizer.Normalize(instance.Anaphora.Lexicon, KeywordService.Instance.STOP_WORDS);
+                anteNorm = EnglishNormalizer.Normalize(instance.Antecedent.Lexicon, KeywordService.Instance.STOP_WORDS);
             }
 
             if (string.Equals(anaNorm, anteNorm))

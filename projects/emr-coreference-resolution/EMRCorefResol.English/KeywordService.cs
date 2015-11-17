@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using HCMUT.EMRCorefResol.Utilities;
 using System.IO;
+using System.Reflection;
 
 namespace HCMUT.EMRCorefResol.English
 {
@@ -12,7 +13,8 @@ namespace HCMUT.EMRCorefResol.English
     {
         public static KeywordService Instance { get; private set; } = null;
 
-        private const string KWPath = "Keywords";
+        private static readonly string ExeDirectory = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+        private static readonly string KWPath = Path.Combine(ExeDirectory,  "Keywords");
 
         public IKeywordDictionary I_KEYWORDS { get; }
             = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "i.txt")));

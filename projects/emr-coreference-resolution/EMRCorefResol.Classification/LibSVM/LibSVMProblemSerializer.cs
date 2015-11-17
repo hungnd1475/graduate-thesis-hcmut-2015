@@ -60,7 +60,7 @@ namespace HCMUT.EMRCorefResol.Classification.LibSVM
                 for (int i = 0; i < problem.Size; i++)
                 {
                     sw.Write($"{problem.Y[i]} ");
-                    int j = 1;
+                    int j = 0;
 
                     var X = problem.X[i];
                     for (int x = 0; x < X.Length; x++)

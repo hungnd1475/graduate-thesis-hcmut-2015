@@ -13,8 +13,8 @@ namespace HCMUT.EMRCorefResol.English.Features
         {
             if (!checkPhrase(instance)) return;
 
-            var anaNormalized = EnglishNormalizer.Normalize(instance.Anaphora.Lexicon);
-            var anteNormalized = EnglishNormalizer.Normalize(instance.Antecedent.Lexicon);
+            var anaNormalized = EnglishNormalizer.Normalize(instance.Anaphora.Lexicon, KeywordService.Instance.STOP_WORDS);
+            var anteNormalized = EnglishNormalizer.Normalize(instance.Antecedent.Lexicon, KeywordService.Instance.STOP_WORDS);
 
             var anaAbbre = getAbbre(anaNormalized);
             var anteAbbre = getAbbre(anteNormalized);
