@@ -240,6 +240,7 @@
     <Content Include="Keywords\male-titles.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Keywords\new_sections.txt" />
     <Content Include="Keywords\next-sentences.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

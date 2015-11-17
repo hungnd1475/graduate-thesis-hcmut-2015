@@ -38,36 +38,42 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
         {
             var collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Train");
             //BatchUMLSProcess(collection);
-            //BatchWikiProcess(collection);
+            BatchWikiProcess(collection);
             //BatchTemporalProcess(collection);
             //BatchExtractWordsPerson(collection);
             //BatchExtractWordsPronoun(collection);
             //BatchExtractVerbAfterMention(collection);
-            BatchExtractWordsPerson(collection);
+            //BatchExtractWordsPerson(collection);
             //BatchExtractWordsPronoun(collection);
             //BatchExtractSentencePatient(collection);
+            //BatchSectionProcess(collection);
 
-            //collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Test");
+            collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Test");
             //BatchUMLSProcess(collection);
-            //BatchWikiProcess(collection);
+            BatchWikiProcess(collection);
             //BatchTemporalProcess(collection);
 
             Console.WriteLine("========Finish========");
             Console.ReadLine();
         }
 
-        static void ProcessFile(EMRCollection collection)
+        static void BatchSectionProcess(EMRCollection emrColl)
         {
-            var emrPath = collection.GetEMRPath(2);
-            var conceptPath = collection.GetConceptsPath(2);
-            var dataReader = new I2B2DataReader();
+            var sections = new HashSet<string>();
 
-            var emr = new EMR(emrPath, conceptPath, dataReader);
-            var filename = new FileInfo(emr.Path).Name;
+            for(int i=0; i<emrColl.Count; i++)
+            {
+                var emrPath = emrColl.GetEMRPath(i);
+                var conceptsPath = emrColl.GetConceptsPath(i);
+                var emr = new EMR(emrPath, conceptsPath, new I2B2DataReader());
 
-            var dictionary = ExtractUMLSData(emr);
-            WriteToFile(emr.Path, dictionary);
-            Console.WriteLine($"Finish processing file {filename}");
+                foreach (EMRSection section in emr.Sections)
+                {
+                    sections.Add(section.Title.ToUpper());
+                }
+            }
+
+            File.WriteAllLines(@"C:\Users\Hp\Desktop\emr_section\new_sections.txt", sections);
         }
 
         static void BatchUMLSProcess(EMRCollection collection)
@@ -156,6 +162,13 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
                     {
                         var normalized = EnglishNormalizer.Normalize(c.Lexicon, STOP_WORDS);
                         var wikiData = Service.English.GetAllWikiInformation(normalized);
+
+                        if(wikiData == null)
+                        {
+                            normalized = EnglishNormalizer.RemoveSemanticData(normalized);
+                            wikiData = Service.English.GetAllWikiInformation(normalized);
+                        }
+
                         _wiki.Add(c.Lexicon, wikiData);
                     }
                 }
