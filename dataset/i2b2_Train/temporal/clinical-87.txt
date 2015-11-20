@@ -1,0 +1,8 @@
+rawTerm="910458031"||temporal="1045803"
+rawTerm="23238893"||temporal="232388"
+rawTerm="1/12/1991 12:00:00 AM"||temporal="1/12/1991"
+rawTerm="01/12/1991"||temporal="01/12/1991"
+rawTerm="01/20/1991"||temporal="01/20/1991"
+rawTerm="The patient had an elective termination of her pregnancy on 1/13/91 ."||temporal="1/13/91"
+rawTerm="01/20/91"||temporal="01/20/91"
+rawTerm="01/24/91"||temporal="01/24/91"

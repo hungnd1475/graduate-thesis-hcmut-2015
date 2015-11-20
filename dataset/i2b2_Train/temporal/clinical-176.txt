@@ -1,0 +1,5 @@
+rawTerm="260257442 DH"||temporal="260257"
+rawTerm="2/11/2003 12:00:00 AM"||temporal="2/11/2003"
+rawTerm="02/11/2003 02:42 PM"||temporal="02/11/2003"
+rawTerm="02/11/2003 16:52"||temporal="02/11/2003"
+rawTerm="This report was created by GUAYTREFTSCOST , AMINE 02/11/2003 04:53 PM"||temporal="02/11/2003"

@@ -1,0 +1,10 @@
+<TIMEX3 id="T0" start="43" end="62" text="03/11/2002 12:00:00" type="TIME" val="2002-03-11T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="203" end="217" text="ADMISSION DATE" type="DATE" val="2002-03-11" mod="NA" />
+<TIMEX3 id="T3" start="221" end="231" text="03/11/2002" type="DATE" val="2002-03-11" mod="NA" />
+<TIMEX3 id="T4" start="251" end="261" text="03/14/2002" type="DATE" val="2002-03-14" mod="NA" />
+<TIMEX3 id="T5" start="771" end="775" text="7/10" type="DATE" val="2002-07-10" mod="NA" />
+<TIMEX3 id="T6" start="2170" end="2185" text="March 11 , 2002" type="DATE" val="2002-03-11" mod="NA" />
+<TIMEX3 id="T7" start="2836" end="2857" text="postoperative day one" type="DATE" val="2002-03-12" mod="NA" />
+<TIMEX3 id="T8" start="2977" end="2998" text="postoperative day two" type="DATE" val="2002-03-13" mod="NA" />
+<TIMEX3 id="T9" start="3174" end="3197" text="postoperative day three" type="DATE" val="2002-03-14" mod="NA" />
+<TIMEX3 id="T10" start="4711" end="4727" text="03/27/2002 12:39" type="TIME" val="2002-03-27T12:39" mod="NA" />

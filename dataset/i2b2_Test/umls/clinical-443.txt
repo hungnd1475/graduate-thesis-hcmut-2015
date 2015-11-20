@@ -1,0 +1,5 @@
+rawTerm="epidural|OPE"||cui="C0812144"||concept="epidural"||prefer="Medication administration: epidural"||semantic=[topp]||confidence="1000"
+rawTerm="apgars|EQP"||cui="C0741195"||concept="Apgar"||prefer="Apgar"||semantic=[diap]||confidence="1000"
+rawTerm="weight|EQP"||cui="C1305866"||concept="weight"||prefer="Weighing patient"||semantic=[diap]||confidence="1000"
+rawTerm="weight|INDI"||cui="C0043100"||concept="Weight"||prefer="Weight"||semantic=[qnco]||confidence="1000"
+rawTerm="worsening abdominal pain|ANA"||cui="C0000726"||concept="Abdominal"||prefer="Abdomen"||semantic=[blor]||confidence="861"

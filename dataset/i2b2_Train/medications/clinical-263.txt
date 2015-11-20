@@ -1,0 +1,36 @@
+12	He was started on nitrates there as well as heparin and Integrelin and remained pain-free .|heparin[849,856]|||||||||C0019134|235473|235473|heparin,porcine
+12	He was started on nitrates there as well as heparin and Integrelin and remained pain-free .|nitrates[823,831]||||||||||7439|7439|nitrates
+12	He was started on nitrates there as well as heparin and Integrelin and remained pain-free .|Integrelin[861,871]||||||||||288688|75635|eptifibatide
+16	He subsequently became hypotensive and bradycardiac in the Catheterization Laboratory which responded to IV fluids , dopamine , Atropine , and he was then transferred to the CCU for further monitoring .|IV fluids[1460,1469]||||||||||390001|390001|iv fluids
+16	He subsequently became hypotensive and bradycardiac in the Catheterization Laboratory which responded to IV fluids , dopamine , Atropine , and he was then transferred to the CCU for further monitoring .|dopamine[1472,1480]|||||||||C0013030|3628|3628|dopamine
+16	He subsequently became hypotensive and bradycardiac in the Catheterization Laboratory which responded to IV fluids , dopamine , Atropine , and he was then transferred to the CCU for further monitoring .|Atropine[1483,1491]|||||||||C0004259|1223|1223|atropine
+20	By the time he was admitted , he was off pressors and hemodynamically stable and pain-free .|pressors[1821,1829]||||||||||||
+43	1. Aspirin 325 mg q.d.|Aspirin[2505,2512]|||325mg[2513,2519]|||q.d.[2520,2524]|||C0992015|317300|1191|acetylsalicylic acid
+44	2. Metoprolol 50 mg b.i.d.|Metoprolol[2528,2538]|||50mg[2539,2544]|||b.i.d.[2545,2551]|||C1123387|328469|6918|metoprolol
+45	3. Lipitor 10 mg q.d.|Lipitor[2555,2562]|||10mg[2563,2568]|||q.d.[2569,2573]|||C1617527|617313|83367|atorvastatin
+47	5. Heparin drip on transfer .|Heparin[2591,2598]|||||drip[2599,2603]||||C0019134|235473|235473|heparin,porcine
+48	6. Integrelin drip on transfer .|Integrelin[2621,2631]|||||drip[2632,2636]|||||288688|75635|eptifibatide
+87	Margaret's Center for Women & Infants for cardiac catheterization with PTCA to mid LAD lesion complicated by hypotension and bradycardia requiring Atropine , IV fluids and transient dopamine possibly secondary to vagal reaction , subsequently transferred to CCU for close monitoring , hemodynamically|Atropine[5270,5278]|||||||||C0004259|1223|1223|atropine
+87	Margaret's Center for Women & Infants for cardiac catheterization with PTCA to mid LAD lesion complicated by hypotension and bradycardia requiring Atropine , IV fluids and transient dopamine possibly secondary to vagal reaction , subsequently transferred to CCU for close monitoring , hemodynamically|IV fluids[5281,5290]||||||||||390001|390001|iv fluids
+87	Margaret's Center for Women & Infants for cardiac catheterization with PTCA to mid LAD lesion complicated by hypotension and bradycardia requiring Atropine , IV fluids and transient dopamine possibly secondary to vagal reaction , subsequently transferred to CCU for close monitoring , hemodynamically|dopamine[5305,5313]|||||||||C0013030|3628|3628|dopamine
+92	He was initially continued on aspirin , Plavix , beta blocker , statin , and ACE inhibitor .|aspirin[5704,5711]|||||||||C0004057|1191|1191|acetylsalicylic acid
+92	He was initially continued on aspirin , Plavix , beta blocker , statin , and ACE inhibitor .|Plavix[5714,5720]|||||||||C0633084|174742|32968|clopidogrel
+92	He was initially continued on aspirin , Plavix , beta blocker , statin , and ACE inhibitor .|beta blocker[5723,5735]||||||||||401870|401870|beta blocker
+92	He was initially continued on aspirin , Plavix , beta blocker , statin , and ACE inhibitor .|statin[5738,5744]||||||||||||
+92	He was initially continued on aspirin , Plavix , beta blocker , statin , and ACE inhibitor .|ACE inhibitor[5751,5764]||||||||||836|836|ace inhibitor
+93	At the time of discharge , his Plavix was held due to Guaiac positive stools and hematocrit drop throughout admission .|Plavix[5798,5804]|||||||||C0633084|174742|32968|clopidogrel
+100	He had a history of COPD for which he is on baseline 2 liters of 02 by nasal cannula at home and Albuterol and Atrovent MDI s p.r.n. at home .|Albuterol[6440,6449]|||2liters[6396,6404]||||||C1124741|329499|435|salbutamol
+100	He had a history of COPD for which he is on baseline 2 liters of 02 by nasal cannula at home and Albuterol and Atrovent MDI s p.r.n. at home .|Atrovent[6454,6462]||||||||p.r.n.[6469,6475]|C0591130|151390|7213|ipratropium
+101	He is also on Flovent MDI at home as well .|Flovent[6500,6507]|||||||||C0720466|217152|41126|fluticasone
+105	His ACE inhibitor post MI was initially held due to his creatinine .|ACE inhibitor[6760,6773]||||||||||836|836|ace inhibitor
+106	However , this responded to IV fluids and his ACE inhibitor was restarted at the time of discharge .|IV fluids[6853,6862]||||||||||390001|390001|iv fluids
+106	However , this responded to IV fluids and his ACE inhibitor was restarted at the time of discharge .|ACE inhibitor[6871,6884]||||||||||836|836|ace inhibitor
+107	He will need close monitoring of his creatinine post discharge in the setting of reinstitution of his ACE inhibitor .|ACE inhibitor[7028,7041]||||||||||836|836|ace inhibitor
+111	His Plavix was held at the time of discharge due to a question of GI bleed and in the setting of not having a stent placed at the time of catheterization .|Plavix[7444,7450]|||||||||C0633084|174742|32968|clopidogrel
+112	He was continued on his aspirin , however .|aspirin[7620,7627]|||||||||C0004057|1191|1191|acetylsalicylic acid
+121	1. Lipitor 10 mg q.d.|Lipitor[7949,7956]|||10mg[7957,7962]|||q.d.[7963,7967]|||C1617527|617313|83367|atorvastatin
+122	2. Lisinopril 2.5 mg q.d.|Lisinopril[7971,7981]|||2.5mg[7982,7988]|||q.d.[7989,7993]|||C0987218|316152|29046|lisinopril
+123	3. Flovent 110 micrograms aerosol two puffs b.i.d.|Flovent[7997,8004]|||110[8005,8008]|two puffs[8028,8037]||b.i.d.[8038,8044]|||C0720466|217152|41126|fluticasone
+124	4. Aspirin 325 mg q.d.|Aspirin[8048,8055]|||325mg[8056,8062]|||q.d.[8063,8067]|||C0992015|317300|1191|acetylsalicylic acid
+125	5. Combivent MDI p.r.n.|Combivent MDI[8071,8084]||||||||p.r.n.[8085,8091]|C0591282|151539|435|salbutamol
+126	6. Toprol XL 100 mg q.d.|Toprol XL[8095,8104]|||100mg[8105,8111]|||q.d .[8112,8116]||||1370485|6918|metoprolol

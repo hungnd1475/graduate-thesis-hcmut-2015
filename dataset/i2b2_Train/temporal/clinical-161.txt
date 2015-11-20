@@ -1,0 +1,5 @@
+rawTerm="216451163 PUMC"||temporal="2164511"
+rawTerm="10/18/2001 12:00:00 AM"||temporal="10/18/2001"
+rawTerm="10/18/2001 09:18 AM"||temporal="10/18/2001"
+rawTerm="10/18/2001 10:09"||temporal="10/18/2001"
+rawTerm="This report was created by WEERTLUC , BIRI 10/18/2001 10:23 AM"||temporal="10/18/2001"

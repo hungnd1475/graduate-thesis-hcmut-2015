@@ -1,0 +1,6 @@
+rawTerm="811533262 SC"||temporal="1153326"
+rawTerm="6/30/2006 12:00:00 AM"||temporal="6/30/2006"
+rawTerm="06/30/2006"||temporal="06/30/2006"
+rawTerm="07/04/2006"||temporal="07/04/2006"
+rawTerm="07/09/06"||temporal="07/09/06"
+rawTerm="PO , IEDEARC J , M.D. ( NH10 ) 06/30/06 09:55 AM"||temporal="06/30/06"

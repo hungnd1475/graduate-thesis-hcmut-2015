@@ -1,0 +1,12 @@
+<TIMEX3 id="T0" start="36" end="53" text="5/9/1998 12:00:00" type="TIME" val="1998-05-09T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="98" end="112" text="Admission Date" type="DATE" val="1998-05-09" mod="NA" />
+<TIMEX3 id="T3" start="116" end="126" text="05/09/1998" type="DATE" val="1998-05-09" mod="NA" />
+<TIMEX3 id="T4" start="171" end="181" text="05/25/1998" type="DATE" val="1998-05-25" mod="NA" />
+<TIMEX3 id="T5" start="461" end="474" text="12 April 1998" type="DATE" val="1998-04-12" mod="NA" />
+<TIMEX3 id="T6" start="707" end="720" text="29 March 1998" type="DATE" val="1998-03-29" mod="NA" />
+<TIMEX3 id="T7" start="815" end="828" text="six years ago" type="DATE" val="TPZ-0006" mod="NA" />
+<TIMEX3 id="T8" start="2326" end="2337" text="10 May 1998" type="DATE" val="1998-05-10" mod="NA" />
+<TIMEX3 id="T9" start="3778" end="3784" text="day as" type="DATE" val="1998-05-09" mod="NA" />
+<TIMEX3 id="T10" start="4057" end="4063" text="day as" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T11" start="4521" end="4532" text="25 May 1998" type="DATE" val="1998-05-25" mod="NA" />
+<TIMEX3 id="T12" start="4616" end="4621" text="10-20" type="DATE" val="1998-10-20" mod="NA" />

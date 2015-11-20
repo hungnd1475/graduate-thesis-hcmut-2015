@@ -1,0 +1,7 @@
+rawTerm="559197012_a"||temporal="197012"
+rawTerm="271958"||temporal="271958"
+rawTerm="9/2/1994 12:00:00 AM"||temporal="9/2/1994"
+rawTerm="9-2-94"||temporal="9-2-94"
+rawTerm="9-18-94"||temporal="9-18-94"
+rawTerm="The patient had a routine postoperative course in the Surgical Intensive Care Unit with a postoperative BUN and creatinine of 11 and 1.2 with good urine output of over 100 an hour and patient received two units of packed red blood cells , fresh frozen plasma and platelets for increasing chest tube drainage ."||temporal="2015-11-05"
+rawTerm="09/19/94"||temporal="09/19/94"

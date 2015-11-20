@@ -1,0 +1,15 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2020-01-20" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2020-01-20" type="DATE" val="2020-01-20" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2020-01-21" type="DATE" val="2020-01-21" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1977-11-23" type="DATE" val="1977-11-23" mod="NA" />
+<TIMEX3 id="T4" start="259" end="269" text="2020-01-20" type="DATE" val="2020-01-20" mod="NA" />
+<TIMEX3 id="T5" start="352" end="361" text="1 day ago" type="DATE" val="TPZ-0000-00-01" mod="NA" />
+<TIMEX3 id="T6" start="1918" end="1931" text="2:50 AM 01-20" type="TIME" val="1977-01-20T02:50" mod="NA" />
+<TIMEX3 id="T7" start="2018" end="2034" text="2020-01-20 06:17" type="TIME" val="2020-01-20T06:17" mod="NA" />
+<TIMEX3 id="T9" start="2079" end="2095" text="2020-01-20 06:17" type="TIME" val="2020-01-20T06:17" mod="NA" />
+<TIMEX3 id="T11" start="2117" end="2133" text="2020-01-20 06:17" type="TIME" val="2020-01-20T06:17" mod="NA" />
+<TIMEX3 id="T13" start="2234" end="2250" text="2020-01-20 09:50" type="TIME" val="2020-01-20T09:50" mod="NA" />
+<TIMEX3 id="T15" start="2349" end="2365" text="2020-01-20 09:50" type="TIME" val="2020-01-20T09:50" mod="NA" />
+<TIMEX3 id="T17" start="2387" end="2403" text="2020-01-20 12:38" type="TIME" val="2020-01-20T12:38" mod="NA" />
+<TIMEX3 id="T19" start="4662" end="4668" text="Friday" type="DATE" val="2020-01-17" mod="NA" />
+<TIMEX3 id="T20" start="4669" end="4678" text="this week" type="DATE" val="2020-W3" mod="NA" />

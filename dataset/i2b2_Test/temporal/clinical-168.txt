@@ -1,0 +1,8 @@
+rawTerm="2017-08-12"||temporal="2017-08-12"
+rawTerm="2017-08-16"||temporal="2017-08-16"
+rawTerm="1995-02-03"||temporal="1995-02-03"
+rawTerm="2017-08-12 11:41 PM"||temporal="2017-08-12"
+rawTerm="2017-08-12 11:41PM"||temporal="2017-08-12"
+rawTerm="2017-08-12 03:15 PM"||temporal="2017-08-12"
+rawTerm="Completed by : Jane Ashmore MD 50-063 2017-08-16 @ 0950"||temporal="2017-08-16"
+rawTerm="Signed electronically by : DR. Jennifer Green on : FRI 2017-09-01 1:04 PM"||temporal="2017-09-01"

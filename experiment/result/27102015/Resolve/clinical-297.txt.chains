@@ -1,0 +1,4 @@
+c="baby boy timberlake" 12:0 12:2||c="the baby" 14:0 14:1||c="baby" 15:2 15:2||c="the patient" 16:0 16:1||c="the patient" 17:0 17:1||c="the patient" 19:3 19:4||c="the patient" 22:0 22:1||c="the patient" 26:11 26:12||c="the patient" 27:0 27:1||c="he" 28:0 28:0||c="the patient" 33:10 33:11||c="the patient" 35:0 35:1||c="this" 36:0 36:0||c="the baby" 36:2 36:3||c="he" 36:8 36:8||c="the patient" 36:20 36:21||c="the patient" 38:0 38:1||c="the patient" 41:0 41:1||c="the patient" 43:0 43:1||c="the patient" 50:0 50:1||c="his" 50:11 50:11||c="the patient" 59:1 59:2||c="the patient" 63:15 63:16||c="who" 64:14 64:14||c="vna" 71:0 71:0||t="coref person"
+c="the patient 's birth weight" 19:3 19:7||c="which" 19:12 19:12||t="coref test"
+c="similac special care" 35:23 35:25||c="which" 35:30 35:30||c="straight similac" 35:41 35:42||t="coref treatment"
+c="dr . shaw" 16:9 16:11||c="dr. shaw" 56:0 56:1||t="coref person"

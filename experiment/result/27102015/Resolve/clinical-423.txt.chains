@@ -1,0 +1,4 @@
+c="kote , oa" 13:0 13:2||c="the patient" 25:0 25:1||c="her" 26:15 26:15||c="she" 27:0 27:0||c="her" 27:5 27:5||c="she" 33:0 33:0||c="she" 35:0 35:0||c="she" 36:0 36:0||c="she" 38:0 38:0||c="she" 39:0 39:0||c="she" 39:14 39:14||c="she" 40:0 40:0||c="the patient" 42:0 42:1||c="she" 43:0 43:0||c="her" 43:18 43:18||c="her" 44:3 44:3||c="her" 44:9 44:9||c="she" 45:0 45:0||c="she" 46:0 46:0||c="her" 47:0 47:0||c="she" 47:11 47:11||c="the patient" 49:0 49:1||c="she" 50:0 50:0||c="she" 52:0 52:0||t="coref person"
+c="a postoperative ct scan" 43:2 43:5||c="that" 43:6 43:6||t="coref test"
+c="dr. miezetri gach" 42:7 42:9||c="dr. miezetri gach" 49:6 49:8||t="coref person"
+c="miezetri nimiry pop , m.d." 61:2 61:6||c="miezetri nimiry pop , m.d." 62:1 62:5||c="miezetri nimiry pop , m.d." 70:0 70:4||t="coref person"

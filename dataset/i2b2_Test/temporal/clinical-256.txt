@@ -1,0 +1,7 @@
+rawTerm="4/14/1994 12:00:00 AM"||temporal="4/14/1994"
+rawTerm="4/14/94"||temporal="4/14/94"
+rawTerm="4/20/94"||temporal="4/20/94"
+rawTerm="By the 7th hospital day , the patient was medically stable ."||temporal="2015-11-11"
+rawTerm="Therefore , because of his need for intense psychiatric care , the patient is discharged to the Vo Black Doylestrictshore Ft. Clinics Medical Center on the 7th hospital day ."||temporal="2015-11-11"
+rawTerm="4/19/94"||temporal="4/19/94"
+rawTerm="04/19/94"||temporal="04/19/94"

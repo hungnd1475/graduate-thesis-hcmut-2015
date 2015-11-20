@@ -1,0 +1,2 @@
+36	A Neurosurgery consultation was obtained , and it was their impression that the patient &apos;s paraplegia might possibly represent a cord concussion , and recommended treatment with intravenous steroids for 24 hours .|steroids[1922,1930]|||||intravenous[1910,1921]||24 hours[1935,1943]|||10072|10072|steroids
+47	Tylenol 650 mg p.o. q4 hours p.r.n. pain .|Tylenol[2701,2708]|||650mg[2709,2715]||p.o.[2716,2720]|q4 hours[2721,2729]||p.r.n.[2730,2736]|C1739190|646457|161|paracetamol

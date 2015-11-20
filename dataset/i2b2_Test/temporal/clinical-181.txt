@@ -1,0 +1,8 @@
+rawTerm="268157859 YC"||temporal="268157"
+rawTerm="5/30/2005 12:00:00 AM"||temporal="5/30/2005"
+rawTerm="05/30/2005"||temporal="05/30/2005"
+rawTerm="05/31/2005"||temporal="05/31/2005"
+rawTerm="306-08-68-0 K78"||temporal="06-08-68"
+rawTerm="05/31/05 AT 02:00 PM"||temporal="05/31/05"
+rawTerm="05/30/05 TLAND , JR , VOTRIBRENDEVE N. , M.D. TOTAL THYROIDECTOMY"||temporal="05/30/05"
+rawTerm="LILLETLANDTRIEV , ROSEEN ERTONDON ( BZ30 ) 05/31/05 09:05 AM"||temporal="05/31/05"

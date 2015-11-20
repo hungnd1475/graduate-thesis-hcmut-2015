@@ -1,0 +1,5 @@
+c="falc , coll" 13:0 13:2||c="patient" 18:1 18:1||c="patient" 33:7 33:7||c="you" 65:0 65:0||t="coref person"
+c="attending" 24:0 24:0||c="kotezustleeb , lijo lifle , m.d." 25:0 25:5||t="coref person"
+c="back pain" 56:11 56:12||c="which" 56:14 56:14||t="coref problem"
+c="glucophage ( metformin )" 36:0 36:3||c="metformin" 59:1 59:1||t="coref treatment"
+c="chest ct" 56:1 56:2||c="ct with contrast" 59:6 59:8||t="coref test"

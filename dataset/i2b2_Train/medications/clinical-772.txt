@@ -1,0 +1,4 @@
+17	1. Levothyroxine .|Levothyroxine[709,722]|||||||||C0040165|10582|10582|levothyroxine
+18	2. Lasix .|Lasix[728,733]|||||||||C0699992|202991|4603|furosemide
+19	3. Proscar .|Proscar[739,746]||||||||||196476|25025|finasteride
+21	5. Ancef .|Ancef[765,770]|||||||||C0700926|203483|2180|cefazolin

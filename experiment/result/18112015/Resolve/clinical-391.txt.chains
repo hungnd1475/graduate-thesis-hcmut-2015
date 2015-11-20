@@ -1,0 +1,7 @@
+c="duldkote , ei n" 13:0 13:3||c="this" 23:0 23:0||t="coref person"
+c="his" 24:10 24:10||c="he" 25:0 25:0||c="his" 37:2 37:2||c="his" 47:0 47:0||t="coref person"
+c="persistent pain" 25:3 25:4||c="which" 25:8 25:8||t="coref problem"
+c="right shoulder instability" 21:0 21:2||c="mild pain" 40:0 40:1||c="1 cm. sulcus sign bilaterally" 41:2 41:6||c="laxity" 42:0 42:0||t="coref problem"
+c="the patient" 24:2 24:3||c="the patient" 45:0 45:1||c="the patient" 46:2 46:3||t="coref person"
+c="percocet" 48:6 48:6||c="percocet" 54:0 54:0||t="coref treatment"
+c="dr. rach breutznedeaisscarvwierst" 52:6 52:8||c="rach hy breutznedeaisscarvwierst , m.d." 57:2 57:6||c="rach hy breutznedeaisscarvwierst , m.d." 58:1 58:5||c="rach hy breutznedeaisscarvwierst , m.d." 66:0 66:4||t="coref person"

@@ -1,0 +1,14 @@
+<TIMEX3 id="T0" start="11" end="25" text="Admission Date" type="DATE" val="2010-06-28" mod="NA" />
+<TIMEX3 id="T1" start="29" end="39" text="2010-06-28" type="DATE" val="2010-06-28" mod="NA" />
+<TIMEX3 id="T2" start="59" end="69" text="2010-07-01" type="DATE" val="2010-07-01" mod="NA" />
+<TIMEX3 id="T3" start="88" end="98" text="1990-02-01" type="DATE" val="1990-02-01" mod="NA" />
+<TIMEX3 id="T4" start="325" end="335" text="2010-06-27" type="DATE" val="2010-06-27" mod="NA" />
+<TIMEX3 id="T5" start="4674" end="4684" text="2010-06-28" type="DATE" val="2010-06-28" mod="NA" />
+<TIMEX3 id="T6" start="4832" end="4842" text="2010-06-28" type="DATE" val="2010-06-28" mod="NA" />
+<TIMEX3 id="T7" start="4956" end="4961" text="06-28" type="DATE" val="2010-06-28" mod="NA" />
+<TIMEX3 id="T8" start="5162" end="5172" text="2010-06-29" type="DATE" val="2010-06-29" mod="NA" />
+<TIMEX3 id="T9" start="5516" end="5531" text="hospital day #1" type="DATE" val="2010-06-28" mod="NA" />
+<TIMEX3 id="T10" start="5662" end="5682" text="postoperative day #1" type="DATE" val="2010-06-30" mod="NA" />
+<TIMEX3 id="T11" start="5685" end="5695" text="2010-06-30" type="DATE" val="2010-06-30" mod="NA" />
+<TIMEX3 id="T12" start="6731" end="6736" text="06-30" type="DATE" val="2010-06-30" mod="NA" />
+<TIMEX3 id="T13" start="7077" end="7087" text="2010-07-01" type="DATE" val="2010-07-01" mod="NA" />

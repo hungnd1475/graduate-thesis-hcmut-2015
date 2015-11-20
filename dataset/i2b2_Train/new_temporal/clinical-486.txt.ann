@@ -1,0 +1,26 @@
+<TIMEX3 id="T0" start="46" end="64" text="5/13/1992 12:00:00" type="TIME" val="1992-05-13T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="130" end="144" text="ADMISSION DATE" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T3" start="148" end="155" text="5-13-92" type="DATE" val="1992-05-13" mod="NA" />
+<TIMEX3 id="T4" start="175" end="182" text="5-22-92" type="DATE" val="1992-05-22" mod="NA" />
+<TIMEX3 id="T5" start="590" end="605" text="May 12th , 1992" type="DATE" val="1992-05-12" mod="NA" />
+<TIMEX3 id="T6" start="908" end="935" text="two days prior to admission" type="DATE" val="1992-05-11" mod="NA" />
+<TIMEX3 id="T7" start="1193" end="1197" text="1989" type="DATE" val="1989" mod="NA" />
+<TIMEX3 id="T8" start="1272" end="1277" text="08/89" type="DATE" val="1989-08" mod="NA" />
+<TIMEX3 id="T9" start="1504" end="1517" text="December 1990" type="DATE" val="1990-12" mod="NA" />
+<TIMEX3 id="T10" start="1697" end="1701" text="7/92" type="DATE" val="1992-07" mod="NA" />
+<TIMEX3 id="T11" start="1708" end="1712" text="5/92" type="DATE" val="1992-05" mod="NA" />
+<TIMEX3 id="T12" start="4791" end="4803" text="several days" type="DATE" val="TPZ-0000-00-03" mod="APPROX" />
+<TIMEX3 id="T13" start="4988" end="5009" text="the time of discharge" type="DATE" val="1992-05-13" mod="NA" />
+<TIMEX3 id="T14" start="5052" end="5059" text="tonight" type="DATE" val="TPZ+0000-00-00" mod="END" />
+<TIMEX3 id="T15" start="5062" end="5069" text="5/22/92" type="DATE" val="1992-05-22" mod="NA" />
+<TIMEX3 id="T16" start="5377" end="5397" text="several months prior" type="DATE" val="TPZ-0000-03" mod="APPROX" />
+<TIMEX3 id="T17" start="6635" end="6656" text="the time of discharge" type="DATE" val="1992-05-13" mod="NA" />
+<TIMEX3 id="T18" start="6824" end="6828" text="1989" type="DATE" val="1989" mod="NA" />
+<TIMEX3 id="T19" start="7194" end="7203" text="this time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T20" start="7291" end="7301" text="many years" type="DATE" val="TPZ-0003" mod="APPROX" />
+<TIMEX3 id="T21" start="8122" end="8126" text="1989" type="DATE" val="1989" mod="NA" />
+<TIMEX3 id="T22" start="8461" end="8465" text="1990" type="DATE" val="1990" mod="NA" />
+<TIMEX3 id="T23" start="8975" end="8984" text="this time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T24" start="9562" end="9569" text="5/25/92" type="DATE" val="1992-05-25" mod="NA" />
+<TIMEX3 id="T25" start="9668" end="9675" text="5/22/92" type="DATE" val="1992-05-22" mod="NA" />
+<TIMEX3 id="T26" start="10197" end="10201" text="1989" type="DATE" val="1989" mod="NA" />

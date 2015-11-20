@@ -1,0 +1,13 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2012-04-20" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2012-04-20" type="DATE" val="2012-04-20" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2012-05-01" type="DATE" val="2012-05-01" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1952-06-24" type="DATE" val="1952-06-24" mod="NA" />
+<TIMEX3 id="T4" start="485" end="509" text="the day before admission" type="DATE" val="2012-04-19" mod="NA" />
+<TIMEX3 id="T5" start="891" end="899" text="February" type="DATE" val="2012-02" mod="NA" />
+<TIMEX3 id="T6" start="1305" end="1309" text="1970" type="DATE" val="1970" mod="NA" />
+<TIMEX3 id="T7" start="1671" end="1683" text="25 years ago" type="DATE" val="TPZ-0025" mod="NA" />
+<TIMEX3 id="T8" start="5737" end="5750" text="the mid 1950s" type="DATE" val="1950" mod="MID" />
+<TIMEX3 id="T9" start="5754" end="5763" text="mid 1970s" type="DATE" val="1970" mod="MID" />
+<TIMEX3 id="T10" start="6053" end="6069" text="the night before" type="DATE" val="TPZ-0000-00-01" mod="END" />
+<TIMEX3 id="T11" start="6324" end="6333" text="that time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T12" start="6465" end="6474" text="that time" type="DATE" val="TPZ+0000-00-00" mod="NA" />

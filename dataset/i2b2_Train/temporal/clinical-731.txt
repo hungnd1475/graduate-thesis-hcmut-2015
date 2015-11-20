@@ -1,0 +1,4 @@
+rawTerm="195078"||temporal="195078"
+rawTerm="6/15/2000 12:00:00 AM"||temporal="6/15/2000"
+rawTerm="06/15/2000 01:09 PM"||temporal="06/15/2000"
+rawTerm="This is to notify you that your patient , KOTE , YGA arrived in the Emergency Department at Ponta,itri- University Medical Center on 06/15/2000 01:09 PM ."||temporal="06/15/2000"

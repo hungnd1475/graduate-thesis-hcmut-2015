@@ -1,0 +1,51 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2012-03-23" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2012-03-23" type="DATE" val="2012-03-23" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2012-03-26" type="DATE" val="2012-03-26" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1972-06-27" type="DATE" val="1972-06-27" mod="NA" />
+<TIMEX3 id="T4" start="487" end="493" text="7 a.m." type="TIME" val="1972-06-27T07:00" mod="NA" />
+<TIMEX3 id="T5" start="684" end="691" text="11 a.m." type="TIME" val="1972-06-27T11:00" mod="NA" />
+<TIMEX3 id="T6" start="1369" end="1379" text="2 days PTA" type="DATE" val="2012-03-21" mod="NA" />
+<TIMEX3 id="T7" start="2873" end="2889" text="2012-03-23 03:39" type="TIME" val="2012-03-23T03:39" mod="NA" />
+<TIMEX3 id="T9" start="2965" end="2981" text="2012-03-23 03:39" type="TIME" val="2012-03-23T03:39" mod="NA" />
+<TIMEX3 id="T11" start="3001" end="3017" text="2012-03-23 01:30" type="TIME" val="2012-03-23T01:30" mod="NA" />
+<TIMEX3 id="T13" start="3044" end="3060" text="2012-03-23 01:30" type="TIME" val="2012-03-23T01:30" mod="NA" />
+<TIMEX3 id="T15" start="3159" end="3175" text="2012-03-23 01:30" type="TIME" val="2012-03-23T01:30" mod="NA" />
+<TIMEX3 id="T17" start="3235" end="3251" text="2012-03-23 01:30" type="TIME" val="2012-03-23T01:30" mod="NA" />
+<TIMEX3 id="T19" start="3381" end="3397" text="2012-03-23 01:30" type="TIME" val="2012-03-23T01:30" mod="NA" />
+<TIMEX3 id="T21" start="3414" end="3419" text="03-10" type="DATE" val="1972-03-10" mod="NA" />
+<TIMEX3 id="T22" start="3469" end="3485" text="2012-03-23 01:30" type="TIME" val="2012-03-23T01:30" mod="NA" />
+<TIMEX3 id="T24" start="3510" end="3526" text="2012-03-23 12:22" type="TIME" val="2012-03-23T12:22" mod="NA" />
+<TIMEX3 id="T26" start="3595" end="3611" text="2012-03-23 12:22" type="TIME" val="2012-03-23T12:22" mod="NA" />
+<TIMEX3 id="T28" start="3678" end="3694" text="2012-03-23 12:20" type="TIME" val="2012-03-23T12:20" mod="NA" />
+<TIMEX3 id="T30" start="3724" end="3740" text="2012-03-23 12:20" type="TIME" val="2012-03-23T12:20" mod="NA" />
+<TIMEX3 id="T32" start="3852" end="3868" text="2012-03-23 12:20" type="TIME" val="2012-03-23T12:20" mod="NA" />
+<TIMEX3 id="T34" start="3886" end="3902" text="2012-03-23 12:20" type="TIME" val="2012-03-23T12:20" mod="NA" />
+<TIMEX3 id="T36" start="3951" end="3967" text="2012-03-23 12:20" type="TIME" val="2012-03-23T12:20" mod="NA" />
+<TIMEX3 id="T38" start="3987" end="4003" text="2012-03-23 12:20" type="TIME" val="2012-03-23T12:20" mod="NA" />
+<TIMEX3 id="T40" start="4095" end="4111" text="2012-03-23 12:20" type="TIME" val="2012-03-23T12:20" mod="NA" />
+<TIMEX3 id="T42" start="4209" end="4225" text="2012-03-23 12:20" type="TIME" val="2012-03-23T12:20" mod="NA" />
+<TIMEX3 id="T44" start="4298" end="4314" text="2012-03-23 12:20" type="TIME" val="2012-03-23T12:20" mod="NA" />
+<TIMEX3 id="T46" start="4336" end="4352" text="2012-03-23 12:20" type="TIME" val="2012-03-23T12:20" mod="NA" />
+<TIMEX3 id="T48" start="4397" end="4413" text="2012-03-23 12:20" type="TIME" val="2012-03-23T12:20" mod="NA" />
+<TIMEX3 id="T50" start="4435" end="4451" text="2012-03-26 04:30" type="TIME" val="2012-03-26T04:30" mod="NA" />
+<TIMEX3 id="T52" start="4566" end="4582" text="2012-03-26 04:30" type="TIME" val="2012-03-26T04:30" mod="NA" />
+<TIMEX3 id="T54" start="4606" end="4622" text="2012-03-26 04:30" type="TIME" val="2012-03-26T04:30" mod="NA" />
+<TIMEX3 id="T56" start="4714" end="4730" text="2012-03-26 04:30" type="TIME" val="2012-03-26T04:30" mod="NA" />
+<TIMEX3 id="T58" start="4775" end="4791" text="2012-03-25 04:00" type="TIME" val="2012-03-25T04:00" mod="NA" />
+<TIMEX3 id="T60" start="5334" end="5339" text="03-23" type="DATE" val="1972-03-23" mod="NA" />
+<TIMEX3 id="T61" start="5343" end="5348" text="03-24" type="DATE" val="1972-03-24" mod="NA" />
+<TIMEX3 id="T62" start="5516" end="5521" text="03-24" type="DATE" val="1972-03-24" mod="NA" />
+<TIMEX3 id="T63" start="5531" end="5535" text="3/21" type="DATE" val="1972-03-21" mod="NA" />
+<TIMEX3 id="T64" start="5828" end="5832" text="9/13" type="DATE" val="1972-09-13" mod="NA" />
+<TIMEX3 id="T65" start="5833" end="5838" text="10/11" type="DATE" val="1972-10-11" mod="NA" />
+<TIMEX3 id="T66" start="5915" end="5920" text="03-26" type="DATE" val="1972-03-26" mod="NA" />
+<TIMEX3 id="T67" start="6124" end="6129" text="03-24" type="DATE" val="1972-03-24" mod="NA" />
+<TIMEX3 id="T68" start="6168" end="6173" text="03-24" type="DATE" val="1972-03-24" mod="NA" />
+<TIMEX3 id="T69" start="6177" end="6182" text="03-26" type="DATE" val="1972-03-26" mod="NA" />
+<TIMEX3 id="T70" start="6315" end="6320" text="03-25" type="DATE" val="1972-03-25" mod="NA" />
+<TIMEX3 id="T71" start="6324" end="6378" text="5) Depression : He was restarted on his paxil on 03-25" type="TIME" val="1972-03-25T05:00" mod="NA" />
+<TIMEX3 id="T72" start="6393" end="6396" text="1:1" type="TIME" val="1972-03-25T01:01" mod="NA" />
+<TIMEX3 id="T73" start="6810" end="6815" text="03-23" type="DATE" val="1972-03-23" mod="NA" />
+<TIMEX3 id="T74" start="6984" end="6988" text="4/14" type="DATE" val="1972-04-14" mod="NA" />
+<TIMEX3 id="T75" start="6989" end="6993" text="4/17" type="DATE" val="1972-04-17" mod="NA" />
+<TIMEX3 id="T76" start="7248" end="7252" text="3/21" type="DATE" val="1972-03-21" mod="NA" />

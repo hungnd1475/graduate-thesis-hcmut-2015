@@ -1,0 +1,13 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2014-04-14" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2014-04-14" type="DATE" val="2014-04-14" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2014-04-19" type="DATE" val="2014-04-19" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="2014-04-14" type="DATE" val="2014-04-14" mod="NA" />
+<TIMEX3 id="T4" start="917" end="938" text="the middle of January" type="DATE" val="2014-01" mod="MID" />
+<TIMEX3 id="T5" start="1038" end="1043" text="03-28" type="DATE" val="2014-03-28" mod="NA" />
+<TIMEX3 id="T6" start="1089" end="1094" text="04-12" type="DATE" val="2014-04-12" mod="NA" />
+<TIMEX3 id="T7" start="1133" end="1143" text="2 days ago" type="DATE" val="TPZ-0000-00-02" mod="NA" />
+<TIMEX3 id="T8" start="2404" end="2409" text="04-18" type="DATE" val="2014-04-18" mod="NA" />
+<TIMEX3 id="T9" start="2841" end="2854" text="day of life 1" type="DATE" val="2014-04-14" mod="NA" />
+<TIMEX3 id="T10" start="2973" end="2978" text="04-17" type="DATE" val="2014-04-17" mod="NA" />
+<TIMEX3 id="T11" start="4247" end="4260" text="day of life 3" type="DATE" val="2014-04-16" mod="NA" />
+<TIMEX3 id="T12" start="4264" end="4265" text="5" type="TIME" val="2014-04-16T05:00" mod="NA" />

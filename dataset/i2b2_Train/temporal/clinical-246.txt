@@ -1,0 +1,3 @@
+rawTerm="4/14/2004 12:00:00 AM"||temporal="4/14/2004"
+rawTerm="04/14/2004 02:47 PM"||temporal="04/14/2004"
+rawTerm="This is to notify you that your patient , AKOTE , RALPRI arrived in the Emergency Department at Ph University Of Medical Center on 04/14/2004 02:47 PM ."||temporal="04/14/2004"

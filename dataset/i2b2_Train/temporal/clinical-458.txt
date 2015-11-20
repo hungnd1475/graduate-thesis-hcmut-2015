@@ -1,0 +1,6 @@
+rawTerm="06100044"||temporal="100044"
+rawTerm="1/17/1993 12:00:00 AM"||temporal="1/17/1993"
+rawTerm="01/17/1993"||temporal="01/17/1993"
+rawTerm="01/21/1993"||temporal="01/21/1993"
+rawTerm="01/20/93"||temporal="01/20/93"
+rawTerm="01/22/93"||temporal="01/22/93"

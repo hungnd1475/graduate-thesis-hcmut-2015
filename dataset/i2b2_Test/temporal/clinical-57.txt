@@ -1,0 +1,4 @@
+rawTerm="1/12/2005 12:00:00 AM"||temporal="1/12/2005"
+rawTerm="01/12/2005 06:07 AM"||temporal="01/12/2005"
+rawTerm="01/12/2005 09:17"||temporal="01/12/2005"
+rawTerm="This report was created by WAGES , THAA 01/12/2005 09:18 AM"||temporal="01/12/2005"

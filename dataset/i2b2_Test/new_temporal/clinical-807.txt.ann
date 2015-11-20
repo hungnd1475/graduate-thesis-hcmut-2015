@@ -1,0 +1,60 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2017-08-14" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2017-08-14" type="DATE" val="2017-08-14" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2017-08-23" type="DATE" val="2017-08-23" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1943-08-23" type="DATE" val="1943-08-23" mod="NA" />
+<TIMEX3 id="T4" start="346" end="351" text="08-16" type="DATE" val="2043-08-16" mod="NA" />
+<TIMEX3 id="T5" start="524" end="529" text="08-02" type="DATE" val="2043-08-02" mod="NA" />
+<TIMEX3 id="T6" start="677" end="682" text="02-22" type="DATE" val="2043-02-22" mod="NA" />
+<TIMEX3 id="T7" start="1012" end="1017" text="08-08" type="DATE" val="2043-08-08" mod="NA" />
+<TIMEX3 id="T8" start="1106" end="1111" text="08-08" type="DATE" val="2043-08-08" mod="NA" />
+<TIMEX3 id="T9" start="1131" end="1136" text="08-09" type="DATE" val="2043-08-09" mod="NA" />
+<TIMEX3 id="T10" start="1182" end="1192" text="2017-08-10" type="DATE" val="2017-08-10" mod="NA" />
+<TIMEX3 id="T11" start="1206" end="1224" text="today around 17:45" type="TIME" val="TPZ+0000-00-00T17:45" mod="APPROX" />
+<TIMEX3 id="T12" start="2128" end="2138" text="2016-09-21" type="DATE" val="2016-09-21" mod="NA" />
+<TIMEX3 id="T13" start="2333" end="2343" text="2017-07-19" type="DATE" val="2017-07-19" mod="NA" />
+<TIMEX3 id="T14" start="2345" end="2346" text="7" type="TIME" val="2017-07-19T07:00" mod="NA" />
+<TIMEX3 id="T15" start="2395" end="2405" text="2017-04-19" type="DATE" val="2017-04-19" mod="NA" />
+<TIMEX3 id="T16" start="2407" end="2409" text="10" type="TIME" val="2017-04-19T10:00" mod="NA" />
+<TIMEX3 id="T17" start="2444" end="2454" text="2017-07-21" type="DATE" val="2017-07-21" mod="NA" />
+<TIMEX3 id="T18" start="2539" end="2544" text="08-10" type="DATE" val="2043-08-10" mod="NA" />
+<TIMEX3 id="T19" start="2548" end="2593" text="12. Status post PEG tube placement 2017-07-21" type="TIME" val="2017-07-21T12:00" mod="NA" />
+<TIMEX3 id="T20" start="2624" end="2634" text="2017-07-21" type="DATE" val="2017-07-21" mod="NA" />
+<TIMEX3 id="T21" start="2635" end="2640" text="02-22" type="DATE" val="2043-02-22" mod="NA" />
+<TIMEX3 id="T22" start="2692" end="2696" text="1972" type="DATE" val="1972" mod="NA" />
+<TIMEX3 id="T23" start="2839" end="2849" text="2017-08-02" type="DATE" val="2017-08-02" mod="NA" />
+<TIMEX3 id="T24" start="4211" end="4227" text="2017-08-14 07:30" type="TIME" val="2017-08-14T07:30" mod="NA" />
+<TIMEX3 id="T26" start="4364" end="4369" text="17:11" type="TIME" val="2017-08-14T17:11" mod="NA" />
+<TIMEX3 id="T27" start="4664" end="4674" text="2017-08-14" type="DATE" val="2017-08-14" mod="NA" />
+<TIMEX3 id="T28" start="4875" end="4885" text="2017-07-19" type="DATE" val="2017-07-19" mod="NA" />
+<TIMEX3 id="T29" start="5173" end="5178" text="01-22" type="DATE" val="2043-01-22" mod="NA" />
+<TIMEX3 id="T30" start="5209" end="5219" text="2017-08-16" type="DATE" val="2017-08-16" mod="NA" />
+<TIMEX3 id="T31" start="5457" end="5467" text="2017-08-16" type="DATE" val="2017-08-16" mod="NA" />
+<TIMEX3 id="T32" start="5791" end="5801" text="2017-08-16" type="DATE" val="2017-08-16" mod="NA" />
+<TIMEX3 id="T33" start="6055" end="6065" text="2017-07-18" type="DATE" val="2017-07-18" mod="NA" />
+<TIMEX3 id="T34" start="6496" end="6506" text="2017-08-17" type="DATE" val="2017-08-17" mod="NA" />
+<TIMEX3 id="T35" start="7146" end="7156" text="2017-08-17" type="DATE" val="2017-08-17" mod="NA" />
+<TIMEX3 id="T36" start="7208" end="7218" text="2017-08-16" type="DATE" val="2017-08-16" mod="NA" />
+<TIMEX3 id="T37" start="7359" end="7369" text="2017-08-15" type="DATE" val="2017-08-15" mod="NA" />
+<TIMEX3 id="T38" start="7427" end="7437" text="2017-08-15" type="DATE" val="2017-08-15" mod="NA" />
+<TIMEX3 id="T39" start="7458" end="7468" text="2017-08-15" type="DATE" val="2017-08-15" mod="NA" />
+<TIMEX3 id="T40" start="7492" end="7502" text="2017-08-15" type="DATE" val="2017-08-15" mod="NA" />
+<TIMEX3 id="T41" start="9005" end="9010" text="08-14" type="DATE" val="2043-08-14" mod="NA" />
+<TIMEX3 id="T42" start="9059" end="9063" text="2000" type="DATE" val="2000" mod="NA" />
+<TIMEX3 id="T43" start="9067" end="9072" text="08-13" type="DATE" val="2043-08-13" mod="NA" />
+<TIMEX3 id="T44" start="9089" end="9094" text="08-09" type="DATE" val="2043-08-09" mod="NA" />
+<TIMEX3 id="T45" start="9211" end="9216" text="08-14" type="DATE" val="2043-08-14" mod="NA" />
+<TIMEX3 id="T46" start="9237" end="9242" text="08-08" type="DATE" val="2043-08-08" mod="NA" />
+<TIMEX3 id="T47" start="9288" end="9293" text="07/25" type="DATE" val="2043-07-25" mod="NA" />
+<TIMEX3 id="T48" start="9421" end="9426" text="07-25" type="DATE" val="2043-07-25" mod="NA" />
+<TIMEX3 id="T49" start="9431" end="9436" text="08-10" type="DATE" val="2043-08-10" mod="NA" />
+<TIMEX3 id="T50" start="9827" end="9837" text="2016-09-21" type="DATE" val="2016-09-21" mod="NA" />
+<TIMEX3 id="T51" start="10048" end="10058" text="2017-07-19" type="DATE" val="2017-07-19" mod="NA" />
+<TIMEX3 id="T52" start="10060" end="10061" text="7" type="TIME" val="2017-07-19T07:00" mod="NA" />
+<TIMEX3 id="T53" start="10110" end="10120" text="2017-04-19" type="DATE" val="2017-04-19" mod="NA" />
+<TIMEX3 id="T54" start="10122" end="10124" text="10" type="TIME" val="2017-04-19T10:00" mod="NA" />
+<TIMEX3 id="T55" start="10159" end="10169" text="2017-07-21" type="DATE" val="2017-07-21" mod="NA" />
+<TIMEX3 id="T56" start="10254" end="10259" text="08-10" type="DATE" val="2043-08-10" mod="NA" />
+<TIMEX3 id="T57" start="10263" end="10308" text="12. Status post PEG tube placement 2017-07-21" type="TIME" val="2017-07-21T12:00" mod="NA" />
+<TIMEX3 id="T58" start="10339" end="10349" text="2017-07-21" type="DATE" val="2017-07-21" mod="NA" />
+<TIMEX3 id="T59" start="10350" end="10355" text="02-22" type="DATE" val="2043-02-22" mod="NA" />
+<TIMEX3 id="T60" start="10407" end="10411" text="1972" type="DATE" val="1972" mod="NA" />

@@ -1,0 +1,7 @@
+rawTerm="369195584"||temporal="195584"
+rawTerm="26248578"||temporal="262485"
+rawTerm="130467"||temporal="130467"
+rawTerm="3/10/1992 12:00:00 AM"||temporal="3/10/1992"
+rawTerm="03/10/1992"||temporal="03/10/1992"
+rawTerm="03/22/1992"||temporal="03/22/1992"
+rawTerm="03/22/92"||temporal="03/22/92"

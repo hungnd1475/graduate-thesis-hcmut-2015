@@ -1,0 +1,7 @@
+rawTerm="373254497 PUMC"||temporal="254497"
+rawTerm="6211697"||temporal="211697"
+rawTerm="209987"||temporal="209987"
+rawTerm="3/5/2002 12:00:00 AM"||temporal="3/5/2002"
+rawTerm="03/05/2002 10:11 PM"||temporal="03/05/2002"
+rawTerm="03/06/2002 06:23"||temporal="03/06/2002"
+rawTerm="This report was created by DREWEILLTRIEVKEMME , QUELOISEVIER 03/06/2002 06:28 AM"||temporal="03/06/2002"

@@ -1,0 +1,3 @@
+rawTerm="back pain|ANA"||cui="C0004600"||concept="Back"||prefer="Back"||semantic=[blor]||confidence="861"
+rawTerm="bladder incontinence|ANA"||cui="C0005682"||concept="Bladder"||prefer="Urinary Bladder"||semantic=[bpoc]||confidence="694"
+rawTerm="bowel incontinence|ANA"||cui="C0021853"||concept="Bowel"||prefer="Intestines"||semantic=[bpoc]||confidence="694"

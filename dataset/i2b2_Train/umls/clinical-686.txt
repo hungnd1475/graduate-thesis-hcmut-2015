@@ -1,0 +1,7 @@
+rawTerm="abd pain/|ANA"||cui="C0000726"||concept="abd"||prefer="Abdomen"||semantic=[blor]||confidence="694"
+rawTerm="pelvic pain|ANA"||cui="C0030797"||concept="Pelvic"||prefer="Pelvis"||semantic=[blor]||confidence="861"
+rawTerm="abdominal pain|ANA"||cui="C0000726"||concept="Abdominal"||prefer="Abdomen"||semantic=[blor]||confidence="861"
+rawTerm="ct scan|EQP"||cui="C0040405"||concept="CT SCAN"||prefer="X-Ray Computed Tomography"||semantic=[diap]||confidence="1000"
+rawTerm="ovarian cyst|ANA"||cui="C0205065"||concept="Ovarian"||prefer="Ovaro-"||semantic=[bpoc]||confidence="861"
+rawTerm="worsening abdominal pain|ANA"||cui="C0000726"||concept="Abdominal"||prefer="Abdomen"||semantic=[blor]||confidence="861"
+rawTerm="discharge|ANA"||cui="C0012621"||concept="Discharge"||prefer="Body Fluid Discharge"||semantic=[bdsu]||confidence="1000"

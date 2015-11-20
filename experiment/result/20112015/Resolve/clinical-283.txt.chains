@@ -1,0 +1,8 @@
+c="osteochondromatosis , right knee" 7:0 7:3||c="osteochondromatosis , right knee" 17:0 17:3||t="coref problem"
+c="who" 19:6 19:6||c="he" 20:3 20:3||c="he" 21:0 21:0||c="his" 22:4 22:4||c="the patient" 24:4 24:5||c="he" 25:0 25:0||c="he" 27:0 27:0||c="he" 28:0 28:0||c="he" 28:11 28:11||c="he" 30:0 30:0||c="he" 32:0 32:0||c="his" 34:4 34:4||c="he" 35:0 35:0||c="he" 36:0 36:0||c="who" 36:4 36:4||c="he" 38:0 38:0||c="he" 38:11 38:11||c="he" 40:0 40:0||c="his" 48:0 48:0||c="his" 49:0 49:0||c="his" 50:0 50:0||c="he" 53:0 53:0||c="he" 54:2 54:2||c="he" 55:0 55:0||c="his" 56:0 56:0||c="he" 57:0 57:0||c="he" 57:6 57:6||c="he" 57:14 57:14||c="he" 58:0 58:0||c="he" 62:0 62:0||c="he" 64:3 64:3||t="coref person"
+c="any abnormality" 41:7 41:8||c="any abnormality" 50:6 50:7||t="coref problem"
+c="a electrocardiogram" 51:0 51:1||c="it" 51:9 51:9||t="coref test"
+c="debridement" 24:17 24:17||c="debridement" 53:7 53:7||t="coref treatment"
+c="synovial chondromatosis" 24:7 24:8||c="synovial chondromatosis" 53:9 53:10||t="coref problem"
+c="percocet" 57:10 57:10||c="percocet" 57:19 57:19||c="percocet" 60:0 60:0||t="coref treatment"
+c="coumadin" 58:3 58:3||c="which" 58:4 58:4||t="coref treatment"

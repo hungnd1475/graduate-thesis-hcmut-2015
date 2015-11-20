@@ -1,0 +1,4 @@
+rawTerm="6153969"||temporal="153969"
+rawTerm="11/4/2006 12:00:00 AM"||temporal="11/4/2006"
+rawTerm="11/04/2006 12:17 PM"||temporal="11/04/2006"
+rawTerm="This is to notify you that your patient , CRITCHE , NIFREDEDRHET arrived in the Emergency Department at Ro Woodma Healthcare on 11/04/2006 12:17 PM ."||temporal="11/04/2006"

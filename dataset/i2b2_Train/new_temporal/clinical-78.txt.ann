@@ -1,0 +1,24 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2016-12-30" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2016-12-30" type="DATE" val="2016-12-30" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2017-01-13" type="DATE" val="2017-01-13" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1960-09-05" type="DATE" val="1960-09-05" mod="NA" />
+<TIMEX3 id="T4" start="343" end="356" text="several weeks" type="DATE" val="TPZ-0000-W03" mod="APPROX" />
+<TIMEX3 id="T5" start="407" end="417" text="2016-06-26" type="DATE" val="2016-06-26" mod="NA" />
+<TIMEX3 id="T6" start="492" end="510" text="the end of October" type="DATE" val="2016-10" mod="END" />
+<TIMEX3 id="T7" start="2651" end="2661" text="2016-12-30" type="DATE" val="2016-12-30" mod="NA" />
+<TIMEX3 id="T8" start="3760" end="3789" text="postoperative day number five" type="DATE" val="2017-01-04" mod="NA" />
+<TIMEX3 id="T9" start="4056" end="4086" text="postoperative day number seven" type="DATE" val="2017-01-06" mod="NA" />
+<TIMEX3 id="T10" start="4740" end="4768" text="postoperative day number one" type="DATE" val="2016-12-31" mod="NA" />
+<TIMEX3 id="T11" start="4771" end="4776" text="12-31" type="DATE" val="2016-12-31" mod="NA" />
+<TIMEX3 id="T12" start="5799" end="5827" text="postoperative day number one" type="DATE" val="2016-12-31" mod="NA" />
+<TIMEX3 id="T13" start="5861" end="5891" text="postoperative day number three" type="DATE" val="2017-01-02" mod="NA" />
+<TIMEX3 id="T14" start="6309" end="6318" text="this time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T15" start="6372" end="6401" text="postoperative day number five" type="DATE" val="2017-01-04" mod="NA" />
+<TIMEX3 id="T16" start="7690" end="7711" text="the time of discharge" type="DATE" val="2016-12-30" mod="NA" />
+<TIMEX3 id="T17" start="8222" end="8227" text="01-12" type="DATE" val="2016-01-12" mod="NA" />
+<TIMEX3 id="T18" start="8230" end="8256" text="one day prior to discharge" type="DATE" val="2016-12-29" mod="NA" />
+<TIMEX3 id="T19" start="8494" end="8499" text="01-05" type="DATE" val="2016-01-05" mod="NA" />
+<TIMEX3 id="T20" start="8606" end="8613" text="Oct. 25" type="DATE" val="2016-10-25" mod="NA" />
+<TIMEX3 id="T21" start="8633" end="8638" text="01-08" type="DATE" val="2016-01-08" mod="NA" />
+<TIMEX3 id="T22" start="9202" end="9212" text="2017-01-13" type="DATE" val="2017-01-13" mod="NA" />
+<TIMEX3 id="T23" start="10152" end="10158" text="day in" type="DATE" val="2016-12-30" mod="NA" />

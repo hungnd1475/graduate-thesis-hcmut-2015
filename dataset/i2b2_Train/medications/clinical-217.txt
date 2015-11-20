@@ -1,0 +1,6 @@
+47	Pain was managed with a Fentanyl patch and by mouth Dilaudid with adequate pain control on discharge .|Fentanyl[2542,2550]||patch[2551,2556]|||||||C1251700|377472|4337|fentanyl
+47	Pain was managed with a Fentanyl patch and by mouth Dilaudid with adequate pain control on discharge .|Dilaudid[2570,2578]|||||by mouth[2561,2569]||||C3223031|1168870|3423|hydromorphone
+63	1. Fentanyl 75-mcg per hour patch q.72h.|Fentanyl[3317,3325]||patch[3342,3347]|75[3326,3328]|||q.72h.[3348,3354]|||null|197696|4337|fentanyl
+64	2. Zoloft 50 mg by mouth once per day .|Zoloft[3358,3364]|||50mg[3365,3370]||by mouth[3371,3379]|once per day[3380,3392]|||C0709644|208161|36437|sertraline
+65	3. Wellbutrin 200 mg by mouth twice per day .|Wellbutrin[3398,3408]|||200mg[3409,3415]||by mouth[3416,3424]|twice per day[3425,3438]||||993539|42347|bupropion
+66	4. Dilaudid one to two tablets by mouth q.4-6h.|Dilaudid[3444,3452]||||one to two tablets[3453,3471]|by mouth[3472,3480]|q.4 - 6h[3481,3487]|||C1242888|368895|3423|hydromorphone

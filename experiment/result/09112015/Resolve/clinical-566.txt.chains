@@ -1,0 +1,7 @@
+c="falc , coll" 13:0 13:2||c="patient" 18:1 18:1||c="patient" 33:7 33:7||c="41 yo man" 52:0 52:2||c="you" 65:0 65:0||t="coref person"
+c="attending" 24:0 24:0||c="kotezustleeb , lijo lifle , m.d." 25:0 25:5||t="coref person"
+c="atypical chest pain" 5:0 5:2||c="atypical chest pain" 47:11 47:13||c="pain" 55:10 55:10||c="pain" 55:13 55:13||c="back pain" 56:11 56:12||c="which" 56:14 56:14||t="coref problem"
+c="htn ( hypertension )" 48:22 48:25||c="htn" 52:19 52:19||t="coref problem"
+c="atypical cp" 46:0 46:1||c="episodes of atypical cp x 1 week" 52:23 52:29||t="coref problem"
+c="anxiety ( anxiety )" 48:18 48:21||c="anxiety" 53:5 53:5||t="coref problem"
+c="gerd ( esophageal reflux )" 48:26 48:30||c="gerd" 53:7 53:7||t="coref problem"

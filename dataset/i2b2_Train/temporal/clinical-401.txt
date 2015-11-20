@@ -1,0 +1,6 @@
+rawTerm="249112"||temporal="249112"
+rawTerm="12/19/2000 12:00:00 AM"||temporal="12/19/2000"
+rawTerm="12/19/2000 02:48 PM"||temporal="12/19/2000"
+rawTerm="12/19/00 6:13:06 PM"||temporal="12/19/00"
+rawTerm="Call Dr. Linketerf tomorrow and make an appointment for follow-up on the lung nodule ."||temporal="2015-11-05"
+rawTerm="This report was created by Vengloan , Asha 12/19/2000 06:15 PM"||temporal="12/19/2000"

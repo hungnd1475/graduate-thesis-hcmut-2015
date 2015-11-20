@@ -1,0 +1,5 @@
+13	He has steroid injections in the right and in the left four times .|steroid[370,377]||||||||||10072|10072|steroid
+22	On admission included Naprosyn .|Naprosyn[817,825]|||||||||C0700017|203012|7258|naproxen
+49	It was not necessary to start him on oral hypoglycemics or insulin .|oral hypoglycemics[3095,3113]||||||||||107014|107014|oral hypoglycemics
+58	On discharge included Valium , 2 mg po t.i.d.; Naprosyn , 500 mg po b.i.d. ________________________________ ZV061/6138 TICENA NECESSARY , M.D.|Valium[3889,3895]|||2mg[3898,3902]||po[3903,3905]|t.i.d.[3906,3912]|||C0350473|102530|3322|diazepam
+58	On discharge included Valium , 2 mg po t.i.d.; Naprosyn , 500 mg po b.i.d. ________________________________ ZV061/6138 TICENA NECESSARY , M.D.|Naprosyn[3914,3922]|||500mg[3925,3931]||po[3932,3934]|b.i.d.[3935,3941]|||C0357446|105899|7258|naproxen

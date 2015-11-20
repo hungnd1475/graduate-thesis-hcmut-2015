@@ -1,0 +1,3 @@
+@echo off
+echo Classifying %2 (%1)...
+libsvm\svm-predict -b 1 result\%1\Features\%2.prb result\%1\Models\%2.model result\%1\Clas\%2.predict

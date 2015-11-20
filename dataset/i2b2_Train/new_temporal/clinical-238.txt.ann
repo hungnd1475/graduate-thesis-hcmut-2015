@@ -1,0 +1,26 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2013-04-24" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2013-04-24" type="DATE" val="2013-04-24" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2013-05-11" type="DATE" val="2013-05-11" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="2013-04-24" type="DATE" val="2013-04-24" mod="NA" />
+<TIMEX3 id="T4" start="186" end="189" text="6/7" type="DATE" val="2013-06-07" mod="NA" />
+<TIMEX3 id="T5" start="1509" end="1524" text="day of life one" type="DATE" val="2013-04-24" mod="NA" />
+<TIMEX3 id="T6" start="1955" end="1977" text="day of life number two" type="DATE" val="2013-04-25" mod="NA" />
+<TIMEX3 id="T7" start="2039" end="2055" text="day of life five" type="DATE" val="2013-04-28" mod="NA" />
+<TIMEX3 id="T8" start="2227" end="2248" text="the time of discharge" type="DATE" val="2013-04-24" mod="NA" />
+<TIMEX3 id="T9" start="2437" end="2453" text="day of life five" type="DATE" val="2013-04-28" mod="NA" />
+<TIMEX3 id="T10" start="2510" end="2525" text="day of life six" type="DATE" val="2013-04-29" mod="NA" />
+<TIMEX3 id="T11" start="2637" end="2658" text="the time of admission" type="DATE" val="2013-04-24" mod="NA" />
+<TIMEX3 id="T12" start="2760" end="2766" text="day as" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T13" start="2944" end="2965" text="the time of admission" type="DATE" val="2013-04-24" mod="NA" />
+<TIMEX3 id="T14" start="3176" end="3186" text="2013-05-02" type="DATE" val="2013-05-02" mod="NA" />
+<TIMEX3 id="T15" start="4053" end="4063" text="2013-05-11" type="DATE" val="2013-05-11" mod="NA" />
+<TIMEX3 id="T16" start="4067" end="4102" text="4. State Screens were sent on 04-27" type="TIME" val="2013-04-27T04:00" mod="NA" />
+<TIMEX3 id="T17" start="4107" end="4117" text="2013-05-08" type="DATE" val="2013-05-08" mod="NA" />
+<TIMEX3 id="T18" start="4121" end="4181" text="5. The infant received the hepatitis B vaccine on 2013-05-09" type="TIME" val="2013-05-09T05:00" mod="NA" />
+<TIMEX3 id="T19" start="4199" end="4209" text="2013-05-11" type="DATE" val="2013-05-11" mod="NA" />
+<TIMEX3 id="T20" start="4294" end="4301" text="October" type="DATE" val="2013-10" mod="NA" />
+<TIMEX3 id="T21" start="4310" end="4315" text="April" type="DATE" val="2013-04" mod="NA" />
+<TIMEX3 id="T22" start="4960" end="4967" text="Tuesday" type="DATE" val="2013-05-07" mod="NA" />
+<TIMEX3 id="T23" start="4970" end="4975" text="05-14" type="DATE" val="2013-05-14" mod="NA" />
+<TIMEX3 id="T24" start="4979" end="5081" text="2. Visiting Nurses Association of the L.F. Quigley Memorial Hospital will visit on Sunday , 2013-05-12" type="TIME" val="2013-05-12T02:00" mod="NA" />
+<TIMEX3 id="T25" start="5129" end="5132" text="6/7" type="DATE" val="2013-06-07" mod="NA" />

@@ -1,0 +1,7 @@
+c="attending" 24:0 24:0||c="saddchird , aline chpie , m.d." 25:0 25:5||t="coref person"
+c="1mag citrate ( citrate of magnesia )" 33:0 33:6||c="colace ( docusate sodium )" 33:13 33:17||t="coref treatment"
+c="sapmoores , nell rilet , m.d." 41:5 41:10||c="sapmoores , nell rilet , m.d." 55:5 55:10||t="coref person"
+c="patient" 19:1 19:1||c="67 y/o f" 78:0 78:2||c="pt" 79:0 79:0||c="she" 81:0 81:0||c="pt" 89:0 89:0||c="pt" 90:0 90:0||c="her" 92:0 92:0||c="pt" 94:0 94:0||c="pt" 96:0 96:0||c="her" 96:14 96:14||t="coref person"
+c="dr. faleschird" 66:0 66:1||c="dr. faleschird" 103:5 103:6||t="coref person"
+c="dr. cuchbreunjesc" 66:3 66:4||c="dr. cuchbreunjesc" 103:8 103:9||t="coref person"
+c="dr. roziesc" 66:6 66:7||c="dr. roziesc" 103:11 103:12||t="coref person"

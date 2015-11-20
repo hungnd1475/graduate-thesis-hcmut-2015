@@ -1,0 +1,15 @@
+﻿left
+right
+upper
+lower
+back
+front
+behind
+left upper
+upper left
+right upper
+upper right
+left lower
+lower left
+right lower
+lower right

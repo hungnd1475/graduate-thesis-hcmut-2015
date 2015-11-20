@@ -1,0 +1,3 @@
+rawTerm="head trauma|ANA"||cui="C0018670"||concept="Head"||prefer="Head"||semantic=[blor]||confidence="861"
+rawTerm="treatment|OPE"||cui="C0087111"||concept="Treatment"||prefer="Therapeutic procedure"||semantic=[topp]||confidence="1000"
+rawTerm="visual / mental status changes|ANA"||cui="C0011980"||concept="Diaphragm"||prefer="Respiratory Diaphragm"||semantic=[bpoc]||confidence="712"

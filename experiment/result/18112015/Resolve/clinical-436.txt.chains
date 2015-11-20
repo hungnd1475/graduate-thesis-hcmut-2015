@@ -1,0 +1,7 @@
+c="ampullary adenocarcinoma" 6:0 6:1||c="ampullary adenocarcinoma" 16:0 16:1||c="periampullary adenocarcinoma" 59:12 59:13||c="which" 59:15 59:15||t="coref problem"
+c="his" 18:8 18:8||c="the patient" 18:20 18:21||c="the patient" 19:4 19:5||c="his" 19:11 19:11||c="the patient" 20:0 20:1||c="the patient" 21:0 21:1||c="the patient" 22:0 22:1||c="the patient" 58:0 58:1||c="the patient" 59:0 59:1||c="the patient" 60:3 60:4||c="the patient" 61:2 61:3||c="the patient" 63:0 63:1||c="the patient" 64:5 64:6||c="the patient" 65:0 65:1||c="the patient" 66:0 66:1||c="the patient" 70:0 70:1||c="the patient" 72:0 72:1||t="coref person"
+c="jaundiced" 37:3 37:3||c="scleral icterus" 41:2 41:3||t="coref problem"
+c="cbc" 54:0 54:0||c="white count" 54:2 54:3||t="coref test"
+c="a left renal mass" 59:24 59:27||c="which" 59:29 59:29||t="coref problem"
+c="a whipple procedure" 60:6 60:8||c="which" 60:10 60:10||t="coref treatment"
+c="attending" 77:0 77:0||c="leand l. kroener , m.d." 78:0 78:4||c="leand l. kroener , m.d." 87:1 87:5||t="coref person"

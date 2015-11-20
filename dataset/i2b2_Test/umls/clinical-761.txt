@@ -1,0 +1,3 @@
+rawTerm="epigastric pain|ANA"||cui="C0521440"||concept="Epigastric"||prefer="Epigastric"||semantic=[blor]||confidence="694"
+rawTerm="abd pain|ANA"||cui="C0000726"||concept="abd"||prefer="Abdomen"||semantic=[blor]||confidence="694"
+rawTerm="treatment|OPE"||cui="C0087111"||concept="Treatment"||prefer="Therapeutic procedure"||semantic=[topp]||confidence="1000"

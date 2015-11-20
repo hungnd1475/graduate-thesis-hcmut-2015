@@ -1,0 +1,4 @@
+c="atrial fibrillation" 11:6 11:7||c="which" 11:8 11:8||t="coref problem"
+c="leona wheeler" 11:0 11:1||c="leona wheeler" 14:7 14:8||c="leona wheeler" 17:3 17:4||c="leona wheeler" 24:0 24:1||t="coref person"
+c="her" 12:0 12:0||c="her" 15:5 15:5||c="she" 16:8 16:8||c="she" 18:0 18:0||t="coref person"
+c="amiodarone" 13:0 13:0||c="amiodarone" 20:5 20:5||t="coref treatment"

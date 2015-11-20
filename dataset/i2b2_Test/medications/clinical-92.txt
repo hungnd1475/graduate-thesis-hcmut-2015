@@ -1,0 +1,4 @@
+28	Regular menses , on Ortho-Tri-Cyclen .|Tri - Cyclen[929,939]||||||||||||
+31	1. Ortho Tri-Cyclen .|Ortho Tri - Cyclen[1051,1067]||||||||||192255|192255|ortho tri-cyclen
+60	Motrin and Percocet as needed .|Motrin[2471,2477]|||||||||C0699203|202488|5640|ibuprofen
+60	Motrin and Percocet as needed .|Percocet[2482,2490]||||||||as needed[2491,2500]|C0086787|42844|161|paracetamol

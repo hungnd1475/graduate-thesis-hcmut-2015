@@ -1,0 +1,21 @@
+<TIMEX3 id="T0" start="36" end="55" text="06/11/1991 12:00:00" type="TIME" val="1991-06-11T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="92" end="106" text="Admission Date" type="DATE" val="1991-06-11" mod="NA" />
+<TIMEX3 id="T3" start="110" end="120" text="06/11/1991" type="DATE" val="1991-06-11" mod="NA" />
+<TIMEX3 id="T4" start="165" end="175" text="06/22/1991" type="DATE" val="1991-06-22" mod="NA" />
+<TIMEX3 id="T5" start="629" end="634" text="02/90" type="DATE" val="1990-02" mod="NA" />
+<TIMEX3 id="T6" start="1089" end="1094" text="02/91" type="DATE" val="1991-02" mod="NA" />
+<TIMEX3 id="T7" start="2255" end="2260" text="02/90" type="DATE" val="1990-02" mod="NA" />
+<TIMEX3 id="T8" start="2469" end="2474" text="03/91" type="DATE" val="1991-03" mod="NA" />
+<TIMEX3 id="T9" start="4029" end="4038" text="this time" type="DATE" val="1991-06-11" mod="NA" />
+<TIMEX3 id="T10" start="4890" end="4895" text="06/14" type="DATE" val="1991-06-14" mod="NA" />
+<TIMEX3 id="T11" start="5515" end="5520" text="06/11" type="DATE" val="1991-06-11" mod="NA" />
+<TIMEX3 id="T12" start="6153" end="6162" text="this time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T13" start="6299" end="6304" text="06/18" type="DATE" val="1991-06-18" mod="NA" />
+<TIMEX3 id="T14" start="6307" end="6312" text="06/19" type="DATE" val="1991-06-19" mod="NA" />
+<TIMEX3 id="T15" start="6319" end="6324" text="06/20" type="DATE" val="1991-06-20" mod="NA" />
+<TIMEX3 id="T16" start="6380" end="6385" text="06/19" type="DATE" val="1991-06-19" mod="NA" />
+<TIMEX3 id="T17" start="6408" end="6413" text="06/18" type="DATE" val="1991-06-18" mod="NA" />
+<TIMEX3 id="T18" start="6436" end="6441" text="06/16" type="DATE" val="1991-06-16" mod="NA" />
+<TIMEX3 id="T19" start="6939" end="6944" text="06/18" type="DATE" val="1991-06-18" mod="NA" />
+<TIMEX3 id="T20" start="7183" end="7188" text="06/18" type="DATE" val="1991-06-18" mod="NA" />
+<TIMEX3 id="T21" start="7793" end="7801" text="06/22/91" type="DATE" val="1991-06-22" mod="NA" />

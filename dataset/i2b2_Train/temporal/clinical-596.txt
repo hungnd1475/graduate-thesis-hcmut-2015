@@ -1,0 +1,6 @@
+rawTerm="194442600 RWH"||temporal="1944426"
+rawTerm="1642008"||temporal="1642008"
+rawTerm="10/19/1993 12:00:00 AM"||temporal="10/19/1993"
+rawTerm="10/19/93"||temporal="10/19/93"
+rawTerm="10/25/93"||temporal="10/25/93"
+rawTerm="10/27/93"||temporal="10/27/93"

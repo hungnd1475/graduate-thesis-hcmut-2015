@@ -1,0 +1,22 @@
+<TIMEX3 id="T0" start="43" end="62" text="12/26/1996 12:00:00" type="TIME" val="1996-12-26T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="216" end="230" text="ADMISSION DATE" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T3" start="234" end="242" text="12/26/96" type="DATE" val="1996-12-26" mod="NA" />
+<TIMEX3 id="T4" start="262" end="270" text="01/01/97" type="DATE" val="1997-01-01" mod="NA" />
+<TIMEX3 id="T5" start="804" end="812" text="12-27-96" type="DATE" val="1996-12-27" mod="NA" />
+<TIMEX3 id="T6" start="1081" end="1085" text="1988" type="DATE" val="1988" mod="NA" />
+<TIMEX3 id="T7" start="1174" end="1188" text="August of 1996" type="DATE" val="1996-08" mod="NA" />
+<TIMEX3 id="T8" start="1969" end="1973" text="1988" type="DATE" val="1988" mod="NA" />
+<TIMEX3 id="T9" start="2177" end="2184" text="3-25-94" type="DATE" val="1994-03-25" mod="NA" />
+<TIMEX3 id="T10" start="2188" end="2189" text="4" type="TIME" val="1994-03-25T04:00" mod="NA" />
+<TIMEX3 id="T11" start="2500" end="2505" text="March" type="DATE" val="1997-03" mod="NA" />
+<TIMEX3 id="T12" start="2508" end="2512" text="1995" type="DATE" val="1995" mod="NA" />
+<TIMEX3 id="T13" start="2516" end="2517" text="9" type="TIME" val="1994-03-25T09:00" mod="NA" />
+<TIMEX3 id="T14" start="2588" end="2593" text="03/93" type="DATE" val="1993-03" mod="NA" />
+<TIMEX3 id="T15" start="2640" end="2644" text="1992" type="DATE" val="1992" mod="NA" />
+<TIMEX3 id="T16" start="2924" end="2951" text="two days prior to admission" type="DATE" val="1996-12-24" mod="NA" />
+<TIMEX3 id="T17" start="2955" end="2956" text="5" type="TIME" val="1996-12-24T05:00" mod="NA" />
+<TIMEX3 id="T18" start="5002" end="5022" text="the day of admission" type="DATE" val="1996-12-26" mod="NA" />
+<TIMEX3 id="T19" start="5610" end="5638" text="postoperative day number two" type="DATE" val="1996-12-28" mod="NA" />
+<TIMEX3 id="T20" start="5990" end="6020" text="postoperative day number three" type="DATE" val="1996-12-29" mod="NA" />
+<TIMEX3 id="T21" start="6197" end="6226" text="postoperative day number five" type="DATE" val="1996-12-31" mod="NA" />
+<TIMEX3 id="T22" start="7379" end="7392" text="01/06/97 2:48" type="TIME" val="1997-01-06T02:48" mod="NA" />

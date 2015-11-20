@@ -1,0 +1,4 @@
+rawTerm="r elbow injury|ANA"||cui="C0013769"||concept="Elbow"||prefer="Elbow"||semantic=[blor]||confidence="660"
+rawTerm="r elbow strain|ANA"||cui="C0013769"||concept="Elbow"||prefer="Elbow"||semantic=[blor]||confidence="660"
+rawTerm="xray|EQP"||cui="C0043299"||concept="X-ray, NOS"||prefer="Diagnostic radiologic examination"||semantic=[diap]||confidence="1000"
+rawTerm="effusion|ANA"||cui="C2317432"||concept="Effusion"||prefer="Effusion (substance)"||semantic=[bdsu]||confidence="1000"

@@ -1,0 +1,5 @@
+rawTerm="2018-10-25"||temporal="2018-10-25"
+rawTerm="2018-11-01"||temporal="2018-11-01"
+rawTerm="1943-11-06"||temporal="1943-11-06"
+rawTerm="Completed by : Oscar Jerome Julian MD 39-824 2018-11-01 @ 1610"||temporal="2018-11-01"
+rawTerm="Signed electronically by : DR. Joyce Arney on : MON 2018-12-03 10:55 PM"||temporal="2018-12-03"

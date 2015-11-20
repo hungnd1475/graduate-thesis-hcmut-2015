@@ -1,0 +1,7 @@
+<TIMEX3 id="T0" start="33" end="52" text="06/09/1998 12:00:00" type="TIME" val="1998-06-09T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="106" end="120" text="Admission Date" type="DATE" val="1998-06-09" mod="NA" />
+<TIMEX3 id="T3" start="124" end="134" text="06/09/1998" type="DATE" val="1998-06-09" mod="NA" />
+<TIMEX3 id="T4" start="179" end="189" text="06/12/1998" type="DATE" val="1998-06-12" mod="NA" />
+<TIMEX3 id="T5" start="524" end="541" text="the evening prior" type="DATE" val="1998-06-08" mod="END" />
+<TIMEX3 id="T6" start="3259" end="3286" text="Around 4:00 AM the next day" type="TIME" val="1998-06-09T04:00" mod="APPROX" />
+<TIMEX3 id="T7" start="5538" end="5563" text="6:45 AM on June 12 , 1998" type="TIME" val="1998-06-12T06:45" mod="NA" />

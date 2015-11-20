@@ -1,0 +1,19 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2011-03-10" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2011-03-10" type="DATE" val="2011-03-10" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2011-03-15" type="DATE" val="2011-03-15" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1927-10-26" type="DATE" val="1927-10-26" mod="NA" />
+<TIMEX3 id="T4" start="341" end="354" text="six years ago" type="DATE" val="TPZ-0006" mod="NA" />
+<TIMEX3 id="T5" start="512" end="532" text="the day of admission" type="DATE" val="2011-03-10" mod="NA" />
+<TIMEX3 id="T6" start="703" end="713" text="2011-03-10" type="DATE" val="2011-03-10" mod="NA" />
+<TIMEX3 id="T7" start="1410" end="1420" text="2011-03-11" type="DATE" val="2011-03-11" mod="NA" />
+<TIMEX3 id="T8" start="1633" end="1643" text="2004-08-05" type="DATE" val="2004-08-05" mod="NA" />
+<TIMEX3 id="T9" start="1647" end="1727" text="5. Paraplegia secondary to HTLV from a trip to the Bahamas five to six years ago" type="TIME" val="TPZ-0006T05:00" mod="NA" />
+<TIMEX3 id="T10" start="1835" end="1845" text="2011-02-26" type="DATE" val="2011-02-26" mod="NA" />
+<TIMEX3 id="T11" start="1849" end="1850" text="8" type="TIME" val="2011-02-26T08:00" mod="NA" />
+<TIMEX3 id="T12" start="1956" end="1966" text="2009-10-05" type="DATE" val="2009-10-05" mod="NA" />
+<TIMEX3 id="T13" start="1970" end="1972" text="12" type="TIME" val="2009-10-05T12:00" mod="NA" />
+<TIMEX3 id="T14" start="3213" end="3223" text="2011-03-04" type="DATE" val="2011-03-04" mod="NA" />
+<TIMEX3 id="T15" start="3319" end="3324" text="02-24" type="DATE" val="2011-02-24" mod="NA" />
+<TIMEX3 id="T16" start="4716" end="4726" text="2011-03-15" type="DATE" val="2011-03-15" mod="NA" />
+<TIMEX3 id="T17" start="5613" end="5623" text="a few days" type="DATE" val="TPZ-0000-00-03" mod="APPROX" />
+<TIMEX3 id="T18" start="6010" end="6020" text="2011-03-28" type="DATE" val="2011-03-28" mod="NA" />

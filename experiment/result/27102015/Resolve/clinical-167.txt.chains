@@ -1,0 +1,4 @@
+c="stress test" 19:15 19:16||c="that" 19:17 19:17||t="coref test"
+c="cardiac catheterization" 19:22 19:23||c="which" 19:24 19:24||t="coref test"
+c="pt" 88:2 88:2||c="pt" 89:0 89:0||c="he" 90:0 90:0||c="he" 90:12 90:12||c="his" 91:2 91:2||c="his" 91:12 91:12||c="his" 92:5 92:5||c="he" 92:14 92:14||t="coref person"
+c="his coumadin" 91:12 91:13||c="it" 92:11 92:11||t="coref treatment"

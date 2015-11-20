@@ -1,0 +1,23 @@
+<TIMEX3 id="T0" start="40" end="46" text="271958" type="DATE" val="2719-05-08" mod="NA" />
+<TIMEX3 id="T1" start="48" end="65" text="9/2/1994 12:00:00" type="TIME" val="1994-09-02T12:00:00" mod="NA" />
+<TIMEX3 id="T3" start="131" end="145" text="ADMISSION DATE" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T4" start="149" end="155" text="9-2-94" type="DATE" val="1994-09-02" mod="NA" />
+<TIMEX3 id="T5" start="175" end="182" text="9-18-94" type="DATE" val="1994-09-18" mod="NA" />
+<TIMEX3 id="T6" start="393" end="412" text="September 11 , 1994" type="DATE" val="1994-09-11" mod="NA" />
+<TIMEX3 id="T7" start="951" end="968" text="September of 1993" type="DATE" val="1993-09" mod="NA" />
+<TIMEX3 id="T8" start="973" end="989" text="February of 1993" type="DATE" val="1993-02" mod="NA" />
+<TIMEX3 id="T9" start="1129" end="1156" text="two days prior to admission" type="DATE" val="1994-08-31" mod="NA" />
+<TIMEX3 id="T10" start="1378" end="1392" text="July 22 , 1994" type="DATE" val="1994-07-22" mod="NA" />
+<TIMEX3 id="T11" start="1752" end="1769" text="September of 1993" type="DATE" val="1993-09" mod="NA" />
+<TIMEX3 id="T12" start="1812" end="1828" text="February of 1993" type="DATE" val="1993-02" mod="NA" />
+<TIMEX3 id="T13" start="1847" end="1864" text="September of 1993" type="DATE" val="1993-09" mod="NA" />
+<TIMEX3 id="T14" start="2618" end="2634" text="February of 1993" type="DATE" val="1993-02" mod="NA" />
+<TIMEX3 id="T15" start="3708" end="3724" text="February of 1993" type="DATE" val="1993-02" mod="NA" />
+<TIMEX3 id="T16" start="6018" end="6041" text="hospital day number one" type="DATE" val="1994-09-02" mod="NA" />
+<TIMEX3 id="T17" start="6091" end="6109" text="September 2 , 1994" type="DATE" val="1994-09-02" mod="NA" />
+<TIMEX3 id="T18" start="6388" end="6406" text="September 5 , 1994" type="DATE" val="1994-09-05" mod="NA" />
+<TIMEX3 id="T19" start="7253" end="7272" text="September 11 , 1994" type="DATE" val="1994-09-11" mod="NA" />
+<TIMEX3 id="T20" start="8109" end="8137" text="postoperative day number one" type="DATE" val="1994-09-12" mod="NA" />
+<TIMEX3 id="T21" start="8140" end="8159" text="September 13 , 1994" type="DATE" val="1994-09-13" mod="NA" />
+<TIMEX3 id="T22" start="8540" end="8570" text="postoperative day number three" type="DATE" val="1994-09-14" mod="NA" />
+<TIMEX3 id="T23" start="8976" end="9005" text="postoperative day number four" type="DATE" val="1994-09-15" mod="NA" />

@@ -1,0 +1,35 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2015-06-29" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2015-06-29" type="DATE" val="2015-06-29" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2015-07-09" type="DATE" val="2015-07-09" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1941-01-16" type="DATE" val="1941-01-16" mod="NA" />
+<TIMEX3 id="T4" start="501" end="516" text="the night prior" type="DATE" val="2015-06-28" mod="END" />
+<TIMEX3 id="T5" start="557" end="562" text="07-08" type="DATE" val="2040-07-08" mod="NA" />
+<TIMEX3 id="T6" start="1094" end="1104" text="2015-04-14" type="DATE" val="2015-04-14" mod="NA" />
+<TIMEX3 id="T7" start="1135" end="1140" text="12-03" type="DATE" val="2040-12-03" mod="NA" />
+<TIMEX3 id="T8" start="1176" end="1181" text="05-04" type="DATE" val="2040-05-04" mod="NA" />
+<TIMEX3 id="T9" start="1693" end="1711" text="2015-06-29 05:15PM" type="TIME" val="2015-06-29T17:15" mod="NA" />
+<TIMEX3 id="T10" start="1729" end="1747" text="2015-06-29 05:15PM" type="TIME" val="2015-06-29T17:15" mod="NA" />
+<TIMEX3 id="T11" start="1784" end="1800" text="2015-06-29 09:55" type="TIME" val="2015-06-29T09:55" mod="NA" />
+<TIMEX3 id="T13" start="1920" end="1936" text="2015-06-29 09:55" type="TIME" val="2015-06-29T09:55" mod="NA" />
+<TIMEX3 id="T15" start="1957" end="1973" text="2015-06-29 09:55" type="TIME" val="2015-06-29T09:55" mod="NA" />
+<TIMEX3 id="T17" start="1994" end="2010" text="2015-06-29 09:55" type="TIME" val="2015-06-29T09:55" mod="NA" />
+<TIMEX3 id="T19" start="2034" end="2050" text="2015-06-29 09:55" type="TIME" val="2015-06-29T09:55" mod="NA" />
+<TIMEX3 id="T21" start="2154" end="2170" text="2015-06-29 09:55" type="TIME" val="2015-06-29T09:55" mod="NA" />
+<TIMEX3 id="T23" start="2240" end="2256" text="2015-06-29 09:55" type="TIME" val="2015-06-29T09:55" mod="NA" />
+<TIMEX3 id="T25" start="2276" end="2292" text="2015-06-29 09:55" type="TIME" val="2015-06-29T09:55" mod="NA" />
+<TIMEX3 id="T27" start="2314" end="2330" text="2015-06-29 09:50" type="TIME" val="2015-06-29T09:50" mod="NA" />
+<TIMEX3 id="T29" start="2357" end="2373" text="2015-06-29 09:50" type="TIME" val="2015-06-29T09:50" mod="NA" />
+<TIMEX3 id="T31" start="2400" end="2416" text="2015-06-29 09:50" type="TIME" val="2015-06-29T09:50" mod="NA" />
+<TIMEX3 id="T33" start="2463" end="2479" text="2015-06-29 09:50" type="TIME" val="2015-06-29T09:50" mod="NA" />
+<TIMEX3 id="T35" start="2540" end="2556" text="2015-06-29 09:50" type="TIME" val="2015-06-29T09:50" mod="NA" />
+<TIMEX3 id="T37" start="2687" end="2703" text="2015-06-29 09:50" type="TIME" val="2015-06-29T09:50" mod="NA" />
+<TIMEX3 id="T39" start="2720" end="2725" text="05-03" type="DATE" val="2040-05-03" mod="NA" />
+<TIMEX3 id="T40" start="2931" end="2936" text="04-04" type="DATE" val="2040-04-04" mod="NA" />
+<TIMEX3 id="T41" start="2938" end="2943" text="07-03" type="DATE" val="2040-07-03" mod="NA" />
+<TIMEX3 id="T42" start="4425" end="4430" text="07-01" type="DATE" val="2040-07-01" mod="NA" />
+<TIMEX3 id="T43" start="5187" end="5196" text="this time" type="DATE" val="2015-06-29" mod="NA" />
+<TIMEX3 id="T44" start="5650" end="5672" text="over the past few days" type="DATE" val="TPZ-0000-00-03" mod="APPROX" />
+<TIMEX3 id="T45" start="5700" end="5709" text="this time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T46" start="5763" end="5773" text="2015-07-01" type="DATE" val="2015-07-01" mod="NA" />
+<TIMEX3 id="T47" start="5894" end="5899" text="07-02" type="DATE" val="2040-07-02" mod="NA" />
+<TIMEX3 id="T48" start="8707" end="8711" text="5-10" type="DATE" val="2040-05-10" mod="NA" />

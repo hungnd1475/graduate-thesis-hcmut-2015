@@ -1,0 +1,9 @@
+<TIMEX3 id="T0" start="44" end="63" text="10/19/1993 12:00:00" type="TIME" val="1993-10-19T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="149" end="163" text="ADMISSION DATE" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T3" start="167" end="175" text="10/19/93" type="DATE" val="1993-10-19" mod="NA" />
+<TIMEX3 id="T4" start="195" end="203" text="10/25/93" type="DATE" val="1993-10-25" mod="NA" />
+<TIMEX3 id="T5" start="486" end="512" text="around 12:40 on October 19" type="TIME" val="1993-10-19T12:40" mod="APPROX" />
+<TIMEX3 id="T6" start="3236" end="3242" text="8 a.m." type="TIME" val="1993-10-19T08:00" mod="NA" />
+<TIMEX3 id="T7" start="3326" end="3347" text="the time of discharge" type="DATE" val="1993-10-19" mod="NA" />
+<TIMEX3 id="T8" start="4110" end="4115" text="10/23" type="DATE" val="1993-10-23" mod="NA" />
+<TIMEX3 id="T9" start="4594" end="4615" text="the time of discharge" type="DATE" val="1993-10-19" mod="NA" />

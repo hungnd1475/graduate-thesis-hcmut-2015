@@ -1,0 +1,5 @@
+rawTerm="313251236 WGH"||temporal="13251236"
+rawTerm="1429918"||temporal="1429918"
+rawTerm="5/1/2004 12:00:00 AM"||temporal="5/1/2004"
+rawTerm="05/01/2004 06:30 PM"||temporal="05/01/2004"
+rawTerm="This is to notify you that your patient , KATESJESC , RAI arrived in the Emergency Department at Well General Hospital on 05/01/2004 06:30 PM ."||temporal="05/01/2004"

@@ -1,0 +1,4 @@
+c="the mother" 13:0 13:1||c="the mother" 16:0 16:1||c="the mother" 17:0 17:1||c="the mother" 63:0 63:1||t="coref person"
+c="baby thomas moss" 12:0 12:2||c="his" 19:0 19:0||c="his" 24:0 24:0||c="he" 42:0 42:0||c="he" 42:18 42:18||c="he" 42:26 42:26||c="his" 43:0 43:0||c="he" 45:0 45:0||c="his" 45:5 45:5||c="his" 48:0 48:0||c="he" 49:0 49:0||c="he" 49:24 49:24||c="he" 50:0 50:0||c="he" 50:12 50:12||c="his" 50:17 50:17||c="his" 50:21 50:21||c="he" 52:0 52:0||c="he" 53:0 53:0||c="he" 55:0 55:0||c="he" 57:0 57:0||c="her" 64:0 64:0||c="her" 64:6 64:6||c="he" 66:0 66:0||c="his" 67:0 67:0||c="he" 71:1 71:1||c="he" 72:1 72:1||c="he" 74:1 74:1||c="dr. jaqueline rhein" 84:4 84:6||t="coref person"
+c="3 older children" 63:3 63:5||c="who" 63:6 63:6||t="coref person"
+c="the infant" 18:0 18:1||c="the infant" 65:0 65:1||c="the infant" 70:0 70:1||t="coref person"

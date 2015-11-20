@@ -1,0 +1,7 @@
+rawTerm="vag bleeding|ANA"||cui="C0042232"||concept="Vag"||prefer="Vagina"||semantic=[bpoc]||confidence="694"
+rawTerm="dysfunctional uterine bleeding|ANA"||cui="C0042149"||concept="Uterine"||prefer="Uterus"||semantic=[bpoc]||confidence="827"
+rawTerm="pelvic ultrasound|ANA"||cui="C0030797"||concept="Pelvic"||prefer="Pelvis"||semantic=[blor]||confidence="694"
+rawTerm="pelvic ultrasound|EQP"||cui="C0041618"||concept="Ultrasound"||prefer="Ultrasonography"||semantic=[diap]||confidence="861"
+rawTerm="thickened endometrium|ANA"||cui="C0014180"||concept="Endometrium"||prefer="Endometrium"||semantic=[bpoc]||confidence="861"
+rawTerm="hematocrit|INDI"||cui="C0018935"||concept="Haematocrit"||prefer="Hematocrit procedure"||semantic=[lbpr]||confidence="1000"
+rawTerm="your uterine bleeding|ANA"||cui="C0042149"||concept="Uterine"||prefer="Uterus"||semantic=[bpoc]||confidence="694"

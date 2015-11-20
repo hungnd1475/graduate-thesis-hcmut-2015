@@ -1,0 +1,7 @@
+rawTerm="8205558"||temporal="205558"
+rawTerm="3/25/2001 12:00:00 AM"||temporal="3/25/2001"
+rawTerm="904-33-96"||temporal="04-33-96"
+rawTerm="03/25/2001"||temporal="03/25/2001"
+rawTerm="03/26/2001"||temporal="03/26/2001"
+rawTerm="Electronically Signed RACH HY BREUTZNEDEAISSCARVWIERST , M.D. 05/20/2001 18:29"||temporal="05/20/2001"
+rawTerm="03/31/2001 10:13 A"||temporal="03/31/2001"

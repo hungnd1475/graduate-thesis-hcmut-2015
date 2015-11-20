@@ -1,0 +1,4 @@
+c="white blood count" 31:9 31:11||c="platelet count" 31:14 31:15||t="coref test"
+c="the patient" 35:0 35:1||c="his" 35:11 35:11||c="his" 35:15 35:15||c="his physician" 35:15 35:16||c="he" 35:18 35:18||c="his" 36:5 36:5||c="he" 36:8 36:8||t="coref person"
+c="his family" 35:11 35:12||c="the family" 37:5 37:6||t="coref person"
+c="nu l. gall , m.d." 38:0 38:4||c="dr. nu l. gall" 47:0 47:3||t="coref person"

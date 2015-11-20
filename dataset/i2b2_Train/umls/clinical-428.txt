@@ -1,0 +1,5 @@
+rawTerm="cbc|INDI"||cui="C0009555"||concept="CBC"||prefer="Complete Blood Count"||semantic=[lbpr]||confidence="1000"
+rawTerm="hct|INDI"||cui="C0018935"||concept="HCT"||prefer="Hematocrit procedure"||semantic=[lbpr]||confidence="1000"
+rawTerm="an outpatient holter monitor|EQP"||cui="C0013801"||concept="Holter Monitor"||prefer="Holter Electrocardiography"||semantic=[diap]||confidence="901"
+rawTerm="chest pain|ANA"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="861"
+rawTerm="shortness of breath|ANA"||cui="C0225386"||concept="Breath"||prefer="Breath"||semantic=[bdsu]||confidence="623"

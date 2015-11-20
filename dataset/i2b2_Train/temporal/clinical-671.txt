@@ -1,0 +1,8 @@
+rawTerm="346176858 SC"||temporal="176858"
+rawTerm="29574503"||temporal="295745"
+rawTerm="12/9/2005 12:00:00 AM"||temporal="12/9/2005"
+rawTerm="12/09/2005"||temporal="12/09/2005"
+rawTerm="12/12/2005"||temporal="12/12/2005"
+rawTerm="12/12/05 AT 10:00 AM"||temporal="12/12/05"
+rawTerm="12/09/05"||temporal="12/09/05"
+rawTerm="BOORMKAYSSCAJE , PA A. , M.D. ( TI84 ) 12/10/05 02:58 AM"||temporal="12/10/05"

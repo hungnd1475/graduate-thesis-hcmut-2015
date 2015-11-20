@@ -1,0 +1,4 @@
+rawTerm="061486522"||temporal="1486522"
+rawTerm="12/19/2001 12:00:00 AM"||temporal="12/19/2001"
+rawTerm="12/19/2001 01:44 AM"||temporal="12/19/2001"
+rawTerm="This is to notify you that your patient , KOTEFOOKS , DASHA arrived in the Emergency Department at Tecal Galecounxopt Community Hospital on 12/19/2001 01:44 AM ."||temporal="12/19/2001"

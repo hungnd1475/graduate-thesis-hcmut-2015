@@ -1,0 +1,3 @@
+c="sysco tamarce dose" 13:0 13:2||c="this 22 year old gravida 4 para 2012" 37:0 37:7||c="she" 38:0 38:0||c="a 3263 gram female infant" 38:2 38:6||c="her" 39:1 39:1||c="she" 39:3 39:3||c="her" 41:1 41:1||c="she" 41:3 41:3||c="she" 43:1 43:1||c="she" 45:0 45:0||c="patient" 46:6 46:6||t="coref person"
+c="spontaneous vertex vaginal delivery" 25:0 25:3||c="spontaneous vertex vaginal delivery" 38:30 38:33||t="coref treatment"
+c="her delivery" 41:1 41:2||c="delivery" 42:8 42:8||t="coref treatment"

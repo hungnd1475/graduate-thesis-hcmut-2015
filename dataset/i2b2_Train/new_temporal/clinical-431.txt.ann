@@ -1,0 +1,13 @@
+<TIMEX3 id="T0" start="40" end="46" text="139846" type="DATE" val="1398-04-06" mod="NA" />
+<TIMEX3 id="T1" start="48" end="66" text="9/14/1993 12:00:00" type="TIME" val="1993-09-14T12:00:00" mod="NA" />
+<TIMEX3 id="T3" start="132" end="146" text="ADMISSION DATE" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T4" start="150" end="157" text="9/14/93" type="DATE" val="1993-09-14" mod="NA" />
+<TIMEX3 id="T5" start="177" end="184" text="9/15/93" type="DATE" val="1993-09-15" mod="NA" />
+<TIMEX3 id="T6" start="373" end="377" text="June" type="DATE" val="1993-06" mod="NA" />
+<TIMEX3 id="T7" start="380" end="384" text="1992" type="DATE" val="1992" mod="NA" />
+<TIMEX3 id="T8" start="553" end="560" text="8/17/93" type="DATE" val="1993-08-17" mod="NA" />
+<TIMEX3 id="T9" start="868" end="877" text="last week" type="DATE" val="1993-W33" mod="NA" />
+<TIMEX3 id="T10" start="2409" end="2416" text="9/14/93" type="DATE" val="1993-09-14" mod="NA" />
+<TIMEX3 id="T11" start="2441" end="2449" text="same day" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T12" start="2662" end="2669" text="9/15/93" type="DATE" val="1993-09-15" mod="NA" />
+<TIMEX3 id="T13" start="2676" end="2685" text="that time" type="DATE" val="TPZ+0000-00-00" mod="NA" />

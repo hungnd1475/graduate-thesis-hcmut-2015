@@ -1,0 +1,24 @@
+<TIMEX3 id="T0" start="33" end="52" text="05/16/2004 12:00:00" type="TIME" val="2004-05-16T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="189" end="203" text="ADMISSION DATE" type="DATE" val="2004-05-16" mod="NA" />
+<TIMEX3 id="T3" start="207" end="217" text="05/16/2004" type="DATE" val="2004-05-16" mod="NA" />
+<TIMEX3 id="T4" start="237" end="247" text="05/26/2004" type="DATE" val="2004-05-26" mod="NA" />
+<TIMEX3 id="T5" start="929" end="939" text="April 2004" type="DATE" val="2004-04" mod="NA" />
+<TIMEX3 id="T6" start="1128" end="1137" text="that time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T7" start="1675" end="1679" text="1947" type="DATE" val="1947" mod="NA" />
+<TIMEX3 id="T8" start="1713" end="1717" text="1979" type="DATE" val="1979" mod="NA" />
+<TIMEX3 id="T9" start="1739" end="1743" text="1986" type="DATE" val="1986" mod="NA" />
+<TIMEX3 id="T10" start="2312" end="2322" text="05/16/2004" type="DATE" val="2004-05-16" mod="NA" />
+<TIMEX3 id="T11" start="2370" end="2380" text="05/17/2004" type="DATE" val="2004-05-17" mod="NA" />
+<TIMEX3 id="T12" start="3027" end="3048" text="postoperative day one" type="DATE" val="2004-05-18" mod="NA" />
+<TIMEX3 id="T13" start="3222" end="3243" text="postoperative day two" type="DATE" val="2004-05-19" mod="NA" />
+<TIMEX3 id="T14" start="3339" end="3362" text="postoperative day three" type="DATE" val="2004-05-20" mod="NA" />
+<TIMEX3 id="T15" start="3470" end="3479" text="that time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T16" start="3876" end="3898" text="postoperative day four" type="DATE" val="2004-05-21" mod="NA" />
+<TIMEX3 id="T17" start="4226" end="4248" text="postoperative day five" type="DATE" val="2004-05-22" mod="NA" />
+<TIMEX3 id="T18" start="4325" end="4348" text="postoperative day seven" type="DATE" val="2004-05-24" mod="NA" />
+<TIMEX3 id="T19" start="4477" end="4500" text="postoperative day eight" type="DATE" val="2004-05-25" mod="NA" />
+<TIMEX3 id="T20" start="4630" end="4648" text="postoperative nine" type="DATE" val="2004-05-26" mod="NA" />
+<TIMEX3 id="T21" start="4716" end="4730" text="that afternoon" type="DATE" val="TPZ+0000-00-00" mod="MIDDLE" />
+<TIMEX3 id="T22" start="5014" end="5036" text="11 pm the night before" type="TIME" val="2004-05-15T23:00" mod="NA" />
+<TIMEX3 id="T23" start="5063" end="5067" text="8 am" type="TIME" val="2004-05-15T08:00" mod="NA" />
+<TIMEX3 id="T24" start="5572" end="5588" text="06/04/2004 15:45" type="TIME" val="2004-06-04T15:45" mod="NA" />

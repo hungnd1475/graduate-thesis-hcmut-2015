@@ -1,0 +1,7 @@
+rawTerm="2012-11-21"||temporal="2012-11-21"
+rawTerm="2012-11-28"||temporal="2012-11-28"
+rawTerm="1975-05-29"||temporal="1975-05-29"
+rawTerm="7. Coronary artery disease , status post myocardial infarction in 2012-05-06 ."||temporal="2012-05-06"
+rawTerm="The patient 's initial postoperative course was relatively uneventful ."||temporal="2012-11-22"
+rawTerm="2012-11-27"||temporal="2012-11-27"
+rawTerm="FRI 2012-12-07 3:33 PM"||temporal="2012-12-07"

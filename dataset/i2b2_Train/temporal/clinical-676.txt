@@ -1,0 +1,7 @@
+rawTerm="2/19/1991 12:00:00 AM"||temporal="2/19/1991"
+rawTerm="02/19/1991"||temporal="02/19/1991"
+rawTerm="02/25/1991"||temporal="02/25/1991"
+rawTerm="Total abdominal hysterectomy , bilateral salpingo oophorectomy 2-19-91 by Dr. Lako Coma ."||temporal="2-19-91"
+rawTerm="The patient was brought to the Operating Room on 2-19-91 where she had an exploratory laparotomy , TAH / BSO , and omental biopsy ."||temporal="2-19-91"
+rawTerm="02/25/91"||temporal="02/25/91"
+rawTerm="02/27/91"||temporal="02/27/91"

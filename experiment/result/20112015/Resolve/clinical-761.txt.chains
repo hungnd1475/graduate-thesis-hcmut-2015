@@ -1,0 +1,3 @@
+c="jescwierst , ma" 12:0 12:2||c="your patient" 20:6 20:7||c="jescwierst , ma" 20:9 20:11||c="the patient" 21:0 21:1||c="the patient" 22:5 22:6||c="the patient" 23:0 23:1||t="coref person"
+c="epigastric pain" 21:8 21:9||c="abd pain" 21:11 21:12||t="coref problem"
+c="you" 20:4 20:4||c="you" 25:1 25:1||t="coref person"

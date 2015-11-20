@@ -1,0 +1,22 @@
+<TIMEX3 id="T0" start="34" end="53" text="04/06/2005 12:00:00" type="TIME" val="2005-04-06T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="91" end="105" text="Admission Date" type="DATE" val="2005-04-06" mod="NA" />
+<TIMEX3 id="T3" start="109" end="119" text="04/06/2005" type="DATE" val="2005-04-06" mod="NA" />
+<TIMEX3 id="T4" start="156" end="166" text="04/12/2005" type="DATE" val="2005-04-12" mod="NA" />
+<TIMEX3 id="T5" start="297" end="317" text="04/12/05 AT 01:00 PM" type="TIME" val="2005-04-12T13:00" mod="NA" />
+<TIMEX3 id="T6" start="696" end="701" text="Today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T7" start="704" end="709" text="04/12" type="DATE" val="2005-04-12" mod="NA" />
+<TIMEX3 id="T8" start="937" end="942" text="Today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T9" start="945" end="950" text="04/12" type="DATE" val="2005-04-12" mod="NA" />
+<TIMEX3 id="T10" start="2485" end="2493" text="03/22/05" type="DATE" val="2005-03-22" mod="NA" />
+<TIMEX3 id="T11" start="2915" end="2920" text="04/05" type="DATE" val="2005-04-05" mod="NA" />
+<TIMEX3 id="T12" start="3594" end="3602" text="04/06/05" type="DATE" val="2005-04-06" mod="NA" />
+<TIMEX3 id="T13" start="3661" end="3670" text="that time" type="DATE" val="2005-04-12" mod="NA" />
+<TIMEX3 id="T14" start="4075" end="4080" text="04/07" type="DATE" val="2005-04-07" mod="NA" />
+<TIMEX3 id="T15" start="4259" end="4276" text="The following day" type="DATE" val="TPZ+0000-00-01" mod="NA" />
+<TIMEX3 id="T16" start="5114" end="5119" text="04/05" type="DATE" val="2005-04-05" mod="NA" />
+<TIMEX3 id="T17" start="5152" end="5157" text="04/06" type="DATE" val="2005-04-06" mod="NA" />
+<TIMEX3 id="T18" start="5428" end="5433" text="04/07" type="DATE" val="2005-04-07" mod="NA" />
+<TIMEX3 id="T19" start="5460" end="5465" text="04/08" type="DATE" val="2005-04-08" mod="NA" />
+<TIMEX3 id="T20" start="5468" end="5473" text="04/09" type="DATE" val="2005-04-09" mod="NA" />
+<TIMEX3 id="T21" start="5476" end="5481" text="04/10" type="DATE" val="2005-04-10" mod="NA" />
+<TIMEX3 id="T22" start="5809" end="5817" text="04/12/05" type="DATE" val="2005-04-12" mod="NA" />

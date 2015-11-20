@@ -1,0 +1,7 @@
+c="the patient" 20:0 20:1||c="his" 27:3 27:3||c="his" 38:0 38:0||c="he" 43:0 43:0||c="he" 44:3 44:3||c="his" 45:0 45:0||c="he" 46:0 46:0||c="his" 47:5 47:5||c="he" 48:0 48:0||c="his" 48:12 48:12||c="he" 50:3 50:3||c="his" 51:9 51:9||c="he" 52:4 52:4||t="coref person"
+c="multiple angio ectasias throughout the stomach" 42:2 42:7||c="this" 43:5 43:5||t="coref problem"
+c="significant gi bleeding" 21:8 21:10||c="the bleeding" 46:10 46:11||c="his bleeding" 47:5 47:6||c="gi bleeding" 53:8 53:9||t="coref problem"
+c="his gi bleed" 48:12 48:14||c="this" 49:2 49:2||t="coref problem"
+c="his care comfort measures" 51:9 51:12||c="comfort measures" 52:7 52:8||t="coref treatment"
+c="pancreatic adenocarcinoma" 20:7 20:8||c="his known metastatic pancreatic cancer" 53:16 53:20||t="coref problem"
+c="ta ko fossa , m.d." 54:0 54:4||c="ta ko fossa , m.d." 56:2 56:6||c="ta ko fossa , m.d." 58:1 58:5||c="ta ko fossa , m.d." 66:0 66:4||t="coref person"

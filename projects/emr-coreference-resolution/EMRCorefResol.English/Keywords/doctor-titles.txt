@@ -1,0 +1,53 @@
+﻿audiologist
+allergist
+andrologist
+anesthesiologist
+cardiologist
+cardiovascular
+neurophysiologis
+dentist
+dermatologist
+endocrinologist
+epidemiologist
+ent specialist
+family practitioner
+gastroenterologist
+gynecologist
+psychiatrist
+hematologist
+hepatologist
+immunologist
+infectious disease specialist
+internal medicine specialist
+internist
+medical geneticist
+microbiologist
+neonatologist
+nephrologists
+neurologist
+neurosurgeon
+neurosurgeons
+neurosurgery
+obstetrician
+oncologist
+ophthalmologist
+orthodontist
+orthopedic
+orthopedics
+orthopedist
+primatologist
+pathologist
+parasitologist
+pathologist
+pediatrician
+plastic
+physiologist
+physiatrist
+podiatrist
+psychiatrist
+pulmonologist
+radiologist
+rheumatologist
+thoracic oncologist
+urologist
+veterinarian

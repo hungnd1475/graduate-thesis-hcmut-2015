@@ -1,0 +1,47 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2015-04-16" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2015-04-16" type="DATE" val="2015-04-16" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2015-04-24" type="DATE" val="2015-04-24" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1937-04-06" type="DATE" val="1937-04-06" mod="NA" />
+<TIMEX3 id="T4" start="493" end="503" text="2015-04-16" type="DATE" val="2015-04-16" mod="NA" />
+<TIMEX3 id="T5" start="1727" end="1743" text="2015-04-16 07:10" type="TIME" val="2015-04-16T07:10" mod="NA" />
+<TIMEX3 id="T7" start="1805" end="1821" text="2015-04-16 07:10" type="TIME" val="2015-04-16T07:10" mod="NA" />
+<TIMEX3 id="T9" start="1913" end="1929" text="2015-04-16 07:10" type="TIME" val="2015-04-16T07:10" mod="NA" />
+<TIMEX3 id="T11" start="2025" end="2041" text="2015-04-16 07:10" type="TIME" val="2015-04-16T07:10" mod="NA" />
+<TIMEX3 id="T13" start="2159" end="2175" text="2015-04-24 06:35" type="TIME" val="2015-04-24T06:35" mod="NA" />
+<TIMEX3 id="T15" start="2251" end="2267" text="2015-04-24 06:35" type="TIME" val="2015-04-24T06:35" mod="NA" />
+<TIMEX3 id="T17" start="2363" end="2379" text="2015-04-24 06:35" type="TIME" val="2015-04-24T06:35" mod="NA" />
+<TIMEX3 id="T19" start="2507" end="2517" text="2015-04-16" type="DATE" val="2015-04-16" mod="NA" />
+<TIMEX3 id="T20" start="2772" end="2782" text="2010-10-25" type="DATE" val="2010-10-25" mod="NA" />
+<TIMEX3 id="T21" start="2861" end="2871" text="2015-04-21" type="DATE" val="2015-04-21" mod="NA" />
+<TIMEX3 id="T22" start="3045" end="3055" text="2015-04-16" type="DATE" val="2015-04-16" mod="NA" />
+<TIMEX3 id="T23" start="3219" end="3226" text="HD # 01" type="DATE" val="2015-04-16" mod="NA" />
+<TIMEX3 id="T25" start="3274" end="3284" text="2015-04-17" type="DATE" val="2015-04-17" mod="NA" />
+<TIMEX3 id="T26" start="3722" end="3727" text="POD#1" type="DATE" val="2015-04-17" mod="NA" />
+<TIMEX3 id="T27" start="3890" end="3895" text="POD#2" type="DATE" val="2015-04-18" mod="NA" />
+<TIMEX3 id="T28" start="4136" end="4141" text="POD#3" type="DATE" val="2015-04-19" mod="NA" />
+<TIMEX3 id="T29" start="4215" end="4220" text="POD#4" type="DATE" val="2015-04-20" mod="NA" />
+<TIMEX3 id="T30" start="4539" end="4544" text="POD#5" type="DATE" val="2015-04-21" mod="NA" />
+<TIMEX3 id="T31" start="4661" end="4668" text="POD# 05" type="DATE" val="2015-04-21" mod="NA" />
+<TIMEX3 id="T33" start="5043" end="5048" text="POD#6" type="DATE" val="2015-04-22" mod="NA" />
+<TIMEX3 id="T34" start="5246" end="5251" text="POD#7" type="DATE" val="2015-04-23" mod="NA" />
+<TIMEX3 id="T35" start="5608" end="5614" text="day )." type="DATE" val="2015-04-16" mod="NA" />
+<TIMEX3 id="T36" start="5616" end="5696" text="3. Nortriptyline 25 mg Capsule Sig : One ( 1 ) Capsule PO BID ( 2 times a day )." type="TIME" val="TPZ+0000-00-00T03:00" mod="NA" />
+<TIMEX3 id="T37" start="5835" end="5841" text="day )." type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T38" start="5843" end="5919" text="6. Clonazepam 0.5 mg Tablet Sig : One ( 1 ) Tablet PO BID ( 2 times a day )." type="TIME" val="TPZ+0000-00-00T06:00" mod="NA" />
+<TIMEX3 id="T39" start="6228" end="6234" text="day )." type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T40" start="6236" end="6238" text="10" type="TIME" val="2015-04-16T10:00" mod="NA" />
+<TIMEX3 id="T41" start="6373" end="6379" text="day )." type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T42" start="6381" end="6383" text="12" type="TIME" val="2015-04-16T12:00" mod="NA" />
+<TIMEX3 id="T43" start="6895" end="6900" text="01-20" type="DATE" val="2037-01-20" mod="NA" />
+<TIMEX3 id="T44" start="7346" end="7352" text="day )." type="DATE" val="2015-04-16" mod="NA" />
+<TIMEX3 id="T45" start="7354" end="7425" text="2. Senna 8.6 mg Tablet Sig : One ( 1 ) Tablet PO BID ( 2 times a day )." type="TIME" val="TPZ+0000-00-00T02:00" mod="NA" />
+<TIMEX3 id="T46" start="7646" end="7652" text="day )." type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T47" start="7654" end="7730" text="6. Clonazepam 0.5 mg Tablet Sig : One ( 1 ) Tablet PO BID ( 2 times a day )." type="TIME" val="TPZ+0000-00-00T06:00" mod="NA" />
+<TIMEX3 id="T48" start="8039" end="8045" text="day )." type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T49" start="8047" end="8049" text="10" type="TIME" val="2015-04-16T10:00" mod="NA" />
+<TIMEX3 id="T50" start="8184" end="8190" text="day )." type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T51" start="8192" end="8194" text="12" type="TIME" val="2015-04-16T12:00" mod="NA" />
+<TIMEX3 id="T52" start="8479" end="8485" text="day )." type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T53" start="8487" end="8489" text="15" type="TIME" val="2015-04-16T15:00" mod="NA" />
+<TIMEX3 id="T54" start="8932" end="8937" text="01-20" type="DATE" val="2037-01-20" mod="NA" />
+<TIMEX3 id="T55" start="10124" end="10129" text="11-02" type="DATE" val="2037-11-02" mod="NA" />

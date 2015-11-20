@@ -1,0 +1,7 @@
+rawTerm="2015-07-09"||temporal="2015-07-09"
+rawTerm="2015-07-17"||temporal="2015-07-17"
+rawTerm="1947-06-29"||temporal="1947-06-29"
+rawTerm="Leona Wheeler is to be transferred on 2015-07-17 to a rehabilitation facility ."||temporal="2015-07-17"
+rawTerm="D : 2015-07-17 08:39"||temporal="2015-07-17"
+rawTerm="T : 2015-07-22 10:29"||temporal="2015-07-22"
+rawTerm="Signed electronically by : DR. Derek Vildosola on : WED 2015-07-29 1:15 PM"||temporal="2015-07-29"

@@ -1,0 +1,15 @@
+<TIMEX3 id="T0" start="34" end="51" text="1/1/1998 12:00:00" type="TIME" val="1998-01-01T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="224" end="238" text="ADMISSION DATE" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T3" start="242" end="250" text="01/01/98" type="DATE" val="1998-01-01" mod="NA" />
+<TIMEX3 id="T4" start="270" end="278" text="01/07/98" type="DATE" val="1998-01-07" mod="NA" />
+<TIMEX3 id="T5" start="466" end="471" text="11/97" type="DATE" val="1997-11" mod="NA" />
+<TIMEX3 id="T6" start="475" end="476" text="6" type="TIME" val="1998-01-07T06:00" mod="NA" />
+<TIMEX3 id="T7" start="1024" end="1031" text="1/16/98" type="DATE" val="1998-01-16" mod="NA" />
+<TIMEX3 id="T8" start="1520" end="1524" text="1981" type="DATE" val="1981" mod="NA" />
+<TIMEX3 id="T9" start="1527" end="1531" text="1992" type="DATE" val="1992" mod="NA" />
+<TIMEX3 id="T10" start="1536" end="1541" text="08/97" type="DATE" val="1997-08" mod="NA" />
+<TIMEX3 id="T11" start="1825" end="1833" text="11/18/97" type="DATE" val="1997-11-18" mod="NA" />
+<TIMEX3 id="T12" start="2356" end="2364" text="11/13/97" type="DATE" val="1997-11-13" mod="NA" />
+<TIMEX3 id="T13" start="2731" end="2735" text="1981" type="DATE" val="1981" mod="NA" />
+<TIMEX3 id="T14" start="2739" end="2803" text="9) benign prostatic hypertrophy status post TURP surgery in 1982" type="TIME" val="1982T09:00" mod="NA" />
+<TIMEX3 id="T15" start="3117" end="3121" text="noon" type="TIME" val="1997-11-13T12:00" mod="NA" />

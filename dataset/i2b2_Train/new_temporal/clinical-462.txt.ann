@@ -1,0 +1,20 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2018-05-12" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2018-05-12" type="DATE" val="2018-05-12" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2018-05-14" type="DATE" val="2018-05-14" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="2018-05-07" type="DATE" val="2018-05-07" mod="NA" />
+<TIMEX3 id="T4" start="348" end="362" text="day of life #5" type="DATE" val="2018-05-16" mod="NA" />
+<TIMEX3 id="T5" start="406" end="416" text="2018-05-07" type="DATE" val="2018-05-07" mod="NA" />
+<TIMEX3 id="T6" start="758" end="772" text="day of life #5" type="DATE" val="2018-05-16" mod="NA" />
+<TIMEX3 id="T7" start="2009" end="2019" text="2018-05-09" type="DATE" val="2018-05-09" mod="NA" />
+<TIMEX3 id="T8" start="2115" end="2125" text="2018-05-12" type="DATE" val="2018-05-12" mod="NA" />
+<TIMEX3 id="T9" start="2293" end="2298" text="05-13" type="DATE" val="2018-05-13" mod="NA" />
+<TIMEX3 id="T10" start="2317" end="2322" text="05-14" type="DATE" val="2018-05-14" mod="NA" />
+<TIMEX3 id="T11" start="2371" end="2381" text="2018-05-14" type="DATE" val="2018-05-14" mod="NA" />
+<TIMEX3 id="T12" start="2489" end="2494" text="05-12" type="DATE" val="2018-05-12" mod="NA" />
+<TIMEX3 id="T13" start="2902" end="2912" text="2018-05-13" type="DATE" val="2018-05-13" mod="NA" />
+<TIMEX3 id="T14" start="3313" end="3320" text="Tuesday" type="DATE" val="2018-05-08" mod="NA" />
+<TIMEX3 id="T15" start="3321" end="3331" text="2018-05-15" type="DATE" val="2018-05-15" mod="NA" />
+<TIMEX3 id="T16" start="3335" end="3336" text="3" type="TIME" val="2018-05-15T03:00" mod="NA" />
+<TIMEX3 id="T17" start="3461" end="3471" text="2018-05-09" type="DATE" val="2018-05-09" mod="NA" />
+<TIMEX3 id="T18" start="3570" end="3580" text="2018-05-09" type="DATE" val="2018-05-09" mod="NA" />
+<TIMEX3 id="T19" start="3584" end="3585" text="6" type="TIME" val="2018-05-09T06:00" mod="NA" />

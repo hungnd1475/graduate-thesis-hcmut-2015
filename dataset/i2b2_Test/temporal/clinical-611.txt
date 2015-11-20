@@ -1,0 +1,8 @@
+rawTerm="245096078"||temporal="245096"
+rawTerm="9174858"||temporal="174858"
+rawTerm="11/3/1992 12:00:00 AM"||temporal="11/3/1992"
+rawTerm="11/3/92"||temporal="11/3/92"
+rawTerm="12/6/92"||temporal="12/6/92"
+rawTerm="The day of discharge is day #3 of 7 , after which antibiotics should be totally discontinued ."||temporal="2015-11-07"
+rawTerm="Metamucil 1 teaspoon q.d. , with first bolus of juice , juice 250 cc. down nasogastric tube t.i.d. , tube feeds as above , Lactinex as above , Tagamet 800 mg. nasogastric tube qhs , Nystatin swish and spit 10 cc. five times a day , Cardizem slow release 90 mg. PO q.d. , Folic Acid 1 mg. PO q.d. , Ciprofloxacin 500 mg. PO b.i.d. , discontinue on 12/10/92 KayCiel 30 mEq. down nasogastric tube q.d. , Peridex 10 cc. swish and spit q.i.d. , Coumadin 4 mg. nasogastric tube on odd days , alternating with 5 mg. nasogastric tube on even days , once daily , Tylenol 650 mg. PO and PR q6hours PRN pain , Nystatin powder to axilla and groin as needed ."||temporal="12/10/92"
+rawTerm="12/06/92"||temporal="12/06/92"

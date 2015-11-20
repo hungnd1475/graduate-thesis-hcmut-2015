@@ -1,0 +1,5 @@
+rawTerm="2014-01-24"||temporal="2014-01-24"
+rawTerm="1928-11-23"||temporal="1928-11-23"
+rawTerm="D : 2014-01-24 13:13"||temporal="2014-01-24"
+rawTerm="T : 2014-01-24 13:45"||temporal="2014-01-24"
+rawTerm="Signed electronically by : DR. Kelly Hunter YANG on : FRI 2014-01-31 2:04 PM"||temporal="2014-01-31"

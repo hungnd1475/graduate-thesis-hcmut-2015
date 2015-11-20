@@ -1,0 +1,6 @@
+c="baby barbara stead" 12:0 12:2||c="he" 13:0 13:0||c="baby" 20:0 20:0||c="he" 22:5 22:5||c="he" 23:0 23:0||c="this" 57:0 57:0||c="he" 60:0 60:0||c="patient" 63:0 63:0||c="he" 67:0 67:0||c="patient" 69:0 69:0||c="he" 70:0 70:0||c="his" 71:0 71:0||c="his" 72:0 72:0||c="baby" 74:7 74:7||c="his" 75:0 75:0||c="he" 78:0 78:0||c="he" 79:18 79:18||c="he" 80:4 80:4||c="his" 81:0 81:0||c="he" 83:0 83:0||c="his" 85:0 85:0||c="baby mary stead" 88:0 88:2||c="his" 90:0 90:0||c="he" 91:0 91:0||c="his" 92:0 92:0||c="baby norman stead" 95:9 95:11||c="his" 96:8 96:8||c="baby david stead" 100:10 100:12||c="baby julian stead" 103:0 103:2||c="baby corine stead" 105:0 105:2||t="coref person"
+c="a caput" 22:8 22:9||c="which" 22:10 22:10||t="coref problem"
+c="severe anemia" 66:10 66:11||c="which" 66:12 66:12||t="coref problem"
+c="factor 8 level" 77:23 77:25||c="that" 77:26 77:26||t="coref test"
+c="a jugular broviac" 84:10 84:12||c="which" 84:13 84:13||t="coref treatment"
+c="primary pediatrician" 106:2 106:3||c="dr. pearly reilly" 107:0 107:2||t="coref person"

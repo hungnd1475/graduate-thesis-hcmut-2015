@@ -1,0 +1,8 @@
+rawTerm="291181306"||temporal="2911813"
+rawTerm="0231078"||temporal="231078"
+rawTerm="03/11/2002 12:00:00 AM"||temporal="03/11/2002"
+rawTerm="03/11/2002"||temporal="03/11/2002"
+rawTerm="03/14/2002"||temporal="03/14/2002"
+rawTerm="Electronically Signed LI RIJARRED CLASS , M.D. 03/27/2002 12:39 _____________________________ LI RIJARRED CLASS , M.D."||temporal="03/27/2002"
+rawTerm="03/13/2002"||temporal="03/13/2002"
+rawTerm="03/13/2002 10:05 P 718719"||temporal="03/13/2002"

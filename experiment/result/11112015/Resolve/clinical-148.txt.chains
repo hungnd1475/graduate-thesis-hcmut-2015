@@ -1,0 +1,4 @@
+c="respiratory distress" 11:0 11:1||c="respiratory distress" 11:17 11:18||t="coref problem"
+c="the patient" 11:6 11:7||c="the patient" 12:7 12:8||c="the patient" 13:0 13:1||c="she" 14:0 14:0||c="the patient" 15:2 15:3||c="she" 15:14 15:14||c="her" 15:21 15:21||c="the patient" 16:0 16:1||c="she" 16:15 16:15||c="the patient" 17:2 17:3||c="she" 17:17 17:17||c="the patient" 19:8 19:9||c="she" 20:6 20:6||c="the patient" 21:0 21:1||c="her" 22:0 22:0||c="the patient" 23:0 23:1||c="her" 23:10 23:10||c="the patient" 25:11 25:12||c="she" 27:0 27:0||c="her" 27:3 27:3||c="her" 27:7 27:7||t="coref person"
+c="the intravenous lasix" 12:26 12:28||c="intravenous lasix" 19:16 19:17||t="coref treatment"
+c="hypotension" 19:0 19:0||c="hypotension" 24:4 24:4||t="coref problem"

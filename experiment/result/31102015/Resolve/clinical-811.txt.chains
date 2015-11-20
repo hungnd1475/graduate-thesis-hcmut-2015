@@ -1,0 +1,5 @@
+c="hullekote , au" 13:0 13:2||c="patient" 18:1 18:1||c="patient" 35:3 35:3||c="patient" 50:0 50:0||t="coref person"
+c="attending" 24:0 24:0||c="uphmadre , ciousale n. , m.d." 25:0 25:5||t="coref person"
+c="hco3" 45:8 45:8||c="repeat hco3" 48:2 48:3||t="coref test"
+c="psych eval" 46:14 46:15||c="best team eval" 51:0 51:2||t="coref test"
+c="dr. ee" 35:0 35:1||c="kotekeesecrankberf , la a. , m.d." 59:0 59:5||t="coref person"

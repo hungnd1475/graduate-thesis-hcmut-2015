@@ -1,0 +1,7 @@
+rawTerm="991193550"||temporal="119355"
+rawTerm="1585733"||temporal="1585733"
+rawTerm="11/30/1995 12:00:00 AM"||temporal="11/30/1995"
+rawTerm="11-30-95"||temporal="11-30-95"
+rawTerm="12-29-95"||temporal="12-29-95"
+rawTerm="12-27-95"||temporal="12-27-95"
+rawTerm="12/27/95"||temporal="12/27/95"

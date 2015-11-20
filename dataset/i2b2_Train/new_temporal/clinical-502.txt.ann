@@ -1,0 +1,53 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2012-05-24" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2012-05-24" type="DATE" val="2012-05-24" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2012-06-19" type="DATE" val="2012-06-19" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1954-07-01" type="DATE" val="1954-07-01" mod="NA" />
+<TIMEX3 id="T4" start="388" end="398" text="2012-05-24" type="DATE" val="2012-05-24" mod="NA" />
+<TIMEX3 id="T5" start="423" end="433" text="2012-05-26" type="DATE" val="2012-05-26" mod="NA" />
+<TIMEX3 id="T6" start="453" end="463" text="2012-05-26" type="DATE" val="2012-05-26" mod="NA" />
+<TIMEX3 id="T7" start="502" end="512" text="2012-05-26" type="DATE" val="2012-05-26" mod="NA" />
+<TIMEX3 id="T8" start="537" end="547" text="2012-05-29" type="DATE" val="2012-05-29" mod="NA" />
+<TIMEX3 id="T9" start="570" end="575" text="06-01" type="DATE" val="1954-06-01" mod="NA" />
+<TIMEX3 id="T10" start="623" end="628" text="06-03" type="DATE" val="1954-06-03" mod="NA" />
+<TIMEX3 id="T11" start="651" end="656" text="06-03" type="DATE" val="1954-06-03" mod="NA" />
+<TIMEX3 id="T12" start="678" end="683" text="06-04" type="DATE" val="1954-06-04" mod="NA" />
+<TIMEX3 id="T13" start="705" end="715" text="2012-06-08" type="DATE" val="2012-06-08" mod="NA" />
+<TIMEX3 id="T14" start="798" end="802" text="1988" type="DATE" val="1988" mod="NA" />
+<TIMEX3 id="T15" start="842" end="847" text="05-05" type="DATE" val="1954-05-05" mod="NA" />
+<TIMEX3 id="T16" start="939" end="943" text="1988" type="DATE" val="1988" mod="NA" />
+<TIMEX3 id="T17" start="1019" end="1028" text="this time" type="DATE" val="2012-05-24" mod="NA" />
+<TIMEX3 id="T18" start="1201" end="1211" text="2001-08-31" type="DATE" val="2001-08-31" mod="NA" />
+<TIMEX3 id="T19" start="1286" end="1291" text="12/94" type="DATE" val="1994-12" mod="NA" />
+<TIMEX3 id="T20" start="1499" end="1509" text="2011-05-02" type="DATE" val="2011-05-02" mod="NA" />
+<TIMEX3 id="T21" start="1667" end="1671" text="4/04" type="DATE" val="1954-04-04" mod="NA" />
+<TIMEX3 id="T22" start="1861" end="1871" text="2012-04-23" type="DATE" val="2012-04-23" mod="NA" />
+<TIMEX3 id="T23" start="2011" end="2021" text="2012-04-24" type="DATE" val="2012-04-24" mod="NA" />
+<TIMEX3 id="T24" start="2170" end="2180" text="2012-05-02" type="DATE" val="2012-05-02" mod="NA" />
+<TIMEX3 id="T25" start="2259" end="2264" text="05-21" type="DATE" val="1954-05-21" mod="NA" />
+<TIMEX3 id="T26" start="3196" end="3206" text="2012-05-24" type="DATE" val="2012-05-24" mod="NA" />
+<TIMEX3 id="T27" start="3501" end="3511" text="2012-06-18" type="DATE" val="2012-06-18" mod="NA" />
+<TIMEX3 id="T28" start="3935" end="3945" text="2012-06-11" type="DATE" val="2012-06-11" mod="NA" />
+<TIMEX3 id="T29" start="4162" end="4172" text="2012-06-18" type="DATE" val="2012-06-18" mod="NA" />
+<TIMEX3 id="T30" start="4359" end="4369" text="2012-06-05" type="DATE" val="2012-06-05" mod="NA" />
+<TIMEX3 id="T31" start="5337" end="5347" text="2012-06-05" type="DATE" val="2012-06-05" mod="NA" />
+<TIMEX3 id="T32" start="5703" end="5713" text="2313-08-31" type="DATE" val="2313-08-31" mod="NA" />
+<TIMEX3 id="T33" start="6225" end="6235" text="2012-05-24" type="DATE" val="2012-05-24" mod="NA" />
+<TIMEX3 id="T34" start="6348" end="6353" text="05-21" type="DATE" val="1954-05-21" mod="NA" />
+<TIMEX3 id="T35" start="6498" end="6503" text="05-25" type="DATE" val="1954-05-25" mod="NA" />
+<TIMEX3 id="T36" start="6547" end="6552" text="05-26" type="DATE" val="1954-05-26" mod="NA" />
+<TIMEX3 id="T37" start="6998" end="7003" text="06-01" type="DATE" val="1954-06-01" mod="NA" />
+<TIMEX3 id="T38" start="7010" end="7015" text="06-02" type="DATE" val="1954-06-02" mod="NA" />
+<TIMEX3 id="T39" start="7138" end="7143" text="06-03" type="DATE" val="1954-06-03" mod="NA" />
+<TIMEX3 id="T40" start="7581" end="7586" text="06-17" type="DATE" val="1954-06-17" mod="NA" />
+<TIMEX3 id="T41" start="7663" end="7668" text="06-03" type="DATE" val="1954-06-03" mod="NA" />
+<TIMEX3 id="T42" start="7784" end="7789" text="06-14" type="DATE" val="1954-06-14" mod="NA" />
+<TIMEX3 id="T43" start="7920" end="7925" text="07-05" type="DATE" val="1954-07-05" mod="NA" />
+<TIMEX3 id="T44" start="8564" end="8570" text="day ) " type="DATE" val="2012-05-24" mod="NA" />
+<TIMEX3 id="T45" start="8573" end="8574" text="2" type="TIME" val="2012-05-24T02:00" mod="NA" />
+<TIMEX3 id="T46" start="8736" end="8741" text="03-04" type="DATE" val="1954-03-04" mod="NA" />
+<TIMEX3 id="T47" start="9011" end="9017" text="day ) " type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T48" start="9020" end="9092" text="6. Lamotrigine 100 mg Tablet Sig : 1.5 Tablets PO BID ( 2 times a day ) " type="TIME" val="TPZ+0000-00-00T06:00" mod="NA" />
+<TIMEX3 id="T49" start="9344" end="9350" text="day ) " type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T50" start="9353" end="9355" text="10" type="TIME" val="1954-03-04T10:00" mod="NA" />
+<TIMEX3 id="T51" start="9679" end="9685" text="day ) " type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T52" start="9688" end="9690" text="13" type="TIME" val="1954-03-04T13:00" mod="NA" />

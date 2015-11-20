@@ -1,0 +1,3 @@
+rawTerm="l upper lip / l nostril abscess|ANA"||cui="C1550609"||concept="Abcess"||prefer="Specimen Type - Abscess"||semantic=[bdsu]||confidence="799"
+rawTerm="needle aspiration|OPE"||cui="C2243017"||concept="needle aspiration, NOS"||prefer="needle aspiration, NOS"||semantic=[topp]||confidence="1000"
+rawTerm="any neurologic changes|ANA"||cui="C0027763"||concept="Nervous System"||prefer="Nervous system structure"||semantic=[bdsy]||confidence="805"

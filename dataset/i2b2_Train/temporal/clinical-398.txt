@@ -1,0 +1,7 @@
+rawTerm="901751538 "||temporal="1751538"
+rawTerm="71624078 "||temporal="1624078"
+rawTerm="2/3/1992 12:00:00 AM "||temporal="2/3/1992"
+rawTerm="02/03/1992 "||temporal="02/03/1992"
+rawTerm="02/07/1992 "||temporal="02/07/1992"
+rawTerm="02/26/92 "||temporal="02/26/92"
+rawTerm="02/27/92 "||temporal="02/27/92"

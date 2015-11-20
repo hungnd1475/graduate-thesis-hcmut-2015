@@ -1,0 +1,3 @@
+rawTerm="apgars|EQP"||cui="C0741195"||concept="Apgar"||prefer="Apgar"||semantic=[diap]||confidence="1000"
+rawTerm="weight|EQP"||cui="C1305866"||concept="weight"||prefer="Weighing patient"||semantic=[diap]||confidence="1000"
+rawTerm="weight|INDI"||cui="C0043100"||concept="Weight"||prefer="Weight"||semantic=[qnco]||confidence="1000"

@@ -1,0 +1,8 @@
+rawTerm="032890433"||temporal="2890433"
+rawTerm="02/21/1991 12:00:00 AM"||temporal="02/21/1991"
+rawTerm="02/21/1991"||temporal="02/21/1991"
+rawTerm="02/26/1991"||temporal="02/26/1991"
+rawTerm="The patient was taken to the operating room by Dr. Suot N. Dragtente on 02-21-91 , where a left radical nephrectomy was performed ."||temporal="02-21-91"
+rawTerm="The patient thereafter had a benign convalescence , and was discharged on the 5th postoperative day ."||temporal="1991-02-26"
+rawTerm="02/26/91"||temporal="02/26/91"
+rawTerm="03/02/91"||temporal="03/02/91"

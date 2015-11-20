@@ -1,0 +1,6 @@
+rawTerm="853262744"||temporal="262744"
+rawTerm="8223316"||temporal="223316"
+rawTerm="121051"||temporal="121051"
+rawTerm="7/10/2002 12:00:00 AM"||temporal="7/10/2002"
+rawTerm="07/10/2002 11:45 AM"||temporal="07/10/2002"
+rawTerm="This is to notify you that your patient , SCOBE , RYLALON arrived in the Emergency Department at Oaksgekesser/ Memorial Hospital on 07/10/2002 11:45 AM ."||temporal="07/10/2002"

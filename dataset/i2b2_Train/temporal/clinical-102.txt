@@ -1,0 +1,4 @@
+rawTerm="932057504 DH"||temporal="2057504"
+rawTerm="11/25/2000 12:00:00 AM"||temporal="11/25/2000"
+rawTerm="11/25/2000 01:36 AM"||temporal="11/25/2000"
+rawTerm="This is to notify you that your patient , AGACHBRAUCH , RENSIAANARC arrived in the Emergency Department at Daughtersvillshamen&apos;s Hospital on 11/25/2000 01:36 AM ."||temporal="11/25/2000"

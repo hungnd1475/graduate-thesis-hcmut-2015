@@ -1,0 +1,6 @@
+rawTerm="320422564"||temporal="204225"
+rawTerm="06/16/1997 12:00:00 AM"||temporal="06/16/1997"
+rawTerm="06/16/1997"||temporal="06/16/1997"
+rawTerm="06/18/1997"||temporal="06/18/1997"
+rawTerm="06/18/97"||temporal="06/18/97"
+rawTerm="06/21/97"||temporal="06/21/97"

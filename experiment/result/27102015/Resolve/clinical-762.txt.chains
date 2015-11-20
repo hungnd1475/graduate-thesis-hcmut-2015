@@ -1,0 +1,6 @@
+c="cmed ccu" 10:0 10:1||c="mr. jackson" 12:0 12:1||c="his" 12:24 12:24||c="he" 14:0 14:0||c="he" 15:0 15:0||c="his" 15:6 15:6||c="he" 16:0 16:0||c="plastic surgery" 16:8 16:9||c="he" 26:0 26:0||c="the patient" 43:3 43:4||c="the patient" 45:0 45:1||c="he" 46:0 46:0||c="his" 46:6 46:6||c="he" 47:0 47:0||c="his" 47:13 47:13||c="he" 50:0 50:0||c="he" 51:0 51:0||c="he" 53:3 53:3||c="plastic surgery" 63:3 63:4||c="he" 79:0 79:0||c="his" 80:0 80:0||c="his" 82:3 82:3||c="he" 82:16 82:16||c="he" 83:5 83:5||c="his" 84:0 84:0||c="he" 85:0 85:0||c="he" 86:0 86:0||c="his" 87:3 87:3||c="his" 88:0 88:0||c="the patient" 89:0 89:1||c="nola daniel" 92:0 92:1||t="coref person"
+c="stage t2 n0" 12:16 12:18||c="that" 12:20 12:20||t="coref problem"
+c="surgeon" 33:0 33:0||c="surgeon" 38:0 38:0||t="coref person"
+c="an open gastrostomy tube" 44:13 44:16||c="which" 44:17 44:17||t="coref treatment"
+c="his tracheostomy tube" 82:3 82:5||c="which" 82:15 82:15||t="coref treatment"
+c="a 6 cuffless shiley" 88:5 88:8||c="a 3-0 silk" 88:16 88:18||t="coref treatment"

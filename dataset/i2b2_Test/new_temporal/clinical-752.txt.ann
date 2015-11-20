@@ -1,0 +1,20 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2015-06-05" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2015-06-05" type="DATE" val="2015-06-05" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2015-06-10" type="DATE" val="2015-06-10" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="2015-06-05" type="DATE" val="2015-06-05" mod="NA" />
+<TIMEX3 id="T4" start="233" end="236" text="6/7" type="DATE" val="2015-06-07" mod="NA" />
+<TIMEX3 id="T5" start="342" end="352" text="2015-06-01" type="DATE" val="2015-06-01" mod="NA" />
+<TIMEX3 id="T6" start="578" end="602" text="The morning of admission" type="DATE" val="2015-06-05" mod="START" />
+<TIMEX3 id="T7" start="2477" end="2493" text="day of life five" type="DATE" val="2015-06-09" mod="NA" />
+<TIMEX3 id="T8" start="2928" end="2933" text="06-08" type="DATE" val="2015-06-08" mod="NA" />
+<TIMEX3 id="T9" start="3232" end="3237" text="06-08" type="DATE" val="2015-06-08" mod="NA" />
+<TIMEX3 id="T10" start="3339" end="3354" text="day of life six" type="DATE" val="2015-06-10" mod="NA" />
+<TIMEX3 id="T11" start="3357" end="3377" text="the day of discharge" type="DATE" val="2015-06-05" mod="NA" />
+<TIMEX3 id="T12" start="3777" end="3787" text="2015-06-09" type="DATE" val="2015-06-09" mod="NA" />
+<TIMEX3 id="T13" start="3791" end="3792" text="6" type="TIME" val="2015-06-09T06:00" mod="NA" />
+<TIMEX3 id="T14" start="4143" end="4149" text="day to" type="DATE" val="2015-06-05" mod="NA" />
+<TIMEX3 id="T15" start="4255" end="4260" text="06-10" type="DATE" val="2015-06-10" mod="NA" />
+<TIMEX3 id="T16" start="4343" end="4348" text="today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T17" start="4439" end="4446" text="October" type="DATE" val="2015-10" mod="NA" />
+<TIMEX3 id="T18" start="4455" end="4460" text="April" type="DATE" val="2015-04" mod="NA" />
+<TIMEX3 id="T19" start="5034" end="5037" text="6/7" type="DATE" val="2015-06-07" mod="NA" />

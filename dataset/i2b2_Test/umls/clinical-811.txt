@@ -1,0 +1,8 @@
+rawTerm="mvi therapeutic w / minerals ( therap vits / minerals )|OPE"||cui="C0039796"||concept="Therapeutic"||prefer="The science and art of healing"||semantic=[topp]||confidence="645"
+rawTerm="light-headed|ANA"||cui="C0018670"||concept="Head"||prefer="Head"||semantic=[blor]||confidence="789"
+rawTerm="marijuana in urine|ANA"||cui="C0042036"||concept="Urine"||prefer="Urine"||semantic=[bdsu]||confidence="623"
+rawTerm="marijuana in urine|INDI"||cui="C0024808"||concept="Marihuana"||prefer="Marihuana"||semantic=[orch|phsu]||confidence="790"
+rawTerm="hco3|INDI"||cui="C0005367"||concept="HCO3"||prefer="Bicarbonates"||semantic=[inch|phsu]||confidence="1000"
+rawTerm="repeat hco3|INDI"||cui="C0005367"||concept="HCO3"||prefer="Bicarbonates"||semantic=[inch|phsu]||confidence="861"
+rawTerm="ekg|EQP"||cui="C1623258"||concept="EKG"||prefer="Electrocardiography"||semantic=[diap]||confidence="1000"
+rawTerm="nortriptyline level|INDI"||cui="C2946261"||concept="Level"||prefer="Level"||semantic=[phsu]||confidence="861"

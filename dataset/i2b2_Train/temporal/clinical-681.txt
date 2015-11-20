@@ -1,0 +1,7 @@
+rawTerm="351853846 WGH"||temporal="185384"
+rawTerm="3/24/1997 12:00:00 AM"||temporal="3/24/1997"
+rawTerm="03/24/97"||temporal="03/24/97"
+rawTerm="03/28/97"||temporal="03/28/97"
+rawTerm="She was in her usual state of health until 3/20/97 when she experienced the fairly sudden onset of predominantly right-sided arm and leg weakness and ataxia ."||temporal="3/20/97"
+rawTerm="03/29/97"||temporal="03/29/97"
+rawTerm="03/31/97 12:36 P"||temporal="03/31/97"

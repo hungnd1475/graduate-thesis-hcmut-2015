@@ -1,0 +1,5 @@
+c="kotebitzweerts , lixyna n" 13:0 13:3||c="patient" 19:1 19:1||c="pt" 56:2 56:2||c="pt" 57:7 57:7||c="lilletlandtriev , roseen ertondon" 66:0 66:3||t="coref person"
+c="attending" 25:0 25:0||c="tland , jr , votribrendeve n. , m.d." 26:0 26:7||c="tland , jr , votribrendeve n. , m.d." 51:1 51:8||t="coref person"
+c="total thyoidectomy" 5:3 5:4||c="total thyoidectomy" 47:10 47:11||t="coref treatment"
+c="total thyroidectomy" 45:0 45:1||c="total thyroidectomy" 51:9 51:10||c="total thyroidectomy" 55:8 55:9||t="coref treatment"
+c="pain" 36:6 36:6||c="worsening pain" 60:13 60:14||t="coref problem"

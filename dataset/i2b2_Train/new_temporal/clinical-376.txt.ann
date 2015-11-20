@@ -1,0 +1,22 @@
+<TIMEX3 id="T0" start="48" end="65" text="5/8/1995 12:00:00" type="TIME" val="1995-05-08T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="153" end="167" text="ADMISSION DATE" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T3" start="171" end="179" text="05/08/95" type="DATE" val="1995-05-08" mod="NA" />
+<TIMEX3 id="T4" start="199" end="207" text="05/14/95" type="DATE" val="1995-05-14" mod="NA" />
+<TIMEX3 id="T5" start="226" end="240" text="April 1 , 1923" type="DATE" val="1923-04-01" mod="NA" />
+<TIMEX3 id="T6" start="373" end="377" text="1984" type="DATE" val="1984" mod="NA" />
+<TIMEX3 id="T7" start="878" end="882" text="1984" type="DATE" val="1984" mod="NA" />
+<TIMEX3 id="T8" start="1064" end="1076" text="May 8 , 1995" type="DATE" val="1995-05-08" mod="NA" />
+<TIMEX3 id="T9" start="1083" end="1089" text="8 a.m." type="TIME" val="1995-05-08T08:00" mod="NA" />
+<TIMEX3 id="T10" start="1736" end="1742" text="8 p.m." type="TIME" val="1995-05-08T20:00" mod="NA" />
+<TIMEX3 id="T11" start="2152" end="2170" text="the previous night" type="DATE" val="1995-05-07" mod="END" />
+<TIMEX3 id="T12" start="2272" end="2292" text="the previously night" type="DATE" val="1995-05-07" mod="END" />
+<TIMEX3 id="T13" start="2428" end="2432" text="1984" type="DATE" val="1984" mod="NA" />
+<TIMEX3 id="T14" start="2577" end="2581" text="1991" type="DATE" val="1991" mod="NA" />
+<TIMEX3 id="T15" start="2625" end="2629" text="1992" type="DATE" val="1992" mod="NA" />
+<TIMEX3 id="T16" start="2754" end="2766" text="May 4 , 1995" type="DATE" val="1995-05-04" mod="NA" />
+<TIMEX3 id="T17" start="2928" end="2940" text="10 years ago" type="DATE" val="TPZ-0010" mod="NA" />
+<TIMEX3 id="T18" start="3126" end="3130" text="noon" type="TIME" val="1995-05-04T12:00" mod="NA" />
+<TIMEX3 id="T19" start="7178" end="7191" text="May 11 , 1995" type="DATE" val="1995-05-11" mod="NA" />
+<TIMEX3 id="T20" start="9648" end="9661" text="May 14 , 1995" type="DATE" val="1995-05-14" mod="NA" />
+<TIMEX3 id="T21" start="9714" end="9729" text="early next week" type="DATE" val="1995-W21" mod="START" />
+<TIMEX3 id="T22" start="10167" end="10180" text="May 17 , 1995" type="DATE" val="1995-05-17" mod="NA" />

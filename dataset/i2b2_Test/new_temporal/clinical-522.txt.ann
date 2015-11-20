@@ -1,0 +1,22 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2011-10-17" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2011-10-17" type="DATE" val="2011-10-17" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2011-10-31" type="DATE" val="2011-10-31" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1955-09-01" type="DATE" val="1955-09-01" mod="NA" />
+<TIMEX3 id="T4" start="262" end="276" text="many years ago" type="DATE" val="TPZ-0003" mod="APPROX" />
+<TIMEX3 id="T5" start="450" end="460" text="2011-09-05" type="DATE" val="2011-09-05" mod="NA" />
+<TIMEX3 id="T6" start="708" end="718" text="2010-06-06" type="DATE" val="2010-06-06" mod="NA" />
+<TIMEX3 id="T7" start="831" end="835" text="1999" type="DATE" val="1999" mod="NA" />
+<TIMEX3 id="T8" start="839" end="881" text="9. Right below the knee amputation in 2008" type="TIME" val="2008T09:00" mod="NA" />
+<TIMEX3 id="T9" start="1321" end="1331" text="2011-10-17" type="DATE" val="2011-10-17" mod="NA" />
+<TIMEX3 id="T10" start="1479" end="1489" text="2011-10-18" type="DATE" val="2011-10-18" mod="NA" />
+<TIMEX3 id="T11" start="2733" end="2755" text="postoperative day five" type="DATE" val="2011-10-22" mod="NA" />
+<TIMEX3 id="T12" start="3029" end="3050" text="postoperative day six" type="DATE" val="2011-10-23" mod="NA" />
+<TIMEX3 id="T13" start="3168" end="3177" text="that time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T14" start="3184" end="3194" text="2011-10-24" type="DATE" val="2011-10-24" mod="NA" />
+<TIMEX3 id="T15" start="3195" end="3216" text="postoperative day six" type="DATE" val="2011-10-23" mod="NA" />
+<TIMEX3 id="T16" start="3942" end="3947" text="Today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T17" start="3950" end="3960" text="2011-10-31" type="DATE" val="2011-10-31" mod="NA" />
+<TIMEX3 id="T18" start="3963" end="3983" text="postoperative day 13" type="DATE" val="2011-10-30" mod="NA" />
+<TIMEX3 id="T19" start="4071" end="4076" text="today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T20" start="4212" end="4222" text="2011-10-25" type="DATE" val="2011-10-25" mod="NA" />
+<TIMEX3 id="T21" start="5631" end="5636" text="lunch" type="TIME" val="2011-10-25T14:00" mod="APPROX" />

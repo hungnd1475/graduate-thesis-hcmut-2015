@@ -1,0 +1,1 @@
+rawTerm="spontaneous vaginal delivery laceration|ANA"||cui="C0042232"||concept="Vaginal"||prefer="Vagina"||semantic=[bpoc]||confidence="645"

@@ -1,0 +1,8 @@
+﻿doctor
+pcp
+author
+dict
+attend
+provider
+attending
+attendings

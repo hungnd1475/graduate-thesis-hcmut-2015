@@ -1,0 +1,8 @@
+<TIMEX3 id="T0" start="40" end="57" text="2/3/1992 12:00:00" type="TIME" val="1992-02-03T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="98" end="112" text="Admission Date" type="DATE" val="1992-02-03" mod="NA" />
+<TIMEX3 id="T3" start="117" end="127" text="02/03/1992" type="DATE" val="1992-02-03" mod="NA" />
+<TIMEX3 id="T4" start="176" end="186" text="02/07/1992" type="DATE" val="1992-02-07" mod="NA" />
+<TIMEX3 id="T5" start="758" end="771" text="March of 1991" type="DATE" val="1991-03" mod="NA" />
+<TIMEX3 id="T6" start="957" end="985" text="postoperative day number one" type="DATE" val="1992-02-04" mod="NA" />
+<TIMEX3 id="T7" start="2792" end="2801" text="day three" type="DATE" val="1992-02-05" mod="NA" />
+<TIMEX3 id="T8" start="2852" end="2878" text="the day prior to discharge" type="DATE" val="1992-02-02" mod="NA" />

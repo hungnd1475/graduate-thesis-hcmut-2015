@@ -1,0 +1,10 @@
+9	The patient was initially on several antibiotics included Cefepime , Vancomycin , Ciprofloxacin , Ambazone and Flagyl .|Cefepime[302,310]|||||||||C0055003|20481|20481|cefepime
+9	The patient was initially on several antibiotics included Cefepime , Vancomycin , Ciprofloxacin , Ambazone and Flagyl .|Vancomycin[313,323]|||||||||C0042313|11124|11124|vancomycin
+9	The patient was initially on several antibiotics included Cefepime , Vancomycin , Ciprofloxacin , Ambazone and Flagyl .|Ciprofloxacin[326,339]|||||||||C0008809|2551|2551|ciprofloxacin
+9	The patient was initially on several antibiotics included Cefepime , Vancomycin , Ciprofloxacin , Ambazone and Flagyl .|Ambazone[342,350]|||||||||C0043983|11768|11768|ambazone
+9	The patient was initially on several antibiotics included Cefepime , Vancomycin , Ciprofloxacin , Ambazone and Flagyl .|Flagyl[355,361]||||||||||202866|6922|metronidazole
+10	The patient 's HSV antibody titer was found to be negative and the patient 's Acyclovir was not restarted .|Acyclovir[442,451]|||||||||C0001367|281|281|acyclovir
+11	Infectious disease continued to follow and on 2012-02-29 , the patient spiked again which at that time was felt to be due to his central line and the central line was resited on the left side and the patient was started on intravenous Vancomycin .|Vancomycin[707,717]|||||intravenous[695,706]||||C0042313|11124|11124|vancomycin
+25	1. Bactrim double strength one tablet q.|Bactrim[1954,1961]||||one tablet[1978,1988]|||||null|208416|10180|sulfamethoxazole
+27	2. Compazine 10 mg p.o. q 6hours p.r.n. nausea .|Compazine[2027,2036]|||10mg[2037,2042]||p.o.[2043,2047]|q 6 hours[2048,2056]||p.r.n.[2057,2063]|C0709063|207685|8704|prochlorperazine
+28	3. Anzemet 100 mg p.o. once daily p.r.n. nausea .|Anzemet[2076,2083]|||100mg[2084,2090]||p.o.[2091,2095]|once daily[2096,2106]||p.r.n.[2107,2113]|C0716072|213092|68091|dolasetron

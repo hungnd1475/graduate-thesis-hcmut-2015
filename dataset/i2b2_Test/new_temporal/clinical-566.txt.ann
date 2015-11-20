@@ -1,0 +1,8 @@
+<TIMEX3 id="T0" start="33" end="52" text="09/30/2000 12:00:00" type="TIME" val="2000-09-30T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="83" end="97" text="Admission Date" type="DATE" val="2000-09-30" mod="NA" />
+<TIMEX3 id="T3" start="101" end="111" text="09/30/2000" type="DATE" val="2000-09-30" mod="NA" />
+<TIMEX3 id="T4" start="148" end="158" text="10/01/2000" type="DATE" val="2000-10-01" mod="NA" />
+<TIMEX3 id="T5" start="278" end="298" text="10/01/00 AT 03:30 PM" type="TIME" val="2000-10-01T15:30" mod="NA" />
+<TIMEX3 id="T6" start="957" end="965" text="10/03/00" type="DATE" val="2000-10-03" mod="NA" />
+<TIMEX3 id="T7" start="968" end="973" text="10/03" type="DATE" val="2000-10-03" mod="NA" />
+<TIMEX3 id="T8" start="2059" end="2065" text="Friday" type="DATE" val="2000-09-29" mod="NA" />

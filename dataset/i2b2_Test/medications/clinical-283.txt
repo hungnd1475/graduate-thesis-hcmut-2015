@@ -1,0 +1,6 @@
+14	In 1984 , he had the right knee aspirated and was noted to have some uric acid crystals , although serum uric acid was normal and erythrocyte sedimentation rate .|uric acid[423,432]||crystals[433,441]||||||||1427088|1427088|uric acid
+14	In 1984 , he had the right knee aspirated and was noted to have some uric acid crystals , although serum uric acid was normal and erythrocyte sedimentation rate .|uric acid[459,468]||||||||||1427088|1427088|uric acid
+51	He was on pain medication and he was also on Percocet , but now he can manage without the Percocet .|Percocet[2725,2733]|||||||||C0086787|42844|161|paracetamol
+51	He was on pain medication and he was also on Percocet , but now he can manage without the Percocet .|Percocet[2770,2778]|||||||||C0086787|42844|161|paracetamol
+52	He is on Coumadin which is to be continued for six weeks .|Coumadin[2790,2798]|||||||six weeks[2828,2837]||C0699129|202421|11289|warfarin
+54	Percocet 1-2 PO q4h prn .|Percocet[2867,2875]||||1 - 2[2876,2879]|PO[2880,2882]|q4h[2883,2886]||prn[2887,2890]|C3239003|1185228|161|paracetamol

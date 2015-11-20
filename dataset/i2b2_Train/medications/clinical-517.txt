@@ -1,0 +1,79 @@
+16	Pt was taken to Bridgewater Chelsea Soldier 's Home Hospital and started on unasyn IV .|unasyn[741,747]|||||IV[748,750]||||C0971675|57773|733|ampicillin
+19	Pt was in severe " back pain " as per daughter which was treated with dilaudid .|dilaudid[1024,1032]||||||||||224913|3423|hydromorphone
+24	The Monica stay was complicated by runs of afib to 133 requiring IV lopressor .|lopressor[1610,1619]|||||IV[1607,1609]||||C0700776|203344|6918|metoprolol
+29	CMED CCU change include discontinuation of coumadin secondary to inc risk of upper GI bleed .|coumadin[1887,1895]|||||||||C0699129|202421|11289|warfarin
+30	Digoxin , Norvasc and Imdur was also discontinued .|Digoxin[1938,1945]|||||||||C0012265|3407|3407|digoxin
+30	Digoxin , Norvasc and Imdur was also discontinued .|Norvasc[1948,1955]||||||||||58927|17767|amlodipine
+30	Digoxin , Norvasc and Imdur was also discontinued .|Imdur[1960,1965]||||||||||151162|6057|isosorbide
+32	Started on unasyn , in hospital suffered mech. fall with hip fx .|unasyn[2118,2124]|||||||||C0971675|57773|733|ampicillin
+34	Medically eval not high risk surgery , preop beta blocker given .|beta blocker[2264,2276]||||||||||401870|401870|beta blocker
+38	Late 03-23 found with afib and RVR , given beta blocker with min. response , started dilt.|beta blocker[2522,2534]||||||||||401870|401870|beta blocker
+38	Late 03-23 found with afib and RVR , given beta blocker with min. response , started dilt.|dilt[2564,2568]|||||||||C1601858|540618|3443|diltiazem
+40	Received 2 mg dilaudid for pain o/n .|dilaudid[2591,2599]|||2mg[2586,2590]||||||C2740077|897697|3423|hydromorphone
+41	This AM with respiratory failure , continued tachycardia on dilt.|dilt[2675,2679]|||||||||C1601858|540618|3443|diltiazem
+79	GLUCOSE - 191 * UREA N - 14 CREAT - 0.6 SODIUM - 141 POTASSIUM - 3.5 CHLORIDE - 101 TOTAL CO2 - 28 ANION GAP - 16 2016-03-22 02:45 AM|POTASSIUM[4047,4056]|||||||||C0032821|8588|8588|potassium
+79	GLUCOSE - 191 * UREA N - 14 CREAT - 0.6 SODIUM - 141 POTASSIUM - 3.5 CHLORIDE - 101 TOTAL CO2 - 28 ANION GAP - 16 2016-03-22 02:45 AM|SODIUM[4034,4040]|||||||||C0037473|9853|9853|sodium
+79	GLUCOSE - 191 * UREA N - 14 CREAT - 0.6 SODIUM - 141 POTASSIUM - 3.5 CHLORIDE - 101 TOTAL CO2 - 28 ANION GAP - 16 2016-03-22 02:45 AM|UREA[4010,4014]|||||||||C0041942|11002|11002|urea
+80	CALCIUM - 8.8 PHOSPHATE - 4.4 MAGNESIUM - 1.9 2016-03-22 11:25 AM URINE|MAGNESIUM[4158,4167]|||||||||C0024467|6574|6574|magnesium
+80	CALCIUM - 8.8 PHOSPHATE - 4.4 MAGNESIUM - 1.9 2016-03-22 11:25 AM URINE|CALCIUM[4128,4135]|||||||||C0006675|1895|1895|calcium
+84	RBC - 0-2 WBC - 04-02 BACTERIA - OCC YEAST - NONE EPI - 0 2016-03-22 11:25 AM URINE|EPI[4469,4472]||||||||||216932|216932|epi
+108	--- Pre-op B-blocker with goal HR < 70|B - blocker[6336,6345]||||||||||||
+110	--- V-Tach : pt has AICD in place , however b-blocker should contorl Vtach for now .|b - blocker[6532,6541]||||||||||||
+111	--- B-blocker IV , Dilt PRN for PAF|B - blocker[6577,6586]|||||IV[6587,6589]|||||||
+111	--- B-blocker IV , Dilt PRN for PAF|Dilt[6592,6596]||||||||PRN[6597,6600]|C1601858|540618|3443|diltiazem
+112	--- Hold coumadin for afib given hx of upper GIB and surgery in AM|coumadin[6618,6626]|||||||||C0699129|202421|11289|warfarin
+113	--- Continue ASA , plavix|ASA[6689,6692]|||||||||C1740879|667904|9525|salicylic acid
+113	--- Continue ASA , plavix|plavix[6695,6701]|||||||||C0633084|174742|32968|clopidogrel
+117	--- no need for steroids now|steroids[6798,6806]||||||||||10072|10072|steroids
+121	--- pain control with diluadid , tylenol|tylenol[6992,6999]||||||||||202433|161|paracetamol
+122	--- lovenox tonight x1 , hold AM dose per CMED CCU|lovenox[7004,7011]||||||x1[7020,7022]|||C0728963|225036|67108|enoxaparin
+133	--- continue unasyn|unasyn[7267,7273]|||||||||C0971675|57773|733|ampicillin
+136	--- RISS - tight glucose control pre-op|RISS[7317,7321]||||||||||||
+138	--- Protonix , Lovenox , R boot as per CMED CCU|Protonix[7366,7374]|||||||||C0876139|261624|40790|pantoprazole
+138	--- Protonix , Lovenox , R boot as per CMED CCU|Lovenox[7377,7384]|||||||||C0728963|225036|67108|enoxaparin
+142	Full --> DNR / DNI|DNR[7444,7447]||||||||||||
+147	Late 03-23 found with afib and RVR , given beta blocker with min. response , started dilt.|beta blocker[7718,7730]||||||||||401870|401870|beta blocker
+147	Late 03-23 found with afib and RVR , given beta blocker with min. response , started dilt.|dilt[7760,7764]|||||||||C1601858|540618|3443|diltiazem
+149	Received 2 mg dilaudid for pain o/n .|dilaudid[7787,7795]|||2mg[7782,7786]||||||C2740077|897697|3423|hydromorphone
+150	On 03-24 AM p/w with respiratory failure , continued tachycardia on dilt.|dilt[7879,7883]|||||||||C1601858|540618|3443|diltiazem
+157	Pt 's respiratory distress is most likely on setting of aspiration pneumonia vs. pneumonitis in the setting of depressed mental status secondary to post-operative narcotics .|narcotics[8341,8350]||||||||||||
+158	Pt was pan-cultured and switched from unasyn ( started at OSH for foot ulcer ) to zosyn .|zosyn[8435,8440]|||||||||C0250482|74170|8339|piperacillin
+158	Pt was pan-cultured and switched from unasyn ( started at OSH for foot ulcer ) to zosyn .|unasyn[8391,8397]|||||||||C0971675|57773|733|ampicillin
+159	Vanco was added for possible nosocomial infection .|Vanco[8443,8448]||||||||||||
+164	Atrial fibrillation was rate-controlled on dilt drip .|dilt[8897,8901]|||||drip[8902,8906]||||C1601858|540618|3443|diltiazem
+165	Dilt drip was discontinued and metoprolol titrated up .|Dilt[8909,8913]|||||drip[8914,8918]||||C1601858|540618|3443|diltiazem
+165	Dilt drip was discontinued and metoprolol titrated up .|metoprolol[8940,8950]|||||||||C0025859|6918|6918|metoprolol
+168	Then , noted to be volume overloaded and diuresed with lasix .|lasix[9152,9157]|||||||||C0699992|202991|4603|furosemide
+169	Pt had depressed mental status on transfer to CMED in setting of narcotics .|narcotics[9225,9234]||||||||||||
+170	She was then started on propofol while intubated .|propofol[9261,9269]|||||||||C0033487|8782|8782|propofol
+172	Mental status improved during times when propofol was held .|propofol[9394,9402]|||||||||C0033487|8782|8782|propofol
+174	All sedating medications including prn narcotics were held and mental status cleared somewhat .|narcotics[9549,9558]||||||||prn[9545,9548]||||
+175	s/p hip fx repair : started on lovenox for anti-coagulation .|lovenox[9637,9644]|||||||||C0728963|225036|67108|enoxaparin
+176	Given standing NSAID , tylenol for pain control .|NSAID[9683,9688]||||||||||889|889|nsaid
+176	Given standing NSAID , tylenol for pain control .|tylenol[9691,9698]||||||||||202433|161|paracetamol
+180	Initially got steroids upon intubation .|steroids[9876,9884]||||||||||10072|10072|steroids
+187	- atrovent standing .|atrovent[10091,10099]|||||||||C0591130|151390|7213|ipratropium
+188	prn albuterol only given A fib with RVR|albuterol[10115,10124]||||||||prn[10111,10114]|C0001927|435|435|salbutamol
+189	- inhaled steroids|inhaled steroids[10153,10169]||||||||||10072|10072|inhaled steroids
+193	Had received unasyn , vanc , zosyn during hospital course for cellulitis and other unclear reasons , including possible vent associated pna .|unasyn[10236,10242]|||||||||C0971675|57773|733|ampicillin
+193	Had received unasyn , vanc , zosyn during hospital course for cellulitis and other unclear reasons , including possible vent associated pna .|vanc[10245,10249]||||||||||||
+193	Had received unasyn , vanc , zosyn during hospital course for cellulitis and other unclear reasons , including possible vent associated pna .|zosyn[10252,10257]|||||||||C0250482|74170|8339|piperacillin
+195	Afebrile > 24 hours off abx .|abx[10412,10415]|||||||24 hours[10399,10407]|||||
+197	No abx unless source found a.fib with RVR - Has ppm , so can have lot of nodal agents .|abx[10443,10446]||||||||||||
+198	Now rate controlled on metop 125 tid and dilt .|dilt[10569,10573]||||||tid[10561,10564]|||C1601858|540618|3443|diltiazem
+203	CAD : on asa , b blocker , ace .|asa[10707,10710]|||||||||C1740879|667904|9525|salicylic acid
+203	CAD : on asa , b blocker , ace .|ace[10725,10728]||||||||||836|836|ace
+204	No statin .|statin[10734,10740]||||||||||||
+214	Overnight on pt 's first evening on the floor , she had episode of desaturation with inc O2 requirement ( 4L -> 6L -> sating 91% on NRB ) - CXR with worsening - non responsive to lasix .|lasix[11242,11247]|||4L[11169,11171]||||||C0699992|202991|4603|furosemide
+215	Family meeting held and pt made clear wishes after extubation that she does not want to be intubated again and made DNR / DNI .|DNR[11366,11369]||||||||||||
+218	All four children in pts room and agree on CMO - want to d/c c-collar and start morphine ggt .|morphine[11507,11515]|||||||||C0026549|7052|7052|morphine
+230	BP : 159-161-139-98 ( after morphine )/ 69 HR : 148 --> 88 ; rr : 28-40 O2 : 94% NRB|morphine[11980,11988]|||||||69 HR[11992,11997]||C0026549|7052|7052|morphine
+232	Start morphine ggt and titrate to comfort .|morphine[12154,12162]|||||||||C0026549|7052|7052|morphine
+239	1. Coumadin 2 mg once daily ( stopped recently due to risk of GI bleed )|Coumadin[12437,12445]|||2mg[12446,12450]|||once daily[12451,12461]|||C2709905|855303|11289|warfarin
+240	2. Zoloft 100 mg once daily|Zoloft[12510,12516]|||100mg[12517,12523]|||once daily[12524,12534]|||C1603083|568875|36437|sertraline
+241	3. Toprol 100 mg BID|Toprol[12538,12544]|||100mg[12545,12551]|||BID[12552,12555]||||1370485|6918|metoprolol
+242	4. Lasix 40 mg BID|Lasix[12559,12564]|||40mg[12565,12570]|||BID[12571,12574]|||C1597894|565458|4603|furosemide
+244	6. Plavix 75 mg once daily|Plavix[12601,12607]|||75mg[12608,12613]|||once daily[12614,12624]|||C1607286|573094|32968|clopidogrel
+245	7. KCl 40 mEq once daily|KCl[12628,12631]|||40mEq[12632,12638]|||once daily[12639,12649]|||C0981677|891453|8591|potassium chloride
+246	8. Prandin 0.5 mg once daily|Prandin[12653,12660]|||0.5mg[12661,12667]|||once daily[12668,12678]|||C1607328|573136|73044|repaglinide
+247	9. Unasyn 3 gIV Q8hours|Unasyn[12682,12688]|||3[12689,12690]|||Q8hours[12695,12702]|||C0971675|57773|733|ampicillin

@@ -1,0 +1,8 @@
+c="attending" 13:0 13:0||c="faye b. jones , m.d." 13:2 13:6||t="coref person"
+c="patient" 18:0 18:0||c="she" 21:3 21:3||c="she" 22:0 22:0||c="she" 22:13 22:13||c="her" 22:17 22:17||c="she" 23:7 23:7||c="her" 24:5 24:5||c="her" 25:4 25:4||c="her" 26:0 26:0||c="her" 26:8 26:8||c="she" 29:0 29:0||c="she" 30:11 30:11||c="she" 31:0 31:0||c="her" 49:14 49:14||c="she" 50:0 50:0||c="patient" 51:0 51:0||c="dunn , rachel finch" 103:3 103:6||c="she" 139:0 139:0||c="her" 140:0 140:0||c="pt" 142:4 142:4||c="she" 143:14 143:14||c="patient" 145:0 145:0||c="the patient" 147:6 147:7||c="her" 149:14 149:14||c="you" 172:6 172:6||c="you" 192:6 192:6||c="you" 193:6 193:6||c="your" 194:1 194:1||c="your" 195:2 195:2||c="you" 196:3 196:3||c="you" 198:5 198:5||c="you" 198:15 198:15||c="your" 204:12 204:12||t="coref person"
+c="an ng lavage" 27:0 27:2||c="there" 27:6 27:6||t="coref test"
+c="avm 's" 144:5 144:6||c="which" 144:13 144:13||t="coref problem"
+c="pcp" 145:6 145:6||c="pcp" 146:14 146:14||t="coref person"
+c="dr pannell" 152:4 152:5||c="dr pannell" 174:6 174:7||c="dr pannell" 192:8 192:9||c="dr pannell" 195:5 195:6||t="coref person"
+c="provider" 203:0 203:0||c="michelle susan , md" 203:2 203:5||t="coref person"
+c="your doctor" 195:2 195:3||c="primary doctor" 204:0 204:1||c="your doctor" 204:12 204:13||t="coref person"

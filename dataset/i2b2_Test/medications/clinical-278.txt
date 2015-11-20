@@ -1,0 +1,46 @@
+3	VT s/p cardiac cath , stent and amp ; amio loading|amio[86,90]||||||||||||
+21	AMIODARONE 400 MG PO BID Starting Today ( 01/06 )|AMIODARONE[503,513]|||400MG[514,520]||PO[521,523]|BID[524,527]||||834348|703|amiodarone
+27	DIGOXIN and AMIODARONE HCL|DIGOXIN[688,695]|||||||||C0012265|3407|3407|digoxin
+27	DIGOXIN and AMIODARONE HCL|AMIODARONE HCL[700,714]||||||||||203114|203114|amiodarone hcl
+28	Reason for override :  ok ENTERIC COATED ASA ( ASPIRIN ENTERIC COATED ) 325 MG PO QD DIGOXIN 0.0625 MG PO QD|DIGOXIN[801,808]|||0.0625MG[809,818]||PO[795,797]|QD[798,800]||||245273|3407|digoxin
+28	Reason for override :  ok ENTERIC COATED ASA ( ASPIRIN ENTERIC COATED ) 325 MG PO QD DIGOXIN 0.0625 MG PO QD|ENTERIC COATED ASA ( ASPIRIN ENTERIC COATED )[742,787]|||325MG[788,794]||PO[819,821]||||C0691137|198467|1191|acetylsalicylic acid
+30	Override added on 01/03/04 by TIKNEAV , JEFFCI SUOT A. , M.D. on order for AMIODARONE PO ( ref # 23731718 )|AMIODARONE[920,930]|||||PO[931,933]||||C1244589|370568|703|amiodarone
+32	DIGOXIN and AMIODARONE HCL|DIGOXIN[977,984]|||||||||C0012265|3407|3407|digoxin
+32	DIGOXIN and AMIODARONE HCL|AMIODARONE HCL[989,1003]||||||||||203114|203114|amiodarone hcl
+35	Override added on 01/02/04 by KOTESLENT , ANT ODEWYJU , M.D. on order for AMIODARONE IV 1 ( ref # 45803793 )|AMIODARONE[1139,1149]|||||IV[1150,1152]||||C0002598|703|703|amiodarone
+37	DIGOXIN and AMIODARONE HCL|DIGOXIN[1198,1205]|||||||||C0012265|3407|3407|digoxin
+37	DIGOXIN and AMIODARONE HCL|AMIODARONE HCL[1210,1224]||||||||||203114|203114|amiodarone hcl
+42	AMIODARONE HCL and DIGOXIN|AMIODARONE HCL[1380,1394]||||||||||203114|203114|amiodarone hcl
+42	AMIODARONE HCL and DIGOXIN|DIGOXIN[1399,1406]|||||||||C0012265|3407|3407|digoxin
+44	MVI THERAPEUTIC W / MINERALS ( THERAP VITS / MINERALS ) 1 TAB PO QD|MVI[1444,1447]||||1 TAB[1500,1505]|PO[1506,1508]|QD[1509,1511]|||C1966765|747667|747667|Multivitamin Injection
+46	Override added on 01/02/04 by KOTESLENT , ANT ODEWYJU , M.D. on order for ZOCOR PO ( ref # 71920299 )|ZOCOR[1606,1611]|||||PO[1612,1614]||||C3241707|1187973|36567|simvastatin
+48	NIACIN , VIT .|NIACIN[1670,1676]|||||||||C0027996|7393|7393|nicotinic acid
+49	B-3 and SIMVASTATIN|SIMVASTATIN[1694,1705]|||||||||C0074554|36567|36567|simvastatin
+51	ZOCOR ( SIMVASTATIN ) 40 MG PO QHS|ZOCOR ( SIMVASTATIN )[1742,1763]|||40MG[1764,1769]||PO[1770,1772]|QHS[1773,1776]||||152923|36567|simvastatin
+57	NIACIN , VIT .|NIACIN[1982,1988]|||||||||C0027996|7393|7393|nicotinic acid
+58	B-3 and SIMVASTATIN|SIMVASTATIN[2006,2017]|||||||||C0074554|36567|36567|simvastatin
+60	TOPROL XL ( METOPROLOL ( SUST.|METOPROLOL[2066,2076]|||||||||C0025859|6918|6918|metoprolol
+60	TOPROL XL ( METOPROLOL ( SUST.|TOPROL XL[2054,2063]|||||||||C2723006|865575|6918|metoprolol
+64	Number of Doses Required ( approximate ) :  5 PLAVIX ( CLOPIDOGREL ) 75 MG PO QD Starting Today ( 01/06 ) KEFLEX ( CEPHALEXIN ) 500 MG PO QID X 40 doses AMIODARONE 400 MG PO QD|AMIODARONE[2350,2360]|||400MG[2361,2367]||PO[2272,2274]|QD[2275,2277]||||834348|703|amiodarone
+64	Number of Doses Required ( approximate ) :  5 PLAVIX ( CLOPIDOGREL ) 75 MG PO QD Starting Today ( 01/06 ) KEFLEX ( CEPHALEXIN ) 500 MG PO QID X 40 doses AMIODARONE 400 MG PO QD|KEFLEX ( CEPHALEXIN )[2303,2324]|||500MG[2325,2331]||PO[2332,2334]|QID[2335,2338]||||212339|2231|cephalexin
+64	Number of Doses Required ( approximate ) :  5 PLAVIX ( CLOPIDOGREL ) 75 MG PO QD Starting Today ( 01/06 ) KEFLEX ( CEPHALEXIN ) 500 MG PO QID X 40 doses AMIODARONE 400 MG PO QD|PLAVIX ( CLOPIDOGREL )[2243,2265]|||75MG[2266,2271]||PO[2368,2370]|||||213169|32968|clopidogrel
+70	DIGOXIN and AMIODARONE HCL|DIGOXIN[2480,2487]|||||||||C0012265|3407|3407|digoxin
+70	DIGOXIN and AMIODARONE HCL|AMIODARONE HCL[2492,2506]||||||||||203114|203114|amiodarone hcl
+81	PRINCIPAL DISCHARGE DIAGNOSIS ; Responsible After Study for Causing Admission ) VT s / p cardiac cath , stent and amio loading|amio[2849,2853]||||||||||||
+91	Given amio bolu , started on gtt and transferred to NVH for further evaluation .|amio[3505,3509]||||||||||||
+98	**** Course  1) CV ( R ) finished amio IV load then started on po , agressive lytes ; although interrogation showed >100 episodes of VT ( as / x ) , pt prefers med therapy as opposed to ablation ( I ) enzymes mildly elevated but not actively ischemic ; lipids , ASA , statin , BB ; Adenosine thal|amio[3891,3895]|||||IV[3896,3898]|||||||
+98	**** Course  1) CV ( R ) finished amio IV load then started on po , agressive lytes ; although interrogation showed >100 episodes of VT ( as / x ) , pt prefers med therapy as opposed to ablation ( I ) enzymes mildly elevated but not actively ischemic ; lipids , ASA , statin , BB ; Adenosine thal|ASA[4119,4122]|||||||||C1740879|667904|9525|salicylic acid
+98	**** Course  1) CV ( R ) finished amio IV load then started on po , agressive lytes ; although interrogation showed >100 episodes of VT ( as / x ) , pt prefers med therapy as opposed to ablation ( I ) enzymes mildly elevated but not actively ischemic ; lipids , ASA , statin , BB ; Adenosine thal|statin[4125,4131]||||||||||||
+98	**** Course  1) CV ( R ) finished amio IV load then started on po , agressive lytes ; although interrogation showed >100 episodes of VT ( as / x ) , pt prefers med therapy as opposed to ablation ( I ) enzymes mildly elevated but not actively ischemic ; lipids , ASA , statin , BB ; Adenosine thal|thal[4149,4153]||||||||||||
+98	**** Course  1) CV ( R ) finished amio IV load then started on po , agressive lytes ; although interrogation showed >100 episodes of VT ( as / x ) , pt prefers med therapy as opposed to ablation ( I ) enzymes mildly elevated but not actively ischemic ; lipids , ASA , statin , BB ; Adenosine thal|Adenosine[4139,4148]|||||||||C0001443|296|296|adenosine
+99	1/4 and echo 1/4 to look for signs of ischemia as active cause for VT ( P ) JVP at angle of jaw 1/4 --> giving 20 Lasix ; dig level 1/4 1.3 --> 1/2 dose as on Amio  2) Endo :  elevated glu on admit BMP and FSG also concurring --> follow and Lispro ; will probably need w / u as outpt  3|Lasix[4268,4273]|||||||||C0699992|202991|4603|furosemide
+99	1/4 and echo 1/4 to look for signs of ischemia as active cause for VT ( P ) JVP at angle of jaw 1/4 --> giving 20 Lasix ; dig level 1/4 1.3 --> 1/2 dose as on Amio  2) Endo :  elevated glu on admit BMP and FSG also concurring --> follow and Lispro ; will probably need w / u as outpt  3|glu[4339,4342]||||||||||4388|4388|fibrinolysin
+99	1/4 and echo 1/4 to look for signs of ischemia as active cause for VT ( P ) JVP at angle of jaw 1/4 --> giving 20 Lasix ; dig level 1/4 1.3 --> 1/2 dose as on Amio  2) Endo :  elevated glu on admit BMP and FSG also concurring --> follow and Lispro ; will probably need w / u as outpt  3|Amio[4313,4317]||||||||||||
+99	1/4 and echo 1/4 to look for signs of ischemia as active cause for VT ( P ) JVP at angle of jaw 1/4 --> giving 20 Lasix ; dig level 1/4 1.3 --> 1/2 dose as on Amio  2) Endo :  elevated glu on admit BMP and FSG also concurring --> follow and Lispro ; will probably need w / u as outpt  3|Lispro[4395,4401]|||||||||C0293359|86009|86009|insulin,lispro,human/rdna
+100	) Pulm :  baseline PFTs as staring amio  4) GI :  baseline LFTs wnl ; taking cardiac / ADA diet as glu remains elevated  5) Renal :  baseline CRI ( 1.2-1.6 ) with elevation at admission probably prerenal ; will monitor BUN / Cr after giving Lasix  6) Proph :|amio[4475,4479]|||4[4481,4482]|||||||||
+100	) Pulm :  baseline PFTs as staring amio  4) GI :  baseline LFTs wnl ; taking cardiac / ADA diet as glu remains elevated  5) Renal :  baseline CRI ( 1.2-1.6 ) with elevation at admission probably prerenal ; will monitor BUN / Cr after giving Lasix  6) Proph :|Lasix[4681,4686]|||6[4688,4689]||||||C0699992|202991|4603|furosemide
+101	PPI and pneumoboots|PPI[4700,4703]||||||||||1364533|1364533|pyrophosphate
+103	The patient was admitted to the cardiology service and commenced amiodarone loading .|amiodarone[4817,4827]|||||||||C0002598|703|703|amiodarone
+104	Adenosine stress MIBI revealed a small reversible defect in the PDA territory and the patient underwent coronary catheterisation on 1/6/0004 which revealed a 70% lesion in the SVG to PDA -> cypher stented successfully .|Adenosine[4839,4848]|||||||||C0001443|296|296|adenosine
+109	This will be treated empirically with a 10 day course of Keflex .|Keflex[5641,5647]|||||||10 day[5624,5630]||C0700517|203167|2231|cephalexin
+111	In terms of his amiodarone , he will be discharged on 400mg po bid for a further 7 days followed by 400mg qd thereafter .|amiodarone[5769,5779]|||400mg[5807,5812]||po[5813,5815]|bid[5816,5819]|7 days[5834,5840]|||834348|703|amiodarone

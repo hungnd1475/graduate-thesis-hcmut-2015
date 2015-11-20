@@ -1,0 +1,6 @@
+rawTerm="chest pain|ANA"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="861"
+rawTerm="r lung mass|ANA"||cui="C0024109"||concept="Lung"||prefer="Lung"||semantic=[bpoc]||confidence="660"
+rawTerm="cxr|EQP"||cui="C0039985"||concept="cxr"||prefer="Chest X-ray"||semantic=[diap]||confidence="1000"
+rawTerm="chest ct|ANA"||cui="C0817096"||concept="Chest"||prefer="Chest"||semantic=[blor]||confidence="861"
+rawTerm="chest ct|EQP"||cui="C0202823"||concept="Chest CT"||prefer="Chest CT"||semantic=[diap]||confidence="1000"
+rawTerm="a needle biopsy|EQP"||cui="C0005560"||concept="Biopsy, Needle"||prefer="Needle biopsy procedure"||semantic=[diap]||confidence="1000"

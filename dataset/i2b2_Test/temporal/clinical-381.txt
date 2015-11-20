@@ -1,0 +1,6 @@
+rawTerm="9/17/2005 12:00:00 AM"||temporal="9/17/2005"
+rawTerm="09/17/2005"||temporal="09/17/2005"
+rawTerm="09/20/2005"||temporal="09/20/2005"
+rawTerm="CRASSBELBKOTE , NEE 537-39-30-6 T83"||temporal="7-39-30"
+rawTerm="09/20/05 AT 10:00 AM"||temporal="09/20/05"
+rawTerm="JOAS , CENI , C.N.M. ( FJ992 ) 09/19/05 09:50 AM"||temporal="09/19/05"

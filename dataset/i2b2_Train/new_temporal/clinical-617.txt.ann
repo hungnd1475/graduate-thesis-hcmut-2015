@@ -1,0 +1,56 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2015-09-20" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2015-09-20" type="DATE" val="2015-09-20" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2015-09-30" type="DATE" val="2015-09-30" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1961-09-28" type="DATE" val="1961-09-28" mod="NA" />
+<TIMEX3 id="T4" start="712" end="721" text="yesterday" type="DATE" val="TPZ-0000-00-01" mod="NA" />
+<TIMEX3 id="T5" start="2096" end="2106" text="2015-03-18" type="DATE" val="2015-03-18" mod="NA" />
+<TIMEX3 id="T6" start="3321" end="3331" text="many years" type="DATE" val="TPZ-0003" mod="APPROX" />
+<TIMEX3 id="T7" start="3385" end="3389" text="2014" type="DATE" val="2014" mod="NA" />
+<TIMEX3 id="T8" start="3470" end="3474" text="2010" type="DATE" val="2010" mod="NA" />
+<TIMEX3 id="T9" start="4837" end="4853" text="2015-09-20 03:54" type="TIME" val="2015-09-20T03:54" mod="NA" />
+<TIMEX3 id="T11" start="4971" end="4987" text="2015-09-28 07:50" type="TIME" val="2015-09-28T07:50" mod="NA" />
+<TIMEX3 id="T13" start="5062" end="5078" text="2015-09-20 03:54" type="TIME" val="2015-09-20T03:54" mod="NA" />
+<TIMEX3 id="T15" start="5124" end="5140" text="2015-09-20 03:54" type="TIME" val="2015-09-20T03:54" mod="NA" />
+<TIMEX3 id="T17" start="5234" end="5250" text="2015-09-20 03:54" type="TIME" val="2015-09-20T03:54" mod="NA" />
+<TIMEX3 id="T19" start="5311" end="5327" text="2015-09-20 03:54" type="TIME" val="2015-09-20T03:54" mod="NA" />
+<TIMEX3 id="T21" start="5383" end="5399" text="2015-09-20 03:54" type="TIME" val="2015-09-20T03:54" mod="NA" />
+<TIMEX3 id="T23" start="5443" end="5459" text="2015-09-29 07:25" type="TIME" val="2015-09-29T07:25" mod="NA" />
+<TIMEX3 id="T25" start="5493" end="5509" text="2015-09-22 03:04" type="TIME" val="2015-09-22T03:04" mod="NA" />
+<TIMEX3 id="T27" start="5566" end="5582" text="2015-09-22 03:04" type="TIME" val="2015-09-22T03:04" mod="NA" />
+<TIMEX3 id="T29" start="5708" end="5724" text="2015-09-22 03:04" type="TIME" val="2015-09-22T03:04" mod="NA" />
+<TIMEX3 id="T31" start="5793" end="5809" text="2015-09-28 03:04" type="TIME" val="2015-09-28T03:04" mod="NA" />
+<TIMEX3 id="T33" start="5867" end="5883" text="2015-09-28 03:04" type="TIME" val="2015-09-28T03:04" mod="NA" />
+<TIMEX3 id="T35" start="6008" end="6024" text="2015-09-28 03:04" type="TIME" val="2015-09-28T03:04" mod="NA" />
+<TIMEX3 id="T37" start="6054" end="6059" text="04-19" type="DATE" val="1961-04-19" mod="NA" />
+<TIMEX3 id="T38" start="6105" end="6121" text="2015-09-25 02:20" type="TIME" val="2015-09-25T02:20" mod="NA" />
+<TIMEX3 id="T40" start="6204" end="6220" text="2015-09-25 02:20" type="TIME" val="2015-09-25T02:20" mod="NA" />
+<TIMEX3 id="T42" start="6301" end="6317" text="2015-09-25 02:20" type="TIME" val="2015-09-25T02:20" mod="NA" />
+<TIMEX3 id="T44" start="6378" end="6394" text="2015-09-25 02:20" type="TIME" val="2015-09-25T02:20" mod="NA" />
+<TIMEX3 id="T46" start="6465" end="6481" text="2015-09-25 02:20" type="TIME" val="2015-09-25T02:20" mod="NA" />
+<TIMEX3 id="T48" start="6525" end="6541" text="2015-09-25 02:20" type="TIME" val="2015-09-25T02:20" mod="NA" />
+<TIMEX3 id="T50" start="6651" end="6667" text="2015-09-25 02:20" type="TIME" val="2015-09-25T02:20" mod="NA" />
+<TIMEX3 id="T52" start="6727" end="6743" text="2015-09-25 02:20" type="TIME" val="2015-09-25T02:20" mod="NA" />
+<TIMEX3 id="T54" start="6807" end="6823" text="2015-09-25 02:20" type="TIME" val="2015-09-25T02:20" mod="NA" />
+<TIMEX3 id="T56" start="6872" end="6888" text="2015-09-25 02:20" type="TIME" val="2015-09-25T02:20" mod="NA" />
+<TIMEX3 id="T58" start="7144" end="7149" text="09-28" type="DATE" val="1961-09-28" mod="NA" />
+<TIMEX3 id="T59" start="7212" end="7222" text="2015-09-24" type="DATE" val="2015-09-24" mod="NA" />
+<TIMEX3 id="T60" start="8104" end="8114" text="2015-07-20" type="DATE" val="2015-07-20" mod="NA" />
+<TIMEX3 id="T61" start="8118" end="8119" text="2" type="TIME" val="2015-07-20T02:00" mod="NA" />
+<TIMEX3 id="T62" start="9288" end="9293" text="08-20" type="DATE" val="1961-08-20" mod="NA" />
+<TIMEX3 id="T63" start="9969" end="9979" text="2014-08-15" type="DATE" val="2014-08-15" mod="NA" />
+<TIMEX3 id="T64" start="10010" end="10019" text="this time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T65" start="13408" end="13413" text="10-12" type="DATE" val="1961-10-12" mod="NA" />
+<TIMEX3 id="T66" start="13427" end="13432" text="10-26" type="DATE" val="1961-10-26" mod="NA" />
+<TIMEX3 id="T67" start="13747" end="13761" text="several months" type="DATE" val="TPZ-0000-03" mod="APPROX" />
+<TIMEX3 id="T68" start="15576" end="15588" text="several days" type="DATE" val="TPZ-0000-00-03" mod="APPROX" />
+<TIMEX3 id="T69" start="16008" end="16018" text="2015-10-12" type="DATE" val="2015-10-12" mod="NA" />
+<TIMEX3 id="T70" start="16356" end="16362" text="Day )." type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T71" start="16364" end="16444" text="5. Levetiracetam 500 mg Tablet Sig : Four ( 4 ) Tablet PO BID ( 2 times a day )." type="TIME" val="TPZ+0000-00-00T05:00" mod="NA" />
+<TIMEX3 id="T72" start="16802" end="16808" text="day )." type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T73" start="16810" end="16882" text="10. Senna 8.6 mg Tablet Sig : One ( 1 ) Tablet PO BID ( 2 times a day )." type="TIME" val="TPZ+0000-00-00T10:00" mod="NA" />
+<TIMEX3 id="T74" start="17098" end="17104" text="day )." type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T75" start="17629" end="17634" text="10-12" type="DATE" val="1961-10-12" mod="NA" />
+<TIMEX3 id="T76" start="17674" end="17679" text="10-26" type="DATE" val="1961-10-26" mod="NA" />
+<TIMEX3 id="T77" start="18084" end="18094" text="2015-10-05" type="DATE" val="2015-10-05" mod="NA" />
+<TIMEX3 id="T78" start="18145" end="18155" text="2015-10-20" type="DATE" val="2015-10-20" mod="NA" />
+<TIMEX3 id="T79" start="18202" end="18221" text="2015-10-26 at 10 am" type="TIME" val="2015-10-26T10:00" mod="NA" />

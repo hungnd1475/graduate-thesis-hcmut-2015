@@ -1,0 +1,6 @@
+rawTerm="an echocardiogram|EQP"||cui="C0013516"||concept="Echocardiogram"||prefer="Echocardiography"||semantic=[diap]||confidence="1000"
+rawTerm="an ejection fraction|EQP"||cui="C0489482"||concept="ejection fraction"||prefer="Ejection fraction (procedure)"||semantic=[diap]||confidence="1000"
+rawTerm="an ejection fraction|INDI"||cui="C1264633"||concept="Fraction"||prefer="Fraction of"||semantic=[qnco]||confidence="861"
+rawTerm="a patent foramen ovale|ANA"||cui="C1110599"||concept="Foramen ovale"||prefer="Cranial foramen ovale"||semantic=[bsoj]||confidence="901"
+rawTerm="mildly dilated left atrium|ANA"||cui="C0225860"||concept="Left Atrium"||prefer="Left atrial structure"||semantic=[bpoc]||confidence="1000"
+rawTerm="the procedure|EQP"||cui="C0184661"||concept="Procedure"||prefer="Interventional procedure"||semantic=[diap|topp]||confidence="1000"

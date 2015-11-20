@@ -1,0 +1,7 @@
+rawTerm="2012-05-21"||temporal="2012-05-21"
+rawTerm="2012-05-25"||temporal="2012-05-25"
+rawTerm="1957-01-05"||temporal="1957-01-05"
+rawTerm="The patient was transferred on the evening of 2012-05-22 to the ICU given persistent carbon dioxide retention and respiratory acidosis and the intermittent mental status changes ."||temporal="2012-05-22"
+rawTerm="D : 2012-08-01 12:27:33"||temporal="2012-08-01"
+rawTerm="T : 2012-08-01 20:27:59"||temporal="2012-08-01"
+rawTerm="Signed electronically by : DR. Kenneth Wilford on : Maxine 2012-08-16 12:22 PM"||temporal="2012-08-16"

@@ -1,0 +1,6 @@
+rawTerm="2012-04-20"||temporal="2012-04-20"
+rawTerm="2012-05-01"||temporal="2012-05-01"
+rawTerm="1952-06-24"||temporal="1952-06-24"
+rawTerm="D : 2012-05-01 22:34"||temporal="2012-05-01"
+rawTerm="T : 2012-05-02 06:55"||temporal="2012-05-02"
+rawTerm="Signed electronically by : DR. Jane Nix on : MON 2012-05-07 9:28 AM"||temporal="2012-05-07"

@@ -1,0 +1,7 @@
+c="taroby patient" 21:10 21:11||c="his" 22:0 22:0||c="he" 22:8 22:8||c="he" 25:5 25:5||c="he" 26:4 26:4||c="his" 26:10 26:10||c="he" 27:0 27:0||c="mr. patient" 28:4 28:5||c="dr. patient" 28:8 28:9||c="he" 29:2 29:2||c="he" 30:2 30:2||c="his" 30:9 30:9||c="his" 30:16 30:16||c="he" 31:4 31:4||c="the patient" 40:0 40:1||c="mr. patient" 56:0 56:1||c="he" 56:18 56:18||c="he" 57:0 57:0||c="he" 59:9 59:9||c="he" 60:0 60:0||c="neurology" 60:9 60:9||c="mr. patient" 61:0 61:1||c="his" 61:10 61:10||c="he" 63:0 63:0||c="mr. patient" 73:0 73:1||c="he" 74:0 74:0||c="dr. guabenfranda patient" 74:7 74:9||c="guabenfranda patient , m.d." 79:0 79:3||t="coref person"
+c="a head ct scan" 23:0 23:3||c="an mri scan of the spine" 23:8 23:13||c="an mri scan" 60:5 60:7||t="coref test"
+c="radiation therapy" 26:7 26:8||c="the radiation therapy" 27:4 27:6||t="coref treatment"
+c="a witnessed episode" 30:4 30:6||c="which" 30:8 30:8||t="coref problem"
+c="the physical examination" 42:0 42:2||c="the neurological examination" 54:0 54:2||t="coref test"
+c="the procedure" 57:2 57:3||c="that" 58:7 58:7||t="coref treatment"
+c="inferior vena cava filter placement" 56:5 56:9||c="an ivc filter placement" 62:0 62:3||c="ivc filter placement" 65:0 65:2||t="coref treatment"

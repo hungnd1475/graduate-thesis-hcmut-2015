@@ -1,0 +1,21 @@
+<TIMEX3 id="T0" start="48" end="66" text="7/30/1993 12:00:00" type="TIME" val="1993-07-30T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="140" end="154" text="ADMISSION DATE" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T3" start="158" end="166" text="07-30-93" type="DATE" val="1993-07-30" mod="NA" />
+<TIMEX3 id="T4" start="186" end="194" text="08-10-93" type="DATE" val="1993-08-10" mod="NA" />
+<TIMEX3 id="T5" start="634" end="642" text="08/02/93" type="DATE" val="1993-08-02" mod="NA" />
+<TIMEX3 id="T6" start="680" end="681" text="3" type="TIME" val="1993-08-02T03:00" mod="NA" />
+<TIMEX3 id="T7" start="685" end="693" text="08/02/93" type="DATE" val="1993-08-02" mod="NA" />
+<TIMEX3 id="T8" start="758" end="759" text="1" type="TIME" val="1993-08-02T01:00" mod="NA" />
+<TIMEX3 id="T9" start="763" end="771" text="08/02/93" type="DATE" val="1993-08-02" mod="NA" />
+<TIMEX3 id="T10" start="817" end="825" text="07/30/93" type="DATE" val="1993-07-30" mod="NA" />
+<TIMEX3 id="T11" start="866" end="874" text="07/30/93" type="DATE" val="1993-07-30" mod="NA" />
+<TIMEX3 id="T12" start="903" end="911" text="07/30/93" type="DATE" val="1993-07-30" mod="NA" />
+<TIMEX3 id="T13" start="949" end="957" text="08/02/93" type="DATE" val="1993-08-02" mod="NA" />
+<TIMEX3 id="T14" start="1337" end="1345" text="May 1992" type="DATE" val="1992-05" mod="NA" />
+<TIMEX3 id="T15" start="1550" end="1559" text="that time" type="DATE" val="1993-07-30" mod="NA" />
+<TIMEX3 id="T16" start="3607" end="3618" text="the weekend" type="DATE" val="1993-W30-WE" mod="NA" />
+<TIMEX3 id="T17" start="3720" end="3725" text="07/31" type="DATE" val="1993-07-31" mod="NA" />
+<TIMEX3 id="T18" start="3862" end="3871" text="that time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T19" start="4186" end="4194" text="08/02/93" type="DATE" val="1993-08-02" mod="NA" />
+<TIMEX3 id="T20" start="4880" end="4897" text="the following day" type="DATE" val="TPZ+0000-00-01" mod="NA" />
+<TIMEX3 id="T21" start="5090" end="5095" text="08/05" type="DATE" val="1993-08-05" mod="NA" />

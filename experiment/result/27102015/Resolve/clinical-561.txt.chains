@@ -1,0 +1,3 @@
+c="taroby patient" 21:10 21:11||c="his" 22:0 22:0||c="he" 22:8 22:8||c="he" 25:5 25:5||c="he" 26:4 26:4||c="his" 26:10 26:10||c="he" 27:0 27:0||c="mr. patient" 28:4 28:5||c="he" 29:2 29:2||c="he" 30:2 30:2||c="his" 30:9 30:9||c="his" 30:16 30:16||c="he" 31:4 31:4||c="the patient" 40:0 40:1||c="mr. patient" 56:0 56:1||c="he" 56:18 56:18||c="he" 57:0 57:0||c="he" 59:9 59:9||c="he" 60:0 60:0||c="mr. patient" 61:0 61:1||c="his" 61:10 61:10||c="he" 63:0 63:0||c="mr. patient" 73:0 73:1||c="he" 74:0 74:0||t="coref person"
+c="a witnessed episode" 30:4 30:6||c="which" 30:8 30:8||t="coref problem"
+c="the procedure" 57:2 57:3||c="that" 58:7 58:7||t="coref treatment"

@@ -1,0 +1,2 @@
+42	He has been weaned off IV fluids and has been maintaining good blood glucose .|IV fluids[2280,2289]||||||||||390001|390001|iv fluids
+59	The patient is to be transferred to the Cambridge Hospital Hospital Special Care Nursery .|Special Care[2993,3005]||||||||||669616|669616|special care

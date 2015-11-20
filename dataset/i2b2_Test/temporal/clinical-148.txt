@@ -1,0 +1,8 @@
+rawTerm="2010-10-04"||temporal="2010-10-04"
+rawTerm="2010-10-17"||temporal="2010-10-17"
+rawTerm="1929-11-09"||temporal="1929-11-09"
+rawTerm="Since then the patient 's oxygenation has been improving and today , 10-17 , she is requiring .5 liters of keep her saturations above 94 ."||temporal="2010-10-17"
+rawTerm="As of the time of this dictation , on 2010-10-17 , the patient appears to be getting better ."||temporal="2010-10-17"
+rawTerm="She continues on her Prednisone taper for her asthma and this is day # 14 of antibiotics ."||temporal="2010-10-18"
+rawTerm="D : 2010-10-17 12:22"||temporal="2010-10-17"
+rawTerm="T : 2010-10-17 17:21"||temporal="2010-10-17"

@@ -1,0 +1,7 @@
+rawTerm="2010-05-17"||temporal="2010-05-17"
+rawTerm="2010-05-29"||temporal="2010-05-29"
+rawTerm="1923-11-09"||temporal="1923-11-09"
+rawTerm="However , the patient has noted some abdominal pain , intermittent times a couple of days , none on the day of admission ."||temporal="2010-05-17"
+rawTerm="D : 2010-05-27 14:29"||temporal="2010-05-27"
+rawTerm="T : 2010-05-27 14:10"||temporal="2010-05-27"
+rawTerm="Signed electronically by : DR. Kathy Tillis on : MON 2010-06-07 4:00 PM"||temporal="2010-06-07"

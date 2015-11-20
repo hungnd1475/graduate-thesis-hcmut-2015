@@ -1,0 +1,8 @@
+rawTerm="2015-05-13"||temporal="2015-05-13"
+rawTerm="2015-05-20"||temporal="2015-05-20"
+rawTerm="1813-05-16"||temporal="1813-05-16"
+rawTerm="She was seen by her cardiologist , Dr. Clements and had a Holter monitor on 2015-05-01 , that showed first degree AV block with a rate that ranged between 35 to 53 beats per minute ."||temporal="2015-05-01"
+rawTerm="Bradycardia followed by outpatient cardiologist with a Holter monitor on 2015-05-01 , with first degree AV block and a heart rate ranging between 35 to 53 beats per minute ."||temporal="2015-05-01"
+rawTerm="2015-05-18 11:24:17"||temporal="2015-05-18"
+rawTerm="2015-05-18 14:58:16"||temporal="2015-05-18"
+rawTerm="MON 2015-07-27 9:58 AM"||temporal="2015-07-27"

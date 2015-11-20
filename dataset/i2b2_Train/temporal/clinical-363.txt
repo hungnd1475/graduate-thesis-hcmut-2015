@@ -1,0 +1,4 @@
+rawTerm="5100093"||temporal="100093"
+rawTerm="10/16/2005 12:00:00 AM"||temporal="10/16/2005"
+rawTerm="10/16/2005 10:38 AM"||temporal="10/16/2005"
+rawTerm="This is to notify you that your patient , DOUETNOUNBREUNKOLL , STENRESLYSE arrived in the Emergency Department at Ro Woodma Healthcare on 10/16/2005 10:38 AM ."||temporal="10/16/2005"

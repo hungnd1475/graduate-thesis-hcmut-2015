@@ -1,0 +1,6 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T1" start="37" end="47" text="2014-01-24" type="DATE" val="2014-01-24" mod="NA" />
+<TIMEX3 id="T2" start="66" end="76" text="1928-11-23" type="DATE" val="1928-11-23" mod="NA" />
+<TIMEX3 id="T3" start="1416" end="1422" text="Monday" type="DATE" val="1928-11-19" mod="NA" />
+<TIMEX3 id="T4" start="1427" end="1435" text="Thursday" type="DATE" val="1928-11-15" mod="NA" />
+<TIMEX3 id="T5" start="1439" end="1441" text="11" type="TIME" val="1928-11-15T11:00" mod="NA" />

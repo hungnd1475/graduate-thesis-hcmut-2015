@@ -1,0 +1,22 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2011-11-18" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2011-11-18" type="DATE" val="2011-11-18" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2011-11-22" type="DATE" val="2011-11-22" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1950-04-21" type="DATE" val="1950-04-21" mod="NA" />
+<TIMEX3 id="T4" start="452" end="462" text="2011-11-17" type="DATE" val="2011-11-17" mod="NA" />
+<TIMEX3 id="T5" start="510" end="534" text="the morning of admission" type="DATE" val="2011-11-18" mod="START" />
+<TIMEX3 id="T6" start="545" end="550" text="10/10" type="DATE" val="2011-10-10" mod="NA" />
+<TIMEX3 id="T7" start="1089" end="1099" text="12:30 p.m." type="TIME" val="2011-10-10T24:30" mod="NA" />
+<TIMEX3 id="T8" start="2441" end="2453" text="14 years ago" type="DATE" val="TPZ-0014" mod="NA" />
+<TIMEX3 id="T9" start="3628" end="3648" text="the time of transfer" type="DATE" val="2011-11-18" mod="NA" />
+<TIMEX3 id="T10" start="5012" end="5033" text="the following morning" type="DATE" val="2011-11-19" mod="START" />
+<TIMEX3 id="T11" start="5133" end="5150" text="the following day" type="DATE" val="TPZ+0000-00-01" mod="NA" />
+<TIMEX3 id="T12" start="5379" end="5400" text="the time of discharge" type="DATE" val="2011-11-18" mod="NA" />
+<TIMEX3 id="T13" start="5429" end="5434" text="11-20" type="DATE" val="2011-11-20" mod="NA" />
+<TIMEX3 id="T14" start="5808" end="5818" text="2011-11-20" type="DATE" val="2011-11-20" mod="NA" />
+<TIMEX3 id="T15" start="5913" end="5934" text="the time of discharge" type="DATE" val="2011-11-18" mod="NA" />
+<TIMEX3 id="T16" start="5948" end="5969" text="the time of discharge" type="DATE" val="2011-11-18" mod="NA" />
+<TIMEX3 id="T17" start="6057" end="6067" text="2011-11-21" type="DATE" val="2011-11-21" mod="NA" />
+<TIMEX3 id="T18" start="6634" end="6654" text="the day of discharge" type="DATE" val="2011-11-18" mod="NA" />
+<TIMEX3 id="T19" start="6838" end="6858" text="the day of discharge" type="DATE" val="2011-11-18" mod="NA" />
+<TIMEX3 id="T20" start="7753" end="7774" text="the time of discharge" type="DATE" val="2011-11-18" mod="NA" />
+<TIMEX3 id="T21" start="8058" end="8068" text="11:30 a.m." type="TIME" val="2011-11-18T11:30" mod="NA" />

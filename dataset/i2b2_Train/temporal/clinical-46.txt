@@ -1,0 +1,6 @@
+rawTerm="062287942"||temporal="228794"
+rawTerm="14021094"||temporal="1402109"
+rawTerm="12/22/2000 12:00:00 AM"||temporal="12/22/2000"
+rawTerm="12/22/2000"||temporal="12/22/2000"
+rawTerm="01/01/2001"||temporal="01/01/2001"
+rawTerm="On the day of admission , the patient was with some friends , rose from a chair to leave and felt dizzy while ambulating , fell and hit elbow with minor head trauma ."||temporal="2015-11-04"

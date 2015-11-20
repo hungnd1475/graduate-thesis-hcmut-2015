@@ -1,0 +1,6 @@
+rawTerm="917563546 ELMVH"||temporal="175635"
+rawTerm="1/23/2003 12:00:00 AM"||temporal="1/23/2003"
+rawTerm="01/23/2003"||temporal="01/23/2003"
+rawTerm="She was taken to the operating room on 01/16/2003 for decompression at L2 , L5 and laminectomy with posterior instrumented fusion at L3 to L5 ."||temporal="01/16/2003"
+rawTerm="She will need to follow up with Dr. Uph on 02/21/03 at 9:30 a.m."||temporal="02/21/03"
+rawTerm="01/23/03"||temporal="01/23/03"

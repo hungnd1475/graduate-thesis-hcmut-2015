@@ -1,0 +1,7 @@
+rawTerm="210974938"||temporal="210974"
+rawTerm="4139381"||temporal="139381"
+rawTerm="5/30/1993 12:00:00 AM"||temporal="5/30/1993"
+rawTerm="5-30-93"||temporal="5-30-93"
+rawTerm="6-2-93"||temporal="6-2-93"
+rawTerm="The patient was admitted to the Oncology Service on Founder &apos;s 7 and received intravenous chemotherapy with a 72 hour continuous infusion of 5-FU , Vinblastine on day 1 and day 3 , and Cisplatinum on day 1 ."||temporal="2015-11-05"
+rawTerm="06/04/93"||temporal="06/04/93"

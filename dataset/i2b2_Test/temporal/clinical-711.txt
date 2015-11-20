@@ -1,0 +1,8 @@
+rawTerm="412141256"||temporal="1214125"
+rawTerm="10/3/1994 12:00:00 AM"||temporal="10/3/1994"
+rawTerm="10-03-94"||temporal="10-03-94"
+rawTerm="10-06-94"||temporal="10-06-94"
+rawTerm="He was at Orlak on the day of admission and was found unresponsive with left tonic-clonic movements , greater in the arms than in the legs ."||temporal="2015-11-04"
+rawTerm="At 1:15 PM on 10/06/94 , the patient was found unresponsive with no heart sounds , carotid pulse , respiratory excursions , or pupillary reactions ."||temporal="10/06/94"
+rawTerm="10-18-94"||temporal="10-18-94"
+rawTerm="10/19/94"||temporal="10/19/94"

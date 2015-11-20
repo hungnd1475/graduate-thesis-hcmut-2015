@@ -1,0 +1,8 @@
+rawTerm="12/25/1996 12:00:00 AM "||temporal="12/25/1996"
+rawTerm="12/25/96 "||temporal="12/25/96"
+rawTerm="12/29/96 "||temporal="12/29/96"
+rawTerm="She was started on Coumadin and had a failed attempt at DC electrical cardioversion on 11/16/96 . "||temporal="11/16/96"
+rawTerm="There was no evidence of left ventricular hypertrophy or asymmetric septal hypertrophy , which had been an issue that had been raised on an echocardiogram in Ownra Cin , New Mexico on 12/06/96 . "||temporal="12/06/96"
+rawTerm="The patient was discharged to home on Amiodarone 200 mg daily on 12/29/96 . "||temporal="12/29/96"
+rawTerm="An electrocardiogram showed no evidence of QT prolongation prior to discharge , and pulmonary function tests will be performed before the patient goes home today . "||temporal="1996-12-29"
+rawTerm="12/29/96 10:03 A "||temporal="12/29/96"

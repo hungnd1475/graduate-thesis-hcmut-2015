@@ -1,0 +1,7 @@
+rawTerm="2010-09-06"||temporal="2010-09-06"
+rawTerm="2010-09-17"||temporal="2010-09-17"
+rawTerm="1968-04-26"||temporal="1968-04-26"
+rawTerm="The decision was made to start the patient on lisinopril , and the initial dose of 7.5 mg was increased to 10 mg daily by the day of discharge in order to control his pressure more tightly ."||temporal="2010-09-17"
+rawTerm="D : 2010-09-18 19:42"||temporal="2010-09-18"
+rawTerm="T : 2010-09-22 11:10"||temporal="2010-09-22"
+rawTerm="Signed electronically by : DR. Dalila Talbot on : Robert 2010-09-23 4:07 PM"||temporal="2010-09-23"

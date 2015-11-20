@@ -1,0 +1,5 @@
+rawTerm="2011-09-18"||temporal="2011-09-18"
+rawTerm="2011-09-26"||temporal="2011-09-26"
+rawTerm="1962-05-08"||temporal="1962-05-08"
+rawTerm="Harvey Aaron MD 37-052 2011-09-26 @ 1232"||temporal="2011-09-26"
+rawTerm="Signed electronically by : DR. Stephen Williams on : SAT 2011-10-08 9:45 AM"||temporal="2011-10-08"

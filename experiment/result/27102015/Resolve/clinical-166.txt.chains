@@ -1,0 +1,6 @@
+c="who" 19:40 19:40||c="the patient" 20:0 20:1||c="the patient" 42:5 42:6||c="the patient" 44:8 44:9||c="the patient" 45:0 45:1||c="the patient" 46:0 46:1||c="the patient" 48:0 48:1||c="the patient" 50:5 50:6||c="the patient" 51:3 51:4||c="the patient" 52:0 52:1||c="the patient" 53:0 53:1||t="coref person"
+c="laboratory studies" 44:4 44:5||c="which" 44:6 44:6||t="coref test"
+c="kub" 46:3 46:3||c="that" 46:4 46:4||t="coref test"
+c="clear liquid diet" 50:11 50:13||c="which" 50:14 50:14||t="coref treatment"
+c="some minimal back pain" 52:3 52:6||c="that" 52:7 52:7||t="coref problem"
+c="attending" 56:0 56:0||c="stie fyfe , m.d." 57:0 57:3||t="coref person"

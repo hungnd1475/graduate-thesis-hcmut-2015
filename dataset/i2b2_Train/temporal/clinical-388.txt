@@ -1,0 +1,4 @@
+rawTerm="04/21/1994 12:00:00 AM "||temporal="04/21/1994"
+rawTerm="04/21/1994 "||temporal="04/21/1994"
+rawTerm="04/29/1994 "||temporal="04/29/1994"
+rawTerm="04/29/94 "||temporal="04/29/94"

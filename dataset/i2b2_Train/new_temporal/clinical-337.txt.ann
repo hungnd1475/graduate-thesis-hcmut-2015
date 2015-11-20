@@ -1,0 +1,14 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2017-06-12" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2017-06-12" type="DATE" val="2017-06-12" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2017-06-14" type="DATE" val="2017-06-14" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1946-06-16" type="DATE" val="1946-06-16" mod="NA" />
+<TIMEX3 id="T4" start="561" end="566" text="06-07" type="DATE" val="2046-06-07" mod="NA" />
+<TIMEX3 id="T5" start="757" end="762" text="today" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T6" start="1347" end="1352" text="April" type="DATE" val="2046-04" mod="NA" />
+<TIMEX3 id="T7" start="2151" end="2170" text="2017-06-13 at 15:47" type="TIME" val="2017-06-13T15:47" mod="NA" />
+<TIMEX3 id="T8" start="2279" end="2283" text="0:21" type="TIME" val="2017-06-13T00:21" mod="NA" />
+<TIMEX3 id="T9" start="3117" end="3127" text="2017-06-01" type="DATE" val="2017-06-01" mod="NA" />
+<TIMEX3 id="T10" start="3858" end="3862" text="1997" type="DATE" val="1997" mod="NA" />
+<TIMEX3 id="T11" start="4842" end="4852" text="2017-06-01" type="DATE" val="2017-06-01" mod="NA" />
+<TIMEX3 id="T12" start="5121" end="5125" text="1997" type="DATE" val="1997" mod="NA" />
+<TIMEX3 id="T13" start="5400" end="5416" text="2017-06-13 18:41" type="TIME" val="2017-06-13T18:41" mod="NA" />

@@ -1,0 +1,35 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2019-02-28" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2019-02-28" type="DATE" val="2019-02-28" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2019-03-26" type="DATE" val="2019-03-26" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1943-06-17" type="DATE" val="1943-06-17" mod="NA" />
+<TIMEX3 id="T4" start="409" end="419" text="2019-03-19" type="DATE" val="2019-03-19" mod="NA" />
+<TIMEX3 id="T5" start="577" end="582" text="09-19" type="DATE" val="2042-09-19" mod="NA" />
+<TIMEX3 id="T6" start="674" end="684" text="2019-01-22" type="DATE" val="2019-01-22" mod="NA" />
+<TIMEX3 id="T7" start="945" end="950" text="02-19" type="DATE" val="2043-02-19" mod="NA" />
+<TIMEX3 id="T8" start="1038" end="1043" text="02-15" type="DATE" val="2043-02-15" mod="NA" />
+<TIMEX3 id="T9" start="1690" end="1695" text="02-18" type="DATE" val="2043-02-18" mod="NA" />
+<TIMEX3 id="T10" start="2151" end="2167" text="2019-02-28 07:30" type="TIME" val="2019-02-28T07:30" mod="NA" />
+<TIMEX3 id="T12" start="2288" end="2304" text="2019-02-28 07:30" type="TIME" val="2019-02-28T07:30" mod="NA" />
+<TIMEX3 id="T14" start="2393" end="2409" text="2019-02-28 07:30" type="TIME" val="2019-02-28T07:30" mod="NA" />
+<TIMEX3 id="T16" start="2461" end="2477" text="2019-02-28 07:30" type="TIME" val="2019-02-28T07:30" mod="NA" />
+<TIMEX3 id="T18" start="2579" end="2595" text="2019-02-28 07:30" type="TIME" val="2019-02-28T07:30" mod="NA" />
+<TIMEX3 id="T20" start="2664" end="2680" text="2019-02-28 07:30" type="TIME" val="2019-02-28T07:30" mod="NA" />
+<TIMEX3 id="T22" start="2702" end="2718" text="2019-02-28 07:30" type="TIME" val="2019-02-28T07:30" mod="NA" />
+<TIMEX3 id="T24" start="2761" end="2777" text="2019-02-28 06:27" type="TIME" val="2019-02-28T06:27" mod="NA" />
+<TIMEX3 id="T26" start="2838" end="2854" text="2019-03-23 05:31" type="TIME" val="2019-03-23T05:31" mod="NA" />
+<TIMEX3 id="T28" start="2974" end="2990" text="2019-03-25 01:53" type="TIME" val="2019-03-25T01:53" mod="NA" />
+<TIMEX3 id="T30" start="3091" end="3107" text="2019-03-25 04:47" type="TIME" val="2019-03-25T04:47" mod="NA" />
+<TIMEX3 id="T32" start="3427" end="3432" text="02-20" type="DATE" val="2043-02-20" mod="NA" />
+<TIMEX3 id="T33" start="3632" end="3637" text="03-19" type="DATE" val="2043-03-19" mod="NA" />
+<TIMEX3 id="T34" start="3644" end="3653" text="that time" type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T35" start="4159" end="4163" text="POD1" type="DATE" val="2043-03-20" mod="NA" />
+<TIMEX3 id="T36" start="4264" end="4268" text="POD2" type="DATE" val="2043-03-21" mod="NA" />
+<TIMEX3 id="T37" start="4395" end="4407" text="several days" type="DATE" val="TPZ-0000-00-03" mod="APPROX" />
+<TIMEX3 id="T38" start="4602" end="4606" text="POD7" type="DATE" val="2043-03-26" mod="NA" />
+<TIMEX3 id="T39" start="5490" end="5496" text="day ) " type="DATE" val="2019-02-28" mod="NA" />
+<TIMEX3 id="T40" start="5499" end="5500" text="4" type="TIME" val="2019-02-28T04:00" mod="NA" />
+<TIMEX3 id="T41" start="5950" end="5956" text="day ) " type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T42" start="5959" end="6037" text="8. Pramipexole 0.25 mg Tablet Sig : Six ( 6 ) Tablet PO TID ( 3 times a day ) " type="TIME" val="TPZ+0000-00-00T08:00" mod="NA" />
+<TIMEX3 id="T43" start="6603" end="6608" text="05-02" type="DATE" val="2043-05-02" mod="NA" />
+<TIMEX3 id="T44" start="6879" end="6882" text="May" type="DATE" val="2043-05" mod="NA" />
+<TIMEX3 id="T45" start="7388" end="7404" text="2019-04-29 10:00" type="TIME" val="2019-04-29T10:00" mod="NA" />

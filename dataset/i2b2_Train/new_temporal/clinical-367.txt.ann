@@ -1,0 +1,22 @@
+<TIMEX3 id="T0" start="1" end="15" text="Admission Date" type="DATE" val="2013-10-21" mod="NA" />
+<TIMEX3 id="T1" start="19" end="29" text="2013-10-21" type="DATE" val="2013-10-21" mod="NA" />
+<TIMEX3 id="T2" start="49" end="59" text="2013-10-31" type="DATE" val="2013-10-31" mod="NA" />
+<TIMEX3 id="T3" start="78" end="88" text="1928-10-14" type="DATE" val="1928-10-14" mod="NA" />
+<TIMEX3 id="T4" start="316" end="326" text="2013-10-21" type="DATE" val="2013-10-21" mod="NA" />
+<TIMEX3 id="T5" start="499" end="503" text="2003" type="DATE" val="2003" mod="NA" />
+<TIMEX3 id="T6" start="525" end="529" text="2009" type="DATE" val="2009" mod="NA" />
+<TIMEX3 id="T7" start="733" end="738" text="04-05" type="DATE" val="2028-04-05" mod="NA" />
+<TIMEX3 id="T8" start="872" end="876" text="2003" type="DATE" val="2003" mod="NA" />
+<TIMEX3 id="T9" start="881" end="885" text="2001" type="DATE" val="2001" mod="NA" />
+<TIMEX3 id="T10" start="1497" end="1502" text="04-07" type="DATE" val="2028-04-07" mod="NA" />
+<TIMEX3 id="T11" start="1655" end="1671" text="2013-10-29 06:10" type="TIME" val="2013-10-29T06:10" mod="NA" />
+<TIMEX3 id="T13" start="1786" end="1802" text="2013-10-29 06:10" type="TIME" val="2013-10-29T06:10" mod="NA" />
+<TIMEX3 id="T15" start="1896" end="1912" text="2013-10-30 06:28" type="TIME" val="2013-10-30T06:28" mod="NA" />
+<TIMEX3 id="T17" start="2286" end="2307" text="postoperative day one" type="DATE" val="2013-10-22" mod="NA" />
+<TIMEX3 id="T18" start="2789" end="2801" text="several days" type="DATE" val="TPZ-0000-00-03" mod="APPROX" />
+<TIMEX3 id="T19" start="3153" end="3174" text="postoperative day six" type="DATE" val="2013-10-27" mod="NA" />
+<TIMEX3 id="T20" start="4225" end="4245" text="postoperative day 10" type="DATE" val="2013-10-31" mod="NA" />
+<TIMEX3 id="T21" start="4630" end="4636" text="day ) " type="DATE" val="2013-10-21" mod="NA" />
+<TIMEX3 id="T22" start="4639" end="4732" text="3. Phenytoin Sodium Extended 100 mg Capsule Sig : One ( 1 ) Capsule PO TID ( 3 times a day ) " type="TIME" val="TPZ+0000-00-00T03:00" mod="NA" />
+<TIMEX3 id="T23" start="5509" end="5515" text="day ) " type="DATE" val="TPZ+0000-00-00" mod="NA" />
+<TIMEX3 id="T24" start="5518" end="5620" text="11. Trimethoprim - Sulfamethoxazole 160-800 mg Tablet Sig : One ( 1 ) Tablet PO BID ( 2 times a day ) " type="TIME" val="TPZ+0000-00-00T11:00" mod="NA" />

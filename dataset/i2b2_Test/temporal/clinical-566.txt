@@ -1,0 +1,7 @@
+rawTerm="143748600 SC"||temporal="143748"
+rawTerm="09/30/2000 12:00:00 AM"||temporal="09/30/2000"
+rawTerm="09/30/2000"||temporal="09/30/2000"
+rawTerm="10/01/2000"||temporal="10/01/2000"
+rawTerm="10/01/00 AT 03:30 PM"||temporal="10/01/00"
+rawTerm="GLUCOPHAGE ( METFORMIN ) 850 MG PO TID Starting ON 10/03/00 ( 10/03 ) ACTOS 30 MG PO QD"||temporal="10/03/00"
+rawTerm="WIERST , STO L. , M.D. ( RR86 ) 10/01/00 02:33 PM"||temporal="10/01/00"

@@ -1,0 +1,4 @@
+rawTerm="2/23/2005 12:00:00 AM"||temporal="2/23/2005"
+rawTerm="02/23/2005 05:41 AM"||temporal="02/23/2005"
+rawTerm="02/23/2005 13:38"||temporal="02/23/2005"
+rawTerm="This report was created by WORK , SHELLBETHA , M.D. 02/23/2005 01:59 PM"||temporal="02/23/2005"

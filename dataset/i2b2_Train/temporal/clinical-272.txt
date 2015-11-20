@@ -1,0 +1,7 @@
+rawTerm="2011-09-24"||temporal="2011-09-24"
+rawTerm="2011-09-27"||temporal="2011-09-27"
+rawTerm="1932-02-28"||temporal="1932-02-28"
+rawTerm="The patient was placed on a Morphine drip and extubated and passed away at 10:55 a.m. on 2011-09-27 ."||temporal="2011-09-27"
+rawTerm="D : 2011-09-27 11:53"||temporal="2011-09-27"
+rawTerm="T : 2011-09-27 12:41"||temporal="2011-09-27"
+rawTerm="Signed electronically by : DR. Carlos Warner on : TUE 2011-09-27 3:42 PM"||temporal="2011-09-27"

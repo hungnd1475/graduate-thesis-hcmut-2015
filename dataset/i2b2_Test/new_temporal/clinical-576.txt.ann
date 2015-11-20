@@ -1,0 +1,8 @@
+<TIMEX3 id="T0" start="40" end="58" text="5/28/1993 12:00:00" type="TIME" val="1993-05-28T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="124" end="138" text="ADMISSION DATE" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T3" start="142" end="149" text="5-28-93" type="DATE" val="1993-05-28" mod="NA" />
+<TIMEX3 id="T4" start="169" end="175" text="6-4-93" type="DATE" val="1993-06-04" mod="NA" />
+<TIMEX3 id="T5" start="355" end="368" text="six weeks ago" type="DATE" val="TPZ-0000-W06" mod="NA" />
+<TIMEX3 id="T6" start="664" end="673" text="5:30 p.m." type="TIME" val="1993-06-04T17:30" mod="NA" />
+<TIMEX3 id="T7" start="1255" end="1261" text="day at" type="DATE" val="1993-05-28" mod="NA" />
+<TIMEX3 id="T8" start="4116" end="4137" text="the time of discharge" type="DATE" val="1993-05-28" mod="NA" />

@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{431BA8EE-38D6-4AA1-97AF-8E94889AAECC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCMUT.EMRCorefResol.English</RootNamespace>
+    <AssemblyName>EMRCorefResol.English</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Output\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Output\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Output\Debug\x86\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\Output\Release\x86\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Output\Debug\x64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\Output\Release\x64\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FeatureExtractor\ClasPatientDeterminer.cs" />
+    <Compile Include="FeatureExtractor\EnglishClasFeatureExtractor.cs" />
+    <Compile Include="Features\CapitolMatchFeature.cs" />
+    <Compile Include="Features\ContainFeature.cs" />
+    <Compile Include="Features\CosineDistanceFeature.cs" />
+    <Compile Include="Features\DepartmentKeywordFeature.cs" />
+    <Compile Include="Features\PersonInstance\DoctorKeywordFeature.cs" />
+    <Compile Include="Features\PersonInstance\DoctorLastNLineFeature.cs" />
+    <Compile Include="Features\PersonInstance\DoctorTitleKeywordFeature.cs" />
+    <Compile Include="Features\First123WordsBoW.cs" />
+    <Compile Include="Features\PersonInstance\First123WordsBetweenBinary.cs" />
+    <Compile Include="Features\PersonInstance\First123WordsBetweenBoW.cs" />
+    <Compile Include="Features\PersonInstance\GeneralDepartmentKeywordFeature.cs" />
+    <Compile Include="Features\PersonInstance\GeneralDoctorKeywordFeature.cs" />
+    <Compile Include="Features\PersonInstance\Last123WordsBetweenBinary.cs" />
+    <Compile Include="Features\PersonInstance\Last123WordsBetweenBoW.cs" />
+    <Compile Include="Features\PersonInstance\NameFeature.cs" />
+    <Compile Include="Features\PersonInstance\NextSentence.cs" />
+    <Compile Include="Features\PersonInstance\PatientKeywordFeature.cs" />
+    <Compile Include="Features\PersonInstance\PreceededNonPatientFeature.cs" />
+    <Compile Include="Features\PersonInstance\PreviousSentence.cs" />
+    <Compile Include="Features\PersonInstance\PronounHeSheFeature.cs" />
+    <Compile Include="Features\PersonInstance\PronounIFeature.cs" />
+    <Compile Include="Features\PersonInstance\PronounTheyFeature.cs" />
+    <Compile Include="Features\PersonInstance\PronounWeFeature.cs" />
+    <Compile Include="Features\PersonInstance\PronounYouFeature.cs" />
+    <Compile Include="Features\FirstChunkAfterMention.cs" />
+    <Compile Include="Features\First123WordsBinary.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\AnatomyFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\ArticleFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\DosageFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\DrugFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\DurationFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\EquipmentFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\FrequencyFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\HeadNounFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\IndicatorFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\ModifierFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\OperationFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\PositionFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\ProcedureMatch.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\SectionFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\TemporalFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\WikiAnchorLinkFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\WikiBoldNameMatchFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\WikiMatchFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\WordNetMatchFeature.cs" />
+    <Compile Include="Features\Pronoun\AdjacentMentionAfterPronounVP.cs" />
+    <Compile Include="Features\Pronoun\FirstChunkBeforeIsPreposition.cs" />
+    <Compile Include="Features\FirstChunkBeforeMention.cs" />
+    <Compile Include="Features\Pronoun\FirstNextVerb.cs" />
+    <Compile Include="Features\RelativeKeywordFeature.cs" />
+    <Compile Include="Features\PersonInstance\SignedInformationFeature.cs" />
+    <Compile Include="Features\PersonPair\GenderFeature.cs" />
+    <Compile Include="Features\PersonPair\PronounMatchFeature.cs" />
+    <Compile Include="Features\SubstringFeature.cs" />
+    <Compile Include="Features\TwinTripletFeature.cs" />
+    <Compile Include="Features\WhoFeatures.cs" />
+    <Compile Include="Features\Pronoun\FirstNextMentionDistanceFeature.cs" />
+    <Compile Include="Features\Pronoun\FirstPreviousMentionDistanceFeature.cs" />
+    <Compile Include="Features\Pronoun\PronounIndexFeature.cs" />
+    <Compile Include="Features\Pronoun\SecondPreviousMentionDistanceFeature.cs" />
+    <Compile Include="Features\Pronoun\SemanticFeature.cs" />
+    <Compile Include="FeatureExtractor\GroundTruthPatientDeterminer.cs" />
+    <Compile Include="FeatureExtractor\IPatientDeterminer.cs" />
+    <Compile Include="FeatureVector\PersonInstanceFeatures.cs" />
+    <Compile Include="FeatureExtractor\EnglishTrainingFeatureExtractor.cs" />
+    <Compile Include="Features\AppositionFeature.cs" />
+    <Compile Include="Features\AliasFeature.cs" />
+    <Compile Include="Features\PersonPair\DoctorGeneralMatch.cs" />
+    <Compile Include="Features\PersonPair\DoctorTitleMatchFeature.cs" />
+    <Compile Include="Features\LevenshteinDistanceFeature.cs" />
+    <Compile Include="Features\MentionDistanceFeature.cs" />
+    <Compile Include="Features\PersonPair\IInformationFeature.cs" />
+    <Compile Include="Features\PersonPair\NameMatchFeature.cs" />
+    <Compile Include="Features\PersonPair\NumberFeature.cs" />
+    <Compile Include="Features\PersonPair\PatientClassFeature.cs" />
+    <Compile Include="Features\PersonPair\WeInformationFeature.cs" />
+    <Compile Include="Features\PersonPair\YouInformationFeature.cs" />
+    <Compile Include="Features\Pronoun\FirstNextMentionTypeFeature.cs" />
+    <Compile Include="Features\Pronoun\FirstPreviousMentionTypeFeature.cs" />
+    <Compile Include="Features\Pronoun\PartOfSpeechFeature.cs" />
+    <Compile Include="Features\Pronoun\SecondPreviousMentionTypeFeature.cs" />
+    <Compile Include="FeatureVector\PersonPairFeatures.cs" />
+    <Compile Include="Features\SentenceDistanceFeature.cs" />
+    <Compile Include="Features\StringMatchFeature.cs" />
+    <Compile Include="FeatureVector\ProblemPairFeatures.cs" />
+    <Compile Include="FeatureVector\PronounInstanceFeatures.cs" />
+    <Compile Include="FeatureVector\TestPairFeatures.cs" />
+    <Compile Include="FeatureVector\TreatmentPairFeatures.cs" />
+    <Compile Include="KeywordService.cs" />
+    <Compile Include="SubstringMatchFilterRule.cs" />
+    <Compile Include="MedicationInformation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TemporalInformation.cs" />
+    <Compile Include="UmlsInformation.cs" />
+    <Compile Include="WikiInformation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EMRCorefResol.Core\EMRCorefResol.Core.csproj">
+      <Project>{66284726-8e94-4438-b366-f14b04874734}</Project>
+      <Name>EMRCorefResol.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Keywords\department.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\doctors.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\doctor-titles.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\female-names.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\female-titles.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\first-between-problem.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\first-between-test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\first-between-treatment.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\general-department.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\general-doctor.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\general-titles.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\heshe.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\i.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\indicator-keywords.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\last-between-problem.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\last-between-test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\last-between-treatment.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\male-names.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\male-titles.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\new_sections.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\next-sentences.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\nline-keywords.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\patients.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\person-after.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\person-before.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\person-pronoun.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\position-keywords.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\prev-sentences.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\pronoun-after.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\pronoun-before.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\pronouns.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\relatives.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\section-titles.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\sign-information.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\modifier-keywords.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\stopwords.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\they.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\twin-triplet.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\verbs-after.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\we.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keywords\you.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

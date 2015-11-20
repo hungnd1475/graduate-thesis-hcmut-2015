@@ -1,0 +1,7 @@
+rawTerm="upset stomach|ANA"||cui="C0038351"||concept="Stomach"||prefer="Stomach"||semantic=[bpoc]||confidence="861"
+rawTerm="perineal , 1st degree|ANA"||cui="C0031066"||concept="Perineal"||prefer="Anogenital region"||semantic=[blor]||confidence="660"
+rawTerm="repair|OPE"||cui="C0374711"||concept="Repair"||prefer="Surgical repair"||semantic=[topp]||confidence="1000"
+rawTerm="first degree perineal laceration|ANA"||cui="C0031066"||concept="Perineal"||prefer="Anogenital region"||semantic=[blor]||confidence="645"
+rawTerm="apgars|EQP"||cui="C0741195"||concept="Apgar"||prefer="Apgar"||semantic=[diap]||confidence="1000"
+rawTerm="weight|EQP"||cui="C1305866"||concept="weight"||prefer="Weighing patient"||semantic=[diap]||confidence="1000"
+rawTerm="weight|INDI"||cui="C0043100"||concept="Weight"||prefer="Weight"||semantic=[qnco]||confidence="1000"

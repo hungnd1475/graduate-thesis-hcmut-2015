@@ -1,0 +1,26 @@
+<TIMEX3 id="T0" start="16" end="23" text="2346613" type="DATE" val="2346-06-13" mod="NA" />
+<TIMEX3 id="T1" start="42" end="61" text="11/17/2004 12:00:00" type="TIME" val="2004-11-17T12:00:00" mod="NA" />
+<TIMEX3 id="T3" start="191" end="205" text="ADMISSION DATE" type="DATE" val="2004-11-17" mod="NA" />
+<TIMEX3 id="T4" start="209" end="219" text="11/17/2004" type="DATE" val="2004-11-17" mod="NA" />
+<TIMEX3 id="T5" start="239" end="249" text="11/26/2004" type="DATE" val="2004-11-26" mod="NA" />
+<TIMEX3 id="T6" start="643" end="658" text="the night prior" type="DATE" val="2004-11-16" mod="END" />
+<TIMEX3 id="T7" start="1359" end="1377" text="several months ago" type="DATE" val="TPZ-0000-03" mod="APPROX" />
+<TIMEX3 id="T8" start="2038" end="2050" text="20 years ago" type="DATE" val="TPZ-0020" mod="NA" />
+<TIMEX3 id="T9" start="3399" end="3407" text="11/16/04" type="DATE" val="2004-11-16" mod="NA" />
+<TIMEX3 id="T10" start="3528" end="3540" text="The next day" type="DATE" val="2004-11-17" mod="NA" />
+<TIMEX3 id="T11" start="3900" end="3908" text="11/17/04" type="DATE" val="2004-11-17" mod="NA" />
+<TIMEX3 id="T12" start="4051" end="4069" text="several days later" type="DATE" val="TPZ+0000-00-03" mod="APPROX" />
+<TIMEX3 id="T13" start="4070" end="4075" text="11/23" type="DATE" val="2004-11-23" mod="NA" />
+<TIMEX3 id="T14" start="4468" end="4483" text="hospital day #2" type="DATE" val="2004-11-18" mod="NA" />
+<TIMEX3 id="T15" start="4549" end="4561" text="The next day" type="DATE" val="2004-11-19" mod="NA" />
+<TIMEX3 id="T16" start="4689" end="4701" text="the next day" type="DATE" val="2004-11-20" mod="NA" />
+<TIMEX3 id="T17" start="4704" end="4712" text="11/17/04" type="DATE" val="2004-11-17" mod="NA" />
+<TIMEX3 id="T18" start="4887" end="4895" text="11/22/04" type="DATE" val="2004-11-22" mod="NA" />
+<TIMEX3 id="T19" start="5107" end="5133" text="the day prior to discharge" type="DATE" val="2004-11-16" mod="NA" />
+<TIMEX3 id="T20" start="5236" end="5244" text="11/16/04" type="DATE" val="2004-11-16" mod="NA" />
+<TIMEX3 id="T21" start="5479" end="5505" text="the day prior to discharge" type="DATE" val="2004-11-16" mod="NA" />
+<TIMEX3 id="T22" start="6121" end="6147" text="the day prior to discharge" type="DATE" val="2004-11-16" mod="NA" />
+<TIMEX3 id="T23" start="6206" end="6232" text="the day prior to discharge" type="DATE" val="2004-11-16" mod="NA" />
+<TIMEX3 id="T24" start="6561" end="6579" text="Several days prior" type="DATE" val="TPZ-0000-00-03" mod="APPROX" />
+<TIMEX3 id="T25" start="6914" end="6935" text="the time of discharge" type="DATE" val="2004-11-17" mod="NA" />
+<TIMEX3 id="T26" start="7517" end="7533" text="12/23/2004 11:19" type="TIME" val="2004-12-23T11:19" mod="NA" />

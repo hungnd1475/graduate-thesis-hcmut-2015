@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{66284726-8E94-4438-B366-F14B04874734}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCMUT.EMRCorefResol</RootNamespace>
+    <AssemblyName>EMRCorefResol.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Output\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Output\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Output\Debug\x86\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\Output\Release\x86\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Output\Debug\x64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\Output\Release\x64\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Instances\FalseFilterRule.cs" />
+    <Compile Include="Instances\IFilterRule.cs" />
+    <Compile Include="Instances\AllInstancesGenerator.cs" />
+    <Compile Include="Classification\ClasConfig.cs" />
+    <Compile Include="Classification\ClasResult.cs" />
+    <Compile Include="Classification\ClassifierSerializer.cs" />
+    <Compile Include="Classification\ClasProblem.cs" />
+    <Compile Include="Classification\ClasProblemCollection.cs" />
+    <Compile Include="Classification\IClasProblemSerializer.cs" />
+    <Compile Include="Concept.cs" />
+    <Compile Include="ConceptCollection.cs" />
+    <Compile Include="Scoring\BCubedPerfMetric.cs" />
+    <Compile Include="Scoring\CEAFPerfMetric.cs" />
+    <Compile Include="Scoring\Evaluation.cs" />
+    <Compile Include="Scoring\Evaluations.cs" />
+    <Compile Include="Scoring\IPerfMetric.cs" />
+    <Compile Include="Scoring\MUCPerfMetric.cs" />
+    <Compile Include="Instances\ModNg2002InstancesGenerator.cs" />
+    <Compile Include="Instances\ModSoon2001InstancesGenerator.cs" />
+    <Compile Include="Service\ServiceModels\UMLSData.cs" />
+    <Compile Include="Service\UMLSUtil.cs" />
+    <Compile Include="Service\WikiUltil.cs" />
+    <Compile Include="Instances\IInstancesGenerator.cs" />
+    <Compile Include="Instances\Soon2001InstancesGenerator.cs" />
+    <Compile Include="TemporalData.cs" />
+    <Compile Include="TemporalDataDictionary.cs" />
+    <Compile Include="Instances\TrueFilterRule.cs" />
+    <Compile Include="UmlsDataDictionary.cs" />
+    <Compile Include="Utilities\EnglishNormalizer.cs" />
+    <Compile Include="Utilities\GenericConfig.cs" />
+    <Compile Include="CorefChain.cs" />
+    <Compile Include="CorefChainCollection.cs" />
+    <Compile Include="EMRSection.cs" />
+    <Compile Include="EMRSectionCollection.cs" />
+    <Compile Include="FeatureExtractingSystem.cs" />
+    <Compile Include="Features\FeatureVector.cs" />
+    <Compile Include="EMR.cs" />
+    <Compile Include="ConceptType.cs" />
+    <Compile Include="Classification\IClassifier.cs" />
+    <Compile Include="ICorefResolver.cs" />
+    <Compile Include="IConceptPair.cs" />
+    <Compile Include="IO\I2B2DataReader.cs" />
+    <Compile Include="IO\IDataReader.cs" />
+    <Compile Include="Features\IFeature.cs" />
+    <Compile Include="Features\IFeatureVector.cs" />
+    <Compile Include="Features\IFeatureExtractor.cs" />
+    <Compile Include="Instances\IClasInstance.cs" />
+    <Compile Include="Indexed\IIndexedEnumerable.cs" />
+    <Compile Include="Indexed\IndexedEnumerableHelper.cs" />
+    <Compile Include="IPreprocessor.cs" />
+    <Compile Include="ISingleConcept.cs" />
+    <Compile Include="Classification\ITrainer.cs" />
+    <Compile Include="MedicationInfo.cs" />
+    <Compile Include="MedicationInfoCollection.cs" />
+    <Compile Include="Service\ServiceModels\WikiData.cs" />
+    <Compile Include="Utilities\Caches\ICache.cs" />
+    <Compile Include="Utilities\Caches\UnlimitedCache.cs" />
+    <Compile Include="Logging\FileLogger.cs" />
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Utilities\GenericHelper.cs" />
+    <Compile Include="Utilities\Keywords\AhoCorasickKeywordDictionary.cs" />
+    <Compile Include="Utilities\Keywords\RegexKeywordDictionary.cs" />
+    <Compile Include="Logging\ConsoleLogger.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Instances\PairInstance.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ConceptPosition.cs" />
+    <Compile Include="Service\ServiceModels\CustomResponse.cs" />
+    <Compile Include="Service\English.cs" />
+    <Compile Include="Service\HttpUtil.cs" />
+    <Compile Include="Service\ServiceModels\Definition.cs" />
+    <Compile Include="Service\ServiceModels\WordType.cs" />
+    <Compile Include="Utilities\EMRCollection.cs" />
+    <Compile Include="Utilities\Keywords\IKeywordDictionary.cs" />
+    <Compile Include="Utilities\Range.cs" />
+    <Compile Include="Instances\SingleInstance.cs" />
+    <Compile Include="Utilities\ConceptTypeHelper.cs" />
+    <Compile Include="Utilities\EMRExtensions.cs" />
+    <Compile Include="Utilities\HashCodeHelper.cs" />
+    <Compile Include="WikiDataDictionary.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Features\Feature.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

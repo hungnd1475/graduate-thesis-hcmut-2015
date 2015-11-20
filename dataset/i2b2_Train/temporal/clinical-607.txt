@@ -1,0 +1,8 @@
+rawTerm="2014-12-03"||temporal="2014-12-03"
+rawTerm="2014-12-18"||temporal="2014-12-18"
+rawTerm="1962-09-23"||temporal="1962-09-23"
+rawTerm="The patient reports a previous workup which included a negative exercise treadmill test , a normal MIBI in 2011-04-10 , and a normal echocardiogram in 2012 ( except some borderline mild pulmonary hypertension ) with an ejection fraction of 55% ."||temporal="2011-04-10"
+rawTerm="A right heart catheterization was performed on 2014-12-05 ."||temporal="2014-12-05"
+rawTerm="D : 2014-12-18 18:32"||temporal="2014-12-18"
+rawTerm="T : 2014-12-21 10:44"||temporal="2014-12-21"
+rawTerm="Signed electronically by : DR. Melody PARKS on : TUE 2014-12-23 6:28 AM"||temporal="2014-12-23"

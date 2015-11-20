@@ -1,0 +1,7 @@
+rawTerm="2267360"||temporal="226736"
+rawTerm="10/17/1995 12:00:00 AM"||temporal="10/17/1995"
+rawTerm="10/17/95"||temporal="10/17/95"
+rawTerm="10/20/95"||temporal="10/20/95"
+rawTerm="The neutropenia resolved and he was felt to be in satisfactory condition on discharge on 10/20/95 ."||temporal="10/20/95"
+rawTerm="11/01/95"||temporal="11/01/95"
+rawTerm="11/02/95"||temporal="11/02/95"

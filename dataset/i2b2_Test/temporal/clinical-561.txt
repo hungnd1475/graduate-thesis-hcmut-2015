@@ -1,0 +1,6 @@
+rawTerm="134300717"||temporal="1343007"
+rawTerm="2/23/1993 12:00:00 AM"||temporal="2/23/1993"
+rawTerm="2-23-93"||temporal="2-23-93"
+rawTerm="2-24-93"||temporal="2-24-93"
+rawTerm="In addition , the second major event that had occurred yesterday was a neurologic event of some kind ."||temporal="2015-11-03"
+rawTerm="02/26/93"||temporal="02/26/93"

@@ -1,0 +1,14 @@
+<TIMEX3 id="T0" start="48" end="67" text="11/30/1995 12:00:00" type="TIME" val="1995-11-30T12:00:00" mod="NA" />
+<TIMEX3 id="T2" start="163" end="177" text="ADMISSION DATE" type="DATE" val="" mod="NA" />
+<TIMEX3 id="T3" start="181" end="189" text="11-30-95" type="DATE" val="1995-11-30" mod="NA" />
+<TIMEX3 id="T4" start="209" end="217" text="12-29-95" type="DATE" val="1995-12-29" mod="NA" />
+<TIMEX3 id="T5" start="404" end="408" text="1991" type="DATE" val="1991" mod="NA" />
+<TIMEX3 id="T6" start="550" end="554" text="1992" type="DATE" val="1992" mod="NA" />
+<TIMEX3 id="T7" start="1229" end="1243" text="many years ago" type="DATE" val="TPZ-0003" mod="APPROX" />
+<TIMEX3 id="T8" start="2474" end="2491" text="December 4 , 1995" type="DATE" val="1995-12-04" mod="NA" />
+<TIMEX3 id="T9" start="3211" end="3228" text="December 1 , 1995" type="DATE" val="1995-12-01" mod="NA" />
+<TIMEX3 id="T10" start="3588" end="3606" text="December 11 , 1995" type="DATE" val="1995-12-11" mod="NA" />
+<TIMEX3 id="T11" start="4028" end="4045" text="December 6 , 1995" type="DATE" val="1995-12-06" mod="NA" />
+<TIMEX3 id="T12" start="4812" end="4830" text="December 25 , 1995" type="DATE" val="1995-12-25" mod="NA" />
+<TIMEX3 id="T13" start="6320" end="6341" text="the time of discharge" type="DATE" val="1995-11-30" mod="NA" />
+<TIMEX3 id="T14" start="8506" end="8519" text="the same time" type="DATE" val="1995-11-30" mod="APPROX" />

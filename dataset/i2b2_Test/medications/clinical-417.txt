@@ -1,0 +1,11 @@
+16	1. Plavix 75 mg times 6 doses .|Plavix[426,432]|||75mg[433,438]||||||C1607286|573094|32968|clopidogrel
+17	2. Xanax q.d.|Xanax[458,463]||||||q.d.[464,468]|||C0699034|202363|596|alprazolam
+18	3. Prozac 20 mg q.d.|Prozac[472,478]|||20mg[479,484]|||q.d.[485,489]|||C1596224|563783|4493|fluoxetine
+19	4. Cyclobenzaprine 10 mg q.d.|Cyclobenzaprine[493,508]|||10mg[509,514]|||q.d.[515,519]|||C2370533|828347|21949|cyclobenzaprine
+20	5. Aspirin 325 mg times 3 doses .|Aspirin[523,530]|||325mg[531,537]||||||C0992015|317300|1191|acetylsalicylic acid
+21	6. Vitamin E .|Vitamin E[557,566]|||||||||C0042874|11256|11256|tocopherol (vit e)
+53	She was started on a heparin drip at 800 per hour .|heparin[2288,2295]|||||drip[2296,2300]|per hour[2308,2316]|||C0019134|235473|235473|heparin,porcine
+65	She was started on aspirin 325 mg q.d. and Plavix 75 mg q.d.|aspirin[2927,2934]|||325mg[2935,2941]|||q.d.[2942,2946]|||C0992015|317300|1191|acetylsalicylic acid
+65	She was started on aspirin 325 mg q.d. and Plavix 75 mg q.d.|Plavix[2951,2957]|||75mg[2958,2963]|||q.d .[2964,2968]|||C1607286|573094|32968|clopidogrel
+77	1. Plavix 75 mg q.d.|Plavix[3589,3595]|||75mg[3596,3601]|||q.d.[3602,3606]|||C1607286|573094|32968|clopidogrel
+78	2. Aspirin 325 mg q.d.|Aspirin[3610,3617]|||325mg[3618,3624]|||q.d .[3625,3629]|||C0992015|317300|1191|acetylsalicylic acid
