@@ -82,6 +82,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Utilities\INLP.cs" />
     <Compile Include="Instances\FalseFilterRule.cs" />
     <Compile Include="Instances\IFilterRule.cs" />
     <Compile Include="Instances\AllInstancesGenerator.cs" />
@@ -106,10 +107,10 @@
     <Compile Include="Service\WikiUltil.cs" />
     <Compile Include="Instances\IInstancesGenerator.cs" />
     <Compile Include="Instances\Soon2001InstancesGenerator.cs" />
-    <Compile Include="TemporalData.cs" />
-    <Compile Include="TemporalDataDictionary.cs" />
+    <Compile Include="Dictionaries\TemporalData.cs" />
+    <Compile Include="Dictionaries\TemporalDataDictionary.cs" />
     <Compile Include="Instances\TrueFilterRule.cs" />
-    <Compile Include="UmlsDataDictionary.cs" />
+    <Compile Include="Dictionaries\UmlsDataDictionary.cs" />
     <Compile Include="Utilities\EnglishNormalizer.cs" />
     <Compile Include="Utilities\GenericConfig.cs" />
     <Compile Include="CorefChain.cs" />
@@ -134,16 +135,15 @@
     <Compile Include="IPreprocessor.cs" />
     <Compile Include="ISingleConcept.cs" />
     <Compile Include="Classification\ITrainer.cs" />
-    <Compile Include="MedicationInfo.cs" />
-    <Compile Include="MedicationInfoCollection.cs" />
+    <Compile Include="Dictionaries\MedicationInfo.cs" />
+    <Compile Include="Dictionaries\MedicationInfoCollection.cs" />
     <Compile Include="Service\ServiceModels\WikiData.cs" />
     <Compile Include="Utilities\Caches\ICache.cs" />
     <Compile Include="Utilities\Caches\UnlimitedCache.cs" />
     <Compile Include="Logging\FileLogger.cs" />
     <Compile Include="Logging\Logger.cs" />
     <Compile Include="Utilities\GenericHelper.cs" />
-    <Compile Include="Utilities\Keywords\AhoCorasickKeywordDictionary.cs" />
-    <Compile Include="Utilities\Keywords\RegexKeywordDictionary.cs" />
+    <Compile Include="Dictionaries\AhoCorasickKeywordDictionary.cs" />
     <Compile Include="Logging\ConsoleLogger.cs" />
     <Compile Include="Logging\ILogger.cs" />
     <Compile Include="Instances\PairInstance.cs" />
@@ -155,13 +155,13 @@
     <Compile Include="Service\ServiceModels\Definition.cs" />
     <Compile Include="Service\ServiceModels\WordType.cs" />
     <Compile Include="Utilities\EMRCollection.cs" />
-    <Compile Include="Utilities\Keywords\IKeywordDictionary.cs" />
+    <Compile Include="Dictionaries\IKeywordDictionary.cs" />
     <Compile Include="Utilities\Range.cs" />
     <Compile Include="Instances\SingleInstance.cs" />
     <Compile Include="Utilities\ConceptTypeHelper.cs" />
     <Compile Include="Utilities\EMRExtensions.cs" />
     <Compile Include="Utilities\HashCodeHelper.cs" />
-    <Compile Include="WikiDataDictionary.cs" />
+    <Compile Include="Dictionaries\WikiDataDictionary.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Features\Feature.cs" />

@@ -79,9 +79,9 @@
   <ItemGroup>
     <Compile Include="FeatureExtractor\ClasPatientDeterminer.cs" />
     <Compile Include="FeatureExtractor\EnglishClasFeatureExtractor.cs" />
-    <Compile Include="Features\CapitolMatchFeature.cs" />
-    <Compile Include="Features\ContainFeature.cs" />
-    <Compile Include="Features\CosineDistanceFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\CapitolMatchFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\ContainFeature.cs" />
+    <Compile Include="Features\ProblemTreatmentTest\CosineDistanceFeature.cs" />
     <Compile Include="Features\DepartmentKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\DoctorKeywordFeature.cs" />
     <Compile Include="Features\PersonInstance\DoctorLastNLineFeature.cs" />
@@ -104,7 +104,6 @@
     <Compile Include="Features\PersonInstance\PronounWeFeature.cs" />
     <Compile Include="Features\PersonInstance\PronounYouFeature.cs" />
     <Compile Include="Features\FirstChunkAfterMention.cs" />
-    <Compile Include="Features\First123WordsBinary.cs" />
     <Compile Include="Features\ProblemTreatmentTest\AnatomyFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\ArticleFeature.cs" />
     <Compile Include="Features\ProblemTreatmentTest\DosageFeature.cs" />
@@ -145,7 +144,7 @@
     <Compile Include="FeatureVector\PersonInstanceFeatures.cs" />
     <Compile Include="FeatureExtractor\EnglishTrainingFeatureExtractor.cs" />
     <Compile Include="Features\AppositionFeature.cs" />
-    <Compile Include="Features\AliasFeature.cs" />
+    <Compile Include="Features\PersonPair\AliasFeature.cs" />
     <Compile Include="Features\PersonPair\DoctorGeneralMatch.cs" />
     <Compile Include="Features\PersonPair\DoctorTitleMatchFeature.cs" />
     <Compile Include="Features\LevenshteinDistanceFeature.cs" />
