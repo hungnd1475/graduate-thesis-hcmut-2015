@@ -70,7 +70,7 @@ namespace EMRCorefResol.UITest
         {
             InitializeComponent();
 
-            txtEMRPath.Text = @"..\..\..\..\..\dataset\i2b2_Train";
+            txtEMRPath.Text = @"..\..\..\..\..\dataset\i2b2_Test";
             emrCollection = new EMRCollection(txtEMRPath.Text);
 
             var emrHighlightBrush = new SolidColorBrush(Color.FromRgb(112, 183, 255));
@@ -531,7 +531,7 @@ namespace EMRCorefResol.UITest
 
         private void btnModelsPath_Click(object sender, RoutedEventArgs e)
         {
-            FolderDialog.SelectedPath = @"D:\Documents\HCMUT\AI Research\coref-resol\test";
+            FolderDialog.SelectedPath = @"D:\Documents\Visual Studio 2015\Projects\graduate-thesis-hcmut-2015\experiment\result";
             if (FolderDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 txtModelsPath.Text = FolderDialog.SelectedPath;
