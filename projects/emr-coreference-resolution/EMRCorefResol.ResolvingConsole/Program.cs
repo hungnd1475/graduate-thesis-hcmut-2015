@@ -8,13 +8,14 @@ using HCMUT.EMRCorefResol.Core.Console;
 using System.IO;
 using HCMUT.EMRCorefResol.Classification;
 using HCMUT.EMRCorefResol.Scoring;
+using System.Diagnostics;
 
 namespace HCMUT.EMRCorefResol.ResolvingConsole
 {
     class Program
     {
         static void Main(string[] rawArgs)
-        {
+        {            
             var argsParser = PrepareParser();
             var parseResult = argsParser.Parse(rawArgs);
 
@@ -46,6 +47,7 @@ namespace HCMUT.EMRCorefResol.ResolvingConsole
             var classifier = APISelector.SelectClassifier(args.ClasMethod, args.ModelsDir);
             var fExtractor = APISelector.SelectFeatureExtractor(args.Language, classifier);
             var resolver = APISelector.SelectResolver(args.ResolMethod);
+            var shutdown = Convert.ToBoolean(args.Shutdown);
 
             if (!string.IsNullOrEmpty(args.EMRName))
             {
@@ -76,6 +78,9 @@ namespace HCMUT.EMRCorefResol.ResolvingConsole
 
                 int emrCount = args.EMRCount > 0 ? args.EMRCount + beginIndex : emrCollection.Count;
 
+                var startTime = DateTime.Now;
+                Console.WriteLine($"Start at {startTime:g}");
+                
                 for (int i = beginIndex; i < emrCount && i < emrCollection.Count; i++)
                 {
                     var emrFile = emrCollection.GetEMRPath(i);                    
@@ -89,6 +94,22 @@ namespace HCMUT.EMRCorefResol.ResolvingConsole
                     File.WriteAllText(Path.Combine(args.OutputDir, $"{emrName}.chains"), 
                         string.Join(Environment.NewLine, systemChains));
                 };
+
+                var endTime = DateTime.Now;
+                Console.WriteLine($"End at {endTime:g}");
+                Console.WriteLine($"Total time: {(endTime - startTime).TotalSeconds}s");
+
+                if (shutdown)
+                {
+                    using (var sw = new StreamWriter(Path.Combine(args.OutputDir, "shutdown-log.txt")))
+                    {
+                        sw.WriteLine($"Start at {startTime:g}");
+                        sw.WriteLine($"End at {endTime:g}");
+                        sw.WriteLine($"Total time: {(endTime - startTime).TotalSeconds}s");
+                    }
+
+                    Process.Start("shutdown", "/s /t 0");
+                }
             }
 
             Console.WriteLine("Done!");
@@ -147,6 +168,11 @@ namespace HCMUT.EMRCorefResol.ResolvingConsole
                 .As('b', "beginat")
                 .SetDefault(null)
                 .WithDescription("Set emr file name to begin with (optional).");
+
+            p.Setup(a => a.Shutdown)
+                .As('s', "shutdown")
+                .SetDefault(0)
+                .WithDescription("Set whether to shutdown the computer after resolving (default 0)");
 
             p.SetupHelp("?").Callback(() => DescHelpOption.ShowHelp(p.Options));
 

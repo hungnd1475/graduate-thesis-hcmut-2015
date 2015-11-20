@@ -1,0 +1,5 @@
+c="the patient" 23:0 23:1||c="the patient" 24:0 24:1||c="her" 24:4 24:4||c="she" 24:10 24:10||c="she" 25:5 25:5||c="she" 26:0 26:0||c="she" 27:5 27:5||c="her" 27:18 27:18||c="she" 29:0 29:0||c="her" 29:7 29:7||c="she" 30:20 30:20||c="she" 32:0 32:0||c="she" 33:0 33:0||c="her" 33:21 33:21||c="the patient" 35:0 35:1||c="the patient" 41:0 41:1||c="she" 47:4 47:4||c="she" 48:13 48:13||c="she" 50:0 50:0||c="the patient" 60:0 60:1||c="the patient" 61:0 61:1||c="she" 61:14 61:14||c="her" 61:22 61:22||c="she" 64:0 64:0||c="her" 67:0 67:0||c="her" 68:0 68:0||c="the patient" 70:0 70:1||c="she" 74:0 74:0||c="her" 74:11 74:11||t="coref person"
+c="colon carcinoma" 25:11 25:12||c="which" 25:13 25:13||t="coref problem"
+c="her cea level" 29:7 29:9||c="which" 29:10 29:10||t="coref test"
+c="increased hoarseness" 32:3 32:4||c="which" 32:10 32:10||t="coref problem"
+c="this mass" 62:0 62:1||c="this" 63:5 63:5||t="coref problem"

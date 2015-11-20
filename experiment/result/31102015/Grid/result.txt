@@ -1,0 +1,7 @@
+* WITHOUT WEIGHTS:
+  - PersonInstance: c=4.0, g=0.1767766952966369, rate=93.4518 (finer)
+  - PronounInstance: c=9741.98468610229 g=0.001953125 rate=79.1952 (finer)
+  - PersonPair: c=128 g=8 rate=96.6014
+  - TestPair: c=0.03125 g=0.5 rate=97.7303
+  - ProblemPair: c=128 g=0.5 rate=97.973
+  - TreatmentPair: c=2048 g=0.03125 rate=97.4432

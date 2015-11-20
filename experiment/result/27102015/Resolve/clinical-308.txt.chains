@@ -1,0 +1,6 @@
+c="kotenort , oan r" 12:0 12:3||c="the patient" 22:0 22:1||c="who" 22:21 22:21||c="who" 22:30 22:30||c="she" 23:0 23:0||c="she" 24:0 24:0||c="she" 25:0 25:0||c="she" 26:0 26:0||c="she" 27:0 27:0||c="she" 28:0 28:0||c="the patient" 62:2 62:3||c="the patient" 81:0 81:1||c="she" 82:0 82:0||c="the patient" 83:2 83:3||c="she" 84:0 84:0||c="her" 86:11 86:11||c="the patient" 87:10 87:11||c="she" 89:0 89:0||c="she" 90:0 90:0||c="she" 92:0 92:0||t="coref person"
+c="a repeat kub" 83:5 83:7||c="which" 83:8 83:8||t="coref test"
+c="a ct scan" 84:3 84:5||c="which" 84:6 84:6||t="coref test"
+c="a repeat kub" 91:0 91:2||c="which" 91:5 91:5||t="coref test"
+c="maenzet head , m.d." 107:2 107:5||c="maenzet head , m.d." 109:1 109:4||c="maenzet head , m.d." 117:15 117:18||t="coref person"
+c="erin kengekote , md" 105:0 105:3||c="erin kengekote , md" 117:0 117:3||t="coref person"

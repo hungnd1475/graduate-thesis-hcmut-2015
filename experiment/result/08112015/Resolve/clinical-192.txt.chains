@@ -1,0 +1,8 @@
+c="attending" 13:0 13:0||c="jana v pennington , m.d." 14:0 14:4||t="coref person"
+c="patient" 12:0 12:0||c="68 yo female" 21:0 21:2||c="pt" 47:0 47:0||c="her" 75:10 75:10||c="pt." 78:0 78:0||t="coref person"
+c="redo avr" 19:0 19:1||c="redo avr" 71:9 71:10||t="coref treatment"
+c="aortic root enlargement" 19:3 19:5||c="aortic root enlargement" 71:12 71:14||t="coref treatment"
+c="coumadin" 68:6 68:6||c="coumadin" 83:8 83:8||t="coref treatment"
+c="amiodarone" 74:7 74:7||c="amiodarone" 107:1 107:1||t="coref treatment"
+c="avr" 27:1 27:1||c="avr" 122:3 122:3||t="coref treatment"
+c="dr. laura" 71:2 71:3||c="dr. laura" 128:7 128:8||t="coref person"

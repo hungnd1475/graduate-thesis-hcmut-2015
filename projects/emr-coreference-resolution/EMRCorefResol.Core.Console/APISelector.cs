@@ -131,20 +131,35 @@ namespace HCMUT.EMRCorefResol.Core.Console
             }
         }
 
-        public static IInstancesGenerator SelectInstancesGenerator(InstancesGenerator instGen)
+        public static IInstancesGenerator SelectInstancesGenerator(InstancesGenerator instGen, FilterRule filterRule)
         {
             switch (instGen)
             {
                 case InstancesGenerator.All:
                     return new AllInstancesGenerator();
                 case InstancesGenerator.ModNg2002:
-                    return new ModNg2002InstancesGenerator(new SubstringMatchFilterRule());
+                    return new ModNg2002InstancesGenerator(SelectFilterRule(filterRule));
                 case InstancesGenerator.ModSoon2001:
                     return new ModSoon2001ModInstancesGenerator();
                 case InstancesGenerator.Soon2001:
                     return new Soon2001InstancesGenerator();
                 default:
                     throw new ArgumentException("instGen");
+            }
+        }
+
+        public static IFilterRule SelectFilterRule(FilterRule filterRule)
+        {
+            switch (filterRule)
+            {
+                case FilterRule.True:
+                    return new TrueFilterRule();
+                case FilterRule.False:
+                    return new FalseFilterRule();
+                case FilterRule.SubstringMatch:
+                    return new SubstringMatchFilterRule();
+                default:
+                    throw new ArgumentException("filterRule");
             }
         }
     }

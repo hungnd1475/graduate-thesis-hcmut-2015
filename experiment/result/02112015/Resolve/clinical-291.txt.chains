@@ -1,0 +1,8 @@
+c="acute myocardial infarction" 7:0 7:2||c="acute myocardial infarction" 17:0 17:2||c="an acute inferior myocardial infarction" 32:6 32:10||t="coref problem"
+c="percutaneous angioplasty of the right coronary artery" 21:0 21:6||c="directional angioplasty of the right coronary artery , left main and left anterior descending vessels" 23:0 23:14||c="a repeat percutaneous transluminal coronary angioplasty" 34:7 34:12||t="coref treatment"
+c="coronary bypass surgery" 29:16 29:18||c="this" 30:0 30:0||c="redo surgery" 31:4 31:5||t="coref treatment"
+c="the patient" 29:0 29:1||c="he" 31:2 31:2||c="he" 32:3 32:3||c="he" 33:0 33:0||c="he" 35:0 35:0||c="he" 37:6 37:6||c="he" 37:35 37:35||c="he" 38:11 38:11||c="his" 39:6 39:6||c="he" 39:17 39:17||c="his" 40:0 40:0||c="his" 42:0 42:0||c="he" 42:6 42:6||c="he" 43:13 43:13||t="coref person"
+c="aortic valve replacement" 19:2 19:4||c="aortic valve replacement" 31:7 31:9||t="coref treatment"
+c="recurrent pain" 33:2 33:3||c="substernal chest pain" 37:37 37:39||c="this" 38:0 38:0||c="the pain" 39:10 39:11||c="pain" 42:9 42:9||t="coref problem"
+c="nitroglycerin" 27:22 27:22||c="nitroglycerins" 38:16 38:16||t="coref treatment"
+c="his electrocardiogram" 40:0 40:1||c="the electrocardiogram" 49:0 49:1||t="coref test"

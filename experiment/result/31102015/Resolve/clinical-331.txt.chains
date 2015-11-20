@@ -1,0 +1,7 @@
+c="factor , rebem" 12:0 12:2||c="mr. factor" 33:0 33:1||c="dr. lenni factor" 33:20 33:22||c="his" 34:0 34:0||c="the patient" 35:7 35:8||c="the patient" 36:8 36:9||c="the patient" 38:8 38:9||c="the patient" 39:6 39:7||c="the patient" 62:0 62:1||c="the patient" 73:3 73:4||c="the patient" 75:3 75:4||c="he" 75:13 75:13||c="dr. lenni factor" 86:4 86:6||t="coref person"
+c="right heart catheterization" 27:0 27:2||c="cardiac catheterization" 33:24 33:25||c="cardiac catheterization" 38:16 38:17||c="right heart catheterization" 63:3 63:5||c="right heart catheterization" 68:2 68:4||t="coref test"
+c="an electrocardiogram" 37:0 37:1||c="the electrocardiogram" 54:0 54:1||t="coref test"
+c="coronary angiography" 27:4 27:5||c="coronary angiography" 63:0 63:1||t="coref test"
+c="disoriented" 73:9 73:9||c="which" 73:11 73:11||t="coref problem"
+c="the lv function" 74:6 74:8||c="which" 74:10 74:10||t="coref test"
+c="ashee shoultsner , m.d." 76:0 76:3||c="ashee shoultsner , m.d." 77:2 77:5||c="ashee shoultsner , m.d." 86:0 86:3||t="coref person"

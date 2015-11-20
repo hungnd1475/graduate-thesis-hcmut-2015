@@ -1,0 +1,3 @@
+c="mitral valve replacement" 21:2 21:4||c="tricuspid valve reconstruction" 21:6 21:8||t="coref treatment"
+c="she" 24:0 24:0||c="her" 25:2 25:2||c="she" 25:6 25:6||c="she" 26:0 26:0||c="she" 28:0 28:0||c="she" 29:0 29:0||c="her" 30:0 30:0||c="her" 31:6 31:6||c="her" 32:13 32:13||c="the patient" 34:0 34:1||c="she" 35:0 35:0||c="she" 37:0 37:0||c="she" 38:0 38:0||c="she" 39:0 39:0||c="she" 40:0 40:0||c="she" 41:0 41:0||c="she" 42:0 42:0||c="she" 43:0 43:0||c="her" 44:5 44:5||c="she" 45:0 45:0||c="her" 46:0 46:0||t="coref person"
+c="prior cardiac catheterization" 25:8 25:10||c="which" 25:12 25:12||t="coref test"

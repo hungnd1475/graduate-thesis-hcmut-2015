@@ -1,0 +1,5 @@
+c="attending" 12:0 12:0||c="woodrow y williams , m.d." 12:2 12:6||t="coref person"
+c="patient" 11:0 11:0||c="he" 14:2 14:2||c="he" 17:0 17:0||c="his" 17:4 17:4||t="coref person"
+c="plt ct" 21:33 21:34||c="blood plt ct" 36:3 36:5||t="coref test"
+c="plt ct" 22:31 22:32||c="blood plt ct" 37:3 37:5||t="coref test"
+c="michelle franklin md" 57:0 57:2||c="dr. michelle k. partin" 59:4 59:7||t="coref person"

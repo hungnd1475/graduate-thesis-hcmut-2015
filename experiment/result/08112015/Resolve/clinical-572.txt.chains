@@ -1,0 +1,6 @@
+c="the patient" 23:0 23:1||c="she" 24:0 24:0||c="she" 25:0 25:0||c="she" 26:0 26:0||c="she" 26:11 26:11||c="she" 27:0 27:0||c="she" 28:0 28:0||c="she" 30:2 30:2||c="she" 31:7 31:7||c="she" 32:5 32:5||c="she" 33:5 33:5||c="she" 34:0 34:0||c="her" 35:0 35:0||c="her" 35:7 35:7||c="her" 36:5 36:5||c="she" 36:18 36:18||c="the patient" 37:0 37:1||c="she" 37:7 37:7||c="her" 37:16 37:16||c="she" 38:5 38:5||c="she" 39:0 39:0||c="the patient" 45:0 45:1||t="coref person"
+c="endometriosis" 24:6 24:6||c="that" 24:7 24:7||t="coref problem"
+c="bilateral salpingo-oophorectomy" 15:6 15:7||c="bilateral salpingo-oophorectomy" 30:10 30:11||t="coref treatment"
+c="demerol" 37:6 37:6||c="demerol" 41:0 41:0||t="coref treatment"
+c="dr. side" 45:5 45:6||c="iedearc side , m.d." 47:0 47:3||t="coref person"
+c="attending" 48:0 48:0||c="mitery d. loss , m.d." 49:0 49:4||c="mitery d. loss , m.d." 58:1 58:5||t="coref person"

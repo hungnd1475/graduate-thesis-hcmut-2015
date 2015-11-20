@@ -1,0 +1,5 @@
+c="attending" 25:0 25:0||c="albfyfeayles , lorre ezo , m.d." 26:0 26:5||t="coref person"
+c="patient" 19:1 19:1||c="patient" 38:2 38:2||c="patient" 42:8 42:8||c="pt" 99:9 99:9||t="coref person"
+c="ho" 43:74 43:74||c="ho" 43:76 43:76||t="coref person"
+c="dr zuknocegrend pcp" 54:0 54:2||c="pcp" 105:4 105:4||t="coref person"
+c="dr. pump" 55:0 55:1||c="dr. pump" 105:6 105:7||t="coref person"

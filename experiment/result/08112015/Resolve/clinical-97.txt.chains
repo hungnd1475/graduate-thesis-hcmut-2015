@@ -1,0 +1,4 @@
+c="provider" 19:0 19:0||c="nonok ayrekempe" 20:0 20:1||c="provider" 47:0 47:0||c="ayrekempe , nonok" 49:5 49:7||t="coref person"
+c="pcp" 22:0 22:0||c="pcp" 23:6 23:6||c="pcp" 37:4 37:4||c="pcp" 45:0 45:0||t="coref person"
+c="sterpmoone , ny" 12:0 12:2||c="patient" 32:0 32:0||c="patient" 41:7 41:7||c="shuffneg , soa w" 46:0 46:3||t="coref person"
+c="therapist" 36:12 36:12||c="therapist" 43:6 43:6||t="coref person"

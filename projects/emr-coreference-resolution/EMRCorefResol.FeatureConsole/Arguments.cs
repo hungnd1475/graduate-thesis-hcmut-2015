@@ -21,5 +21,6 @@ namespace HCMUT.EMRCorefResol.FeatureConsole
         public string Instances { get; set; }
         public string EMRFile { get; set; }
         public InstancesGenerator InstancesGenerator { get; set; }
+        public FilterRule FilterRule { get; set; }
     }
 }

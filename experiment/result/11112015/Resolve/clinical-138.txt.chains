@@ -1,0 +1,8 @@
+c="a repeat mri" 14:4 14:6||c="which" 14:7 14:7||t="coref test"
+c="the patient" 14:0 14:1||c="her" 14:19 14:19||c="she" 16:0 16:0||c="her" 16:13 16:13||c="the patient" 19:0 19:1||c="her" 20:0 20:0||c="her" 20:7 20:7||c="the patient" 21:2 21:3||c="her" 21:8 21:8||c="the patient" 22:7 22:8||c="her" 23:0 23:0||c="she" 23:6 23:6||c="her" 24:0 24:0||c="her" 24:6 24:6||c="the patient" 26:0 26:1||c="she" 27:0 27:0||c="the patient" 34:0 34:1||t="coref person"
+c="berkitt's lymphoma" 11:9 11:10||c="lymphoma" 15:26 15:26||t="coref problem"
+c="hepatic candidiasis" 15:17 15:18||c="her hepatic candidiasis" 16:13 16:15||c="hepatic candidiasis" 32:1 32:2||t="coref problem"
+c="ambisome" 16:5 16:5||c="ambisome" 17:5 17:5||c="ambisome" 17:18 17:18||c="ambisome" 36:1 36:1||t="coref treatment"
+c="the infectious disease physicians" 17:10 17:13||c="who" 17:15 17:15||t="coref person"
+c="burkitt's" 15:29 15:29||c="burkitt's lymphoma" 31:1 31:2||t="coref problem"
+c="marinol" 27:5 27:5||c="marinol" 37:1 37:1||t="coref treatment"

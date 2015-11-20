@@ -1,0 +1,8 @@
+c="attending" 11:0 11:0||c="terry u cheatom , m.d." 11:2 11:6||t="coref person"
+c="mr. cordano" 13:0 13:1||c="who" 13:16 13:16||c="the patient" 17:17 17:18||c="the patient" 28:0 28:1||c="mr. cordano" 50:0 50:1||c="the patient" 54:2 54:3||c="the patient" 61:0 61:1||c="he" 61:7 61:7||c="the patient" 62:0 62:1||c="he" 63:0 63:0||c="mr. cordano" 66:2 66:3||c="the patient" 68:7 68:8||c="he" 69:0 69:0||c="the patient" 70:5 70:6||c="he" 71:0 71:0||c="the patient" 72:6 72:7||c="he" 72:18 72:18||c="the patient" 73:12 73:13||c="his" 73:21 73:21||c="he" 74:1 74:1||c="he" 76:0 76:0||c="he" 78:0 78:0||c="he" 80:10 80:10||c="the patient" 81:6 81:7||c="his" 83:0 83:0||c="the patient" 84:6 84:7||c="he" 85:3 85:3||c="he" 86:0 86:0||c="he" 86:13 86:13||c="him" 86:21 86:21||c="the patient" 87:5 87:6||t="coref person"
+c="dilation of intrahepatic common bile duct" 47:7 47:12||c="which" 47:13 47:13||t="coref problem"
+c="nodularity in the common bile duct" 53:6 53:11||c="which" 53:12 53:12||t="coref problem"
+c="region nodularity" 57:0 57:1||c="which" 57:3 57:3||t="coref problem"
+c="culture" 64:12 64:12||c="which" 64:14 64:14||t="coref test"
+c="100% nonrebreather" 73:17 73:18||c="which" 73:19 73:19||t="coref treatment"
+c="the ascites" 75:9 75:10||c="which" 75:11 75:11||t="coref problem"

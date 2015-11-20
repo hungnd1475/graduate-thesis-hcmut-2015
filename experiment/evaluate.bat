@@ -1,0 +1,3 @@
+@echo off
+echo Evaluating (%1)...
+..\projects\emr-coreference-resolution\Output\Debug\%2\chains-evaluate.exe -d ..\dataset\i2b2_Test -s result\%1\Resolve

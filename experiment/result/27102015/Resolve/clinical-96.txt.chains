@@ -1,0 +1,8 @@
+c="attending" 14:0 14:0||c="day second md" 15:0 15:2||c="attending" 123:0 123:0||c="second , ca" 124:0 124:2||t="coref person"
+c="the patient" 17:0 17:1||c="this" 23:0 23:0||c="the patient" 24:1 24:2||c="the patient" 25:0 25:1||c="the patient" 27:0 27:1||c="she" 28:0 28:0||c="the patient" 29:3 29:4||c="she" 29:9 29:9||c="the patient" 35:0 35:1||c="her" 54:0 54:0||c="the patient" 57:0 57:1||c="the patient" 63:0 63:1||c="she" 66:0 66:0||c="the patient" 67:0 67:1||c="the patient" 68:0 68:1||c="the patient" 70:0 70:1||c="the patient" 71:4 71:5||c="the patient" 72:6 72:7||c="the patient" 77:0 77:1||c="the patient" 78:1 78:2||c="the patient" 78:11 78:12||c="the patient" 79:0 79:1||c="the patient" 81:10 81:11||c="the patient" 84:0 84:1||c="the patient" 85:5 85:6||c="the patient" 86:2 86:3||c="the patient" 87:0 87:1||c="the patient" 88:0 88:1||c="the patient" 89:0 89:1||c="the patient" 90:0 90:1||c="the patient" 91:0 91:1||c="the patient" 94:0 94:1||c="the patient" 98:0 98:1||c="she" 99:0 99:0||c="the patient" 103:4 103:5||c="the patient" 104:0 104:1||c="the patient" 106:0 106:1||c="she" 107:0 107:0||c="the patient" 112:0 112:1||c="the patient" 113:0 113:1||c="the patient" 116:0 116:1||c="her" 116:8 116:8||c="she" 116:18 116:18||c="the patient" 117:0 117:1||t="coref person"
+c="an mri" 26:0 26:1||c="that" 26:6 26:6||t="coref test"
+c="penicillin" 54:3 54:3||c="which" 54:5 54:5||t="coref treatment"
+c="imipramine" 68:11 68:11||c="that" 68:15 68:15||t="coref treatment"
+c="baseline hypertension" 70:3 70:4||c="that" 70:5 70:5||t="coref problem"
+c="emergent exploratory laparotomy" 84:12 84:14||c="that" 84:15 84:15||t="coref test"
+c="cardiology" 72:2 72:2||c="cardiology" 113:9 113:9||t="coref person"

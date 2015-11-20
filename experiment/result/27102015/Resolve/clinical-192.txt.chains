@@ -1,0 +1,3 @@
+c="cardiothoracic" 10:0 10:0||c="patient" 12:0 12:0||c="pt" 47:0 47:0||c="her" 75:10 75:10||c="pt." 78:0 78:0||t="coref person"
+c="attending" 13:0 13:0||c="jana v pennington , m.d." 14:0 14:4||t="coref person"
+c="dr. laura" 71:2 71:3||c="dr. laura" 128:7 128:8||t="coref person"

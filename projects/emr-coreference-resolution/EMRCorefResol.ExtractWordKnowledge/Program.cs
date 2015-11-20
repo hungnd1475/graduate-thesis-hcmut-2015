@@ -38,9 +38,9 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
         {
             var collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Train");
             //BatchUMLSProcess(collection);
-            BatchWikiProcess(collection);
+            //BatchWikiProcess(collection);
             //BatchTemporalProcess(collection);
-            //BatchExtractWordsPerson(collection);
+            BatchExtractWordsPerson(collection);
             //BatchExtractWordsPronoun(collection);
             //BatchExtractVerbAfterMention(collection);
             //BatchExtractWordsPerson(collection);
@@ -48,9 +48,9 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
             //BatchExtractSentencePatient(collection);
             //BatchSectionProcess(collection);
 
-            collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Test");
+            //collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Test");
             //BatchUMLSProcess(collection);
-            BatchWikiProcess(collection);
+            //BatchWikiProcess(collection);
             //BatchTemporalProcess(collection);
 
             Console.WriteLine("========Finish========");
@@ -485,9 +485,9 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
 
         static bool IsPatient(Concept c, CorefChainCollection groundTruth)
         {
-            var ptChain = groundTruth.GetPatientChain(PATIENT_KEYWORDS, RELATIVES);
-            return ptChain?.Contains(c) ?? false;
-            //return c.Type == ConceptType.Person;
+            //var ptChain = groundTruth.GetPatientChain(PATIENT_KEYWORDS, RELATIVES);
+            //return ptChain?.Contains(c) ?? false;
+            return c.Type == ConceptType.Person;
         }
 
         static bool IsPronoun(Concept c)

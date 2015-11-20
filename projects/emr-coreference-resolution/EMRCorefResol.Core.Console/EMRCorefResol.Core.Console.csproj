@@ -85,6 +85,7 @@
     <Compile Include="Descriptions.cs" />
     <Compile Include="EMRFormat.cs" />
     <Compile Include="FeatureFormat.cs" />
+    <Compile Include="FilterRule.cs" />
     <Compile Include="Instance.cs" />
     <Compile Include="InstancesGenerator.cs" />
     <Compile Include="Language.cs" />

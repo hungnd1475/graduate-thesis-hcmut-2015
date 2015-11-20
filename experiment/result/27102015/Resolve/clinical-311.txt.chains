@@ -1,0 +1,3 @@
+c="vessels , tistie d" 14:0 14:3||c="mr. vessels" 30:0 30:1||c="who" 30:20 30:20||c="mr. vessels" 31:0 31:1||c="he" 32:1 32:1||c="he" 35:0 35:0||c="he" 36:7 36:7||c="he" 37:3 37:3||c="his" 42:0 42:0||c="the patient" 52:0 52:1||c="the patient" 55:0 55:1||c="the patient" 56:6 56:7||c="the patient" 57:13 57:14||c="the patient" 58:7 58:8||c="the patient" 63:3 63:4||c="the patient" 65:0 65:1||c="patient" 66:0 66:0||t="coref person"
+c="ventricular tachycardia" 60:5 60:6||c="which" 60:7 60:7||t="coref problem"
+c="ventricular fibrillation" 60:10 60:11||c="that" 60:12 60:12||t="coref problem"

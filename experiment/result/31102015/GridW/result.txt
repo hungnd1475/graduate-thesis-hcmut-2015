@@ -1,0 +1,6 @@
+PersonInstance: c=0.5 g=0.5 rate=92.xxx
+PronounInstance: c=0.04419417382415922 g=0.5 rate=78.4179
+PersonPair: c=2048 g=8 rate=96.6014
+TreatmentPair: c=0.125 g=0.0001220703125 rate=96.8419
+TestPair: c=0.5 g=0.0001220703125 rate=97.7037
+ProblemPair: 

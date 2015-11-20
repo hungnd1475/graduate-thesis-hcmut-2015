@@ -1,0 +1,5 @@
+c="who" 12:13 12:13||c="he" 12:26 12:26||c="he" 13:0 13:0||c="his" 13:9 13:9||c="he" 14:0 14:0||c="he" 15:0 15:0||c="the patient" 17:0 17:1||c="the patient" 19:0 19:1||c="the patient" 24:0 24:1||c="the patient" 31:0 31:1||c="he" 32:0 32:0||c="the patient" 34:4 34:5||c="the patient" 35:3 35:4||c="the patient" 41:6 41:7||c="the patient" 55:0 55:1||c="the patient" 56:0 56:1||c="the patient" 57:4 57:5||c="the patient" 58:0 58:1||c="him" 58:13 58:13||c="the patient" 60:0 60:1||t="coref person"
+c="an mri of the head" 17:5 17:9||c="which" 17:11 17:11||t="coref test"
+c="family" 27:0 27:0||c="family" 29:3 29:3||t="coref person"
+c="a continued cerebral angiogram" 55:12 55:15||c="that" 55:18 55:18||t="coref test"
+c="michael lawrence , m.d." 65:0 65:3||c="dr. michael jackson" 73:4 73:6||t="coref person"

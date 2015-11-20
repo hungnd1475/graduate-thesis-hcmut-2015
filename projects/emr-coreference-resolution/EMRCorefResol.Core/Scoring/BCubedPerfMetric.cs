@@ -40,11 +40,17 @@ namespace HCMUT.EMRCorefResol.Scoring
                 {
                     ConceptType type;
 
-                    if (g == null || s == null) // system produces a chain for singleton (g == null), or not produce any chain for mention m (s == null)
+                    if (g == null) // system produces a chain for singleton
                     {
-                        type = g == null ? s.Type : g.Type;
-                        p = 0d;
-                        r = 0d;
+                        type = s.Type;
+                        p = 1 / s.Count;
+                        r = 1;
+                    }
+                    else if (s == null) // system does not produce any chain for mention m
+                    {
+                        type = g.Type;
+                        p = 1;
+                        r = 1 / g.Count;
                     }
                     else // system produces chain for mention m
                     {

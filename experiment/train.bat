@@ -1,0 +1,3 @@
+@echo off
+echo Training %2 problem (%1)...
+..\projects\emr-coreference-resolution\Output\Debug\%4\feat-train.exe -d result\%1\Features\%2.prb -i %2 -o result\%1\Models -l 1 %~3

@@ -1,0 +1,4 @@
+c="he" 18:1 18:1||c="he" 21:0 21:0||c="who" 21:7 21:7||c="he" 32:0 32:0||c="he" 33:0 33:0||c="the patient" 38:0 38:1||c="he" 40:0 40:0||c="he" 41:4 41:4||c="he" 42:0 42:0||t="coref person"
+c="abdominal examination" 26:0 26:1||c="neurological examination" 28:0 28:1||t="coref test"
+c="the wbc" 30:0 30:1||c="wbc" 37:0 37:0||t="coref test"
+c="neupogen" 32:4 32:4||c="neupogen" 42:5 42:5||c="neupogen" 46:1 46:1||t="coref treatment"

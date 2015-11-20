@@ -1,0 +1,4 @@
+c="provider" 19:0 19:0||c="yertrey sumchirdkaysmavveindreps" 20:0 20:1||c="sumchirdkaysmavveindreps , yertrey" 49:5 49:7||t="coref person"
+c="pcp" 22:0 22:0||c="pcp" 23:5 23:5||c="pcp" 45:0 45:0||t="coref person"
+c="kotea , tortheoa" 12:0 12:2||c="patient" 32:0 32:0||c="the patient" 35:0 35:1||c="patient" 42:7 42:7||c="slandtif , astheo d" 46:0 46:3||t="coref person"
+c="chest pain" 35:7 35:8||c="noncardiac chest pain" 37:0 37:2||c="worsening chest pain" 44:5 44:7||t="coref problem"

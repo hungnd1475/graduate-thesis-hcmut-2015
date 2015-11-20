@@ -1,0 +1,5 @@
+c="sterpkoteneish , lydell a" 13:0 13:3||c="ms. sterpkoteneish" 25:0 25:1||c="her" 25:18 25:18||c="she" 26:0 26:0||c="she" 27:0 27:0||c="her" 27:3 27:3||c="her primary care physician" 27:3 27:6||c="she" 28:0 28:0||c="her" 28:23 28:23||c="the patient" 46:0 46:1||c="the patient" 49:6 49:7||c="the patient" 50:2 50:3||c="she" 51:0 51:0||c="she" 51:11 51:11||c="she" 52:0 52:0||c="she" 53:0 53:0||c="she" 53:15 53:15||c="she" 61:0 61:0||t="coref person"
+c="who" 25:7 25:7||c="who" 27:16 27:16||t="coref person"
+c="a ct scan" 27:18 27:20||c="which" 27:22 27:22||t="coref test"
+c="dr. blinjesc" 28:18 28:19||c="who" 28:21 28:21||c="dr. blinjesc" 46:15 46:16||c="dr. blinjesc" 61:5 61:6||t="coref person"
+c="lonshi ock , m.d." 64:1 64:4||c="lonshi ock , m.d." 72:0 72:3||t="coref person"

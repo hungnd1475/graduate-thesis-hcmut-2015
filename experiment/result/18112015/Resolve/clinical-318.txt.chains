@@ -1,0 +1,8 @@
+c="epistaxis" 7:0 7:0||c="epistaxis" 17:0 17:0||c="epistaxis" 21:0 21:0||c="epistaxis" 28:14 28:14||c="epistaxis" 44:14 44:14||t="coref problem"
+c="coumadin" 21:2 21:2||c="coumadin" 28:16 28:16||c="coumadin" 42:3 42:3||c="coumadin" 45:7 45:7||c="coumadin" 48:0 48:0||t="coref treatment"
+c="chronic atrial fibrillation" 19:9 19:11||c="atrial fibrillation" 36:2 36:3||t="coref problem"
+c="her prothrombin time" 43:0 43:2||c="her prothrombin time" 44:1 44:3||t="coref test"
+c="cardiac surgery" 45:14 45:15||c="surgery" 46:13 46:13||t="coref treatment"
+c="ca n. shuff , m.d." 49:0 49:4||c="dr. ca shuff" 57:3 57:5||c="dr. shuff" 57:31 57:32||t="coref person"
+c="dr. a skizeis" 38:7 38:9||c="dr. a skizeis" 57:15 57:17||t="coref person"
+c="dr. riemund c. kennedy" 26:12 26:15||c="dr. riemund c. kennedy" 57:22 57:25||t="coref person"

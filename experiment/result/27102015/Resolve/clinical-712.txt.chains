@@ -1,0 +1,8 @@
+c="baby daniel holman" 13:0 13:2||c="his" 14:0 14:0||c="he" 16:0 16:0||c="baby" 20:0 20:0||c="he" 22:0 22:0||c="he" 23:4 23:4||c="he" 24:0 24:0||c="his" 25:0 25:0||c="he" 26:5 26:5||c="he" 27:0 27:0||c="he" 28:0 28:0||c="he" 29:5 29:5||c="he" 30:0 30:0||c="he" 31:8 31:8||c="infant" 60:3 60:3||c="he" 60:25 60:25||c="he" 61:0 61:0||c="the infant" 63:0 63:1||c="the infant" 64:2 64:3||c="the infant" 65:6 65:7||c="infant" 68:11 68:11||c="his" 69:0 69:0||c="he" 72:0 72:0||c="the baby" 77:0 77:1||c="infant" 82:1 82:1||c="the infant" 84:2 84:3||c="the infant" 85:16 85:17||c="contact social worker" 87:1 87:3||c="out of home caregivers" 107:24 107:27||t="coref person"
+c="his mother" 14:0 14:1||c="mother" 19:0 19:0||t="coref person"
+c="birth weight" 33:0 33:1||c="which" 33:5 33:5||t="coref test"
+c="length" 33:12 33:12||c="which" 33:15 33:15||t="coref test"
+c="head circumference" 33:22 33:23||c="which" 33:26 33:26||t="coref test"
+c="cpap" 60:7 60:7||c="cpap" 60:16 60:16||t="coref treatment"
+c="primary pediatrician" 92:2 92:3||c="dr. gene hardy" 93:0 93:2||t="coref person"
+c="infants" 101:12 101:12||c="who" 101:13 101:13||t="coref person"

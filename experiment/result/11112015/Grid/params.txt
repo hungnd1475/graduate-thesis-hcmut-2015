@@ -1,0 +1,5 @@
+pronoun-instance: 3.363585661014858 0.07432544468767006 82.0302
+person-instance: c=32.0, g=0.0078125, rate=96.5173
+problem-pair: 8.0 0.125
+test-pair: 8.0 0.125 96.9235
+treatment-pair: 8.0 0.125

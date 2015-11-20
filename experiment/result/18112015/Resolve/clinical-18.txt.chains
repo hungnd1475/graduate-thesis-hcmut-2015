@@ -1,0 +1,4 @@
+c="cadaveric pancreas transplantation" 11:0 11:2||c="cadaveric pancreas transplantation" 14:3 14:5||c="cadaveric pancreas transplantation" 24:2 24:4||c="cadaveric pancreas transplant" 40:3 40:5||t="coref treatment"
+c="type 1 diabetes mellitus" 13:9 13:12||c="her diabetes mellitus" 15:0 15:2||c="type 1 diabetes mellitus" 41:1 41:4||t="coref problem"
+c="her" 15:0 15:0||c="she" 18:3 18:3||c="her" 19:0 19:0||c="her" 26:10 26:10||c="she" 38:3 38:3||t="coref person"
+c="her kidney transplantation" 21:15 21:17||c="her kidney transplant" 26:10 26:12||c="kidney transplantation" 42:8 42:9||t="coref treatment"

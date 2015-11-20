@@ -1,0 +1,7 @@
+c="the patient" 11:0 11:1||c="he" 12:0 12:0||c="his" 12:11 12:11||c="the patient" 13:0 13:1||c="the patient" 14:9 14:10||c="the patient" 15:5 15:6||c="his" 15:13 15:13||c="he" 16:0 16:0||c="his" 17:0 17:0||c="his" 17:9 17:9||c="the patient" 18:21 18:22||c="he" 18:31 18:31||c="his" 19:0 19:0||c="the patient" 20:5 20:6||c="his" 21:0 21:0||c="the patient" 22:0 22:1||c="the patient" 23:5 23:6||c="his" 23:19 23:19||c="the patient" 24:0 24:1||c="his" 24:6 24:6||c="the patient" 25:5 25:6||c="the patient" 26:6 26:7||c="his" 26:33 26:33||c="the patient" 27:5 27:6||c="his" 27:17 27:17||c="he" 27:22 27:22||c="the patient" 28:2 28:3||c="the patient" 29:0 29:1||c="the patient" 29:22 29:23||c="he" 29:27 29:27||c="the patient" 40:0 40:1||c="he" 41:0 41:0||c="his" 42:0 42:0||c="he" 43:0 43:0||c="his" 44:0 44:0||c="his" 45:0 45:0||c="judy y carnevale , m.d." 48:3 48:7||t="coref person"
+c="his mediastinal chest tubes" 17:0 17:3||c="his pleural chest tubes" 17:9 17:12||c="his pleural chest tubes" 19:0 19:3||t="coref treatment"
+c="his lopressor" 15:13 15:14||c="his lopressor" 21:0 21:1||c="lopressor" 33:0 33:0||t="coref treatment"
+c="a peak blood pressure" 25:8 25:11||c="his pressure" 26:33 26:34||c="blood pressure" 40:12 40:13||t="coref test"
+c="lisinopril" 26:9 26:9||c="lisinopril" 34:0 34:0||t="coref treatment"
+c="heart rate" 40:8 40:9||c="respiratory rate" 40:16 40:17||t="coref test"
+c="an oxygen saturation" 18:11 18:13||c="oxygen saturation" 40:20 40:21||t="coref test"

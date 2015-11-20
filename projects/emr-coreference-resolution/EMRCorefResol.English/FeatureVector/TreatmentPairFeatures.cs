@@ -13,10 +13,10 @@ namespace HCMUT.EMRCorefResol.English
     {
         public TreatmentPairFeatures(TreatmentPair instance, EMR emr, double classValue,
             MedicationInfoCollection medInfo, WikiDataDictionary wikiData, UmlsDataDictionary umlsData, TemporalDataDictionary temporalData)
-            : base(size: 11, classValue: classValue)
+            : base(size: 20, classValue: classValue)
         {
-            //var anaMedicationInfo = GetMedicationInfo(instance.Anaphora, emr, medInfo);
-            //var anteMedicationInfo = GetMedicationInfo(instance.Antecedent, emr, medInfo);
+            var anaMedicationInfo = GetMedicationInfo(instance.Anaphora, emr, medInfo);
+            var anteMedicationInfo = GetMedicationInfo(instance.Antecedent, emr, medInfo);
 
             var anaWiki = wikiData.Get(instance.Anaphora.Lexicon);
             var anteWiki = wikiData.Get(instance.Antecedent.Lexicon);
@@ -26,25 +26,24 @@ namespace HCMUT.EMRCorefResol.English
             this[2] = new WikiBoldNameMatchFeature(anaWiki, anteWiki);
             this[3] = new WordNetMatchFeature(instance);
 
-            this[4] = new SentenceDistanceFeature(instance);
-            this[5] = new ArticleFeature(instance);
-            this[6] = new HeadNounFeature(instance);
-            this[7] = new ContainFeature(instance);
-            this[8] = new CapitolMatchFeature(instance);
-            this[9] = new SubstringFeature(instance);
-            this[10] = new CosineDistanceFeature(instance);
-            //this[8] = new StringMatchFeature(instance);
+            this[4] = new PositionFeature(instance, emr);
+            this[5] = new DrugFeature(anaMedicationInfo, anteMedicationInfo);
+            this[6] = new DosageFeature(anaMedicationInfo, anteMedicationInfo);
+            this[7] = new FrequencyFeature(anaMedicationInfo, anteMedicationInfo);
+            this[8] = new DurationFeature(anteMedicationInfo, anteMedicationInfo);
+            this[9] = new TemporalFeature(instance, emr, temporalData);
+            this[10] = new SectionFeature(instance, emr, KeywordService.Instance.SECTION_TITLES);
+            this[11] = new OperationFeature(instance, umlsData);
+            this[12] = new ProcedureMatch(instance);
 
-            //this[9] = new PositionFeature(instance, emr);
-            //this[10] = new DrugFeature(anaMedicationInfo, anteMedicationInfo);
-            //this[11] = new DosageFeature(anaMedicationInfo, anteMedicationInfo);
-            //this[12] = new FrequencyFeature(anaMedicationInfo, anteMedicationInfo);
-            //this[13] = new DurationFeature(anteMedicationInfo, anteMedicationInfo);
-            //this[14] = new TemporalFeature(instance, emr, temporalData);
-            //this[15] = new SectionFeature(instance, emr);
-
-            //this[19] = new OperationFeature(instance, umlsData);
-            //this[20] = new ProcedureMatch(instance);
+            this[13] = new SentenceDistanceFeature(instance);
+            this[14] = new ArticleFeature(instance);
+            this[15] = new HeadNounFeature(instance);
+            this[16] = new ContainFeature(instance);
+            this[17] = new CapitolMatchFeature(instance);
+            this[18] = new SubstringFeature(instance);
+            this[19] = new CosineDistanceFeature(instance);
+            //this[19] = new StringMatchFeature(instance);            
         }
 
         private MedicationInfo GetMedicationInfo(Concept c, EMR emr, MedicationInfoCollection meds)

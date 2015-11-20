@@ -20,5 +20,6 @@ namespace HCMUT.EMRCorefResol.ResolvingConsole
         public string AverageFile { get; set; }
         public int EMRCount { get; set; }
         public string BeginAt { get; set; }
+        public int Shutdown { get; set; }
     }
 }

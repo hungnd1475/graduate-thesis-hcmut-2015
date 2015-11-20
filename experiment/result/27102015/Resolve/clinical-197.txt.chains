@@ -1,0 +1,3 @@
+c="attending" 13:0 13:0||c="mary x baxter , m.d." 14:0 14:4||t="coref person"
+c="patient" 12:0 12:0||c="he" 20:27 20:27||c="his" 21:0 21:0||c="his" 22:0 22:0||c="he" 23:0 23:0||c="mr. freeman" 99:0 99:1||c="his" 99:15 99:15||c="he" 100:0 100:0||c="he" 100:8 100:8||c="his" 100:15 100:15||c="he" 101:1 101:1||c="he" 102:5 102:5||c="he" 103:8 103:8||c="he" 104:0 104:0||c="his" 104:5 104:5||c="his" 105:9 105:9||c="mr. freeman" 107:0 107:1||c="his" 107:11 107:11||c="he" 108:0 108:0||c="he" 109:0 109:0||c="his" 109:12 109:12||c="his" 109:15 109:15||c="his primary care physician" 109:15 109:18||t="coref person"
+c="dr. belt" 109:9 109:10||c="dr. belt" 141:6 141:7||t="coref person"
