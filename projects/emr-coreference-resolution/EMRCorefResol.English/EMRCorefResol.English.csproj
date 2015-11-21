@@ -168,11 +168,8 @@
     <Compile Include="FeatureVector\TreatmentPairFeatures.cs" />
     <Compile Include="KeywordService.cs" />
     <Compile Include="SubstringMatchFilterRule.cs" />
-    <Compile Include="MedicationInformation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TemporalInformation.cs" />
-    <Compile Include="UmlsInformation.cs" />
-    <Compile Include="WikiInformation.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EMRCorefResol.Core\EMRCorefResol.Core.csproj">

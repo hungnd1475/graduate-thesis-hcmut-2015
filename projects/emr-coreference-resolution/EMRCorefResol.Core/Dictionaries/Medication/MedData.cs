@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace HCMUT.EMRCorefResol
 {
     using Utilities;
-    public class MedicationInfo : IEquatable<MedicationInfo>
+    public class MedData : IEquatable<MedData>
     {
         public int LineIndex { get; }
         public string Line { get; }
@@ -20,7 +20,7 @@ namespace HCMUT.EMRCorefResol
         public string Duration { get; }
         public string Neccessity { get; }
 
-        public MedicationInfo(int index, string line, string drug, string form,
+        public MedData(int index, string line, string drug, string form,
             string strength, string dose, string route, string freq, string duration, string nec)
         {
             LineIndex = index;
@@ -35,7 +35,7 @@ namespace HCMUT.EMRCorefResol
             Neccessity = nec;
         }
 
-        public bool Equals(MedicationInfo other)
+        public bool Equals(MedData other)
         {
             return  LineIndex == other.LineIndex &&
                 string.Equals(Line, other.Line) &&
@@ -51,7 +51,7 @@ namespace HCMUT.EMRCorefResol
 
         public override bool Equals(object obj)
         {
-            var c = obj as MedicationInfo;
+            var c = obj as MedData;
             return (c != null) ? Equals(c) : false;
         }
 

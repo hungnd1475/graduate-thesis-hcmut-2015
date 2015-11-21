@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HCMUT.EMRCorefResol.Service
+namespace HCMUT.EMRCorefResol
 {
     public class UMLSData
     {
-        public string CUI;
-        public string Concept;
-        public string Prefer;
-        public string[] Semantic;
-        public int Confidence;
+        public string CUI { get; }
+        public string Concept { get; }
+        public string Prefer { get; }
+        public string[] Semantic { get; }
+        public int Confidence { get; }
 
         public UMLSData(string cui, string concept, string prefer, string[] semantic, int confidence)
         {

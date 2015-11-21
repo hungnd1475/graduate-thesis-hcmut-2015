@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace HCMUT.EMRCorefResol
 {
@@ -91,6 +92,17 @@ namespace HCMUT.EMRCorefResol
         {
             var index = emr.Concepts.IndexOf(c);
             return (index > 0) ? emr.Concepts[index - 1] : null;
+        }
+
+        public static string GetParentDir(this EMR emr, string dirName)
+        {
+            var parentDir = new FileInfo(emr.Path).Directory.Parent.FullName;
+            return Path.Combine(parentDir, dirName);
+        }
+
+        public static string GetEMRName(this EMR emr)
+        {
+            return Path.GetFileName(emr.Path);
         }
     }
 }

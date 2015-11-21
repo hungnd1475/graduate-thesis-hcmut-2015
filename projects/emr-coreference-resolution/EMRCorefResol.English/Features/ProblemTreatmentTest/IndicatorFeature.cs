@@ -11,7 +11,7 @@ namespace HCMUT.EMRCorefResol.English.Features
     using Service;
     class IndicatorFeature : Feature
     {
-        public IndicatorFeature(IConceptPair instance, UmlsDataDictionary dictionary, EMR emr)
+        public IndicatorFeature(IConceptPair instance, UMLSDataDictionary dictionary, EMR emr)
             :base("Indicator-Feature", 3, 2)
         {
             var anaIndi = dictionary.Get($"{instance.Anaphora.Lexicon}|INDI");

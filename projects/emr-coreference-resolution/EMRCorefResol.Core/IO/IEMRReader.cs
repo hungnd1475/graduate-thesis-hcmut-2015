@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace HCMUT.EMRCorefResol
 {
     using Service;
-    public interface IDataReader
+    public interface IEMRReader
     {
         /// <summary>
         /// Reads one <see cref="Concept"/> in one line.
@@ -42,7 +42,7 @@ namespace HCMUT.EMRCorefResol
         List<EMRSection> ReadSection(string EMRContent);
 
 
-        MedicationInfo ReadMedInfoLine(string line);
+        MedData ReadMedInfoLine(string line);
         Tuple<string, WikiData> ReadWikiFile(string line);
         Tuple<string, UMLSData> ReadUmlsFile(string line);
         Tuple<string, string> ReadTemporalFile(string line);

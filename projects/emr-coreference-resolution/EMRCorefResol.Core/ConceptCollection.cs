@@ -26,7 +26,7 @@ namespace HCMUT.EMRCorefResol
             get { return _concepts.Count; }
         }
 
-        public ConceptCollection(string conceptsFile, IDataReader dataReader, 
+        public ConceptCollection(string conceptsFile, IEMRReader dataReader, 
             IPreprocessor preprocessor = null)
         {
             var fs = new FileStream(conceptsFile, FileMode.Open);

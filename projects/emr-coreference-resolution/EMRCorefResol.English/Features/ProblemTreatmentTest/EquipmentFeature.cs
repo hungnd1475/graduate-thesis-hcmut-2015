@@ -9,7 +9,7 @@ namespace HCMUT.EMRCorefResol.English.Features
     using Utilities;
     class EquipmentFeature : Feature
     {
-        public EquipmentFeature(IConceptPair instance, UmlsDataDictionary dictionary)
+        public EquipmentFeature(IConceptPair instance, UMLSDataDictionary dictionary)
             :base("Equipment-Feature", 3, 2)
         {
             var anaNorm = EnglishNormalizer.Normalize(instance.Anaphora.Lexicon, KeywordService.Instance.STOP_WORDS);

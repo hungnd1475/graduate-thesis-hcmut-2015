@@ -82,7 +82,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Utilities\INLP.cs" />
+    <Compile Include="Dictionaries\Medication\MedKey.cs" />
+    <Compile Include="Dictionaries\Temporal\TemporalKey.cs" />
+    <Compile Include="Dictionaries\WorldKnowledgeDictionary.cs" />
+    <Compile Include="IO\IWorldKnowledgeReader.cs" />
     <Compile Include="Instances\FalseFilterRule.cs" />
     <Compile Include="Instances\IFilterRule.cs" />
     <Compile Include="Instances\AllInstancesGenerator.cs" />
@@ -102,15 +105,15 @@
     <Compile Include="Scoring\MUCPerfMetric.cs" />
     <Compile Include="Instances\ModNg2002InstancesGenerator.cs" />
     <Compile Include="Instances\ModSoon2001InstancesGenerator.cs" />
-    <Compile Include="Service\ServiceModels\UMLSData.cs" />
+    <Compile Include="Dictionaries\UMLS\UMLSData.cs" />
     <Compile Include="Service\UMLSUtil.cs" />
     <Compile Include="Service\WikiUltil.cs" />
     <Compile Include="Instances\IInstancesGenerator.cs" />
     <Compile Include="Instances\Soon2001InstancesGenerator.cs" />
-    <Compile Include="Dictionaries\TemporalData.cs" />
-    <Compile Include="Dictionaries\TemporalDataDictionary.cs" />
+    <Compile Include="Dictionaries\Temporal\TemporalData.cs" />
+    <Compile Include="Dictionaries\Temporal\TemporalDataDictionary.cs" />
     <Compile Include="Instances\TrueFilterRule.cs" />
-    <Compile Include="Dictionaries\UmlsDataDictionary.cs" />
+    <Compile Include="Dictionaries\UMLS\UMLSDataDictionary.cs" />
     <Compile Include="Utilities\EnglishNormalizer.cs" />
     <Compile Include="Utilities\GenericConfig.cs" />
     <Compile Include="CorefChain.cs" />
@@ -124,8 +127,8 @@
     <Compile Include="Classification\IClassifier.cs" />
     <Compile Include="ICorefResolver.cs" />
     <Compile Include="IConceptPair.cs" />
-    <Compile Include="IO\I2B2DataReader.cs" />
-    <Compile Include="IO\IDataReader.cs" />
+    <Compile Include="IO\I2B2EMRReader.cs" />
+    <Compile Include="IO\IEMRReader.cs" />
     <Compile Include="Features\IFeature.cs" />
     <Compile Include="Features\IFeatureVector.cs" />
     <Compile Include="Features\IFeatureExtractor.cs" />
@@ -135,9 +138,9 @@
     <Compile Include="IPreprocessor.cs" />
     <Compile Include="ISingleConcept.cs" />
     <Compile Include="Classification\ITrainer.cs" />
-    <Compile Include="Dictionaries\MedicationInfo.cs" />
-    <Compile Include="Dictionaries\MedicationInfoCollection.cs" />
-    <Compile Include="Service\ServiceModels\WikiData.cs" />
+    <Compile Include="Dictionaries\Medication\MedData.cs" />
+    <Compile Include="Dictionaries\Medication\MedDataDictionary.cs" />
+    <Compile Include="Dictionaries\Wiki\WikiData.cs" />
     <Compile Include="Utilities\Caches\ICache.cs" />
     <Compile Include="Utilities\Caches\UnlimitedCache.cs" />
     <Compile Include="Logging\FileLogger.cs" />
@@ -161,7 +164,7 @@
     <Compile Include="Utilities\ConceptTypeHelper.cs" />
     <Compile Include="Utilities\EMRExtensions.cs" />
     <Compile Include="Utilities\HashCodeHelper.cs" />
-    <Compile Include="Dictionaries\WikiDataDictionary.cs" />
+    <Compile Include="Dictionaries\Wiki\WikiDataDictionary.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Features\Feature.cs" />

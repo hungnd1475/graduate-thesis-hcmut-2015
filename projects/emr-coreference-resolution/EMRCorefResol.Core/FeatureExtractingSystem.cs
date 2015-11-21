@@ -14,7 +14,7 @@ namespace HCMUT.EMRCorefResol
 
         private FeatureExtractingSystem() { }
 
-        public void ExtractOne(string emrPath, string conceptsPath, string chainsPath, IDataReader dataReader,
+        public void ExtractOne(string emrPath, string conceptsPath, string chainsPath, IEMRReader dataReader,
             IInstancesGenerator instancesGenerator, IFeatureExtractor fExtractor, ClasProblemCollection pCreator,
             IPreprocessor preprocessor = null, ISet<Type> extractTypes = null)
         {
@@ -65,7 +65,7 @@ namespace HCMUT.EMRCorefResol
             fExtractor.ClearCache();
         }
 
-        public void ExtractAll(string[] emrPaths, string[] conceptsPaths, string[] chainsPaths, IDataReader dataReader,
+        public void ExtractAll(string[] emrPaths, string[] conceptsPaths, string[] chainsPaths, IEMRReader dataReader,
             IInstancesGenerator instancesGenerator, IFeatureExtractor fExtractor, ClasProblemCollection pCreator,
             IPreprocessor preprocessor, ISet<Type> extractTypes = null)
         {
@@ -76,7 +76,7 @@ namespace HCMUT.EMRCorefResol
             }
         }
 
-        public void ExtractCollection(EMRCollection emrColl, IDataReader dataReader,
+        public void ExtractCollection(EMRCollection emrColl, IEMRReader dataReader,
             IInstancesGenerator instancesGenerator, IFeatureExtractor fExtractor, ClasProblemCollection pCreator,
             IPreprocessor preprocessor, ISet<Type> extractTypes = null)
         {
@@ -87,7 +87,7 @@ namespace HCMUT.EMRCorefResol
             }
         }
 
-        public void ExtractCollections(IEnumerable<EMRCollection> emrColls, IDataReader dataReader,
+        public void ExtractCollections(IEnumerable<EMRCollection> emrColls, IEMRReader dataReader,
             IInstancesGenerator instancesGenerator, IFeatureExtractor fExtractor, ClasProblemCollection pCreator,
             IPreprocessor preprocessor, ISet<Type> extractTypes = null)
         {

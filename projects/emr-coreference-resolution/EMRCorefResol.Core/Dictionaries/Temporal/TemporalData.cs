@@ -8,11 +8,11 @@ namespace HCMUT.EMRCorefResol
 {
     public class TemporalData
     {
-        public int Start { get; set; }
-        public int End { get; set; }
-        public int Line { get; set; }
-        public string Text { get; set; }
-        public string Value { get; set; }
+        public int Start { get; }
+        public int End { get; }
+        public int Line { get; }
+        public string Text { get; }
+        public string Value { get; }
 
         public TemporalData(int start, int end, int line, string text, string value)
         {
@@ -24,7 +24,7 @@ namespace HCMUT.EMRCorefResol
         }
 
         public TemporalData(int start, int end, string text, string value)
-            :this(start, end, 0, text, value)
+            : this(start, end, 0, text, value)
         {
 
         }
@@ -33,10 +33,11 @@ namespace HCMUT.EMRCorefResol
         {
             var tempData = obj as TemporalData;
 
-            if(tempData == null)
+            if (tempData == null)
             {
                 return false;
-            } else
+            }
+            else
             {
                 return tempData.Start == this.Start &&
                     tempData.End == this.End &&

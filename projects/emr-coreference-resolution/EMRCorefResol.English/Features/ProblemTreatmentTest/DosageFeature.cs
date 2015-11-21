@@ -8,7 +8,7 @@ namespace HCMUT.EMRCorefResol.English.Features
 {
     class DosageFeature : Feature
     {
-        public DosageFeature(MedicationInfo ana, MedicationInfo ante)
+        public DosageFeature(MedData ana, MedData ante)
             :base("Dosage-Feature", 2, 0)
         {
             if (ana == null || ante == null) return;

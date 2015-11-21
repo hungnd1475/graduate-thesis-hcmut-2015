@@ -40,7 +40,7 @@ namespace EMRCorefResol.UITest
         private readonly WinForms.FolderBrowserDialog FolderDialog = new WinForms.FolderBrowserDialog();
 
         private int currentEMRIndex = -1;
-        private IDataReader dataReader = new I2B2DataReader();
+        private IEMRReader dataReader = new I2B2EMRReader();
         private EMR currentEMR = null;
         private Concept currentConcept = null;
 
@@ -408,7 +408,7 @@ namespace EMRCorefResol.UITest
         private static async Task<Tuple<IIndexedEnumerable<IClasInstance>, IFeatureVector[]>>
             ExtractFeatures(EMR emr, string chainsPath, IFeatureExtractor extractor, TextEditor txtFeatures)
         {
-            var reader = new I2B2DataReader();
+            var reader = new I2B2EMRReader();
             var chains = new CorefChainCollection(chainsPath, reader);
             var instances = new AllInstancesGenerator().Generate(emr, chains);
 
@@ -556,7 +556,7 @@ namespace EMRCorefResol.UITest
                 txtSystemChains.Text = string.Join(Environment.NewLine, systemChains.Select(ch => ch.ToString()));
 
                 var chainsPath = emrCollection.GetChainsPath(currentEMRIndex);
-                var reader = new I2B2DataReader();
+                var reader = new I2B2EMRReader();
                 var groundTruth = new CorefChainCollection(chainsPath, reader);
                 var evals = Evaluations.Evaluate(currentEMR, groundTruth, systemChains);
                 txtScores.Text = Evaluations.Stringify(evals);

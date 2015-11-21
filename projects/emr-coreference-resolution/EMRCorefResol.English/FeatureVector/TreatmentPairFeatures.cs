@@ -12,11 +12,12 @@ namespace HCMUT.EMRCorefResol.English
     class TreatmentPairFeatures : FeatureVector
     {
         public TreatmentPairFeatures(TreatmentPair instance, EMR emr, double classValue,
-            MedicationInfoCollection medInfo, WikiDataDictionary wikiData, UmlsDataDictionary umlsData, TemporalDataDictionary temporalData)
+            MedDataDictionary medData, WikiDataDictionary wikiData, UMLSDataDictionary umlsData, 
+            TemporalDataDictionary temporalData)
             : base(size: 20, classValue: classValue)
         {
-            var anaMedicationInfo = GetMedicationInfo(instance.Anaphora, emr, medInfo);
-            var anteMedicationInfo = GetMedicationInfo(instance.Antecedent, emr, medInfo);
+            var anaMedicationInfo = medData.Get(new MedKey(instance.Anaphora, emr));
+            var anteMedicationInfo = medData.Get(new MedKey(instance.Antecedent, emr));
 
             var anaWiki = wikiData.Get(instance.Anaphora.Lexicon);
             var anteWiki = wikiData.Get(instance.Antecedent.Lexicon);
@@ -44,25 +45,6 @@ namespace HCMUT.EMRCorefResol.English
             this[18] = new SubstringFeature(instance);
             this[19] = new CosineDistanceFeature(instance);
             //this[19] = new StringMatchFeature(instance);            
-        }
-
-        private MedicationInfo GetMedicationInfo(Concept c, EMR emr, MedicationInfoCollection meds)
-        {
-            var line = emr.GetLine(c);
-
-            foreach (MedicationInfo med in meds)
-            {
-                if (string.Equals(line.Replace("\r", ""), med.Line))
-                {
-                    if (c.Lexicon.ToLower().Contains(med.Drug.ToLower()) ||
-                        med.Drug.ToLower().Contains(c.Lexicon.ToLower()))
-                    {
-                        return med;
-                    }
-                }
-            }
-
-            return null;
         }
     }
 }

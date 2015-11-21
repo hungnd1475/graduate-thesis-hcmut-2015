@@ -17,9 +17,9 @@ namespace HCMUT.EMRCorefResol.English.Features
                 return;
             }
 
-            if(anaData.title.Equals(anteData.title, StringComparison.InvariantCultureIgnoreCase) ||
-                anaData.term.Equals(anteData.title, StringComparison.InvariantCultureIgnoreCase) ||
-                anaData.title.Equals(anteData.term, StringComparison.InvariantCultureIgnoreCase))
+            if(anaData.Title.Equals(anteData.Title, StringComparison.InvariantCultureIgnoreCase) ||
+                anaData.Term.Equals(anteData.Title, StringComparison.InvariantCultureIgnoreCase) ||
+                anaData.Title.Equals(anteData.Term, StringComparison.InvariantCultureIgnoreCase))
             {
                 SetCategoricalValue(1);
             }

@@ -36,7 +36,7 @@ namespace HCMUT.EMRCorefResol
         /// <param name="emrFile">The path to the content file.</param>
         /// <param name="conceptsFile">The path to the concepts file.</param>
         /// <param name="dataReader">The reader that can read the concepts from concepts file.</param>
-        public EMR(string emrFile, string conceptsFile, IDataReader dataReader, 
+        public EMR(string emrFile, string conceptsFile, IEMRReader dataReader, 
             IPreprocessor preprocessor = null)
         {
             Path = emrFile;

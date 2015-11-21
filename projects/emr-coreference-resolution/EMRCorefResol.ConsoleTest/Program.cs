@@ -28,8 +28,7 @@ namespace HCMUT.EMRCorefResol.ConsoleTest
 
         static void ReadExtractedFile()
         {
-            var dataReader = new I2B2DataReader();
-            var collection = new UmlsDataDictionary(@"E:\graduate-thesis-hcmut-2015\dataset\i2b2_Train\umls\clinical-11.txt", dataReader);
+            var collection = new UMLSDataDictionary(@"E:\graduate-thesis-hcmut-2015\dataset\i2b2_Train\umls\clinical-11.txt");
         }
 
         static void testClassifier()

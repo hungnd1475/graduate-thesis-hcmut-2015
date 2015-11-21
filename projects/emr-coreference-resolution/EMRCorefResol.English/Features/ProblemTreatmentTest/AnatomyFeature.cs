@@ -8,7 +8,7 @@ namespace HCMUT.EMRCorefResol.English.Features
 {
     class AnatomyFeature : Feature
     {
-        public AnatomyFeature(IConceptPair instance, UmlsDataDictionary dictionary)
+        public AnatomyFeature(IConceptPair instance, UMLSDataDictionary dictionary)
             : base("Anatomy-Feature", 3, 2)
         {
             var anaNorm = EnglishNormalizer.Normalize(instance.Anaphora.Lexicon, KeywordService.Instance.STOP_WORDS);

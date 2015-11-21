@@ -38,7 +38,7 @@ namespace HCMUT.EMRCorefResol
         /// </summary>
         /// <param name="chainsFile">The path to the chains file.</param>
         /// <param name="dataReader">The reader that can read the concepts in the chains file.</param>
-        public CorefChainCollection(string chainsFile, IDataReader dataReader)
+        public CorefChainCollection(string chainsFile, IEMRReader dataReader)
         {
             var fs = new FileStream(chainsFile, FileMode.Open);
             var sr = new StreamReader(fs);

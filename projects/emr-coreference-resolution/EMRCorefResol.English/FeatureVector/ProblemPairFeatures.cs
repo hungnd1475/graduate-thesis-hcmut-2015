@@ -11,7 +11,7 @@ namespace HCMUT.EMRCorefResol.English
     class ProblemPairFeatures : FeatureVector
     {
         public ProblemPairFeatures(ProblemPair instance, EMR emr, double classValue,
-            WikiDataDictionary wikiData, UmlsDataDictionary umlsData)
+            WikiDataDictionary wikiData, UMLSDataDictionary umlsData)
             : base(size: 16, classValue: classValue)
         {
             var anaWiki = wikiData.Get(instance.Anaphora.Lexicon);

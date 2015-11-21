@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace HCMUT.EMRCorefResol.IO
 {
     using Service;
-    public class I2B2DataReader : IDataReader
+    public class I2B2EMRReader : IEMRReader
     {
         private static Regex ConceptPattern = new Regex("c=\"(?<c>[^|]+)\" (?<begin>\\d+:\\d+) (?<end>\\d+:\\d+)");
         private static Regex ConceptTypePattern = new Regex("t=\"([^|]+)\"");
@@ -120,7 +120,7 @@ namespace HCMUT.EMRCorefResol.IO
             }
         }
 
-        public MedicationInfo ReadMedInfoLine(string line)
+        public MedData ReadMedInfoLine(string line)
         {
             var info_arr = line.Split('|');
 
@@ -139,7 +139,7 @@ namespace HCMUT.EMRCorefResol.IO
             var duration = Regex.Replace(info_arr[8], regex, "");
             var neccessity = Regex.Replace(info_arr[9], regex, "");
 
-            return new MedicationInfo(line_index, line_value, drug, form, strength, dose, route,
+            return new MedData(line_index, line_value, drug, form, strength, dose, route,
                 freq, duration, neccessity);
         }
 

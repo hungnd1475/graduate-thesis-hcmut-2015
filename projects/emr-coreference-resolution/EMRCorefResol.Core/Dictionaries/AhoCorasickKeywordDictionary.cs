@@ -152,7 +152,7 @@ namespace HCMUT.EMRCorefResol.Utilities
             return indices.Select(i => _kwList[i]).ToArray();
         }
 
-        public int[] SearchIndices(string s, KWSearchOptions options)
+        public int[] SearchStringIndices(string s, KWSearchOptions options)
         {
             var outIndices = new HashSet<int>();
 

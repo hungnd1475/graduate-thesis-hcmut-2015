@@ -13,12 +13,12 @@ namespace HCMUT.EMRCorefResol.Core.Console
 {
     public static class APISelector
     {
-        public static IDataReader SelectDataReader(EMRFormat emrFormat)
+        public static IEMRReader SelectDataReader(EMRFormat emrFormat)
         {
             switch (emrFormat)
             {
                 case EMRFormat.I2B2:
-                    return new I2B2DataReader();
+                    return new I2B2EMRReader();
                 default:
                     throw new ArgumentException("Cannot create an instance of IDataReader based on dataFormat value.");
             }

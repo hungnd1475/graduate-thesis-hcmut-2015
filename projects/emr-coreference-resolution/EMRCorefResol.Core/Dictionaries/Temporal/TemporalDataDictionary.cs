@@ -5,25 +5,50 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using HCMUT.EMRCorefResol.IO;
 
 namespace HCMUT.EMRCorefResol
 {
-    public class TemporalDataDictionary
+    public class TemporalDataDictionary : WorldKnowledgeDictionary<TemporalKey, TemporalData>
     {
-        private readonly List<TemporalData> _temporals = new List<TemporalData>();
+        public static readonly IWorldKnowledgeReader<TemporalKey, TemporalData> Reader
+            = new TemporalDataReader();
+
+        public static TemporalDataDictionary LoadFromEMRPath(string emrPath, string temporalDirName)
+        {
+            var fileInfo = new FileInfo(emrPath);
+            var rootPath = fileInfo.Directory.Parent.FullName;
+            var fileName = fileInfo.Name;
+
+            var temporalPath = Path.Combine(new string[] { rootPath, temporalDirName, fileName + ".ann" });
+            return File.Exists(temporalPath) ? new TemporalDataDictionary(temporalPath) : null;
+        }
+
+        private readonly List<TemporalData> _temporalData = new List<TemporalData>();
         private const int MAX_PREVIOUS_LINE = 3;
 
-        public TemporalData Get(Concept c, EMR emr)
+        public TemporalDataDictionary(string temporalFile)
+            : base(temporalFile, Reader)
+        { }
+
+        protected override void Add(TemporalKey key, TemporalData value)
         {
+            _temporalData.Add(value);
+        }
+
+        public override TemporalData Get(TemporalKey key)
+        {
+            var emr = key.EMR;
+            var c = key.Concept;
+
             var line = emr.GetLine(c);
             var result = GetTemporalInline(c, line, emr);
 
-            if(result == null)
+            if (result == null)
             {
                 var section = emr.GetSection(c);
                 result = GetTemporalInPreviousLine(line, section, emr);
             }
-
 
             return result;
         }
@@ -31,15 +56,16 @@ namespace HCMUT.EMRCorefResol
         private TemporalData GetTemporalInPreviousLine(string line, EMRSection section, EMR emr)
         {
             string[] sectionLines;
-            if(section != null)
+            if (section != null)
             {
                 sectionLines = section.Content.Split('\n');
-            } else
+            }
+            else
             {
                 sectionLines = emr.Content.Split('\n');
             }
 
-            for(int i=0; i<sectionLines.Length; i++)
+            for (int i = 0; i < sectionLines.Length; i++)
             {
                 var curLine = sectionLines[i].Replace("\r", "");
                 if (curLine.Equals(line))
@@ -47,7 +73,7 @@ namespace HCMUT.EMRCorefResol
                     int num = 1;
                     while ((i - num) >= 0 && num <= MAX_PREVIOUS_LINE)
                     {
-                        var value = GetTemporalInline(null, sectionLines[i-num], emr);
+                        var value = GetTemporalInline(null, sectionLines[i - num], emr);
                         if (value != null)
                         {
                             return value;
@@ -74,27 +100,30 @@ namespace HCMUT.EMRCorefResol
             }
 
             List<TemporalData> tempInline = new List<TemporalData>();
-            foreach(TemporalData tempData in _temporals)
+            foreach (TemporalData tempData in _temporalData)
             {
-                if(tempData.Start >= lineStart && tempData.End <= lineEnd)
+                if (tempData.Start >= lineStart && tempData.End <= lineEnd)
                 {
                     tempInline.Add(tempData);
                 }
             }
 
             //Return the best Temporal data inline
-            if(tempInline.Count == 0)
+            if (tempInline.Count == 0)
             {
                 return null;
-            } else if(tempInline.Count == 1)
+            }
+            else if (tempInline.Count == 1)
             {
                 return tempInline[0];
-            } else
+            }
+            else
             {
-                if(c == null)
+                if (c == null)
                 {
                     return tempInline.Last();
-                } else
+                }
+                else
                 {
                     return GetBestResultInLine(c, line, tempInline);
                 }
@@ -127,50 +156,35 @@ namespace HCMUT.EMRCorefResol
             return bestResult;
         }
 
-        public int Count
+        class TemporalDataReader : IWorldKnowledgeReader<TemporalKey, TemporalData>
         {
-            get { return _temporals.Count; }
-        }
-
-        public TemporalDataDictionary(string infosFile)
-        {
-            /*var content = File.ReadAllText(infosFile);
-
-            XmlDocument doc = new XmlDocument();
-            doc.LoadXml($"<temporal>{content}</temporal>");
-
-            var nodes = doc.GetElementsByTagName("TIMEX3");
-            foreach(XmlNode node in nodes)
+            public bool Read(string line, out TemporalKey key, out TemporalData value)
             {
-                var start = int.Parse(node.Attributes["start"].Value);
-                var end = int.Parse(node.Attributes["end"].Value);
-                var text = node.Attributes["text"].Value;
-                var value = node.Attributes["val"].Value;
-                var temporalData = new TemporalData(start, end, text, value);
-
-                _temporals.Add(temporalData);
-            }*/
-
-            var lines = File.ReadAllLines(infosFile);
-            foreach(string line in lines)
-            {
+                key = new TemporalKey();
+                value = null;
                 XmlDocument doc = new XmlDocument();
+
                 try
                 {
                     doc.LoadXml(line);
+                    var node = doc.FirstChild;
+
+                    if (node != null)
+                    {
+                        var start = int.Parse(node.Attributes["start"].Value);
+                        var end = int.Parse(node.Attributes["end"].Value);
+                        var text = node.Attributes["text"].Value;
+                        var val = node.Attributes["val"].Value;
+
+                        value = new TemporalData(start, end, text, val);
+                        return true;
+                    }
+
+                    return false;
                 }
-                catch { }
-
-                var node = doc.FirstChild;
-                if (node != null)
+                catch
                 {
-                    var start = int.Parse(node.Attributes["start"].Value);
-                    var end = int.Parse(node.Attributes["end"].Value);
-                    var text = node.Attributes["text"].Value;
-                    var value = node.Attributes["val"].Value;
-                    var temporalData = new TemporalData(start, end, text, value);
-
-                    _temporals.Add(temporalData);
+                    return false;
                 }
             }
         }

@@ -11,8 +11,8 @@ namespace HCMUT.EMRCorefResol.English
     public class EnglishClasFeatureExtractor : IFeatureExtractor
     {
         private WikiDataDictionary _wikiData;
-        private UmlsDataDictionary _umlsData;
-        private MedicationInfoCollection _medInfo;
+        private UMLSDataDictionary _umlsData;
+        private MedDataDictionary _medInfo;
         private TemporalDataDictionary _temporalData;
 
         private readonly IPatientDeterminer _patientDeterminer;
@@ -29,10 +29,10 @@ namespace HCMUT.EMRCorefResol.English
                 if (_emr != value)
                 {
                     _emr = value;
-                    _wikiData = WikiInformation.GetWikiFile(value.Path);
-                    _umlsData = UmlsInformation.GetWikiFile(value.Path);
-                    _temporalData = TemporalInformation.GetTemporalFile(value.Path);
-                    _medInfo = MedicationInformation.GetMedicationFile(value.Path);
+                    _wikiData = WikiDataDictionary.LoadFromEMRPath(value.Path, "wiki");
+                    _umlsData = UMLSDataDictionary.LoadFromEMRPath(value.Path, "umls");
+                    _temporalData = TemporalDataDictionary.LoadFromEMRPath(value.Path, "new_temporal");
+                    _medInfo = MedDataDictionary.LoadFromEMRPath(value.Path, "medications");
                 }
             }
         }

@@ -13,13 +13,13 @@ namespace HCMUT.EMRCorefResol.English.Features
         public TemporalFeature(IConceptPair instance, EMR emr, TemporalDataDictionary temporalData)
             : base("Temporal-Feature", 3, 2)
         {
-            TemporalData anaTemporal = temporalData.Get(instance.Anaphora, emr);
+            TemporalData anaTemporal = temporalData.Get(new TemporalKey(instance.Anaphora, emr));
             if(anaTemporal == null)
             {
                 return;
             }
 
-            TemporalData anteTemporal = temporalData.Get(instance.Antecedent, emr);
+            TemporalData anteTemporal = temporalData.Get(new TemporalKey(instance.Antecedent, emr));
             if(anteTemporal == null)
             {
                 return;

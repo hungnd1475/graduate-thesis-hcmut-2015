@@ -65,7 +65,7 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
             {
                 var emrPath = emrColl.GetEMRPath(i);
                 var conceptsPath = emrColl.GetConceptsPath(i);
-                var emr = new EMR(emrPath, conceptsPath, new I2B2DataReader());
+                var emr = new EMR(emrPath, conceptsPath, new I2B2EMRReader());
 
                 foreach (EMRSection section in emr.Sections)
                 {
@@ -83,7 +83,7 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
                 {
                     var emrPath = collection.GetEMRPath(i);
                     var conceptPath = collection.GetConceptsPath(i);
-                    var dataReader = new I2B2DataReader();
+                    var dataReader = new I2B2EMRReader();
 
                     var emr = new EMR(emrPath, conceptPath, dataReader);
                     var filename = new FileInfo(emr.Path).Name;
@@ -101,7 +101,7 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
                 {
                     var emrPath = collection.GetEMRPath(i);
                     var conceptPath = collection.GetConceptsPath(i);
-                    var dataReader = new I2B2DataReader();
+                    var dataReader = new I2B2EMRReader();
 
                     var emr = new EMR(emrPath, conceptPath, dataReader);
                     var filename = new FileInfo(emr.Path).Name;
@@ -119,7 +119,7 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
                 {
                     var emrPath = collection.GetEMRPath(i);
                     var conceptPath = collection.GetConceptsPath(i);
-                    var dataReader = new I2B2DataReader();
+                    var dataReader = new I2B2EMRReader();
 
                     var emr = new EMR(emrPath, conceptPath, dataReader);
                     var filename = new FileInfo(emr.Path).Name;
@@ -149,9 +149,9 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
             return _temporal;
         }
 
-        static Dictionary<string, Service.WikiData> ExtractWikiData(EMR emr)
+        static Dictionary<string, WikiData> ExtractWikiData(EMR emr)
         {
-            Dictionary<string, Service.WikiData> _wiki = new Dictionary<string, Service.WikiData>();
+            Dictionary<string, WikiData> _wiki = new Dictionary<string, WikiData>();
 
             int num = 0;
             foreach (Concept c in emr.Concepts)
@@ -178,9 +178,9 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
             return _wiki;
         }
 
-        static Dictionary<string, Service.UMLSData> ExtractUMLSData(EMR emr)
+        static Dictionary<string, UMLSData> ExtractUMLSData(EMR emr)
         {
-            Dictionary<string, Service.UMLSData> _umls = new Dictionary<string, Service.UMLSData>();
+            Dictionary<string, UMLSData> _umls = new Dictionary<string, UMLSData>();
 
             int num = 0;
             foreach (Concept c in emr.Concepts)
@@ -255,7 +255,7 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
             }
         }
 
-        static void WriteToFile(string path, Dictionary<string, Service.WikiData> dictionary)
+        static void WriteToFile(string path, Dictionary<string, WikiData> dictionary)
         {
             FileInfo fileinfo = new FileInfo(path);
             var root = fileinfo.Directory.Parent.FullName;
@@ -274,7 +274,7 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
             }
         }
 
-        static void WriteToFile(string path, Dictionary<string, Service.UMLSData> dictionary)
+        static void WriteToFile(string path, Dictionary<string, UMLSData> dictionary)
         {
             FileInfo fileinfo = new FileInfo(path);
             var root = fileinfo.Directory.Parent.FullName;
@@ -304,7 +304,7 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
                 {
                     var emrPath = emrColl.GetEMRPath(i);
                     var conceptsPath = emrColl.GetConceptsPath(i);
-                    var emr = new EMR(emrPath, conceptsPath, new I2B2DataReader());
+                    var emr = new EMR(emrPath, conceptsPath, new I2B2EMRReader());
 
                     before[i] = ExtractWords(emr, IsPronoun, (e, c) => GetNWordsNearBy(e, c, 3, true));
                     after[i] = ExtractWords(emr, IsPronoun, (e, c) => GetNWordsNearBy(e, c, 3, false));
@@ -336,9 +336,9 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
                 {
                     var emrPath = emrColl.GetEMRPath(i);
                     var conceptsPath = emrColl.GetConceptsPath(i);
-                    var emr = new EMR(emrPath, conceptsPath, new I2B2DataReader());
+                    var emr = new EMR(emrPath, conceptsPath, new I2B2EMRReader());
 
-                    var gt = new CorefChainCollection(emrColl.GetChainsPath(i), new I2B2DataReader());
+                    var gt = new CorefChainCollection(emrColl.GetChainsPath(i), new I2B2EMRReader());
                     Func<Concept, bool> isPatient = c => IsPatient(c, gt);
 
                     before[i] = ExtractWords(emr, isPatient, (e, c) => GetNWordsNearBy(e, c, 3, true));
@@ -395,8 +395,8 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
                 {
                     var emrPath = emrColl.GetEMRPath(i);
                     var conceptsPath = emrColl.GetConceptsPath(i);
-                    var emr = new EMR(emrPath, conceptsPath, new I2B2DataReader());
-                    var gt = new CorefChainCollection(emrColl.GetChainsPath(i), new I2B2DataReader());
+                    var emr = new EMR(emrPath, conceptsPath, new I2B2EMRReader());
+                    var gt = new CorefChainCollection(emrColl.GetChainsPath(i), new I2B2EMRReader());
 
                     before[i] = new HashSet<string>();
                     after[i] = new HashSet<string>();
@@ -438,7 +438,7 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
                 {
                     var emrPath = emrColl.GetEMRPath(i);
                     var conceptsPath = emrColl.GetConceptsPath(i);
-                    var emr = new EMR(emrPath, conceptsPath, new I2B2DataReader());
+                    var emr = new EMR(emrPath, conceptsPath, new I2B2EMRReader());
 
                     verbs[i] = ExtractWords(emr, IsPronoun, (e, c) => GetNextVerb(e, c));
                 });

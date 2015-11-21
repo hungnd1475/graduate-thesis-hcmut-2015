@@ -22,7 +22,7 @@ namespace HCMUT.EMRCorefResol
             get { return _sections.Count; }
         }
 
-        public EMRSectionCollection(string emrContent, IDataReader dataReader)
+        public EMRSectionCollection(string emrContent, IEMRReader dataReader)
         {
             var sections = dataReader.ReadSection(emrContent);
             if(sections != null)

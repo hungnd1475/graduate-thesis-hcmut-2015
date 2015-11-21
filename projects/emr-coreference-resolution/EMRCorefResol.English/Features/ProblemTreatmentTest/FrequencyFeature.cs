@@ -9,7 +9,7 @@ namespace HCMUT.EMRCorefResol.English.Features
 {
     class FrequencyFeature : Feature
     {
-        public FrequencyFeature(MedicationInfo ana, MedicationInfo ante)
+        public FrequencyFeature(MedData ana, MedData ante)
             :base("Frequency-Feature", 2, 0)
         {
             if (ana == null || ante == null) return;
