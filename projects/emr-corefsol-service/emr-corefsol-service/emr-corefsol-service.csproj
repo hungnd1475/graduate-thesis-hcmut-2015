@@ -435,8 +435,6 @@
     <Compile Include="Libs\Interface\IDictionaryHelper.cs" />
     <Compile Include="Libs\Interface\INLPHelper.cs" />
     <Compile Include="Libs\NLP\OpenNLPHelper.cs" />
-    <Compile Include="Libs\NLP\SharpNLPHelper.cs" />
-    <Compile Include="Libs\NLP\StanfordNLPHelper.cs" />
     <Compile Include="Libs\Dictionary\WordNetHelper.cs" />
     <Compile Include="Libs\Temporal\TemporalHelper.cs" />
     <Compile Include="Libs\Wiki\WikiHelper.cs" />
