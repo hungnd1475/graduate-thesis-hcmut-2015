@@ -374,5 +374,16 @@ Kết quả
 Tổng kết
 \end_layout
 
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "referrence"
+options "bibtotoc,ieeetr"
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
