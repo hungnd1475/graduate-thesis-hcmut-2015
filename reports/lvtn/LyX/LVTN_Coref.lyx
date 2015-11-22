@@ -1,0 +1,378 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass report
+\begin_preamble
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand\nomname{Danh sách từ viết tắt}
+\renewcommand{\chaptermark}[1]{ \markboth{#1}{} }
+\renewcommand{\sectionmark}[1]{ \markright{#1}{} }
+\fancyhf{}
+\fancyhead[RO]{\sffamily Phân giải đồng tham chiếu trong bệnh án điện tử}
+\fancyhead[RE]{\sffamily\rightmark}
+\fancyfoot[R]{\sffamily\thepage}
+\fancypagestyle{plain}{
+   \fancyhf{}
+}
+\end_preamble
+\use_default_options true
+\begin_modules
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language vietnamese
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement t
+\paperfontsize 11
+\spacing onehalf
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1.5in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 2
+\tocdepth 1
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter*
+Lời cam đoan
+\end_layout
+
+\begin_layout Chapter*
+Lời cảm ơn
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{
+\backslash
+listfigurename}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList table
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{
+\backslash
+listtablename}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+set_width "auto"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{
+\backslash
+nomname}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "BAĐT"
+description "Bệnh án điện tử"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Tổng quan
+\end_layout
+
+\begin_layout Section
+Giới thiệu đề tài
+\end_layout
+
+\begin_layout Section
+Mục tiêu và phạm vi đề tài
+\end_layout
+
+\begin_layout Section
+Cấu trúc luận văn
+\end_layout
+
+\begin_layout Chapter
+Các công trình liên quan
+\end_layout
+
+\begin_layout Section
+Bệnh án điện tử
+\end_layout
+
+\begin_layout Section
+Các hướng khai thác dữ liệu bệnh án điện tử
+\end_layout
+
+\begin_layout Chapter
+Kiến thức nền tảng
+\end_layout
+
+\begin_layout Section
+Các định nghĩa và thuật ngữ
+\end_layout
+
+\begin_layout Section
+Học máy
+\end_layout
+
+\begin_layout Section
+Support Vector Machine
+\end_layout
+
+\begin_layout Section
+Xử lý ngôn ngữ tự nhiên
+\end_layout
+
+\begin_layout Section
+Phân giải đồng tham chiếu
+\end_layout
+
+\begin_layout Chapter
+Tổng quan hệ thống
+\end_layout
+
+\begin_layout Section
+Nội dung bài toán
+\end_layout
+
+\begin_layout Section
+Quy trình huấn luyện hệ thống phân loại
+\end_layout
+
+\begin_layout Standard
+Dựa vào hệ thống tốt nhất của thử thách i2b2 năm 2011, mô hình phân giải
+ đồng tham chiếu mà nhóm sử dụng để hiện thực hệ thống là mô hình cặp thực
+ thể.
+ Tư tưởng cơ bản của mô hình này là xác định xem hai khái niệm bất kì có
+ đồng tham chiếu với nhau hay không, sau đó gom nhóm các cặp đồng tham chiếu
+ giao nhau (có một khái niệm chung) lại để tạo thành các chuỗi đồng tham
+ chiếu.
+ Để xác định tính đồng tham chiếu giữa hai khái niệm bất kì, ta cần huấn
+ luyện một model phân loại dựa trên dữ liệu mẫu.
+ Ngoài ra, việc xác định các khái niệm lớp Person có phải đang chỉ về bệnh
+ nhân hay không đóng góp một phần lớn để phân loại đúng tính đồng tham chiếu
+ của các cặp khái niệm ở lớp này.
+ Cũng theo Yan Xu (2011), các đại từ đa phần tham chiếu tới khái niệm thuộc
+ lớp Person, Problem, Test hay Treatment nào đó đứng trước, do đó việc xác
+ định một đại từ thuộc lớp nào trong 4 lớp này là một việc quan trọng.
+\end_layout
+
+\begin_layout Standard
+Như vậy mục đích của quy trình huấn luyện là xây dựng tổng cộng 6 SVM model,
+ trong đó 4 SVM model nhằm mục đích phân loại và đánh giá độ tin cậy đồng
+ tham chiếu của các cặp khái niệm Person-Person, Problem-Problem, Test-Test
+ và Treatment-Treatment; 1 SVM model để xác định các khái niệm Person có
+ là bệnh nhân hay không và 1 SVM model để phân loại các đại từ (các khái
+ niệm lớp Pronoun) vào một trong bốn lớp Person, Problem, Test và Treatment.
+ Đầu vào của quy trình này là toàn bộ các văn bản BAĐT với các khái niệm
+ đã được trích xuất và gán nhãn.
+ Sau khi tiền xử lý, hệ thống xây dựng các mẫu huấn luyện bao gồm: Person,
+ Person-Person, Problem-Problem, Test-Test, Treatment-Treatment và Pronoun
+ từ danh sách các khái niệm.
+ Sáu tập mẫu này được trích xuất thuộc tính và đưa vào để huấn luyện 6 SVM
+ model.
+ Thư viện SVM được nhóm sử dụng là LibSVM.
+\end_layout
+
+\begin_layout Section
+Quy trình phân giải đồng tham chiếu
+\end_layout
+
+\begin_layout Standard
+Quy trình phân giải đồng tham chiếu sử dụng 6 SVM model đã được huấn luyện
+ để 
+\end_layout
+
+\begin_layout Chapter
+Chi tiết hệ thống
+\end_layout
+
+\begin_layout Section
+Tiền xử lý
+\end_layout
+
+\begin_layout Section
+Xây dựng cặp khái niệm
+\end_layout
+
+\begin_layout Section
+Rút trích đặc trưng
+\end_layout
+
+\begin_layout Subsection*
+Nhóm Person
+\end_layout
+
+\begin_layout Subsection*
+Nhóm Patient
+\end_layout
+
+\begin_layout Subsection*
+Nhóm Pronoun
+\end_layout
+
+\begin_layout Subsection*
+Nhóm Problem/Test/Treatment
+\end_layout
+
+\begin_layout Section
+Gom cụm và xây dựng chuỗi đồng tham chiếu
+\end_layout
+
+\begin_layout Section
+Đánh giá hiệu năng
+\end_layout
+
+\begin_layout Subsection*
+Hệ đo MUC
+\end_layout
+
+\begin_layout Subsection*
+Hệ đo B-CUBED
+\end_layout
+
+\begin_layout Subsection*
+Hệ đo CEAF
+\end_layout
+
+\begin_layout Chapter
+Thí nghiệm đánh giá
+\end_layout
+
+\begin_layout Section
+Tập dữ liệu
+\end_layout
+
+\begin_layout Section
+Kết quả
+\end_layout
+
+\begin_layout Chapter
+Tổng kết
+\end_layout
+
+\end_body
+\end_document
