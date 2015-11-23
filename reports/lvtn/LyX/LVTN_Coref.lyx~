@@ -4,6 +4,7 @@
 \begin_header
 \textclass report
 \begin_preamble
+\usepackage{caption}
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows,shapes.symbols,shapes.geometric,shadows,chains,calc,positioning,matrix,fit}
 
@@ -19,6 +20,8 @@
 \fancypagestyle{plain}{
    \fancyhf{}
 }
+
+\captionsetup[table]{position=top,justification=raggedright,singlelinecheck=true,slc=off}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -442,7 +445,7 @@ reference "fig:SDHL"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -856,14 +859,14 @@ reference "fig:SDPG"
  so sánh với kết quả của hệ thống I.
  Vì các hệ đo này đánh giá các chuỗi đồng tham chiếu chứ không phải đánh
  giá hiệu năng phân loại thông thường nên cách thức hiện thực chúng có phần
- phức tạp, nhóm sẽ trình bày chi tiết ở phần sau.
+ phức tạp, nhóm sẽ trình bày chi tiết các cách hiện thực này ở phần sau.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -1354,6 +1357,18 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tập đặc trưng cho lớp Person
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -1363,7 +1378,9 @@ status open
 \backslash
 resizebox{
 \backslash
-textwidth}{!}{%
+textwidth}{!}{
+\backslash
+scriptsize%
 \end_layout
 
 \end_inset
@@ -1380,7 +1397,7 @@ textwidth}{!}{%
 <column alignment="left" valignment="middle">
 <column alignment="left" valignment="middle" width="0pt">
 <row>
-<cell alignment="left" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1392,7 +1409,7 @@ Thuộc tính
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1404,7 +1421,7 @@ Giá trị
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2122,7 +2139,7 @@ Cả hai đều chứa thông tin về “bạn” (1), ngược lại (0)
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2131,7 +2148,7 @@ Pronoun match
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2140,7 +2157,7 @@ Pronoun match
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2168,22 +2185,6 @@ status open
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Tập đặc trưng cho lớp Person
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
