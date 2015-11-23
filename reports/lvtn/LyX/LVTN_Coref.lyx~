@@ -4,14 +4,18 @@
 \begin_header
 \textclass report
 \begin_preamble
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,shapes.symbols,shapes.geometric,shadows,chains,calc,positioning,matrix,fit}
+
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand\nomname{Danh sách từ viết tắt}
 \renewcommand{\chaptermark}[1]{ \markboth{#1}{} }
 \renewcommand{\sectionmark}[1]{ \markright{#1}{} }
+
 \fancyhf{}
 \fancyhead[RO]{\sffamily Phân giải đồng tham chiếu trong bệnh án điện tử}
-\fancyhead[RE]{\sffamily\rightmark}
-\fancyfoot[R]{\sffamily\thepage}
+\fancyhead[LE]{\sffamily\rightmark}
+\fancyfoot[RO,LE]{\sffamily\thepage}
 \fancypagestyle{plain}{
    \fancyhf{}
 }
@@ -35,12 +39,12 @@ customHeadersFooters
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-\graphics default
+\graphics pdftex
 \default_output_format default
 \output_sync 0
 \bibtex_command default
 \index_command default
-\float_placement t
+\float_placement th
 \paperfontsize 11
 \spacing onehalf
 \use_hyperref true
@@ -78,14 +82,14 @@ customHeadersFooters
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 1.5in
+\leftmargin 1.2in
 \topmargin 1in
-\rightmargin 1in
+\rightmargin 0.8in
 \bottommargin 1in
 \secnumdepth 2
 \tocdepth 1
 \paragraph_separation indent
-\paragraph_indentation default
+\paragraph_indentation 3.5em
 \quotes_language english
 \papercolumns 1
 \papersides 2
@@ -98,6 +102,76 @@ customHeadersFooters
 \end_header
 
 \begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tikzset{
+\end_layout
+
+\begin_layout Plain Layout
+
+	base/.style = { draw, on grid, align=center, on chain },
+\end_layout
+
+\begin_layout Plain Layout
+
+	doc/.style = { base, shape=tape, fill=white, tape bend top=none, minimum
+ height=2.5em, text width=2.5em },
+\end_layout
+
+\begin_layout Plain Layout
+
+	multidoc/.style = { doc, double copy shadow={shadow xshift=-.5ex, shadow
+ yshift=.5ex} },
+\end_layout
+
+\begin_layout Plain Layout
+
+	proc/.style = { base, rectangle, text width=3em, minimum height=2em },
+\end_layout
+
+\begin_layout Plain Layout
+
+	io/.style = { base, trapezium, trapezium left angle=60, trapezium right
+ angle=120, text width=2.7em, minimum height=2em },
+\end_layout
+
+\begin_layout Plain Layout
+
+	block/.style = { matrix of nodes, nodes=inn, row sep=1em, on grid },
+\end_layout
+
+\begin_layout Plain Layout
+
+	inn/.style = { draw, trapezium, trapezium left angle=60, trapezium right
+ angle=120, text width=2.7em, minimum height=2em, align=center },
+\end_layout
+
+\begin_layout Plain Layout
+
+	border/.style = { draw, inner sep=.5ex },
+\end_layout
+
+\begin_layout Plain Layout
+
+	title/.style = { draw=none }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Chapter*
 Lời cam đoan
@@ -251,7 +325,7 @@ Phân giải đồng tham chiếu
 \end_layout
 
 \begin_layout Chapter
-Tổng quan hệ thống
+Phân tích yêu cầu và thiết kế tổng quát
 \end_layout
 
 \begin_layout Section
@@ -259,25 +333,84 @@ Nội dung bài toán
 \end_layout
 
 \begin_layout Section
+Kiến trúc hệ thống
+\end_layout
+
+\begin_layout Standard
+Dựa vào hệ thống có hiệu năng tốt nhất của thử thách i2b2 năm 2011, mô hình
+ phân giải đồng tham chiếu mà nhóm sử dụng để hiện thực hệ thống là mô hình
+ cặp thực thể.
+ Tư tưởng cơ bản của mô hình này là xác định xem hai khái niệm bất kì có
+ đồng tham chiếu với nhau hay không, sau đó gom nhóm các cặp đồng tham chiếu
+ có một khái niệm chung lại để tạo thành các chuỗi đồng tham chiếu.
+ Như vậy kiến trúc tổng quát của hệ thống nhóm hiện thực gồm 2 quy trình:
+ 
+\emph on
+quy trình huấn luyện hệ thống phân loại
+\emph default
+ và 
+\emph on
+quy trình phân giải đồng tham chiếu
+\emph default
+.
+ Trong đó quy trình huấn luyện là bước huấn luyện các model phân loại dựa
+ trên dữ liệu mẫu đã được phân giải đồng tham chiếu.
+ Quy trình phân giải sử dụng các model phân loại đã được huấn luyện để xác
+ định tính đồng tham chiếu của các cặp khái niệm, từ đó sử dụng một giải
+ thuật gom nhóm các cặp đồng tham chiếu lại để tạo thành các chuỗi đồng
+ tham chiếu.
+\end_layout
+
+\begin_layout Subsection*
 Quy trình huấn luyện hệ thống phân loại
 \end_layout
 
 \begin_layout Standard
-Dựa vào hệ thống tốt nhất của thử thách i2b2 năm 2011, mô hình phân giải
- đồng tham chiếu mà nhóm sử dụng để hiện thực hệ thống là mô hình cặp thực
- thể.
- Tư tưởng cơ bản của mô hình này là xác định xem hai khái niệm bất kì có
- đồng tham chiếu với nhau hay không, sau đó gom nhóm các cặp đồng tham chiếu
- giao nhau (có một khái niệm chung) lại để tạo thành các chuỗi đồng tham
- chiếu.
- Để xác định tính đồng tham chiếu giữa hai khái niệm bất kì, ta cần huấn
+Để xác định tính đồng tham chiếu giữa hai khái niệm bất kì, ta cần huấn
  luyện một model phân loại dựa trên dữ liệu mẫu.
- Ngoài ra, việc xác định các khái niệm lớp Person có phải đang chỉ về bệnh
- nhân hay không đóng góp một phần lớn để phân loại đúng tính đồng tham chiếu
- của các cặp khái niệm ở lớp này.
- Cũng theo Yan Xu (2011), các đại từ đa phần tham chiếu tới khái niệm thuộc
- lớp Person, Problem, Test hay Treatment nào đó đứng trước, do đó việc xác
- định một đại từ thuộc lớp nào trong 4 lớp này là một việc quan trọng.
+ Vì đầu vào của quy trình là các văn bản BAĐT và danh sách các khái niệm
+ đã được gán nhãn, hệ thống cần trích xuất thuộc tính các dữ liệu thô này
+ rồi mới có thể đưa vào để huấn luyện.
+ Bên cạnh đó, các khái niệm đã được phân loại vào 4 nhóm chính là Person,
+ Problem, Test và Treatment, còn các đại từ được phân vào nhóm Pronoun nên
+ để giảm bớt số cặp khái niệm được sinh ra, nhóm huấn luyện 4 model để xác
+ định tính đồng tham chiếu của riêng các cặp Person-Person, Problem-Problem,
+ Test-Test và Treatment-Treatment (vì hai khái niệm thuộc hai lớp khác nhau
+ thì nghiễm nhiên không đồng tham chiếu với nhau).
+ Đối với các đại từ thì thường chỉ tới một khái niệm ở trước đó, nên việc
+ xác định xem một đại từ thực chất mang ý nghĩa của lớp nào trong 4 lớp
+ chính Person, Problem, Test, Treatment là một việc quan trọng.
+ Sau khi đã xác định được lớp chính, hệ thống sẽ xem đại từ đang xét là
+ đồng tham chiếu với khái niệm thuộc lớp tương ứng ở gần nhất trước đó.
+ Các ý này đều là của các tác giả hệ thống có kết quả tốt nhất của thử thách
+ i2b2 năm 2011.
+\end_layout
+
+\begin_layout Standard
+Ngoài ra cũng theo các tác giả này, thông tin một khái niệm lớp Person có
+ chỉ về bệnh nhân hay không góp một phần quan trọng trong việc phân loại
+ đúng tính đồng tham chiếu của cặp các khái niệm lớp này.
+ Trong miền văn bản BAĐT, các khái niệm chỉ người thường chỉ đề cập đến
+ một trong ba loại: bệnh nhân, người thân của bệnh nhân và nhân sự của bệnh
+ viện.
+ Do một BAĐT, mà cụ thể là hồ sơ xuất viện, thông thường chỉ đề cập đến
+ một bệnh nhân nên những khái niệm nào chỉ về bệnh nhân thì thường chắn
+ chắn nằm trong cùng một chuỗi đồng tham chiếu lớn nhất và duy nhất chỉ
+ về bệnh nhân đó.
+ Từ nhận định này, nhóm tác giả của hệ thống I đã đưa vào thuộc tính Patient-cla
+ss cho cặp hai khái niệm lớp Person, nó mang giá trị 1 khi hai khái niệm
+ đều chỉ về bệnh nhân và 0 trong các trường hợp khác.
+ Ở bước huấn luyện, thông tin 
+\begin_inset Quotes eld
+\end_inset
+
+một khái niệm Person có chỉ về bệnh nhân hay không
+\begin_inset Quotes erd
+\end_inset
+
+ được lấy từ tập chuỗi kết quả (ground truth), còn ở bước phân giải đồng
+ tham chiếu thông tin này được xác định nhờ một model phân loại đã được
+ huấn luyện.
 \end_layout
 
 \begin_layout Standard
@@ -285,25 +418,705 @@ Như vậy mục đích của quy trình huấn luyện là xây dựng tổng c
  trong đó 4 SVM model nhằm mục đích phân loại và đánh giá độ tin cậy đồng
  tham chiếu của các cặp khái niệm Person-Person, Problem-Problem, Test-Test
  và Treatment-Treatment; 1 SVM model để xác định các khái niệm Person có
- là bệnh nhân hay không và 1 SVM model để phân loại các đại từ (các khái
- niệm lớp Pronoun) vào một trong bốn lớp Person, Problem, Test và Treatment.
+ là bệnh nhân hay không (Patient-class) và 1 SVM model để phân loại các
+ đại từ (các khái niệm lớp Pronoun) vào một trong bốn lớp Person, Problem,
+ Test và Treatment.
  Đầu vào của quy trình này là toàn bộ các văn bản BAĐT với các khái niệm
  đã được trích xuất và gán nhãn.
  Sau khi tiền xử lý, hệ thống xây dựng các mẫu huấn luyện bao gồm: Person,
  Person-Person, Problem-Problem, Test-Test, Treatment-Treatment và Pronoun
  từ danh sách các khái niệm.
  Sáu tập mẫu này được trích xuất thuộc tính và đưa vào để huấn luyện 6 SVM
- model.
+ model (Hình 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:SDHL"
+
+\end_inset
+
+).
  Thư viện SVM được nhóm sử dụng là LibSVM.
 \end_layout
 
-\begin_layout Section
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[%
+\end_layout
+
+\begin_layout Plain Layout
+
+	>=angle 60,
+\end_layout
+
+\begin_layout Plain Layout
+
+	start chain=going below,
+\end_layout
+
+\begin_layout Plain Layout
+
+	node distance=1.5cm and 2.3cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+	every join/.style={->, draw},
+\end_layout
+
+\begin_layout Plain Layout
+
+	font=
+\backslash
+tiny
+\backslash
+sffamily]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[multidoc](emr){EMR};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[multidoc, right=of emr](con){Concepts};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[proc,below=1.3cm of $(emr)!0.5!(con)$](prep){Tiền xử lý};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io,join]{Các khái niệm/cặp khái niệm};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[proc,join](ex){Trích xuất thuộc tính};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io, right=3cm of con](perp){Thuộc tính cặp Person};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io](pati){Thuộc tính một Person};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io](prop){Thuộc tính cặp Problem};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io](tstp){Thuộc tính cặp Test};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io](trep){Thuộc tính cặp Treatment};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io](pron){Thuộc tính một Pronoun};	
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[proc, right=3cm of $(prop)!0.5!(tstp)$](train){Huấn luyện};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io,right=7cm of perp](perm){SVM model cặp Person};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io](patim){SVM model cho Patient-class};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io](prom){SVM model cho cặp Problem};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io](tstm){SVM model cho cặp Test};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io](trem){SVM model cho cặp Treatment};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io](pronm){SVM model cho Pronoun};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (emr) -- ++(down:0.9cm) -| (prep.130);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (con) -- ++(down:0.9cm) -| (prep.50);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (ex) -- ++(right:2.2cm) |- (perp);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (ex) -- ++(right:2.2cm) |- (pati);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (ex) -- ++(right:2.2cm) |- (prop);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (ex) -- ++(right:2.2cm) |- (tstp);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (ex) -- ++(right:2.2cm) |- (trep);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (ex) -- ++(right:2.2cm) |- (pron);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (perp) -- ++(right:2cm) |- (train);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (pati) -- ++(right:2cm) |- (train);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (prop) -- ++(right:2cm) |- (train);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (tstp) -- ++(right:2cm) |- (train);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (trep) -- ++(right:2cm) |- (train);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (pron) -- ++(right:2cm) |- (train);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (train) -- ++(right:1.5cm) |- (perm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (train) -- ++(right:1.5cm) |- (patim);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (train) -- ++(right:1.5cm) |- (prom);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (train) -- ++(right:1.5cm) |- (tstm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (train) -- ++(right:1.5cm) |- (trem);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (train) -- ++(right:1.5cm) |- (pronm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sơ đồ huấn luyện
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:SDHL"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
 Quy trình phân giải đồng tham chiếu
 \end_layout
 
 \begin_layout Standard
 Quy trình phân giải đồng tham chiếu sử dụng 6 SVM model đã được huấn luyện
- để 
+ ở trên, cùng với đó là một giải thuật gom nhóm các cặp khái niệm đã được
+ phân loại là đồng tham chiếu với nhau lại để cuối cùng tạo thành các chuỗi
+ đồng tham chiếu.
+ Có thể xem đây là quy trình mang đi ứng dụng thực tế để phân giải cho những
+ văn bản BAĐT mới.
+ Dựa vào hệ thống I, nhóm sử dụng giải thuật gom cụm tốt nhất trước để lựa
+ chọn các cặp đồng tham chiếu có độ tin cậy cao nhất, sau đó xây dựng các
+ chuỗi đồng tham chiếu bằng cách nối các cặp có một khái niệm chung.
+ Đối với lớp Pronoun, sau khi đã xác định được lớp chính của một đại từ
+ bất kì, hệ thống tạo một cặp đồng tham chiếu giữa đại từ đó và khái niệm
+ thuộc lớp chính tương ứng ở gần nhất trước đó trong văn bản.
+ Theo nhận định của các tác giả hệ thống I, tuy cách làm này đơn giản nhưng
+ lại tỏ ra rất hiệu quả.
+\end_layout
+
+\begin_layout Standard
+Hình 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:SDPG"
+
+\end_inset
+
+ mô tả trực quan quy trình phân giải đồng tham chiếu.
+ Ở bước trích xuất thuộc tính của các cặp Person, hệ thống sử dụng model
+ phân loại bệnh nhân để xác định giá trị cho thuộc tính Patient-class đã
+ được đề cập ở trên.
+ Theo bài báo đánh giá các hệ thống dự thi thử thách i2b2 2011, ba độ đo
+ được sử dụng để đánh giá hiệu năng là: MUC, B-CUBED và CEAF.
+ Nhóm cũng hiện thực các hệ đo này để đánh giá hệ thống của mình bằng cách
+ so sánh với kết quả của hệ thống I.
+ Vì các hệ đo này đánh giá các chuỗi đồng tham chiếu chứ không phải đánh
+ giá hiệu năng phân loại thông thường nên cách thức hiện thực chúng có phần
+ phức tạp, nhóm sẽ trình bày chi tiết ở phần sau.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[
+\end_layout
+
+\begin_layout Plain Layout
+
+	>=angle 60,
+\end_layout
+
+\begin_layout Plain Layout
+
+	start chain=going below,
+\end_layout
+
+\begin_layout Plain Layout
+
+	node distance=1.5cm and 2.5cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+	every join/.style={->, draw},
+\end_layout
+
+\begin_layout Plain Layout
+
+	font=
+\backslash
+tiny
+\backslash
+sffamily]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[doc](emr){EMR};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[doc, right=of emr](con){Concepts};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[proc, below=1.3cm of $(emr)!0.5!(con)$](prep){Tiền xử lý};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io,join](ins){Các khái niệm/cặp khái niệm};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[proc,join](ex){Trích xuất thuộc tính};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io, right=of ex, join](feat){Vector thuộc tính};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[proc, right=of feat, join](clas){Phân loại};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[multidoc, above=of clas](model){6 SVM model};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io,below=of clas](conf){Độ tin cậy đồng tham chiếu};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[proc,join,below=of ex](clus){Gom cụm};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io,join](sysc){Các chuỗi đồng tham chiếu};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[proc,join,right=of sysc](eval){Đánh giá hiệu năng};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[doc,right=of eval, text width=1.5cm](gt){Các chuỗi đồng tham chiếu kết
+ quả (ground truth)};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io,below=of eval](res){Các số liệu độ đo};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (emr) -- ++(down:0.9cm) -| (prep.130);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (con) -- ++(down:0.9cm) -| (prep.50);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (model) -> (clas);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (clas) -> (conf);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (ins) -- ++(left:1.5cm) |- (clus);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (gt) -> (eval);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (eval) -> (res);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sơ đồ phân giải đồng tham chiếu
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:SDPG"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
