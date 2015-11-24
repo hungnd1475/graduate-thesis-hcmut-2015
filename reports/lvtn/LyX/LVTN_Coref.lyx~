@@ -357,8 +357,8 @@ Quy trình huấn luyện hệ thống phân loại
 Để xác định tính đồng tham chiếu giữa hai khái niệm bất kì, ta cần huấn
  luyện một model phân loại dựa trên dữ liệu mẫu.
  Vì đầu vào của quy trình là các văn bản BAĐT và danh sách các khái niệm
- đã được gán nhãn, hệ thống cần trích xuất thuộc tính các dữ liệu thô này
- rồi mới có thể đưa vào để huấn luyện.
+ đã được gán nhãn, hệ thống cần trích xuất đặc trưng của các dữ liệu thô
+ này rồi mới có thể đưa vào để huấn luyện.
  Bên cạnh đó, các khái niệm đã được phân loại vào 4 nhóm chính là Person,
  Problem, Test và Treatment, còn các đại từ được phân vào nhóm Pronoun nên
  để giảm bớt số cặp khái niệm được sinh ra, chúng tôi huấn luyện 4 model
@@ -368,8 +368,8 @@ em, Test-Test và Treatment-Treatment (vì hai khái niệm thuộc hai lớp kh
  Đối với các đại từ thì thường chỉ tới một khái niệm ở trước đó, nên việc
  xác định xem một đại từ thực chất mang ý nghĩa của lớp nào trong 4 lớp
  chính Person, Problem, Test, Treatment là một việc quan trọng.
- Sau khi đã xác định được lớp chính, chúng tôi sẽ xem đại từ đang xét là
- đồng tham chiếu với khái niệm thuộc lớp tương ứng ở gần nhất trước đó.
+ Sau khi xác định được lớp chính của đại từ, chúng tôi chọn khái niệm thuộc
+ lớp tương ứng ở gần nhất trước đó làm tiền đề cho nó.
  Các ý này đều là của các tác giả hệ thống I.
 \end_layout
 
@@ -384,9 +384,9 @@ Ngoài ra cũng theo các tác giả này, thông tin một khái niệm lớp P
  một bệnh nhân nên những khái niệm nào chỉ về bệnh nhân thì thường chắc
  chắn nằm trong cùng một chuỗi đồng tham chiếu lớn nhất và duy nhất chỉ
  về bệnh nhân đó.
- Từ nhận định này, nhóm tác giả của hệ thống I đã đưa vào thuộc tính Patient-cla
-ss cho cặp hai khái niệm lớp Person, nó mang giá trị 1 khi hai khái niệm
- đều chỉ về bệnh nhân và 0 trong các trường hợp khác.
+ Từ nhận định này, nhóm tác giả của hệ thống I đã thêm vào đặc trưng lớp
+ Patient (Patient-class) cho cặp hai khái niệm lớp Person, nó mang giá trị
+ 1 khi hai khái niệm đều chỉ về bệnh nhân và 0 trong các trường hợp khác.
  Ở bước huấn luyện, thông tin 
 \begin_inset Quotes eld
 \end_inset
@@ -514,49 +514,49 @@ node[io,join]{Các khái niệm/cặp khái niệm};
 
 	
 \backslash
-node[proc,join](ex){Trích xuất thuộc tính};
+node[proc,join](ex){Rút trích đặc trưng};
 \end_layout
 
 \begin_layout Plain Layout
 
 	
 \backslash
-node[io, right=3cm of con](perp){Thuộc tính cặp Person};
+node[io, right=3cm of con](perp){Đặc trưng cặp Person};
 \end_layout
 
 \begin_layout Plain Layout
 
 	
 \backslash
-node[io](pati){Thuộc tính một Person};
+node[io](pati){Đặc trưng một Person};
 \end_layout
 
 \begin_layout Plain Layout
 
 	
 \backslash
-node[io](prop){Thuộc tính cặp Problem};
+node[io](prop){Đặc trưng cặp Problem};
 \end_layout
 
 \begin_layout Plain Layout
 
 	
 \backslash
-node[io](tstp){Thuộc tính cặp Test};
+node[io](tstp){Đặc trưng cặp Test};
 \end_layout
 
 \begin_layout Plain Layout
 
 	
 \backslash
-node[io](trep){Thuộc tính cặp Treatment};
+node[io](trep){Đặc trưng cặp Treatment};
 \end_layout
 
 \begin_layout Plain Layout
 
 	
 \backslash
-node[io](pron){Thuộc tính một Pronoun};	
+node[io](pron){Đặc trưng một Pronoun};	
 \end_layout
 
 \begin_layout Plain Layout
@@ -835,8 +835,8 @@ reference "fig:SDPG"
 
  mô tả trực quan quy trình phân giải đồng tham chiếu.
  Ở bước trích xuất thuộc tính của các cặp Person, chúng tôi sử dụng model
- phân loại bệnh nhân để xác định giá trị cho thuộc tính Patient-class đã
- được đề cập ở trên.
+ phân loại bệnh nhân để xác định giá trị cho đặc trưng lớp Patient đã được
+ đề cập ở trên.
  Theo kết quả đánh giá các hệ thống dự thi thử thách i2b2 2011, ba hệ đo
  được sử dụng là: MUC, B-CUBED và CEAF.
  Chúng tôi cũng hiện thực các hệ đo này để đánh giá hệ thống của mình bằng
@@ -851,7 +851,7 @@ reference "fig:SDPG"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -936,14 +936,14 @@ node[io,join](ins){Các khái niệm/cặp khái niệm};
 
 	
 \backslash
-node[proc,join](ex){Trích xuất thuộc tính};
+node[proc,join](ex){Rút trích đặc trưng};
 \end_layout
 
 \begin_layout Plain Layout
 
 	
 \backslash
-node[io, right=of ex, join](feat){Tập vector thuộc tính};
+node[io, right=of ex, join](feat){Tập vector đặc trưng};
 \end_layout
 
 \begin_layout Plain Layout
@@ -1272,7 +1272,7 @@ reference "fig:TongquanPhangiai"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
