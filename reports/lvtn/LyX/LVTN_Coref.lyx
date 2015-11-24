@@ -6,7 +6,7 @@
 \begin_preamble
 \usepackage{caption}
 \usepackage{tikz}
-\usetikzlibrary{shapes,arrows,shapes.symbols,shapes.geometric,shadows,chains,calc,positioning,matrix,fit}
+\usetikzlibrary{shapes,arrows,shapes.symbols,shapes.geometric,shadows,chains,calc,positioning,shapes.misc}
 
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand\nomname{Danh sách từ viết tắt}
@@ -119,7 +119,7 @@ tikzset{
 
 \begin_layout Plain Layout
 
-	base/.style = { draw, on grid, align=center, on chain },
+	base/.style = { draw, on grid, align=center, on chain, inner sep=1mm },
 \end_layout
 
 \begin_layout Plain Layout
@@ -130,40 +130,25 @@ tikzset{
 
 \begin_layout Plain Layout
 
-	multidoc/.style = { doc, double copy shadow={shadow xshift=-.5ex, shadow
- yshift=.5ex} },
+	multidoc/.style = { doc, double copy shadow={shadow xshift=.5ex, shadow yshift=.5e
+x} },
 \end_layout
 
 \begin_layout Plain Layout
 
-	proc/.style = { base, rectangle, text width=3em, minimum height=2em },
+	proc/.style = { base, rectangle, text width=3.5em, minimum height=2em },
 \end_layout
 
 \begin_layout Plain Layout
 
 	io/.style = { base, trapezium, trapezium left angle=60, trapezium right
- angle=120, text width=2.7em, minimum height=2em },
+ angle=120, text width=3em, minimum height=2em },
 \end_layout
 
 \begin_layout Plain Layout
 
-	block/.style = { matrix of nodes, nodes=inn, row sep=1em, on grid },
-\end_layout
-
-\begin_layout Plain Layout
-
-	inn/.style = { draw, trapezium, trapezium left angle=60, trapezium right
- angle=120, text width=2.7em, minimum height=2em, align=center },
-\end_layout
-
-\begin_layout Plain Layout
-
-	border/.style = { draw, inner sep=.5ex },
-\end_layout
-
-\begin_layout Plain Layout
-
-	title/.style = { draw=none }
+	altproc/.style = { base, rounded rectangle, text width=3.5em, minimum height=2em
+ }
 \end_layout
 
 \begin_layout Plain Layout
@@ -340,14 +325,14 @@ Kiến trúc hệ thống
 \end_layout
 
 \begin_layout Standard
-Dựa vào hệ thống có hiệu năng tốt nhất của thử thách i2b2 năm 2011, mô hình
- phân giải đồng tham chiếu mà nhóm sử dụng để hiện thực hệ thống là mô hình
- cặp thực thể.
+Dựa vào hệ thống có hiệu năng tốt nhất của thử thách i2b2 năm 2011 (hệ thống
+ I), mô hình phân giải đồng tham chiếu mà chúng tôi sử dụng để hiện thực
+ hệ thống là mô hình cặp thực thể.
  Tư tưởng cơ bản của mô hình này là xác định xem hai khái niệm bất kì có
  đồng tham chiếu với nhau hay không, sau đó gom nhóm các cặp đồng tham chiếu
  có một khái niệm chung lại để tạo thành các chuỗi đồng tham chiếu.
- Như vậy kiến trúc tổng quát của hệ thống nhóm hiện thực gồm 2 quy trình:
- 
+ Như vậy kiến trúc tổng quát của hệ thống chúng tôi hiện thực gồm 2 quy
+ trình: 
 \emph on
 quy trình huấn luyện hệ thống phân loại
 \emph default
@@ -376,17 +361,16 @@ Quy trình huấn luyện hệ thống phân loại
  rồi mới có thể đưa vào để huấn luyện.
  Bên cạnh đó, các khái niệm đã được phân loại vào 4 nhóm chính là Person,
  Problem, Test và Treatment, còn các đại từ được phân vào nhóm Pronoun nên
- để giảm bớt số cặp khái niệm được sinh ra, nhóm huấn luyện 4 model để xác
- định tính đồng tham chiếu của riêng các cặp Person-Person, Problem-Problem,
- Test-Test và Treatment-Treatment (vì hai khái niệm thuộc hai lớp khác nhau
- thì nghiễm nhiên không đồng tham chiếu với nhau).
+ để giảm bớt số cặp khái niệm được sinh ra, chúng tôi huấn luyện 4 model
+ để xác định tính đồng tham chiếu của riêng các cặp Person-Person, Problem-Probl
+em, Test-Test và Treatment-Treatment (vì hai khái niệm thuộc hai lớp khác
+ nhau thì nghiễm nhiên không đồng tham chiếu với nhau).
  Đối với các đại từ thì thường chỉ tới một khái niệm ở trước đó, nên việc
  xác định xem một đại từ thực chất mang ý nghĩa của lớp nào trong 4 lớp
  chính Person, Problem, Test, Treatment là một việc quan trọng.
- Sau khi đã xác định được lớp chính, hệ thống sẽ xem đại từ đang xét là
+ Sau khi đã xác định được lớp chính, chúng tôi sẽ xem đại từ đang xét là
  đồng tham chiếu với khái niệm thuộc lớp tương ứng ở gần nhất trước đó.
- Các ý này đều là của các tác giả hệ thống có kết quả tốt nhất của thử thách
- i2b2 năm 2011.
+ Các ý này đều là của các tác giả hệ thống I.
 \end_layout
 
 \begin_layout Standard
@@ -397,7 +381,7 @@ Ngoài ra cũng theo các tác giả này, thông tin một khái niệm lớp P
  một trong ba loại: bệnh nhân, người thân của bệnh nhân và nhân sự của bệnh
  viện.
  Do một BAĐT, mà cụ thể là hồ sơ xuất viện, thông thường chỉ đề cập đến
- một bệnh nhân nên những khái niệm nào chỉ về bệnh nhân thì thường chắn
+ một bệnh nhân nên những khái niệm nào chỉ về bệnh nhân thì thường chắc
  chắn nằm trong cùng một chuỗi đồng tham chiếu lớn nhất và duy nhất chỉ
  về bệnh nhân đó.
  Từ nhận định này, nhóm tác giả của hệ thống I đã đưa vào thuộc tính Patient-cla
@@ -445,7 +429,7 @@ reference "fig:SDHL"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -831,11 +815,11 @@ Quy trình phân giải đồng tham chiếu sử dụng 6 SVM model đã đư�
  đồng tham chiếu.
  Có thể xem đây là quy trình mang đi ứng dụng thực tế để phân giải cho những
  văn bản BAĐT mới.
- Dựa vào hệ thống I, nhóm sử dụng giải thuật gom cụm tốt nhất trước để lựa
- chọn các cặp đồng tham chiếu có độ tin cậy cao nhất, sau đó xây dựng các
- chuỗi đồng tham chiếu bằng cách nối các cặp có một khái niệm chung.
+ Dựa vào hệ thống I, chúng tôi sử dụng giải thuật gom cụm tốt nhất trước
+ để lựa chọn các cặp đồng tham chiếu có độ tin cậy cao nhất, sau đó xây
+ dựng các chuỗi đồng tham chiếu bằng cách nối các cặp có một khái niệm chung.
  Đối với lớp Pronoun, sau khi đã xác định được lớp chính của một đại từ
- bất kì, hệ thống tạo một cặp đồng tham chiếu giữa đại từ đó và khái niệm
+ bất kì, chúng tôi tạo một cặp đồng tham chiếu giữa đại từ đó và khái niệm
  thuộc lớp chính tương ứng ở gần nhất trước đó trong văn bản.
  Theo nhận định của các tác giả hệ thống I, tuy cách làm này đơn giản nhưng
  lại tỏ ra rất hiệu quả.
@@ -850,16 +834,17 @@ reference "fig:SDPG"
 \end_inset
 
  mô tả trực quan quy trình phân giải đồng tham chiếu.
- Ở bước trích xuất thuộc tính của các cặp Person, hệ thống sử dụng model
+ Ở bước trích xuất thuộc tính của các cặp Person, chúng tôi sử dụng model
  phân loại bệnh nhân để xác định giá trị cho thuộc tính Patient-class đã
  được đề cập ở trên.
- Theo bài báo đánh giá các hệ thống dự thi thử thách i2b2 2011, ba độ đo
- được sử dụng để đánh giá hiệu năng là: MUC, B-CUBED và CEAF.
- Nhóm cũng hiện thực các hệ đo này để đánh giá hệ thống của mình bằng cách
- so sánh với kết quả của hệ thống I.
- Vì các hệ đo này đánh giá các chuỗi đồng tham chiếu chứ không phải đánh
- giá hiệu năng phân loại thông thường nên cách thức hiện thực chúng có phần
- phức tạp, nhóm sẽ trình bày chi tiết các cách hiện thực này ở phần sau.
+ Theo kết quả đánh giá các hệ thống dự thi thử thách i2b2 2011, ba hệ đo
+ được sử dụng là: MUC, B-CUBED và CEAF.
+ Chúng tôi cũng hiện thực các hệ đo này để đánh giá hệ thống của mình bằng
+ cách so sánh với kết quả của hệ thống I.
+ Vì các hệ đo này đánh giá trên các chuỗi đồng tham chiếu chứ không phải
+ đánh giá hiệu năng phân loại thông thường nên cách thức hiện thực chúng
+ có phần phức tạp, chúng tôi sẽ trình bày chi tiết các cách hiện thực này
+ ở phần sau.
 \end_layout
 
 \begin_layout Standard
@@ -958,7 +943,7 @@ node[proc,join](ex){Trích xuất thuộc tính};
 
 	
 \backslash
-node[io, right=of ex, join](feat){Vector thuộc tính};
+node[io, right=of ex, join](feat){Tập vector thuộc tính};
 \end_layout
 
 \begin_layout Plain Layout
@@ -1069,6 +1054,14 @@ draw[->] (gt) -> (eval);
 	
 \backslash
 draw[->] (eval) -> (res);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (model.200) -- ++(left:3cm) node[midway,above,sloped]{Model Patient-clas
+s} -> (ex.north east);
 \end_layout
 
 \begin_layout Plain Layout
@@ -1263,9 +1256,9 @@ Từ các phân tích được đề cập ở Phần 3, ngoài các thuộc tí
  Việc này đòi hỏi chúng tôi phải thiết kế ba hệ thống rút trích đặc trưng
  và phân loại tương ứng khác nhau cho lớp Person, lớp Problem/Treatment/Test
  và lớp Pronoun.
- Hình 5.1 mô tả tổng quan ba hệ thống này, trong đó các khối “Đồng tham chiếu
- lớp X” bao hàm cả Hệ thống rút trích đặc trưng và Hệ thống phân loại cho
- lớp tương ứng.
+ Hình 5.1 mô tả tổng quan các hệ thống này, trong đó các khối “Đồng tham
+ chiếu lớp X” bao hàm cả Hệ thống rút trích đặc trưng và Hệ thống phân loại
+ cho lớp tương ứng.
 \end_layout
 
 \begin_layout Standard
@@ -1276,10 +1269,405 @@ status open
 
 \begin_layout Plain Layout
 \align center
-\begin_inset Graphics
-	filename images/amiajnl-2011-000734fig2.jpg
-	lyxscale 50
-	scale 450
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[%
+\end_layout
+
+\begin_layout Plain Layout
+
+	>=angle 60,
+\end_layout
+
+\begin_layout Plain Layout
+
+	start chain=going below,
+\end_layout
+
+\begin_layout Plain Layout
+
+	node distance=1.5cm and 4cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+	every join/.style={->, draw},
+\end_layout
+
+\begin_layout Plain Layout
+
+	font=
+\backslash
+tiny
+\backslash
+sffamily]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+tikzset{
+\end_layout
+
+\begin_layout Plain Layout
+
+		wproc/.style = {proc, text width=4.5em},
+\end_layout
+
+\begin_layout Plain Layout
+
+		wdoc/.style = {doc, text width=3.5em}
+\end_layout
+
+\begin_layout Plain Layout
+
+	};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io](pati){Các khái niệm Person};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io](perp){Các cặp khái niệm Person};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io](prop){Các cặp khái niệm Problem};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io](tstp){Các cặp khái niệm Test};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io](trep){Các cặp khái niệm Treatment};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io](pron){Các khái niệm Pronoun};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[wdoc,left=2cm of $(prop)!0.5!(tstp)$](emr){EMR + Concepts};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[altproc,right=2.5cm of pati](patic){Phân loại bệnh nhân};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[wproc,right=4cm of perp](perr){Phân giải đồng tham chiếu lớp Person};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[wproc](pror){Phân giải đồng tham chiếu lớp Problem};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[wproc](tstr){Phân giải đồng tham chiếu lớp Test};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[wproc](trer){Phân giải đồng tham chiếu lớp Treatment};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[wproc](pronr){Phân giải đồng tham chiếu lớp Pronoun};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io,right=6cm of perr](perch){Các chuỗi Person};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io](proch){Các chuỗi Problem};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io](tstch){Các chuỗi Test};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[io](trech){Các chuỗi Treatment};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+coordinate[left=0.5cm of perch.west](perch-left);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+coordinate[left=1cm of proch.west](proch-left);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+coordinate[left=1.5cm of tstch.west](tstch-left);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+coordinate[left=2cm of trech.west](trech-left);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (emr) -- ++(right:1.3cm) |- (pati);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (emr) -- ++(right:1.3cm) |- (perp);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (emr) -- ++(right:1.3cm) |- (prop);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (emr) -- ++(right:1.3cm) |- (tstp);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (emr) -- ++(right:1.3cm) |- (trep);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (emr) -- ++(right:1.3cm) |- (pron);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (pati) -> (patic);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (patic) -| (perr);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (perp) -> (perr);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (prop) -> (pror);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (tstp) -> (tstr);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (trep) -> (trer);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (pron) -> (pronr);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (perr) -> (perch);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (pror) -> (proch);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (tstr) -> (tstch);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (trer) -> (trech);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (pronr) -| (perch-left);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (pronr) -| (proch-left);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (pronr) -| (tstch-left);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[->] (pronr) -| (trech-left);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
 
 \end_inset
 
@@ -1290,15 +1678,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Tổng quan ba hệ thống phân giải đồng tham chiếu
+Tổng quan hệ thống phân giải đồng tham chiếu
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
