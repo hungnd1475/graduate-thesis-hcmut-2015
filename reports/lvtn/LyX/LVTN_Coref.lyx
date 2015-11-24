@@ -1256,9 +1256,16 @@ Từ các phân tích được đề cập ở Phần 3, ngoài các thuộc tí
  Việc này đòi hỏi chúng tôi phải thiết kế ba hệ thống rút trích đặc trưng
  và phân loại tương ứng khác nhau cho lớp Person, lớp Problem/Treatment/Test
  và lớp Pronoun.
- Hình 5.1 mô tả tổng quan các hệ thống này, trong đó các khối “Đồng tham
- chiếu lớp X” bao hàm cả Hệ thống rút trích đặc trưng và Hệ thống phân loại
- cho lớp tương ứng.
+ Hình 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:TongquanPhangiai"
+
+\end_inset
+
+ mô tả tổng quan ba hệ thống này, trong đó các khối “Đồng tham chiếu lớp
+ X” bao hàm cả Hệ thống rút trích đặc trưng và Hệ thống phân loại cho lớp
+ tương ứng.
 \end_layout
 
 \begin_layout Standard
@@ -1678,7 +1685,14 @@ end{center}
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Tổng quan hệ thống phân giải đồng tham chiếu
+Tổng quan hệ thống phân giải đồng tham chiếu 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:TongquanPhangiai"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1709,8 +1723,8 @@ Tổng quát, các khái niệm thuộc lớp Person có thể là các đại t
 \end_layout
 
 \begin_layout Standard
-Việc giới hạn vấn đề lại trong phạm vi BAĐT giúp công việc này trở nên đơn
- giản hơn.
+Dựa vào hệ thống I, việc giới hạn vấn đề lại trong phạm vi BAĐT giúp công
+ việc này trở nên đơn giản hơn.
  Trong BAĐT, các khái niệm thuộc lớp Person thường được chia vào ba nhóm
  chính: bệnh nhân, người thân của bệnh nhân hoặc nhân sự của bệnh viện.
  Trong đó bệnh nhân là nhóm có số lượng khái niệm được đề cập nhiều nhất
@@ -1731,7 +1745,14 @@ key "YanXu2012"
  SVM.
  Hai nhóm người thân của bệnh nhân và nhân sự của bệnh viện được xác định
  bằng các đặc trưng từ vựng.
- Bảng 5.1 trình bày đầy đủ các đặc trưng dùng cho lớp Person
+ Bảng 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:PersonFeatures"
+
+\end_inset
+
+ trình bày đầy đủ các đặc trưng dùng cho lớp Person.
 \end_layout
 
 \begin_layout Standard
@@ -1741,10 +1762,18 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Tập đặc trưng cho lớp Person
+Tập đặc trưng cho lớp Person 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:PersonFeatures"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2580,10 +2609,89 @@ status open
 \end_layout
 
 \begin_layout Standard
-Với các đặc trưng Name match, Relative match, Department match, Doctor title
- match, Doctor general match, Twin/Triplet, We, You, I, Pronoun match, chúng
- tôi hiện thực bằng cách xây dựng tập từ điển tương ứng với từng đặc trưng
- dựa trên việc khảo sát tập dữ liệu và sử dụng các biểu thức chính quy.
+Với các đặc trưng 
+\begin_inset Quotes eld
+\end_inset
+
+Name match
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+Relative match
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+Department match
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+Doctor title match
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+Doctor general match
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+Twin/Triplet
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+We
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+You
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+I
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+Pronoun match
+\begin_inset Quotes erd
+\end_inset
+
+, chúng tôi hiện thực bằng cách xây dựng tập từ điển tương ứng với từng
+ đặc trưng dựa trên việc khảo sát tập dữ liệu và sử dụng các biểu thức chính
+ quy.
 \end_layout
 
 \begin_layout Standard
@@ -2662,6 +2770,1056 @@ Mr.
 
 \begin_layout Subsection*
 Nhóm Patient
+\end_layout
+
+\begin_layout Standard
+Từ nhận định trong việc rút trích đặc trưng của lớp Person, chúng tôi xây
+ dựng một hệ thống SVM nhị phân để phân loại khái niệm thuộc lớp Person
+ có phải là bệnh nhân hay không.
+ Trong BAĐT thường chỉ có một bệnh nhân đóng vai trò là chủ thể của bệnh
+ án.Vì vậy, các khái niệm nếu được xác định là bệnh nhân, thì sẽ được đưa
+ vào một chuỗi đồng tham chiếu duy nhất về bệnh nhân đó.
+ Thông qua phân tích tập dữ liệu, chúng tôi nhận thấy việc xác định một
+ khái niệm thuộc lớp Person hay không có thể đạt được bằng cách xác định
+ tập từ khóa chỉ về bệnh nhân như 
+\begin_inset Quotes eld
+\end_inset
+
+patient
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+pt
+\begin_inset Quotes erd
+\end_inset
+
+, ...
+ và tập từ khóa chỉ về nhóm người không phải bệnh nhân như 
+\begin_inset Quotes eld
+\end_inset
+
+doctor
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+dr
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+wife
+\begin_inset Quotes erd
+\end_inset
+
+, ...
+\end_layout
+
+\begin_layout Standard
+Vì tập dữ liệu không có thông tin xác định một khái niệm thuộc lớp Person
+ có phải là bệnh nhân hay không, dựa theo hệ thống I chúng tôi xác định
+ bằng cách chọn chuỗi đồng tham chiếu có nhiều khái niệm nhất trong tập
+ kết quả làm chuỗi đồng tham chiếu chỉ bệnh nhân.
+ Các khái niệm thuộc chuỗi đồng tham chiếu này sẽ được xem là khái niệm
+ chỉ bệnh nhân và được chọn làm mẫu dương trong quá trình huấn luyện.
+ Các khái niệm thuộc lớp Person còn lại không thuộc vào chuỗi đồng tham
+ chiếu này sẽ được chọn làm mẫu âm trong quá trình huấn luyện.
+ Tuy nhiên, chúng tôi nhận thấy phương pháp xác định bệnh nhân này có một
+ nhược điểm là các BAĐT nhỏ, có nội dung ngắn sẽ tồn tại nhiều chuỗi đồng
+ tham chiếu lớp Person có kích thước tương tự nhau.
+ Trong đó chuỗi đồng tham chiếu chỉ bệnh nhân không chắc chắn là chuỗi đồng
+ tham chiếu có kích thước lớn nhất.
+\end_layout
+
+\begin_layout Standard
+Bảng 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:PatientFeatures"
+
+\end_inset
+
+ trình bày đầy đủ các đặc trưng được sử dụng cho việc xác định khái niệm
+ có phải là bệnh nhân hay không.
+ Kết quả của việc phân loại này sẽ được sử dụng làm giá trị cho đặc trưng
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Patient-class
+\begin_inset Quotes erd
+\end_inset
+
+ khi rút trích đặc trưng cho lớp Person.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tập đặc trưng cho lớp Patient 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:PatientFeatures"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resizebox{
+\backslash
+textwidth}{!}{
+\backslash
+scriptsize
+\backslash
+sffamily%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="27" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\noun on
+Thuộc tính
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\noun on
+Giá trị
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\noun on
+Giải thích
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Keyword of patient
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0, 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Các từ khóa về bệnh nhân (như mr., mr, ms., ms, yo-,
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+y.o., y/o, year-old,…)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Keyword of doctor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0, 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Các từ khóa về bác sĩ (dr, dr., md, m.d., m.d,…)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Key word of doctor title
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0, 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Các từ khóa về chức vụ của bác sĩ (dentist, orthodon
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-tist,…)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Key word of department 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0, 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Các từ khóa về chuyên ngành bác sĩ (electrophysio
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-logy,…)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Key word of general depar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0, 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Các từ khóa chung về phòng ban (team, service)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-ment
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Key word of general doctor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0, 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Các từ khóa chung về bác sĩ (doctor, dict, author, pcp,
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+attend, provider)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Key word of relative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0, 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Các từ khóa về người thân (wife, brother, sibling, nephew)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0, 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Có phải là tên riêng hay không
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Last n line doctor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0, 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Là tên bác sĩ ở n dòng cuối cùng
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Twin or triplet information
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0, 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Thông tin về cặp sinh đôi, sinh ba (baby 1, 2, 3,…)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Preceded by non-patient
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0, 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Khái niệm đứng trước không phải là bệnh nhân.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Signed information 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0, 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Có liên quan đến việc kí/xác nhận bệnh án
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Previous sentence
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Câu hoàn chỉnh liền trước khái niệm
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Next sentence
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Câu hoàn chỉnh liền sau khái niệm
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pronouns we
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0, 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Là đại từ chỉ chúng tôi (we, us, our, ourselves)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pronouns I
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0, 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Là đại từ chỉ tôi (I, my, me, myself)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pronouns you
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0, 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Là đại từ chỉ bạn (you, your, yourself)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pronouns they
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0, 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Là đại từ chỉ họ (they, them, their, themselves)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pronouns he/she most
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0, 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Là đại từ chỉ cô ấy/anh ấy (he, his, her)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Who
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0, 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Là đại từ “who” hoặc liền kề với khái niệm đứng trước
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Appositive
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0, 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Là đồng vị ngữ
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Các đặc trưng về từ khóa được chúng tôi hiện thực bằng cách khảo sát tập
+ dữ liệu và xây dựng bộ từ điển thích hợp cho từng đặc trưng
+\end_layout
+
+\begin_layout Standard
+Các đặc trưng 
+\begin_inset Quotes eld
+\end_inset
+
+Previous sentence
+\begin_inset Quotes erd
+\end_inset
+
+ và 
+\begin_inset Quotes eld
+\end_inset
+
+Next sentence
+\begin_inset Quotes erd
+\end_inset
+
+ được hiện thực bằng cách khảo sát toàn bộ các khái niệm thuộc lớp Person,
+ sau đó xây dựng bộ từ điển các câu có thể đứng trước hoặc đứng sau khái
+ niệm đang xét.
+ Giá trị của đặc trưng được lấy bằng chỉ mục của câu đứng trước ( hoặc đứng
+ sau ) trong bộ từ điển các câu.
+\end_layout
+
+\begin_layout Standard
+Đặc trưng 
+\begin_inset Quotes eld
+\end_inset
+
+Pronouns he/she most
+\begin_inset Quotes erd
+\end_inset
+
+ mang ý nghĩa giới tính chiếm đa số trong BAĐT được xét.
+ Việc xác định giới tính chiếm đa số trong BAĐT được hiện thực bằng cách
+ xác định giới tính cho từng khái niệm thuộc lớp Person, sau đó chọn giới
+ tính có số lượng khái niệm lớn hơn.
+ Phương pháp xác định giới tính được thực hiện theo miêu tả trong đặc trưng
+ của nhóm Person.
+ Nếu trong BAĐT có giới tính Nam chiếm đa số thì những khái niệm là đại
+ từ chỉ về giới tính Nam như 
+\begin_inset Quotes eld
+\end_inset
+
+he
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+him
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+himself
+\begin_inset Quotes erd
+\end_inset
+
+, ...
+ sẽ có đặc trưng 
+\begin_inset Quotes eld
+\end_inset
+
+Pronouns he/she most
+\begin_inset Quotes erd
+\end_inset
+
+ mang giá trị là 1.
+ Tương tự cho BAĐT có giới tính Nữ chiếm đa số.
 \end_layout
 
 \begin_layout Subsection*
