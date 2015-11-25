@@ -4,6 +4,8 @@
 \begin_header
 \textclass report
 \begin_preamble
+\usepackage[ruled,norelsize]{algorithm2e}
+\usepackage{titlesec}
 \usepackage{caption}
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows,shapes.symbols,shapes.geometric,shadows,chains,calc,positioning,shapes.misc}
@@ -21,11 +23,21 @@
    \fancyhf{}
 }
 
-\captionsetup[table]{position=top,justification=raggedright,singlelinecheck=true,slc=off}
+\captionsetup[table]{position=top}
+
+\setlength\parindent{3.5em}
+\newlength\titleindent
+\setlength\titleindent{\parindent}
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {\makebox[\titleindent][l]{\thesection}}
+  {0pt}
+  {}
 \end_preamble
 \use_default_options true
 \begin_modules
 customHeadersFooters
+algorithm2e
 \end_modules
 \maintain_unincluded_children false
 \language vietnamese
@@ -92,7 +104,7 @@ customHeadersFooters
 \secnumdepth 2
 \tocdepth 1
 \paragraph_separation indent
-\paragraph_indentation 3.5em
+\paragraph_indentation default
 \quotes_language english
 \papercolumns 1
 \papersides 2
@@ -313,11 +325,386 @@ Phân giải đồng tham chiếu
 \end_layout
 
 \begin_layout Chapter
-Phân tích yêu cầu và thiết kế tổng quát
+Thiết kế tổng quát
 \end_layout
 
 \begin_layout Section
 Nội dung bài toán
+\end_layout
+
+\begin_layout Standard
+Bài toán mà chúng tôi giải quyết là bài toán: 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Phân giải đồng tham chiếu cho các hồ sơ xuất viện tiếng Anh với các khái
+ niệm đã được trích xuất và gán nhãn
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+.
+ Đầu vào của bài toán bao gồm hai phần:
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+
+\emph on
+Tập các hồ sơ xuất viện: 
+\emph default
+Đây là những văn bản lâm sàng được viết tay bằng ngôn ngữ tự nhiên bởi các
+ bác sĩ, y tá.
+ Chúng mô tả lại toàn bộ thông tin của bệnh nhân trong một lần điều trị,
+ bao gồm các thông tin về tên bệnh mà bệnh nhân mắc phải, các thủ tục y
+ tế được thực hiện và các phương pháp điều trị được áp dụng lên bệnh nhân.
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+
+\emph on
+Tập các khái niệm đã được trích xuất và gán nhãn:
+\emph default
+ Mỗi hồ sơ xuất viện đi kèm với một văn bản chứa toàn bộ các khái niệm được
+ đề cập trong hồ sơ đó.
+ Các khái niệm này đã được gán nhãn cho phù hợp với loại thực thể mà nó
+ đề cập tới.
+ Có tất cả năm nhãn là Problem, Treatment, Test, Person và Pronoun được
+ i2b2 định nghĩa.
+ Bảng 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:EntityLabels"
+
+\end_inset
+
+ mô tả chi tiết ý nghĩa của năm nhãn này.
+\end_layout
+
+\begin_layout Standard
+Mục tiêu của chúng tôi là phân giải đồng tham chiếu cho các khái niệm trong
+ tập các khái niệm ứng với mỗi hồ sơ xuất viện.
+ Cụ thể kết quả đầu ra là danh sách các chuỗi đồng tham chiếu của khái niệm
+ đó, ví dụ 
+\end_layout
+
+\begin_layout Verse
+
+\emph on
+c=
+\begin_inset Quotes eld
+\end_inset
+
+the patient
+\begin_inset Quotes erd
+\end_inset
+
+ 13:0 13:1||c=
+\begin_inset Quotes eld
+\end_inset
+
+he
+\begin_inset Quotes erd
+\end_inset
+
+ 14:0 14:0||c=
+\begin_inset Quotes eld
+\end_inset
+
+his
+\begin_inset Quotes erd
+\end_inset
+
+ 14:7 14:7||t=
+\begin_inset Quotes eld
+\end_inset
+
+coref person
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mô tả một chuỗi đồng tham chiếu bao gồm các khái niệm “the patient” (xuất
+ hiện ở dòng thứ 13, từ vị trí 0 đến 1), “he” và “his”.
+ Các khái niệm này đồng tham chiếu tới cùng một người (
+\emph on
+t=
+\begin_inset Quotes eld
+\end_inset
+
+coref person
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ý nghĩa các lớp thực thể được đề xuất bởi i2b2
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:EntityLabels"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize
+\backslash
+sffamily
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features rotate="0" booktabs="true" tabularvalignment="middle">
+<column alignment="left" valignment="top" width="10col%">
+<column alignment="left" valignment="top" width="45col%">
+<column alignment="left" valignment="top" width="25col%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Lớp
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Định nghĩa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Ví dụ
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+Person
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Những chủ thể người hoặc một nhóm người được đề cập trong bệnh án và các
+ đại từ nhân xưng
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dr.Lightman, the patient, cardiology, he, she, ...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+Problem
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Những bất thường về sức khỏe thân thể hoặc tinh thần của bệnh nhân, được
+ mô tả bởi bệnh nhân hoặc quan sát của bác sĩ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Heart attack, blood pressure, cancer, ...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+Test
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Những thủ tục y tế như xét nghiệm, đo đạc, kiểm tra trên cơ thể bệnh nhân
+ để cung cấp thêm thông tin cho “Problem”
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CT scan, Temperature, ...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+Treatment
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Những thủ tục y tế hoặc quy trình áp dụng để chữa trị cho “Problem”, bao
+ gồm thuốc, phẫu thuật hoặc phương pháp điều trị
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Surgery, ice pack, Tylenol, ...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+Pronoun
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Những đại từ có thể tham chiếu đến bất kì lớp nào trong bốn lớp kể trên
+ nhưng không phải là đại từ nhân xưng
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Which, it, that, ...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -429,7 +816,7 @@ reference "fig:SDHL"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -851,7 +1238,7 @@ reference "fig:SDPG"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -1685,7 +2072,14 @@ end{center}
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Tổng quan hệ thống phân giải đồng tham chiếu
+Tổng quan hệ thống phân giải đồng tham chiếu 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:TongquanPhangiai"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1752,7 +2146,7 @@ reference "tab:PersonFeatures"
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1782,13 +2176,9 @@ status open
 
 
 \backslash
-resizebox{
+footnotesize
 \backslash
-textwidth}{!}{
-\backslash
-scriptsize
-\backslash
-sffamily%
+sffamily
 \end_layout
 
 \end_inset
@@ -1799,11 +2189,11 @@ sffamily%
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="26" columns="3">
+<lyxtabular version="3" rows="23" columns="3">
 <features rotate="0" booktabs="true" tabularvalignment="middle">
-<column alignment="left" valignment="middle" width="0pt">
+<column alignment="left" valignment="top" width="20col%">
 <column alignment="left" valignment="middle">
-<column alignment="left" valignment="middle" width="0pt">
+<column alignment="left" valignment="top" width="60col%">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
@@ -1812,7 +2202,7 @@ sffamily%
 
 \series bold
 \noun on
-Thuộc tính
+Đặc Trưng
 \end_layout
 
 \end_inset
@@ -1872,7 +2262,7 @@ Không có khái niệm nào là bệnh nhân (0), cả hai khái
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1890,7 +2280,7 @@ Không có khái niệm nào là bệnh nhân (0), cả hai khái
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1992,7 +2382,7 @@ Trùng chuỗi hoàn toàn (1), ngược lại (0)
 \begin_inset Text
 
 \begin_layout Plain Layout
-Levenshtein distance 
+Levenshtein distance between two mentions
 \end_layout
 
 \end_inset
@@ -2001,7 +2391,7 @@ Levenshtein distance
 \begin_inset Text
 
 \begin_layout Plain Layout
-(0, 1)
+0, 1, 2, 3, ...
 \end_layout
 
 \end_inset
@@ -2011,35 +2401,6 @@ Levenshtein distance
 
 \begin_layout Plain Layout
 Khoảng cách Levenshtein giữa hai khái niệm
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-between two mentions
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \end_inset
@@ -2075,7 +2436,7 @@ Cả hai đều là số ít hoặc nhiều (1), ngược lại (0),
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2093,7 +2454,7 @@ Cả hai đều là số ít hoặc nhiều (1), ngược lại (0),
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2213,36 +2574,7 @@ Who
 \begin_inset Text
 
 \begin_layout Plain Layout
-Nếu hai khái niệm liền kề nhau và được phân cách 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-bởi dấu 
+Nếu hai khái niệm liền kề nhau và được phân cách bởi dấu 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2279,36 +2611,8 @@ Name match
 \begin_inset Text
 
 \begin_layout Plain Layout
-Loại bỏ các “stop word” (dr, dr., mr, ...), so trùng
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-chuỗi con, trùng (1), không trùng (0)
+Loại bỏ các “stop word” (dr, dr., mr, ...), so trùng chuỗi con, trùng (1), không
+ trùng (0)
 \end_layout
 
 \end_inset
@@ -2582,20 +2886,6 @@ Cả hai đều là đại từ chỉ người (1), ngược lại (0)
 
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \end_inset
 
 
@@ -2860,11 +3150,7 @@ Patient-class
 \begin_inset Float table
 wide false
 sideways false
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -2893,13 +3179,9 @@ status open
 
 
 \backslash
-resizebox{
+footnotesize
 \backslash
-textwidth}{!}{
-\backslash
-scriptsize
-\backslash
-sffamily%
+sffamily
 \end_layout
 
 \end_inset
@@ -2910,11 +3192,11 @@ sffamily%
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="27" columns="3">
-<features rotate="0" tabularvalignment="middle">
+<lyxtabular version="3" rows="22" columns="3">
+<features rotate="0" booktabs="true" tabularvalignment="middle">
+<column alignment="left" valignment="top" width="25col%">
 <column alignment="left" valignment="top">
-<column alignment="left" valignment="top">
-<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="60text%">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
@@ -2923,7 +3205,7 @@ sffamily%
 
 \series bold
 \noun on
-Thuộc tính
+Đặc Trưng
 \end_layout
 
 \end_inset
@@ -2976,43 +3258,14 @@ Keyword of patient
 \begin_inset Text
 
 \begin_layout Plain Layout
-Các từ khóa về bệnh nhân (như mr., mr, ms., ms, yo-,
+Các từ khóa về bệnh nhân (như mr., mr, ms., ms, yo-, y.o., y/o, year-old, …)
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-y.o., y/o, year-old,…)
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3030,7 +3283,7 @@ Keyword of doctor
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3041,7 +3294,7 @@ Các từ khóa về bác sĩ (dr, dr., md, m.d., m.d,…)
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3059,47 +3312,18 @@ Key word of doctor title
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Các từ khóa về chức vụ của bác sĩ (dentist, orthodon
+Các từ khóa về chức vụ của bác sĩ (dentist, orthodontist, …)
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--tist,…)
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3117,51 +3341,22 @@ Key word of department
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Các từ khóa về chuyên ngành bác sĩ (electrophysio
+Các từ khóa về chuyên ngành bác sĩ (electrophysiology, …)
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--logy,…)
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Key word of general depar
+Key word of general deparment
 \end_layout
 
 \end_inset
@@ -3175,7 +3370,7 @@ Key word of general depar
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3186,36 +3381,7 @@ Các từ khóa chung về phòng ban (team, service)
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--ment
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3233,47 +3399,18 @@ Key word of general doctor
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Các từ khóa chung về bác sĩ (doctor, dict, author, pcp,
+Các từ khóa chung về bác sĩ (doctor, dict, author, pcp, attend, provider)
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-attend, provider)
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3291,7 +3428,7 @@ Key word of relative
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3302,7 +3439,7 @@ Các từ khóa về người thân (wife, brother, sibling, nephew)
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3320,7 +3457,7 @@ Name
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3331,7 +3468,7 @@ Có phải là tên riêng hay không
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3349,7 +3486,7 @@ Last n line doctor
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3360,7 +3497,7 @@ Là tên bác sĩ ở n dòng cuối cùng
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3378,7 +3515,7 @@ Twin or triplet information
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3389,7 +3526,7 @@ Thông tin về cặp sinh đôi, sinh ba (baby 1, 2, 3,…)
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3407,7 +3544,7 @@ Preceded by non-patient
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3418,7 +3555,7 @@ Khái niệm đứng trước không phải là bệnh nhân.
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3436,7 +3573,7 @@ Signed information
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3447,7 +3584,7 @@ Có liên quan đến việc kí/xác nhận bệnh án
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3465,7 +3602,7 @@ Previous sentence
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3476,7 +3613,7 @@ Câu hoàn chỉnh liền trước khái niệm
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3494,7 +3631,7 @@ Next sentence
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3505,7 +3642,7 @@ Câu hoàn chỉnh liền sau khái niệm
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3523,7 +3660,7 @@ Pronouns we
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3534,7 +3671,7 @@ Là đại từ chỉ chúng tôi (we, us, our, ourselves)
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3552,7 +3689,7 @@ Pronouns I
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3563,7 +3700,7 @@ Là đại từ chỉ tôi (I, my, me, myself)
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3581,7 +3718,7 @@ Pronouns you
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3592,7 +3729,7 @@ Là đại từ chỉ bạn (you, your, yourself)
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3610,7 +3747,7 @@ Pronouns they
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3621,7 +3758,7 @@ Là đại từ chỉ họ (they, them, their, themselves)
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3639,18 +3776,18 @@ Pronouns he/she most
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Là đại từ chỉ cô ấy/anh ấy (he, his, her)
+Thuộc phần đa số của đại từ chỉ cô ấy/anh ấy (he, his, her)
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3668,7 +3805,7 @@ Who
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3679,7 +3816,7 @@ Là đại từ “who” hoặc liền kề với khái niệm đứng trước
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3697,7 +3834,7 @@ Appositive
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3708,20 +3845,6 @@ Là đồng vị ngữ
 </cell>
 </row>
 </lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
 
 \end_inset
 
@@ -3758,8 +3881,8 @@ Next sentence
  được hiện thực bằng cách khảo sát toàn bộ các khái niệm thuộc lớp Person,
  sau đó xây dựng bộ từ điển các câu có thể đứng trước hoặc đứng sau khái
  niệm đang xét.
- Giá trị của đặc trưng được lấy bằng chỉ mục của câu đứng trước ( hoặc đứng
- sau ) trong bộ từ điển các câu.
+ Giá trị của đặc trưng được lấy bằng chỉ mục của câu đứng trước (hoặc đứng
+ sau) trong bộ từ điển các câu.
 \end_layout
 
 \begin_layout Standard
@@ -3825,6 +3948,117 @@ Nhóm Problem/Test/Treatment
 
 \begin_layout Section
 Gom cụm và xây dựng chuỗi đồng tham chiếu
+\end_layout
+
+\begin_layout Standard
+Ở mô hình cặp thực thể, hệ thống phân loại không có khả năng xây dựng chuỗi
+ đồng tham chiếu mà nó chỉ có thể xác định một cặp khái niệm là 
+\emph on
+có đồng tham chiếu 
+\emph default
+hay
+\emph on
+ không
+\emph default
+.
+ Mặt khác, đối với một văn bản HSXV, số cặp khái niệm được sinh ra rất nhiều
+ và trong số đó có nhiều cặp có chung khái niệm đứng sau, ví dụ hai cặp
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Dr.
+ John
+\begin_inset Quotes erd
+\end_inset
+
+-
+\begin_inset Quotes eld
+\end_inset
+
+his
+\begin_inset Quotes erd
+\end_inset
+
+ và 
+\begin_inset Quotes eld
+\end_inset
+
+Mr.
+ Brown
+\begin_inset Quotes erd
+\end_inset
+
+-
+\begin_inset Quotes eld
+\end_inset
+
+his
+\begin_inset Quotes erd
+\end_inset
+
+ có chung khái niệm đứng sau là 
+\begin_inset Quotes eld
+\end_inset
+
+his
+\begin_inset Quotes erd
+\end_inset
+
+ mà hai cặp này đều được hệ thống phân loại xác định là đồng tham chiếu,
+ tuy nhiên chỉ một trong hai khái niệm 
+\begin_inset Quotes eld
+\end_inset
+
+Dr.
+ John
+\begin_inset Quotes erd
+\end_inset
+
+ và 
+\begin_inset Quotes eld
+\end_inset
+
+Mr.
+ Brown
+\begin_inset Quotes erd
+\end_inset
+
+ được chọn làm tiền đề cho khái niệm 
+\begin_inset Quotes eld
+\end_inset
+
+his
+\begin_inset Quotes erd
+\end_inset
+
+ này.
+ Như vậy cần thiết phải có một giải thuật lựa chọn các cặp đồng tham chiếu
+ và xây dựng các chuỗi đồng tham chiếu từ chúng.
+\end_layout
+
+\begin_layout Standard
+Như đã được đề cập ở mục, có hai giải thuật được đề xuất là: 
+\emph on
+gom cụm gần nhất trước 
+\emph default
+và
+\emph on
+ gom cụm tốt nhất trước
+\emph default
+.
+ Chúng tôi lựa chọn thực hiện giải thuật gom cụm tốt nhất trước cho hệ thống
+ của mình vì hai lý do:
+\end_layout
+
+\begin_layout Enumerate
+Theo [x], giải thuật gom cụm tốt nhất trước cho kết quả tốt hơn giải thuật
+ gom cụm gần nhất trước.
+\end_layout
+
+\begin_layout Enumerate
+Các tác giả hệ thống [I] cũng hiện thực giải thuật này cho hệ thống của
+ họ.
 \end_layout
 
 \begin_layout Section

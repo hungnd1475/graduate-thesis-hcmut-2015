@@ -1,0 +1,145 @@
+\chapter{Phân tích yêu cầu và thiết kế tổng quát}
+\section{Nội dung bài toán}
+Bài toán mà chúng tôi giải quyết là bài toán: ``Phân giải đồng tham chiếu cho các hồ sơ xuất viện tiếng Anh với các khái niệm đã được trích xuất và gán nhãn''. Đầu vào của bài toán bao gồm hai phần:
+
+\begin{enumerate}
+\item \emph{Tập các hồ sơ xuất viện: }Đây là những văn bản lâm
+sàng được viết tay bằng ngôn ngữ tự nhiên bởi các bác sĩ, y tá. Chúng
+mô tả lại toàn bộ thông tin của bệnh nhân trong một lần điều trị,
+bao gồm các thông tin về tên bệnh mà bệnh nhân mắc phải, các thủ tục
+y tế được thực hiện và các phương pháp điều trị được áp dụng lên bệnh
+nhân.
+\item \emph{Tập các khái niệm đã được trích xuất và gán nhãn:}
+Mỗi hồ sơ xuất viện đi kèm với một văn bản chứa toàn bộ các khái niệm
+được đề cập trong hồ sơ đó. Các khái niệm này đã được gán nhãn cho
+phù hợp với loại thực thể mà nó đề cập tới. Có tất cả năm nhãn là
+Problem, Treatment, Test, Person và Pronoun được i2b2 định nghĩa.
+Bảng \ref{tab:EntityLabels} mô tả chi tiết ý nghĩa của năm nhãn này.
+\end{enumerate}
+
+Mục tiêu của chúng tôi là phân giải đồng tham chiếu cho các khái niệm trong tập các khái niệm ứng với mỗi hồ sơ xuất viện. Cụ thể kết quả đầu ra là danh sách các chuỗi đồng tham chiếu của khái niệm đó, ví dụ 
+\begin{verse}
+\emph{c="the patient" 13:0 13:1||c="he" 14:0 14:0||c="his" 14:7 14:7||t="coref person"}
+\end{verse}
+mô tả một chuỗi đồng tham chiếu bao gồm các khái niệm "the patient" (xuất hiện ở dòng thứ 13, từ vị trí 0 đến 1), "he" và "his". Các khái niệm này đồng tham chiếu tới cùng một người (\emph{t="coref person"}).
+
+\begin{table}[th]
+\centering\ra{1.3}
+\caption{Ý nghĩa các lớp thực thể được đề xuất bởi i2b2\label{tab:EntityLabels}}
+\footnotesize\sffamily
+
+\begin{tabularx}{\textwidth}{@{}lLP{\raggedright}{0.3}@{}}
+\toprule
+\textbf{Lớp} & \textbf{Định nghĩa} & \textbf{Ví dụ}\\
+\midrule
+\emph{Person} & Những chủ thể người hoặc một nhóm người được đề cập trong bệnh án và các đại từ nhân xưng & Dr.Lightman, the patient, cardiology, he, she, ...\\
+\emph{Problem} & Những bất thường về sức khỏe thân thể hoặc tinh thần của bệnh nhân, được mô tả bởi bệnh nhân hoặc quan sát của bác sĩ & Heart attack, blood pressure, cancer, ...\\
+\emph{Test} & Những thủ tục y tế như xét nghiệm, đo đạc, kiểm tra trên cơ thể bệnh nhân để cung cấp thêm thông tin cho “Problem” & CT scan, Temperature, ...\\
+\emph{Treatment} & Những thủ tục y tế hoặc quy trình áp dụng để chữa trị cho "Problem", bao gồm thuốc, phẫu thuật hoặc phương pháp điều trị & Surgery, ice pack, Tylenol, ...\\
+\emph{Pronoun} & Những đại từ có thể tham chiếu đến bất kì lớp nào trong bốn lớp kể trên nhưng không phải là đại từ nhân xưng & Which, it, that, ...\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Kiến trúc hệ thống}
+Dựa vào hệ thống có hiệu năng tốt nhất của thử thách i2b2 năm 2011 (hệ thống I), mô hình phân giải đồng tham chiếu mà chúng tôi sử dụng để hiện thực hệ thống là mô hình cặp thực thể. Tư tưởng cơ bản của mô hình này là xác định xem hai khái niệm bất kì có đồng tham chiếu với nhau hay không, sau đó gom nhóm các cặp đồng tham chiếu có một khái niệm chung lại để tạo thành các chuỗi đồng tham chiếu. Như vậy kiến trúc tổng quát của hệ thống chúng tôi hiện thực gồm 2 quy trình: \emph{quy trình huấn luyện hệ thống phân loại} và \emph{quy trình phân giải đồng tham chiếu}. Trong đó quy trình huấn luyện là bước huấn luyện các model phân loại dựa trên dữ liệu mẫu đã được phân giải đồng tham chiếu. Quy trình phân giải sử dụng các model phân loại đã được huấn luyện để xác định tính đồng tham chiếu của các cặp khái niệm, từ đó sử dụng một giải thuật gom nhóm các cặp đồng tham chiếu lại để tạo thành các chuỗi đồng tham chiếu.
+\subsection*{Quy trình huấn luyện}
+Để xác định tính đồng tham chiếu giữa hai khái niệm bất kì, ta cần huấn luyện một model phân loại dựa trên dữ liệu mẫu. Vì đầu vào của quy trình là các văn bản BAĐT và danh sách các khái niệm đã được gán nhãn, hệ thống cần trích xuất đặc trưng của các dữ liệu thô này rồi mới có thể đưa vào để huấn luyện. Bên cạnh đó, các khái niệm đã được phân loại vào 4 nhóm chính là Person, Problem, Test và Treatment, còn các đại từ được phân vào nhóm Pronoun nên để giảm bớt số cặp khái niệm được sinh ra, chúng tôi huấn luyện 4 model để xác định tính đồng tham chiếu của riêng các cặp Person-Person, Problem-Problem, Test-Test và Treatment-Treatment (vì hai khái niệm thuộc hai lớp khác nhau thì nghiễm nhiên không đồng tham chiếu với nhau). Đối với các đại từ thì thường chỉ tới một khái niệm ở trước đó, nên việc xác định xem một đại từ thực chất mang ý nghĩa của lớp nào trong 4 lớp chính Person, Problem, Test, Treatment là một việc quan trọng. Sau khi xác định được lớp chính của đại từ, chúng tôi chọn khái niệm thuộc lớp tương ứng ở gần nhất trước đó làm tiền đề cho nó. Các ý này đều là của các tác giả hệ thống I.
+
+Ngoài ra cũng theo các tác giả này, thông tin một khái niệm lớp Person có chỉ về bệnh nhân hay không góp một phần quan trọng trong việc phân loại đúng tính đồng tham chiếu của cặp các khái niệm lớp này. Trong miền văn bản BAĐT, các khái niệm chỉ người thường chỉ đề cập đến một trong ba loại: bệnh nhân, người thân của bệnh nhân và nhân sự của bệnh viện. Do một BAĐT, mà cụ thể là hồ sơ xuất viện, thông thường chỉ đề cập đến một bệnh nhân nên những khái niệm nào chỉ về bệnh nhân thì thường chắc chắn nằm trong cùng một chuỗi đồng tham chiếu lớn nhất và duy nhất chỉ về bệnh nhân đó. Từ nhận định này, nhóm tác giả của hệ thống I đã thêm vào đặc trưng lớp Patient (Patient-class) cho cặp hai khái niệm lớp Person, nó mang giá trị 1 khi hai khái niệm đều chỉ về bệnh nhân và 0  trong các trường hợp khác. Ở bước huấn luyện, thông tin "một khái niệm Person có chỉ về bệnh nhân hay không" được lấy từ tập chuỗi kết quả (ground truth), còn ở bước phân giải đồng tham chiếu thông tin này được xác định nhờ một model phân loại đã được huấn luyện.
+
+Như vậy mục đích của quy trình huấn luyện là xây dựng tổng cộng 6 SVM model, trong đó 4 SVM model nhằm mục đích phân loại và đánh giá độ tin cậy đồng tham chiếu của các cặp khái niệm Person-Person, Problem-Problem, Test-Test và Treatment-Treatment; 1 SVM model để xác định các khái niệm Person có là bệnh nhân hay không (Patient-class) và 1 SVM model để phân loại các đại từ (các khái niệm lớp Pronoun) vào một trong bốn lớp Person, Problem, Test và Treatment. Đầu vào của quy trình này là toàn bộ các văn bản BAĐT với các khái niệm đã được trích xuất và gán nhãn. Sau khi tiền xử lý, hệ thống xây dựng các mẫu huấn luyện
+bao gồm: Person, Person-Person, Problem-Problem, Test-Test, Treatment-Treatment và Pronoun từ danh sách các khái niệm. Sáu tập mẫu này được trích xuất thuộc tính và đưa vào để huấn luyện 6 SVM model (Hình \ref{fig:SDHL}). Thư viện SVM được nhóm sử dụng là LibSVM. 
+
+\begin{figure}[th]
+\centering
+\begin{tikzpicture}[%
+	>=angle 60,
+	start chain=going below,
+	node distance=1.5cm and 2.3cm,
+	every join/.style={->, draw},
+	font=\tiny\sffamily]
+
+	\node[multidoc](emr){EMR};
+	\node[multidoc, right=of emr](con){Concepts};
+	\node[proc,below=1.3cm of $(emr)!0.5!(con)$](prep){Tiền xử lý};
+	\node[io,join]{Các khái niệm/cặp khái niệm};
+	\node[proc,join](ex){Rút trích đặc trưng};
+	\node[io, right=3cm of con](perp){Đặc trưng cặp Person};
+	\node[io](pati){Đặc trưng một Person};
+	\node[io](prop){Đặc trưng cặp Problem};
+	\node[io](tstp){Đặc trưng cặp Test};
+	\node[io](trep){Đặc trưng cặp Treatment};
+	\node[io](pron){Đặc trưng một Pronoun};	
+	\node[proc, right=3cm of $(prop)!0.5!(tstp)$](train){Huấn luyện};
+	\node[io,right=7cm of perp](perm){SVM model cặp Person};
+	\node[io](patim){SVM model cho Patient-class};
+	\node[io](prom){SVM model cho cặp Problem};
+	\node[io](tstm){SVM model cho cặp Test};
+	\node[io](trem){SVM model cho cặp Treatment};
+	\node[io](pronm){SVM model cho Pronoun};
+
+	\draw[->] (emr) -- ++(down:0.9cm) -| (prep.130);
+	\draw[->] (con) -- ++(down:0.9cm) -| (prep.50);
+	\draw[->] (ex) -- ++(right:2.2cm) |- (perp);
+	\draw[->] (ex) -- ++(right:2.2cm) |- (pati);
+	\draw[->] (ex) -- ++(right:2.2cm) |- (prop);
+	\draw[->] (ex) -- ++(right:2.2cm) |- (tstp);
+	\draw[->] (ex) -- ++(right:2.2cm) |- (trep);
+	\draw[->] (ex) -- ++(right:2.2cm) |- (pron);
+	\draw[->] (perp) -- ++(right:2cm) |- (train);
+	\draw[->] (pati) -- ++(right:2cm) |- (train);
+	\draw[->] (prop) -- ++(right:2cm) |- (train);
+	\draw[->] (tstp) -- ++(right:2cm) |- (train);
+	\draw[->] (trep) -- ++(right:2cm) |- (train);
+	\draw[->] (pron) -- ++(right:2cm) |- (train);
+	\draw[->] (train) -- ++(right:1.5cm) |- (perm);
+	\draw[->] (train) -- ++(right:1.5cm) |- (patim);
+	\draw[->] (train) -- ++(right:1.5cm) |- (prom);
+	\draw[->] (train) -- ++(right:1.5cm) |- (tstm);
+	\draw[->] (train) -- ++(right:1.5cm) |- (trem);
+	\draw[->] (train) -- ++(right:1.5cm) |- (pronm);	
+\end{tikzpicture}
+\caption{Sơ đồ huấn luyện\label{fig:SDHL}}
+\end{figure}
+
+\subsection*{Quy trình phân giải}
+Quy trình phân giải đồng tham chiếu sử dụng 6 SVM model đã được huấn luyện ở trên, cùng với đó là một giải thuật gom nhóm các cặp khái niệm đã được phân loại là đồng tham chiếu với nhau lại để cuối cùng tạo thành các chuỗi đồng tham chiếu. Có thể xem đây là quy trình mang đi ứng dụng thực tế để phân giải cho những văn bản BAĐT mới. Dựa vào hệ thống I, chúng tôi sử dụng giải thuật gom cụm tốt nhất trước để lựa chọn các cặp đồng tham chiếu có độ tin cậy cao nhất, sau đó xây dựng các chuỗi đồng tham chiếu bằng cách nối các cặp có một khái niệm chung. Đối với lớp Pronoun, sau khi đã xác định được lớp chính của một đại từ bất kì, chúng tôi tạo một cặp đồng tham chiếu giữa đại từ đó và khái niệm thuộc lớp chính tương ứng ở gần nhất trước đó trong văn bản. Theo nhận định của các tác giả hệ thống I, tuy cách làm này đơn giản nhưng lại tỏ ra rất hiệu quả.
+
+Hình \ref{fig:SDPG} mô tả trực quan quy trình phân giải đồng tham chiếu. Ở bước trích xuất thuộc tính của các cặp Person, chúng tôi sử dụng model phân loại bệnh nhân để xác định giá trị cho đặc trưng lớp Patient đã được đề cập ở trên. Theo kết quả đánh giá các hệ thống dự thi thử thách i2b2 2011, ba hệ đo được sử dụng là: MUC, B-CUBED và CEAF. Chúng tôi cũng hiện thực các hệ đo này để đánh giá hệ thống của mình bằng cách so sánh với kết quả của hệ thống I. Vì các hệ đo này đánh giá trên các chuỗi đồng tham chiếu chứ không phải đánh giá hiệu năng phân loại thông thường nên cách thức hiện thực chúng có phần phức tạp, chúng tôi sẽ trình bày chi tiết các cách hiện thực này ở phần sau.
+
+\begin{figure}[th]
+\centering
+\begin{tikzpicture}[%
+	>=angle 60,
+	start chain=going below,
+	node distance=1.5cm and 2.5cm,
+	every join/.style={->, draw},
+	font=\tiny\sffamily]
+
+	\node[doc](emr){EMR};
+	\node[doc, right=of emr](con){Concepts};
+	\node[proc, below=1.3cm of $(emr)!0.5!(con)$](prep){Tiền xử lý};
+	\node[io,join](ins){Các khái niệm/cặp khái niệm};
+	\node[proc,join](ex){Rút trích đặc trưng};
+	\node[io, right=of ex, join](feat){Tập vector đặc trưng};
+	\node[proc, right=of feat, join](clas){Phân loại};
+	\node[multidoc, above=of clas](model){6 SVM model};
+	\node[io,below=of clas](conf){Độ tin cậy đồng tham chiếu};
+	\node[proc,join,below=of ex](clus){Gom cụm};
+	\node[io,join](sysc){Các chuỗi đồng tham chiếu};
+	\node[proc,join,right=of sysc](eval){Đánh giá hiệu năng};
+	\node[doc,right=of eval, text width=1.5cm](gt){Các chuỗi đồng tham chiếu kết quả (ground truth)};
+	\node[io,below=of eval](res){Các số liệu độ đo};
+
+	\draw[->] (emr) -- ++(down:0.9cm) -| (prep.130);
+	\draw[->] (con) -- ++(down:0.9cm) -| (prep.50);
+	\draw[->] (model) -> (clas);
+	\draw[->] (clas) -> (conf);
+	\draw[->] (ins) -- ++(left:1.5cm) |- (clus);
+	\draw[->] (gt) -> (eval);
+	\draw[->] (eval) -> (res);
+	\draw[->] (model.200) -- ++(left:3cm) node[midway,above,sloped]{Model Patient-class} -> (ex.north east);
+\end{tikzpicture}
+\caption{Sơ đồ phân giải đồng tham chiếu\label{fig:SDPG}}
+\end{figure}
