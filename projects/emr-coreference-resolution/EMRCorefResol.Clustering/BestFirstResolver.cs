@@ -40,11 +40,11 @@ namespace HCMUT.EMRCorefResol.CorefResolvers
                                 bestAnte = ante;
                             }
                         }
+                    }
 
-                        if (bestResult != null && bestAnte != null)
-                        {
-                            pairs[i] = new[] { bestAnte, ana };
-                        }
+                    if (bestResult != null && bestAnte != null)
+                    {
+                        pairs[i] = new[] { bestAnte, ana };
                     }
                 }
                 else

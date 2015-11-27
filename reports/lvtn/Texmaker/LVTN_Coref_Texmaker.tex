@@ -6,21 +6,24 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
-\usepackage[left=1.2in,right=0.8in,top=1in,bottom=1in,twoside]{geometry}
+\usepackage[pdftex]{geometry}
+\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1.4in,rmargin=1in}
 \usepackage{setspace}
 \usepackage{array}
 \usepackage{booktabs}
 \usepackage{tabularx}
-\usepackage[ruled,norelsize]{algorithm2e}
+\usepackage[ruled,lined,linesnumbered]{algorithm2e}
 \usepackage{titlesec}
 \usepackage{caption}
 \usepackage{tikz}
 \usepackage{fancyhdr}
-\pagestyle{fancy}
-\usepackage[unicode=true,pdfusetitle,bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]{hyperref}
+\usepackage[unicode,hidelinks]{hyperref}
+\usepackage{enumitem}
+%\usepackage{layout}
+%\usepackage{showframe}
 
 \makeatletter
-
+\pagestyle{fancy}
 \onehalfspacing
 \usetikzlibrary{
 	shapes,arrows,shapes.symbols,shapes.geometric,shadows,
@@ -69,6 +72,15 @@
 
 \begin{document}
 
+\SetKw{Null}{null}
+\SetKw{KwOr}{or}
+\SetKw{KwAnd}{and}
+\SetKw{KwBreak}{break}
+\SetKwInOut{Input}{Đầu vào}
+\SetKwInOut{Output}{Đầu ra}
+\SetKw{KwDownTo}{downto}
+\SetKw{KwContinue}{continue}
+
 \chapter*{Lời cam đoan}
 \chapter*{Lời cảm ơn}
 
@@ -83,7 +95,6 @@
 \input{./chapter1.tex}
 \input{./chapter2.tex}
 \input{./chapter3.tex}
-\input{./chapter4.tex}
 \input{./chapter5.tex}
 \input{./chapter6.tex}
 \input{./chapter7.tex}

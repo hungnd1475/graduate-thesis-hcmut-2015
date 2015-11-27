@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.21)  25 NOV 2015 16:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.21)  27 NOV 2015 16:26
 entering extended mode
 **LVTN_Coref_Texmaker.tex
 (LVTN_Coref_Texmaker.tex
@@ -609,6 +609,9 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\xspace.sty"
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
+Package: relsize 2003/07/04 ver 3.1
+)
 ********************************************************
 Package `algorithm2e' Release 5.1 -- october 19 2015 --
 - algorithm2e-announce@lirmm.fr mailing list for announcement about releases
@@ -1055,13 +1058,6 @@ File: puenc.def 2012/11/06 v6.83m Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Option `pdfusetitle' set `true' on input line 4319.
-Package hyperref Info: Option `bookmarks' set `true' on input line 4319.
-Package hyperref Info: Option `bookmarksnumbered' set `false' on input line 431
-9.
-Package hyperref Info: Option `bookmarksopen' set `false' on input line 4319.
-Package hyperref Info: Option `breaklinks' set `false' on input line 4319.
-Package hyperref Info: Option `colorlinks' set `false' on input line 4319.
 Package hyperref Info: Hyper figures OFF on input line 4443.
 Package hyperref Info: Link nesting OFF on input line 4448.
 Package hyperref Info: Hyper index ON on input line 4451.
@@ -1107,6 +1103,14 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip77
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip78
+\enit@outerparindent=\dimen211
+\enit@toks=\toks38
+\enit@inbox=\box48
+\enitdp@description=\count144
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
 s\tikzlibraryshapes.code.tex"
@@ -1159,26 +1163,26 @@ File: tikzlibraryshapes.multipart.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1
 shapes.multipart.code.tex"
 File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.1a (rcs-revision 1.2)
 
-\pgfnodepartlowerbox=\box48
-\pgfnodeparttwobox=\box49
-\pgfnodepartthreebox=\box50
-\pgfnodepartfourbox=\box51
-\pgfnodeparttwentybox=\box52
-\pgfnodepartnineteenbox=\box53
-\pgfnodeparteighteenbox=\box54
-\pgfnodepartseventeenbox=\box55
-\pgfnodepartsixteenbox=\box56
-\pgfnodepartfifteenbox=\box57
-\pgfnodepartfourteenbox=\box58
-\pgfnodepartthirteenbox=\box59
-\pgfnodeparttwelvebox=\box60
-\pgfnodepartelevenbox=\box61
-\pgfnodeparttenbox=\box62
-\pgfnodepartninebox=\box63
-\pgfnodeparteightbox=\box64
-\pgfnodepartsevenbox=\box65
-\pgfnodepartsixbox=\box66
-\pgfnodepartfivebox=\box67
+\pgfnodepartlowerbox=\box49
+\pgfnodeparttwobox=\box50
+\pgfnodepartthreebox=\box51
+\pgfnodepartfourbox=\box52
+\pgfnodeparttwentybox=\box53
+\pgfnodepartnineteenbox=\box54
+\pgfnodeparteighteenbox=\box55
+\pgfnodepartseventeenbox=\box56
+\pgfnodepartsixteenbox=\box57
+\pgfnodepartfifteenbox=\box58
+\pgfnodepartfourteenbox=\box59
+\pgfnodepartthirteenbox=\box60
+\pgfnodeparttwelvebox=\box61
+\pgfnodepartelevenbox=\box62
+\pgfnodeparttenbox=\box63
+\pgfnodepartninebox=\box64
+\pgfnodeparteightbox=\box65
+\pgfnodepartsevenbox=\box66
+\pgfnodepartsixbox=\box67
+\pgfnodepartfivebox=\box68
 )))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
 s\tikzlibraryarrows.code.tex"
@@ -1187,7 +1191,7 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryarrows.
 code.tex"
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
-\arrowsize=\dimen211
+\arrowsize=\dimen212
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
 s\tikzlibraryshadows.code.tex"
@@ -1213,62 +1217,65 @@ File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
 s\tikzlibrarycalc.code.tex"
 File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.1a (rcs-revision 1.9)
 )
-\titleindent=\skip78
+\titleindent=\skip79
  (LVTN_Coref_Texmaker.aux
 LaTeX Font Info:    Try loading font information for T5+cmr on input line 19.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\vntex\t5cmr.fd"
 File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 ))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count144
-\scratchdimen=\dimen212
-\scratchbox=\box68
-\nofMPsegments=\count145
-\nofMParguments=\count146
-\everyMPshowfont=\toks38
-\MPscratchCnt=\count147
-\MPscratchDim=\dimen213
-\MPnumerator=\count148
-\makeMPintoPDFobject=\count149
-\everyMPtoPDFconversion=\toks39
+\scratchcounter=\count145
+\scratchdimen=\dimen213
+\scratchbox=\box69
+\nofMPsegments=\count146
+\nofMParguments=\count147
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count148
+\MPscratchDim=\dimen214
+\MPnumerator=\count149
+\makeMPintoPDFobject=\count150
+\everyMPtoPDFconversion=\toks40
 )
-*geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
+
+Package geometry Warning: The marginal notes overrun the paper.
+     Add 40.73001pt and more to the right margin.
+
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(86.72377pt, 452.9679pt, 57.81621pt)
+* h-part:(L,W,R)=(101.17755pt, 424.06033pt, 72.26999pt)
 * v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=452.9679pt
+* \textwidth=424.06033pt
 * \textheight=700.50687pt
-* \oddsidemargin=14.45378pt
-* \evensidemargin=-14.45378pt
+* \oddsidemargin=28.90756pt
+* \evensidemargin=0.0pt
 * \topmargin=-37.0pt
 * \headheight=15.0pt
 * \headsep=25.0pt
@@ -1291,8 +1298,8 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box69
-Package hyperref Info: Link coloring OFF on input line 70.
+\AtBeginShipoutBox=\box70
+Package hyperref Info: Link coloring OFF on input line 73.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1300,11 +1307,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count150
+\c@section@level=\count151
 )
-LaTeX Info: Redefining \ref on input line 70.
-LaTeX Info: Redefining \pageref on input line 70.
-LaTeX Info: Redefining \nameref on input line 70.
+LaTeX Info: Redefining \ref on input line 73.
+LaTeX Info: Redefining \pageref on input line 73.
+LaTeX Info: Redefining \nameref on input line 73.
 
 (LVTN_Coref_Texmaker.out) (LVTN_Coref_Texmaker.out)
 \@outlinefile=\write4
@@ -1323,107 +1330,127 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 5.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [3
-
-])
+))
 \tf@toc=\write5
-LaTeX Font Info:    Try loading font information for T5+cmss on input line 77.
+ [3
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\vntex\t5cmss.fd"
-File: t5cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 77.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmss.fd"
-File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [4]
+]
 (LVTN_Coref_Texmaker.lof)
 \tf@lof=\write6
- [5
+ [4
 
 ] (LVTN_Coref_Texmaker.lot)
 \tf@lot=\write7
 
 
 Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\h' on input line 81.
+(hyperref)                removing `\h' on input line 93.
 
-(chapter1.tex [6
+(chapter1.tex [5
 
 ]
 Ch\uhorn \ohorn ng 1.
-) (chapter2.tex [7
+) (chapter2.tex [6
 
 ]
 Ch\uhorn \ohorn ng 2.
-) (chapter3.tex [8
+) (chapter3.tex [7
 
 ]
 Ch\uhorn \ohorn ng 3.
-) (chapter4.tex [9
+) (chapter5.tex [8
 
 ]
 Ch\uhorn \ohorn ng 4.
-[10
-
-] [11] [12]) (chapter5.tex [13]
-Ch\uhorn \ohorn ng 5.
-[14
+LaTeX Font Info:    Try loading font information for T5+cmss on input line 29.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\vntex\t5cmss.fd"
+File: t5cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+) [9
 
 ]
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 51.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmss.fd"
+File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+
+Package Fancyhdr Warning: \headheight is too small (15.0pt): 
+ Make it at least 16.20724pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10] [11] [12]
 Missing character: There is no ; in font nullfont!
- [15] [16] [17]) (chapter6.tex [18]
-Ch\uhorn \ohorn ng 6.
+ [13] [14]
+Underfull \vbox (badness 5726) has occurred while \output is active []
+
+ [15]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16]
+LaTeX Font Info:    Try loading font information for T5+cmtt on input line 381.
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\vntex\t5cmtt.fd"
+File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)) (chapter6.tex
+[17] [18]
+Ch\uhorn \ohorn ng 5.
 ) (chapter7.tex [19
 
 ]
-Ch\uhorn \ohorn ng 7.
+Ch\uhorn \ohorn ng 6.
 ) (LVTN_Coref_Texmaker.bbl [20
 
 ])
 
 Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\ecircumflex' on input line 94.
+(hyperref)                removing `\ecircumflex' on input line 105.
 
 
 Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\h' on input line 94.
+(hyperref)                removing `\h' on input line 105.
 
 [21
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 96.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 96.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 107.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 107.
  (LVTN_Coref_Texmaker.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 96.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 96.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 107.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 107.
 Package rerunfilecheck Info: File `LVTN_Coref_Texmaker.out' has not changed.
-(rerunfilecheck)             Checksum: 992D65DC581F53C267D1670237E8C292;4828.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 96.
+(rerunfilecheck)             Checksum: 071938054DCDAF6CE51ACDE3122576EC;4720.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 107.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 26317 strings out of 493673
- 485208 string characters out of 3141529
- 598689 words of memory out of 3000000
- 29133 multiletter control sequences out of 15000+200000
- 29331 words of font info for 61 fonts, out of 3000000 for 9000
+ 26726 strings out of 493673
+ 491669 string characters out of 3141529
+ 606353 words of memory out of 3000000
+ 29492 multiletter control sequences out of 15000+200000
+ 34846 words of font info for 69 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 55i,11n,82p,1526b,20160s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/vntex/vnr/vnbx10
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/type1/vntex/vnr/vnr10.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/vntex/vnr/vnss10.pfb><C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/vntex/vnr/vnss8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
-type1/vntex/vnr/vnss9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/vntex/
-vnr/vnssbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/vntex/vnr/vnssi
-9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/vntex/vnr/vnti10.pfb>
-Output written on LVTN_Coref_Texmaker.pdf (21 pages, 215319 bytes).
+ 55i,27n,82p,1526b,20466s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/vntex/vnr/vnbx10.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/vntex/vnr/vnbx8.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/vntex/vnr/vnr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/vntex/vnr/vnss10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/v
+ntex/vnr/vnss8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/vntex/vnr/vns
+s9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/vntex/vnr/vnssbx10.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/vntex/vnr/vnssi9.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/vntex/vnr/vnti10.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/vntex/vnr/vntt10.pfb>
+Output written on LVTN_Coref_Texmaker.pdf (21 pages, 264847 bytes).
 PDF statistics:
- 343 PDF objects out of 1000 (max. 8388607)
- 66 named destinations out of 1000 (max. 500000)
- 333 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 406 PDF objects out of 1000 (max. 8388607)
+ 103 named destinations out of 1000 (max. 500000)
+ 325 words of extra memory for PDF output out of 10000 (max. 10000000)
 
