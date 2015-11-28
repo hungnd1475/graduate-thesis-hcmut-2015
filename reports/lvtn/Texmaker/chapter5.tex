@@ -335,9 +335,47 @@ And, as well as, in addition to & 0, 1 & Khái niệm được xét liền sau `
 
 Các đặc trưng ``First next verb after mention'', ``First one/two/three words before mention'', ``First one/two/three words after mention'' được hiện thực bằng cách khảo sát toàn bộ các khái niệm thuộc lớp Pronoun, sau đó xây dựng bộ từ điển các từ có thể đứng trước hoặc đứng sau khái niệm đang xét. Giá trị của đặc trưng được lấy bằng chỉ mục của từ đứng trước (hoặc đứng sau) trong bộ từ điển các từ.
 
-Các đặc trưng ``Part of speech'', ``First word after mention is preposition'', ``An adjacent mention after pronoun + VP'' được hiện thực bằng cách tìm câu văn chứa khái niệm đang xét trong BAĐT. Sau đó, chúng tôi tiến hành phân đoạn câu (tokenize) và đánh dấu thông tin từ loại (POS tag)\cite{treebank} đối với câu văn chứa khái niệm đang xét. Từ danh sách thông tin từ loại có được, các đặc trưng nêu trên được tính giá trị theo mô tả. Các đặc trưng còn lại được chúng tôi hiện thực theo như mô tả trong bảng \ref{tab:PronounFeatures}.
+Các đặc trưng ``Part of speech'', ``First word after mention is preposition'', ``An adjacent mention after pronoun + VP'' được hiện thực bằng cách tìm câu văn chứa khái niệm đang xét trong BAĐT. Sau đó, chúng tôi tiến hành phân đoạn câu (tokenize) và đánh dấu thông tin từ loại (POS tag)\cite{treebank} đối với câu văn chứa khái niệm đang xét. Từ danh sách thông tin từ loại có được, các đặc trưng nêu trên được tính giá trị theo mô tả. Chúng tôi sử dụng hệ thống xử lý ngôn ngữ tự nhiên Apache OpenNLP cho các tác vụ phân đoạn câu và đánh dấu thông tin từ loại. Các đặc trưng còn lại được chúng tôi hiện thực theo như mô tả trong bảng \ref{tab:PronounFeatures}.
 
-\subsection*{Nhóm Problem/Test/Treatment}
+\subsection*{Nhóm Problem/Treatment/Test}
+Nhóm lớp Problem/Treatment/Test là nhóm lớp đặc biệt thuộc riêng lĩnh vực y khoa. Trong lĩnh vực này, cùng một khái niệm có thể được biểu diễn dưới nhiều hình thức khác nhau. Ví dụ để chỉ nồng độ bạch cầu trong máu, trong BAĐT có thể được diễn đạt là ``WBC'', ``white blood cell count'' hoặc ``white blood count''. Việc xác định được các cụm từ có cách diễn đạt khác nhau nhưng cùng chỉ một khái niệm có thể giúp tăng độ chính xác và giải sai sót trong quá trình phân loại. Để làm được điều này, tác giả của hệ thống I đề xuất sử dụng các nguồn tri thức nhân loại bên ngoài như Wikipedia, UMLS hoặc WordNet.
+
+Mặt khác, đối với lớp Problem/Test/Treatment, cùng một sự kiện y khoa có thể xảy ra nhiều lần nhưng các sự kiện y khoa đó có thể không đồng tham chiếu mà mang nhiều ý nghĩa khác nhau. Nguyên nhân vì trong các sự kiện y khoa thường bị ảnh hưởng bởi ngữ cảnh mà chúng được đề cập đến. Ví dụ ``the right \textit{leg}'' và ``the left \textit{leg}'', khái niệm được đề cập đều là ``leg'' tuy nhiên ngữ cảnh trong văn bản cho thấy đó là hai khái niệm chỉ hai chân khác nhau. Vì vậy để xây dựng chính xác chuỗi đồng tham chiếu của nhóm lớp Problem/Treatment/Test, dựa theo hệ thống I, cần phải có một hệ thống trích xuất thông tin ngữ cảnh trong văn bản.
+
+\textbf{Các nguồn tri thức nhân loại}
+
+\emph{Wikipedia}\\
+Wikipedia là hệ thống bách khoa toàn thư miễn phí đa ngôn ngữ, nền Web dựa trên mô hình cho phép người dùng chỉnh sửa nội dung \cite{wikipediaabout}. Các tri thức nhân loại từ Wikipedia có thể được sử dụng để xác định tên giả (alias), tên viết tắt hoặc các từ đồng nghĩa hay có liên quan với nhau. Ví dụ hai khái niệm ``head trauma'' và ``head injury'' có thể được xác định là đồng nghĩa dựa trên thông tin từ Wikipedia.
+
+Dựa trên thiết kế của hệ thống I, chúng tôi xây dựng bộ trích xuất các thông tin về tiêu đề bài viết (title hoặc redirected link), từ in đậm (bold name) trong bài viết và các khái niệm liên quan (anchor link) được đề cập trong bài viết. Ngôn ngữ của Wikipeda được chúng tôi sử dụng là tiếng Anh . Để trích xuất được các thông tin này, chúng tôi sử dụng công cụ Wikipedia-miner được đề cập trong phần \ref{tools}. Do số lượng khái niệm cần được rút trích thông tin từ Wikipedia rất lớn, vì vậy để cải thiện hiệu năng thời gian của hệ thống, chúng tôi đề xuất trước khi thực hiện rút trích đặc trưng của nhóm lớp Problem/Treatment/Test, các khái niệm thuộc nhóm lớp này cần được rút trích riêng thông tin từ Wikipedia và ghi xuống file lưu trữ.
+
+\emph{UMLS}\\
+Trong quá trình phát triển của y học, nhu cầu có một bộ từ điển chung, chứa các thông tin đã được chuẩn hóa về các loại bệnh, thuốc, nguyên nhân hoặc các thuật ngữ trong y tế ngày càng cao. Vì lí do đó, bộ từ điển UMLS - Unified Medical Language System đã được Mỹ tiến hành xây dựng từ năm 1986 bởi Thư viện Y học Quốc gia Hoa Kì (US National Library of Medicine) \cite{umlswiki}.
+
+Trong mô tả của hệ thống I, một số đặc trưng về ngữ nghĩa trong văn bản cần khai thác thông tin từ bộ từ điển UMLS. Cụ thể bộ trích xuất ngữ nghĩa trong văn bản cần xác định một khái niệm có xuất hiện trong bộ từ điển UMLS hay không, nếu có thì khái niệm đó thuộc phân nhóm nào trong từ điển UMLS. Ví dụ như khái niệm ``lung cancer'' xuất hiện trong từ điển UMLS dưới phân nhóm Các tiến trình liên quan u, bướu (Neoplastic Process). Để trích xuất các thông tin này, chúng tôi sử dụng công cụ Metamap được đề cập trong phần \ref{tools}. Tương tự như việc rút trích thông tin từ Wikipedia, chúng tôi đề xuất các khái niệm cần được rút trích thông tin từ UMLS và ghi xuống file lưu trữ trước khi tiến hành rút trích đặc trưng cho nhóm lớp Problem/Treatment/Test.
+
+\emph{WordNet}\\
+WordNet là bộ từ điển được xây dựng tiếng Anh bao gồm các từ vựng đã được phân loại vai trò ngữ pháp như danh từ, tính từ, trạng từ, động từ. Các từ xuất hiện trong WordNet đã được nhóm lại với nhau thành các nhóm từ có cùng ý nghĩa. WordNet có vai trò giống như Wikipedia trong việc xác định tên giả, viết tắt và từ đồng nghĩa.
+
+\textbf{Bộ trích xuất ngữ nghĩa trong văn bản}
+
+\emph{Trích xuất thông tin cơ quan trên cơ thể (Anatomy)}\\
+
+\emph{Trích xuất thông tin vị trí (Position)}\\
+
+\emph{Trích xuất thông tin thuốc y tế (Medical information)}\\
+
+\emph{Trích xuất thông tin chỉ số của thủ tục y tế (Indicator)}\\
+
+\emph{Trích xuất thông tin thời gian (Temporal)}\\
+
+\emph{Trích xuất thông tin phân đoạn bệnh án (Section)}\\
+
+\emph{Trích xuất thông tin bổ từ (Modifier)}\\
+
+\emph{Trích xuất thông tin thiết bị y tế (Equipment)}\\
+
+\emph{Trích xuất thông tin Phẫu thuật y tế (Operation)}\\
 
 \section{Gom cụm và xây dựng chuỗi đồng tham chiếu}
 Ở mô hình cặp thực thể, hệ thống phân loại không có khả năng xây dựng chuỗi đồng tham chiếu mà nó chỉ có thể xác định một cặp khái niệm là có đồng tham chiếu hay không. Mặt khác, đối với một văn bản HSXV, số cặp khái niệm được sinh ra rất nhiều và trong số đó có nhiều cặp có chung khái niệm đứng sau, ví dụ hai cặp “Dr. John”-“his” và “Mr. Brown”-“his” có chung khái niệm đứng sau là “his” mà hai cặp này đều được hệ thống phân loại xác định là đồng tham chiếu, tuy nhiên chỉ một trong hai khái niệm “Dr. John” và “Mr. Brown” được chọn làm tiền đề cho khái niệm “his” này. Như vậy cần thiết phải có một giải thuật lựa chọn các cặp đồng tham chiếu và xây dựng các chuỗi đồng tham chiếu từ chúng.
