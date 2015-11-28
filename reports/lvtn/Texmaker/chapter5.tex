@@ -43,7 +43,7 @@ Dựa vào hệ thống có hiệu năng tốt nhất của thử thách i2b2 n�
 \subsection*{Quy trình huấn luyện}
 Để xác định tính đồng tham chiếu giữa hai khái niệm bất kì, ta cần huấn luyện một model phân loại dựa trên dữ liệu mẫu. Vì đầu vào của quy trình là các văn bản BAĐT và danh sách các khái niệm đã được gán nhãn, hệ thống cần trích xuất đặc trưng của các dữ liệu thô này rồi mới có thể đưa vào để huấn luyện. Bên cạnh đó, các khái niệm đã được phân loại vào 4 nhóm chính là Person, Problem, Test và Treatment, còn các đại từ được phân vào nhóm Pronoun nên để giảm bớt số cặp khái niệm được sinh ra, chúng tôi huấn luyện 4 model để xác định tính đồng tham chiếu của riêng các cặp Person-Person, Problem-Problem, Test-Test và Treatment-Treatment (vì hai khái niệm thuộc hai lớp khác nhau thì nghiễm nhiên không đồng tham chiếu với nhau). Đối với các đại từ thì thường chỉ tới một khái niệm ở trước đó, nên việc xác định xem một đại từ thực chất mang ý nghĩa của lớp nào trong 4 lớp chính Person, Problem, Test, Treatment là một việc quan trọng. Sau khi xác định được lớp chính của đại từ, chúng tôi chọn khái niệm thuộc lớp tương ứng ở gần nhất trước đó làm tiền đề cho nó. Các ý này đều là của các tác giả hệ thống I.
 
-Ngoài ra cũng theo các tác giả này, thông tin một khái niệm lớp Person có chỉ về bệnh nhân hay không góp một phần quan trọng trong việc phân loại đúng tính đồng tham chiếu của cặp các khái niệm lớp này. Trong miền văn bản BAĐT, các khái niệm chỉ người thường chỉ đề cập đến một trong ba loại: bệnh nhân, người thân của bệnh nhân và nhân sự của bệnh viện. Do một BAĐT, mà cụ thể là hồ sơ xuất viện, thông thường chỉ đề cập đến một bệnh nhân nên những khái niệm nào chỉ về bệnh nhân thì thường chắc chắn nằm trong cùng một chuỗi đồng tham chiếu lớn nhất và duy nhất chỉ về bệnh nhân đó. Từ nhận định này, nhóm tác giả của hệ thống I đã thêm vào đặc trưng lớp Patient (Patient-class) cho cặp hai khái niệm lớp Person, nó mang giá trị 1 khi hai khái niệm đều chỉ về bệnh nhân và 0  trong các trường hợp khác. Ở bước huấn luyện, thông tin "một khái niệm Person có chỉ về bệnh nhân hay không" được lấy từ tập chuỗi kết quả (ground truth), còn ở bước phân giải đồng tham chiếu thông tin này được xác định nhờ một model phân loại đã được huấn luyện.
+Ngoài ra cũng theo các tác giả này, thông tin một khái niệm lớp Person có chỉ về bệnh nhân hay không góp một phần quan trọng trong việc phân loại đúng tính đồng tham chiếu của các cặp khái niệm lớp này. Trong miền văn bản BAĐT, các khái niệm chỉ người thường chỉ đề cập đến một trong ba loại: bệnh nhân, người thân của bệnh nhân và nhân sự của bệnh viện. Do một BAĐT, mà cụ thể là hồ sơ xuất viện, thông thường chỉ đề cập đến một bệnh nhân nên những khái niệm nào chỉ về bệnh nhân thì thường chắc chắn nằm trong cùng một chuỗi đồng tham chiếu lớn nhất và duy nhất chỉ về bệnh nhân đó. Từ nhận định này, nhóm tác giả của hệ thống I đã thêm vào đặc trưng lớp Patient (Patient-class) cho cặp hai khái niệm lớp Person, nó mang giá trị 1 khi hai khái niệm đều chỉ về bệnh nhân và 0  trong các trường hợp khác. Ở bước huấn luyện, thông tin "một khái niệm Person có chỉ về bệnh nhân hay không" được lấy từ tập chuỗi kết quả (ground truth), còn ở bước phân giải đồng tham chiếu thông tin này được xác định nhờ một model phân loại đã được huấn luyện.
 
 Như vậy mục đích của quy trình huấn luyện là xây dựng tổng cộng 6 SVM model, trong đó 4 SVM model nhằm mục đích phân loại và đánh giá độ tin cậy đồng tham chiếu của các cặp khái niệm Person-Person, Problem-Problem, Test-Test và Treatment-Treatment; 1 SVM model để xác định các khái niệm Person có là bệnh nhân hay không (Patient-class) và 1 SVM model để phân loại các đại từ (các khái niệm lớp Pronoun) vào một trong bốn lớp Person, Problem, Test và Treatment. Đầu vào của quy trình này là toàn bộ các văn bản BAĐT với các khái niệm đã được trích xuất và gán nhãn. Sau khi tiền xử lý, hệ thống xây dựng các mẫu huấn luyện
 bao gồm: Person, Person-Person, Problem-Problem, Test-Test, Treatment-Treatment và Pronoun từ danh sách các khái niệm. Sáu tập mẫu này được trích xuất thuộc tính và đưa vào để huấn luyện 6 SVM model (Hình \ref{fig:SDHL}). Thư viện SVM được nhóm sử dụng là LibSVM. 
@@ -103,7 +103,7 @@ bao gồm: Person, Person-Person, Problem-Problem, Test-Test, Treatment-Treatmen
 \subsection*{Quy trình phân giải}
 Quy trình phân giải đồng tham chiếu sử dụng 6 SVM model đã được huấn luyện ở trên, cùng với đó là một giải thuật gom nhóm các cặp khái niệm đã được phân loại là đồng tham chiếu với nhau lại để cuối cùng tạo thành các chuỗi đồng tham chiếu. Có thể xem đây là quy trình mang đi ứng dụng thực tế để phân giải cho những văn bản BAĐT mới. Dựa vào hệ thống I, chúng tôi sử dụng giải thuật gom cụm tốt nhất trước để lựa chọn các cặp đồng tham chiếu có độ tin cậy cao nhất, sau đó xây dựng các chuỗi đồng tham chiếu bằng cách nối các cặp có một khái niệm chung. Đối với lớp Pronoun, sau khi đã xác định được lớp chính của một đại từ bất kì, chúng tôi tạo một cặp đồng tham chiếu giữa đại từ đó và khái niệm thuộc lớp chính tương ứng ở gần nhất trước đó trong văn bản. Theo nhận định của các tác giả hệ thống I, tuy cách làm này đơn giản nhưng lại tỏ ra rất hiệu quả.
 
-Hình \ref{fig:SDPG} mô tả trực quan quy trình phân giải đồng tham chiếu. Ở bước trích xuất thuộc tính của các cặp Person, chúng tôi sử dụng model phân loại bệnh nhân để xác định giá trị cho đặc trưng lớp Patient đã được đề cập ở trên. Theo kết quả đánh giá các hệ thống dự thi thử thách i2b2 2011, ba hệ đo được sử dụng là: MUC, B-CUBED và CEAF. Chúng tôi cũng hiện thực các hệ đo này để đánh giá hệ thống của mình bằng cách so sánh với kết quả của hệ thống I.
+Hình \ref{fig:SDPG} mô tả trực quan quy trình phân giải đồng tham chiếu. Ở bước trích xuất thuộc tính của các cặp Person, chúng tôi sử dụng model phân loại bệnh nhân để xác định giá trị cho đặc trưng lớp Patient đã được đề cập ở trên. Theo kết quả đánh giá các hệ thống dự thi thử thách i2b2 2011, ba hệ đo được sử dụng để đánh giá hiệu năng là: MUC, B-CUBED và CEAF. Chúng tôi cũng hiện thực các hệ đo này để đánh giá hệ thống của mình bằng cách so sánh với kết quả của hệ thống I.
 
 \begin{figure}[th]
 \centering
@@ -392,7 +392,7 @@ Như vậy giải thuật gom cụm cụm tốt nhất trước bao gồm hai b�
 
 \begin{figure}[th]
 \begin{algorithm}[H]
-\caption{PAIR-SELECTION\label{alg:pair-selection}}
+\caption{PAIR-SELECTION}
 \SetKwFunction{TypeOf}{TypeOf}
 \SetKwFunction{PRONOUN}{PRONOUN}
 
@@ -438,11 +438,12 @@ $pairs \leftarrow \emptyset$\;
 }
 \Return{pairs}\;
 \end{algorithm}
+\caption{Giải thuật chọn lọc các cặp đồng tham chiếu\label{alg:pair-selection}}
 \end{figure}
 
 \begin{figure}[th]
 \begin{algorithm}[H]
-\caption{CHAINING\label{alg:chaining}}
+\caption{CHAINING}
 
 \Input{danh sách các cặp đồng tham chiếu $pairs$}
 \Output{danh sách các chuỗi đồng tham chiếu}
@@ -470,4 +471,5 @@ $chains\leftarrow\emptyset$\;
 
 \Return{chains}\;
 \end{algorithm}
+\caption{Giải thuật xây dựng các chuỗi đồng tham chiếu\label{alg:chaining}}
 \end{figure}

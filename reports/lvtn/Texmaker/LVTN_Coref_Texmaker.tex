@@ -11,7 +11,7 @@
 \usepackage{array}
 \usepackage{booktabs}
 \usepackage{tabularx}
-\usepackage[ruled,lined,linesnumbered,algochapter]{algorithm2e}
+\usepackage[ruled,lined,linesnumbered]{algorithm2e}
 \usepackage{titlesec}
 \usepackage{caption}
 \usepackage{tikz}
@@ -67,10 +67,11 @@
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 \newcolumntype{P}[2]{>{#1\arraybackslash}p{#2\textwidth}}
 
+\renewcommand{\thealgocf}{}
+
 \makeatother
 
 \begin{document}
-
 \SetKw{Null}{null}
 \SetKw{KwOr}{or}
 \SetKw{KwAnd}{and}
