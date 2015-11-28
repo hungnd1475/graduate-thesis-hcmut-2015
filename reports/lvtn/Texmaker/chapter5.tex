@@ -17,11 +17,7 @@ Problem, Treatment, Test, Person và Pronoun được i2b2 định nghĩa.
 Bảng \ref{tab:EntityLabels} mô tả chi tiết ý nghĩa của năm nhãn này.
 \end{enumerate}
 
-Mục tiêu của chúng tôi là phân giải đồng tham chiếu cho các khái niệm trong tập các khái niệm ứng với mỗi hồ sơ xuất viện. Cụ thể kết quả đầu ra là danh sách các chuỗi đồng tham chiếu của khái niệm đó, ví dụ 
-\begin{verse}
-\emph{c="the patient" 13:0 13:1||c="he" 14:0 14:0||c="his" 14:7 14:7||t="coref person"}
-\end{verse}
-mô tả một chuỗi đồng tham chiếu bao gồm các khái niệm "the patient" (xuất hiện ở dòng thứ 13, từ vị trí 0 đến 1), "he" và "his". Các khái niệm này đồng tham chiếu tới cùng một người (\emph{t="coref person"}).
+Mục tiêu của chúng tôi là phân giải đồng tham chiếu cho các khái niệm trong tập các khái niệm ứng với mỗi hồ sơ xuất viện. Cụ thể kết quả đầu ra là danh sách các chuỗi đồng tham chiếu của khái niệm đó, ví dụ \emph{c=``the patient'' 13:0 13:1||c=``he'' 14:0 14:0||c=``his'' 14:7 14:7||t=``coref person''} mô tả một chuỗi đồng tham chiếu bao gồm các khái niệm ``the patient'' (xuất hiện ở dòng thứ 13, từ vị trí 0 đến 1), ``he'' và ``his''. Các khái niệm này đồng tham chiếu tới cùng một người (\emph{t=``coref person''}).
 
 \begin{table}[th]
 \centering\ra{1.3}
@@ -320,64 +316,88 @@ Như đã được đề cập ở mục, có hai giải thuật được đề 
 \item Các tác giả hệ thống [I] cũng hiện thực giải thuật này cho hệ thống của họ.
 \end{enumerate}
 
-Về cơ bản, giải thuật gom cụm tốt nhất trước lựa chọn các cặp khái niệm được xác định là đồng tham chiếu và có độ tin cậy cao nhất ứng với mỗi hồi chỉ; đối với đại từ, giải thuật sử dụng module phân loại xác định lớp chính của đại từ đó và tạo một cặp đồng tham chiếu giữa nó với khái niệm thuộc lớp tương ứng gần nhất trước đó (theo thứ tự xuất hiện) trong văn bản HSXV. Sau khi có được tập các cặp đồng tham chiếu, giải thuật nối các cặp có chung một khái niệm lại để tạo thành các chuỗi đồng tham chiếu. Đây chính là kết quả cuối cùng của hệ thống phân giải.
+Về cơ bản, giải thuật gom cụm tốt nhất trước lựa chọn các cặp khái niệm được xác định là đồng tham chiếu và có độ tin cậy cao nhất ứng với mỗi hồi chỉ; đối với đại từ, giải thuật sử dụng module phân loại xác định lớp chính của đại từ đó và tạo một cặp đồng tham chiếu giữa nó với khái niệm thuộc lớp tương ứng gần nhất trước đó (theo thứ tự xuất hiện) trong văn bản HSXV. Sau khi có được tập các cặp đồng tham chiếu, giải thuật nối các cặp có một khái niệm chung lại để tạo thành các chuỗi. Đây chính là kết quả cuối cùng của hệ thống phân giải.
 
-Chi tiết thuật toán gom cụm tốt nhất trước, BEST-CLUSTER, được trình bày ở Hình \ref{best-cluster-algor}. BEST-CLUSTER nhận đầu vào là một văn bản HSXV, danh sách các khái niệm đã được gán nhãn của văn bản này và xuất ra danh sách các chuỗi đồng tham chiếu của nó.
+Như vậy giải thuật gom cụm cụm tốt nhất trước bao gồm hai bước chính: chọn lọc các cặp đồng tham chiếu tốt nhất và ghép nối các cặp được chọn để tạo thành danh sách các chuỗi đồng tham chiếu. Chi tiết của bước đầu tiên, PAIR-SELECTION, và bước thứ 2, CHAINING, được trình bày ở Giải thuật \ref{alg:pair-selection} và Giải thuật \ref{alg:chaining} tương ứng. Trong đó, PAIR-SELECTION nhận đầu vào là văn bản HSXV $E$, danh sách các khái niệm $C$ của $E$; còn CHAINING nhận đầu vào là danh sách các cặp đồng tham chiếu chọn lọc được xuất ra bởi PAIR-SELECTION và ghép nối các cặp từ danh sách này để xây dựng các chuỗi đồng tham chiếu.
 
 \begin{figure}[th]
 \begin{algorithm}[H]
-\caption{BEST-CLUSTER}
+\caption{PAIR-SELECTION\label{alg:pair-selection}}
 \SetKwFunction{TypeOf}{TypeOf}
 \SetKwFunction{PRONOUN}{PRONOUN}
-\SetKwFunction{ExtractFeature}{ExtractFeature}
-\SetKwFunction{Classify}{Classify}
-\SetKwFunction{IsCoref}{IsCoref}
-\SetKwFunction{Confidence}{Confidence}
 
 \Input{văn bản HSXV $E$, danh sách khái niệm $C$}
-\Output{danh sách chuỗi đồng tham chiếu của $E$}
+\Output{danh sách các cặp đồng tham chiếu}
 \BlankLine
-$M$: số khái niệm\;
+$M$: số khái niệm trong danh sách $C$\;
 $pairs \leftarrow \emptyset$\;
 \BlankLine
 \For{$i \leftarrow 1$ \KwTo $M$}{
-	$ana \leftarrow C[i]$\;
-	
+	$ana \leftarrow C[i]$\;	
 	\eIf{\TypeOf{$ana$} $\neq$ \PRONOUN}{
+		\tcp{tìm khái niệm đứng trước đồng tham chiếu với $ana$ có độ tin cậy cao nhất}
 		$bestConf \leftarrow \Null$\;
 		$bestAnte \leftarrow \Null$\;
-		\For{$j \leftarrow i - 1$ \KwDownTo 0}{
+		\For{$j \leftarrow i - 1$ \KwDownTo $0$}{
 			$ante \leftarrow C[j]$\;				
-			\lIf{$\TypeOf{ante} \neq \TypeOf{ana}$}{\KwContinue}
-			\BlankLine
-			$f \leftarrow \ExtractFeature{E, ante, ana}$\;
-			$r \leftarrow \Classify{f}$\;
-			
-			\If{\IsCoref{$r$}}{
-				\If{$bestConf = \Null$ \KwOr $bestConf < \Confidence{r}$}{
-					$confidence \leftarrow \Confidence{r}$\;
+			\lIf{$\TypeOf{ante} \neq \TypeOf{ana}$}{\KwContinue}		
+			\If{cặp $(ante,ana)$ đồng tham chiếu}{
+				$conf\leftarrow$ độ tin cậy đồng tham chiếu của $(ante,ana)$\;
+				\If{$bestConf = \Null$ \KwOr $bestConf < conf$}{
+					$confidence \leftarrow conf$\;
 					$bestAnte \leftarrow ante$\;
 				}
 			}
 		}
 		\BlankLine
 		\If{$bestConf \neq \Null$ \KwAnd $bestAnte \neq \Null$}{
-			$pairs \leftarrow pairs \cup (bestAnte, ana)$\;
+			thêm cặp $(bestAnte, ana)$ vào $pairs$\;
 		}
-	}{	
-		$f \leftarrow \ExtractFeature{E, ana}$\;
-		$r \leftarrow \Classify{f}$\;
-		$type \leftarrow \TypeOf{r}$\;
-		\BlankLine
+	}{
+		\tcp{xác định lớp chính của đại từ bằng module phân loại}
+		$t\leftarrow$ lớp chính của $ana$\;
 		\For{$j \leftarrow i - 1$ \KwDownTo 0}{
+			\tcp{tìm khái niệm cùng lớp chính với $ana$ gần nhất trước đó}
 			$ante \leftarrow C[j]$\;
-			\If{$\TypeOf{ante} = type$}{
-				$pairs \leftarrow pairs \cup (ante, ana)$\;
+			\If{$\TypeOf{ante} = t$}{
+				thêm cặp $(ante,ana)$ vào $pairs$\;
 				\KwBreak\;
 			}
 		}
 	}	
 }
+\Return{pairs}\;
 \end{algorithm}
-\caption{Giải thuật gom cụm tốt nhất trước \label{best-cluster-algor}}
+\end{figure}
+
+\begin{figure}[th]
+\begin{algorithm}[H]
+\caption{CHAINING\label{alg:chaining}}
+
+\Input{danh sách các cặp đồng tham chiếu $pairs$}
+\Output{danh sách các chuỗi đồng tham chiếu}
+\BlankLine
+$chains$: danh sách các chuỗi đồng tham chiếu\;
+$chains\leftarrow\emptyset$\;
+\ForEach(\tcp*[h]{với mỗi cặp đồng tham chiếu}){$(ante, ana)$ \KwIn $pairs$}{
+	$added\leftarrow\False$\;
+	\ForEach{$c$ \KwIn $chains$}{
+		\tcp{nếu có một chuỗi $c$ chứa một trong hai khái niệm của cặp}
+		\If(\tcp*[h]{đưa cặp vào chuỗi}){$(ante$ \KwIn $c)$ \KwOr $(ana$ \KwIn $c)$}{
+			$c\leftarrow c\cup \{ante, ana\}$\;
+			$added\leftarrow\True$\;
+			\KwBreak;
+		}
+	}
+	\BlankLine
+	\tcp{nếu không có chuỗi nào chứa một trong hai khái niệm của cặp}
+	\If{$added=\False$}{
+		\tcp{tạo một chuỗi mới $c$ gồm hai khái niệm của cặp}
+		$c\leftarrow\{ante, ana\}$\;
+		thêm $c$ vào $chains$\;
+	}
+}
+
+\Return{chains}\;
+\end{algorithm}
 \end{figure}
