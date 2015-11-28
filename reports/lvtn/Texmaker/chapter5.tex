@@ -333,6 +333,10 @@ And, as well as, in addition to & 0, 1 & Khái niệm được xét liền sau `
 \end{tabularx}
 \end{table}
 
+Các đặc trưng ``First next verb after mention'', ``First one/two/three words before mention'', ``First one/two/three words after mention'' được hiện thực bằng cách khảo sát toàn bộ các khái niệm thuộc lớp Pronoun, sau đó xây dựng bộ từ điển các từ có thể đứng trước hoặc đứng sau khái niệm đang xét. Giá trị của đặc trưng được lấy bằng chỉ mục của từ đứng trước (hoặc đứng sau) trong bộ từ điển các từ.
+
+Các đặc trưng ``Part of speech'', ``First word after mention is preposition'', ``An adjacent mention after pronoun + VP'' được hiện thực bằng cách tìm câu văn chứa khái niệm đang xét trong BAĐT. Sau đó, chúng tôi tiến hành phân đoạn câu (tokenize) và đánh dấu thông tin từ loại (POS tag)\cite{treebank} đối với câu văn chứa khái niệm đang xét. Từ danh sách thông tin từ loại có được, các đặc trưng nêu trên được tính giá trị theo mô tả trong bảng \ref{tab:PronounFeatures}. Các đặc trưng còn lại được chúng tôi hiện thực theo như mô tả trong bảng \ref{tab:PronounFeatures}.
+
 \subsection*{Nhóm Problem/Test/Treatment}
 
 \section{Gom cụm và xây dựng chuỗi đồng tham chiếu}
