@@ -1,4 +1,15 @@
 \chapter{Thí nghiệm đánh giá}
 \section{Tập dữ liệu}
-\section{Các hệ đo hiệu năng}
+Tập dữ liệu chúng tôi sử dụng để đánh giá hiệu năng hệ thống được cung cấp bởi Partners Healthcare và Beth Israel Deaconess Medical Center. Đây cũng chính là tập được sử dụng ở tác vụ 1C thách thức i2b2 2011 để đánh giá các hệ thống tham gia. Như vậy để có được tập dữ liệu này, chúng tôi đã liên hệ với tổ chức i2b2 và cam kết về các điều khoản sử dụng dữ liệu (Data Usage Agreement) bao gồm việc chỉ sử dụng cho mục đích nghiên cứu. Bản cam kết cần được kí và gửi lại cho i2b2 qua email hoặc fax.
+
+Tập dữ liệu chúng tôi nhận được bao gồm \emph{251 hồ sơ xuất viện} dùng cho huấn luyện và \emph{173 hồ sơ} dùng cho kiểm tra đánh giá. Trong đó, ngoài các hồ sơ xuất viện là các văn bản thuần được ghi chép lại bởi các bác sĩ, ý tá thì mỗi hồ sơ còn đi kèm với một tập tin chứa danh sách các khái niệm được đề cập trong hồ sơ đó và đã được gán nhãn bởi các chuyên gia y tế theo mẫu: \emph{c=``<khái niệm>'' <bắt đầu> <kết thúc>||t=``<lớp>''}. Ví dụ \emph{c=``the patient'' 20:5 20:6||t=``person''} mô tả khái niệm \emph{the patient} xuất hiện bắt đầu từ dòng 20 kí tự thứ 5, kết thúc ở dòng 20 kí tự thứ 6 và thuộc lớp Person.
+
+Ngoài danh sách khái niệm, mỗi hồ sơ còn đi kèm với một tập tin chứa danh sách các chuỗi đồng tham chiếu đã được phân giải bởi các chuyên gia (\emph{ground truth}) nhằm huấn luyện hệ thống phân loại có giám sát cũng như để đánh giá hiệu năng của hệ thống phân giải. Các chuỗi đồng tham chiếu có định dạng: \emph{c=``<khái niệm 1>'' <bắt đầu> <kết thúc>||c=``khái niệm 2'' <bắt đầu> <kết thúc>||...||t=``coref <lớp>''}, trong đó \emph{t=``coref <lớp>''} mô tả lớp chính mà các chuỗi đồng tham chiếu chỉ tới bao gồm Person, Problem, Test và Treatment.
+
+\section{Phương pháp đánh giá}
+Hiệu năng hệ thống được đánh giá qua ba độ đo: \emph{độ đúng đắn} (precision), \emph{độ đầy đủ} (recall) và \emph{độ F} (F-measure). Bài báo đánh giá các hệ thống dự thi thử thách i2b2 sử dụng ba phương pháp khác nhau để tính toán các độ này, bao gồm: MUC, B-CUBED và CEAF. Trung bình không trọng số của mỗi độ đo được tính trên toàn tập dữ liệu được lấy làm kết quả cuối cùng để đánh giá các chuỗi đồng tham chiếu được xuất ra bởi hệ thống. Ngoài ra, các kết quả của chúng tôi còn được lấy để so sánh hệ thống \cite{YanXu2012} để xác định tính khả thi của phương pháp mà chúng tôi hiện thực.
+
+\subsection*{Hệ đo MUC}
+Hệ đo MUC đánh giá hệ thống dựa trên số lượng ít nhất các cặp khái niệm cần được thêm vào và loại bỏ để các chuỗi đồng tham chiếu xuất ra bởi hệ thống trùng với các chuỗi kết quả. 
+
 \section{Kết quả}
