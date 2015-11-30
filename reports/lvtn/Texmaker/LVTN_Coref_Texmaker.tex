@@ -18,6 +18,7 @@
 \usepackage{fancyhdr}
 \usepackage[unicode,hidelinks]{hyperref}
 \usepackage{enumitem}
+\usepackage{hanging}
 %\usepackage{layout}
 %\usepackage{showframe}
 
@@ -43,7 +44,7 @@
 
 \captionsetup[table]{position=top}
 
-\setlength\parindent{3.5em}
+\setlength\parindent{3em}
 \newlength\titleindent
 \setlength\titleindent{\parindent}
 \titleformat{\section}
@@ -68,6 +69,25 @@
 \newcolumntype{P}[2]{>{#1\arraybackslash}p{#2\textwidth}}
 
 \renewcommand{\thealgocf}{}
+
+\newenvironment{titlepara}[1]
+{	
+	%\addvspace{0.5\baselineskip}
+	\par\noindent\emph{#1}
+	\begin{hangparas}{3em}{0}
+	\setlength{\parskip}{0.5\baselineskip}
+	\let\svpar\par
+	\edef\svparskip{\the\parskip}
+	\def\revertpar{\svpar\setlength\parskip{\svparskip}\let\par\svpar}
+	\def\noparskip{\leavevmode\setlength\parskip{0pt}%
+  		\def\par{\svpar\let\par\revertpar}}
+	\noparskip\par
+}
+{
+	\end{hangparas}
+	\addvspace{0.5\baselineskip}
+	\par\@afterindentfalse\@afterheading
+}
 
 \makeatother
 
