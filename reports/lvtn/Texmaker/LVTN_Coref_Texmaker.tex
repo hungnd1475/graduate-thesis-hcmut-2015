@@ -19,6 +19,7 @@
 \usepackage[unicode,hidelinks]{hyperref}
 \usepackage{enumitem}
 \usepackage{hanging}
+\usepackage{etoolbox}
 %\usepackage{layout}
 %\usepackage{showframe}
 
@@ -88,6 +89,12 @@
 	\addvspace{0.5\baselineskip}
 	\par\@afterindentfalse\@afterheading
 }
+
+\newcommand*\NoIndentAfterEnv[1]{%
+  \AfterEndEnvironment{#1}{\par\@afterindentfalse\@afterheading}}
+  
+\NoIndentAfterEnv{itemize}
+\NoIndentAfterEnv{enumerate}
 
 \makeatother
 

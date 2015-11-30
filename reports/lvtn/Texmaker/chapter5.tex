@@ -37,7 +37,7 @@ Mục tiêu của chúng tôi là phân giải đồng tham chiếu cho các kh�
 \end{tabularx}
 \end{table}
 
-\section{Ý tưởng hiện thực} \label{ytuonghienthuc}
+\section{Ý tưởng hiện thực\label{ytuonghienthuc}}
 Dựa vào hệ thống có hiệu năng tốt nhất của thử thách i2b2 năm 2011 (hệ thống I), mô hình phân giải đồng tham chiếu mà chúng tôi sử dụng để hiện thực hệ thống là mô hình cặp thực thể. Tư tưởng cơ bản của mô hình này là xác định xem hai khái niệm bất kì có đồng tham chiếu với nhau hay không, sau đó gom nhóm các cặp đồng tham chiếu có một khái niệm chung lại để tạo thành các chuỗi đồng tham chiếu. Như vậy kiến trúc tổng quát của hệ thống chúng tôi hiện thực gồm 2 quy trình: \emph{quy trình huấn luyện hệ thống phân loại} và \emph{quy trình phân giải đồng tham chiếu}. Trong đó quy trình huấn luyện là bước huấn luyện các model phân loại dựa trên dữ liệu mẫu đã được phân giải đồng tham chiếu. Quy trình phân giải sử dụng các model phân loại đã được huấn luyện để xác định tính đồng tham chiếu của các cặp khái niệm, từ đó sử dụng một giải thuật gom nhóm các cặp đồng tham chiếu lại để tạo thành các chuỗi đồng tham chiếu.
 
 \subsection*{Quy trình huấn luyện}

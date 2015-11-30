@@ -6,10 +6,49 @@ Tập dữ liệu chúng tôi nhận được bao gồm \emph{251 hồ sơ xuấ
 
 Ngoài danh sách khái niệm, mỗi hồ sơ còn đi kèm với một tập tin chứa danh sách các chuỗi đồng tham chiếu đã được phân giải bởi các chuyên gia (\emph{ground truth}) nhằm huấn luyện hệ thống phân loại có giám sát cũng như để đánh giá hiệu năng của hệ thống phân giải. Các chuỗi đồng tham chiếu có định dạng: \emph{c=``<khái niệm 1>'' <bắt đầu> <kết thúc>||c=``khái niệm 2'' <bắt đầu> <kết thúc>||...||t=``coref <lớp>''}, trong đó \emph{t=``coref <lớp>''} mô tả lớp chính mà các chuỗi đồng tham chiếu chỉ tới bao gồm Person, Problem, Test và Treatment.
 
-\section{Phương pháp đánh giá}
-Hiệu năng hệ thống được đánh giá qua ba độ đo: \emph{độ đúng đắn} (precision), \emph{độ đầy đủ} (recall) và \emph{độ F} (F-measure). Bài báo đánh giá các hệ thống dự thi thử thách i2b2 sử dụng ba phương pháp khác nhau để tính toán các độ này, bao gồm: MUC, B-CUBED và CEAF. Trung bình không trọng số của mỗi độ đo được tính trên toàn tập dữ liệu được lấy làm kết quả cuối cùng để đánh giá các chuỗi đồng tham chiếu được xuất ra bởi hệ thống. Ngoài ra, các kết quả của chúng tôi còn được lấy để so sánh hệ thống \cite{YanXu2012} để xác định tính khả thi của phương pháp mà chúng tôi hiện thực.
+\section{Các phương pháp đánh giá}
+Hiệu năng hệ thống được đánh giá qua ba độ đo: \emph{độ đúng đắn} (precision), \emph{độ đầy đủ} (recall) và \emph{độ F} (F-measure). Bài báo đánh giá các hệ thống dự thi thử thách i2b2 sử dụng ba phương pháp khác nhau để tính toán các độ này, bao gồm: MUC, B-CUBED và CEAF. Trung bình không trọng số của mỗi độ đo tính trên toàn tập dữ liệu được lấy làm kết quả cuối cùng để đánh giá các chuỗi đồng tham chiếu được xuất ra bởi hệ thống. Ngoài ra, các kết quả của chúng tôi còn được lấy để so sánh với hệ thống \cite{YanXu2012} để xác định tính khả thi của phương pháp mà chúng tôi hiện thực.
 
 \subsection*{Hệ đo MUC}
-Hệ đo MUC đánh giá hệ thống dựa trên số lượng ít nhất các cặp khái niệm cần được thêm vào và loại bỏ để các chuỗi đồng tham chiếu xuất ra bởi hệ thống trùng với các chuỗi kết quả. 
+Hệ đo MUC \cite{MarcVilain1995} xem chuỗi đồng tham chiếu là một danh sách các liên kết giữa các cặp khái niệm tạo nên chuỗi, từ đó đánh giá hệ thống dựa trên số lượng ít nhất các liên kết cần được thêm vào và loại bỏ để các chuỗi đồng tham chiếu xuất ra bởi hệ thống trùng với các chuỗi kết quả. Có thể hiểu số liên kết cần được loại bỏ là độ thiếu chính xác (precision \emph{error}) và số liên kết cần được thêm vào là độ thiếu đầy đủ (recall \emph{error}). 
+
+Gọi $G$ là tập các chuỗi kết quả, $S$ là tập các chuỗi hệ thống. Các độ đúng đắn ($P$) và độ đầy đủ ($R$) được tính như sau:
+
+\[P=\frac{\sum_{s\in S} \left(|s| - m(s, G)\right)}{\sum_{s\in S}\left(|s| - 1\right)}\]
+
+\[R=\frac{\sum_{g\in G}(|g|-m(g,S))}{\sum_{g\in G}(|g|-1)}\]
+
+\noindent trong đó, $|s|$ là số khái niệm tạo thành chuỗi $s$, $m(s,G)$ được tính là tổng số chuỗi trong $G$ có giao nhau với $s$ cộng với số khái niệm trong $s$ không xuất hiện trong tất cả các chuỗi trong $G$. Độ $F$ của hệ MUC là trung bình điều hòa của độ chính xác và độ đầy đủ:
+
+\[F=\frac{2\times P\times R}{P + R}\]
+
+\subsection*{Hệ đo B-CUBED}
+Khác với hệ đo MUC đánh giá dựa trên sự thiếu và thừa các liên kết trong chuỗi hệ thống, hệ đo B-CUBED đánh giá hiệu năng trên mỗi khái niệm trong văn bản. Theo nhận định của các tác giả hệ đo B-CUBED \cite{AmitBagga1998}, cách đánh giá dựa trên các liên kết có hai nhược điểm:
+
+\begin{enumerate}[leftmargin=\parindent]
+\item Không xét tới các khái niệm \emph{duy nhất} (các khái niệm nằm trong chuỗi chỉ chứa một khái niệm là chính nó, hay nói cách khác khái niệm này không đồng tham chiếu tới bất kì khái niệm nào khác). Điều này xảy ra là bởi vì theo quy ước, những chuỗi chỉ chứa một khái niệm không được đưa vào tập kết quả và các hệ thống tuân theo quy ước cũng không xuất những chuỗi như vậy ra.
+
+\item Các lỗi của hệ thống được xem là như nhau, tức hệ đo MUC đánh giá cùng một mức phạt như nhau cho tất cả các sai sót của hệ thống. Tuy nhiên có thể nhận thấy là có vài loại sai sót làm cho chuỗi hệ thống bị sai lệch nhiều hơn so với các loại khác.
+\end{enumerate}
+
+Hệ đo B-CUBED được thiết kể để khắc phục hai nhược điểm trên bằng cách tính toán độ chính xác và độ đầy đủ cho từng khái niệm trong văn bản, sau đó kết hợp chúng lại để ra kết quả cuối cùng. Như vậy theo \cite{AmitBagga1998}, với khái niệm thứ $i$, độ chính xác và độ đầy đủ của nó được định nghĩa như sau:
+
+\[P_i=\frac{\text{số khái niệm đúng trong chuỗi hệ thống chứa khái niệm thứ $i$}}{\text{số khái trong của chuỗi hệ thống chứa khái niệm thứ $i$}}\]
+\[R_i=\frac{\text{số khái niệm đúng trong chuỗi hệ thống chứa khái niệm thứ $i$}}{\text{số khái niệm trong chuỗi kết quả chứa khái niệm thứ $i$}}\]
+
+Độ chính xác và đầy đủ trên toàn văn bản được tính theo công thức:
+
+\[P=\sum_{i=1}^{M} w_i \times P_i,\quad R=\sum_{i=1}^{M} w_i\times R_i\]
+
+\noindent trong đó, $w_i$ là trọng số của khái niệm thứ $i$, $M$ là số khái niệm của văn bản đang xét. Bài báo đánh giá các hệ thông dự thi thử thách i2b2 năm 2011 sử dụng chung một trọng số cho tất cả các khái niệm, $w_i=1/M$. Để tiện cho việc so sánh với hệ thống \cite{YanXu2012}, chúng tôi cũng sử dụng chung cách gán trọng số như trên.
+
+Như vậy để thuận tiện trong tính toán, nếu gọi $m$ là một khái niệm trong văn bản $d$ có chứa $M$ khái niệm, $G_m$ là chuỗi kết quả có chứa $m$, $S_m$ là chuỗi hệ thống có chứa $m$, $O_m$ là chuỗi giao nhau giữa $G_m$ và $S_m$ (tức $O_m=G_m\cap S_m$) thì độ đúng đắn và độ đầy đủ của hệ B-CUBED được tính như sau:
+
+\[P=\frac{1}{M}\sum_{m\in d}\frac{|O_m|}{|S_m|},\quad R=\frac{1}{M}\sum_{m\in d}\frac{|O_m|}{|G_m|}\]
+
+Độ F của hệ B-CUBED được tính tương tự như hệ MUC.
+
+\subsection*{Hệ đo CEAF}
+
 
 \section{Kết quả}
