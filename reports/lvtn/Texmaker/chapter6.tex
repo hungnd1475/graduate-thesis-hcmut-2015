@@ -7,20 +7,19 @@ Tập dữ liệu chúng tôi nhận được bao gồm \emph{251 hồ sơ xuấ
 Ngoài danh sách khái niệm, mỗi hồ sơ còn đi kèm với một tập tin chứa danh sách các chuỗi đồng tham chiếu đã được phân giải bởi các chuyên gia (\emph{ground truth}) nhằm huấn luyện hệ thống phân loại có giám sát cũng như để đánh giá hiệu năng của hệ thống phân giải. Các chuỗi đồng tham chiếu có định dạng: \emph{c=``<khái niệm 1>'' <bắt đầu> <kết thúc>||c=``khái niệm 2'' <bắt đầu> <kết thúc>||...||t=``coref <lớp>''}, trong đó \emph{t=``coref <lớp>''} mô tả lớp chính mà các chuỗi đồng tham chiếu chỉ tới bao gồm Person, Problem, Test và Treatment.
 
 \section{Các phương pháp đánh giá}
-Hiệu năng hệ thống được đánh giá qua ba độ đo: \emph{độ đúng đắn} (precision), \emph{độ đầy đủ} (recall) và \emph{độ F} (F-measure). Bài báo đánh giá các hệ thống dự thi thử thách i2b2 sử dụng ba phương pháp khác nhau để tính toán các độ này, bao gồm: MUC, B-CUBED và CEAF. Trung bình không trọng số của mỗi độ đo tính trên toàn tập dữ liệu được lấy làm kết quả cuối cùng để đánh giá các chuỗi đồng tham chiếu được xuất ra bởi hệ thống. Ngoài ra, các kết quả của chúng tôi còn được lấy để so sánh với hệ thống \cite{YanXu2012} để xác định tính khả thi của phương pháp mà chúng tôi hiện thực.
+Hiệu năng hệ thống được đánh giá qua ba độ đo: \emph{độ đúng đắn} (precision), \emph{độ đầy đủ} (recall) và \emph{độ F} (F-measure). Bài báo đánh giá các hệ thống dự thi thử thách i2b2 sử dụng ba phương pháp khác nhau để tính toán các độ này, bao gồm: MUC, B-CUBED và CEAF. 
+
+Vì mỗi hệ đo nêu trên đánh giá các chuỗi đồng tham chiếu được xuất ra bởi hệ thống cho từng văn bản HSXV, trung bình không trọng số của mỗi độ đo tính trên toàn tập dữ liệu được lấy làm kết quả cuối cùng. Ngoài ra, các kết quả của chúng tôi còn được lấy để so sánh với hệ thống \cite{YanXu2012} để xác định tính khả thi của phương pháp mà chúng tôi hiện thực.
 
 \subsection*{Hệ đo MUC}
 Hệ đo MUC \cite{MarcVilain1995} xem chuỗi đồng tham chiếu là một danh sách các liên kết giữa các cặp khái niệm tạo nên chuỗi, từ đó đánh giá hệ thống dựa trên số lượng ít nhất các liên kết cần được thêm vào và loại bỏ để các chuỗi đồng tham chiếu xuất ra bởi hệ thống trùng với các chuỗi kết quả. Có thể hiểu số liên kết cần được loại bỏ là độ thiếu chính xác (precision \emph{error}) và số liên kết cần được thêm vào là độ thiếu đầy đủ (recall \emph{error}). 
 
-Gọi $G$ là tập các chuỗi kết quả, $S$ là tập các chuỗi hệ thống. Các độ đúng đắn ($P$) và độ đầy đủ ($R$) được tính như sau:
-
-\[P=\frac{\sum_{s\in S} \left(|s| - m(s, G)\right)}{\sum_{s\in S}\left(|s| - 1\right)}\]
-
-\[R=\frac{\sum_{g\in G}(|g|-m(g,S))}{\sum_{g\in G}(|g|-1)}\]
+Với mỗi văn bản $d$, gọi $G$ là tập các chuỗi kết quả, $S$ là tập các chuỗi hệ thống. Các độ đúng đắn ($P$) và độ đầy đủ ($R$) được tính như sau:
+\[P_d=\frac{\sum_{s\in S} \left(|s| - m(s, G)\right)}{\sum_{s\in S}\left(|s| - 1\right)}\]
+\[R_d=\frac{\sum_{g\in G}(|g|-m(g,S))}{\sum_{g\in G}(|g|-1)}\]
 
 \noindent trong đó, $|s|$ là số khái niệm tạo thành chuỗi $s$, $m(s,G)$ được tính là tổng số chuỗi trong $G$ có giao nhau với $s$ cộng với số khái niệm trong $s$ không xuất hiện trong tất cả các chuỗi trong $G$. Độ $F$ của hệ MUC là trung bình điều hòa của độ chính xác và độ đầy đủ:
-
-\[F=\frac{2\times P\times R}{P + R}\]
+\[F_d=\frac{2\times P_d\times R_d}{P_d + R_d}\]
 
 \subsection*{Hệ đo B-CUBED}
 Khác với hệ đo MUC đánh giá dựa trên sự thiếu và thừa các liên kết trong chuỗi hệ thống, hệ đo B-CUBED đánh giá hiệu năng trên mỗi khái niệm trong văn bản. Theo nhận định của các tác giả hệ đo B-CUBED \cite{AmitBagga1998}, cách đánh giá dựa trên các liên kết có hai nhược điểm:
@@ -36,18 +35,52 @@ Hệ đo B-CUBED được thiết kể để khắc phục hai nhược điểm 
 \[R_i=\frac{\text{số khái niệm đúng trong chuỗi hệ thống chứa khái niệm thứ $i$}}{\text{số khái niệm trong chuỗi kết quả chứa khái niệm thứ $i$}}\]
 
 Độ chính xác và đầy đủ trên toàn văn bản được tính theo công thức:
-
 \[P=\sum_{i=1}^{M} w_i \times P_i,\quad R=\sum_{i=1}^{M} w_i\times R_i\]
 
-\noindent trong đó, $w_i$ là trọng số của khái niệm thứ $i$, $M$ là số khái niệm của văn bản đang xét. Bài báo đánh giá các hệ thông dự thi thử thách i2b2 năm 2011 sử dụng chung một trọng số cho tất cả các khái niệm, $w_i=1/M$. Để tiện cho việc so sánh với hệ thống \cite{YanXu2012}, chúng tôi cũng sử dụng chung cách gán trọng số như trên.
+\noindent trong đó, $w_i$ là trọng số của khái niệm thứ $i$, $M$ là số khái niệm của văn bản đang xét. Bài báo đánh giá các hệ thông dự thi thử thách i2b2 năm 2011 sử dụng chung một trọng số cho tất cả các khái niệm, $w_i=1/M$. Để tiện cho việc so sánh với hệ thống \cite{YanXu2012}, chúng tôi cũng dùng cách gán trọng số như trên.
 
-Như vậy để thuận tiện trong tính toán, nếu gọi $m$ là một khái niệm trong văn bản $d$ có chứa $M$ khái niệm, $G_m$ là chuỗi kết quả có chứa $m$, $S_m$ là chuỗi hệ thống có chứa $m$, $O_m$ là chuỗi giao nhau giữa $G_m$ và $S_m$ (tức $O_m=G_m\cap S_m$) thì độ đúng đắn và độ đầy đủ của hệ B-CUBED được tính như sau:
-
-\[P=\frac{1}{M}\sum_{m\in d}\frac{|O_m|}{|S_m|},\quad R=\frac{1}{M}\sum_{m\in d}\frac{|O_m|}{|G_m|}\]
+Như vậy để thuận tiện trong tính toán, nếu gọi $m$ là một khái niệm trong văn bản $d$ có chứa $M$ khái niệm, $G_m$ là chuỗi kết quả có chứa $m$, $S_m$ là chuỗi hệ thống có chứa $m$, $O_m$ là chuỗi giao nhau giữa $G_m$ và $S_m$ (tức $O_m=G_m\cap S_m$) thì độ đúng đắn và độ đầy đủ của hệ B-CUBED cho $d$ được tính như sau:
+\[P_d=\frac{1}{M}\sum_{m\in d}\frac{|O_m|}{|S_m|},\quad R_d=\frac{1}{M}\sum_{m\in d}\frac{|O_m|}{|G_m|}\]
 
 Độ F của hệ B-CUBED được tính tương tự như hệ MUC.
 
 \subsection*{Hệ đo CEAF}
+Hệ đo CEAF được tác giả Xiaoqiang Lou giới thiệu vào năm 2005 như một cách đánh giá khác để khắc phục các nhược điểm của hệ MUC \cite{XiaoquangLuo2005}. Thay vì tính toán các độ đo trên từng khái niệm như hệ B-CUBED, hệ CEAF đánh giá dựa trên một sự \emph{sắp xếp đầy đủ} tối ưu giữa các chuỗi kết quả và chuỗi hệ thống bằng cách tính tổng độ tương tự của từng cặp chuỗi, với điều kiện một chuỗi kết quả chỉ được ghép cặp với nhiều nhất một chuỗi hệ thống. Theo nhận định của tác giả hệ đo CEAF, sắp xếp tối ưu giúp ngăn ngừa việc "ăn gian" của các hệ thống phân giải: một hệ thống xuất ra quá nhiều chuỗi đồng tham chiếu sẽ bị đánh giá độ chính xác thấp, trong khi xuất ra quá ít chuỗi thì sẽ bị đánh giá độ đầy đủ thấp.
 
+Với mỗi văn bản $d$, gọi $G=\{g_i:i=1,2,\dots,|G|\}$ là tập các chuỗi kết quả của $d$, $S=\{s_i:i=1,2,\dots,|S|\}$ là tập các chuỗi hệ thống xuất ra cho $d$. Theo định nghĩa của \cite{XiaoquangLuo2005}, một sự sắp xếp đầy đủ có thể được xem là một ánh xạ một-một đi từ $S$ vào $G$: $H=\{h:S\mapsto G\}$ thỏa hai điều kiện:
+\begin{enumerate}[leftmargin=3em,parsep=0pt,itemsep=0pt,topsep=0pt]
+\item $\forall s \in S,\forall s^{\prime} \in S: s\neq s^{\prime} \Leftrightarrow h(s)\neq h(s^{\prime})$
+\item $|H|=\min(|S|,|G|)$
+\end{enumerate}
+
+Gọi $m=\min(|S|,|G|),\, M=\max(|S|,|G|)$, $\mathcal{H}$ là toàn bộ những sắp xếp đầy đủ có thể giữa $S$ và $G$, dễ dàng tính được $|\mathcal{H}|=\binom{M}{m}m!$. Gọi $\phi(s_i,g_j)$ là độ tương tự giữa hai chuỗi $s_i$ và $g_j$. Độ tương tự cho một sự sắp xếp đầy đủ $H\in\mathcal{H}$ giữa $S$ và $G$ được định nghĩa là tổng của các độ tương tự giữa mỗi cặp $(s_i,g_j)$ trong $H$: $\Phi(H)=\sum_{s\in S} \phi(s,h(s))$. Như vậy một sự sắp xếp đầy đủ tối ưu giữa $S$ và $G$ chính là sự sắp xếp $H^*$ thỏa:
+\begin{align*}
+\Phi(H^*)&=\max_{H\in\mathcal{H}} \Phi(H)\\
+&=\max_{H\in\mathcal{H}} \sum_{s\in S} \phi(s,h(s))
+\end{align*}
+
+Để tính độ tương tự giữa hai chuỗi đồng tham chiếu, tác giả hệ CEAF đề xuất bốn cách tính khác nhau:
+\begin{align*}
+\phi_1(s,g)=
+\begin{cases}
+	1 & \text{nếu } s = g\\
+	0 & \text{nếu } s \neq g
+\end{cases}&,\quad
+\phi_2(s,g)=
+\begin{cases}
+	1 & \text{nếu } s\cap g\neq\emptyset\\
+	0 & \text{các trường hợp khác}
+\end{cases},\\
+\phi_3(s,g)=|s\cap g|&,\quad\phi_4(s,g)=\frac{2|s\cap g|}{|s|+|g|}
+\end{align*}
+
+Theo nhận định của chính tác giả, $\phi_3$ và $\phi_4$ tỏ ra hiệu quả hơn trong việc đánh giá các chuỗi đồng tham chiếu. Mặt khác, thử thách i2b2 năm 2011 sử dụng $\phi_4$ để đánh giá các hệ thống dự thi nên để cho tiện trong việc so sánh với hệ thống \cite{YanXu2012}, chúng tôi cũng sử dụng $\phi_4$ để đánh giá hệ thống của mình.
+
+Ngoài ra, việc tìm kiếm một sự sắp xếp tối ưu giữa hai tập chuỗi không thể được thực hiện bằng cách duyệt toàn bộ các sự sắp xếp có thể vì như đã nói ở trên, số các cách sắp xếp đầy đủ có thể là rất lớn, $\binom{M}{m}m!$. Về mặt giải thuật, đây được xem là độ phức tạp hàm giai thừa. Tuy nhiên theo nhận định của tác giả CEAF, bài toán sắp xếp tối ưu này chính là bài toán giao công việc (\emph{assignment problem}) hay bài toán vận chuyển (\emph{transportation problem}) đã được giải quyết bởi Harold W. Kuhn vào năm 2005 với giải thuật có tên là \emph{phương pháp Hungary} \cite{HungarianMethod}.
+
+Từ đây, hệ CEAF tính độ đúng đắn và độ đầy đủ cho một văn bản $d$ theo công thức:
+\[P_d=\frac{\Phi(H^*)}{\sum_{s\in S} \phi(s,s)},\quad R_d=\frac{\Phi(H^*)}{\sum_{g\in G} \phi(g,g)}\]
+
+Độ F của hệ CEAF được tính tương tự như hệ MUC.
 
 \section{Kết quả}
