@@ -31,7 +31,7 @@ Khác với hệ đo MUC đánh giá dựa trên sự thiếu và thừa các li
 \end{enumerate}
 
 Hệ đo B-CUBED được thiết kể để khắc phục hai nhược điểm trên bằng cách tính toán độ chính xác và độ đầy đủ cho từng khái niệm trong văn bản, sau đó kết hợp chúng lại để ra kết quả cuối cùng. Như vậy theo \cite{AmitBagga1998}, với khái niệm thứ $i$, độ chính xác và độ đầy đủ của nó được định nghĩa như sau:
-\[P_i=\frac{\text{số khái niệm đúng trong chuỗi hệ thống chứa khái niệm thứ $i$}}{\text{số khái trong của chuỗi hệ thống chứa khái niệm thứ $i$}}\]
+\[P_i=\frac{\text{số khái niệm đúng trong chuỗi hệ thống chứa khái niệm thứ $i$}}{\text{số khái niệm trong chuỗi hệ thống chứa khái niệm thứ $i$}}\]
 \[R_i=\frac{\text{số khái niệm đúng trong chuỗi hệ thống chứa khái niệm thứ $i$}}{\text{số khái niệm trong chuỗi kết quả chứa khái niệm thứ $i$}}\]
 
 Độ chính xác và đầy đủ trên toàn văn bản được tính theo công thức:
@@ -53,7 +53,7 @@ Với mỗi văn bản $d$, gọi $G=\{g_i:i=1,2,\dots,|G|\}$ là tập các chu
 \item $|H|=\min(|S|,|G|)$
 \end{enumerate}
 
-Gọi $m=\min(|S|,|G|),\, M=\max(|S|,|G|)$, $\mathcal{H}$ là toàn bộ những sắp xếp đầy đủ có thể giữa $S$ và $G$, dễ dàng tính được $|\mathcal{H}|=\binom{M}{m}m!$. Gọi $\phi(s_i,g_j)$ là độ tương tự giữa hai chuỗi $s_i$ và $g_j$. Độ tương tự cho một sự sắp xếp đầy đủ $H\in\mathcal{H}$ giữa $S$ và $G$ được định nghĩa là tổng của các độ tương tự giữa mỗi cặp $(s_i,g_j)$ trong $H$: $\Phi(H)=\sum_{s\in S} \phi(s,h(s))$. Như vậy một sự sắp xếp đầy đủ tối ưu giữa $S$ và $G$ chính là sự sắp xếp $H^*$ thỏa:
+Gọi $m=\min(|S|,|G|),\, M=\max(|S|,|G|)$, $\mathcal{H}$ là toàn bộ những sắp xếp đầy đủ có thể giữa $S$ và $G$, dễ dàng tính được $|\mathcal{H}|=\binom{M}{m}m!$. Gọi $\phi(s,g)$ là độ tương tự giữa hai chuỗi $s$ và $g$ bất kì. Độ tương tự cho một sự sắp xếp đầy đủ $H\in\mathcal{H}$ giữa $S$ và $G$ được định nghĩa là tổng của các độ tương tự giữa mỗi cặp $(s,g)$ trong $H$: $\Phi(H)=\sum_{s\in S} \phi(s,h(s))$. Như vậy một sự sắp xếp đầy đủ tối ưu giữa $S$ và $G$ chính là sự sắp xếp $H^*$ thỏa:
 \begin{align*}
 \Phi(H^*)&=\max_{H\in\mathcal{H}} \Phi(H)\\
 &=\max_{H\in\mathcal{H}} \sum_{s\in S} \phi(s,h(s))
@@ -76,7 +76,7 @@ Gọi $m=\min(|S|,|G|),\, M=\max(|S|,|G|)$, $\mathcal{H}$ là toàn bộ những
 
 Theo nhận định của chính tác giả, $\phi_3$ và $\phi_4$ tỏ ra hiệu quả hơn trong việc đánh giá các chuỗi đồng tham chiếu. Mặt khác, thử thách i2b2 năm 2011 sử dụng $\phi_4$ để đánh giá các hệ thống dự thi nên để cho tiện trong việc so sánh với hệ thống \cite{YanXu2012}, chúng tôi cũng sử dụng $\phi_4$ để đánh giá hệ thống của mình.
 
-Ngoài ra, việc tìm kiếm một sự sắp xếp tối ưu giữa hai tập chuỗi không thể được thực hiện bằng cách duyệt toàn bộ các sự sắp xếp có thể vì như đã nói ở trên, số các cách sắp xếp đầy đủ có thể là rất lớn, $\binom{M}{m}m!$. Về mặt giải thuật, đây được xem là độ phức tạp hàm giai thừa. Tuy nhiên theo nhận định của tác giả CEAF, bài toán sắp xếp tối ưu này chính là bài toán giao công việc (\emph{assignment problem}) hay bài toán vận chuyển (\emph{transportation problem}) đã được giải quyết bởi Harold W. Kuhn vào năm 2005 với giải thuật có tên là \emph{phương pháp Hungary} \cite{HungarianMethod}.
+Ngoài ra, việc tìm kiếm một sự sắp xếp tối ưu giữa hai tập chuỗi không thể được thực hiện bằng cách duyệt toàn bộ các sự sắp xếp có thể vì như đã nói ở trên, số các cách sắp xếp đầy đủ có thể là rất lớn, $\binom{M}{m}m!$. Về mặt giải thuật, đây được xem là độ phức tạp hàm giai thừa. Tuy nhiên theo nhận định của tác giả CEAF, bài toán sắp xếp tối ưu này chính là bài toán giao công việc (\emph{assignment problem}) hay bài toán vận chuyển (\emph{transportation problem}) đã được giải quyết bởi Harold W. Kuhn vào năm 1955 với giải thuật có tên là \emph{phương pháp Hungary} \cite{HungarianMethod}.
 
 Từ đây, hệ CEAF tính độ đúng đắn và độ đầy đủ cho một văn bản $d$ theo công thức:
 \[P_d=\frac{\Phi(H^*)}{\sum_{s\in S} \phi(s,s)},\quad R_d=\frac{\Phi(H^*)}{\sum_{g\in G} \phi(g,g)}\]
