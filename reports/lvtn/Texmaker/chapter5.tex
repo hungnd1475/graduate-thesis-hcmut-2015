@@ -142,9 +142,9 @@ Hình \ref{fig:SDPG} mô tả trực quan quy trình phân giải đồng tham c
 \end{figure}
 
 \section{Tiền xử lý}
-Trong quá trình rút trích đặc trưng, một số khái niệm được miêu tả cụ thể làm cho việc so trùng chuỗi hoặc tìm kiếm từ các nguồn tri thức nhân loại thiếu chính xác \cite{YanXu2012}. Ví dụ như khái niệm "her CT scan" và khái niệm "a CT scan". Mặc dù hai khái niệm này cùng chỉ một thủ tục y tế nhưng không trùng chuỗi. Ngoài ra các mạo từ "her", "a" làm việc tìm kiếm tri thức nhân loại từ các nguồn tri thức như Wikipedia, WordNet không được chính xác hoặc không thể tìm được kết quả. Vì vậy trước khi rút trích đặc trưng, các khái niệm được tiền xử lý để loại bỏ mạo từ và các thông tin ngữ cảnh. Tuy nhiên, quá trình tiền xử lý chỉ được áp dụng cho các đặc trưng liên quan so trùng chuỗi và tìm kiếm tri thức nhân loại, các đặc trưng khác không cần qua quá trình tiền xử lý mà nhận vào nguyên gốc khái niệm được xác định.
+Trong quá trình rút trích đặc trưng, một số khái niệm được miêu tả cụ thể làm cho việc so trùng chuỗi hoặc tìm kiếm từ các nguồn tri thức nhân loại thiếu chính xác \cite{YanXu2012}. Ví dụ như khái niệm "her CT scan" và khái niệm "a CT scan", mặc dù hai khái niệm này cùng chỉ một thủ tục y tế nhưng không trùng chuỗi. Ngoài ra các mạo từ "her", "a" làm việc tìm kiếm tri thức nhân loại từ các nguồn như Wikipedia, WordNet không được chính xác hoặc không thể tìm được kết quả, vì vậy trước khi rút trích đặc trưng, các khái niệm cần được tiền xử lý để loại bỏ mạo từ và các thông tin ngữ cảnh. Tuy nhiên, quá trình tiền xử lý chỉ được áp dụng cho các đặc trưng liên quan so trùng chuỗi và tìm kiếm tri thức nhân loại, các đặc trưng khác không cần qua quá trình tiền xử lý mà nhận vào nguyên gốc khái niệm được xác định.
 
-Quá trình tiền xử lý gồm hai bước. Đầu tiên khái niệm sẽ được loại bỏ tất cả mạo từ. Sau đó, nếu khái niệm có bao gồm giới từ thì giới từ đó và toàn bộ nội dung theo sau sẽ được lược bỏ. Ví dụ như khái niệm “an MRI of the knee” sau quá trình tiền xử lý sẽ trở thành “MRI”. Danh sách mạo từ được xây dựng từ tập dữ liệu và các mạo từ thông dụng của tiếng Anh.
+Quá trình tiền xử lý gồm hai bước: đầu tiên khái niệm sẽ được loại bỏ tất cả mạo từ, sau đó, nếu khái niệm có bao gồm giới từ thì giới từ đó và toàn bộ nội dung theo sau sẽ được lược bỏ. Ví dụ như khái niệm “an MRI of the knee” sau quá trình tiền xử lý sẽ trở thành “MRI”. Danh sách mạo từ được xây dựng từ tập dữ liệu và các mạo từ thông dụng của tiếng Anh.
 
 Đặc biệt các khái niệm thuộc lớp Problem/Treatment/Test thường được kèm thêm thông tin về định lượng như 10mg, 5 lit và các thông tin về vị trí giải phẫu học như "upper", "left", "right". Để tăng khả năng tìm kiếm tri thức nhân loại, chúng tôi đề xuất loại bỏ các thông tin ngữ cảnh về số, định lượng và vị trí giải phẫu khỏi khái niệm. Các thông tin ngữ cảnh được loại bỏ bằng cách sử dụng biểu thức chính quy và các từ vựng được xây dựng từ tập dữ liệu. Các đặc trưng liên quan so trùng chuỗi không áp dụng bước tiền xử lý loại bỏ thông tin ngữ cảnh này.
 \section{Xây dựng các cặp khái niệm}
@@ -317,9 +317,9 @@ Khác với các lớp khái niệm khác trong BAĐT, lớp khái niệm Pronou
 \toprule 
 \textbf{Đặc Trưng} & \textbf{Giá trị} & \textbf{Giải thích}\\
 \midrule
-First previous mention type & 0, 1, 2, 3, 4 & Khái niệm đứng liền trước thuộc lớp Person (0), hoặc Problem (1), hoặc Treatment (2), hoặc Test (3) hoặc không thuộc lớp nào (4)\\
-Second previous mention type & 0, 1, 2, 3, 4 & Khái niệm đứng liền trước thứ 2 thuộc lớp Person (0), hoặc Problem (1), hoặc Treatment (2), hoặc Test (3) hoặc không thuộc lớp nào (4)\\
-First next mention type & 0, 1, 2, 3, 4 & Khái niệm đứng liền sau thuộc lớp Person (0), hoặc Problem (1), hoặc Treatment (2), hoặc Test (3) hoặc không thuộc lớp nào (4)\\
+First previous mention type & 0, 1, 2, 3, 4 & Khái niệm đứng liền trước thuộc lớp Person (0) hoặc Problem (1) hoặc Treatment (2) hoặc Test (3) hoặc không thuộc lớp nào (4)\\
+Second previous mention type & 0, 1, 2, 3, 4 & Khái niệm đứng liền trước thứ 2 thuộc lớp Person (0) hoặc Problem (1) hoặc Treatment (2) hoặc Test (3) hoặc không thuộc lớp nào (4)\\
+First next mention type & 0, 1, 2, 3, 4 & Khái niệm đứng liền sau thuộc lớp Person (0) hoặc Problem (1) hoặc Treatment (2) hoặc Test (3) hoặc không thuộc lớp nào (4)\\
 Sentence distance & 0, 1, 2, ... & Số câu xuất hiện giữa hai khái niệm được xét\\
 Pronoun & 0, 1, 2, ..., 14 & Chỉ mục của đại từ được xét trong bảng tra 15 đại từ\\
 Part of speech & 0, 1, 2 & DT (0), WDT (1), PRP (2)\\
@@ -370,7 +370,7 @@ Operation & 0, 1, 2 & Không cùng phẫu thuật (0), cùng phẫu thuật (1),
 Assertion & 0, 1, 2,..., $6^{2}$ & Trạng thái lớp khẳng định của hai khái niệm\\
 \textit{Trích xuất thông tin thuốc y tế}\\
 Drug & 0, 1 & Cùng tên thuốc (1), ngược lại (0)\\
-Mode & 0, 1, 2,..., 29 & Chỉ mục của 29 đường hấp thụ, hoặc không xác định (29)\\
+Mode & 0, 1, 2,..., 29 & Chỉ mục của 29 đường hấp thụ hoặc không xác định (29)\\
 Dosage & 0, 1 & Cùng liều lượng (1), ngược lại (1)\\
 Duration & 0, 1 & Cùng khoảng thời gian sử dụng (1), ngược lại (0)\\
 Frequency & 0, 1 & Cùng tần suất sử dụng (1), ngược lại (0)\\
