@@ -1,5 +1,22 @@
 \chapter{Kiến thức nền tảng}
 \section{Các định nghĩa và thuật ngữ}
+Trong các công trình nghiên cứu về phân giải đồng tham chiếu, các tác giả thường sử dụng từ \emph{markable} để chỉ tới những từ/cụm từ cần được phân giải đồng chiếu, hoặc họ cũng dùng từ \emph{noun phrase} hay NP vì đa phần các công trình trước đây chỉ xem xét tới các danh từ/cụm danh từ. Một số tài liệu khác lại sử dụng từ \emph{mention} để chỉ tới những ``đề cập'' trong văn bản vì bản chất của phân giải đồng tham chiếu là xác định xem các từ/cụm từ có đề cập tới cùng một thực thể hay không. Để thuận tiện trong việc diễn đạt bằng tiếng Việt, chúng tôi sử dụng từ \textbf{khái niệm} để chỉ tới những thực thể cần được phân giải đồng tham chiếu. Một lý do khác mà chúng tôi sử dụng từ này bắt nguồn từ việc Thách thức i2b2 năm 2011 gọi các tập tin chứa những thực thể đã được gán nhãn là ``concept files''.
+
+Các khái niệm đa phần là danh từ hay cụm danh từ. Một khái niệm có thể được lồng trong khái niệm khác. Thông thường sự lồng nhau này xuất hiện ở những cụm danh từ mang ý nghĩa sở hữu, ví dụ cụm ``ngôi nhà của anh ta'' chứa hai khái niệm khác nhau là (ngôi nhà của anh ta) và (anh ta). Một số tài liệu gọi các khái niệm lồng nhau là \emph{khái niệm đầy đủ}. Một hệ thống phân giải đồng tham chiếu có xem xét đến sự lồng nhau này hay không phụ thuộc vào bước trích xuất và gán nhãn thực thể trước đó. Một số công trình nghiên cứu đề xuất các giải pháp phân giải riêng biệt cho trường hợp lồng nhau này, tuy nhiên phương pháp mà chúng tôi hiện thực ở đây không xem sự lồng nhau là một trường hợp đặc biệt.
+
+Hai khái niệm được xem là \textbf{đồng tham chiếu} nếu cả hai cùng chỉ về một thực thể trong thế giới thực, ví dụ \emph{thủ tướng Việt Nam} và \emph{Nguyễn Tấn Dũng}. Một đặc điểm cần lưu ý của tính đồng tham chiếu là nó phụ thuộc vào ngữ cảnh và thời điểm mà hai khái niệm được đề cập đến. Như ở ví dụ trên \emph{thủ tướng Việt Nam} và \emph{Nguyễn Tấn Dũng}, hai khái niệm này chỉ đồng tham chiếu nếu thời điểm mà chúng được đề cập trong văn bản nằm trong khoảng thời gian mà ông Nguyễn Tấn Dũng đang là thủ tướng Việt Nam.
+
+Có thể xem đồng tham chiếu là một mối quan hệ giữa hai hay nhiều khái niệm khi chúng cùng đề cập tới một thực thể. Dễ dàng nhận thấy đây là mối quan hệ tương đương vì nó có những tính chất sau:
+\begin{itemize}[noitemsep]
+\item \emph{Tính phản xạ}: một khái niệm bất kì thì luôn đồng tham chiếu với chính nó.
+\item \emph{Tính đối xứng}: nếu khái niệm $C_1$ đồng tham chiếu với $C_2$ thì $C_2$ cũng đồng tham chiếu với $C_1$.
+\item \emph{Tính bắc cầu}: nếu khái niệm $C_1$ đồng tham chiếu với $C_2$, $C_2$ đồng tham chiếu với $C_3$ thì $C_1$ cũng đồng tham chiếu với $C_3$.
+\end{itemize}
+
+Một \textbf{cặp khái niệm} gồm hai khái niệm có thể có hoặc không đồng tham chiếu với nhau. Đối với một cặp đồng tham chiếu, khái niệm đứng trước được gọi là \emph{tiền đề} (antecedent), khái niệm đứng sau được gọi là \emph{hồi chỉ} (anaphora). Những đặc trưng của một cặp khái niệm đa phần là những \emph{đặc trưng đồng thuận} (agreement feature), chúng mang giá trị là ``có'' khi cả hai khái niệm của cặp cùng đồng thuận về một đặc tính nào đó, ví dụ như sự đồng thuận về giới tính hay số lượng. Trong một văn bản, nhiều khái niệm có thể cùng tham chiếu tới cùng một thực thể, khi đó chúng tạo thành một chuỗi đồng tham chiếu.
+
+\textbf{Phân giải đồng tham chiếu} là công việc tìm kiếm những chuỗi đồng tham chiếu trong văn bản. Một phương pháp để giải quyết việc này là \emph{phân giải hồi chỉ} (anaphora resolution) cho tất cả các khái niệm trong văn bản, tức là xác định tiền đề cho các khái niệm. Sau khi đã xác định được các cặp đồng tham chiếu, công việc còn lại là gom nhóm các cặp này lại thành từng cụm, mỗi cụm ứng với một chuỗi đồng tham chiếu. Xuyên suốt này luận văn này, chúng tôi gọi các chuỗi đồng tham chiếu được phân giải bởi con người là các \emph{chuỗi kết quả}, các chuỗi được xuất ra bởi hệ thống phân giải đồng tham chiếu là các \emph{chuỗi hệ thống}.
+
 \section{Support Vector Machine}
 \section{Các mô hình học máy phân giải đồng tham chiếu}
 \section{Các công cụ hỗ trợ rút trích đặc trưng} \label{tools}

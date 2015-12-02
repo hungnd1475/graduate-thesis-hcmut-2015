@@ -398,30 +398,6 @@ Procedure match & 0, 1 & Có chứa từ ``Procedure'' (1), ngược lại (0)\\
 \end{tabularx}
 \end{table}
 
-\begin{table}[th]
-\centering\ra{1.2}
-\caption{Phân chia đặc trưng được sử dụng trong ba lớp Problem/Treatment/Test \label{tab:SemanticFeatures}}
-\footnotesize\sffamily
-
-\begin{tabularx}{\textwidth}{@{}l *5{>{\centering\arraybackslash}X}@{}}
-\toprule 
-& \textbf{Problem} & \textbf{Treatment} & \textbf{Test}\\
-\midrule
-Anatomy & + & & +\\
-Position & + & + & +\\
-Medication & & + & \\
-Indicator & & & +\\
-Temporal & & + & +\\
-Spatial & & + & \\
-Section & + & + & +\\
-Modifier & & & +\\
-Equipment & & & +\\
-Operation & & + & \\
-Assertion & + & & \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
 \subsection*{Các nguồn tri thức nhân loại}
 
 \subsubsection*{Wikipedia}
@@ -481,6 +457,30 @@ Phần lớn các khái niệm thuộc lớp Treatment được đề cập là 
 
 \subsubsection*{Trích xuất thông tin giả định (Assertion)}
 Thông tin giả định cho các khái niệm lớp Problem là bài toán từ thách thức I2B2 2010. Các thông tin giả định bao gồm: không liên quan đến bệnh nhân (not associated with the patient), có thể (possible), thiếu vắng (absent), ở hiện tại (present), có điều kiện (conditional) và giả thuyết (hypothetical). Ví dụ ``no \textit{fever}'', khái niệm cơn sốt (fever) được giả định rằng không có (absent). Một ví dụ khác là ``Doctors suspect \textit{an infection of the lungs}''. Khái niệm sự lây nhiễm của phổi (an infection of the lungs) được giả định rằng có thể tồn tại. Tuy nhiên do cách hiện thực được đề xuất cho đặc trưng này là xây dựng hệ thống học máy dựa trên các giải pháp cho Thách thức I2B2 2010. Trong giai đoạn luận văn, chúng tôi không có đủ thời gian hiện thực đặc trưng này.
+
+\begin{table}[th]
+\centering\ra{1.2}
+\caption{Phân chia đặc trưng được sử dụng trong ba lớp Problem/Treatment/Test \label{tab:SemanticFeatures}}
+\footnotesize\sffamily
+
+\begin{tabularx}{\textwidth}{@{}l *5{>{\centering\arraybackslash}X}@{}}
+\toprule 
+& \textbf{Problem} & \textbf{Treatment} & \textbf{Test}\\
+\midrule
+Anatomy & + & & +\\
+Position & + & + & +\\
+Medication & & + & \\
+Indicator & & & +\\
+Temporal & & + & +\\
+Spatial & & + & \\
+Section & + & + & +\\
+Modifier & & & +\\
+Equipment & & & +\\
+Operation & & + & \\
+Assertion & + & & \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
 \section{Gom cụm và xây dựng chuỗi đồng tham chiếu}
 Ở mô hình cặp thực thể, hệ thống phân loại không có khả năng xây dựng chuỗi đồng tham chiếu mà nó chỉ có thể xác định một cặp khái niệm là có đồng tham chiếu hay không. Mặt khác, đối với một văn bản HSXV, số cặp khái niệm được sinh ra rất nhiều và trong số đó có nhiều cặp có chung khái niệm đứng sau, ví dụ hai cặp “Dr. John”-“his” và “Mr. Brown”-“his” có chung khái niệm đứng sau là “his” mà hai cặp này đều được hệ thống phân loại xác định là đồng tham chiếu, tuy nhiên chỉ một trong hai khái niệm “Dr. John” và “Mr. Brown” được chọn làm tiền đề cho khái niệm “his” này. Như vậy cần thiết phải có một giải thuật lựa chọn các cặp đồng tham chiếu và xây dựng các chuỗi đồng tham chiếu từ chúng.
