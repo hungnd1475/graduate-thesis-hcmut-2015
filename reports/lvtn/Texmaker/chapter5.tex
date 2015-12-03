@@ -387,7 +387,78 @@ Thông tin thời gian là một thông tin mạnh cho phân giải đồng tham
 
 Để hiện thực, chúng tôi thực hiện các bước sau. Xác định câu văn chứa khái niệm đang được xét. Sử dụng công cụ MedTime được đề cập trong phần \ref{tools} để nhận dạng thời gian xuất hiện trong câu văn. Công cụ MedTime có thể nhận dạng của thời gian tường minh và chuẩn hóa thời gian suy diễn thành giá trị ngày tháng cụ thể. Nếu trong câu văn xuất hiện hai giá trị thời gian khác nhau, chúng tôi sẽ sử dụng giá trị thời gian nằm gần khái niệm đang xét nhất. Ngoài ra, chúng tôi nhận thấy một số thông tin thời gian được tách riêng và nằm trong câu văn độc lập. Ví dụ trong ngày ``03/06/2015'' có ba thủ tục y tế được tiến hành, khái niệm thời gian sẽ được miêu tả ở dòng đầu tiên, theo sau là mô tả ba thủ tục y tế trong ba câu văn riêng biệt. Để giải quyết vấn đề ngày, chúng tôi đề xuất nếu câu văn chứa khái niệm không có thông tin về thời gian, hệ thống sẽ xem xét 3 câu văn liền trước để cố gắng tìm kiếm thông tin thời gian liên quan.
 
-\begin{table}[h!t!]
+\subsubsection*{Trích xuất thông tin phân đoạn bệnh án (Section)}
+Một hồ sơ xuất viện thường được chia làm các phân đoạn (section) như: tiền sử bệnh, tiền sử dùng thuốc, tiền sử nhập viện,... Hai khái niệm xuất hiện ở hai phần khác nhau thì thường không đồng tham chiếu với nhau cho dù chúng có cùng cách viết. Ví dụ cụm “CT scan” xuất hiện ở phần tiền sử điều trị và phần xét nghiệm thể chất thì hai khái niệm “CT scan” này là độc lập với nhau.
+
+Mỗi BAĐT thường được viết dựa trên cấu trúc của từng khoa trong bệnh viện. Tùy vào chức năng, đặc trưng của từng khoa mà BAĐT của các khoa sẽ bao gồm các phân đoạn khác nhau. Vì vậy tập hợp các phân đoạn trong BAĐT rất đa dạng và không có sẵn đầy đủ. Để chọn ra danh sách tên các phân đoạn có trong tập dữ liệu, chúng tôi dựa trên một số luật rút ra từ việc khảo sát dữ liệu \cite{RandolphMiller2008}. Những luật đó bao gồm: các đầu mục phải kết thúc bằng dấu hai chấm (:), các tên phân đoạn thường được viết hoa toàn bộ hoặc viết hoa các chữ cái đầu tiên. Từ các luật được nêu ra, chúng tôi tạo danh sách toàn bộ các cụm từ có khả năng là tên của phân đoạn trong BAĐT. Sau đó, chúng tôi chọn 15 tên phân đoạn có tần số xuất hiện nhiều nhất.
+
+\subsubsection*{Trích xuất thông tin bổ từ (Modifier)}
+Tính đồng tham chiếu của một số khái niệm thuộc lớp Test có thể được xác định bởi các từ bổ nghĩa đi kèm theo chúng. Ví dụ các từ “recent”, “prior” hay “initial”. Tập từ khóa của thông tin bổ từ được chúng tôi xây dựng thông qua việc khảo sát dữ liệu.
+
+\subsubsection*{Trích xuất thông tin thiết bị y tế (Equipment)}
+Thiết bị y tế được sử dụng cũng là một gợi ý ngữ nghĩa cho việc xác định phân giải đồng tham chiếu. Lí do vì các thủ tục y tế thường được đặt tên theo thiết bị sử dụng. Để hiện thực đặc trưng này, chúng tôi sử dụng MetaMap để nhận diện khái niệm có xuất hiện trong UMLS hay không. Nếu có xuất hiện thì khái niệm có kết thúc bằng các tiếp vĩ ngữ như ``-graphy'', ``-gram'', ``-metry'' hoặc ``-scopy'' hay không. Nếu hai điều kiện trên được thỏa thì khái niệm đang xét được coi là một thiết bị y tế.
+
+\subsubsection*{Trích xuất thông tin phẫu thuật y tế (Operation)}
+Phần lớn các khái niệm thuộc lớp Treatment được đề cập là các phẫu thuật y tế. Vì vậy đặc trưng thông tin phẫu thuật y tế có thể xem là một gợi ý cho việc phân giải đồng tham chiếu lớp Treatment. Các phẫu thuật y tế được xác định bằng cách: khái niệm có tồn tại trong bộ từ điển UMLS và kết thúc bằng các tiếp vĩ ngữ ``-tomy'', ``-plasty''.
+
+\subsubsection*{Trích xuất thông tin giả định (Assertion)}
+Thông tin giả định cho các khái niệm lớp Problem là bài toán từ thách thức I2B2 2010. Các thông tin giả định bao gồm: không liên quan đến bệnh nhân (not associated with the patient), có thể (possible), thiếu vắng (absent), ở hiện tại (present), có điều kiện (conditional) và giả thuyết (hypothetical). Ví dụ ``no \textit{fever}'', khái niệm cơn sốt (fever) được giả định rằng không có (absent). Một ví dụ khác là ``Doctors suspect \textit{an infection of the lungs}''. Khái niệm sự lây nhiễm của phổi (an infection of the lungs) được giả định rằng có thể tồn tại. Tuy nhiên do cách hiện thực được đề xuất cho đặc trưng này là xây dựng hệ thống học máy dựa trên các giải pháp cho Thách thức I2B2 2010. Trong giai đoạn luận văn, chúng tôi không có đủ thời gian hiện thực đặc trưng này.
+
+\section{Gom cụm và xây dựng chuỗi đồng tham chiếu}
+Ở mô hình cặp thực thể, hệ thống phân loại không có khả năng xây dựng chuỗi đồng tham chiếu mà nó chỉ có thể xác định một cặp khái niệm là có đồng tham chiếu hay không. Mặt khác, đối với một văn bản HSXV, số cặp khái niệm được sinh ra rất nhiều và trong số đó có nhiều cặp có chung khái niệm đứng sau, ví dụ hai cặp (“Dr. John”, “his”) và (“Mr. Brown”, “his”) có chung khái niệm đứng sau là “his” mà hai cặp này đều được hệ thống phân loại xác định là đồng tham chiếu, tuy nhiên chỉ một trong hai khái niệm “Dr. John” và “Mr. Brown” được chọn làm tiền đề cho khái niệm “his” này. Như vậy cần thiết phải có một giải thuật lựa chọn các cặp đồng tham chiếu và xây dựng các chuỗi đồng tham chiếu từ chúng.
+
+Như đã được đề cập ở mục, có hai giải thuật được đề xuất là: \emph{gom cụm gần nhất trước} và \emph{gom cụm tốt nhất trước}. Chúng tôi lựa chọn thực hiện giải thuật gom cụm tốt nhất trước cho hệ thống của mình vì hai lý do:
+\begin{enumerate}
+\item Theo các tác giả của giải thuật \cite{VincentNg2002}, giải thuật gom cụm tốt nhất trước cho kết quả tốt hơn giải thuật gom cụm gần nhất trước.
+\item Các tác giả hệ thống \cite{YanXu2012} cũng hiện thực giải thuật này cho hệ thống của họ.
+\end{enumerate}
+
+Về cơ bản, giải thuật gom cụm tốt nhất trước lựa chọn các cặp khái niệm được xác định là đồng tham chiếu và có độ tin cậy cao nhất ứng với mỗi hồi chỉ; đối với đại từ, giải thuật sử dụng module phân loại xác định lớp chính của đại từ đó và tạo một cặp đồng tham chiếu giữa nó với khái niệm thuộc lớp tương ứng gần nhất trước đó (theo thứ tự xuất hiện) trong văn bản HSXV. Sau khi có được tập các cặp đồng tham chiếu, giải thuật nối các cặp có một khái niệm chung lại để tạo thành các chuỗi. Đây chính là kết quả cuối cùng của hệ thống phân giải.
+
+Như vậy giải thuật gom cụm cụm tốt nhất trước bao gồm hai bước chính: chọn lọc các cặp đồng tham chiếu tốt nhất và ghép nối các cặp được chọn để tạo thành danh sách các chuỗi đồng tham chiếu. Bước đầu tiên làm việc như sau:
+\begin{enumerate}
+\item Nhận đầu vào là văn bản $E$ và danh sách các khái niệm $C$ được sắp xếp theo thứ tự xuất hiện. Gọi $M$ là số khái niệm trong $C$. $P$ là danh sách các cặp khái niệm, khởi tạo $P=\emptyset$.
+\item Duyệt toàn bộ danh sách $C$ từ đầu đến cuối theo thứ tự xuất hiện ($j=1\rightarrow M$), với mỗi khái niệm $C_j$, nếu $C_j$ thuộc một trong 4 lớp Person, Problem, Test hoặc Treatment thì tới bước 3, nếu $C_j$ thuộc lớp Pronoun thì tới bước 4. Nếu đã duyệt xong, đi tới bước 6.
+\item Với mỗi cặp $(C_i,\,C_j)$ mà $C_i$ đứng trước $C_j$ ($i<j$), chọn ra cặp $(C_k,\,C_j)$ mà hệ thống phân loại xác định là đồng tham chiếu và có độ tin cậy cao nhất, đưa cặp $(C_k,\,C_j)$ tới bước 5.
+\item Sử dụng hệ thống phân loại xác định lớp chính $T$ của $C_j$. Duyệt từ khái niệm ngay trước $C_j$ về đầu ($i=j-1\rightarrow 1$), nếu $C_i$ thuộc lớp $T$, ngừng duyệt và đưa cặp $(C_i,\,C_j$) tới bước 5.
+\item Nhận cặp $(C_i,\,C_j)$ được chọn ở một trong hai bước trên, đưa cặp vào $P$ và quay trở lại bước 2.
+\item Trả $P$ về làm kết quả.
+\end{enumerate} 
+
+Sau khi đã có được danh sách các cặp đồng tham chiếu tốt nhất từ bước trên, hệ thống ghép nối các cặp trong danh sách lại để tạo thành các chuỗi đồng tham chiếu:
+\begin{enumerate}
+\item Nhận đầu vào là danh sách cặp khái niệm $P$.
+\item Khởi tạo danh sách chuỗi $H=\emptyset$.
+\item Với mỗi cặp $(C_i,\,C_j)$ trong $P$, duyệt tất cả các chuỗi $K$ trong $H$, nếu tìm được một chuỗi $K^{\prime}$ mà chứa một trong hai khái niệm $C_i$ hoặc $C_j$ của cặp thì đưa $C_i$, $C_j$ vào $K^{\prime}$ và quay lại bước 3. Nếu không tìm được chuỗi nào thỏa điều kiện trên, đưa cặp $(C_i,\,C_j)$ tới bước 4. Nếu đã duyệt xong, tới bước 5.
+\item Khởi tạo một chuỗi $K^{\prime}$ mới gồm hai khái niệm của cặp, $K^{\prime}=\{C_i,\,C_j\}$, đưa chuỗi vào $H$ và quay lại bước 3.
+\item Trả $H$ về làm kết quả.
+\end{enumerate}
+
+\begin{table}[ht]
+\centering\ra{1.2}
+\caption{Phân chia đặc trưng được sử dụng trong ba lớp Problem/Treatment/Test \label{tab:SemanticFeatures}}
+\footnotesize\sffamily
+
+\begin{tabularx}{\textwidth}{@{}l *5{>{\centering\arraybackslash}X}@{}}
+\toprule 
+& \textbf{Problem} & \textbf{Treatment} & \textbf{Test}\\
+\midrule
+Anatomy & + & & +\\
+Position & + & + & +\\
+Medication & & + & \\
+Indicator & & & +\\
+Temporal & & + & +\\
+Spatial & & + & \\
+Section & + & + & +\\
+Modifier & & & +\\
+Equipment & & & +\\
+Operation & & + & \\
+Assertion & + & & \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[th]
 \centering
 \caption{Tập đặc trưng cho lớp Problem/Treatment/Test \label{tab:ProbTreatTestFeatures}}
 \footnotesize\sffamily
@@ -440,74 +511,3 @@ Procedure match & 0, 1 & Có chứa từ ``Procedure'' (1), ngược lại (0)\\
 \bottomrule
 \end{tabularx}
 \end{table}
-
-\subsubsection*{Trích xuất thông tin phân đoạn bệnh án (Section)}
-Một hồ sơ xuất viện thường được chia làm các phân đoạn (section) như: tiền sử bệnh, tiền sử dùng thuốc, tiền sử nhập viện,... Hai khái niệm xuất hiện ở hai phần khác nhau thì thường không đồng tham chiếu với nhau cho dù chúng có cùng cách viết. Ví dụ cụm “CT scan” xuất hiện ở phần tiền sử điều trị và phần xét nghiệm thể chất thì hai khái niệm “CT scan” này là độc lập với nhau.
-
-Mỗi BAĐT thường được viết dựa trên cấu trúc của từng khoa trong bệnh viện. Tùy vào chức năng, đặc trưng của từng khoa mà BAĐT của các khoa sẽ bao gồm các phân đoạn khác nhau. Vì vậy tập hợp các phân đoạn trong BAĐT rất đa dạng và không có sẵn đầy đủ. Để chọn ra danh sách tên các phân đoạn có trong tập dữ liệu, chúng tôi dựa trên một số luật rút ra từ việc khảo sát dữ liệu \cite{RandolphMiller2008}. Những luật đó bao gồm: các đầu mục phải kết thúc bằng dấu hai chấm (:), các tên phân đoạn thường được viết hoa toàn bộ hoặc viết hoa các chữ cái đầu tiên. Từ các luật được nêu ra, chúng tôi tạo danh sách toàn bộ các cụm từ có khả năng là tên của phân đoạn trong BAĐT. Sau đó, chúng tôi chọn 15 tên phân đoạn có tần số xuất hiện nhiều nhất.
-
-\subsubsection*{Trích xuất thông tin bổ từ (Modifier)}
-Tính đồng tham chiếu của một số khái niệm thuộc lớp Test có thể được xác định bởi các từ bổ nghĩa đi kèm theo chúng. Ví dụ các từ “recent”, “prior” hay “initial”. Tập từ khóa của thông tin bổ từ được chúng tôi xây dựng thông qua việc khảo sát dữ liệu.
-
-\subsubsection*{Trích xuất thông tin thiết bị y tế (Equipment)}
-Thiết bị y tế được sử dụng cũng là một gợi ý ngữ nghĩa cho việc xác định phân giải đồng tham chiếu. Lí do vì các thủ tục y tế thường được đặt tên theo thiết bị sử dụng. Để hiện thực đặc trưng này, chúng tôi sử dụng MetaMap để nhận diện khái niệm có xuất hiện trong UMLS hay không. Nếu có xuất hiện thì khái niệm có kết thúc bằng các tiếp vĩ ngữ như ``-graphy'', ``-gram'', ``-metry'' hoặc ``-scopy'' hay không. Nếu hai điều kiện trên được thỏa thì khái niệm đang xét được coi là một thiết bị y tế.
-
-\subsubsection*{Trích xuất thông tin phẫu thuật y tế (Operation)}
-Phần lớn các khái niệm thuộc lớp Treatment được đề cập là các phẫu thuật y tế. Vì vậy đặc trưng thông tin phẫu thuật y tế có thể xem là một gợi ý cho việc phân giải đồng tham chiếu lớp Treatment. Các phẫu thuật y tế được xác định bằng cách: khái niệm có tồn tại trong bộ từ điển UMLS và kết thúc bằng các tiếp vĩ ngữ ``-tomy'', ``-plasty''.
-
-\subsubsection*{Trích xuất thông tin giả định (Assertion)}
-Thông tin giả định cho các khái niệm lớp Problem là bài toán từ thách thức I2B2 2010. Các thông tin giả định bao gồm: không liên quan đến bệnh nhân (not associated with the patient), có thể (possible), thiếu vắng (absent), ở hiện tại (present), có điều kiện (conditional) và giả thuyết (hypothetical). Ví dụ ``no \textit{fever}'', khái niệm cơn sốt (fever) được giả định rằng không có (absent). Một ví dụ khác là ``Doctors suspect \textit{an infection of the lungs}''. Khái niệm sự lây nhiễm của phổi (an infection of the lungs) được giả định rằng có thể tồn tại. Tuy nhiên do cách hiện thực được đề xuất cho đặc trưng này là xây dựng hệ thống học máy dựa trên các giải pháp cho Thách thức I2B2 2010. Trong giai đoạn luận văn, chúng tôi không có đủ thời gian hiện thực đặc trưng này.
-
-\begin{table}[h!t!]
-\centering\ra{1.2}
-\caption{Phân chia đặc trưng được sử dụng trong ba lớp Problem/Treatment/Test \label{tab:SemanticFeatures}}
-\footnotesize\sffamily
-
-\begin{tabularx}{\textwidth}{@{}l *5{>{\centering\arraybackslash}X}@{}}
-\toprule 
-& \textbf{Problem} & \textbf{Treatment} & \textbf{Test}\\
-\midrule
-Anatomy & + & & +\\
-Position & + & + & +\\
-Medication & & + & \\
-Indicator & & & +\\
-Temporal & & + & +\\
-Spatial & & + & \\
-Section & + & + & +\\
-Modifier & & & +\\
-Equipment & & & +\\
-Operation & & + & \\
-Assertion & + & & \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\section{Gom cụm và xây dựng chuỗi đồng tham chiếu}
-Ở mô hình cặp thực thể, hệ thống phân loại không có khả năng xây dựng chuỗi đồng tham chiếu mà nó chỉ có thể xác định một cặp khái niệm là có đồng tham chiếu hay không. Mặt khác, đối với một văn bản HSXV, số cặp khái niệm được sinh ra rất nhiều và trong số đó có nhiều cặp có chung khái niệm đứng sau, ví dụ hai cặp (“Dr. John”, “his”) và (“Mr. Brown”, “his”) có chung khái niệm đứng sau là “his” mà hai cặp này đều được hệ thống phân loại xác định là đồng tham chiếu, tuy nhiên chỉ một trong hai khái niệm “Dr. John” và “Mr. Brown” được chọn làm tiền đề cho khái niệm “his” này. Như vậy cần thiết phải có một giải thuật lựa chọn các cặp đồng tham chiếu và xây dựng các chuỗi đồng tham chiếu từ chúng.
-
-Như đã được đề cập ở mục, có hai giải thuật được đề xuất là: \emph{gom cụm gần nhất trước} và \emph{gom cụm tốt nhất trước}. Chúng tôi lựa chọn thực hiện giải thuật gom cụm tốt nhất trước cho hệ thống của mình vì hai lý do:
-\begin{enumerate}
-\item Theo các tác giả của giải thuật \cite{VincentNg2002}, giải thuật gom cụm tốt nhất trước cho kết quả tốt hơn giải thuật gom cụm gần nhất trước.
-\item Các tác giả hệ thống \cite{YanXu2012} cũng hiện thực giải thuật này cho hệ thống của họ.
-\end{enumerate}
-
-Về cơ bản, giải thuật gom cụm tốt nhất trước lựa chọn các cặp khái niệm được xác định là đồng tham chiếu và có độ tin cậy cao nhất ứng với mỗi hồi chỉ; đối với đại từ, giải thuật sử dụng module phân loại xác định lớp chính của đại từ đó và tạo một cặp đồng tham chiếu giữa nó với khái niệm thuộc lớp tương ứng gần nhất trước đó (theo thứ tự xuất hiện) trong văn bản HSXV. Sau khi có được tập các cặp đồng tham chiếu, giải thuật nối các cặp có một khái niệm chung lại để tạo thành các chuỗi. Đây chính là kết quả cuối cùng của hệ thống phân giải.
-
-Như vậy giải thuật gom cụm cụm tốt nhất trước bao gồm hai bước chính: chọn lọc các cặp đồng tham chiếu tốt nhất và ghép nối các cặp được chọn để tạo thành danh sách các chuỗi đồng tham chiếu. Bước đầu tiên làm việc như sau:
-\begin{enumerate}
-\item Nhận đầu vào là văn bản $E$ và danh sách các khái niệm $C$ được sắp xếp theo thứ tự xuất hiện. Gọi $M$ là số khái niệm trong $C$. $P$ là danh sách các cặp khái niệm, khởi tạo $P=\emptyset$.
-\item Duyệt toàn bộ danh sách $C$ từ đầu đến cuối theo thứ tự xuất hiện ($j=1\rightarrow M$), với mỗi khái niệm $C_j$, nếu $C_j$ thuộc một trong 4 lớp Person, Problem, Test hoặc Treatment thì tới bước 3, nếu $C_j$ thuộc lớp Pronoun thì tới bước 4. Nếu đã duyệt xong, đi tới bước 6.
-\item Với mỗi cặp $(C_i,\,C_j)$ mà $C_i$ đứng trước $C_j$ ($i<j$), chọn ra cặp $(C_k,\,C_j)$ mà hệ thống phân loại xác định là đồng tham chiếu và có độ tin cậy cao nhất, đưa cặp $(C_k,\,C_j)$ tới bước 5.
-\item Sử dụng hệ thống phân loại xác định lớp chính $T$ của $C_j$. Duyệt từ khái niệm ngay trước $C_j$ về đầu ($i=j-1\rightarrow 1$), nếu $C_i$ thuộc lớp $T$, ngừng duyệt và đưa cặp $(C_i,\,C_j$) tới bước 5.
-\item Nhận cặp $(C_i,\,C_j)$ được chọn ở một trong hai bước trên, đưa cặp vào $P$ và quay trở lại bước 2.
-\item Trả $P$ về làm kết quả.
-\end{enumerate} 
-
-Sau khi đã có được danh sách các cặp đồng tham chiếu tốt nhất từ bước trên, hệ thống ghép nối các cặp trong danh sách lại để tạo thành các chuỗi đồng tham chiếu:
-\begin{enumerate}
-\item Nhận đầu vào là danh sách cặp khái niệm $P$.
-\item Khởi tạo danh sách chuỗi $H=\emptyset$.
-\item Với mỗi cặp $(C_i,\,C_j)$ trong $P$, duyệt tất cả các chuỗi $K$ trong $H$, nếu tìm được một chuỗi $K^{\prime}$ mà chứa một trong hai khái niệm $C_i$ hoặc $C_j$ của cặp thì đưa $C_i$, $C_j$ vào $K^{\prime}$ và quay lại bước 3. Nếu không tìm được chuỗi nào thỏa điều kiện trên, đưa cặp $(C_i,\,C_j)$ tới bước 4. Nếu đã duyệt xong, tới bước 5.
-\item Khởi tạo một chuỗi $K^{\prime}$ mới gồm hai khái niệm của cặp, $K^{\prime}=\{C_i,\,C_j\}$, đưa chuỗi vào $H$ và quay lại bước 3.
-\item Trả $H$ về làm kết quả.
-\end{enumerate}
