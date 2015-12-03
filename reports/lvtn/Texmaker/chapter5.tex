@@ -344,7 +344,50 @@ Mặt khác, đối với lớp Problem/Test/Treatment, cùng một sự kiện 
 
 Bảng \ref{tab:ProbTreatTestFeatures} liệt kê đầy đủ các đặc trưng được chúng tôi sử dụng trong việc huấn luyện mô hình SVM cho nhóm Problem/Treatment/Test. Tuy nhiên từng lớp Problem/Treatment/Test không sử dụng toàn bộ các đặc trưng về ngữ nghĩa trong văn bản. Ví dụ đặc trưng về thuốc y tế chỉ được sử dụng cho lớp Treatment mà không sử dụng cho lớp Problem và Test. Bảng \ref{tab:SemanticFeatures} mô tả chi tiết các đặc trưng ngữ nghĩa được sử dụng cho từng lớp khái niệm. Các đặc trưng được mô tả đầy đủ trong phần Các nguồn tri thức nhân loại và phần Bộ trích xuất ngữ nghĩa trong văn bản.
 
-\begin{table}[th]
+\subsection*{Các nguồn tri thức nhân loại}
+
+\subsubsection*{Wikipedia}
+Wikipedia là hệ thống bách khoa toàn thư miễn phí đa ngôn ngữ, nền Web dựa trên mô hình cho phép người dùng chỉnh sửa nội dung. Các tri thức nhân loại từ Wikipedia có thể được sử dụng để xác định tên giả (alias), tên viết tắt hoặc các từ đồng nghĩa hay có liên quan với nhau. Ví dụ hai khái niệm ``head trauma'' và ``head injury'' có thể được xác định là đồng nghĩa dựa trên thông tin từ Wikipedia.
+
+Dựa trên thiết kế của hệ thống I, chúng tôi xây dựng bộ trích xuất các thông tin về tiêu đề bài viết (title hoặc redirected link), từ in đậm (bold name) trong bài viết và các khái niệm liên quan (anchor link) được đề cập trong bài viết. Ngôn ngữ của Wikipeda được chúng tôi sử dụng là tiếng Anh . Để trích xuất được các thông tin này, chúng tôi sử dụng công cụ Wikipedia-miner được đề cập trong phần \ref{tools}. Do số lượng khái niệm cần được rút trích thông tin từ Wikipedia rất lớn, vì vậy để cải thiện hiệu năng thời gian của hệ thống, chúng tôi đề xuất trước khi thực hiện rút trích đặc trưng của nhóm lớp Problem/Treatment/Test, các khái niệm thuộc nhóm lớp này cần được rút trích riêng thông tin từ Wikipedia và ghi xuống file lưu trữ.
+
+\subsubsection*{UMLS}
+Trong quá trình phát triển của y học, nhu cầu có một bộ từ điển chung, chứa các thông tin đã được chuẩn hóa về các loại bệnh, thuốc, nguyên nhân hoặc các thuật ngữ trong y tế ngày càng cao. Vì lí do đó, bộ từ điển UMLS - Unified Medical Language System đã được Mỹ tiến hành xây dựng từ năm 1986 bởi Thư viện Y học Quốc gia Hoa Kì (US National Library of Medicine).
+
+Trong mô tả của hệ thống I, một số đặc trưng về ngữ nghĩa trong văn bản cần khai thác thông tin từ bộ từ điển UMLS. Cụ thể bộ trích xuất ngữ nghĩa trong văn bản cần xác định một khái niệm có xuất hiện trong bộ từ điển UMLS hay không, nếu có thì khái niệm đó thuộc phân nhóm nào trong từ điển UMLS. Ví dụ như khái niệm ``lung cancer'' xuất hiện trong từ điển UMLS dưới phân nhóm Các tiến trình liên quan u, bướu (Neoplastic Process). Để trích xuất các thông tin này, chúng tôi sử dụng công cụ MetaMap được đề cập trong phần \ref{tools}. Tương tự như việc rút trích thông tin từ Wikipedia, chúng tôi đề xuất các khái niệm cần được rút trích thông tin từ UMLS và ghi xuống file lưu trữ trước khi tiến hành rút trích đặc trưng cho nhóm lớp Problem/Treatment/Test.
+
+\subsubsection*{WordNet}
+WordNet là bộ từ điển được xây dựng tiếng Anh bao gồm các từ vựng đã được phân loại vai trò ngữ pháp như danh từ, tính từ, trạng từ, động từ. Các từ xuất hiện trong WordNet đã được nhóm lại với nhau thành các nhóm từ có cùng ý nghĩa. WordNet có vai trò giống như Wikipedia trong việc xác định tên giả, viết tắt và từ đồng nghĩa.
+
+\subsection*{Các bộ trích xuất ngữ nghĩa trong văn bản}
+
+\subsubsection*{Trích xuất thông tin cơ quan trên cơ thể (Anatomy)}
+Trong BAĐT, hai triệu chứng bệnh giống nhau có thể không đồng tham chiếu nếu chúng xuất hiện tại các cơ quan cơ thể khác nhau. Ví dụ trong hai khái niệm sau ``a \textit{thrombosis} of the left subclavian vein'' và ``\textit{thrombosis} of the left internal jugular vein''. Khái niệm đang được xét cùng là ``thrombosis'' (chứng huyết khối) tuy nhiên, triệu chứng này lại xuất hiện tại hai cơ quan khác nhau là ``subclavian vein'' (tĩnh mạch dưới đòn) và ``jugular vein'' (tĩnh mạch cổ). Vì vậy dựa theo tập kết quả, hai khái niệm trên không đồng tham chiếu với nhau.
+
+Để phân biệt các khái niệm như ví dụ trên, chúng tôi hiện thực bộ rút trích thông tin cơ quan trên cơ thể dựa trên bộ từ điển UMLS. Trong UMLS, các khái niệm được chia vào nhiều phân nhóm khác nhau dựa theo ý nghĩa của chúng. Cụ thể, chúng tôi sử dụng MetaMap để giới hạn việc nhận dạng các khái niệm thuộc các phân nhóm sau ``Anatomical Structure'', ``Body Location or Region'', ``Body Part, Organ, or Organ Component'', ``Body Space or Junction'' và ``Body System''. Các phân nhóm trên đều là các phân nhóm được định nghĩa sẵn trong từ điển UMLS. Sau khi nhận dạng được các thông tin cơ quan trên cơ thể, chúng tôi so trùng chuỗi của cơ quan nhận dạng được.
+
+\subsubsection*{Trích xuất thông tin vị trí (Position)}
+Một số cơ quan trên cơ thể tuy giống nhau về mặt ngữ nghĩa nhưng lại được phân biệt bằng các tính từ chỉ vị trí đi kèm. Ví dụ như ``\textit{burning sensation} in the \underline{upper right leg}'' và ``\textit{burning sensation} in the \underline{lower right leg}''. Cùng một triệu chứng là cảm giác bỏng rát (burning sensation) ở chân phải (right leg), nhưng lại xuất hiện ở hai vị trí khác nhau là phía trên của chân (upper) và phía dưới của chân (lower). Vì vậy hai khái niệm không đồng tham chiếu với nhau.
+
+Từ việc khảo sát tập dữ liệu, chúng tôi xây dựng tập từ điển gồm các từ chỉ vị trí như ``left'', ``right'', ``upper'', ``lower'', ``back'', ``front'', ... Các thông tin vị trí được rút trích thông qua việc tìm kiếm sự xuất hiện của từ trong bộ từ điển. Tuy nhiên, chúng tôi nhận thấy rằng việc so trùng thông tin vị trí chỉ mang tính chất tương đối, một số khái niệm như ``left upper leg'' và ``left leg'' vẫn có thể đồng tham chiếu với nhau mặc dù vị trí ``left upper'' và ``left'' là khác nhau.
+
+\subsubsection*{Trích xuất thông tin thuốc y tế (Medical information)}
+Các thông tin về thuốc y tế là đặc trưng quan trọng đối với lớp Treatment. Thông tin về thuốc y tế bao gồm tên thuốc (drug name, ví dụ như Morphine, Anti-biotic,...), đường hấp thụ (mode, ví dụ như qua đường miệng, tiêm, qua hậu môn,...), liều lượng (dosage, ví dụ như 10mg, 2 viên,...), tần số sử dụng (frequency, ví dụ như 2 lần một ngày, mỗi ngày,...), thời gian sử dụng (duration, ví dụ như 3 tuần, 1 tháng,...). Khi các thông tin trên có giá trị khác nhau, hai khái niệm sẽ không đồng tham chiếu với nhau. Để rút trích thông tin thuốc y tế, chúng tôi sử dụng công cụ MedEx được đề cập trong phần \ref{tools}.
+
+\subsubsection*{Trích xuất thông tin chỉ định của thủ tục y tế (Indicator)}
+Một thủ tục y tế (Test) thường đi kèm với một hoặc một vài thông tin chỉ định mô tả chi tiết thủ tục đó, ví dụ nồng độ bạch cầu (WBC), nồng độ hồng cầu (RBC), nồng độ sắt trong máu (HCT),... Khi hai khái niệm lớp Test chứa thông tin chỉ định khác nhau sẽ không đồng tham chiếu với nhau. Ví dụ khái niệm ``100 WBC'' và ``130 WBC'' tuy cùng thông tin chỉ định là đo nồng độ bạch cầu trong máu, nhưng có kết quả xét nghiệm khác nhau nên hai khái niệm trên không đồng đám chiếu. Một ví dụ khác là ``100 WBC'' và ``100 RBC'', tuy hai khái niệm có cùng kết quả xét nghiệm nhưng thông tin chỉ định là khác nhau thì hai khái niệm trên cũng không đồng tham chiếu. Như vậy cần thiết phải xác định rõ thông tin chỉ định cũng như giá trị kết quả khi phân giải đồng tham chiếu cho các khái niệm thuộc lớp Test.
+
+Qua việc khảo sát tập dữ liệu, chúng tôi nhận thấy các thông tin chỉ định đa số là xác định nồng độ các hợp chất, tế bào, thành phần cơ thể,... hoặc các giá đo lường. Để xác định các thông tin chỉ định này, chúng tôi sử dụng MetaMap để nhận dạng khái niệm thuộc các phân nhóm liên quan như ``Quantitative Concept'', ``Pharmacologic Substance'', ``Element, Ion, or Isotope'',... Sau xác định được thông tin chỉ định, chúng tôi kết hợp với biểu thức chính quy để tìm kết quả xét nghiệm.
+
+\subsubsection*{Trích xuất thông tin không gian (Spatial)}
+Cũng như thời gian, không gian là một ngữ cảnh quan trọng mà ta cần phải xét tới khi phân giải đồng tham chiếu các khái niệm thuộc lớp Problem/Treatment/Test. Ví dụ như cùng một loại thuốc nhưng một khái niệm diễn ra ở phòng phẫu thuật và một khái niệm diễn ra ở phòng hồi sức thì hai khái niệm này không đồng tham chiếu với nhau. Các thông tin về không gian được nhóm thành 4 nhóm: tại nhà bệnh nhân, tại bệnh viện chuyển tiếp (transfer hospital), tại bệnh viện điều trị (inpatient hospital) và tại chuyên khoa riêng biệt (individual department). Hệ thống I đề xuất sử dụng phân đoạn thông tin và tập từ khóa để trích xuất thông tin về không gian. Tuy nhiên, chúng tôi không tìm được công cụ hoặc cách hiện thực cụ thể trong giai đoạn luận văn tốt nghiệp. Vì vậy trong quá trình hiện thực hệ thống, chúng tôi chưa đưa đặc trưng này vào sử dụng.
+
+\subsubsection*{Trích xuất thông tin thời gian (Temporal)}
+Thông tin thời gian là một thông tin mạnh cho phân giải đồng tham chiếu ở ba lớp Problem/Treatment/Test. Một thủ tục y tế được tiến hành ở hai thời điểm khác nhau thì không đồng tham chiếu hoặc cùng một loại thuốc nhưng được kê khai ở các thời điểm khác nhau thì độc lập. Thông tin thời gian này được chia làm hai loại. Thời gian tường minh, ví dụ 03/06/2015. Thời gian suy diễn, là các mốc thời gian được trích xuất từ một số từ khóa đứng gần khái niệm đang xét, như ``Admission date'' (ngày nhập viện) hay ``Post-op day 2'' (ngày thứ 2 sau khi phẫu thuật).
+
+Để hiện thực, chúng tôi thực hiện các bước sau. Xác định câu văn chứa khái niệm đang được xét. Sử dụng công cụ MedTime được đề cập trong phần \ref{tools} để nhận dạng thời gian xuất hiện trong câu văn. Công cụ MedTime có thể nhận dạng của thời gian tường minh và chuẩn hóa thời gian suy diễn thành giá trị ngày tháng cụ thể. Nếu trong câu văn xuất hiện hai giá trị thời gian khác nhau, chúng tôi sẽ sử dụng giá trị thời gian nằm gần khái niệm đang xét nhất. Ngoài ra, chúng tôi nhận thấy một số thông tin thời gian được tách riêng và nằm trong câu văn độc lập. Ví dụ trong ngày ``03/06/2015'' có ba thủ tục y tế được tiến hành, khái niệm thời gian sẽ được miêu tả ở dòng đầu tiên, theo sau là mô tả ba thủ tục y tế trong ba câu văn riêng biệt. Để giải quyết vấn đề ngày, chúng tôi đề xuất nếu câu văn chứa khái niệm không có thông tin về thời gian, hệ thống sẽ xem xét 3 câu văn liền trước để cố gắng tìm kiếm thông tin thời gian liên quan.
+
+\begin{table}[h!t!]
 \centering
 \caption{Tập đặc trưng cho lớp Problem/Treatment/Test \label{tab:ProbTreatTestFeatures}}
 \footnotesize\sffamily
@@ -398,49 +441,6 @@ Procedure match & 0, 1 & Có chứa từ ``Procedure'' (1), ngược lại (0)\\
 \end{tabularx}
 \end{table}
 
-\subsection*{Các nguồn tri thức nhân loại}
-
-\subsubsection*{Wikipedia}
-Wikipedia là hệ thống bách khoa toàn thư miễn phí đa ngôn ngữ, nền Web dựa trên mô hình cho phép người dùng chỉnh sửa nội dung. Các tri thức nhân loại từ Wikipedia có thể được sử dụng để xác định tên giả (alias), tên viết tắt hoặc các từ đồng nghĩa hay có liên quan với nhau. Ví dụ hai khái niệm ``head trauma'' và ``head injury'' có thể được xác định là đồng nghĩa dựa trên thông tin từ Wikipedia.
-
-Dựa trên thiết kế của hệ thống I, chúng tôi xây dựng bộ trích xuất các thông tin về tiêu đề bài viết (title hoặc redirected link), từ in đậm (bold name) trong bài viết và các khái niệm liên quan (anchor link) được đề cập trong bài viết. Ngôn ngữ của Wikipeda được chúng tôi sử dụng là tiếng Anh . Để trích xuất được các thông tin này, chúng tôi sử dụng công cụ Wikipedia-miner được đề cập trong phần \ref{tools}. Do số lượng khái niệm cần được rút trích thông tin từ Wikipedia rất lớn, vì vậy để cải thiện hiệu năng thời gian của hệ thống, chúng tôi đề xuất trước khi thực hiện rút trích đặc trưng của nhóm lớp Problem/Treatment/Test, các khái niệm thuộc nhóm lớp này cần được rút trích riêng thông tin từ Wikipedia và ghi xuống file lưu trữ.
-
-\subsubsection*{UMLS}
-Trong quá trình phát triển của y học, nhu cầu có một bộ từ điển chung, chứa các thông tin đã được chuẩn hóa về các loại bệnh, thuốc, nguyên nhân hoặc các thuật ngữ trong y tế ngày càng cao. Vì lí do đó, bộ từ điển UMLS - Unified Medical Language System đã được Mỹ tiến hành xây dựng từ năm 1986 bởi Thư viện Y học Quốc gia Hoa Kì (US National Library of Medicine).
-
-Trong mô tả của hệ thống I, một số đặc trưng về ngữ nghĩa trong văn bản cần khai thác thông tin từ bộ từ điển UMLS. Cụ thể bộ trích xuất ngữ nghĩa trong văn bản cần xác định một khái niệm có xuất hiện trong bộ từ điển UMLS hay không, nếu có thì khái niệm đó thuộc phân nhóm nào trong từ điển UMLS. Ví dụ như khái niệm ``lung cancer'' xuất hiện trong từ điển UMLS dưới phân nhóm Các tiến trình liên quan u, bướu (Neoplastic Process). Để trích xuất các thông tin này, chúng tôi sử dụng công cụ MetaMap được đề cập trong phần \ref{tools}. Tương tự như việc rút trích thông tin từ Wikipedia, chúng tôi đề xuất các khái niệm cần được rút trích thông tin từ UMLS và ghi xuống file lưu trữ trước khi tiến hành rút trích đặc trưng cho nhóm lớp Problem/Treatment/Test.
-
-\subsubsection*{WordNet}
-WordNet là bộ từ điển được xây dựng tiếng Anh bao gồm các từ vựng đã được phân loại vai trò ngữ pháp như danh từ, tính từ, trạng từ, động từ. Các từ xuất hiện trong WordNet đã được nhóm lại với nhau thành các nhóm từ có cùng ý nghĩa. WordNet có vai trò giống như Wikipedia trong việc xác định tên giả, viết tắt và từ đồng nghĩa.
-
-\subsection*{Các bộ trích xuất ngữ nghĩa trong văn bản}
-
-\subsubsection*{Trích xuất thông tin cơ quan trên cơ thể (Anatomy)}
-Trong BAĐT, hai triệu chứng bệnh giống nhau có thể không đồng tham chiếu nếu chúng xuất hiện tại các cơ quan cơ thể khác nhau. Ví dụ trong hai khái niệm sau ``a \textit{thrombosis} of the left subclavian vein'' và ``\textit{thrombosis} of the left internal jugular vein''. Khái niệm đang được xét cùng là ``thrombosis'' (chứng huyết khối) tuy nhiên, triệu chứng này lại xuất hiện tại hai cơ quan khác nhau là ``subclavian vein'' (tĩnh mạch dưới đòn) và ``jugular vein'' (tĩnh mạch cổ). Vì vậy dựa theo tập kết quả, hai khái niệm trên không đồng tham chiếu với nhau.
-
-Để phân biệt các khái niệm như ví dụ trên, chúng tôi hiện thực bộ rút trích thông tin cơ quan trên cơ thể dựa trên bộ từ điển UMLS. Trong UMLS, các khái niệm được chia vào nhiều phân nhóm khác nhau dựa theo ý nghĩa của chúng. Cụ thể, chúng tôi sử dụng MetaMap để giới hạn việc nhận dạng các khái niệm thuộc các phân nhóm sau ``Anatomical Structure'', ``Body Location or Region'', ``Body Part, Organ, or Organ Component'', ``Body Space or Junction'' và ``Body System''. Các phân nhóm trên đều là các phân nhóm được định nghĩa sẵn trong từ điển UMLS. Sau khi nhận dạng được các thông tin cơ quan trên cơ thể, chúng tôi so trùng chuỗi của cơ quan nhận dạng được.
-
-\subsubsection*{Trích xuất thông tin vị trí (Position)}
-Một số cơ quan trên cơ thể tuy giống nhau về mặt ngữ nghĩa nhưng lại được phân biệt bằng các tính từ chỉ vị trí đi kèm. Ví dụ như ``\textit{burning sensation} in the \underline{upper right leg}'' và ``\textit{burning sensation} in the \underline{lower right leg}''. Cùng một triệu chứng là cảm giác bỏng rát (burning sensation) ở chân phải (right leg), nhưng lại xuất hiện ở hai vị trí khác nhau là phía trên của chân (upper) và phía dưới của chân (lower). Vì vậy hai khái niệm không đồng tham chiếu với nhau.
-
-Từ việc khảo sát tập dữ liệu, chúng tôi xây dựng tập từ điển gồm các từ chỉ vị trí như ``left'', ``right'', ``upper'', ``lower'', ``back'', ``front'', ... Các thông tin vị trí được rút trích thông qua việc tìm kiếm sự xuất hiện của từ trong bộ từ điển. Tuy nhiên, chúng tôi nhận thấy rằng việc so trùng thông tin vị trí chỉ mang tính chất tương đối, một số khái niệm như ``left upper leg'' và ``left leg'' vẫn có thể đồng tham chiếu với nhau mặc dù vị trí ``left upper'' và ``left'' là khác nhau.
-
-\subsubsection*{Trích xuất thông tin thuốc y tế (Medical information)}
-Các thông tin về thuốc y tế là đặc trưng quan trọng đối với lớp Treatment. Thông tin về thuốc y tế bao gồm tên thuốc (drug name, ví dụ như Morphine, Anti-biotic,...), đường hấp thụ (mode, ví dụ như qua đường miệng, tiêm, qua hậu môn,...), liều lượng (dosage, ví dụ như 10mg, 2 viên,...), tần số sử dụng (frequency, ví dụ như 2 lần một ngày, mỗi ngày,...), thời gian sử dụng (duration, ví dụ như 3 tuần, 1 tháng,...). Khi các thông tin trên có giá trị khác nhau, hai khái niệm sẽ không đồng tham chiếu với nhau. Để rút trích thông tin thuốc y tế, chúng tôi sử dụng công cụ MedEx được đề cập trong phần \ref{tools}.
-
-\subsubsection*{Trích xuất thông tin chỉ định của thủ tục y tế (Indicator)}
-Một thủ tục y tế (Test) thường đi kèm với một hoặc một vài thông tin chỉ định mô tả chi tiết thủ tục đó, ví dụ nồng độ bạch cầu (WBC), nồng độ hồng cầu (RBC), nồng độ sắt trong máu (HCT),... Khi hai khái niệm lớp Test chứa thông tin chỉ định khác nhau sẽ không đồng tham chiếu với nhau. Ví dụ khái niệm ``100 WBC'' và ``130 WBC'' tuy cùng thông tin chỉ định là đo nồng độ bạch cầu trong máu, nhưng có kết quả xét nghiệm khác nhau nên hai khái niệm trên không đồng đám chiếu. Một ví dụ khác là ``100 WBC'' và ``100 RBC'', tuy hai khái niệm có cùng kết quả xét nghiệm nhưng thông tin chỉ định là khác nhau thì hai khái niệm trên cũng không đồng tham chiếu. Như vậy cần thiết phải xác định rõ thông tin chỉ định cũng như giá trị kết quả khi phân giải đồng tham chiếu cho các khái niệm thuộc lớp Test.
-
-Qua việc khảo sát tập dữ liệu, chúng tôi nhận thấy các thông tin chỉ định đa số là xác định nồng độ các hợp chất, tế bào, thành phần cơ thể,... hoặc các giá đo lường. Để xác định các thông tin chỉ định này, chúng tôi sử dụng MetaMap để nhận dạng khái niệm thuộc các phân nhóm liên quan như ``Quantitative Concept'', ``Pharmacologic Substance'', ``Element, Ion, or Isotope'',... Sau xác định được thông tin chỉ định, chúng tôi kết hợp với biểu thức chính quy để tìm kết quả xét nghiệm.
-
-\subsubsection*{Trích xuất thông tin không gian (Spatial)}
-Cũng như thời gian, không gian là một ngữ cảnh quan trọng mà ta cần phải xét tới khi phân giải đồng tham chiếu các khái niệm thuộc lớp Problem/Treatment/Test. Ví dụ như cùng một loại thuốc nhưng một khái niệm diễn ra ở phòng phẫu thuật và một khái niệm diễn ra ở phòng hồi sức thì hai khái niệm này không đồng tham chiếu với nhau. Các thông tin về không gian được nhóm thành 4 nhóm: tại nhà bệnh nhân, tại bệnh viện chuyển tiếp (transfer hospital), tại bệnh viện điều trị (inpatient hospital) và tại chuyên khoa riêng biệt (individual department). Hệ thống I đề xuất sử dụng phân đoạn thông tin và tập từ khóa để trích xuất thông tin về không gian. Tuy nhiên, chúng tôi không tìm được công cụ hoặc cách hiện thực cụ thể trong giai đoạn luận văn tốt nghiệp. Vì vậy trong quá trình hiện thực hệ thống, chúng tôi chưa đưa đặc trưng này vào sử dụng.
-
-\subsubsection*{Trích xuất thông tin thời gian (Temporal)}
-Thông tin thời gian là một thông tin mạnh cho phân giải đồng tham chiếu ở ba lớp Problem/Treatment/Test. Một thủ tục y tế được tiến hành ở hai thời điểm khác nhau thì không đồng tham chiếu hoặc cùng một loại thuốc nhưng được kê khai ở các thời điểm khác nhau thì độc lập. Thông tin thời gian này được chia làm hai loại. Thời gian tường minh, ví dụ 03/06/2015. Thời gian suy diễn, là các mốc thời gian được trích xuất từ một số từ khóa đứng gần khái niệm đang xét, như ``Admission date'' (ngày nhập viện) hay ``Post-op day 2'' (ngày thứ 2 sau khi phẫu thuật).
-
-Để hiện thực, chúng tôi thực hiện các bước sau. Xác định câu văn chứa khái niệm đang được xét. Sử dụng công cụ MedTime được đề cập trong phần \ref{tools} để nhận dạng thời gian xuất hiện trong câu văn. Công cụ MedTime có thể nhận dạng của thời gian tường minh và chuẩn hóa thời gian suy diễn thành giá trị ngày tháng cụ thể. Nếu trong câu văn xuất hiện hai giá trị thời gian khác nhau, chúng tôi sẽ sử dụng giá trị thời gian nằm gần khái niệm đang xét nhất. Ngoài ra, chúng tôi nhận thấy một số thông tin thời gian được tách riêng và nằm trong câu văn độc lập. Ví dụ trong ngày ``03/06/2015'' có ba thủ tục y tế được tiến hành, khái niệm thời gian sẽ được miêu tả ở dòng đầu tiên, theo sau là mô tả ba thủ tục y tế trong ba câu văn riêng biệt. Để giải quyết vấn đề ngày, chúng tôi đề xuất nếu câu văn chứa khái niệm không có thông tin về thời gian, hệ thống sẽ xem xét 3 câu văn liền trước để cố gắng tìm kiếm thông tin thời gian liên quan.
-
 \subsubsection*{Trích xuất thông tin phân đoạn bệnh án (Section)}
 Một hồ sơ xuất viện thường được chia làm các phân đoạn (section) như: tiền sử bệnh, tiền sử dùng thuốc, tiền sử nhập viện,... Hai khái niệm xuất hiện ở hai phần khác nhau thì thường không đồng tham chiếu với nhau cho dù chúng có cùng cách viết. Ví dụ cụm “CT scan” xuất hiện ở phần tiền sử điều trị và phần xét nghiệm thể chất thì hai khái niệm “CT scan” này là độc lập với nhau.
 
@@ -458,7 +458,7 @@ Phần lớn các khái niệm thuộc lớp Treatment được đề cập là 
 \subsubsection*{Trích xuất thông tin giả định (Assertion)}
 Thông tin giả định cho các khái niệm lớp Problem là bài toán từ thách thức I2B2 2010. Các thông tin giả định bao gồm: không liên quan đến bệnh nhân (not associated with the patient), có thể (possible), thiếu vắng (absent), ở hiện tại (present), có điều kiện (conditional) và giả thuyết (hypothetical). Ví dụ ``no \textit{fever}'', khái niệm cơn sốt (fever) được giả định rằng không có (absent). Một ví dụ khác là ``Doctors suspect \textit{an infection of the lungs}''. Khái niệm sự lây nhiễm của phổi (an infection of the lungs) được giả định rằng có thể tồn tại. Tuy nhiên do cách hiện thực được đề xuất cho đặc trưng này là xây dựng hệ thống học máy dựa trên các giải pháp cho Thách thức I2B2 2010. Trong giai đoạn luận văn, chúng tôi không có đủ thời gian hiện thực đặc trưng này.
 
-\begin{table}[th]
+\begin{table}[h!t!]
 \centering\ra{1.2}
 \caption{Phân chia đặc trưng được sử dụng trong ba lớp Problem/Treatment/Test \label{tab:SemanticFeatures}}
 \footnotesize\sffamily
@@ -483,98 +483,31 @@ Assertion & + & & \\
 \end{table}
 
 \section{Gom cụm và xây dựng chuỗi đồng tham chiếu}
-Ở mô hình cặp thực thể, hệ thống phân loại không có khả năng xây dựng chuỗi đồng tham chiếu mà nó chỉ có thể xác định một cặp khái niệm là có đồng tham chiếu hay không. Mặt khác, đối với một văn bản HSXV, số cặp khái niệm được sinh ra rất nhiều và trong số đó có nhiều cặp có chung khái niệm đứng sau, ví dụ hai cặp “Dr. John”-“his” và “Mr. Brown”-“his” có chung khái niệm đứng sau là “his” mà hai cặp này đều được hệ thống phân loại xác định là đồng tham chiếu, tuy nhiên chỉ một trong hai khái niệm “Dr. John” và “Mr. Brown” được chọn làm tiền đề cho khái niệm “his” này. Như vậy cần thiết phải có một giải thuật lựa chọn các cặp đồng tham chiếu và xây dựng các chuỗi đồng tham chiếu từ chúng.
+Ở mô hình cặp thực thể, hệ thống phân loại không có khả năng xây dựng chuỗi đồng tham chiếu mà nó chỉ có thể xác định một cặp khái niệm là có đồng tham chiếu hay không. Mặt khác, đối với một văn bản HSXV, số cặp khái niệm được sinh ra rất nhiều và trong số đó có nhiều cặp có chung khái niệm đứng sau, ví dụ hai cặp (“Dr. John”, “his”) và (“Mr. Brown”, “his”) có chung khái niệm đứng sau là “his” mà hai cặp này đều được hệ thống phân loại xác định là đồng tham chiếu, tuy nhiên chỉ một trong hai khái niệm “Dr. John” và “Mr. Brown” được chọn làm tiền đề cho khái niệm “his” này. Như vậy cần thiết phải có một giải thuật lựa chọn các cặp đồng tham chiếu và xây dựng các chuỗi đồng tham chiếu từ chúng.
 
 Như đã được đề cập ở mục, có hai giải thuật được đề xuất là: \emph{gom cụm gần nhất trước} và \emph{gom cụm tốt nhất trước}. Chúng tôi lựa chọn thực hiện giải thuật gom cụm tốt nhất trước cho hệ thống của mình vì hai lý do:
-\begin{enumerate}[leftmargin=\the\parindent]
-\item Theo [x], giải thuật gom cụm tốt nhất trước cho kết quả tốt hơn giải thuật gom cụm gần nhất trước.
-\item Các tác giả hệ thống [I] cũng hiện thực giải thuật này cho hệ thống của họ.
+\begin{enumerate}
+\item Theo các tác giả của giải thuật \cite{VincentNg2002}, giải thuật gom cụm tốt nhất trước cho kết quả tốt hơn giải thuật gom cụm gần nhất trước.
+\item Các tác giả hệ thống \cite{YanXu2012} cũng hiện thực giải thuật này cho hệ thống của họ.
 \end{enumerate}
 
 Về cơ bản, giải thuật gom cụm tốt nhất trước lựa chọn các cặp khái niệm được xác định là đồng tham chiếu và có độ tin cậy cao nhất ứng với mỗi hồi chỉ; đối với đại từ, giải thuật sử dụng module phân loại xác định lớp chính của đại từ đó và tạo một cặp đồng tham chiếu giữa nó với khái niệm thuộc lớp tương ứng gần nhất trước đó (theo thứ tự xuất hiện) trong văn bản HSXV. Sau khi có được tập các cặp đồng tham chiếu, giải thuật nối các cặp có một khái niệm chung lại để tạo thành các chuỗi. Đây chính là kết quả cuối cùng của hệ thống phân giải.
 
-Như vậy giải thuật gom cụm cụm tốt nhất trước bao gồm hai bước chính: chọn lọc các cặp đồng tham chiếu tốt nhất và ghép nối các cặp được chọn để tạo thành danh sách các chuỗi đồng tham chiếu. Chi tiết của bước đầu tiên, PAIR-SELECTION, và bước thứ 2, CHAINING, được trình bày ở Giải thuật \ref{alg:pair-selection} và Giải thuật \ref{alg:chaining} tương ứng. Trong đó, PAIR-SELECTION nhận đầu vào là văn bản HSXV $E$, danh sách các khái niệm $C$ của $E$; còn CHAINING nhận đầu vào là danh sách các cặp đồng tham chiếu chọn lọc được xuất ra bởi PAIR-SELECTION và ghép nối các cặp từ danh sách này để xây dựng các chuỗi đồng tham chiếu.
+Như vậy giải thuật gom cụm cụm tốt nhất trước bao gồm hai bước chính: chọn lọc các cặp đồng tham chiếu tốt nhất và ghép nối các cặp được chọn để tạo thành danh sách các chuỗi đồng tham chiếu. Bước đầu tiên làm việc như sau:
+\begin{enumerate}
+\item Nhận đầu vào là văn bản $E$ và danh sách các khái niệm $C$ được sắp xếp theo thứ tự xuất hiện. Gọi $M$ là số khái niệm trong $C$. $P$ là danh sách các cặp khái niệm, khởi tạo $P=\emptyset$.
+\item Duyệt toàn bộ danh sách $C$ từ đầu đến cuối theo thứ tự xuất hiện ($j=1\rightarrow M$), với mỗi khái niệm $C_j$, nếu $C_j$ thuộc một trong 4 lớp Person, Problem, Test hoặc Treatment thì tới bước 3, nếu $C_j$ thuộc lớp Pronoun thì tới bước 4. Nếu đã duyệt xong, đi tới bước 6.
+\item Với mỗi cặp $(C_i,\,C_j)$ mà $C_i$ đứng trước $C_j$ ($i<j$), chọn ra cặp $(C_k,\,C_j)$ mà hệ thống phân loại xác định là đồng tham chiếu và có độ tin cậy cao nhất, đưa cặp $(C_k,\,C_j)$ tới bước 5.
+\item Sử dụng hệ thống phân loại xác định lớp chính $T$ của $C_j$. Duyệt từ khái niệm ngay trước $C_j$ về đầu ($i=j-1\rightarrow 1$), nếu $C_i$ thuộc lớp $T$, ngừng duyệt và đưa cặp $(C_i,\,C_j$) tới bước 5.
+\item Nhận cặp $(C_i,\,C_j)$ được chọn ở một trong hai bước trên, đưa cặp vào $P$ và quay trở lại bước 2.
+\item Trả $P$ về làm kết quả.
+\end{enumerate} 
 
-\begin{figure}[th]
-\begin{algorithm}[H]
-\caption{PAIR-SELECTION}
-\SetKwFunction{TypeOf}{TypeOf}
-\SetKwFunction{PRONOUN}{PRONOUN}
-
-\Input{văn bản HSXV $E$, danh sách khái niệm $C$}
-\Output{danh sách các cặp đồng tham chiếu}
-\BlankLine
-$M$: số khái niệm trong danh sách $C$\;
-$pairs \leftarrow \emptyset$\;
-\BlankLine
-\For{$i \leftarrow 1$ \KwTo $M$}{
-	$ana \leftarrow C[i]$\;	
-	\eIf{\TypeOf{$ana$} $\neq$ \PRONOUN}{
-		\tcp{tìm khái niệm đứng trước đồng tham chiếu với $ana$ có độ tin cậy cao nhất}
-		$bestConf \leftarrow \Null$\;
-		$bestAnte \leftarrow \Null$\;
-		\For{$j \leftarrow i - 1$ \KwDownTo $0$}{
-			$ante \leftarrow C[j]$\;				
-			\lIf{$\TypeOf{ante} \neq \TypeOf{ana}$}{\KwContinue}		
-			\If{cặp $(ante,ana)$ đồng tham chiếu}{
-				$conf\leftarrow$ độ tin cậy đồng tham chiếu của $(ante,ana)$\;
-				\If{$bestConf = \Null$ \KwOr $bestConf < conf$}{
-					$confidence \leftarrow conf$\;
-					$bestAnte \leftarrow ante$\;
-				}
-			}
-		}
-		\BlankLine
-		\If{$bestConf \neq \Null$ \KwAnd $bestAnte \neq \Null$}{
-			thêm cặp $(bestAnte, ana)$ vào $pairs$\;
-		}
-	}{
-		\tcp{xác định lớp chính của đại từ bằng module phân loại}
-		$t\leftarrow$ lớp chính của $ana$\;
-		\For{$j \leftarrow i - 1$ \KwDownTo 0}{
-			\tcp{tìm khái niệm cùng lớp chính với $ana$ gần nhất trước đó}
-			$ante \leftarrow C[j]$\;
-			\If{$\TypeOf{ante} = t$}{
-				thêm cặp $(ante,ana)$ vào $pairs$\;
-				\KwBreak\;
-			}
-		}
-	}	
-}
-\Return{pairs}\;
-\end{algorithm}
-\caption{Giải thuật chọn lọc các cặp đồng tham chiếu\label{alg:pair-selection}}
-\end{figure}
-
-\begin{figure}[th]
-\begin{algorithm}[H]
-\caption{CHAINING}
-
-\Input{danh sách các cặp đồng tham chiếu $pairs$}
-\Output{danh sách các chuỗi đồng tham chiếu}
-\BlankLine
-$chains$: danh sách các chuỗi đồng tham chiếu\;
-$chains\leftarrow\emptyset$\;
-\ForEach(\tcp*[h]{với mỗi cặp đồng tham chiếu}){$(ante, ana)$ \KwIn $pairs$}{
-	$added\leftarrow\False$\;
-	\ForEach{$c$ \KwIn $chains$}{
-		\tcp{nếu có một chuỗi $c$ chứa một trong hai khái niệm của cặp}
-		\If(\tcp*[h]{đưa cặp vào chuỗi}){$(ante$ \KwIn $c)$ \KwOr $(ana$ \KwIn $c)$}{
-			$c\leftarrow c\cup \{ante, ana\}$\;
-			$added\leftarrow\True$\;
-			\KwBreak;
-		}
-	}
-	\BlankLine
-	\tcp{nếu không có chuỗi nào chứa một trong hai khái niệm của cặp}
-	\If{$added=\False$}{
-		\tcp{tạo một chuỗi mới $c$ gồm hai khái niệm của cặp}
-		$c\leftarrow\{ante, ana\}$\;
-		thêm $c$ vào $chains$\;
-	}
-}
-
-\Return{chains}\;
-\end{algorithm}
-\caption{Giải thuật xây dựng các chuỗi đồng tham chiếu\label{alg:chaining}}
-\end{figure}
+Sau khi đã có được danh sách các cặp đồng tham chiếu tốt nhất từ bước trên, hệ thống ghép nối các cặp trong danh sách lại để tạo thành các chuỗi đồng tham chiếu:
+\begin{enumerate}
+\item Nhận đầu vào là danh sách cặp khái niệm $P$.
+\item Khởi tạo danh sách chuỗi $H=\emptyset$.
+\item Với mỗi cặp $(C_i,\,C_j)$ trong $P$, duyệt tất cả các chuỗi $K$ trong $H$, nếu tìm được một chuỗi $K^{\prime}$ mà chứa một trong hai khái niệm $C_i$ hoặc $C_j$ của cặp thì đưa $C_i$, $C_j$ vào $K^{\prime}$ và quay lại bước 3. Nếu không tìm được chuỗi nào thỏa điều kiện trên, đưa cặp $(C_i,\,C_j)$ tới bước 4. Nếu đã duyệt xong, tới bước 5.
+\item Khởi tạo một chuỗi $K^{\prime}$ mới gồm hai khái niệm của cặp, $K^{\prime}=\{C_i,\,C_j\}$, đưa chuỗi vào $H$ và quay lại bước 3.
+\item Trả $H$ về làm kết quả.
+\end{enumerate}
