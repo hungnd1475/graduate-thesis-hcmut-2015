@@ -1,3 +1,41 @@
 \chapter{Các công trình liên quan}
 \section{Bệnh án điện tử}
+Bệnh án là văn bản ghi chép các thông tin sức khỏe của một cá nhân trong quá trình khám và chữa bệnh. Bệnh án điện tử chính là bệnh án được số hóa bằng HTTBV. BAĐT thông thường chứa những dữ liệu cơ bản cho quản lý, các dữ liệu cận lâm sàng và lâm sàng của người bệnh trong một lần nằm viện \cite{HoTuBao2015}. Dữ liệu lâm sàng là những \textit{văn bản lâm sàng} (clinical text) do bác sĩ và y tá ghi chép hàng ngày về thông tin khám và chữa bệnh của người bệnh. Chính các văn bản lâm sàng này là nguồn dữ liệu quý giá cho việc khai thác và rút trích kiến thức, phục vụ cho việc chăm sóc sức khỏe và nghiên cứu y học. Các văn bản lâm sàng trong bệnh án điện tử chủ yếu gồm ba loại \cite{HoTuBao2015}:
+
+\begin{enumerate}[leftmargin=\the\parindent]
+\item \emph{Phiếu điều trị} (doctor daily notes): ghi chép các chuẩn đoán, nhận định và y lệnh hàng ngày của bác sĩ về bệnh nhân.
+\item \emph{Phiếu chăm sóc} (nurse narratives): là những ghi chép trong ngày của y tá trong quá trình chăm sóc và thực hiện y lệnh của bác sĩ.
+\item \emph{Hồ sơ xuất viện} (discharge summary): toàn bộ dữ liệu và thông tin cơ bản của bệnh nhân trong một lần điều trị.
+\end{enumerate}
+
+So với bệnh án được lưu trữ bằng giấy, bệnh án điện tử có nhiều ưu điểm như:
+
+\begin{itemize}[noitemsep]
+\item Lưu trữ chính xác và đầy đủ thông tin bệnh nhân, tránh trùng lặp dữ liệu.
+\item Hỗ trợ quá trình tìm kiếm và truy xuất thông tin nhanh chóng.
+\item Dữ liệu có thể được chia sẻ hoặc tích hợp.
+\end{itemize}
+
+Ngoài các văn bản lâm sàng được lưu trữ dưới dạng phi cấu trúc, một số tiêu chuẩn được đưa ra để lưu trữ một cách có cấu trúc các BAĐT:
+
+\begin{itemize}[noitemsep]
+\item \emph{IDC} (International Classification of Diseases): bao gồm các loại mã cũng như thông tin về bệnh như tên bệnh, mô tả, triệu chứng, dấu hiệu, mức độ, ...
+\item \textit{CPT} (Current Procedural Terminology): bao gồm các mã mang tính thủ tục trong bệnh viện như mã xét nghiệm, gây tê, phẫu thuật, X quang, thuốc, cấp cứu, ...
+\end{itemize}
+
 \section{Nhận dạng thực thể có tên}
+Rút trích thông tin (Information extraction) là công việc tự động rút trích thông tin từ những dữ liệu không có cấu trúc hoặc dữ liệu bán cấu trúc. Dữ liệu có cấu trúc là dữ liệu máy tính hiểu hoàn toàn. dữ liệu có cấu trúc thông thường nằm ở dạng bảng, hoặc trong các hệ quản trị dữ liệu quan hệ. Dữ liệu không có cấu trúc là dữ liệu máy hoàn toàn không hiểu, như ngôn ngữ tự nhiên. Dữ liệu bán cấu trúc là dữ liệu chứa các thẻ hoặc các hình thức đánh dấu khác giúp phân tách bộ phận ngữ cảnh nền ra khỏi dữ liệu, điển hình là các ngôn ngữ đánh dấu như XML, JSON, HTML. Rúc trích thông tin là một trong những vấn đề của xử lý ngôn ngữ tự nhiên.
+
+Tác vụ rút trích thông tin gồm hai bước con là nhận dạng thực thể và rút trích quan hệ. Trong đó, nhận dạng thực thể là bước đầu tiên của bài toán rút trích thông tin. Nhiệm vụ của nhận dạng thực thể là xác định những thực thể trong câu và gán nhãn cho nó. Ví dụ đầu ra của bước nhận dạng thực thể từ câu văn ``Duy Hưng là sinh viên đại học Bách Khoa của thành phố Hồ Chí Minh'' là:
+
+\begin{itemize}[noitemsep]
+\item ``Duy Hưng'' - Con người
+\item ``đại học Bách Khoa'' - Tổ chức
+\item ``thành phố Hồ Chí Minh'' - Địa điểm
+\end{itemize}
+
+Bài toán nhận dạng thực thể có tên thường bao gồm 2 bước: xác định thực thể và phân loại thực thể vào các nhóm ngữ nghĩa (như con người, nơi chốn, tổ chức, ...). Trong đó, bước đầu tiên của bài toán thường được xem đơn giản như là một bài toán phân mảnh các từ trong câu thành các ``tên'', với ``tên'' là một chuỗi các từ liên tục có ý nghĩa và chỉ tới một thực thể có thật, không lồng ghép trong ``tên'' khác. Vì vậy từ ``Ngân hàng Việt Nam'' chỉ được xem như là một tên duy nhất, mặc dù từ ``ngân hàng'' và ``Việt Nam'' bản thân cũng mang ý nghĩa.
+
+Các hệ thống nhận diện thực thể có tên nếu hoạt động tốt trong một lĩnh vực cụ thể (như y tế, địa chất, ký sự, ...) thì sẽ cho kết quả không tốt nếu đem ứng dụng vào lĩnh vực khác. Để có thể chỉnh sửa cho một hệ thống có sẵn hoạt động tốt trong một lĩnh vực mới thường tiêu tốn rất nhiều công sức.
+
+Tùy theo mỗi lĩnh vực quan tâm cụ thể, các loại thực thể sẽ được định nghĩa khác nhau. Với những vấn đề không đặc thù, những nhóm thực thể thường được nhắc đến là: động vật, người, tổ chức, vật, ... Khi nghiên cứu về nhận dạng thực thể trong bệnh án điện tử, i2b2 2011 đã định nghĩa năm loại thực thể cần được quan tâm. Đó là vấn đề (Problem), phương pháp điều trị (Treatment), các xét nghiệm (Test), con người (Person) và đại từ (Pronoun). Đối với bài toán phân giải đồng tham chiếu, kết quả của quá trình nhận dạng thực thể là đầu vào bắt buộc phải có trước khi tiến hành phân giải.
