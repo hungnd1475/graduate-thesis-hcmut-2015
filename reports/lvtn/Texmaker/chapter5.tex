@@ -24,7 +24,7 @@ Mục tiêu của chúng tôi là phân giải đồng tham chiếu cho các kh�
 \caption{Ý nghĩa các lớp thực thể được đề xuất bởi i2b2\label{tab:EntityLabels}}
 \footnotesize\sffamily
 
-\begin{tabularx}{\textwidth}{@{}lLP{\raggedright}{0.3}@{}}
+\begin{tabularx}{\textwidth}{@{}lLP{\colleft}{0.3}@{}}
 \toprule
 \textbf{Lớp} & \textbf{Định nghĩa} & \textbf{Ví dụ}\\
 \midrule
@@ -54,20 +54,20 @@ Như vậy mục đích của quy trình huấn luyện là xây dựng tổng c
 	start chain=going below,
 	node distance=1.5cm and 2.3cm,
 	every join/.style={->, draw},
-	font=\tiny\sffamily]
+	font=\scriptsize\sffamily]
 
-	\node[multidoc](emr){EMR};
-	\node[multidoc, right=of emr](con){Danh sách khái niệm};
+	\node[multidoc](emr){HSXV};
+	\node[multidoc, right=of emr, text width=3.5em](con){Danh sách khái niệm};
 	\node[proc,below=1.3cm of $(emr)!0.5!(con)$](prep){Tiền xử lý};
 	\node[io,join]{Các khái niệm/cặp khái niệm};
 	\node[proc,join](ex){Rút trích đặc trưng};
-	\node[io, right=3cm of con](perp){Đặc trưng Person-Person};
+	\node[io, right=3cm of con](perp){Đặc trưng cặp Person};
 	\node[io](pati){Đặc trưng Person};
-	\node[io](prop){Đặc trưng Problem-Problem};
-	\node[io](tstp){Đặc trưng Test-Test};
-	\node[io](trep){Đặc trưng Treatment-Treatment};
+	\node[io](prop){Đặc trưng cặp Problem};
+	\node[io](tstp){Đặc trưng cặp Test};
+	\node[io](trep){Đặc trưng cặp Treatment};
 	\node[io](pron){Đặc trưng Pronoun};	
-	\node[proc, right=3cm of $(prop)!0.5!(tstp)$](train){Huấn luyện};
+	\node[proc, right=2.6cm of $(prop)!0.5!(tstp)$](train){Huấn luyện};
 	\node[io,right=7cm of perp](perm){SVM model cho cặp Person};
 	\node[io](patim){SVM model Patient-class};
 	\node[io](prom){SVM model cho cặp Problem};
@@ -77,18 +77,18 @@ Như vậy mục đích của quy trình huấn luyện là xây dựng tổng c
 
 	\draw[->] (emr) -- ++(down:0.9cm) -| (prep.130);
 	\draw[->] (con) -- ++(down:0.9cm) -| (prep.50);
-	\draw[->] (ex) -- ++(right:2.2cm) |- (perp);
-	\draw[->] (ex) -- ++(right:2.2cm) |- (pati);
-	\draw[->] (ex) -- ++(right:2.2cm) |- (prop);
-	\draw[->] (ex) -- ++(right:2.2cm) |- (tstp);
-	\draw[->] (ex) -- ++(right:2.2cm) |- (trep);
-	\draw[->] (ex) -- ++(right:2.2cm) |- (pron);
-	\draw[->] (perp) -- ++(right:2cm) |- (train);
-	\draw[->] (pati) -- ++(right:2cm) |- (train);
-	\draw[->] (prop) -- ++(right:2cm) |- (train);
-	\draw[->] (tstp) -- ++(right:2cm) |- (train);
-	\draw[->] (trep) -- ++(right:2cm) |- (train);
-	\draw[->] (pron) -- ++(right:2cm) |- (train);
+	\draw[->] (ex) -- ++(right:2.3cm) |- (perp);
+	\draw[->] (ex) -- ++(right:2.3cm) |- (pati);
+	\draw[->] (ex) -- ++(right:2.3cm) |- (prop);
+	\draw[->] (ex) -- ++(right:2.3cm) |- (tstp);
+	\draw[->] (ex) -- ++(right:2.3cm) |- (trep);
+	\draw[->] (ex) -- ++(right:2.3cm) |- (pron);
+	\draw[->] (perp) -- ++(right:1.8cm) |- (train);
+	\draw[->] (pati) -- ++(right:1.8cm) |- (train);
+	\draw[->] (prop) -- ++(right:1.8cm) |- (train);
+	\draw[->] (tstp) -- ++(right:1.8cm) |- (train);
+	\draw[->] (trep) -- ++(right:1.8cm) |- (train);
+	\draw[->] (pron) -- ++(right:1.8cm) |- (train);
 	\draw[->] (train) -- ++(right:1.5cm) |- (perm);
 	\draw[->] (train) -- ++(right:1.5cm) |- (patim);
 	\draw[->] (train) -- ++(right:1.5cm) |- (prom);
@@ -102,19 +102,21 @@ Như vậy mục đích của quy trình huấn luyện là xây dựng tổng c
 \subsection*{Quy trình phân giải}
 Quy trình phân giải đồng tham chiếu sử dụng sáu SVM model đã được huấn luyện ở bước trên, cùng với đó là một giải thuật gom nhóm các cặp khái niệm đã được phân loại là đồng tham chiếu với nhau lại để cuối cùng tạo thành các chuỗi đồng tham chiếu. Có thể xem đây là quy trình mang đi ứng dụng thực tế để phân giải cho những văn bản BAĐT mới. Dựa vào hệ thống \cite{YanXu2012}, chúng tôi sử dụng giải thuật gom cụm tốt nhất trước để lựa chọn các cặp đồng tham chiếu có độ tin cậy cao nhất, sau đó xây dựng các chuỗi đồng tham chiếu bằng cách nối các cặp có một khái niệm chung. Đối với lớp Pronoun, sau khi đã xác định được lớp chính của một đại từ bất kì, chúng tôi tạo một cặp đồng tham chiếu giữa đại từ đó và khái niệm thuộc lớp chính tương ứng ở gần nhất trước đó trong văn bản. Theo nhận định của các tác giả hệ thống \cite{YanXu2012}, tuy cách làm này đơn giản nhưng lại tỏ ra rất hiệu quả.
 
-Hình \ref{fig:SDPG} mô tả trực quan quy trình phân giải đồng tham chiếu. Ở bước trích xuất thuộc tính của các cặp Person, chúng tôi sử dụng model phân loại bệnh nhân để xác định giá trị cho đặc trưng lớp. Theo kết quả đánh giá các hệ thống dự thi thử thách i2b2 2011, ba hệ đo được sử dụng để đánh giá hiệu năng là: MUC, B-CUBED và CEAF. Chúng tôi cũng hiện thực các hệ đo này để đánh giá các chuỗi đồng tham chiếu được xuất ra bởi hệ thống của mình và so sánh kết quả với hệ thống thống \cite{YanXu2012}.
+Hình \ref{fig:SDPG} mô tả trực quan quy trình phân giải đồng tham chiếu. Ở bước trích xuất thuộc tính của các cặp Person, chúng tôi sử dụng model phân loại bệnh nhân để xác định giá trị cho đặc trưng Patient-class. Theo kết quả đánh giá các hệ thống dự thi thử thách i2b2 2011, ba hệ đo được sử dụng để đánh giá hiệu năng là: MUC, B-CUBED và CEAF. Chúng tôi cũng hiện thực các hệ đo này để đánh giá các chuỗi đồng tham chiếu được xuất ra bởi hệ thống của mình và so sánh kết quả với hệ thống \cite{YanXu2012}. 
+
+Ngoài ra Hình \ref{fig:DongKhaiNiem} mô tả các luồng khái niệm bắt đầu từ danh sách các khái niệm thô đến các chuỗi đồng tham chiếu, trong đó các khối \emph{Phân giải đồng tham chiếu lớp X} mang ý nghĩa trừu tượng về hệ thống phân giải đồng tham chiếu bao gồm các module rút trích đặc trưng, module phân loại và module gom cụm tương ứng cho lớp $X$.
 
 \begin{figure}[th]
 \centering
 \begin{tikzpicture}[%
 	>=angle 60,
 	start chain=going below,
-	node distance=1.5cm and 2.5cm,
+	node distance=1.7cm and 2.7cm,
 	every join/.style={->, draw},
-	font=\tiny\sffamily]
+	font=\scriptsize\sffamily]
 
-	\node[doc](emr){EMR};
-	\node[doc, right=of emr](con){Danh sách khái niệm};
+	\node[doc](emr){HSXV};
+	\node[doc, right=of emr, text width=3.5em](con){Danh sách khái niệm};
 	\node[proc, below=1.3cm of $(emr)!0.5!(con)$](prep){Tiền xử lý};
 	\node[io,join](ins){Các khái niệm/cặp khái niệm};
 	\node[proc,join](ex){Rút trích đặc trưng};
@@ -125,30 +127,20 @@ Hình \ref{fig:SDPG} mô tả trực quan quy trình phân giải đồng tham c
 	\node[proc,join,below=of ex](clus){Gom cụm};
 	\node[io,join](sysc){Các chuỗi đồng tham chiếu};
 	\node[proc,join,right=of sysc](eval){Đánh giá hiệu năng};
-	\node[doc,right=of eval, text width=1.5cm](gt){Các chuỗi đồng tham chiếu kết quả (ground truth)};
+	\node[doc,right=of eval, text width=2cm](gt){Các chuỗi đồng tham chiếu kết quả (ground truth)};
 	\node[io,below=of eval](res){Các số liệu độ đo};
 
 	\draw[->] (emr) -- ++(down:0.9cm) -| (prep.130);
 	\draw[->] (con) -- ++(down:0.9cm) -| (prep.50);
 	\draw[->] (model) -> (clas);
 	\draw[->] (clas) -> (conf);
-	\draw[->] (ins) -- ++(left:1.5cm) |- (clus);
+	\draw[->] (ins) -- ++(left:1.8cm) |- (clus);
 	\draw[->] (gt) -> (eval);
 	\draw[->] (eval) -> (res);
 	\draw[->] (model.200) -- ++(left:3cm) node[midway,above,sloped]{Model Patient-class} -> (ex.north east);
 \end{tikzpicture}
 \caption{Sơ đồ phân giải đồng tham chiếu\label{fig:SDPG}}
 \end{figure}
-
-\section{Tiền xử lý}
-Trong quá trình rút trích đặc trưng, một số khái niệm được miêu tả cụ thể làm cho việc so trùng chuỗi hoặc tìm kiếm từ các nguồn tri thức nhân loại thiếu chính xác \cite{YanXu2012}. Ví dụ như khái niệm ``her CT scan'' và khái niệm ``a CT scan'', mặc dù hai khái niệm này cùng chỉ một thủ tục y tế nhưng không trùng chuỗi. Ngoài ra các mạo từ ``her'', ``a'' làm việc tìm kiếm tri thức nhân loại từ các nguồn như Wikipedia, WordNet không được chính xác hoặc không thể tìm được kết quả, vì vậy trước khi rút trích đặc trưng, các khái niệm cần được tiền xử lý để loại bỏ mạo từ và các thông tin ngữ cảnh. Tuy nhiên, quá trình tiền xử lý chỉ được áp dụng cho các đặc trưng liên quan so trùng chuỗi và tìm kiếm tri thức nhân loại, các đặc trưng khác không cần qua quá trình tiền xử lý mà nhận vào nguyên gốc khái niệm được xác định.
-
-Quá trình tiền xử lý gồm hai bước: đầu tiên khái niệm sẽ được loại bỏ tất cả mạo từ, sau đó, nếu khái niệm có bao gồm giới từ thì giới từ đó và toàn bộ nội dung theo sau sẽ được lược bỏ. Ví dụ như khái niệm “an MRI of the knee” sau quá trình tiền xử lý sẽ trở thành “MRI”. Danh sách mạo từ được xây dựng từ tập dữ liệu và các mạo từ thông dụng của tiếng Anh.
-
-Đặc biệt các khái niệm thuộc lớp Problem/Treatment/Test thường được kèm thêm thông tin về định lượng như 10mg, 5 lit và các thông tin về vị trí giải phẫu học như ``upper'', ``left'', ``right''. Để tăng khả năng tìm kiếm tri thức nhân loại, chúng tôi đề xuất loại bỏ các thông tin ngữ cảnh về số, định lượng và vị trí giải phẫu khỏi khái niệm. Các thông tin ngữ cảnh được loại bỏ bằng cách sử dụng biểu thức chính quy và các từ vựng được xây dựng từ tập dữ liệu. Các đặc trưng liên quan so trùng chuỗi không áp dụng bước tiền xử lý loại bỏ thông tin ngữ cảnh này.
-\section{Xây dựng các cặp khái niệm}
-\section{Rút trích đặc trưng}
-Từ các phân tích được đề cập ở phần \ref{ytuonghienthuc}, ngoài các thuộc tính chung về mặt ngôn ngữ (như ngữ pháp hay từ vựng), từng lớp khái niệm ở BAĐT còn mang những đặc tính khác nhau. Việc này đòi hỏi chúng tôi phải thiết kế bốn hệ thống rút trích đặc trưng và phân loại tương ứng khác nhau cho lớp Person, lớp Patient, nhóm lớp Problem/Treatment/Test và lớp Pronoun. Hình \ref{fig:TongquanPhangiai} mô tả tổng quan ba hệ thống này, trong đó các khối ``Đồng tham chiếu lớp X'' bao hàm cả Hệ thống rút trích đặc trưng và Hệ thống phân loại cho lớp tương ứng. Đối với các lớp Person và nhóm lớp Problem/Treatment/Test đầu vào của hệ thống rút trích đặc trưng là một cặp gồm hai khái niệm thuộc các lớp tương ứng, tuy nhiên đối với lớp Pronoun và lớp Patient thì đầu vào là duy nhất một khái niệm thuộc lớp tương ứng.
 
 \begin{figure}[ht]
 \centering
@@ -157,10 +149,10 @@ Từ các phân tích được đề cập ở phần \ref{ytuonghienthuc}, ngo�
 	start chain=going below,
 	node distance=1.5cm and 4cm,
 	every join/.style={->, draw},
-	font=\tiny\sffamily]
+	font=\scriptsize\sffamily]
 	\tikzset{
-		wproc/.style = {proc, text width=4.5em},
-		wdoc/.style = {doc, text width=3.5em}
+		wproc/.style = {proc, text width=5.2em},
+		wdoc/.style = {doc, text width=3.7em}
 	};
 	
 	\node[io](pati){Các khái niệm Person};
@@ -170,15 +162,15 @@ Từ các phân tích được đề cập ở phần \ref{ytuonghienthuc}, ngo�
 	\node[io](trep){Các cặp khái niệm Treatment};
 	\node[io](pron){Các khái niệm Pronoun};
 	
-	\node[wdoc,left=2cm of $(prop)!0.5!(tstp)$](emr){EMR + Concepts};
+	\node[wdoc,left=2.3cm of $(prop)!0.5!(tstp)$](emr){HSXV + DS khái niệm};
 	\node[altproc,right=2.5cm of pati](patic){Phân loại bệnh nhân};
-	\node[wproc,right=4cm of perp](perr){Phân giải đồng tham chiếu lớp Person};
+	\node[wproc,right=4.2cm of perp](perr){Phân giải đồng tham chiếu lớp Person};
 	\node[wproc](pror){Phân giải đồng tham chiếu lớp Problem};
 	\node[wproc](tstr){Phân giải đồng tham chiếu lớp Test};
 	\node[wproc](trer){Phân giải đồng tham chiếu lớp Treatment};
 	\node[wproc](pronr){Phân giải đồng tham chiếu lớp Pronoun};
 
-	\node[io,right=6cm of perr](perch){Các chuỗi Person};
+	\node[io,right=5.2cm of perr](perch){Các chuỗi Person};
 	\node[io](proch){Các chuỗi Problem};
 	\node[io](tstch){Các chuỗi Test};
 	\node[io](trech){Các chuỗi Treatment};
@@ -210,8 +202,18 @@ Từ các phân tích được đề cập ở phần \ref{ytuonghienthuc}, ngo�
 	\draw[->] (pronr) -| (tstch-left);
 	\draw[->] (pronr) -| (trech-left);
 \end{tikzpicture}
-\caption{Tổng quan hệ thống phân giải đồng tham chiếu \label{fig:TongquanPhangiai}}
+\caption{Các luồng khái niệm tạo thành chuỗi đồng tham chiếu \label{fig:DongKhaiNiem}}
 \end{figure}
+
+\section{Tiền xử lý}
+Trong quá trình rút trích đặc trưng, một số khái niệm được miêu tả cụ thể làm cho việc so trùng chuỗi hoặc tìm kiếm từ các nguồn tri thức nhân loại thiếu chính xác \cite{YanXu2012}. Ví dụ như khái niệm ``her CT scan'' và khái niệm ``a CT scan'', mặc dù hai khái niệm này cùng chỉ một thủ tục y tế nhưng không trùng chuỗi. Ngoài ra các mạo từ ``her'', ``a'' làm việc tìm kiếm tri thức nhân loại từ các nguồn như Wikipedia, WordNet không được chính xác hoặc không thể tìm được kết quả, vì vậy trước khi rút trích đặc trưng, các khái niệm cần được tiền xử lý để loại bỏ mạo từ và các thông tin ngữ cảnh. Tuy nhiên, quá trình tiền xử lý chỉ được áp dụng cho các đặc trưng liên quan so trùng chuỗi và tìm kiếm tri thức nhân loại, các đặc trưng khác không cần qua quá trình tiền xử lý mà nhận vào nguyên gốc khái niệm được xác định.
+
+Quá trình tiền xử lý gồm hai bước: đầu tiên khái niệm sẽ được loại bỏ tất cả mạo từ, sau đó, nếu khái niệm có bao gồm giới từ thì giới từ đó và toàn bộ nội dung theo sau sẽ được lược bỏ. Ví dụ như khái niệm “an MRI of the knee” sau quá trình tiền xử lý sẽ trở thành “MRI”. Danh sách mạo từ được xây dựng từ tập dữ liệu và các mạo từ thông dụng của tiếng Anh.
+
+Đặc biệt các khái niệm thuộc lớp Problem/Treatment/Test thường được kèm thêm thông tin về định lượng như 10mg, 5 lit và các thông tin về vị trí giải phẫu học như ``upper'', ``left'', ``right''. Để tăng khả năng tìm kiếm tri thức nhân loại, chúng tôi đề xuất loại bỏ các thông tin ngữ cảnh về số, định lượng và vị trí giải phẫu khỏi khái niệm. Các thông tin ngữ cảnh được loại bỏ bằng cách sử dụng biểu thức chính quy và các từ vựng được xây dựng từ tập dữ liệu. Các đặc trưng liên quan so trùng chuỗi không áp dụng bước tiền xử lý loại bỏ thông tin ngữ cảnh này.
+\section{Xây dựng các cặp khái niệm}
+\section{Rút trích đặc trưng}
+Từ các phân tích được đề cập ở phần \ref{ytuonghienthuc}, ngoài các thuộc tính chung về mặt ngôn ngữ (như ngữ pháp hay từ vựng), từng lớp khái niệm ở BAĐT còn mang những đặc tính khác nhau. Việc này đòi hỏi chúng tôi phải thiết kế bốn hệ thống rút trích đặc trưng và phân loại tương ứng khác nhau cho lớp Person, lớp Patient, nhóm lớp Problem/Treatment/Test và lớp Pronoun. Hình \ref{fig:TongquanPhangiai} mô tả tổng quan ba hệ thống này, trong đó các khối ``Đồng tham chiếu lớp X'' bao hàm cả Hệ thống rút trích đặc trưng và Hệ thống phân loại cho lớp tương ứng. Đối với các lớp Person và nhóm lớp Problem/Treatment/Test đầu vào của hệ thống rút trích đặc trưng là một cặp gồm hai khái niệm thuộc các lớp tương ứng, tuy nhiên đối với lớp Pronoun và lớp Patient thì đầu vào là duy nhất một khái niệm thuộc lớp tương ứng.
 
 \subsection*{Nhóm Person}
 Như đã đề cập trong phần \ref{ytuonghienthuc}, trong BAĐT, các khái niệm thuộc lớp Person thường được chia vào ba nhóm chính: bệnh nhân, người thân của bệnh nhân hoặc nhân sự của bệnh viện. Trong đó bệnh nhân là nhóm có số lượng khái niệm được đề cập nhiều nhất và chiếm phần lớn tổng số khái niệm lớp Person. Do vậy việc xác định một khái niệm thuộc vào nhóm nào đóng vai trò quan trọng trong việc phân giải chính xác chuỗi đồng tham chiếu cho khái niệm đó \cite{YanXu2012}. Đặc trưng lớp Patient được xác định bằng phương pháp phân loại nhị phân SVM. Hai nhóm người thân của bệnh nhân và nhân sự của bệnh viện được xác định bằng các đặc trưng từ vựng. Bảng \ref{tab:PersonFeatures} trình bày đầy đủ các đặc trưng dùng cho lớp Person.
