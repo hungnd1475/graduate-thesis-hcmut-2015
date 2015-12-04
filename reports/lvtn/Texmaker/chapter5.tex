@@ -382,9 +382,6 @@ Một thủ tục y tế (Test) thường đi kèm với một hoặc một vài
 
 Qua việc khảo sát tập dữ liệu, chúng tôi nhận thấy các thông tin chỉ định đa số là xác định nồng độ các hợp chất, tế bào, thành phần cơ thể,... hoặc các giá đo lường. Để xác định các thông tin chỉ định này, chúng tôi sử dụng MetaMap để nhận dạng khái niệm thuộc các phân nhóm liên quan như ``Quantitative Concept'', ``Pharmacologic Substance'', ``Element, Ion, or Isotope'',... Sau xác định được thông tin chỉ định, chúng tôi kết hợp với biểu thức chính quy để tìm kết quả xét nghiệm.
 
-\subsubsection*{Trích xuất thông tin không gian (Spatial)}
-Cũng như thời gian, không gian là một ngữ cảnh quan trọng mà ta cần phải xét tới khi phân giải đồng tham chiếu các khái niệm thuộc lớp Problem/Treatment/Test. Ví dụ như cùng một loại thuốc nhưng một khái niệm diễn ra ở phòng phẫu thuật và một khái niệm diễn ra ở phòng hồi sức thì hai khái niệm này không đồng tham chiếu với nhau. Các thông tin về không gian được nhóm thành 4 nhóm: tại nhà bệnh nhân, tại bệnh viện chuyển tiếp (transfer hospital), tại bệnh viện điều trị (inpatient hospital) và tại chuyên khoa riêng biệt (individual department). Hệ thống I đề xuất sử dụng phân đoạn thông tin và tập từ khóa để trích xuất thông tin về không gian. Tuy nhiên, chúng tôi không tìm được công cụ hoặc cách hiện thực cụ thể trong giai đoạn luận văn tốt nghiệp. Vì vậy trong quá trình hiện thực hệ thống, chúng tôi chưa đưa đặc trưng này vào sử dụng.
-
 \subsubsection*{Trích xuất thông tin thời gian (Temporal)}
 Thông tin thời gian là một thông tin mạnh cho phân giải đồng tham chiếu ở ba lớp Problem/Treatment/Test. Một thủ tục y tế được tiến hành ở hai thời điểm khác nhau thì không đồng tham chiếu hoặc cùng một loại thuốc nhưng được kê khai ở các thời điểm khác nhau thì độc lập. Thông tin thời gian này được chia làm hai loại. Thời gian tường minh, ví dụ 03/06/2015. Thời gian suy diễn, là các mốc thời gian được trích xuất từ một số từ khóa đứng gần khái niệm đang xét, như ``Admission date'' (ngày nhập viện) hay ``Post-op day 2'' (ngày thứ 2 sau khi phẫu thuật).
 
@@ -411,9 +408,6 @@ Thiết bị y tế được sử dụng cũng là một gợi ý ngữ nghĩa c
 
 \subsubsection*{Trích xuất thông tin phẫu thuật y tế (Operation)}
 Phần lớn các khái niệm thuộc lớp Treatment được đề cập là các phẫu thuật y tế. Vì vậy đặc trưng thông tin phẫu thuật y tế có thể xem là một gợi ý cho việc phân giải đồng tham chiếu lớp Treatment. Các phẫu thuật y tế được xác định bằng cách: khái niệm có tồn tại trong bộ từ điển UMLS và kết thúc bằng các tiếp vĩ ngữ ``-tomy'', ``-plasty''.
-
-\subsubsection*{Trích xuất thông tin giả định (Assertion)}
-Thông tin giả định cho các khái niệm lớp Problem là bài toán từ thách thức I2B2 2010. Các thông tin giả định bao gồm: không liên quan đến bệnh nhân (not associated with the patient), có thể (possible), thiếu vắng (absent), ở hiện tại (present), có điều kiện (conditional) và giả thuyết (hypothetical). Ví dụ ``no \textit{fever}'', khái niệm cơn sốt (fever) được giả định rằng không có (absent). Một ví dụ khác là ``Doctors suspect \textit{an infection of the lungs}''. Khái niệm sự lây nhiễm của phổi (an infection of the lungs) được giả định rằng có thể tồn tại. Tuy nhiên do cách hiện thực được đề xuất cho đặc trưng này là xây dựng hệ thống học máy dựa trên các giải pháp cho Thách thức I2B2 2010. Trong giai đoạn luận văn, chúng tôi không có đủ thời gian hiện thực đặc trưng này.
 
 \section{Gom cụm và xây dựng chuỗi đồng tham chiếu}
 Ở mô hình cặp thực thể, hệ thống phân loại không có khả năng xây dựng chuỗi đồng tham chiếu mà nó chỉ có thể xác định một cặp khái niệm là có đồng tham chiếu hay không. Mặt khác, đối với một văn bản HSXV, số cặp khái niệm được sinh ra rất nhiều và trong số đó có nhiều cặp có chung khái niệm đứng sau, ví dụ hai cặp (“Dr. John”, “his”) và (“Mr. Brown”, “his”) có chung khái niệm đứng sau là “his” mà hai cặp này đều được hệ thống phân loại xác định là đồng tham chiếu, tuy nhiên chỉ một trong hai khái niệm “Dr. John” và “Mr. Brown” được chọn làm tiền đề cho khái niệm “his” này. Như vậy cần thiết phải có một giải thuật lựa chọn các cặp đồng tham chiếu và xây dựng các chuỗi đồng tham chiếu từ chúng.
@@ -459,12 +453,10 @@ Position & + & + & +\\
 Medication & & + & \\
 Indicator & & & +\\
 Temporal & & + & +\\
-Spatial & & + & \\
 Section & + & + & +\\
 Modifier & & & +\\
 Equipment & & & +\\
 Operation & & + & \\
-Assertion & + & & \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -488,24 +480,15 @@ Anatomy & 0, 1, 2 & Không cùng cơ quan cơ thể (0), cùng cơ quan (1), kh�
 Position & 0, 1, 2 & Không cùng vị trí (0), cùng vị trí (1), không xác định (2)\\
 Indicator & 0, 1, 2 & Không cùng thông tin chỉ định (0), cùng thông tin chỉ định (1), không xác định (2)\\
 Temporal & 0, 1, 2 & Không cùng thời gian (0), cùng thời gian (1), không xác định (2)\\
-Spatial & 0, 1, 2 & Không cùng không gian (0), cùng không gian(0), không xác định (2)\\
 Section & 1, 2,..., $n^{2}$ & Hai khái niệm thuộc về phân đoạn i và j của văn bản\\
 Equipment & 0, 1, 2 & Không cùng thiết bị (0), cùng thiết bị (1), không xác định (2)\\
 Operation & 0, 1, 2 & Không cùng phẫu thuật (0), cùng phẫu thuật (1), không xác định (2)\\
-Assertion & 0, 1, 2,..., $6^{2}$ & Trạng thái lớp khẳng định của hai khái niệm\\
 \textit{Trích xuất thông tin thuốc y tế}\\
 Drug & 0, 1 & Cùng tên thuốc (1), ngược lại (0)\\
 Mode & 0, 1, 2,..., 29 & Chỉ mục của 29 đường hấp thụ hoặc không xác định (29)\\
 Dosage & 0, 1 & Cùng liều lượng (1), ngược lại (1)\\
 Duration & 0, 1 & Cùng khoảng thời gian sử dụng (1), ngược lại (0)\\
 Frequency & 0, 1 & Cùng tần suất sử dụng (1), ngược lại (0)\\
-``List'' or ``Narrative'' & 0, 1 & Cùng là dạng liệt kê hoặc tường thuật (1), ngược lại (0)\\
-Time of first mention & 0, 1, 2, 3 & Thời gian của lần đề cập đầu tiên: Quá khứ (0), hiện tại (1), tương lai (2), không xác định (3)\\
-Time of second mention & 0, 1, 2, 3 & Thời gian của lần đề cập đầu tiên: Quá khứ (0), hiện tại (1), tương lai (2), không xác định (3)\\
-Episode of first mention & 0, 1, 2, 3 & Chương của lần đề cập đầu tiên: bắt đầu (0), tiếp diễn (1), tạm ngưng (2), không xác định (3)\\
-Episode of second mention & 0, 1, 2, 3 & Chương của lần đề cập đầu tiên: bắt đầu (0), tiếp diễn (1), tạm ngưng (2), không xác định (3)\\
-Condition of first mention & 0, 1, 2, 3 & Tình trạng của lần đề cập đầu tiên: khẳng định (0), gợi ý (1), có điều kiện (2), không xác định (3)\\
-Condition of second mention & 0, 1, 2, 3 & Tình trạng của lần đề cập đầu tiên: khẳng định (0), gợi ý (1), có điều kiện (2), không xác định (3)\\
 \textit{Khoảng cách}\\
 Sentence distance & 0, 1, 2,... & Số câu xuất hiện giữa hai khái niệm được xét\\
 \textit{Ngữ pháp}\\
