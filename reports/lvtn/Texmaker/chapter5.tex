@@ -214,7 +214,10 @@ Quá trình tiền xử lý gồm hai bước: đầu tiên khái niệm sẽ đ
 
 \section{Xây dựng các cặp khái niệm}
 
-\section{Rút trích đặc trưng lớp Person}
+\section{Rút trích đặc trưng lớp Person, Patient-class và Pronoun}
+Các lớp Person, Patient-class và Pronoun là các khái niệm tổng quát, có thể được bắt gặp trong nhiều lĩnh vực khác nhau không chỉ trong riêng lĩnh vực y tế và BAĐT. Vì vậy ba lớp khái niệm này có thể được phân biệt nhờ vào các thuộc tính chung về mặt ngôn ngữ như ngữ pháp hay từ vựng. Tuy nhiên, ngoài các đặc tính chung đó, từng lớp khái niệm còn mang những đặc tính riêng khác nhau. Việc này đòi hỏi chúng tôi phải thiết kế các hệ thống rút trích đặc trưng và phân loại tương ứng khác nhau. Đối với lớp Person, đầu vào của hệ thống rút trích đặc trưng là một cặp gồm hai khái niệm chỉ con người, tuy nhiên đầu vào của hệ thống rút trích đặc trưng lớp Patient-class và Pronoun chỉ là một khái niệm duy nhất thuộc lớp tương ứng.
+
+\subsection*{Lớp Person}
 Như đã đề cập trong phần \ref{ytuonghienthuc}, trong BAĐT, các khái niệm thuộc lớp Person thường được chia vào ba nhóm chính: bệnh nhân, người thân của bệnh nhân hoặc nhân sự của bệnh viện. Trong đó bệnh nhân là nhóm có số lượng khái niệm được đề cập nhiều nhất và chiếm phần lớn tổng số khái niệm lớp Person. Do vậy việc xác định một khái niệm thuộc vào nhóm nào đóng vai trò quan trọng trong việc phân giải chính xác chuỗi đồng tham chiếu cho khái niệm đó \cite{YanXu2012}. Đặc trưng lớp Patient được xác định bằng phương pháp phân loại nhị phân SVM. Hai nhóm người thân của bệnh nhân và nhân sự của bệnh viện được xác định bằng các đặc trưng từ vựng. Bảng \ref{tab:PersonFeatures} trình bày đầy đủ các đặc trưng dùng cho lớp Person.
 
 \begin{table}[th]
@@ -256,7 +259,7 @@ Pronoun match & 0, 1 & Cả hai đều là đại từ chỉ người (1), ngư�
 
 Với các đặc trưng ``Name match'', ``Relative match'', ``Department match'', ``Doctor title match'', ``Doctor general match'', ``Twin/Triplet'', ``We'', ``You'', ``I'', ``Pronoun match'', chúng tôi hiện thực bằng cách xây dựng tập từ điển tương ứng với từng đặc trưng dựa trên việc khảo sát tập dữ liệu và sử dụng các biểu thức chính quy. Các đặc trưng còn lại, chúng tôi hiện thực như miêu tả trong bảng \ref{tab:PersonFeatures}.
 
-\section{Rút trích đặc trưng lớp Patient-class}
+\subsection*{Lớp Patient-class}
 Từ nhận định trong việc rút trích đặc trưng của lớp Person, chúng tôi xây dựng một hệ thống SVM nhị phân để phân loại khái niệm thuộc lớp Person có phải là bệnh nhân hay không. Trong BAĐT thường chỉ có một bệnh nhân đóng vai trò là chủ thể của bệnh án.Vì vậy, các khái niệm nếu được xác định là bệnh nhân, thì sẽ được đưa vào một chuỗi đồng tham chiếu duy nhất về bệnh nhân đó. Thông qua phân tích tập dữ liệu, chúng tôi nhận thấy việc xác định một khái niệm thuộc lớp Person hay không có thể đạt được bằng cách xác định tập từ khóa chỉ về bệnh nhân như ``patient'', ``pt'', ... và tập từ khóa chỉ về nhóm người không phải bệnh nhân như ``doctor'', ``dr'', ``wife'', ...
 
 Vì tập dữ liệu không có thông tin xác định một khái niệm thuộc lớp Person có phải là bệnh nhân hay không, dựa theo hệ thống I chúng tôi xác định bằng cách chọn chuỗi đồng tham chiếu có nhiều khái niệm nhất trong tập kết quả làm chuỗi đồng tham chiếu chỉ bệnh nhân. Các khái niệm thuộc chuỗi đồng tham chiếu này sẽ được xem là khái niệm chỉ bệnh nhân và được chọn làm mẫu dương trong quá trình huấn luyện. Các khái niệm thuộc lớp Person còn lại không thuộc vào chuỗi đồng tham chiếu này sẽ được chọn làm mẫu âm trong quá trình huấn luyện. Tuy nhiên, chúng tôi nhận thấy phương pháp xác định bệnh nhân này có một nhược điểm là các BAĐT nhỏ, có nội dung ngắn sẽ tồn tại nhiều chuỗi đồng tham chiếu lớp Person có kích thước tương tự nhau. Trong đó chuỗi đồng tham chiếu chỉ bệnh nhân không chắc chắn là chuỗi đồng tham chiếu có kích thước lớn nhất.
@@ -272,27 +275,38 @@ Bảng \ref{tab:PatientFeatures} trình bày đầy đủ các đặc trưng đ�
 \toprule 
 \textbf{Đặc Trưng} & \textbf{Giá trị} & \textbf{Giải thích}\\
 \midrule
-Keyword of patient & 0, 1 & Các từ khóa về bệnh nhân (như mr., mr, ms., ms, yo-, y.o., y/o, year-old, ...)\\
-Keyword of doctor & 0, 1 & Các từ khóa về bác sĩ (dr, dr., md, m.d., m.d,…)\\
-Key word of doctor title & 0, 1 & Các từ khóa về chức vụ của bác sĩ (dentist, orthodontist, …)\\
-Key word of department  & 0, 1 & Các từ khóa về chuyên ngành bác sĩ (electrophysiology, …)\\
-Key word of general deparment & 0, 1 & Các từ khóa chung về phòng ban (team, service)\\
-Key word of general doctor & 0, 1 & Các từ khóa chung về bác sĩ (doctor, dict, author, pcp, attend, provider)\\
-Key word of relative & 0, 1 & Các từ khóa về người thân (wife, brother, sibling, nephew)\\
-Name & 0, 1 & Có phải là tên riêng hay không\\
-Last n line doctor & 0, 1 & Là tên bác sĩ ở n dòng cuối cùng\\
-Twin or triplet information & 0, 1 & Thông tin về cặp sinh đôi, sinh ba (baby 1, 2, 3,…)\\
-Preceded by non-patient & 0, 1 & Khái niệm đứng trước không phải là bệnh nhân.\\
-Signed information  & 0, 1 & Có liên quan đến việc kí/xác nhận bệnh án\\
-Previous sentence &  & Câu hoàn chỉnh liền trước khái niệm\\
-Next sentence &  & Câu hoàn chỉnh liền sau khái niệm\\
-Pronouns we & 0, 1 & Là đại từ chỉ chúng tôi (we, us, our, ourselves)\\
-Pronouns I & 0, 1 & Là đại từ chỉ tôi (I, my, me, myself)\\
-Pronouns you & 0, 1 & Là đại từ chỉ bạn (you, your, yourself)\\
-Pronouns they & 0, 1 & Là đại từ chỉ họ (they, them, their, themselves)\\
-Pronouns he/she most & 0, 1 & Thuộc phần đa số của đại từ chỉ cô ấy/anh ấy (he, his, her)\\
-Who & 0, 1 & Là đại từ “who” hoặc liền kề với khái niệm đứng trước\\
-Appositive & 0, 1 & Là đồng vị ngữ\\
+\emph{Ngữ nghĩa}\\
+\quad Keyword of patient & 0, 1 & Các từ khóa về bệnh nhân (như mr., mr, ms., ms, yo-, y.o., y/o, year-old, ...)\\
+\quad Keyword of doctor & 0, 1 & Các từ khóa về bác sĩ (dr, dr., md, m.d., m.d,…)\\
+\quad Keyword of doctor title & 0, 1 & Các từ khóa về chức vụ của bác sĩ (dentist, orthodontist, …)\\
+\quad Keyword of department  & 0, 1 & Các từ khóa về chuyên ngành bác sĩ (electrophysiology, …)\\
+\quad Keyword of general deparment & 0, 1 & Các từ khóa chung về phòng ban (team, service)\\
+\quad Keyword of general doctor & 0, 1 & Các từ khóa chung về bác sĩ (doctor, dict, author, pcp, attend, provider)\\
+\quad Keyword of relative & 0, 1 & Các từ khóa về người thân (wife, brother, sibling, nephew)\\
+\quad Name & 0, 1 & Có phải là tên riêng hay không\\
+\quad Last n line doctor & 0, 1 & Là tên bác sĩ ở n dòng cuối cùng\\
+\quad Twin or triplet information & 0, 1 & Thông tin về cặp sinh đôi, sinh ba (baby 1, 2, 3,…)\\
+\quad Preceded by non-patient & 0, 1 & Khái niệm đứng trước không phải là bệnh nhân.\\
+\quad Signed information  & 0, 1 & Có liên quan đến việc kí/xác nhận bệnh án\\
+\quad Previous sentence &  & Câu hoàn chỉnh liền trước khái niệm\\
+\quad Next sentence &  & Câu hoàn chỉnh liền sau khái niệm\\
+\emph{Ngữ pháp}\\
+\quad Pronouns we & 0, 1 & Là đại từ chỉ chúng tôi (we, us, our, ourselves)\\
+\quad Pronouns I & 0, 1 & Là đại từ chỉ tôi (I, my, me, myself)\\
+\quad Pronouns you & 0, 1 & Là đại từ chỉ bạn (you, your, yourself)\\
+\quad Pronouns they & 0, 1 & Là đại từ chỉ họ (they, them, their, themselves)\\
+\quad Pronouns he/she most & 0, 1 & Thuộc phần đa số của đại từ chỉ cô ấy/anh ấy (he, his, her)\\
+\quad Who & 0, 1 & Là đại từ “who” hoặc liền kề với khái niệm đứng trước\\
+\quad Appositive & 0, 1 & Là đồng vị ngữ\\
+\emph{Từ vựng}\\
+\quad First one/two/three words before mention & & Một/hai/ba từ liền trước khái niệm đang xét\\
+\quad First one/two/three words after mention & & Một/hai/ba từ liền sau khái niệm đang xét\\
+\quad First one/two/three words in between mention, problem & & Một/hai/ba từ đầu tiên nằm giữa khái niệm đang xét và khái niệm lớp Problem\\
+\quad Last one/two/three words in between mention, problem & & Một/hai/ba từ cuối cùng nằm giữa khái niệm đang xét và khái niệm lớp Problem\\
+\quad First one/two/three words in between mention, treatment & & Một/hai/ba từ đầu tiên nằm giữa khái niệm đang xét và khái niệm lớp Treatment\\
+\quad Last one/two/three words in between mention, treatment & & Một/hai/ba từ cuối cùng nằm giữa khái niệm đang xét và khái niệm lớp Treatment\\
+\quad First one/two/three words in between mention, test & & Một/hai/ba từ đầu tiên nằm giữa khái niệm đang xét và khái niệm lớp Test\\
+\quad Last one/two/three words in between mention, test & & Một/hai/ba từ cuối cùng nằm giữa khái niệm đang xét và khái niệm lớp Test\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -305,7 +319,7 @@ Qua việc khảo sát tập dữ liệu, chúng tôi nhận thấy trong BAĐT 
 
 Các đặc trưng liên quan đến từ khóa được chúng tôi hiện thực bằng cách khảo sát tập dữ liệu và xây dựng bộ từ điển thích hợp cho từng đặc trưng. Các đặc trưng còn lại được chúng tôi hiện thực theo như miêu tả trong bảng \ref{tab:PatientFeatures}
 
-\section{Rút trích đặc trưng lớp Pronoun}
+\subsection*{Lớp Pronoun}
 Khác với các lớp khái niệm khác trong BAĐT, lớp khái niệm Pronoun là lớp khái niệm trừu tượng, có thể chỉ về bất kì khái niệm thuộc bốn lớp Person, Problem, Treatment, Test hoặc là khái niệm duy nhất (singleton). Để giải quyết vấn đề đồng tham chiếu cho lớp Pronoun, tác giả của hệ thống I đề xuất xây dựng hệ thống phân loại SVM nhiều lớp (multi-class SVM). Hệ thống SVM này dùng để phân loại khái niệm thuộc lớp Pronoun đang xét đồng tham chiếu đến lớp khái niệm nào trong bốn lớp Person, Problem, Treatment, Test. Sau đó ta chọn khái niệm thuộc lớp tương ứng ở gần nhất trước đó để làm tiền đề cho đại từ đang xét. Ví dụ ``\underline{Hepatitis C cirrhosis} for \textit{which} the patient was on the liver transplant list'' có ``which'' là đại từ đang xét và ``Hepatitis C cirrhosis'' là khái niệm thuộc lớp Problem. Nếu xác định được đại từ ``which'' thuộc lớp Problem, ta có thể kết luận ``which'' và ``Hepatitis C cirrhosis'' đồng tham chiếu do khái niệm ``Hepatitis C cirrhosis'' cùng thuộc lớp Problem và ở gần nhất trước đó. Bảng \ref{tab:PronounFeatures} mô tả đầy đủ các đặc trưng được sử dụng cho lớp Pronoun.
 
 \begin{table}[th]
@@ -317,18 +331,23 @@ Khác với các lớp khái niệm khác trong BAĐT, lớp khái niệm Pronou
 \toprule 
 \textbf{Đặc Trưng} & \textbf{Giá trị} & \textbf{Giải thích}\\
 \midrule
-First previous mention type & 0, 1, 2, 3, 4 & Khái niệm đứng liền trước thuộc lớp Person (0) hoặc Problem (1) hoặc Treatment (2) hoặc Test (3) hoặc không thuộc lớp nào (4)\\
-Second previous mention type & 0, 1, 2, 3, 4 & Khái niệm đứng liền trước thứ 2 thuộc lớp Person (0) hoặc Problem (1) hoặc Treatment (2) hoặc Test (3) hoặc không thuộc lớp nào (4)\\
-First next mention type & 0, 1, 2, 3, 4 & Khái niệm đứng liền sau thuộc lớp Person (0) hoặc Problem (1) hoặc Treatment (2) hoặc Test (3) hoặc không thuộc lớp nào (4)\\
-Sentence distance & 0, 1, 2, ... & Số câu xuất hiện giữa hai khái niệm được xét\\
-Pronoun & 0, 1, 2, ..., 14 & Chỉ mục của đại từ được xét trong bảng tra 15 đại từ\\
-Part of speech & 0, 1, 2 & DT (0), WDT (1), PRP (2)\\
-First next verb after mention & & Động từ đứng liền sau khái niệm\\
-First word before mention is preposition & 0, 1 & Từ liền trước là giới từ (1), ngược lại (0)\\
-First one/two/three words before mention & & 1/2/3 từ liền trước khái niệm được xét\\
-First one/two/three words after mention & & 1/2/3 từ liền sau khái niệm được xét\\
-An adjacent mention after pronoun + VP  & 0, 1 & Khái niệm được xét liền sau đại từ + cụm động từ\\
-And, as well as, in addition to & 0, 1 & Khái niệm được xét liền sau ``and'', ``as well as'', ``in addition to''\\
+\emph{Quan hệ}\\
+\quad First previous mention type & 0, 1, 2, 3, 4 & Khái niệm đứng liền trước thuộc lớp Person (0) hoặc Problem (1) hoặc Treatment (2) hoặc Test (3) hoặc không thuộc lớp nào (4)\\
+\quad Second previous mention type & 0, 1, 2, 3, 4 & Khái niệm đứng liền trước thứ 2 thuộc lớp Person (0) hoặc Problem (1) hoặc Treatment (2) hoặc Test (3) hoặc không thuộc lớp nào (4)\\
+\quad First next mention type & 0, 1, 2, 3, 4 & Khái niệm đứng liền sau thuộc lớp Person (0) hoặc Problem (1) hoặc Treatment (2) hoặc Test (3) hoặc không thuộc lớp nào (4)\\
+\emph{Khoảng cách}\\
+\quad Sentence distance & 0, 1, 2, ... & Số câu xuất hiện giữa hai khái niệm được xét\\
+\emph{Ngữ pháp}\\
+\quad Pronoun & 0, 1, 2, ..., 14 & Chỉ mục của đại từ được xét trong bảng tra 15 đại từ\\
+\emph{Cú pháp}\\
+\quad Part of speech & 0, 1, 2 & DT (0), WDT (1), PRP (2)\\
+\quad First next verb after mention & & Động từ đứng liền sau khái niệm\\
+\quad First word before mention is preposition & 0, 1 & Từ liền trước là giới từ (1), ngược lại (0)\\
+\quad First one/two/three words before mention & & 1/2/3 từ liền trước khái niệm được xét\\
+\quad First one/two/three words after mention & & 1/2/3 từ liền sau khái niệm được xét\\
+\quad An adjacent mention after pronoun + VP  & 0, 1 & Khái niệm được xét liền sau đại từ + cụm động từ\\
+\emph{Ngữ nghĩa}\\
+\quad And, as well as, in addition to & 0, 1 & Khái niệm được xét liền sau ``and'', ``as well as'', ``in addition to''\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -337,7 +356,7 @@ Các đặc trưng ``First next verb after mention'', ``First one/two/three word
 
 Các đặc trưng ``Part of speech'', ``First word after mention is preposition'', ``An adjacent mention after pronoun + VP'' được hiện thực bằng cách tìm câu văn chứa khái niệm đang xét trong BAĐT. Sau đó, chúng tôi tiến hành phân đoạn câu (tokenize) và đánh dấu thông tin từ loại (POS tag) đối với câu văn chứa khái niệm đang xét. Từ danh sách thông tin từ loại có được, các đặc trưng nêu trên được tính giá trị theo mô tả. Chúng tôi sử dụng hệ thống xử lý ngôn ngữ tự nhiên Apache OpenNLP cho các tác vụ phân đoạn câu và đánh dấu thông tin từ loại. Các đặc trưng còn lại được chúng tôi hiện thực theo như mô tả trong bảng \ref{tab:PronounFeatures}.
 
-\section{Rút trích đặc trưng lớp Problem/Treatment/Test}
+\section{Rút trích đặc trưng lớp Problem, Treatment và Test}
 Nhóm lớp Problem/Treatment/Test là nhóm lớp đặc biệt thuộc riêng lĩnh vực y khoa. Trong lĩnh vực này, cùng một khái niệm có thể được biểu diễn dưới nhiều hình thức khác nhau. Ví dụ để chỉ nồng độ bạch cầu trong máu, trong BAĐT có thể được diễn đạt là ``WBC'', ``white blood cell count'' hoặc ``white blood count''. Việc xác định được các cụm từ có cách diễn đạt khác nhau nhưng cùng chỉ một khái niệm có thể giúp tăng độ chính xác và giải sai sót trong quá trình phân loại. Để làm được điều này, tác giả của hệ thống I đề xuất sử dụng các nguồn tri thức nhân loại bên ngoài như Wikipedia, UMLS hoặc WordNet.
 
 \subsection*{Wikipedia}
@@ -408,7 +427,7 @@ Tuy nhiên từng lớp Problem/Treatment/Test không sử dụng toàn bộ cá
 
 \begin{table}[ht]
 \centering\ra{1.2}
-\caption{Phân chia đặc trưng được sử dụng trong ba lớp Problem/Treatment/Test \label{tab:SemanticFeatures}}
+\caption{Phân chia đặc trưng được sử dụng trong ba lớp Problem, Treatment và Test \label{tab:SemanticFeatures}}
 \footnotesize\sffamily
 
 \begin{tabularx}{\textwidth}{@{}l *5{>{\centering\arraybackslash}X}@{}}
@@ -430,45 +449,45 @@ Operation & & + & \\
 
 \begin{table}[th]
 \centering
-\caption{Tập đặc trưng cho lớp Problem/Treatment/Test \label{tab:ProbTreatTestFeatures}}
+\caption{Tập đặc trưng cho ba lớp Problem, Treatment và Test \label{tab:ProbTreatTestFeatures}}
 \footnotesize\sffamily
 
 \begin{tabularx}{\textwidth}{@{}P{\raggedright}{0.3}lL@{}}
 \toprule 
 \textbf{Đặc Trưng} & \textbf{Giá trị} & \textbf{Giải thích}\\
 \midrule
-\textit{Tri thức nhân loại}\\
-Wiki page match & 0, 1 & Hai khái niệm cùng dẫn đến một trang Wiki\\
-Wiki anchor match & 0, 1 & Trang Wiki của một khái niệm chứa liên kết đến trang wiki của khái niệm còn lại\\
-Wiki bold name match & 0, 1 & Trang Wiki của một khái niệm chứa từ in đậm chỉ khái niệm còn lại\\
-WordNet match & 0, 1 & Hai khái niệm được xác định đồng nghĩa trên WordNet\\
-\textit{Trích xuất thông tin ngữ nghĩa trong văn bản}\\
-Anatomy & 0, 1, 2 & Không cùng cơ quan cơ thể (0), cùng cơ quan (1), không xác định (2)\\
-Position & 0, 1, 2 & Không cùng vị trí (0), cùng vị trí (1), không xác định (2)\\
-Indicator & 0, 1, 2 & Không cùng thông tin chỉ định (0), cùng thông tin chỉ định (1), không xác định (2)\\
-Temporal & 0, 1, 2 & Không cùng thời gian (0), cùng thời gian (1), không xác định (2)\\
-Section & 1, 2,..., $n^{2}$ & Hai khái niệm thuộc về phân đoạn i và j của văn bản\\
-Equipment & 0, 1, 2 & Không cùng thiết bị (0), cùng thiết bị (1), không xác định (2)\\
-Operation & 0, 1, 2 & Không cùng phẫu thuật (0), cùng phẫu thuật (1), không xác định (2)\\
-\textit{Trích xuất thông tin thuốc y tế}\\
-Drug & 0, 1 & Cùng tên thuốc (1), ngược lại (0)\\
-Mode & 0, 1, 2,..., 29 & Chỉ mục của 29 đường hấp thụ hoặc không xác định (29)\\
-Dosage & 0, 1 & Cùng liều lượng (1), ngược lại (1)\\
-Duration & 0, 1 & Cùng khoảng thời gian sử dụng (1), ngược lại (0)\\
-Frequency & 0, 1 & Cùng tần suất sử dụng (1), ngược lại (0)\\
-\textit{Khoảng cách}\\
-Sentence distance & 0, 1, 2,... & Số câu xuất hiện giữa hai khái niệm được xét\\
-\textit{Ngữ pháp}\\
-Article & 1, 2,..., $3^{2}$ & Trạng thái các từ hạn định (determiner) đứng trước hai khái niệm, bao gồm 3 loại: (a|an), (the|his|her…) hoặc không có (NULL)\\
-\textit{So trùng chuỗi}\\
-Head noun match & 0, 1 & Cùng danh từ trung tâm (1), ngược lại (0)\\
-Contains & 0, 1 & Một khái niệm chứa toàn bộ chuỗi của khái niệm còn lại\\
-Capital match & 0, 1 & Các kí tự đầu tiên trùng nhau (1), ngược lại (0)\\
-Substring match & 0, 1 & Có cùng chuỗi con (1), ngược lại (0)\\
-Cos distance & (0, 1) & Khoảng cách cos (góc) giữa hai khái niệm
-\textit{Ngữ nghĩa}\\
-Word match & 0, 1 & Hai khái niệm trùng chuỗi hoàn toàn\\
-Procedure match & 0, 1 & Có chứa từ ``Procedure'' (1), ngược lại (0)\\
+\emph{Tri thức nhân loại}\\
+\quad Wiki page match & 0, 1 & Hai khái niệm cùng dẫn đến một trang Wiki\\
+\quad Wiki anchor match & 0, 1 & Trang Wiki của một khái niệm chứa liên kết đến trang wiki của khái niệm còn lại\\
+\quad Wiki bold name match & 0, 1 & Trang Wiki của một khái niệm chứa từ in đậm chỉ khái niệm còn lại\\
+\quad WordNet match & 0, 1 & Hai khái niệm được xác định đồng nghĩa trên WordNet\\
+\emph{Trích xuất thông tin ngữ nghĩa trong văn bản}\\
+\quad Anatomy & 0, 1, 2 & Không cùng cơ quan cơ thể (0), cùng cơ quan (1), không xác định (2)\\
+\quad Position & 0, 1, 2 & Không cùng vị trí (0), cùng vị trí (1), không xác định (2)\\
+\quad Indicator & 0, 1, 2 & Không cùng thông tin chỉ định (0), cùng thông tin chỉ định (1), không xác định (2)\\
+\quad Temporal & 0, 1, 2 & Không cùng thời gian (0), cùng thời gian (1), không xác định (2)\\
+\quad Section & 1, 2,..., $n^{2}$ & Hai khái niệm thuộc về phân đoạn i và j của văn bản\\
+\quad Equipment & 0, 1, 2 & Không cùng thiết bị (0), cùng thiết bị (1), không xác định (2)\\
+\quad Operation & 0, 1, 2 & Không cùng phẫu thuật (0), cùng phẫu thuật (1), không xác định (2)\\
+\emph{Trích xuất thông tin thuốc y tế}\\
+\quad Drug & 0, 1 & Cùng tên thuốc (1), ngược lại (0)\\
+\quad Mode & 0, 1, 2,..., 29 & Chỉ mục của 29 đường hấp thụ hoặc không xác định (29)\\
+\quad Dosage & 0, 1 & Cùng liều lượng (1), ngược lại (1)\\
+\quad Duration & 0, 1 & Cùng khoảng thời gian sử dụng (1), ngược lại (0)\\
+\quad Frequency & 0, 1 & Cùng tần suất sử dụng (1), ngược lại (0)\\
+\emph{Khoảng cách}\\
+\quad Sentence distance & 0, 1, 2,... & Số câu xuất hiện giữa hai khái niệm được xét\\
+\emph{Ngữ pháp}\\
+\quad Article & 1, 2,..., $3^{2}$ & Trạng thái các từ hạn định (determiner) đứng trước hai khái niệm, bao gồm 3 loại: (a|an), (the|his|her…) hoặc không có (NULL)\\
+\emph{So trùng chuỗi}\\
+\quad Head noun match & 0, 1 & Cùng danh từ trung tâm (1), ngược lại (0)\\
+\quad Contains & 0, 1 & Một khái niệm chứa toàn bộ chuỗi của khái niệm còn lại\\
+\quad Capital match & 0, 1 & Các kí tự đầu tiên trùng nhau (1), ngược lại (0)\\
+\quad Substring match & 0, 1 & Có cùng chuỗi con (1), ngược lại (0)\\
+\quad Cos distance & (0, 1) & Khoảng cách cos (góc) giữa hai khái niệm
+\emph{Ngữ nghĩa}\\
+\quad Word match & 0, 1 & Hai khái niệm trùng chuỗi hoàn toàn\\
+\quad Procedure match & 0, 1 & Có chứa từ ``Procedure'' (1), ngược lại (0)\\
 \bottomrule
 \end{tabularx}
 \end{table}
