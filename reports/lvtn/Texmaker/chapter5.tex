@@ -3,18 +3,8 @@
 Bài toán mà chúng tôi giải quyết là bài toán: ``Phân giải đồng tham chiếu cho các hồ sơ xuất viện tiếng Anh với các khái niệm đã được trích xuất và gán nhãn''. Đầu vào của bài toán bao gồm hai phần:
 
 \begin{enumerate}[leftmargin=\the\parindent]
-\item \emph{Tập các hồ sơ xuất viện: }Đây là những văn bản lâm
-sàng được viết tay bằng ngôn ngữ tự nhiên bởi các bác sĩ, y tá. Chúng
-mô tả lại toàn bộ thông tin của bệnh nhân trong một lần điều trị,
-bao gồm các thông tin về tên bệnh mà bệnh nhân mắc phải, các thủ tục
-y tế được thực hiện và các phương pháp điều trị được áp dụng lên bệnh
-nhân.
-\item \emph{Tập các khái niệm đã được trích xuất và gán nhãn:}
-Mỗi hồ sơ xuất viện đi kèm với một văn bản chứa toàn bộ các khái niệm
-được đề cập trong hồ sơ đó. Các khái niệm này đã được gán nhãn cho
-phù hợp với loại thực thể mà nó đề cập tới. Có tất cả năm nhãn là
-Problem, Treatment, Test, Person và Pronoun được i2b2 định nghĩa.
-Bảng \ref{tab:EntityLabels} mô tả chi tiết ý nghĩa của năm nhãn này.
+\item \emph{Tập các hồ sơ xuất viện: }Đây là những văn bản lâm sàng được viết tay bằng ngôn ngữ tự nhiên bởi các bác sĩ, y tá. Chúng mô tả lại toàn bộ thông tin của bệnh nhân trong một lần điều trị, bao gồm các thông tin về tên bệnh mà bệnh nhân mắc phải, các thủ tục y tế được thực hiện và các phương pháp điều trị được áp dụng lên bệnh nhân. Để thuận tiện, từ đây trở đi chúng tôi dùng từ viết tắt HSXV để nói về các hồ sơ này.
+\item \emph{Tập các khái niệm đã được trích xuất và gán nhãn:} Mỗi hồ sơ xuất viện đi kèm với một văn bản chứa toàn bộ các khái niệm được đề cập trong hồ sơ đó. Các khái niệm này đã được gán nhãn cho phù hợp với loại thực thể mà nó đề cập tới. Có tất cả năm nhãn là Problem, Treatment, Test, Person và Pronoun được i2b2 định nghĩa. Bảng \ref{tab:EntityLabels} mô tả chi tiết ý nghĩa của năm nhãn này.
 \end{enumerate}
 
 Mục tiêu của chúng tôi là phân giải đồng tham chiếu cho các khái niệm trong tập các khái niệm ứng với mỗi hồ sơ xuất viện. Cụ thể kết quả đầu ra là danh sách các chuỗi đồng tham chiếu của khái niệm đó, ví dụ \emph{c=``the patient'' 13:0 13:1||c=``he'' 14:0 14:0||c=``his'' 14:7 14:7||t=``coref person''} mô tả một chuỗi đồng tham chiếu bao gồm các khái niệm ``the patient'' (xuất hiện ở dòng thứ 13, từ vị trí 0 đến 1), ``he'' và ``his''. Các khái niệm này đồng tham chiếu tới cùng một người (\emph{t=``coref person''}).
@@ -41,11 +31,11 @@ Mục tiêu của chúng tôi là phân giải đồng tham chiếu cho các kh�
 Dựa vào hệ thống có hiệu năng tốt nhất của thử thách i2b2 năm 2011 (hệ thống \cite{YanXu2012}), mô hình phân giải đồng tham chiếu mà chúng tôi sử dụng để hiện thực hệ thống là mô hình cặp thực thể. Tư tưởng cơ bản của mô hình này là xác định xem hai khái niệm bất kì có đồng tham chiếu với nhau hay không, sau đó gom nhóm các cặp đồng tham chiếu có một khái niệm chung lại để tạo thành các chuỗi đồng tham chiếu. Như vậy kiến trúc tổng quát của hệ thống chúng tôi hiện thực gồm hai quy trình: \emph{quy trình huấn luyện hệ thống phân loại} và \emph{quy trình phân giải đồng tham chiếu}. Trong đó quy trình huấn luyện là bước huấn luyện các model phân loại dựa trên dữ liệu mẫu đã được phân giải đồng tham chiếu. Quy trình phân giải sử dụng các model phân loại đã được huấn luyện để xác định tính đồng tham chiếu của các cặp khái niệm, từ đó sử dụng một giải thuật gom nhóm các cặp đồng tham chiếu lại để tạo thành các chuỗi đồng tham chiếu.
 
 \subsection*{Quy trình huấn luyện}
-Để xác định tính đồng tham chiếu giữa hai khái niệm bất kì, ta cần huấn luyện một model phân loại dựa trên dữ liệu mẫu. Vì đầu vào của quy trình là các văn bản BAĐT và danh sách các khái niệm đã được gán nhãn, hệ thống cần trích xuất đặc trưng của các dữ liệu thô này rồi mới có thể đưa vào để huấn luyện. Bên cạnh đó, các khái niệm đã được phân loại vào bốn nhóm chính là Person, Problem, Test và Treatment, còn các đại từ được phân vào nhóm Pronoun nên để giảm bớt số cặp khái niệm được sinh ra, chúng tôi huấn luyện bốn model để xác định tính đồng tham chiếu của riêng các cặp Person-Person, Problem-Problem, Test-Test và Treatment-Treatment (vì hai khái niệm thuộc hai lớp khác nhau thì nghiễm nhiên không đồng tham chiếu với nhau). Các đại từ đa phần chỉ tới các khái niệm ở trước đó, nên việc xác định xem một đại từ thực chất mang ý nghĩa của lớp nào trong bốn lớp chính Person, Problem, Test, Treatment là một việc quan trọng. Sau khi xác định được lớp chính của đại từ, chúng tôi chọn khái niệm thuộc lớp tương ứng ở gần nhất trước đó làm tiền đề cho nó. Các ý này đều là của các tác giả hệ thống \cite{YanXu2012}.
+Để xác định tính đồng tham chiếu giữa hai khái niệm bất kì, ta cần huấn luyện một mô hình phân loại dựa trên dữ liệu mẫu. Vì đầu vào của quy trình là các văn bản HSXV và danh sách các khái niệm đã được gán nhãn, hệ thống cần trích xuất đặc trưng của các dữ liệu thô này rồi mới có thể đưa vào để huấn luyện. Bên cạnh đó, các khái niệm đã được phân loại vào bốn nhóm chính là Person, Problem, Test và Treatment, còn các đại từ được phân vào nhóm Pronoun nên để giảm bớt số cặp khái niệm được sinh ra, chúng tôi huấn luyện bốn model để xác định tính đồng tham chiếu của riêng các cặp Person-Person, Problem-Problem, Test-Test và Treatment-Treatment (vì hai khái niệm thuộc hai lớp khác nhau thì nghiễm nhiên không đồng tham chiếu với nhau). Các đại từ đa phần chỉ tới các khái niệm ở trước đó, nên việc xác định xem một đại từ thực chất mang ý nghĩa của lớp nào trong bốn lớp chính Person, Problem, Test, Treatment là một việc quan trọng. Sau khi xác định được lớp chính của đại từ, chúng tôi chọn khái niệm thuộc lớp tương ứng ở gần nhất trước đó làm tiền đề cho nó. Các ý này đều là của các tác giả hệ thống \cite{YanXu2012}.
 
-Ngoài ra cũng theo các tác giả này, thông tin một khái niệm lớp Person có chỉ về bệnh nhân hay không góp một phần quan trọng trong việc phân loại đúng tính đồng tham chiếu của các cặp khái niệm lớp này. Trong miền văn bản BAĐT, các khái niệm chỉ người thường chỉ đề cập đến một trong ba loại: bệnh nhân, người thân của bệnh nhân và nhân sự của bệnh viện. Một BAĐT, mà cụ thể là hồ sơ xuất viện (HSXV), thông thường chỉ đề cập đến một bệnh nhân nên những khái niệm nào chỉ về bệnh nhân thì chắc chắn nằm trong một chuỗi đồng tham chiếu lớn nhất và duy nhất chỉ về bệnh nhân đó. Từ nhận định này, nhóm tác giả của hệ thống \cite{YanXu2012} đã thêm vào đặc trưng lớp Patient (Patient-class) cho cặp hai khái niệm lớp Person, nó mang giá trị ``có'' khi hai khái niệm đều chỉ về bệnh nhân và ``không'' trong các trường hợp khác. Ở bước huấn luyện, thông tin ``một khái niệm Person có chỉ về bệnh nhân hay không'' được lấy từ tập chuỗi kết quả, còn ở bước phân giải đồng tham chiếu thông tin này được xác định nhờ một model phân loại đã được huấn luyện.
+Ngoài ra cũng theo các tác giả này, thông tin một khái niệm lớp Person có chỉ về bệnh nhân hay không góp một phần quan trọng trong việc phân loại đúng tính đồng tham chiếu của các cặp khái niệm lớp này. Trong miền văn bản HSXV, các khái niệm chỉ người thường chỉ đề cập đến một trong ba loại: bệnh nhân, người thân của bệnh nhân và nhân sự của bệnh viện. Một BAĐT, mà cụ thể là một HSXV, thông thường chỉ đề cập đến một bệnh nhân nên những khái niệm nào chỉ về bệnh nhân thì chắc chắn nằm trong một chuỗi đồng tham chiếu lớn nhất và duy nhất chỉ về bệnh nhân đó. Từ nhận định này, nhóm tác giả của hệ thống \cite{YanXu2012} đã thêm vào đặc trưng lớp Patient (Patient-class) cho cặp hai khái niệm lớp Person, nó mang giá trị ``có'' khi hai khái niệm đều chỉ về bệnh nhân và ``không'' trong các trường hợp khác. Ở bước huấn luyện, thông tin ``một khái niệm Person có chỉ về bệnh nhân hay không'' được lấy từ tập chuỗi kết quả, còn ở bước phân giải đồng tham chiếu thông tin này được xác định nhờ một model phân loại đã được huấn luyện.
 
-Như vậy mục đích của quy trình huấn luyện là xây dựng tổng cộng sáu SVM model, trong đó bốn SVM model nhằm mục đích phân loại và đánh giá độ tin cậy đồng tham chiếu của các cặp khái niệm Person-Person, Problem-Problem, Test-Test và Treatment-Treatment; một SVM model để xác định các khái niệm Person có là bệnh nhân hay không (Patient-class) và một SVM model để phân loại các đại từ (các khái niệm lớp Pronoun) vào một trong bốn lớp Person, Problem, Test và Treatment. Đầu vào của quy trình này là toàn bộ các văn bản BAĐT với các khái niệm đã được trích xuất và gán nhãn. Sau khi tiền xử lý, hệ thống xây dựng các mẫu huấn luyện bao gồm: Person, Person-Person, Problem-Problem, Test-Test, Treatment-Treatment và Pronoun từ danh sách các khái niệm. Sáu tập mẫu này được trích xuất thuộc tính và đưa vào để huấn luyện sáu SVM model (Hình \ref{fig:SDHL}). Thư viện SVM được nhóm sử dụng là LibSVM. 
+Như vậy mục đích của quy trình huấn luyện là xây dựng tổng cộng sáu mô hình SVM, trong đó bốn mô hình SVM nhằm mục đích phân loại và đánh giá độ tin cậy đồng tham chiếu của các cặp khái niệm Person-Person, Problem-Problem, Test-Test và Treatment-Treatment; một mô hình SVM để xác định các khái niệm Person có là bệnh nhân hay không (Patient-class) và một mô hình SVM để phân loại các đại từ (các khái niệm lớp Pronoun) vào một trong bốn lớp Person, Problem, Test và Treatment. Đầu vào của quy trình này là toàn bộ các văn bản HSXV với các khái niệm đã được trích xuất và gán nhãn. Sau khi tiền xử lý, hệ thống xây dựng các mẫu huấn luyện bao gồm: Person, Person-Person, Problem-Problem, Test-Test, Treatment-Treatment và Pronoun từ danh sách các khái niệm. Sáu tập mẫu này được trích xuất thuộc tính và đưa vào để huấn luyện sáu SVM model (Hình \ref{fig:SDHL}). Thư viện SVM được nhóm sử dụng là LibSVM. 
 
 \begin{figure}[th]
 \centering
@@ -69,11 +59,11 @@ Như vậy mục đích của quy trình huấn luyện là xây dựng tổng c
 	\node[io](pron){Đặc trưng Pronoun};	
 	\node[proc, right=2.6cm of $(prop)!0.5!(tstp)$](train){Huấn luyện};
 	\node[io,right=7cm of perp](perm){SVM model cho cặp Person};
-	\node[io](patim){SVM model Patient-class};
-	\node[io](prom){SVM model cho cặp Problem};
-	\node[io](tstm){SVM model cho cặp Test};
-	\node[io](trem){SVM model cho cặp Treatment};
-	\node[io](pronm){SVM model cho Pronoun};
+	\node[io](patim){Mô hình SVM Patient-class};
+	\node[io](prom){Mô hình SVM cho cặp Problem};
+	\node[io](tstm){Mô hình SVM cho cặp Test};
+	\node[io](trem){Mô hình SVM cho cặp Treatment};
+	\node[io](pronm){Mô hình SVM cho Pronoun};
 
 	\draw[->] (emr) -- ++(down:0.9cm) -| (prep.130);
 	\draw[->] (con) -- ++(down:0.9cm) -| (prep.50);
@@ -100,7 +90,7 @@ Như vậy mục đích của quy trình huấn luyện là xây dựng tổng c
 \end{figure}
 
 \subsection*{Quy trình phân giải}
-Quy trình phân giải đồng tham chiếu sử dụng sáu SVM model đã được huấn luyện ở bước trên, cùng với đó là một giải thuật gom nhóm các cặp khái niệm đã được phân loại là đồng tham chiếu với nhau lại để cuối cùng tạo thành các chuỗi đồng tham chiếu. Có thể xem đây là quy trình mang đi ứng dụng thực tế để phân giải cho những văn bản BAĐT mới. Dựa vào hệ thống \cite{YanXu2012}, chúng tôi sử dụng giải thuật gom cụm tốt nhất trước để lựa chọn các cặp đồng tham chiếu có độ tin cậy cao nhất, sau đó xây dựng các chuỗi đồng tham chiếu bằng cách nối các cặp có một khái niệm chung. Đối với lớp Pronoun, sau khi đã xác định được lớp chính của một đại từ bất kì, chúng tôi tạo một cặp đồng tham chiếu giữa đại từ đó và khái niệm thuộc lớp chính tương ứng ở gần nhất trước đó trong văn bản. Theo nhận định của các tác giả hệ thống \cite{YanXu2012}, tuy cách làm này đơn giản nhưng lại tỏ ra rất hiệu quả.
+Quy trình phân giải đồng tham chiếu sử dụng sáu mô hình SVM đã được huấn luyện ở bước trên, cùng với đó là một giải thuật gom nhóm các cặp khái niệm đã được phân loại là đồng tham chiếu với nhau lại để cuối cùng tạo thành các chuỗi đồng tham chiếu. Có thể xem đây là quy trình mang đi ứng dụng thực tế để phân giải cho những văn bản HSXV mới. Dựa vào hệ thống \cite{YanXu2012}, chúng tôi sử dụng giải thuật gom cụm tốt nhất trước để lựa chọn các cặp đồng tham chiếu có độ tin cậy cao nhất, sau đó xây dựng các chuỗi đồng tham chiếu bằng cách nối các cặp có một khái niệm chung. Đối với lớp Pronoun, sau khi đã xác định được lớp chính của một đại từ bất kì, chúng tôi tạo một cặp đồng tham chiếu giữa đại từ đó và khái niệm thuộc lớp chính tương ứng ở gần nhất trước đó trong văn bản. Theo nhận định của các tác giả hệ thống \cite{YanXu2012}, tuy cách làm này đơn giản nhưng lại tỏ ra rất hiệu quả.
 
 Hình \ref{fig:SDPG} mô tả trực quan quy trình phân giải đồng tham chiếu. Ở bước trích xuất thuộc tính của các cặp Person, chúng tôi sử dụng model phân loại bệnh nhân để xác định giá trị cho đặc trưng Patient-class. Theo kết quả đánh giá các hệ thống dự thi thử thách i2b2 2011, ba hệ đo được sử dụng để đánh giá hiệu năng là: MUC, B-CUBED và CEAF. Chúng tôi cũng hiện thực các hệ đo này để đánh giá các chuỗi đồng tham chiếu được xuất ra bởi hệ thống của mình và so sánh kết quả với hệ thống \cite{YanXu2012}. 
 
@@ -213,14 +203,55 @@ Quá trình tiền xử lý gồm hai bước: đầu tiên khái niệm sẽ đ
 Đặc biệt các khái niệm thuộc lớp Problem/Treatment/Test thường được kèm thêm thông tin về định lượng như 10mg, 5 lit và các thông tin về vị trí giải phẫu học như ``upper'', ``left'', ``right''. Để tăng khả năng tìm kiếm tri thức nhân loại, chúng tôi đề xuất loại bỏ các thông tin ngữ cảnh về số, định lượng và vị trí giải phẫu khỏi khái niệm. Các thông tin ngữ cảnh được loại bỏ bằng cách sử dụng biểu thức chính quy và các từ vựng được xây dựng từ tập dữ liệu. Các đặc trưng liên quan so trùng chuỗi không áp dụng bước tiền xử lý loại bỏ thông tin ngữ cảnh này.
 
 \section{Xây dựng các cặp khái niệm}
+Sau khi tiền xử lý, hệ thống xây dựng các cặp khái niệm với mục đích xác định xem hai khái niệm bất kì có đồng tham chiếu với nhau hay không. Vì SVM không có khả năng học tăng cường nên đối với \emph{quy trình huấn luyện}, chúng tôi cần xây dựng các cặp khái niệm từ toàn bộ danh sách khái niệm trong tập huấn luyện, sau đó rút trích đặc trưng cho toàn bộ các cặp khái niệm này và đưa vào huấn luyện các mô hình SVM. Một khó khăn của cách làm này là số cặp khái niệm phát sinh rất nhiều nếu tất cả các cặp được xây dựng cho một văn bản HSXV. Cụ thể với tập huấn luyện gồm 200 HSXV, mỗi hồ sơ chứa trung bình 150 khái niệm thì số các cặp khái niệm được sinh ra là $200\times \binom{150}{2}=2.235.000$ cặp. Dựa theo thực nghiệm của chúng tôi, sử dụng một tập vector đặc trưng chứa khoảng 300.000 vector để huấn luyện một mô hình SVM với kernel phi tuyến tính mất từ 4 đến 5 tiếng đồng hồ. Như vậy với một tập gồm hơn 2 triệu vector đặc trưng thì việc huấn luyện như vậy là bất khả thi.
+
+Bên cạnh số lượng các vector đặc trưng, một vấn đề khác mà chúng tôi gặp phải trong quá trình huấn luyện là sự mất cân bằng trong phân bố lớp: các cặp không đồng tham chiếu (các mẫu âm) có số lượng quá nhiều so với các cặp đồng tham chiếu (các mẫu dương). Một tập vector đặc trưng bị mất cân bằng lớp sẽ khiến cho mô hình SVM được huấn luyện dựa trên tập đó có xu hướng phân loại về phía lớp có số lượng nhiều hơn. 
+
+Để giải quyết vấn đề về số lượng cặp khái niệm, ở phần trước chúng tôi có nêu lên ý tưởng hiện thực là huấn luyện các mô hình SVM để phân loại tính đồng tham chiếu cho riêng các cặp Person-Person, Problem-Problem, Treatment-Treatment và Test-Test. Điều này không chỉ giúp cho các đặc trưng được rút trích chuyên biệt hơn cho mỗi loại cặp khái niệm, mà còn làm giảm đi số vector đặc trưng sinh ra để huấn luyện vì hệ thống chỉ xây dựng các cặp mà hai khái niệm có chung lớp chính.
+
+Mặc dù cách làm trên giúp giảm bớt số lượng các mẫu huấn luyện, trong quá trình thực nghiệm, chúng tôi nhận thấy vấn đề về mất cân bằng mẫu vẫn xuất hiện ở các tập vector đặc trưng của các cặp Problem, Treatment và Test. Ở tập vector đặc trưng của cặp Test, số mẫu âm nhiều hơn số mẫu dương đến 381 lần. Vì vậy để giải quyết việc này, chúng tôi quyết định thử nghiệm với hai phương pháp chọn lọc mẫu sau:
+\begin{enumerate}
+\item Đối với mẫu dương, chỉ xây dựng các cặp đồng tham chiếu khi hai khái niệm nằm sát nhau theo thứ tự xuất hiện. Các mẫu âm được xây dựng giữa các khái niệm nằm giữa một cặp đồng tham chiếu và khái niệm đứng sau của cặp đó \cite{Soon2001}. Ví dụ Hình \ref{fig:insgen-eg} mô tả một đoạn văn bản và các chuỗi đồng tham chiếu của nó (giả định rằng tất cả các khái niệm ở ví dụ này thuộc cùng lớp). Có hai chuỗi đồng tham chiếu là $(C_1-C_2-C_3)$ và $(D_1-D_2)$, hai khái niệm $a$ và $b$ là duy nhất. Dựa theo phương pháp chọn lọc mẫu này, các mẫu dương bao gồm các cặp $(C_1,\,C_2)$, $(C_2,\,C_3)$ và $(D_1,\,D_2)$. Các mẫu âm bao gồm các cặp $(D_1,\,C_2)$, $(D_2,\,C_2)$, $(a,C_2)$ và $(b,C_2)$.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[%
+	>=angle 60,
+	start chain=going right,
+	node distance=1.5cm and 2cm,
+	out=60, in=120,
+	font=\sffamily]	
+	\tikzset{
+		con/.style={base, rectangle, inner sep=1mm, minimum height=0.8cm, minimum width=0.8cm},
+		sgt/.style={base, circle, inner sep=1mm, minimum height=0.8cm}
+	};
+	
+	\node[con](C1){$C_1$};
+	\node[con](D1){$D_1$};
+	\node[con](D2){$D_2$};
+	\node[sgt](a){$a$};
+	\node[sgt](b){$b$};
+	\node[con](C2){$C_2$};
+	\node[con](C3){$C_3$};
+	
+	\path[->, looseness=0.3] (C1.north) edge (C2.north);
+	\path[->, looseness=0.7] (D1.north) edge (D2.north);
+	\path[->, looseness=0.7] (C2.north) edge (C3.north);
+	
+\end{tikzpicture}
+\caption{Ví dụ cho việc sinh các mẫu huấn luyện\label{fig:insgen-eg}}
+\end{figure}
+
+\item Phương pháp này xây dựng các mẫu huấn luyện theo các bước sau: với mỗi hồi chỉ $C_j$, xác định tiền đề của nó ở xa nhất theo thứ tự xuất hiện, gọi nó là $C_k$. Xây dựng các cặp với khái niệm đứng sau là $C_j$, khái niệm đứng trước là các khái niệm bắt đầu từ $C_k$ đến $C_{j-1}$ (chỉ xét những cặp hai khái niệm cùng lớp) \cite{VincentNg2002[2]}. Như vậy đối với ví dụ trên Hình \ref{fig:insgen-eg}, các mẫu  huấn luyện được sinh ra theo các bước phương pháp này là: đối với $C_3$, tiền đề xa nhất của nó là $C_1$, như vậy các cặp $(C_1,\,C_3)$, $(D_1,\,C_3)$, $(D_2,\,C_3)$, $(a,\,C_3)$, $(b,\,C_3)$ và $(C_2,\,C_3)$ được xây dựng. Làm tương tự cho các khái niệm từ $C_2$ về $C_1$ để xây dựng các mẫu huấn luyện còn lại.
+\end{enumerate}
 
 \section{Rút trích đặc trưng lớp Person}
-Như đã đề cập trong phần \ref{ytuonghienthuc}, trong BAĐT, các khái niệm thuộc lớp Person thường được chia vào ba nhóm chính: bệnh nhân, người thân của bệnh nhân hoặc nhân sự của bệnh viện. Trong đó bệnh nhân là nhóm có số lượng khái niệm được đề cập nhiều nhất và chiếm phần lớn tổng số khái niệm lớp Person. Do vậy việc xác định một khái niệm thuộc vào nhóm nào đóng vai trò quan trọng trong việc phân giải chính xác chuỗi đồng tham chiếu cho khái niệm đó \cite{YanXu2012}. Đặc trưng lớp Patient được xác định bằng phương pháp phân loại nhị phân SVM. Hai nhóm người thân của bệnh nhân và nhân sự của bệnh viện được xác định bằng các đặc trưng từ vựng. Bảng \ref{tab:PersonFeatures} trình bày đầy đủ các đặc trưng dùng cho lớp Person.
+Như đã đề cập trong phần \ref{ytuonghienthuc}, trong HSXV, các khái niệm thuộc lớp Person thường được chia vào ba nhóm chính: bệnh nhân, người thân của bệnh nhân hoặc nhân sự của bệnh viện. Trong đó bệnh nhân là nhóm có số lượng khái niệm được đề cập nhiều nhất và chiếm phần lớn tổng số khái niệm lớp Person. Do vậy việc xác định một khái niệm thuộc vào nhóm nào đóng vai trò quan trọng trong việc phân giải chính xác chuỗi đồng tham chiếu cho khái niệm đó \cite{YanXu2012}. Đặc trưng lớp Patient được xác định bằng phương pháp phân loại nhị phân SVM. Hai nhóm người thân của bệnh nhân và nhân sự của bệnh viện được xác định bằng các đặc trưng từ vựng. Bảng \ref{tab:PersonFeatures} trình bày đầy đủ các đặc trưng dùng cho lớp Person.
 
-\begin{table}[th]
-\centering\ra{1.2}
-\caption{Tập đặc trưng cho lớp Person \label{tab:PersonFeatures}}
-\footnotesize\sffamily
+\begin{newtable}{1.2}{Tập đặc trưng cho lớp Person\label{tab:PersonFeatures}}
+%\centering\ra{1.2}
+%\caption{Tập đặc trưng cho lớp Person \label{tab:PersonFeatures}}
+%\footnotesize\sffamily
 
 \begin{tabularx}{\textwidth}{@{}P{\raggedright}{0.3}lL@{}}
 \toprule 
@@ -248,18 +279,18 @@ I & 0, 1 & Cả hai đều chứa thông tin về ``bạn'' (1), ngược lại 
 Pronoun match & 0, 1 & Cả hai đều là đại từ chỉ người (1), ngược lại (0)\\
 \bottomrule
 \end{tabularx}
-\end{table}
+\end{newtable}
 
 Đặc trưng ``Alias'' được chúng tôi hiện thực theo các bước như sau. Bước một, Loại bỏ các mạo từ hoặc đại từ trong khái niệm. Bước hai, kiểm tra các chữ cái đầu tiên của mỗi từ trong khái niệm có được viết hoa hay không. Nếu có thì ghép các chữ cái đầu tiên của mỗi từ để tạo thành từ viết tắt của khái niệm. Cuối cùng, so sánh hai từ đang xét với từ viết tắt của chính hai từ đó, nếu trùng chuỗi thì xác định đặc trưng ``Alias'' là 1, ngược lại là 0.
 
-Đặc trưng về Giới tính được chúng tôi xác định dựa trên ba bước phân loại \cite{WeeSoon2001}. Bước thứ nhất: kiểm tra khái niệm có chứa các đại từ xác định giới tính như ``Mr'', ``Ms'', ``she'', ``he'', ... hay không. Nếu có, xác định giới tính dựa trên đại từ xuất hiện. Nếu không thực hiện bước thứ hai: kiểm tra khái niệm có xuất hiện nhiều hơn một lần hay không. Nếu xuất hiện nhiều hơn một lần thì các lần xuất hiện có chứa đại từ xác định giới tính hay không. Ví dụ khái niệm ``Peter H. Diller'' có thể xuất hiện nhiều lần, trong đó có xuất hiện dưới hình thức ``Mr. Diller''. Nếu không thể xác định giới tính qua hai bước kiểm tra, khái niệm sẽ được phân loại bằng cách sử dụng cơ sở dữ liệu về tên tiếng Anh của hệ thống Apache OpenNLP.
+Đặc trưng về Giới tính được chúng tôi xác định dựa trên ba bước phân loại \cite{Soon2001}. Bước thứ nhất: kiểm tra khái niệm có chứa các đại từ xác định giới tính như ``Mr'', ``Ms'', ``she'', ``he'', ... hay không. Nếu có, xác định giới tính dựa trên đại từ xuất hiện. Nếu không thực hiện bước thứ hai: kiểm tra khái niệm có xuất hiện nhiều hơn một lần hay không. Nếu xuất hiện nhiều hơn một lần thì các lần xuất hiện có chứa đại từ xác định giới tính hay không. Ví dụ khái niệm ``Peter H. Diller'' có thể xuất hiện nhiều lần, trong đó có xuất hiện dưới hình thức ``Mr. Diller''. Nếu không thể xác định giới tính qua hai bước kiểm tra, khái niệm sẽ được phân loại bằng cách sử dụng cơ sở dữ liệu về tên tiếng Anh của hệ thống Apache OpenNLP.
 
 Với các đặc trưng ``Name match'', ``Relative match'', ``Department match'', ``Doctor title match'', ``Doctor general match'', ``Twin/Triplet'', ``We'', ``You'', ``I'', ``Pronoun match'', chúng tôi hiện thực bằng cách xây dựng tập từ điển tương ứng với từng đặc trưng dựa trên việc khảo sát tập dữ liệu và sử dụng các biểu thức chính quy. Các đặc trưng còn lại, chúng tôi hiện thực như miêu tả trong bảng \ref{tab:PersonFeatures}.
 
 \section{Rút trích đặc trưng lớp Patient-class}
-Từ nhận định trong việc rút trích đặc trưng của lớp Person, chúng tôi xây dựng một hệ thống SVM nhị phân để phân loại khái niệm thuộc lớp Person có phải là bệnh nhân hay không. Trong BAĐT thường chỉ có một bệnh nhân đóng vai trò là chủ thể của bệnh án.Vì vậy, các khái niệm nếu được xác định là bệnh nhân, thì sẽ được đưa vào một chuỗi đồng tham chiếu duy nhất về bệnh nhân đó. Thông qua phân tích tập dữ liệu, chúng tôi nhận thấy việc xác định một khái niệm thuộc lớp Person hay không có thể đạt được bằng cách xác định tập từ khóa chỉ về bệnh nhân như ``patient'', ``pt'', ... và tập từ khóa chỉ về nhóm người không phải bệnh nhân như ``doctor'', ``dr'', ``wife'', ...
+Từ nhận định trong việc rút trích đặc trưng của lớp Person, chúng tôi xây dựng một hệ thống SVM nhị phân để phân loại khái niệm thuộc lớp Person có phải là bệnh nhân hay không. Trong HSXV thường chỉ có một bệnh nhân đóng vai trò là chủ thể của bệnh án. Vì vậy, các khái niệm nếu được xác định là bệnh nhân, thì sẽ được đưa vào một chuỗi đồng tham chiếu duy nhất về bệnh nhân đó. Thông qua phân tích tập dữ liệu, chúng tôi nhận thấy việc xác định một khái niệm thuộc lớp Person hay không có thể đạt được bằng cách xác định tập từ khóa chỉ về bệnh nhân như ``patient'', ``pt'', ... và tập từ khóa chỉ về nhóm người không phải bệnh nhân như ``doctor'', ``dr'', ``wife'', ...
 
-Vì tập dữ liệu không có thông tin xác định một khái niệm thuộc lớp Person có phải là bệnh nhân hay không, dựa theo hệ thống I chúng tôi xác định bằng cách chọn chuỗi đồng tham chiếu có nhiều khái niệm nhất trong tập kết quả làm chuỗi đồng tham chiếu chỉ bệnh nhân. Các khái niệm thuộc chuỗi đồng tham chiếu này sẽ được xem là khái niệm chỉ bệnh nhân và được chọn làm mẫu dương trong quá trình huấn luyện. Các khái niệm thuộc lớp Person còn lại không thuộc vào chuỗi đồng tham chiếu này sẽ được chọn làm mẫu âm trong quá trình huấn luyện. Tuy nhiên, chúng tôi nhận thấy phương pháp xác định bệnh nhân này có một nhược điểm là các BAĐT nhỏ, có nội dung ngắn sẽ tồn tại nhiều chuỗi đồng tham chiếu lớp Person có kích thước tương tự nhau. Trong đó chuỗi đồng tham chiếu chỉ bệnh nhân không chắc chắn là chuỗi đồng tham chiếu có kích thước lớn nhất.
+Vì tập dữ liệu không có thông tin xác định một khái niệm thuộc lớp Person có phải là bệnh nhân hay không, dựa theo hệ thống I chúng tôi xác định bằng cách chọn chuỗi đồng tham chiếu có nhiều khái niệm nhất trong tập kết quả làm chuỗi đồng tham chiếu chỉ bệnh nhân. Các khái niệm thuộc chuỗi đồng tham chiếu này sẽ được xem là khái niệm chỉ bệnh nhân và được chọn làm mẫu dương trong quá trình huấn luyện. Các khái niệm thuộc lớp Person còn lại không thuộc vào chuỗi đồng tham chiếu này sẽ được chọn làm mẫu âm trong quá trình huấn luyện. Tuy nhiên, chúng tôi nhận thấy phương pháp xác định bệnh nhân này có một nhược điểm là các HSXV nhỏ, có nội dung ngắn sẽ tồn tại nhiều chuỗi đồng tham chiếu lớp Person có kích thước tương tự nhau. Trong đó chuỗi đồng tham chiếu chỉ bệnh nhân không chắc chắn là chuỗi đồng tham chiếu có kích thước lớn nhất.
 
 Bảng \ref{tab:PatientFeatures} trình bày đầy đủ các đặc trưng được sử dụng cho việc xác định khái niệm có phải là bệnh nhân hay không. Kết quả của việc phân loại này sẽ được sử dụng làm giá trị cho đặc trưng ``Patient-class'' khi rút trích đặc trưng cho lớp Person.
 
@@ -299,9 +330,9 @@ Appositive & 0, 1 & Là đồng vị ngữ\\
 
 Các đặc trưng ``Previous sentence'' và ``Next sentence'' được hiện thực bằng cách khảo sát toàn bộ các khái niệm thuộc lớp Person, sau đó xây dựng bộ từ điển các câu có thể đứng trước hoặc đứng sau khái niệm đang xét. Giá trị của đặc trưng được lấy bằng chỉ mục của câu đứng trước (hoặc đứng sau) trong bộ từ điển các câu.
 
-Đặc trưng ``Pronouns he/she most'' mang ý nghĩa giới tính chiếm đa số trong BAĐT được xét. Việc xác định giới tính chiếm đa số trong BAĐT được hiện thực bằng cách xác định giới tính cho từng khái niệm thuộc lớp Person, sau đó chọn giới tính có số lượng khái niệm lớn hơn. Phương pháp xác định giới tính được thực hiện theo miêu tả trong đặc trưng của nhóm Person. Nếu trong BAĐT có giới tính Nam chiếm đa số thì những khái niệm là đại từ chỉ về giới tính Nam như ``he'', ``him'', ``himself'', ... sẽ có đặc trưng ``Pronouns he/she most'' mang giá trị là 1. Tương tự cho BAĐT có giới tính Nữ chiếm đa số.
+Đặc trưng ``Pronouns he/she most'' mang ý nghĩa giới tính chiếm đa số trong HSXV được xét. Việc xác định giới tính chiếm đa số trong HSXV được hiện thực bằng cách xác định giới tính cho từng khái niệm thuộc lớp Person, sau đó chọn giới tính có số lượng khái niệm lớn hơn. Phương pháp xác định giới tính được thực hiện theo miêu tả trong đặc trưng của nhóm Person. Nếu trong HSXV có giới tính Nam chiếm đa số thì những khái niệm là đại từ chỉ về giới tính Nam như ``he'', ``him'', ``himself'', ... sẽ có đặc trưng ``Pronouns he/she most'' mang giá trị là 1. Tương tự cho HSXV có giới tính Nữ chiếm đa số.
 
-Qua việc khảo sát tập dữ liệu, chúng tôi nhận thấy trong BAĐT thường được kết thúc bằng các thông tin hướng dẫn liên lạc với bác sĩ nếu bệnh nhân gặp vấn đề sau khi xuất viện, thông tin về ngày tháng và mã BAĐT, thông tin về hướng dẫn sau khi xuất viện và ký tên của bác sĩ. Để xác định phần BAĐT chứa các thông tin này, chúng tôi khảo sát từng câu trong BAĐT từ dưới lên đến khi gặp các từ khóa như ``Follow-up'', ``Dictated By'', ``Signed By'', ... Các đặc trưng ``Last n line doctor'' và ``Signed information'' được xác định bằng các thông tin trong phân đoạn BAĐT này.
+Qua việc khảo sát tập dữ liệu, chúng tôi nhận thấy trong HSXV thường được kết thúc bằng các thông tin hướng dẫn liên lạc với bác sĩ nếu bệnh nhân gặp vấn đề sau khi xuất viện, thông tin về ngày tháng và mã hồ sơ, thông tin về hướng dẫn sau khi xuất viện và ký tên của bác sĩ. Để xác định phần HSXV chứa các thông tin này, chúng tôi khảo sát từng câu trong HSXV từ dưới lên đến khi gặp các từ khóa như ``Follow-up'', ``Dictated By'', ``Signed By'', ... Các đặc trưng ``Last n line doctor'' và ``Signed information'' được xác định bằng các thông tin trong phân đoạn HSXV này.
 
 Các đặc trưng liên quan đến từ khóa được chúng tôi hiện thực bằng cách khảo sát tập dữ liệu và xây dựng bộ từ điển thích hợp cho từng đặc trưng. Các đặc trưng còn lại được chúng tôi hiện thực theo như miêu tả trong bảng \ref{tab:PatientFeatures}
 
@@ -433,16 +464,16 @@ Operation & & + & \\
 \caption{Tập đặc trưng cho lớp Problem/Treatment/Test \label{tab:ProbTreatTestFeatures}}
 \footnotesize\sffamily
 
-\begin{tabularx}{\textwidth}{@{}P{\raggedright}{0.3}lL@{}}
+\begin{tabularx}{\textwidth}{@{}>{\hspace{1em}}P{\raggedright}{0.3}lL@{}}
 \toprule 
-\textbf{Đặc Trưng} & \textbf{Giá trị} & \textbf{Giải thích}\\
+\rowgroup{\textbf{Đặc Trưng}} & \textbf{Giá trị} & \textbf{Giải thích}\\
 \midrule
-\textit{Tri thức nhân loại}\\
+\rowgroup{\textit{Tri thức nhân loại}}\\
 Wiki page match & 0, 1 & Hai khái niệm cùng dẫn đến một trang Wiki\\
 Wiki anchor match & 0, 1 & Trang Wiki của một khái niệm chứa liên kết đến trang wiki của khái niệm còn lại\\
 Wiki bold name match & 0, 1 & Trang Wiki của một khái niệm chứa từ in đậm chỉ khái niệm còn lại\\
 WordNet match & 0, 1 & Hai khái niệm được xác định đồng nghĩa trên WordNet\\
-\textit{Trích xuất thông tin ngữ nghĩa trong văn bản}\\
+\rowgroup{\textit{Trích xuất thông tin ngữ nghĩa trong văn bản}}\\
 Anatomy & 0, 1, 2 & Không cùng cơ quan cơ thể (0), cùng cơ quan (1), không xác định (2)\\
 Position & 0, 1, 2 & Không cùng vị trí (0), cùng vị trí (1), không xác định (2)\\
 Indicator & 0, 1, 2 & Không cùng thông tin chỉ định (0), cùng thông tin chỉ định (1), không xác định (2)\\
@@ -450,7 +481,7 @@ Temporal & 0, 1, 2 & Không cùng thời gian (0), cùng thời gian (1), không
 Section & 1, 2,..., $n^{2}$ & Hai khái niệm thuộc về phân đoạn i và j của văn bản\\
 Equipment & 0, 1, 2 & Không cùng thiết bị (0), cùng thiết bị (1), không xác định (2)\\
 Operation & 0, 1, 2 & Không cùng phẫu thuật (0), cùng phẫu thuật (1), không xác định (2)\\
-\textit{Trích xuất thông tin thuốc y tế}\\
+\rowgroup{\textit{Trích xuất thông tin thuốc y tế}}\\
 Drug & 0, 1 & Cùng tên thuốc (1), ngược lại (0)\\
 Mode & 0, 1, 2,..., 29 & Chỉ mục của 29 đường hấp thụ hoặc không xác định (29)\\
 Dosage & 0, 1 & Cùng liều lượng (1), ngược lại (1)\\
@@ -458,15 +489,15 @@ Duration & 0, 1 & Cùng khoảng thời gian sử dụng (1), ngược lại (0)
 Frequency & 0, 1 & Cùng tần suất sử dụng (1), ngược lại (0)\\
 \textit{Khoảng cách}\\
 Sentence distance & 0, 1, 2,... & Số câu xuất hiện giữa hai khái niệm được xét\\
-\textit{Ngữ pháp}\\
+\rowgroup{\textit{Ngữ pháp}}\\
 Article & 1, 2,..., $3^{2}$ & Trạng thái các từ hạn định (determiner) đứng trước hai khái niệm, bao gồm 3 loại: (a|an), (the|his|her…) hoặc không có (NULL)\\
-\textit{So trùng chuỗi}\\
+\rowgroup{\textit{So trùng chuỗi}}\\
 Head noun match & 0, 1 & Cùng danh từ trung tâm (1), ngược lại (0)\\
 Contains & 0, 1 & Một khái niệm chứa toàn bộ chuỗi của khái niệm còn lại\\
 Capital match & 0, 1 & Các kí tự đầu tiên trùng nhau (1), ngược lại (0)\\
 Substring match & 0, 1 & Có cùng chuỗi con (1), ngược lại (0)\\
-Cos distance & (0, 1) & Khoảng cách cos (góc) giữa hai khái niệm
-\textit{Ngữ nghĩa}\\
+Cos distance & (0, 1) & Khoảng cách cos (góc) giữa hai khái niệm\\
+\rowgroup{\textit{Ngữ nghĩa}}\\
 Word match & 0, 1 & Hai khái niệm trùng chuỗi hoàn toàn\\
 Procedure match & 0, 1 & Có chứa từ ``Procedure'' (1), ngược lại (0)\\
 \bottomrule

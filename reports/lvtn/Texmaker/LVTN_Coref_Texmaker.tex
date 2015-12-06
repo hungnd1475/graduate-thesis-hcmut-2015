@@ -66,12 +66,14 @@
 \setlength{\headheight}{15pt}
 \setlength{\footskip}{35pt}
 
+\newcommand{\colleft}{\raggedright}
+\newcommand{\colright}{\raggedleft}
+
 \newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 \newcolumntype{P}[2]{>{#1\arraybackslash}p{#2\textwidth}}
 
-\newcommand{\colleft}{\raggedright}
-\newcommand{\colright}{\raggedleft}
+\newcommand{\rowgroup}[1]{\hspace{-1em}#1}
 
 %\renewcommand{\thealgocf}{}
 
@@ -104,6 +106,21 @@
 \setlist[enumerate]{leftmargin=\parindent,parsep=0pt,partopsep=0pt}
 
 \DeclareMathOperator{\BigO}{O}
+
+\newenvironment{newtable}[2]
+{
+	\begin{table}[th]
+	\centering\ra{#1}
+	\caption{#2}
+	\footnotesize\sffamily
+}
+{
+	\end{table}
+}
+
+\addto\captionsvietnam{
+	\renewcommand{\listfigurename}{Danh sách hình}
+}
 
 \makeatother
 
