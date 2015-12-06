@@ -299,42 +299,42 @@ Bảng \ref{tab:PatientFeatures} trình bày đầy đủ các đặc trưng đ�
 \caption{Tập đặc trưng cho lớp Patient \label{tab:PatientFeatures}}
 \footnotesize\sffamily
 
-\begin{tabularx}{\textwidth}{@{}P{\raggedright}{0.3}lL@{}}
+\begin{tabularx}{\textwidth}{@{\hspace{1em}}P{\raggedright}{0.3}lL@{}}
 \toprule 
-\textbf{Đặc Trưng} & \textbf{Giá trị} & \textbf{Giải thích}\\
+\rowgroup{\textbf{Đặc Trưng}} & \textbf{Giá trị} & \textbf{Giải thích}\\
 \midrule
-\emph{Ngữ nghĩa}\\
-\quad Keyword of patient & 0, 1 & Các từ khóa về bệnh nhân (như mr., mr, ms., ms, yo-, y.o., y/o, year-old, ...)\\
-\quad Keyword of doctor & 0, 1 & Các từ khóa về bác sĩ (dr, dr., md, m.d., m.d,…)\\
-\quad Keyword of doctor title & 0, 1 & Các từ khóa về chức vụ của bác sĩ (dentist, orthodontist, …)\\
-\quad Keyword of department  & 0, 1 & Các từ khóa về chuyên ngành bác sĩ (electrophysiology, …)\\
-\quad Keyword of general deparment & 0, 1 & Các từ khóa chung về phòng ban (team, service)\\
-\quad Keyword of general doctor & 0, 1 & Các từ khóa chung về bác sĩ (doctor, dict, author, pcp, attend, provider)\\
-\quad Keyword of relative & 0, 1 & Các từ khóa về người thân (wife, brother, sibling, nephew)\\
-\quad Name & 0, 1 & Có phải là tên riêng hay không\\
-\quad Last n line doctor & 0, 1 & Là tên bác sĩ ở n dòng cuối cùng\\
-\quad Twin or triplet information & 0, 1 & Thông tin về cặp sinh đôi, sinh ba (baby 1, 2, 3,…)\\
-\quad Preceded by non-patient & 0, 1 & Khái niệm đứng trước không phải là bệnh nhân.\\
-\quad Signed information  & 0, 1 & Có liên quan đến việc kí/xác nhận bệnh án\\
-\quad Previous sentence &  & Câu hoàn chỉnh liền trước khái niệm\\
-\quad Next sentence &  & Câu hoàn chỉnh liền sau khái niệm\\
-\emph{Ngữ pháp}\\
-\quad Pronouns we & 0, 1 & Là đại từ chỉ chúng tôi (we, us, our, ourselves)\\
-\quad Pronouns I & 0, 1 & Là đại từ chỉ tôi (I, my, me, myself)\\
-\quad Pronouns you & 0, 1 & Là đại từ chỉ bạn (you, your, yourself)\\
-\quad Pronouns they & 0, 1 & Là đại từ chỉ họ (they, them, their, themselves)\\
-\quad Pronouns he/she most & 0, 1 & Thuộc phần đa số của đại từ chỉ cô ấy/anh ấy (he, his, her)\\
-\quad Who & 0, 1 & Là đại từ “who” hoặc liền kề với khái niệm đứng trước\\
-\quad Appositive & 0, 1 & Là đồng vị ngữ\\
-\emph{Từ vựng}\\
-\quad First one/two/three words before mention & & Một/hai/ba từ liền trước khái niệm đang xét\\
-\quad First one/two/three words after mention & & Một/hai/ba từ liền sau khái niệm đang xét\\
-\quad First one/two/three words in between mention, problem & & Một/hai/ba từ đầu tiên nằm giữa khái niệm đang xét và khái niệm lớp Problem\\
-\quad Last one/two/three words in between mention, problem & & Một/hai/ba từ cuối cùng nằm giữa khái niệm đang xét và khái niệm lớp Problem\\
-\quad First one/two/three words in between mention, treatment & & Một/hai/ba từ đầu tiên nằm giữa khái niệm đang xét và khái niệm lớp Treatment\\
-\quad Last one/two/three words in between mention, treatment & & Một/hai/ba từ cuối cùng nằm giữa khái niệm đang xét và khái niệm lớp Treatment\\
-\quad First one/two/three words in between mention, test & & Một/hai/ba từ đầu tiên nằm giữa khái niệm đang xét và khái niệm lớp Test\\
-\quad Last one/two/three words in between mention, test & & Một/hai/ba từ cuối cùng nằm giữa khái niệm đang xét và khái niệm lớp Test\\
+\rowgroup{\emph{Ngữ nghĩa}}\\
+Keyword of patient & 0, 1 & Các từ khóa về bệnh nhân (như mr., mr, ms., ms, yo-, y.o., y/o, year-old, ...)\\
+Keyword of doctor & 0, 1 & Các từ khóa về bác sĩ (dr, dr., md, m.d., m.d,…)\\
+Keyword of doctor title & 0, 1 & Các từ khóa về chức vụ của bác sĩ (dentist, orthodontist, …)\\
+Keyword of department  & 0, 1 & Các từ khóa về chuyên ngành bác sĩ (electrophysiology, …)\\
+Keyword of general deparment & 0, 1 & Các từ khóa chung về phòng ban (team, service)\\
+Keyword of general doctor & 0, 1 & Các từ khóa chung về bác sĩ (doctor, dict, author, pcp, attend, provider)\\
+Keyword of relative & 0, 1 & Các từ khóa về người thân (wife, brother, sibling, nephew)\\
+Name & 0, 1 & Có phải là tên riêng hay không\\
+Last n line doctor & 0, 1 & Là tên bác sĩ ở n dòng cuối cùng\\
+Twin or triplet information & 0, 1 & Thông tin về cặp sinh đôi, sinh ba (baby 1, 2, 3,…)\\
+Preceded by non-patient & 0, 1 & Khái niệm đứng trước không phải là bệnh nhân.\\
+Signed information  & 0, 1 & Có liên quan đến việc kí/xác nhận bệnh án\\
+Previous sentence &  & Câu hoàn chỉnh liền trước khái niệm\\
+Next sentence &  & Câu hoàn chỉnh liền sau khái niệm\\
+\rowgroup{\emph{Ngữ pháp}}\\
+Pronouns we & 0, 1 & Là đại từ chỉ chúng tôi (we, us, our, ourselves)\\
+Pronouns I & 0, 1 & Là đại từ chỉ tôi (I, my, me, myself)\\
+Pronouns you & 0, 1 & Là đại từ chỉ bạn (you, your, yourself)\\
+Pronouns they & 0, 1 & Là đại từ chỉ họ (they, them, their, themselves)\\
+Pronouns he/she most & 0, 1 & Thuộc phần đa số của đại từ chỉ cô ấy/anh ấy (he, his, her)\\
+Who & 0, 1 & Là đại từ “who” hoặc liền kề với khái niệm đứng trước\\
+Appositive & 0, 1 & Là đồng vị ngữ\\
+\rowgroup{\emph{Từ vựng}}\\
+First one/two/three words before mention & & Một/hai/ba từ liền trước khái niệm đang xét\\
+First one/two/three words after mention & & Một/hai/ba từ liền sau khái niệm đang xét\\
+First one/two/three words in between mention, problem & & Một/hai/ba từ đầu tiên nằm giữa khái niệm đang xét và khái niệm lớp Problem\\
+Last one/two/three words in between mention, problem & & Một/hai/ba từ cuối cùng nằm giữa khái niệm đang xét và khái niệm lớp Problem\\
+First one/two/three words in between mention, treatment & & Một/hai/ba từ đầu tiên nằm giữa khái niệm đang xét và khái niệm lớp Treatment\\
+Last one/two/three words in between mention, treatment & & Một/hai/ba từ cuối cùng nằm giữa khái niệm đang xét và khái niệm lớp Treatment\\
+First one/two/three words in between mention, test & & Một/hai/ba từ đầu tiên nằm giữa khái niệm đang xét và khái niệm lớp Test\\
+Last one/two/three words in between mention, test & & Một/hai/ba từ cuối cùng nằm giữa khái niệm đang xét và khái niệm lớp Test\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -355,27 +355,27 @@ Khác với các lớp khái niệm khác trong BAĐT, lớp khái niệm Pronou
 \caption{Tập đặc trưng cho lớp Pronoun \label{tab:PronounFeatures}}
 \footnotesize\sffamily
 
-\begin{tabularx}{\textwidth}{@{}P{\raggedright}{0.3}lL@{}}
+\begin{tabularx}{\textwidth}{@{\hspace{1em}}P{\raggedright}{0.3}lL@{}}
 \toprule 
-\textbf{Đặc Trưng} & \textbf{Giá trị} & \textbf{Giải thích}\\
+\rowgroup{\textbf{Đặc Trưng}} & \textbf{Giá trị} & \textbf{Giải thích}\\
 \midrule
-\emph{Quan hệ}\\
-\quad First previous mention type & 0, 1, 2, 3, 4 & Khái niệm đứng liền trước thuộc lớp Person (0) hoặc Problem (1) hoặc Treatment (2) hoặc Test (3) hoặc không thuộc lớp nào (4)\\
-\quad Second previous mention type & 0, 1, 2, 3, 4 & Khái niệm đứng liền trước thứ 2 thuộc lớp Person (0) hoặc Problem (1) hoặc Treatment (2) hoặc Test (3) hoặc không thuộc lớp nào (4)\\
-\quad First next mention type & 0, 1, 2, 3, 4 & Khái niệm đứng liền sau thuộc lớp Person (0) hoặc Problem (1) hoặc Treatment (2) hoặc Test (3) hoặc không thuộc lớp nào (4)\\
-\emph{Khoảng cách}\\
-\quad Sentence distance & 0, 1, 2, ... & Số câu xuất hiện giữa hai khái niệm được xét\\
-\emph{Ngữ pháp}\\
-\quad Pronoun & 0, 1, 2, ..., 14 & Chỉ mục của đại từ được xét trong bảng tra 15 đại từ\\
-\emph{Cú pháp}\\
-\quad Part of speech & 0, 1, 2 & DT (0), WDT (1), PRP (2)\\
-\quad First next verb after mention & & Động từ đứng liền sau khái niệm\\
-\quad First word before mention is preposition & 0, 1 & Từ liền trước là giới từ (1), ngược lại (0)\\
-\quad First one/two/three words before mention & & 1/2/3 từ liền trước khái niệm được xét\\
-\quad First one/two/three words after mention & & 1/2/3 từ liền sau khái niệm được xét\\
-\quad An adjacent mention after pronoun + VP  & 0, 1 & Khái niệm được xét liền sau đại từ + cụm động từ\\
-\emph{Ngữ nghĩa}\\
-\quad And, as well as, in addition to & 0, 1 & Khái niệm được xét liền sau ``and'', ``as well as'', ``in addition to''\\
+\rowgroup{\emph{Quan hệ}}\\
+First previous mention type & 0, 1, 2, 3, 4 & Khái niệm đứng liền trước thuộc lớp Person (0) hoặc Problem (1) hoặc Treatment (2) hoặc Test (3) hoặc không thuộc lớp nào (4)\\
+Second previous mention type & 0, 1, 2, 3, 4 & Khái niệm đứng liền trước thứ 2 thuộc lớp Person (0) hoặc Problem (1) hoặc Treatment (2) hoặc Test (3) hoặc không thuộc lớp nào (4)\\
+First next mention type & 0, 1, 2, 3, 4 & Khái niệm đứng liền sau thuộc lớp Person (0) hoặc Problem (1) hoặc Treatment (2) hoặc Test (3) hoặc không thuộc lớp nào (4)\\
+\rowgroup{\emph{Khoảng cách}}\\
+Sentence distance & 0, 1, 2, ... & Số câu xuất hiện giữa hai khái niệm được xét\\
+\rowgroup{\emph{Ngữ pháp}}\\
+Pronoun & 0, 1, 2, ..., 14 & Chỉ mục của đại từ được xét trong bảng tra 15 đại từ\\
+\rowgroup{\emph{Cú pháp}}\\
+Part of speech & 0, 1, 2 & DT (0), WDT (1), PRP (2)\\
+First next verb after mention & & Động từ đứng liền sau khái niệm\\
+First word before mention is preposition & 0, 1 & Từ liền trước là giới từ (1), ngược lại (0)\\
+First one/two/three words before mention & & 1/2/3 từ liền trước khái niệm được xét\\
+First one/two/three words after mention & & 1/2/3 từ liền sau khái niệm được xét\\
+An adjacent mention after pronoun + VP  & 0, 1 & Khái niệm được xét liền sau đại từ + cụm động từ\\
+\rowgroup{\emph{Ngữ nghĩa}}\\
+And, as well as, in addition to & 0, 1 & Khái niệm được xét liền sau ``and'', ``as well as'', ``in addition to''\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -458,7 +458,7 @@ Tuy nhiên từng lớp Problem/Treatment/Test không sử dụng toàn bộ cá
 \caption{Phân chia đặc trưng được sử dụng trong ba lớp Problem, Treatment và Test \label{tab:SemanticFeatures}}
 \footnotesize\sffamily
 
-\begin{tabularx}{\textwidth}{@{}l *5{>{\centering\arraybackslash}X}@{}}
+\begin{tabularx}{0.8\textwidth}{@{}l *5{>{\centering\arraybackslash}X}@{}}
 \toprule 
 & \textbf{Problem} & \textbf{Treatment} & \textbf{Test}\\
 \midrule
