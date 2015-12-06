@@ -1,6 +1,6 @@
 \chapter{Các công trình liên quan}
 \section{Bệnh án điện tử}
-Bệnh án là văn bản ghi chép các thông tin sức khỏe của một cá nhân trong quá trình khám và chữa bệnh. Bệnh án điện tử chính là bệnh án được số hóa bằng HTTBV. BAĐT thông thường chứa những dữ liệu cơ bản cho quản lý, các dữ liệu cận lâm sàng và lâm sàng của người bệnh trong một lần nằm viện \cite{HoTuBao2015}. Dữ liệu lâm sàng là những \textit{văn bản lâm sàng} (clinical text) do bác sĩ và y tá ghi chép hàng ngày về thông tin khám và chữa bệnh của người bệnh. Chính các văn bản lâm sàng này là nguồn dữ liệu quý giá cho việc khai thác và rút trích kiến thức, phục vụ cho việc chăm sóc sức khỏe và nghiên cứu y học. Các văn bản lâm sàng trong bệnh án điện tử chủ yếu gồm ba loại \cite{HoTuBao2015}:
+Bệnh án là văn bản ghi chép các thông tin sức khỏe của một cá nhân trong quá trình khám và chữa bệnh. Bệnh án điện tử chính là bệnh án được số hóa bằng HTTBV. BAĐT thông thường chứa những dữ liệu cơ bản cho quản lý, các dữ liệu cận lâm sàng và lâm sàng của người bệnh trong một lần nằm viện \cite{HoTuBao2015}. Dữ liệu lâm sàng là những \textit{văn bản lâm sàng} (clinical text) do bác sĩ và y tá ghi chép hàng ngày về thông tin khám và chữa bệnh của người bệnh. Các văn bản lâm sàng trong bệnh án điện tử chủ yếu gồm ba loại \cite{HoTuBao2015}:
 
 \begin{enumerate}[leftmargin=\the\parindent]
 \item \emph{Phiếu điều trị} (doctor daily notes): ghi chép các chuẩn đoán, nhận định và y lệnh hàng ngày của bác sĩ về bệnh nhân.
@@ -16,12 +16,24 @@ So với bệnh án được lưu trữ bằng giấy, bệnh án điện tử c
 \item Dữ liệu có thể được chia sẻ hoặc tích hợp.
 \end{itemize}
 
-Ngoài các văn bản lâm sàng được lưu trữ dưới dạng phi cấu trúc, một số tiêu chuẩn được đưa ra để lưu trữ một cách có cấu trúc các BAĐT:
+Dữ liệu trong BAĐT thường tồn tại dưới dạng tường thuật, ghi chép của bác sĩ hoặc y tá, đây là dạng dữ liệu không có cấu trúc. Một số thông tin hữu ích có trong dữ liệu không cấu trúc của BAĐT là:
+
+\begin{itemize}[noitemsep]
+\item Lý do nhập viện, lịch sử điều trị, tiền sử thuốc sử dụng.
+\item Ghi chép của bác sĩ hoặc y tá trong quá trình điều trị hàng ngày.
+\item Các kết quả xét nghiệm
+\item Các ghi chú về quá trình phẫu thuật.
+\item ...
+\end{itemize}
+
+Ngoài các văn bản lâm sàng còn được lưu trữ dưới dạng phi cấu trúc, một số tiêu chuẩn được đưa ra để lưu trữ một cách có cấu trúc các BAĐT:
 
 \begin{itemize}[noitemsep]
 \item \emph{IDC} (International Classification of Diseases): bao gồm các loại mã cũng như thông tin về bệnh như tên bệnh, mô tả, triệu chứng, dấu hiệu, mức độ, ...
 \item \textit{CPT} (Current Procedural Terminology): bao gồm các mã mang tính thủ tục trong bệnh viện như mã xét nghiệm, gây tê, phẫu thuật, X quang, thuốc, cấp cứu, ...
 \end{itemize}
+
+BAĐT hiện đang là vấn đề được quan tâm và phát triển tại nhiều nơi trên thế giới. Vào năm 2009, ngay sau khi trở thành tổng thống Hoa Kỳ, Barack Obama đã yêu cầu chuẩn hóa và số hóa mọi bệnh án của các bệnh viện trong vòng 5 năm. Ở Nhật Bản, các bệnh viện lớn và vừa cũng được chính phủ tạo điều kiện để xây dựng BAĐT. Tính đến năm 2011, khoảng 34.7\% bệnh viện lớn và vừa tại Nhật đã có hệ thống BAĐT sử dụng được \cite{HoTuBao2015}. Một số ví dụ thực tiễn trong việc ứng dụng BAĐT vào dự đoán, điều trị bệnh là hệ thống dự đoán nguy cơ mắc bệnh đái tháo đường loại 2 từ cấu trúc gen \cite{AbelKho2012} hoặc hệ thống cho phép nghiên cứu diện rộng bệnh tâm thần và cách điều trị chứng phiền muộn \cite{Perlis2012}. Lí do vì việc sử dụng BAĐT không những thuận tiện hơn bệnh án giấy trong việc lưu giữ các thông tin và tri thức thu thập được trong quá trình khám chữa bệnh mà còn cho phép chia sẻ nguồn thông tin đó giữa các bệnh viện, các thành phố hoặc giữa các quốc gia với nhau. Thông qua việc chia sẻ, rất nhiều BAĐT sẽ được đối chiếu và phân tích để phát hiện những tri thức y học mới hoặc kiểm chứng những kiến thức đã có. Vì vậy BAĐT đóng vai trò quan trọng trong sự phát triển của việc khám chữa bệnh cũng như nghiên cứu trong y học.
 
 \section{Nhận dạng thực thể có tên}
 Rút trích thông tin (Information extraction) là công việc tự động rút trích thông tin từ những dữ liệu không có cấu trúc hoặc dữ liệu bán cấu trúc. Dữ liệu có cấu trúc là dữ liệu máy tính hiểu hoàn toàn. dữ liệu có cấu trúc thông thường nằm ở dạng bảng, hoặc trong các hệ quản trị dữ liệu quan hệ. Dữ liệu không có cấu trúc là dữ liệu máy hoàn toàn không hiểu, như ngôn ngữ tự nhiên. Dữ liệu bán cấu trúc là dữ liệu chứa các thẻ hoặc các hình thức đánh dấu khác giúp phân tách bộ phận ngữ cảnh nền ra khỏi dữ liệu, điển hình là các ngôn ngữ đánh dấu như XML, JSON, HTML. Rúc trích thông tin là một trong những vấn đề của xử lý ngôn ngữ tự nhiên.
