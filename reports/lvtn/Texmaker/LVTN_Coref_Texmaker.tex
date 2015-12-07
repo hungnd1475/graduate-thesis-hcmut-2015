@@ -43,7 +43,8 @@
    \fancyhf{}
 }
 
-\captionsetup[table]{position=top}
+\captionsetup{format=hang,labelsep=period,labelfont=bf,font=sf}
+\captionsetup[table]{position=top,justification=raggedright}
 
 \setlength\parindent{3em}
 \newlength\titleindent
@@ -109,7 +110,7 @@
 
 \newenvironment{newtable}[2]
 {
-	\begin{table}[th]
+	\begin{table}[t!]
 	\centering\ra{#1}
 	\caption{#2}
 	\footnotesize\sffamily
