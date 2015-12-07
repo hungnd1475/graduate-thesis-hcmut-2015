@@ -38,7 +38,7 @@ BAĐT hiện đang là vấn đề được quan tâm và phát triển tại nh
 \section{Nhận dạng thực thể có tên}
 Rút trích thông tin (Information extraction) là công việc tự động rút trích thông tin từ những dữ liệu không có cấu trúc hoặc dữ liệu bán cấu trúc. Dữ liệu có cấu trúc là dữ liệu máy tính hiểu hoàn toàn. dữ liệu có cấu trúc thông thường nằm ở dạng bảng, hoặc trong các hệ quản trị dữ liệu quan hệ. Dữ liệu không có cấu trúc là dữ liệu máy hoàn toàn không hiểu, như ngôn ngữ tự nhiên. Dữ liệu bán cấu trúc là dữ liệu chứa các thẻ hoặc các hình thức đánh dấu khác giúp phân tách bộ phận ngữ cảnh nền ra khỏi dữ liệu, điển hình là các ngôn ngữ đánh dấu như XML, JSON, HTML. Rúc trích thông tin là một trong những vấn đề của xử lý ngôn ngữ tự nhiên.
 
-Tác vụ rút trích thông tin gồm hai bước con là nhận dạng thực thể và rút trích quan hệ. Trong đó, nhận dạng thực thể là bước đầu tiên của bài toán rút trích thông tin. Nhiệm vụ của nhận dạng thực thể là xác định những thực thể trong câu và gán nhãn cho nó. Ví dụ đầu ra của bước nhận dạng thực thể từ câu văn ``Duy Hưng là sinh viên đại học Bách Khoa của thành phố Hồ Chí Minh'' là:
+Tác vụ rút trích thông tin gồm hai bước con là nhận dạng thực thể và rút trích quan hệ. Trong đó, nhận dạng thực thể là bước đầu tiên của bài toán rút trích thông tin. Nhận dạng thực thể có tên là xác định các thực thể có trong văn bản và phân loại chúng vào các lớp khái niệm được định nghĩa sẵn, trong đó khái niệm có tên là các cụm từ có chứa tên của người, tổ chức hoặc địa điểm \cite{KimSang2003}. Ví dụ đầu ra của bước nhận dạng thực thể từ câu văn ``Duy Hưng là sinh viên đại học Bách Khoa của thành phố Hồ Chí Minh'' là:
 
 \begin{itemize}[noitemsep]
 \item ``Duy Hưng'' - Con người
@@ -46,8 +46,18 @@ Tác vụ rút trích thông tin gồm hai bước con là nhận dạng thực 
 \item ``thành phố Hồ Chí Minh'' - Địa điểm
 \end{itemize}
 
-Bài toán nhận dạng thực thể có tên thường bao gồm 2 bước: xác định thực thể và phân loại thực thể vào các nhóm ngữ nghĩa (như con người, nơi chốn, tổ chức, ...). Trong đó, bước đầu tiên của bài toán thường được xem đơn giản như là một bài toán phân mảnh các từ trong câu thành các ``tên'', với ``tên'' là một chuỗi các từ liên tục có ý nghĩa và chỉ tới một thực thể có thật, không lồng ghép trong ``tên'' khác. Vì vậy từ ``Ngân hàng Việt Nam'' chỉ được xem như là một tên duy nhất, mặc dù từ ``ngân hàng'' và ``Việt Nam'' bản thân cũng mang ý nghĩa.
+Bài toán nhận dạng thực thể có tên thường bao gồm 2 bước: xác định thực thể và phân loại thực thể vào các nhóm ngữ nghĩa (như con người, nơi chốn, tổ chức, ...) \cite{KimSang2003}. Trong đó, bước đầu tiên của bài toán thường được xem đơn giản như là một bài toán phân mảnh các từ trong câu thành các ``tên'', với ``tên'' là một chuỗi các từ liên tục có ý nghĩa và chỉ tới một thực thể có thật, không lồng ghép trong ``tên'' khác. Vì vậy từ ``Ngân hàng Việt Nam'' chỉ được xem như là một tên duy nhất, mặc dù từ ``ngân hàng'' và ``Việt Nam'' bản thân cũng mang ý nghĩa.
 
 Các hệ thống nhận diện thực thể có tên nếu hoạt động tốt trong một lĩnh vực cụ thể (như y tế, địa chất, ký sự, ...) thì sẽ cho kết quả không tốt nếu đem ứng dụng vào lĩnh vực khác. Để có thể chỉnh sửa cho một hệ thống có sẵn hoạt động tốt trong một lĩnh vực mới thường tiêu tốn rất nhiều công sức.
 
-Tùy theo mỗi lĩnh vực quan tâm cụ thể, các loại thực thể sẽ được định nghĩa khác nhau. Với những vấn đề không đặc thù, những nhóm thực thể thường được nhắc đến là: động vật, người, tổ chức, vật, ... Khi nghiên cứu về nhận dạng thực thể trong bệnh án điện tử, i2b2 2011 đã định nghĩa năm loại thực thể cần được quan tâm. Đó là vấn đề (Problem), phương pháp điều trị (Treatment), các xét nghiệm (Test), con người (Person) và đại từ (Pronoun). Đối với bài toán phân giải đồng tham chiếu, kết quả của quá trình nhận dạng thực thể là đầu vào bắt buộc phải có trước khi tiến hành phân giải.
+Tùy theo mỗi lĩnh vực quan tâm cụ thể, các loại thực thể sẽ được định nghĩa khác nhau. Với những vấn đề không đặc thù, những nhóm thực thể thường được nhắc đến là: động vật, người, tổ chức, vật, ... Khi nghiên cứu về nhận dạng thực thể trong bệnh án điện tử, năm loại thực thể cần được quan tâm là: vấn đề (Problem), phương pháp điều trị (Treatment), các xét nghiệm (Test), con người (Person) và đại từ (Pronoun).
+
+Tổ chức I2B2 là một trong bảy Trung tâm nghiên cứu công nghệ tính toán y sinh (National Center for Biomedical Computing) được thành lập dưới sự tài trợ bởi Viện y tế Quốc gia Hoa Kì nhiệm vụ xây dựng cơ sở hạ tầng phục vụ cho việc áp dụng khoa học máy tính vào lĩnh vực y sinh, hỗ trợ cho công việc nghiên cứu. Bắt đầu từ năm 2006, I2B2 đã tổ chức các cuộc thi hàng năm nhằm tìm kiếm các phương pháp phân tích và rút trích kiến thức trên dữ liệu BAĐT, gọi tắt là các Thách thức (Challenges). Năm 2010, tổ chức I2B2 đưa ra Thách thức về vấn đề xử lý ngôn ngữ tự nhiên cho các văn bản y tế lâm sàng bao gồm ba tác vụ:
+
+\begin{enumerate}[leftmargin=\the\parindent]
+\item Trích xuất và nhận dạng các thực thể có tên trong y học.
+\item Phân loại bệnh vào một trong các dạng: đang xảy ra ở hiện tại, không xảy ra ở hiện tại, có thể xảy ra trong tương lai, ...
+\item Rút trích các quan hệ giữa các bệnh, phương pháp điều trị và thủ tục y tế.
+\end{enumerate}
+
+Phân giải đồng tham chiếu là việc xác định hai khái niệm có tên trong văn bản có cùng ám chỉ, tham chiếu tới một thực thể trong thế giới thật hay không. Trước khi tiến hành phân giải đồng tham chiếu, cần phải có danh sách các thực thể có tên được đề cập văn bản HSXV. Vì vậy kết quả của việc trích xuất và nhận dạng các thực thể có tên trong y học của Thách thức I2B2 2010 cũng được đưa làm đầu vào cho thách thức I2B2 năm 2011 về vấn đề phân giải đồng tham chiếu trong HSXV. Vấn đề được nêu trong Thách thức I2B2 2011 cũng chính là vấn đề được chúng tôi giải quyết trong nội dung Luận văn tốt nghiệp, chi tiết vấn đề và hướng giải quyết được đề cập trong phần \ref{hienthuchethong}.
