@@ -253,7 +253,10 @@ Trong quá trình thử nghiệm hai phương pháp chọn lọc mẫu trên, ch
 
 Ngoài ra, chúng tôi nhận thấy đa phần các mẫu âm quan trọng bị loại bỏ là các cặp gồm hai khái niệm duy nhất nhưng có liên quan về chuỗi kí tự biểu diễn. Vì lý do đó, để cải thiện độ chính xác, chúng tôi quyết định sử dụng cách xây dựng mẫu thứ 2 và đưa thêm vào đó các cặp gồm hai khái niệm duy nhất mà có sự trùng lắp chuỗi con giữa hai khái niệm này.
 
-\section{Rút trích đặc trưng lớp Person}
+\section{Rút trích đặc trưng lớp Person và lớp Pronoun}
+Các lớp Person, Patient-class và Pronoun là các khái niệm tổng quát, có thể được bắt gặp trong nhiều lĩnh vực khác nhau không chỉ trong riêng lĩnh vực y tế và BAĐT. Ba lớp khái niệm này có thể được phân biệt nhờ vào các thuộc tính chung về mặt ngôn ngữ như ngữ pháp hay từ vựng. Tuy nhiên, ngoài các đặc tính chung đó, từng lớp khái niệm còn mang những đặc tính riêng khác nhau. Việc này đòi hỏi chúng tôi phải thiết kế các hệ thống rút trích đặc trưng và phân loại tương ứng khác nhau. Đối với lớp Person, đầu vào của hệ thống rút trích đặc trưng là một cặp gồm hai khái niệm chỉ con người, tuy nhiên đầu vào của hệ thống rút trích đặc trưng lớp Patient-class và Pronoun chỉ là một khái niệm duy nhất thuộc lớp tương ứng.
+
+\subsection*{Lớp Person}
 Như đã đề cập trong phần \ref{ytuonghienthuc}, trong HSXV, các khái niệm thuộc lớp Person thường được chia vào ba nhóm chính: bệnh nhân, người thân của bệnh nhân hoặc nhân sự của bệnh viện. Trong đó bệnh nhân là nhóm có số lượng khái niệm được đề cập nhiều nhất và chiếm phần lớn tổng số khái niệm lớp Person. Do vậy việc xác định một khái niệm thuộc vào nhóm nào đóng vai trò quan trọng trong việc phân giải chính xác chuỗi đồng tham chiếu cho khái niệm đó \cite{YanXu2012}. Đặc trưng lớp Patient được xác định bằng phương pháp phân loại nhị phân SVM. Hai nhóm người thân của bệnh nhân và nhân sự của bệnh viện được xác định bằng các đặc trưng từ vựng. Bảng \ref{tab:PersonFeatures} trình bày đầy đủ các đặc trưng dùng cho lớp Person.
 
 \begin{newtable}{1.2}{Tập đặc trưng cho lớp Person\label{tab:PersonFeatures}}
@@ -459,7 +462,7 @@ Thiết bị y tế được sử dụng cũng là một gợi ý ngữ nghĩa c
 \subsection*{Trích xuất thông tin phẫu thuật y tế (Operation)}
 Phần lớn các khái niệm thuộc lớp Treatment được đề cập là các phẫu thuật y tế. Vì vậy đặc trưng thông tin phẫu thuật y tế có thể xem là một gợi ý cho việc phân giải đồng tham chiếu lớp Treatment. Các phẫu thuật y tế được xác định bằng cách: khái niệm có tồn tại trong bộ từ điển UMLS và kết thúc bằng các tiếp vĩ ngữ ``-tomy'', ``-plasty''.
 
-Tuy nhiên từng lớp Problem/Treatment/Test không sử dụng toàn bộ các đặc trưng về ngữ nghĩa trong văn bản. Ví dụ đặc trưng về thuốc y tế chỉ được sử dụng cho lớp Treatment mà không sử dụng cho lớp Problem và Test. Bảng \ref{tab:SemanticFeatures} mô tả chi tiết các đặc trưng ngữ nghĩa được sử dụng cho từng lớp khái niệm. Các đặc trưng được mô tả đầy đủ trong phần Các nguồn tri thức nhân loại và phần Bộ trích xuất ngữ nghĩa trong văn bản. Bảng \ref{tab:ProbTreatTestFeatures} liệt kê đầy đủ các đặc trưng được chúng tôi sử dụng trong việc huấn luyện mô hình SVM cho nhóm Problem/Treatment/Test.
+Tuy nhiên từng lớp Problem/Treatment/Test không sử dụng toàn bộ các đặc trưng về ngữ nghĩa trong văn bản. Ví dụ đặc trưng về thuốc y tế chỉ được sử dụng cho lớp Treatment mà không sử dụng cho lớp Problem và Test. Bảng \ref{tab:SemanticFeatures} mô tả chi tiết các đặc trưng ngữ nghĩa được sử dụng cho từng lớp khái niệm. Các đặc trưng được mô tả đầy đủ trong phần Các nguồn tri thức nhân loại và phần Bộ trích xuất ngữ nghĩa trong văn bản. Bảng \ref{tab:ProbTreatTestFeatures} liệt kê đầy đủ các đặc trưng được chúng tôi sử dụng trong việc huấn luyện mô hình SVM cho nhóm Problem/Treatment/Test, trong đó đầu vào của hệ thống rút trích đặc trưng lớp Problem/Treatment/Test là một cặp hai khái niệm thuộc lớp tương ứng.
 
 \begin{table}[ht]
 \centering\ra{1.2}
