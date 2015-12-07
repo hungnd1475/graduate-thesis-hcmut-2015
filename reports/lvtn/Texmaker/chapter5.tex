@@ -58,12 +58,12 @@ Như vậy mục đích của quy trình huấn luyện là xây dựng tổng c
 	\node[io](trep){Đặc trưng cặp Treatment};
 	\node[io](pron){Đặc trưng Pronoun};	
 	\node[proc, right=2.6cm of $(prop)!0.5!(tstp)$](train){Huấn luyện};
-	\node[io,right=7cm of perp](perm){SVM model cho cặp Person};
-	\node[io](patim){Mô hình SVM Patient-class};
-	\node[io](prom){Mô hình SVM cho cặp Problem};
-	\node[io](tstm){Mô hình SVM cho cặp Test};
-	\node[io](trem){Mô hình SVM cho cặp Treatment};
-	\node[io](pronm){Mô hình SVM cho Pronoun};
+	\node[io,right=7cm of perp](perm){Mô hình SVM cặp Person};
+	\node[io](patim){Mô hình SVM lớp Patient};
+	\node[io](prom){Mô hình SVM cặp Problem};
+	\node[io](tstm){Mô hình SVM cặp Test};
+	\node[io](trem){Mô hình SVM cặp Treatment};
+	\node[io](pronm){Mô hình SVM Pronoun};
 
 	\draw[->] (emr) -- ++(down:0.9cm) -| (prep.130);
 	\draw[->] (con) -- ++(down:0.9cm) -| (prep.50);
@@ -203,7 +203,7 @@ Quá trình tiền xử lý gồm hai bước: đầu tiên khái niệm sẽ đ
 Đặc biệt các khái niệm thuộc lớp Problem/Treatment/Test thường được kèm thêm thông tin về định lượng như 10mg, 5 lit và các thông tin về vị trí giải phẫu học như ``upper'', ``left'', ``right''. Để tăng khả năng tìm kiếm tri thức nhân loại, chúng tôi đề xuất loại bỏ các thông tin ngữ cảnh về số, định lượng và vị trí giải phẫu khỏi khái niệm. Các thông tin ngữ cảnh được loại bỏ bằng cách sử dụng biểu thức chính quy và các từ vựng được xây dựng từ tập dữ liệu. Các đặc trưng liên quan so trùng chuỗi không áp dụng bước tiền xử lý loại bỏ thông tin ngữ cảnh này.
 
 \section{Xây dựng các cặp khái niệm}
-Sau khi tiền xử lý, hệ thống xây dựng các cặp khái niệm với mục đích xác định xem hai khái niệm bất kì có đồng tham chiếu với nhau hay không. Vì SVM không có khả năng học tăng cường nên đối với \emph{quy trình huấn luyện}, chúng tôi cần xây dựng các cặp khái niệm từ toàn bộ danh sách khái niệm trong tập huấn luyện, sau đó rút trích đặc trưng cho toàn bộ các cặp khái niệm này và đưa vào huấn luyện các mô hình SVM. Một khó khăn của cách làm này là số cặp khái niệm phát sinh rất nhiều nếu tất cả các cặp được xây dựng cho một văn bản HSXV. Cụ thể với tập huấn luyện gồm 200 HSXV, mỗi hồ sơ chứa trung bình 150 khái niệm thì số các cặp khái niệm được sinh ra là $200\times \binom{150}{2}=2.235.000$ cặp. Dựa theo thực nghiệm của chúng tôi, sử dụng một tập vector đặc trưng chứa khoảng 300.000 vector để huấn luyện một mô hình SVM với kernel phi tuyến tính mất từ 4 đến 5 tiếng đồng hồ. Như vậy với một tập gồm hơn 2 triệu vector đặc trưng thì việc huấn luyện như vậy là bất khả thi.
+Sau khi tiền xử lý, hệ thống xây dựng các cặp khái niệm với mục đích xác định xem hai khái niệm bất kì có đồng tham chiếu với nhau hay không. Vì SVM không có khả năng học tăng cường nên đối với \emph{quy trình huấn luyện}, chúng tôi cần xây dựng các cặp khái niệm từ toàn bộ danh sách khái niệm trong tập huấn luyện, sau đó rút trích đặc trưng cho toàn bộ các cặp khái niệm này và đưa vào huấn luyện các mô hình SVM. Một khó khăn của cách làm này là số cặp khái niệm phát sinh rất nhiều nếu tất cả các cặp được xây dựng cho một văn bản HSXV. Cụ thể với tập huấn luyện gồm 200 HSXV, mỗi hồ sơ chứa trung bình 150 khái niệm thì số các cặp khái niệm được sinh ra là $200\times \binom{150}{2}=2.235.000$ cặp. Dựa theo thực nghiệm của chúng tôi, sử dụng một tập vector đặc trưng chứa khoảng 300.000 vector để huấn luyện một mô hình SVM với kernel phi tuyến tính mất từ 4 đến 5 tiếng đồng hồ. Với một tập gồm hơn 2 triệu vector đặc trưng thì việc huấn luyện như vậy là bất khả thi.
 
 Bên cạnh số lượng các vector đặc trưng, một vấn đề khác mà chúng tôi gặp phải trong quá trình huấn luyện là sự mất cân bằng trong phân bố lớp: các cặp không đồng tham chiếu (các mẫu âm) có số lượng quá nhiều so với các cặp đồng tham chiếu (các mẫu dương). Một tập vector đặc trưng bị mất cân bằng lớp sẽ khiến cho mô hình SVM được huấn luyện dựa trên tập đó có xu hướng phân loại về phía lớp có số lượng nhiều hơn. 
 
@@ -242,8 +242,16 @@ Mặc dù cách làm trên giúp giảm bớt số lượng các mẫu huấn lu
 \caption{Ví dụ cho việc sinh các mẫu huấn luyện\label{fig:insgen-eg}}
 \end{figure}
 
-\item Phương pháp này xây dựng các mẫu huấn luyện theo các bước sau: với mỗi hồi chỉ $C_j$, xác định tiền đề của nó ở xa nhất theo thứ tự xuất hiện, gọi nó là $C_k$. Xây dựng các cặp với khái niệm đứng sau là $C_j$, khái niệm đứng trước là các khái niệm bắt đầu từ $C_k$ đến $C_{j-1}$ (chỉ xét những cặp hai khái niệm cùng lớp) \cite{VincentNg2002[2]}. Như vậy đối với ví dụ trên Hình \ref{fig:insgen-eg}, các mẫu  huấn luyện được sinh ra theo các bước phương pháp này là: đối với $C_3$, tiền đề xa nhất của nó là $C_1$, như vậy các cặp $(C_1,\,C_3)$, $(D_1,\,C_3)$, $(D_2,\,C_3)$, $(a,\,C_3)$, $(b,\,C_3)$ và $(C_2,\,C_3)$ được xây dựng. Làm tương tự cho các khái niệm từ $C_2$ về $C_1$ để xây dựng các mẫu huấn luyện còn lại.
+\item Phương pháp này xây dựng các mẫu huấn luyện theo các bước sau: với mỗi hồi chỉ $C_j$, xác định tiền đề của nó ở xa nhất theo thứ tự xuất hiện, gọi là $C_k$. Xây dựng các cặp với khái niệm đứng sau là $C_j$, khái niệm đứng trước là các khái niệm bắt đầu từ $C_k$ đến $C_{j-1}$ (chỉ xét những cặp hai khái niệm cùng lớp) \cite{VincentNg2002[2]}. Như vậy đối với ví dụ trên Hình \ref{fig:insgen-eg}, các mẫu  huấn luyện được sinh ra theo các bước của phương pháp này là: đối với $C_3$, tiền đề xa nhất của nó là $C_1$, như vậy các cặp $(C_1,\,C_3)$, $(D_1,\,C_3)$, $(D_2,\,C_3)$, $(a,\,C_3)$, $(b,\,C_3)$ và $(C_2,\,C_3)$ được xây dựng. Làm tương tự cho các khái niệm từ $C_2$ về $C_1$ để xây dựng các mẫu huấn luyện còn lại.
 \end{enumerate}
+
+Trong quá trình thử nghiệm hai phương pháp chọn lọc mẫu trên, chúng tôi nhận thấy số lượng cặp khái niệm của mỗi loại giảm đi đáng kể khiến cho thời gian huấn luyện được cải thiện. Tuy nhiên kết quả đánh giá hiệu năng không được như mong đợi, cụ thể là độ đầy đủ tăng tên rất cao trong khi độ chính xác lại rất thấp. Điều này có thể được dễ dàng giải thích là:
+\begin{itemize}
+\item Đa phần các cặp đồng tham chiếu ở ba lớp Problem, Test và Treatment là các cặp có hai khái niệm đồng thuận về một tính chất nào đó dựa trên chuỗi kí tự biểu diễn.
+\item Do có nhiều cặp không đồng tham chiếu (các mẫu âm) bị loại bỏ, các thông tin về việc phân lớp cho các trường hợp dạng này không được đưa vào để huấn luyện nên mô hình phân loại có xu hướng xác định đồng tham chiếu cho các cặp mà hai khái niệm có liên quan về chuỗi kí tự biểu diễn.
+\end{itemize}
+
+Ngoài ra, chúng tôi nhận thấy đa phần các mẫu âm quan trọng bị loại bỏ là các cặp gồm hai khái niệm duy nhất nhưng có liên quan về chuỗi kí tự biểu diễn. Vì lý do đó, để cải thiện độ chính xác, chúng tôi quyết định sử dụng cách xây dựng mẫu thứ 2 và đưa thêm vào đó các cặp gồm hai khái niệm duy nhất mà có sự trùng lắp chuỗi con giữa hai khái niệm này.
 
 \section{Rút trích đặc trưng lớp Person}
 Như đã đề cập trong phần \ref{ytuonghienthuc}, trong HSXV, các khái niệm thuộc lớp Person thường được chia vào ba nhóm chính: bệnh nhân, người thân của bệnh nhân hoặc nhân sự của bệnh viện. Trong đó bệnh nhân là nhóm có số lượng khái niệm được đề cập nhiều nhất và chiếm phần lớn tổng số khái niệm lớp Person. Do vậy việc xác định một khái niệm thuộc vào nhóm nào đóng vai trò quan trọng trong việc phân giải chính xác chuỗi đồng tham chiếu cho khái niệm đó \cite{YanXu2012}. Đặc trưng lớp Patient được xác định bằng phương pháp phân loại nhị phân SVM. Hai nhóm người thân của bệnh nhân và nhân sự của bệnh viện được xác định bằng các đặc trưng từ vựng. Bảng \ref{tab:PersonFeatures} trình bày đầy đủ các đặc trưng dùng cho lớp Person.
