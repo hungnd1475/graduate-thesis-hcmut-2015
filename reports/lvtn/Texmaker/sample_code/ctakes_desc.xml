@@ -1,0 +1,22 @@
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+	<frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+	<primitive>true</primitive>
+	<annotatorImplementationName>org.apache.ctakes.postagger.POSTagger</annotatorImplementationName>
+	<analysisEngineMetaData>
+		<name>POSTagger</name>
+		<description/>
+		<version>1.0</version>
+		<vendor/>
+		<configurationParameters>
+			<configurationParameter>
+				<name>PosModelFile</name>
+				<description>The file that contains the MaxEnt model used by the part of speech (POS) tagger</description>
+				<type>String</type>
+				<multiValued>false</multiValued>
+				<mandatory>true</mandatory>
+			</configurationParameter>
+		</configurationParameters>
+		...
+	</analysisEngineMetaData>
+	...
+</analysisEngineDescription>
