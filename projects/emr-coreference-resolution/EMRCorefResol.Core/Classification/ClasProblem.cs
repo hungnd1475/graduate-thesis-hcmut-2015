@@ -14,10 +14,21 @@ namespace HCMUT.EMRCorefResol.Classification
 
         public int Size { get { return X.Count; } }
 
+        private HashSet<IFeatureVector> _fVectors = new HashSet<IFeatureVector>();
+
         public void Add(IFeatureVector fVector, double classValue)
         {
-            X.Add(fVector.ToDoubleArray());
-            Y.Add(classValue);
+            if (!_fVectors.Contains(fVector))
+            {
+                X.Add(fVector.ToDoubleArray());
+                Y.Add(classValue);
+                _fVectors.Add(fVector);
+            }
+        }
+
+        public void ClearCache()
+        {
+            _fVectors = null;
         }
     }
 }

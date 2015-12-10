@@ -20,6 +20,7 @@
 \usepackage{enumitem}
 %\usepackage{hanging}
 \usepackage{etoolbox}
+\usepackage[linewidth=0.8pt,skipbelow=0pt]{mdframed}
 %\usepackage{layout}
 %\usepackage{showframe}
 
@@ -121,6 +122,32 @@
 
 \addto\captionsvietnam{
 	\renewcommand{\listfigurename}{Danh sách hình}
+}
+
+\newcolumntype{+}{>{\global\let\currentrowstyle\relax}}
+\newcolumntype{^}{>{\currentrowstyle}}
+\newcommand{\rowstyle}[1]{\gdef\currentrowstyle{#1}%
+#1\ignorespaces
+}
+
+\newenvironment{rtable}[2][ht]
+{
+	\@float{table}[#1]
+	\renewcommand{\tabcolsep}{3.75pt}
+	\centering\ra{1.2}
+	\caption{#2}
+	\footnotesize\sffamily
+	
+	\tabularx{\textwidth}{@{}llllclllclllclll@{}}
+	\toprule
+	&\multicolumn{3}{l}{\textbf{MUC}}&\phantom{a}&\multicolumn{3}{l}{\textbf{B-CUBED}}&\phantom{a}&\multicolumn{3}{l}{\textbf{CEAF}}&\phantom{a}&\multicolumn{3}{l}{\textbf{Trung bình}}\\
+	\cmidrule{2-4} \cmidrule{6-8} \cmidrule{10-12} \cmidrule{14-16}
+	& \textbf{P} & \textbf{R} & \textbf{F} && \textbf{P} & \textbf{R} & \textbf{F} && \textbf{P} & \textbf{R} & \textbf{F} && \textbf{P} & \textbf{R} & \textbf{F}\\
+	\midrule
+}
+{
+	\endtabularx
+	\end@float
 }
 
 \makeatother

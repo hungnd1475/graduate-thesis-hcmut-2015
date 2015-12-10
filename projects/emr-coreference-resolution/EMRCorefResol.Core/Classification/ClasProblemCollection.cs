@@ -33,7 +33,9 @@ namespace HCMUT.EMRCorefResol.Classification
 
         public ClasProblem GetProblem(Type instanceType)
         {
-            return _problems[instanceType];
+            var p = _problems[instanceType];
+            p.ClearCache();
+            return p;
         }
     }
 }
