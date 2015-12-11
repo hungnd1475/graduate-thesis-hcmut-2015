@@ -1,0 +1,4 @@
+c="provider" 20:0 20:0||c="getzsieh , m.d. work" 21:0 21:3||c="provider" 45:0 45:0||c="work , shellbetha , m.d." 47:5 47:9||t="coref person"
+c="pcp" 22:2 22:2||c="pcp" 24:3 24:3||c="pcp" 43:0 43:0||t="coref person"
+c="wiegneigh , yla" 13:0 13:2||c="patient" 30:0 30:0||c="patient" 38:7 38:7||c="oncologist" 39:0 39:0||c="you" 40:0 40:0||c="you" 40:5 40:5||c="you" 41:3 41:3||c="you" 42:3 42:3||t="coref person"
+c="interventional radiology" 41:9 41:10||c="they" 42:0 42:0||t="coref person"

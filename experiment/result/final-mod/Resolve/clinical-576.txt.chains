@@ -1,0 +1,8 @@
+c="the patient" 16:0 16:1||c="his" 16:20 16:20||c="the patient" 17:0 17:1||c="he" 18:2 18:2||c="he" 18:18 18:18||c="his" 18:22 18:22||c="his" 19:0 19:0||c="he" 19:5 19:5||c="he" 20:0 20:0||c="his" 20:9 20:9||c="he" 21:0 21:0||c="his" 22:0 22:0||c="he" 23:0 23:0||c="he" 24:0 24:0||c="the patient" 28:0 28:1||c="the patient" 34:0 34:1||c="patient" 36:4 36:4||c="his" 39:0 39:0||c="the patient" 57:0 57:1||c="the patient" 62:0 62:1||c="the patient" 66:0 66:1||c="the patient" 67:0 67:1||c="the patient" 71:0 71:1||c="his" 71:12 71:12||t="coref person"
+c="hypertension" 16:17 16:17||c="hypertension" 61:1 61:1||c="hypertension" 73:4 73:4||t="coref problem"
+c="vasotec" 26:0 26:0||c="vasotec" 62:5 62:5||c="vasotec" 69:0 69:0||t="coref treatment"
+c="clonidine" 26:12 26:12||c="clonidine" 62:9 62:9||c="clonidine" 69:6 69:6||t="coref treatment"
+c="diabetes mellitus" 32:6 32:7||c="diabetes mellitus" 65:1 65:2||c="diabetes mellitus" 73:6 73:7||t="coref problem"
+c="nifedipine" 62:7 62:7||c="nifedipine" 69:12 69:12||t="coref treatment"
+c="valium" 63:3 63:3||c="valium" 69:24 69:24||t="coref treatment"
+c="micronase" 66:7 66:7||c="micronase" 69:30 69:30||t="coref treatment"

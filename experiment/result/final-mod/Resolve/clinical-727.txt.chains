@@ -1,0 +1,4 @@
+c="a 35-year-old g2 , p1 , now 2 mother" 12:13 12:21||c="mother" 19:0 19:0||c="mother" 80:0 80:0||t="coref person"
+c="baby alfonso carroll" 12:0 12:2||c="infant" 29:1 29:1||c="newborn" 30:3 30:3||c="he" 49:2 49:2||c="infant" 51:6 51:6||c="infant" 52:5 52:5||c="he" 52:14 52:14||c="infant" 53:2 53:2||c="patient" 56:7 56:7||c="patient" 59:0 59:0||c="the infant" 61:0 61:1||c="infant" 65:0 65:0||c="infant" 66:2 66:2||t="coref person"
+c="primary pediatrician" 72:2 72:3||c="dr. joan derringer" 73:0 73:2||t="coref person"
+c="dr. boston" 56:4 56:5||c="dr boston" 79:4 79:5||t="coref person"

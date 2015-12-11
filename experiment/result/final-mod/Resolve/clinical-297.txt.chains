@@ -1,0 +1,8 @@
+c="baby boy timberlake" 12:0 12:2||c="the baby" 14:0 14:1||c="the patient" 16:0 16:1||c="the patient 's pediatrician" 16:0 16:3||c="the patient" 17:0 17:1||c="the patient" 19:3 19:4||c="the patient" 22:0 22:1||c="the patient" 26:11 26:12||c="the patient" 27:0 27:1||c="he" 28:0 28:0||c="the patient" 33:10 33:11||c="the patient" 35:0 35:1||c="the baby" 36:2 36:3||c="he" 36:8 36:8||c="the patient" 36:20 36:21||c="the patient" 38:0 38:1||c="the patient" 41:0 41:1||c="the patient" 43:0 43:1||c="the patient" 50:0 50:1||c="his" 50:11 50:11||c="the patient" 59:1 59:2||c="the patient" 63:15 63:16||t="coref person"
+c="the patient 's birth weight" 19:3 19:7||c="which" 19:12 19:12||t="coref test"
+c="brief blow by" 14:10 14:12||c="brief blow by oxygen" 26:2 26:5||t="coref treatment"
+c="dr . shaw" 16:9 16:11||c="dr. shaw" 56:0 56:1||t="coref person"
+c="straight similac" 35:41 35:42||c="similac" 58:5 58:5||t="coref treatment"
+c="many siblings" 17:3 17:4||c="multiple siblings" 63:7 63:8||t="coref person"
+c="apnea" 33:4 33:4||c="apnea of prematurity" 74:1 74:3||t="coref problem"
+c="carol eddie m.d" 76:0 76:2||c="dr. carol warren" 82:4 82:6||t="coref person"

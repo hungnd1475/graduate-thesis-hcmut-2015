@@ -1,0 +1,3 @@
+c="xarah ratia service" 13:0 13:2||c="this 23 year old gravida 2 para 1001" 38:0 38:7||c="she" 40:0 40:0||c="infant" 40:6 40:6||c="her" 41:1 41:1||c="she" 41:3 41:3||c="her" 43:1 43:1||c="she" 43:3 43:3||c="she" 45:1 45:1||c="she" 47:0 47:0||t="coref person"
+c="active labor" 34:0 34:1||c="active labor" 39:0 39:1||t="coref problem"
+c="vacuum extraction" 25:0 25:1||c="vacuum extraction" 40:30 40:31||t="coref treatment"

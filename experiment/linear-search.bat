@@ -1,3 +1,3 @@
 @echo off
 echo Search parameter on %2 using liblinear (%1)...
-liblinear\windows\train.exe -s 2 -C ..\..\result\%1\Features\%2.prb
+liblinear\windows\train.exe -s 2 -C result\%1\Features\%2.prb
