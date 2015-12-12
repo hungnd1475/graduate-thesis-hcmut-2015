@@ -203,9 +203,9 @@ namespace HCMUT.EMRCorefResol.IO
                 return Tuple.Create(false, "");
             }
 
-            return Tuple.Create(true, line);
+            //return Tuple.Create(true, line);
 
-            /*if (Regex.IsMatch(line, _history_of_illness_pattern, RegexOptions.IgnoreCase))
+            if (Regex.IsMatch(line, _history_of_illness_pattern, RegexOptions.IgnoreCase))
             {
                 return Tuple.Create(true, "History of Present Illness :");
             }
@@ -280,7 +280,7 @@ namespace HCMUT.EMRCorefResol.IO
                 return Tuple.Create(true, "Disposition :");
             }
 
-            return Tuple.Create(false, "");*/
+            return Tuple.Create(false, "");
         }
 
         private bool CheckCapitol(string title)
