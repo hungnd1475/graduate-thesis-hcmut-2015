@@ -10,28 +10,21 @@ namespace HCMUT.EMRCorefResol.English.Features
     class SectionFeature : Feature
     {
         public SectionFeature(IConceptPair instance, EMR emr, IKeywordDictionary keywords)
-            :base("Section-Feature", keywords.Count*keywords.Count + 1, 0)
+            :base("Section-Feature", keywords.Count + 1, 0)
         {
             var anaSection = EMRExtensions.GetSection(emr, instance.Anaphora);
             var anteSection = EMRExtensions.GetSection(emr, instance.Antecedent);
 
             if(anaSection == null || anteSection == null)
             {
-                SetCategoricalValue(0);
+                Value[0] = 1d;
                 return;
             }
 
-            var sectionPairIndex = GetSectionPairIndex(anaSection.Title, anteSection.Title, keywords);
-            SetCategoricalValue(sectionPairIndex);
-        }
-
-        private int GetSectionPairIndex(string s1, string s2, IKeywordDictionary keywords)
-        {
-            var s1Index = keywords.SearchDictionaryIndices(s1, Utilities.KWSearchOptions.WholeWordIgnoreCase)[0];
-            var s2Index = keywords.SearchDictionaryIndices(s2, Utilities.KWSearchOptions.WholeWordIgnoreCase)[0];
-            var maxSectionNumber = keywords.Count;
-            var index = (s1Index * maxSectionNumber) + s2Index + 1;
-            return index;
+            var anaSectionIndex = keywords.SearchDictionaryIndices(anaSection.Title, KWSearchOptions.WholeWordIgnoreCase)[0];
+            var anteSectionIndex = keywords.SearchDictionaryIndices(anteSection.Title, KWSearchOptions.WholeWordIgnoreCase)[0];
+            Value[anaSectionIndex + 1] = 1d;
+            Value[anteSectionIndex + 1] = 1d;
         }
     }
 }
