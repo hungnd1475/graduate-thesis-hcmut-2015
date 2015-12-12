@@ -1,0 +1,4 @@
+TestPair: c=2048.0 g=0.0078125 98.4077
+TreatmentPair: c=2048.0 g=0.0078125
+PronounInstance: c=8.0 g=0.03125 81.5091
+PersonInstance: 

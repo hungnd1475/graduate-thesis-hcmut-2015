@@ -9,7 +9,7 @@ using HCMUT.EMRCorefResol.Classification;
 
 namespace HCMUT.EMRCorefResol
 {
-    public interface IFeatureVector : IEnumerable<IFeature>
+    public interface IFeatureVector : IEnumerable<IFeature>, IEquatable<IFeatureVector>
     {
         IFeature this[int index] { get; }
         int Size { get; }

@@ -58,7 +58,7 @@ namespace HCMUT.EMRCorefResol
                             }
                         }
 
-                        if (fIndex > 0)
+                        if (fIndex >= 0)
                         {
                             for (int i = fIndex; i < j; i++)
                             {

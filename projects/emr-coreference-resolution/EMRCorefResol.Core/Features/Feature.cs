@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HCMUT.EMRCorefResol.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -112,6 +113,41 @@ namespace HCMUT.EMRCorefResol
         {
             var value = IsCategorical ? GetCategoricalValue() : GetContinuousValue();
             return $"{Name}:{value}";
+        }
+
+        public override int GetHashCode()
+        {
+            var values = new List<object>();
+            values.Add(Name);
+            foreach (var v in Value)
+                values.Add(v);
+
+            return HashCodeHelper.ComputeHashCode(values.ToArray());
+        }
+
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as IFeature);
+        }
+
+        public bool Equals(IFeature other)
+        {
+            if (other == null)
+                return false;
+
+            if (Name != other.Name)
+                return false;
+
+            if (Value.Length != other.Value.Length)
+                return false;
+            
+            for (int i = 0; i < Value.Length; i++)
+            {
+                if (Value[i] != other.Value[i])
+                    return false;
+            }
+
+            return true;
         }
     }
 }

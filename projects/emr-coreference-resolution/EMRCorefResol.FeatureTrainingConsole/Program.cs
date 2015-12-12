@@ -70,6 +70,7 @@ namespace HCMUT.EMRCorefResol.FeatureTrainingConsole
                 config.SetConfig(LibSVMConfig.CacheSize, args.CacheSize);
             }
 
+            Directory.CreateDirectory(args.OutputDir);
             var trainer = APISelector.SelectTrainer(args.ClasMethod, args.OutputDir);
             var instanceType = APISelector.SelectInstanceType(args.Instance);
             trainer.Train(instanceType, args.FeaturePath, config);

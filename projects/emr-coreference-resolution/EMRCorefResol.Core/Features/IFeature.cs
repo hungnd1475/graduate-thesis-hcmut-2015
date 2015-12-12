@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HCMUT.EMRCorefResol
 {
-    public interface IFeature
+    public interface IFeature : IEquatable<IFeature>
     {
         string Name { get; }
         double[] Value { get; }
