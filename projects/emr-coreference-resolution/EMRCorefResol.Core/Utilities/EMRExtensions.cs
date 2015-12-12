@@ -50,6 +50,45 @@ namespace HCMUT.EMRCorefResol
             return emr.ContentBetween(pair.Antecedent, pair.Anaphora);
         }
 
+        public static string GetRawConcept(this EMR emr, Concept concept)
+        {
+            if(concept.Begin.Line == concept.End.Line)
+            {
+                var line = emr.GetLine(concept);
+                var tokens = line.Split(' ');
+                tokens = tokens.Where(val => !string.IsNullOrEmpty(val)).ToArray();
+
+                var startIndex = concept.Begin.WordIndex;
+                var endIndex = concept.End.WordIndex;
+
+                var rawTokens = tokens.Skip(startIndex).Take(endIndex - startIndex + 1).ToArray();
+
+                return (rawTokens != null || rawTokens.Length > 0) ?
+                    string.Join(" ", rawTokens) :
+                    concept.Lexicon;
+            } else
+            {
+                var startLine = emr.GetLine(concept.Begin.Line).Replace("  ", " ").Replace("\r", "").Replace("\n", "");
+                var endLine = emr.GetLine(concept.End.Line).Replace("  ", " ").Replace("\r", "").Replace("\n", "");
+
+                var startTokens = startLine.Split(' ');
+                startTokens = startTokens.Where(val => !string.IsNullOrEmpty(val)).ToArray();
+                var endTokens = endLine.Split(' ');
+                endTokens = endTokens.Where(val => !string.IsNullOrEmpty(val)).ToArray();
+
+                var halfFirst = startTokens
+                    .Skip(concept.Begin.WordIndex)
+                    .Take(startTokens.Length - concept.Begin.WordIndex)
+                    .ToArray();
+                var halfLast = endTokens.Take(concept.End.WordIndex + 1).ToArray();
+                var rawTokens = halfFirst.Concat(halfLast).ToArray();
+
+                return (rawTokens != null || rawTokens.Length > 0) ?
+                    string.Join(" ", rawTokens) :
+                    concept.Lexicon;
+            }
+        }
+
         public static string GetLine(this EMR emr, Concept concept)
         {
             if (concept.Begin.Line == concept.End.Line)
