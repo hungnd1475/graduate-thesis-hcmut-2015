@@ -193,15 +193,9 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
                 {
                     if (!_wiki.ContainsKey(c.Lexicon))
                     {
-                        var normalized = EnglishNormalizer.Normalize(c.Lexicon, STOP_WORDS);
+                        var rawTerm = emr.GetRawConcept(c);
+                        var normalized = EnglishNormalizer.Normalize(rawTerm, STOP_WORDS);
                         var wikiData = Service.English.GetAllWikiInformation(normalized);
-
-                        if(wikiData == null)
-                        {
-                            var rawTerm = emr.GetRawConcept(c);
-                            normalized = EnglishNormalizer.Normalize(rawTerm, STOP_WORDS);
-                            wikiData = Service.English.GetAllWikiInformation(normalized);
-                        }
 
                         if(wikiData == null)
                         {
