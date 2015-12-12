@@ -27,38 +27,29 @@ namespace HCMUT.EMRCorefResol.Scoring
                 {
                     p = r = 1d;
                 }
+                else if (tSystemChains.Count == 0 || tGroundTruth.Count == 0)
+                {
+                    p = r = 0d;
+                }
                 else
                 {
-                    if (tSystemChains.Count == 0)
+                    double u = 0d, l = 0d;
+                    foreach (var s in tSystemChains)
                     {
-                        p = 0d;
+                        u += (s.Count - m(s, tGroundTruth));
+                        l += (s.Count - 1);
                     }
-                    else
-                    {
-                        double u = 0d, l = 0d;
-                        foreach (var s in tSystemChains)
-                        {
-                            u += (s.Count - m(s, tGroundTruth));
-                            l += (s.Count - 1);
-                        }
-                        p = u / l;
-                    }
+                    p = u / l;
 
-                    if (tGroundTruth.Count == 0)
+                    u = l = 0d;
+                    foreach (var g in tGroundTruth)
                     {
-                        r = 0d;
+                        u += (g.Count - m(g, tSystemChains));
+                        l += (g.Count - 1);
                     }
-                    else
-                    {
-                        double u = 0d, l = 0d;
-                        foreach (var g in tGroundTruth)
-                        {
-                            u += (g.Count - m(g, tSystemChains));
-                            l += (g.Count - 1);
-                        }
-                        r = u / l;
-                    }
-                }  
+                    r = u / l;
+
+                }
 
                 var f = (p == 0 && r == 0) ? 0d : 2 * p * r / (p + r);
                 evals.Add(type, new Evaluation(p, r, f, Name));

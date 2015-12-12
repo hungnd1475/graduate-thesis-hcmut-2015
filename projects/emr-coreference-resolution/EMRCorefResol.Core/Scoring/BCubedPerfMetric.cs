@@ -46,13 +46,13 @@ namespace HCMUT.EMRCorefResol.Scoring
                         p = 1 / s.Count;
                         r = 1;
                     }
-                    else if (s == null) // system does not produce any chain for mention m
+                    else if (s == null) // system does not produce any chains for mention m
                     {
                         type = g.Type;
                         p = 1;
                         r = 1 / g.Count;
                     }
-                    else // system produces chain for mention m
+                    else // system produces a chain for mention m
                     {
                         type = g.Type;
                         var o = g.Intersect(s);

@@ -7,6 +7,7 @@ Tập dữ liệu chúng tôi nhận được bao gồm \emph{251 hồ sơ xuấ
 \begin{figure}[ht]
 \begin{mdframed}
 \ttfamily\footnotesize
+\protect\raggedright
 Discharge Date :\\
 06/22/1991\\
 DISCHARGE DIAGNOSIS :\\
@@ -24,6 +25,7 @@ Patient underwent a total abdominal hysterectomy in 02/90 for a 4x3.6x2 cm cervi
 \begin{figure}[ht]
 \begin{mdframed}
 \ttfamily\footnotesize
+\protect\raggedright
 c="hallucinations" 94:9 94:9||t="problem"\\
 c="patient" 22:0 22:0||t="person"\\
 c="which" 29:21 29:21||t="pronoun"\\
@@ -37,6 +39,7 @@ Ngoài danh sách khái niệm, mỗi hồ sơ còn đi kèm với một tập t
 \begin{figure}[ht]
 \begin{mdframed}
 \ttfamily\footnotesize
+\protect\raggedright
 c="pulmonary lymphangitic spread" 17:6 17:8||c="extensive lymphatic invasion" 23:25 23:27||c="a malignant lymphangitic spread" 72:6 72:9||c="lymphangitic spread" 83:2 83:3||t="coref problem"\\
 c="patient" 21:0 21:0||c="patient" 22:0 22:0||c="patient" 24:0 24:0||c="she" 24:11 24:11||c="the patient" 25:5 25:6||c="she" 26:0 26:0||c="the patient" 28:0 28:1||c="she" 29:0 29:0||c="her" 29:12 29:12||t="coref person"\\
 c="dr. mielke" 29:4 29:5||c="who" 29:10 29:10||c="dr. mielke" 101:5 101:6||c="earllamarg s. mielke , m.d" 104:1 104:5||t="coref person"\\
@@ -134,12 +137,11 @@ Các hệ B-CUBED và CEAF được tính tương tự. Cuối cùng, trung bìn
 Các kết quả đánh giá hệ thống của chúng tôi với đầy đủ các đặc trưng được trình bày trên Bảng \ref{final-result} với kết quả chung cuộc là: độ chính xác 0.847, độ đầy đủ 0.795 và độ F là 0.815. Kết quả phân giải cho các chuỗi thuộc lớp Person rất khả quan với độ F là 0.890. Điều này cho thấy sự khác biệt giữa miền văn bản BAĐT với các miền văn bản khác, trong đó thông tin về bệnh nhân đóng góp một phần không nhỏ.
 
 \begin{rtable}{Kết quả đánh giá hệ thống với đầy đủ đặc trưng\label{final-result}}
-Tất cả & 0.882 & 0.817 & 0.845 && 0.921 & 0.873 & 0.895 && 0.737 & 0.695 & 0.707 && \textbf{0.847} & \textbf{0.795} & \textbf{0.815} \\
+Tất cả & 0.882 & 0.817 & 0.845 && 0.921 & 0.873 & 0.895 && 0.737 & 0.695 & 0.707 && \underline{0.847} & \underline{0.795} & \underline{0.815} \\
 Person & 0.965 & 0.928 & 0.944 && 0.939 & 0.895 & 0.910 && 0.872 & 0.795 & 0.816 && 0.925 & 0.873 & 0.890 \\
 Problem & 0.742 & 0.633 & 0.666 && 0.814 & 0.674 & 0.689 && 0.685 & 0.653 & 0.654 && 0.747 & 0.653 & 0.670 \\
 Test & 0.631 & 0.558 & 0.568 && 0.812 & 0.676 & 0.637 && 0.634 & 0.580 & 0.589 && 0.692 & 0.604 & 0.598 \\
 Treatment & 0.795 & 0.763 & 0.759 && 0.821 & 0.805 & 0.772 && 0.779 & 0.772 & 0.761 && 0.798 & 0.780 & 0.764 \\
-\bottomrule
 \end{rtable} 
 
 Bảng .. cho thấy hiệu năng của mô hình phân loại bệnh nhân dựa trên kiểm chứng chéo 10 mẫu (10-fold cross validation) với độ F là .. Bảng .. so sánh kết quả đánh giá phân giải đồng tham chiếu cho lớp Person với việc sử dụng và không sử dụng đặc trưng Patient-class. Hệ thống với đặc trưng Patient-class có hiệu năng được cải thiện lên đến xx\%, điều này cho thấy thông tin về bệnh nhân trong miền văn bản BAĐT là một thông tin rất hữu ích.
