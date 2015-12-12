@@ -98,6 +98,11 @@ namespace emr_corefsol_service.Libs
                 Parse[] topParses = ParserTool.parseLine(term, parser, 1);
 
                 List<Parse> nounPhrase = new List<Parse>();
+                if(nounPhrase.Count <= 0)
+                {
+                    return term;
+                }
+
                 foreach (Parse p in topParses)
                 {
                     GetNounPhrase(p, ref nounPhrase);
