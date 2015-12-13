@@ -19,7 +19,7 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
 
         public static readonly IKeywordDictionary RELATIVES 
             = new AhoCorasickKeywordDictionary(ReadKWFile(Path.Combine(KWPath, "relatives.txt")));
-
+        
         public static readonly IKeywordDictionary STOP_WORDS
             = new AhoCorasickKeywordDictionary(Path.Combine(KWPath, "stopwords.txt"));
 
@@ -46,12 +46,12 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
             //BatchExtractWordsPerson(collection);
             //BatchExtractWordsPronoun(collection);
             //BatchExtractSentencePatient(collection);
-            BatchSectionProcess(collection);
+            //BatchSectionProcess(collection);
 
             collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Test");
             //BatchSectionProcess(collection);
             //BatchUMLSProcess(collection);
-            //BatchWikiProcess(collection);
+            BatchWikiProcess(collection);
             //BatchTemporalProcess(collection);
 
             Console.WriteLine("========Finish========");
@@ -193,11 +193,17 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
                 {
                     if (!_wiki.ContainsKey(c.Lexicon))
                     {
-                        var rawTerm = emr.GetRawConcept(c);
-                        var normalized = EnglishNormalizer.Normalize(rawTerm, STOP_WORDS);
+                        var normalized = EnglishNormalizer.Normalize(c.Lexicon, STOP_WORDS);
                         var wikiData = Service.English.GetAllWikiInformation(normalized);
 
-                        if(wikiData == null)
+                        if (wikiData == null)
+                        {
+                            var rawTerm = emr.GetRawConcept(c);
+                            normalized = EnglishNormalizer.Normalize(rawTerm, STOP_WORDS);
+                            wikiData = Service.English.GetAllWikiInformation(normalized);
+                        }
+
+                        if (wikiData == null)
                         {
                             normalized = EnglishNormalizer.RemoveSemanticData(normalized);
                             wikiData = Service.English.GetAllWikiInformation(normalized);
