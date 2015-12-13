@@ -52,9 +52,102 @@ Giải thuật này chỉ khác giải thuật trên ở bước lựa chọn ti
 \section{Các công cụ hỗ trợ rút trích đặc trưng} \label{tools}
 
 \subsection*{OpenNLP}
+Xử lý ngôn ngữ tự nhiên (Natural language processing) là một lĩnh vực của khoa học máy tính, trong đó vấn đề được quan tâm là cách thức tương tác giữa máy tính và ngôn ngữ tự nhiên của con người. Nhiều thách thức được đặt ra trong xử lý ngôn ngữ tự nhiên để giúp máy tính có thể hiểu được những suy nghĩ, ý nghĩa được hàm chứa trong ngôn ngữ tự nhiên.
 
-\subsection*{Wikipedia-miner}
+Thư viện Apache OpenNLP bao gồm các công cụ dựa trên học máy dùng để xử lý, phân tích các chuỗi văn bản được viết dưới dạng ngôn ngữ tự nhiên. Thư viện OpenNLP hỗ trợ các tác vụ cơ bản trong việc xử lý ngôn ngữ tự nhiên như tách từ (Tokenize), phân giải đoạn văn thành các câu văn (Sentence segmentation), đánh dấu vai trò ngữ pháp (Part-of-speech tagging), phân đoạn câu văn (Chunking), đánh dấu danh từ trung tâm (Head nouns finding),... Trong phạm vi luận văn, chúng tôi sử dụng chức năng phân giải câu văn thành các từ, đánh dấu vai trò ngữ pháp, phân đoạn câu văn và đánh dấu danh từ trung tâm của bộ thư viện Apache OpenNLP trong quá trình rút trích đặc trưng lớp Person và Pronoun.
+
+Trong việc phân tích từ vựng (lexical analysis), tác vụ tách từ là quá trình chia nhỏ câu văn thành các thành phần nhỏ hơn như từ, cụm từ, ký hiệu, hoặc các yếu tố có ý nghĩa khác gọi là Token. Các Token này là đầu vào cho các tác vụ xử lý ngôn ngữ tự nhiên khác như đánh dấu vai trò ngữ pháp, phân đoạn câu văn, ... Ví dụ câu văn ``Female patient is 65 years old .'' sau khi được phân giải sẽ gồm các Token là ``Female'', ``patient'', ``is'', ``65'', ``years'', ``old'' and ``.''. Lưu ý, các dấu câu hoặc các ký tự cũng được xem như Token. Tác vụ tách từ được thư viện OpenNLP hỗ trợ bằng phương thức nhận vào câu văn và trả về một mảng các Token tương ứng.
+
+Đánh dấu vai trò ngữ pháp là quá trình phân loại các từ dựa vào từ loại hoặc vai trò ngữ pháp của chúng trong câu. Danh sách các từ loại hoặc vai trò ngữ pháp trong tiếng Anh được định nghĩa sẵn dựa theo dự án Penn TreeBank \cite{Santorini1990}. Ví dụ một số nhãn nằm trong tập Penn TreeBank là: liên từ (Conjunction) được gán nhãn là CC, tính từ (Adjective) được gán nhãn là JJ, danh từ số ít (Singular noun) được gán nhãn là NN, ... Tác vụ đánh dấu vai trò ngữ pháp được thư viện OpenNLP hỗ trợ bằng phương thức nhận vào một mảng các Token và trả về một mảng các vai trò ngữ pháp tương ứng với các Token đó. Ví dụ câu văn ``They refuse to permit us'' được tách từ thành [\textit{They, refuse, to, permit, us}] và được đánh dấu vai trò ngữ pháp như sau [\textit{They/PRP, refuse/VBP, to/TO, permit/VB}]. Trong đó các nhãn mang ý nghĩa là: đại từ PRP, động từ ngôi 3 VBP, thể vô định TO, động từ nguyên mẫu VB.
+
+Phân đoạn câu văn là quá trình phân tích câu văn thành các cụm động từ, cụm giới từ, cụm danh từ, cụm trạng từ, ... cấu thành nên câu văn đó. Ví dụ trong câu văn ``The patient is a 47 years old male'' được phân đoạn thành ba cụm: cụm danh từ ``The patient'', cụm động từ ``is'', cụm danh từ ``a 47 years old male''. Vai trò cũng như loại của cụm từ được định nghĩa trong tập nhãn Penn TreeBank \cite{Santorini1990}. Các cụm từ được mô tả theo định dạng IBO giúp xác định vị trí của từ  đang xét trong cụm từ. B mang ý nghĩa từ đang xét nằm đầu cụm từ, I mang ý nghĩa từ đang xét nằm trong cụm từ nhưng không phải là từ đầu tiên, O mang ý nghĩa từ đang xét nằm ngoài cụm từ. Ví dụ cụm danh từ ``a 47 years old'' được cấu thành từ ``a|B'', ``47|I'', ``years|I'', ``old|I''.
+
+Trong ngôn ngữ học, từ trung tâm của cụm từ là từ giúp xác định vai trò ngữ pháp cụm từ đó. Ví dụ từ trung tâm của \textit{cụm danh từ} ``boiling hot water'' là \textit{danh từ} ``water''. Thư viện OpenNLP hỗ trợ tác vụ xác định danh từ trung tâm bằng phương thức nhận vào một cụm từ theo định dạng IBO và trả về từ trung tâm của cụm từ đó.
 
 \subsection*{MetaMap}
+UMLS là kho từ vựng y sinh do Thư viện Y học Quốc gia Hoa Kì tiến hành xây dựng từ năm 1986 nhằm phục vụ cho nhu cầu tra cứu thông tin đã được chuẩn hóa về các loại bệnh, thuốc, nguyên nhân hoặc các thuật ngữ trong y tế. Bộ từ điển UMLS tích hợp hơn hai triệu tên gọi cho khoảng 900000 khái niệm y sinh và khoảng 12 triệu tên gọi cho quan hệ giữa các khái niệm này \cite{Olivier2004}. Hiện nay, bộ từ điển UMLS vẫn đang được tiếp tục cập nhật và cho phép sử dụng miễn phí phục vụ mục đích nghiên cứu khoa học.
+
+MetaMap là công cụ hỗ trợ nhận dạng các khái niệm trong bộ từ điển UMLS từ văn bản y sinh. Đầu vào của MetaMap là văn bản thuần không có cấu trúc, kết quả là một chuỗi định dạng XML hoặc định dạng con người đọc được chứa các khái niệm trong từ điển UMLS nhận dạng được. Các thông tin từ UMLS rút trích được bao gồm: mã khái niệm trong bộ từ điển UMLS, các từ đồng nghĩa và lớp ngữ nghĩa của khái niệm trong UMLS. Hình \ref{metamapstructure} miêu tả kiến trúc tổng quát của MetaMap. Quá trình xử lý dữ liệu của MetaMap có thể được tóm tắt qua hai bước. Bước đầu tiên, dữ liệu dạng văn bản sẽ được thực hiện các tác vụ xử lý ngôn ngữ tự nhiên cơ bản như: tách câu văn (Sentence segmentation), tách từ (Tokenize), đánh dấu vai trò ngữ pháp (POS tag), tra cứu từ vựng (lexical lookup) và phân tích cú pháp. Sau bước đầu tiên, từ văn bản ngôn ngữ tự nhiênm MetaMap sẽ cho kết quả là các cụm từ (Phrase). Bước thứ hai, MetaMap sẽ tiến hành sinh các biến thể (variant) cho các cụm từ đã tìm được, xác định ứng cử viên (candidate) từ các khái niệm trong UMLS khớp với các biến thể được sinh ra và tính độ tin cậy cho các ứng cử viên đó. Đầu ra của bước thứ hai là các cụm từ được phân giải từ bước một, kèm theo các ứng cử viên trong bộ từ điển UMLS cho cụm từ đó. Trong phạm vi Luận văn, chúng tôi sử dụng kết quả tên khái niệm và lớp ngữ nghĩa của khái niệm cho quá trình rút trích đặc trưng lớp Problem, Treatment và Test.
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{image/metamap.png}
+\caption{Kiến trúc tổng quát của MetaMap\label{metamapstructure}}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\lstset{
+	keywords={},
+	tabsize=3,
+	%frame=lines,
+	frame=single,
+	xleftmargin=20pt,
+	framexleftmargin=15pt,
+	numbers=left,
+	numberstyle=\tiny,
+	numbersep=5pt,
+	breaklines=true,
+	showstringspaces=false,
+	basicstyle=\footnotesize}
+\lstinputlisting{sample_code/metamap_output.txt}
+\caption{Mẫu kết quả của công cụ MetaMap\label{metamapoutput}}
+\end{figure}
+
+Hình \ref{metamapoutput} là mẫu kết quả thu được từ MetaMap khi phân tích câu văn ``The patient has a right upper lobe mass''. Sau bước một, câu văn trên được phân giải thành ba cụm từ ``The patient'', ``has'' và ``a right upper lobe mass''. Trong đó kết quả ánh xạ các cụm từ vào bộ từ điển UMLS như sau:
+
+\begin{itemize}[noitemsep]
+\item \emph{Cụm từ ``The patient''}: có duy nhất một ứng cử viên có độ tin cậy 1000 ứng với khái niệm ``patient'' mang mã số khái niệm là C0030705. Khái niệm ``patient'' thuộc lớp ngữ nghĩa bệnh nhân hoặc nhóm khuyết tật (Patient or Disabled Group) trong bộ từ điển UMLS.
+\item \emph{Cụm từ ``has''}: không tìm được ứng cử viên nào ứng với cụm từ.
+\item \emph{Cụm từ ``a right upper lobe mass''}: có bốn ứng cử viên đồng số điểm 916. Ứng cử viên đầu tiên bao gồm hai khái niệm mang mã số C1261074 và C0577573. Các ứng cử viên sau được ghi rõ trong Hình \ref{metamapoutput}. 
+\end{itemize}
 
 \subsection*{cTakes và các công cụ dựa trên cTakes}
+Apache cTakes (clinical Text Analysis and Knowledge Extraction System) là hệ thống xử lý ngôn ngữ tự nhiên giúp rút trích thông tin từ các bệnh án điện tử dưới dạng văn bản thuần không có cấu trúc. Hệ thống cTakes có khả năng nhận diện các thực thể trong y tế như thuốc, bất thường sức khỏe, triệu chứng, rối loạn, ... Hệ thống cTakes bao gồm nhiều bộ phận nhỏ như phát hiện câu văn, đánh dấu vai trò ngữ pháp, tra cứu dựa trên các bộ từ điển y tế, chuẩn hóa thông tin y tế, ... Mỗi bộ phận của cTakes đã được huấn luyện đặc biệt  cho riêng lĩnh vực y tế, các thông tin rút trích được có thể được sử dụng làm đầu vào cho các hệ thống hỗ trợ ra quyết định y tế hoặc dùng để nghiên cứu.
+
+cTakes được xây dựng dựa trên framework UIMA giúp ứng dụng được phân tách thành các bộ phận con. Mỗi bộ phận con hiện thực một nhiệm vụ nhất định được và cung cấp một tập tin XML đóng vai trò là siêu dữ liệu mô tả bộ phận con đó. Hình \ref{ctakesdesc} là tập tin XML mô tả bộ phận POS Tagger của cTakes, bộ phận này được hiện thực bởi lớp \textit{org.apache.ctakes.postagger.POSTagger} và nhận vào tham số dạng chuỗi là đường dẫn tới tập tin mô hình đã được huấn luyện. Ngoài ra framework UIMA còn hỗ trợ cTakes trong việc gói bộ phận con lại như một mạng lưới các dịch vụ, trong đó bộ phận con này có thể sử dụng kết quả của bộ phận con khác bằng các miêu tả trong tập tin XML, tương tự như mô hình đường ống (pipeline). Trong phạm vi Luận văn, chúng tôi sử dụng các công cụ MedEx, MedTime xây dựng dựa trên cTakes và được cung cấp bởi hội đồng Open Health Natural Language Processing trong quá trình rút trích đặc trưng lớp Problem, Treatment và Test.
+
+\begin{figure}[ht]
+\centering
+\lstset{
+	language=xml,
+	keywords={},
+	tabsize=3,
+	%frame=lines,
+	frame=single,
+	xleftmargin=20pt,
+	framexleftmargin=15pt,
+	numbers=left,
+	numberstyle=\tiny,
+	numbersep=5pt,
+	breaklines=true,
+	showstringspaces=false,
+	basicstyle=\footnotesize}
+\lstinputlisting{sample_code/ctakes_desc.xml}
+\caption{Tập tin XML mô tả bộ phận con cTakes\label{ctakesdesc}}
+\end{figure}
+
+MedEx là công cụ hỗ trợ trích xuất các thông tin về thuốc y tế như tên thuốc (Drug name), liều lượng (strength), đường hấp thu (route), tần số (frequency), ... \cite{HuaXu2009}. Đầu vào công cụ là văn bản thuần không có cấu trúc, kết quả là một tập tin chứa các thông tin thuốc y tế nhận dạng được. Mỗi dòng trong tập tin kết quả là một thông tin thuốc nhận dạng được theo định dạng:
+
+\begin{center}
+\textit{<Chỉ số câu>	Nội dung câu|Thông tin thuốc|Tên thuốc được chuẩn hóa}
+\end{center}
+
+Trong đó thông tin về thuốc bao gồm:
+
+\begin{itemize}[noitemsep]
+\item Tên thuốc (Drug name) như kháng sinh, Vancomycin , ...
+\item Nhà sản xuất (Brand name) như Zocor, ...
+\item Dạng thuốc (Drug form) như dạng viên nén, dạng viên nhộng, ...
+\item Mức độ (Strength) như 10mg, 5ml, ...
+\item Liều lượng (Dose amount) như 2 viên, ...
+\item Đường hấp thụ (Route) như qua đường miệng, qua đường tiêm, ...
+\item Tần số (Frequency) như 2 lần mỗi ngày, mỗi sáng, ...
+\item Thời gian (Duration) như trong 10 ngày, trong 1 tháng, ...
+\end{itemize}
+
+MedTime là công cụ hỗ trợ trích xuất các thông tin về thời gian trong văn bản thuần không có cấu trúc, bao gồm cả hai loại là thời gian tường minh và thời gian suy diễn \cite{Sohn2013}. Thời gian tường minh là các dạng thời gian được ghi chú rõ ràng, cụ thể trong văn bản như 03/06/2015. Loại thời gian tường minh có thể bao gồm ngày, tháng, năm và thời gian hoặc chỉ bao gồm ngày, tháng, năm. Thời gian suy diễn là các mốc thời gian được trích xuất từ một số từ khóa đứng gần khái niệm đang xét hoặc các khái niệm chỉ về sự kiện trong y tế, ví dụ như ``Admission date'' (ngày nhập viện) hay ``Post-op day 2'' (ngày thứ 2 sau khi phẫu thuật). Giống như công cụ MedEx, đầu vào của công cụ là văn bản thuần không có cấu trúc, kết quảlà một tập tin chứa các thông tin thời gian nhận dạng được. Mỗi dòng trong tập tin kết quả là một thông tin thời gian nhận dạng được theo định dạng:
+
+\begin{center}
+\textit{<TIMEX3 id=``chỉ số'' start=``vị trí bắt đầu'' end=``vị trí kết thúc'' text=``chuỗi giá trị nhận dạng'' type=``loại'' val=``giá trị chuẩn hóa''/>}\\
+\end{center}

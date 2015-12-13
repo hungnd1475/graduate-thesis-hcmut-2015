@@ -1,0 +1,3 @@
+c="attending" 13:0 13:0||c="kelly l. bradley , m.d." 13:2 13:6||t="coref person"
+c="patient" 12:0 12:0||c="pt" 15:2 15:2||c="he" 15:7 15:7||c="he" 15:13 15:13||t="coref person"
+c="the meds" 15:5 15:6||c="meds" 16:4 16:4||t="coref treatment"

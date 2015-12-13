@@ -13,13 +13,13 @@ namespace HCMUT.EMRCorefResol.English.Features
             :base("Position-Feature", 3, 2)
         {
             var anaPos = GetPosition(instance.Anaphora.Lexicon);
-            if (anaPos == 0)
+            if (anaPos == null)
             {
                 return;
             }
 
             var antePos = GetPosition(instance.Antecedent.Lexicon);
-            if (antePos == 0)
+            if (antePos == null)
             {
                 return;
             }
@@ -29,20 +29,27 @@ namespace HCMUT.EMRCorefResol.English.Features
                 SetCategoricalValue(1);
             } else
             {
-                SetCategoricalValue(0);
+                if(anaPos.Contains(antePos) || antePos.Contains(anaPos))
+                {
+                    SetCategoricalValue(1);
+                } else
+                {
+                    SetCategoricalValue(0);
+                }
             }
         }
 
-        private int GetPosition(string term)
+        private string GetPosition(string term)
         {
             var searcher = KeywordService.Instance.POSITION_KEYWORD;
             var indices = searcher.SearchDictionaryIndices(term, KWSearchOptions.IgnoreCase | KWSearchOptions.WholeWord);
 
             if(indices.Length == 0)
             {
-                return 0;
+                return null;
             }
 
+            int index = -1;
             switch (indices.Max())
             {
                 case 0:
@@ -52,22 +59,30 @@ namespace HCMUT.EMRCorefResol.English.Features
                 case 4:
                 case 5:
                 case 6:
-                    return indices.Max() + 1;
+                    index = indices.Max();
+                    break;
                 case 7:
                 case 8:
-                    return 8;
+                    index = 7;
+                    break;
                 case 9:
                 case 10:
-                    return 9;
+                    index = 9;
+                    break;
                 case 11:
                 case 12:
-                    return 10;
+                    index = 11;
+                    break;
                 case 13:
                 case 14:
-                    return 11;
+                    index = 13;
+                    break;
                 default:
-                    return 0;
+                    index = -1;
+                    break;
             }
+
+            return index == -1 ? null : KeywordService.Instance.POSITION_KEYWORD[index];
         }
     }
 }

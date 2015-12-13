@@ -40,15 +40,16 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
             //BatchUMLSProcess(collection);
             //BatchWikiProcess(collection);
             //BatchTemporalProcess(collection);
-            BatchExtractWordsPerson(collection);
+            //BatchExtractWordsPerson(collection);
             //BatchExtractWordsPronoun(collection);
             //BatchExtractVerbAfterMention(collection);
             //BatchExtractWordsPerson(collection);
             //BatchExtractWordsPronoun(collection);
             //BatchExtractSentencePatient(collection);
-            //BatchSectionProcess(collection);
+            BatchSectionProcess(collection);
 
-            //collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Test");
+            collection = new EMRCollection(@"..\..\..\..\..\dataset\i2b2_Test");
+            //BatchSectionProcess(collection);
             //BatchUMLSProcess(collection);
             //BatchWikiProcess(collection);
             //BatchTemporalProcess(collection);
@@ -59,7 +60,9 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
 
         static void BatchSectionProcess(EMRCollection emrColl)
         {
-            var sections = new HashSet<string>();
+            var sections = new Dictionary<string, int>();
+            var allSections = new List<string>();
+            var distinctSections = new HashSet<string>();
 
             for(int i=0; i<emrColl.Count; i++)
             {
@@ -69,11 +72,41 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
 
                 foreach (EMRSection section in emr.Sections)
                 {
-                    sections.Add(section.Title.ToUpper());
+                    var section_title = section.Title.Replace(":", "").Trim().ToUpper();
+                    allSections.Add(section_title);
+                    distinctSections.Add(section_title);
+                    if (sections.ContainsKey(section_title))
+                    {
+                        sections[section_title]++;
+                    } else
+                    {
+                        sections.Add(section_title, 1);
+                    }
                 }
             }
 
-            File.WriteAllLines(@"C:\Users\Hp\Desktop\emr_section\new_sections.txt", sections);
+            var sortedDictionary = from entry in sections orderby entry.Value descending select entry;
+
+            File.WriteAllLines(@"C:\Users\Hp\Desktop\emr_section\all_sections.txt", allSections);
+            File.WriteAllLines(@"C:\Users\Hp\Desktop\emr_section\distinct_sections.txt", distinctSections);
+            StreamWriter sw = new StreamWriter(@"C:\Users\Hp\Desktop\emr_section\sections_freq.txt");
+            StreamWriter sw2 = new StreamWriter(@"C:\Users\Hp\Desktop\emr_section\sections_final.txt");
+            var count = 0;
+            foreach (var section in sortedDictionary)
+            {
+                count += section.Value;
+                sw.WriteLine(section.Key + "\t" + section.Value);
+                sw.Flush();
+
+                if(section.Value >= 15)
+                {
+                    sw2.WriteLine(section.Key);
+                    sw2.Flush();
+                }
+            }
+            sw2.Close();
+            sw.Close();
+            Console.WriteLine(count);
         }
 
         static void BatchUMLSProcess(EMRCollection collection)
@@ -160,7 +193,8 @@ namespace HCMUT.EMRCorefResol.ExtractWordKnowledge
                 {
                     if (!_wiki.ContainsKey(c.Lexicon))
                     {
-                        var normalized = EnglishNormalizer.Normalize(c.Lexicon, STOP_WORDS);
+                        var rawTerm = emr.GetRawConcept(c);
+                        var normalized = EnglishNormalizer.Normalize(rawTerm, STOP_WORDS);
                         var wikiData = Service.English.GetAllWikiInformation(normalized);
 
                         if(wikiData == null)

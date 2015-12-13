@@ -1,0 +1,8 @@
+c="chronic obstructive pulmonary disease" 7:0 7:3||c="chronic obstructive pulmonary disease" 17:0 17:3||c="chronic obstructive pulmonary disease" 21:13 21:16||t="coref problem"
+c="mrs. cast" 21:0 21:1||c="she" 22:0 22:0||c="the patient" 23:0 23:1||c="her" 24:0 24:0||c="she" 25:0 25:0||c="the patient" 31:0 31:1||c="her" 35:2 35:2||c="the patient" 51:0 51:1||c="the patient" 63:0 63:1||c="she" 64:0 64:0||c="the patient" 66:4 66:5||c="the patient" 66:31 66:32||c="the patient" 69:4 69:5||c="the patient" 70:0 70:1||c="she" 71:0 71:0||c="her" 71:5 71:5||c="her" 71:9 71:9||c="her" 71:13 71:13||t="coref person"
+c="trigeminal neuralgia" 19:13 19:14||c="trigeminal neuralgia" 27:5 27:6||t="coref problem"
+c="diffuse fibrocystic breast disease" 19:8 19:11||c="fibrocystic breast disease" 27:12 27:14||t="coref problem"
+c="rash" 29:14 29:14||c="rash" 29:27 29:27||t="coref problem"
+c="edema" 29:12 29:12||c="edema" 29:29 29:29||t="coref problem"
+c="gastrointestinal symptoms" 29:21 29:22||c="gastrointestinal symptoms" 29:36 29:37||t="coref problem"
+c="the patient &apos;s discomfort" 66:31 66:34||c="this" 67:8 67:8||t="coref problem"

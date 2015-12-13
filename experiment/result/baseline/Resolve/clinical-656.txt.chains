@@ -1,0 +1,7 @@
+c="biliary obstruction" 6:0 6:1||c="biliary obstruction" 24:14 24:15||t="coref problem"
+c="who" 24:11 24:11||c="he" 25:4 25:4||c="the patient" 26:0 26:1||c="the patient" 27:4 27:5||c="his" 27:28 27:28||c="the patient" 28:0 28:1||c="his" 29:14 29:14||c="he" 30:0 30:0||c="the patient" 38:0 38:1||c="the patient" 45:0 45:1||c="he" 52:0 52:0||c="the patient" 63:0 63:1||c="he" 64:4 64:4||c="the patient" 65:0 65:1||c="the patient" 66:0 66:1||c="the patient" 67:0 67:1||c="he" 68:0 68:0||c="his" 68:8 68:8||c="he" 69:0 69:0||c="he" 72:0 72:0||c="he" 75:0 75:0||c="his" 75:7 75:7||t="coref person"
+c="biliary stents" 25:6 25:7||c="which" 25:9 25:9||t="coref treatment"
+c="percutaneous drains" 27:24 27:25||c="his lateral percutaneous drains" 29:14 29:17||t="coref treatment"
+c="metastatic colon carcinoma" 17:1 17:3||c="colon carcinoma" 40:2 40:3||t="coref problem"
+c="midline catheter" 52:2 52:3||c="that" 52:4 52:4||t="coref treatment"
+c="attending" 77:0 77:0||c="lillbi fyfebreun , m.d." 78:0 78:3||t="coref person"

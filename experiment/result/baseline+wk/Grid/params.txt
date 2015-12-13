@@ -1,0 +1,3 @@
+TestPair: 128.0 0.125 93.2041
+TreatmentPair: c=2048.0, g=0.125, rate=80.2471
+ProblemPair: c=32.0, g=2.0, rate=82.8075

@@ -19,6 +19,22 @@ namespace HCMUT.EMRCorefResol.IO
         private static Regex UmlsDataPattern = new Regex("rawTerm=\"(.*?)\"\\|\\|cui=\"(.*?)\"\\|\\|concept=\"(.*?)\"\\|\\|prefer=\"(.*?)\"\\|\\|semantic=\\[(.*?)\\]\\|\\|confidence=\"(.*?)\"");
         private static Regex TemporalDataPattern = new Regex("rawTerm=\"(.*?)\"\\|\\|temporal=\"(.*?)\"");
 
+        private static string[] section_keywords =  new string[] { "ADMISSION DATE", "DISCHARGE DATE", "HISTORY OF PRESENT ILLNESS",
+                "PAST MEDICAL HISTORY", "REPORT STATUS", "SERVICE", "ALLERGIES", "SEX",
+                "HOSPITAL COURSE", "DATE OF BIRTH", "PHYSICAL EXAMINATION", "DISCHARGE MEDICATIONS",
+                "SOCIAL HISTORY", "MEDICATIONS ON ADMISSION", "FAMILY HISTORY", "DISCHARGE DIAGNOSIS",
+                "DISCHARGE CONDITION", "LABORATORY DATA", "DISCHARGE DISPOSITION", "DISCHARGE INSTRUCTIONS",
+                "DISPOSITION", "PHYSICAL EXAM", "TR", "DD", "TD", "CONDITION ON DISCHARGE", "D", "T",
+                "CHIEF COMPLAINT", "ATTENDING", "PRINCIPAL DIAGNOSIS", "MEDICATIONS ON DISCHARGE",
+                "PERTINENT RESULTS", "BRIEF HOSPITAL COURSE", "FOLLOWUP INSTRUCTIONS", "BATCH", "MRN", "CC",
+                "DISCHARGE DIAGNOSES", "EXTREMITIES", "MEDICATIONS", "HEENT", "AGE", "REGISTRATION DATE",
+                "DISCHARGE STATUS", "DICTATED BY", "ABDOMEN", "PAST SURGICAL HISTORY", "PCP NAME",
+                "PROVIDER NUMBER", "IMPRESSION", "ASSOCIATED DIAGNOSIS", "NECK", "GENERAL", "UNIT NUMBER",
+                "REVIEW OF SYSTEMS", "DICTATING FOR", "LUNGS", "OPERATIONS AND PROCEDURES", "PROVIDER",
+                "ADDITIONAL COMMENTS", "PRINCIPAL PROCEDURE", "DIAGNOSIS", "ROOM", "DIET",
+                "BRIEF RESUME OF HOSPITAL COURSE", "ENTERED BY", "DISCHARGE PATIENT ON", "ADMIT DIAGNOSIS",
+                "PATIENT STATES COMPLAINT" };
+
         private static string _history_of_illness_pattern = "(present illness|hospitalization)(.*?):";
         private static string _allergy = "(allergies|allergy)(.*?):";
         private static string _chief_complaint = "chief complaint(.*?):";
@@ -198,14 +214,23 @@ namespace HCMUT.EMRCorefResol.IO
 
         private Tuple<bool, string> CheckHeading(string line)
         {
-            if(string.IsNullOrEmpty(line) || !CheckCapitol(line) || line[line.Length - 1] != ':')
+            var normalizedLine = line.Replace(":", "").Trim().ToUpper();
+            if(section_keywords.Contains(normalizedLine))
+            {
+                return Tuple.Create(true, line);
+            } else
             {
                 return Tuple.Create(false, "");
             }
 
+            /*if(string.IsNullOrEmpty(line) || !CheckCapitol(line) || line[line.Length - 1] != ':')
+            {
+                return Tuple.Create(false, "");
+            }*/
+
             //return Tuple.Create(true, line);
 
-            if (Regex.IsMatch(line, _history_of_illness_pattern, RegexOptions.IgnoreCase))
+            /*if (Regex.IsMatch(line, _history_of_illness_pattern, RegexOptions.IgnoreCase))
             {
                 return Tuple.Create(true, "History of Present Illness :");
             }
@@ -280,7 +305,7 @@ namespace HCMUT.EMRCorefResol.IO
                 return Tuple.Create(true, "Disposition :");
             }
 
-            return Tuple.Create(false, "");
+            return Tuple.Create(false, "");*/
         }
 
         private bool CheckCapitol(string title)
