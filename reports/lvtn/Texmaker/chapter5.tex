@@ -242,7 +242,7 @@ Mặc dù cách làm trên giúp giảm bớt số lượng các mẫu huấn lu
 \caption{Ví dụ cho việc sinh các mẫu huấn luyện\label{fig:insgen-eg}}
 \end{figure}
 
-\item Phương pháp này xây dựng các mẫu huấn luyện theo các bước sau: với mỗi hồi chỉ $C_j$, xác định tiền đề của nó ở xa nhất theo thứ tự xuất hiện, gọi là $C_k$. Xây dựng các cặp với khái niệm đứng sau là $C_j$, khái niệm đứng trước là các khái niệm bắt đầu từ $C_k$ đến $C_{j-1}$ (chỉ xét những cặp hai khái niệm cùng lớp) \cite{VincentNg2002[2]}. Như vậy đối với ví dụ trên Hình \ref{fig:insgen-eg}, các mẫu  huấn luyện được sinh ra theo các bước của phương pháp này là: đối với $C_3$, tiền đề xa nhất của nó là $C_1$, như vậy các cặp $(C_1,\,C_3)$, $(D_1,\,C_3)$, $(D_2,\,C_3)$, $(a,\,C_3)$, $(b,\,C_3)$ và $(C_2,\,C_3)$ được xây dựng. Làm tương tự cho các khái niệm từ $C_2$ về $C_1$ để xây dựng các mẫu huấn luyện còn lại.
+\item Phương pháp này xây dựng các mẫu huấn luyện theo các bước sau: với mỗi hồi chỉ $C_j$, xác định tiền đề của nó ở xa nhất theo thứ tự xuất hiện, gọi là $C_k$. Xây dựng các cặp với khái niệm đứng sau là $C_j$, khái niệm đứng trước là các khái niệm bắt đầu từ $C_k$ đến $C_{j-1}$ (chỉ xét những cặp hai khái niệm cùng lớp) \cite{VincentNg2002b}. Như vậy đối với ví dụ trên Hình \ref{fig:insgen-eg}, các mẫu  huấn luyện được sinh ra theo các bước của phương pháp này là: đối với $C_3$, tiền đề xa nhất của nó là $C_1$, như vậy các cặp $(C_1,\,C_3)$, $(D_1,\,C_3)$, $(D_2,\,C_3)$, $(a,\,C_3)$, $(b,\,C_3)$ và $(C_2,\,C_3)$ được xây dựng. Làm tương tự cho các khái niệm từ $C_2$ về $C_1$ để xây dựng các mẫu huấn luyện còn lại.
 \end{enumerate}
 
 Trong quá trình thử nghiệm hai phương pháp chọn lọc mẫu trên, chúng tôi nhận thấy số lượng cặp khái niệm của mỗi loại giảm đi đáng kể khiến cho thời gian huấn luyện được cải thiện. Tuy nhiên kết quả đánh giá hiệu năng không được như mong đợi, cụ thể là độ đầy đủ tăng tên rất cao trong khi độ chính xác lại rất thấp. Điều này có thể được dễ dàng giải thích là:
@@ -491,7 +491,7 @@ Operation & & + & \\
 
 Như đã được đề cập ở mục, có hai giải thuật được đề xuất là: \emph{gom cụm gần nhất trước} và \emph{gom cụm tốt nhất trước}. Chúng tôi lựa chọn thực hiện giải thuật gom cụm tốt nhất trước cho hệ thống của mình vì hai lý do:
 \begin{enumerate}
-\item Theo các tác giả của giải thuật \cite{VincentNg2002}, giải thuật gom cụm tốt nhất trước cho kết quả tốt hơn giải thuật gom cụm gần nhất trước.
+\item Theo các tác giả của giải thuật \cite{VincentNg2002a}, giải thuật gom cụm tốt nhất trước cho kết quả tốt hơn giải thuật gom cụm gần nhất trước.
 \item Các tác giả hệ thống \cite{YanXu2012} cũng hiện thực giải thuật này cho hệ thống của họ.
 \end{enumerate}
 

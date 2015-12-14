@@ -15,11 +15,295 @@ Có thể xem đồng tham chiếu là một mối quan hệ giữa hai hay nhi�
 
 Một \emph{cặp khái niệm} gồm hai khái niệm có thể có hoặc không đồng tham chiếu với nhau. Đối với một cặp đồng tham chiếu, khái niệm đứng trước được gọi là \emph{tiền đề} (antecedent), khái niệm đứng sau được gọi là \emph{hồi chỉ} (anaphora). Những đặc trưng của một cặp khái niệm đa phần là những \emph{đặc trưng đồng thuận} (agreement feature), chúng mang giá trị là ``có'' khi cả hai khái niệm của cặp cùng đồng thuận về một đặc tính nào đó, ví dụ như sự đồng thuận về giới tính hay số lượng. Trong một văn bản, nhiều khái niệm có thể cùng tham chiếu tới cùng một thực thể, khi đó chúng tạo thành một chuỗi đồng tham chiếu.
 
-\emph{Phân giải đồng tham chiếu} là công việc xác định những chuỗi đồng tham chiếu trong văn bản. Một phương pháp để giải quyết việc này là \emph{phân giải hồi chỉ} (anaphora resolution) cho tất cả các khái niệm trong văn bản, tức là xác định tiền đề cho các khái niệm. Sau khi đã xác định được các cặp đồng tham chiếu, công việc còn lại là gom nhóm các cặp này lại thành từng cụm, mỗi cụm ứng với một chuỗi đồng tham chiếu. Xuyên suốt này luận văn này, chúng tôi gọi các chuỗi đồng tham chiếu được phân giải bởi con người là các \emph{chuỗi kết quả}, các chuỗi được xuất ra bởi hệ thống phân giải đồng tham chiếu là các \emph{chuỗi hệ thống}.
+\emph{Phân giải đồng tham chiếu} là công việc xác định những chuỗi đồng tham chiếu trong văn bản. Xuyên suốt này luận văn này, chúng tôi gọi các chuỗi đồng tham chiếu được phân giải bởi con người là các \emph{chuỗi kết quả}, các chuỗi được xuất ra bởi hệ thống phân giải đồng tham chiếu là các \emph{chuỗi hệ thống}.
+
+\section{Các mô hình học máy phân giải đồng tham chiếu}
+Phân giải đồng tham chiếu, một trong những tác vụ cơ bản của xử lý ngôn ngữ tự nhiên, là công việc xác định xem những khái niệm nào trong văn bản cùng chỉ đến một thực thể trong thế giới thực. Mặc dù nhiều phương pháp giải quyết đã được nghiên cứu phát triển từ những năm 60 của thế kỉ 20, các hệ thống dựa trên luật hay theo hướng tiếp cận heuristic trong thời gian này đòi hỏi nhiều kiến thức phức tạp và không thực sự hiệu quả (một trong những nền tảng của các hệ thống này là \emph{lý thuyết trung tâm} \cite{Grosz1983}).
+
+Bắt đầu từ những năm 1990, khi các mô hình xác suất trở nên phổ biến vì tính hiệu quả của chúng, các phương pháp học máy phân giải đồng tham chiếu ra đời dần thay thế các phương pháp heuristic thủ công. Cùng với xu thế đó là sự xuất hiện của các tập dữ liệu được gán nhãn bắt nguồn từ hội nghị MUC-6 (1996) và MUC-7 (1997), các nghiên cứu về phân giải đồng tham chiếu dựa trên học máy càng được phát triển không chỉ cho các miền văn bản chung mà còn đi sâu vào các miền văn bản cụ thể (như Thách thức i2b2 năm 2011 về phân giải đồng tham chiếu cho bệnh án điện tử \cite{OzlemUzuner2012}).
+
+Mặc dù tính bổ biến và sự hiệu quả của các phương pháp học máy có giám sát, sự khó khăn trong việc xây dựng các tập dữ liệu gán nhãn nhất là đối với các ngôn ngữ khác tiếng Anh đã làm động lực cho sự ra đời của các phương pháp học máy bán giám sát hoặc không giám sát. Ưu điểm của các phương pháp này là không cần đòi hỏi các tập dữ liệu đã gán nhãn hoặc chỉ cần gán nhãn một phần \cite{CardieWagstaff1999}.
+
+Có ba mô hình học máy có giám sát được đề xuất để phân giải đồng tham chiếu là: mô hình \emph{cặp khái niệm}, mô hình \emph{đề cập thực thể} và mô hình \emph{xếp hạng}. Mô hình cặp khái niệm ra đời đầu tiên và có ý tưởng đơn giản nhất, tuy nhiên cũng chính vì thế mà nó có một số nhược điểm khiến cho việc hiện thực không thực sự dễ dàng. Hai mô hình đề cập thực thể và xếp hạng được đề xuất sau đó nhằm khắc phục các nhược điểm của mô hình cặp khái niệm bằng cách đưa vào các ý tưởng thực tế hơn như \emph{đặc trưng ở mức cụm} \cite{Yang2004} hay huấn luyện một mô hình xếp hạng lựa chọn tiền đề \cite{Yang2003}.
+
+Mặc dù có nhiều nhược điểm, mô hình cặp thực thể vẫn rất phổ biến nhờ ý tưởng đơn giản của nó, đặc biệt là trong các miền văn bản chuyển môn khi mà các đặc trưng chuyên sâu về một hay một vài lĩnh vực mang nhiều ý nghĩa hơn cho việc xác định tính đồng tham chiếu của các khái niệm. Điển hình là hệ thống có kết quả cao nhất trong Thử thách i2b2 năm 2011 sử dụng mô hình cặp khái niệm và tận dụng các thông tin về sự cập đến bệnh nhân, các kiến thức nền (Wikipedia, WordNet, v.v...) và các thông tin ngữ cảnh trong bệnh án \cite{YanXu2012}. Trong phần này chúng tôi chỉ trình bày cụ thể về mô hình cặp khái niệm vì đây cũng là mô hình được chúng tôi hiện thực trong hệ thống của mình.
+
+\subsection*{Mô hình cặp khái niệm}
+Đây là mô hình học máy phân giải đồng tham chiếu đầu tiên và được giới thiệu vào năm 1995 \cite{Aone&Bennett1995}. Ý tưởng chính của mô hình này là xác định tính đồng tham chiếu cho từng cặp hai khái niệm bất kì trong văn bản. Mặc dù mô hình cặp khái niệm phổ biến nhờ ý tưởng đơn giản của nó, tính bắc cầu của quan hệ đồng tham chiếu bị bỏ qua ở mô hình này vì trường hợp như sau có thể xảy ra: hai khái niệm $A$ và $B$ được xác định là đồng tham chiếu, $B$ và $C$ cũng được xác định là đồng tham chiếu trong khi $A$ và $C$ lại không được xác định là đồng tham chiếu. Điều này đòi hỏi phải có một cơ chế gom cụm các khái niệm và xây dựng các chuỗi sau khi đã xác định tính đồng tham chiếu cho các cặp hai khái niệm.
+
+Một nhược điểm khác của mô hình này là để huấn luyện mô hình phân loại, ứng với mỗi cặp khái niệm hệ thống cần trích xuất các đặc trưng đại diện cho cặp, sau đó tổng hợp lại thành một tập dùng để huấn luyện. Mặt khác trong một văn bản, tổng số các cặp khái niệm có thể rất lớn trong khi số các cặp đồng tham chiếu lại rất nhỏ, như vậy nếu tất cả các cặp được rút trích đặc trưng sẽ dẫn đến tình trạng mất cân bằng lớp: các mẫu âm (các cặp không đồng tham chiếu) có số lượng lấn át các mẫu dương (các cặp đồng tham chiếu).
+
+Một số công trình nghiên cứu đề xuất giải pháp cho vấn đề mất cân bằng lớp theo hướng tiếp cận heuristic. Chẳng hạn như chỉ xem xét sinh các mẫu dương từ các cặp đồng tham chiếu mà hai khái niệm gần kề nhau theo thứ tự xuất hiện, còn các mẫu âm được sinh theo quy tắc: với mỗi cặp đồng tham chiếu được sinh làm mẫu dương $(C_i,\,C_j)$, sinh các mẫu âm từ các cặp $(C_k,\,C_j)$ mà $i<k<j$ \cite{Soon2001}. Một chỉnh sửa nhỏ của cách này là loại bỏ đi các mẫu mà khái niệm đứng trước là một đại từ \cite{VincentNg2002a}. Hay một cách lọc mẫu khác được trình bày ở \cite{VincentNg2002b}: với mỗi hồi chỉ $C_j$ mà tiền xa nhất của nó là $C_i$, sinh tất cả các mẫu âm được tạo bởi $C_k$ và $C_j$ mà $i<k<j$. Ngoài ra, hệ thống ở \cite{VincentNg2002b} còn sử dụng luật quy nạp (rule induction) để lọc bỏ các mẫu dương khó làm ảnh hưởng đến việc huấn luyện.
+
+Để xác định tính đồng tham chiếu cho hai khái niệm bất kì trong văn bản, hệ thống sử dụng mô hình cặp khái niệm trước tiên cần huấn luyện một mô hình phân loại. Một số giải thuật như cây quyết định hay luật quy nạp, v.v... được sử dụng ở thời kì đầu của ứng dụng học máy. Sau khi các mô hình thống kê trở nên phổ biến, một số giải thuật được sử dụng vào lĩnh vực này gồm có mô hình entropy cực đại \cite{Berger1996}, mạng neuron bầu cử \cite{Freund1999} và support vector machine. Các giải thuật học máy dựa trên mô hình thống kê có một đặc điểm lợi thế là chúng có thể xuất ra độ tin cậy đồng tham chiếu của các cặp khái niệm. 
+
+Mô hình phân loại sau khi đã huấn luyện có thể được sử dụng để xác định tính đồng tham chiếu cho các cặp hai khái niệm. Tuy nhiên để có thể xây dựng các chuỗi đồng tham chiếu, cần thiết phải sử dụng một giải thuật gom cụm. Có hai giải thuật gom cụm được sử dụng phổ biến trong phân giải đồng tham chiếu:
+
+\begin{enumerate}
+\item \emph{Gom cụm gần nhất trước (closest-first clustering):}
+
+Giải thuật này trước tiên chọn ra tiền đề ở gần nhất trước đó cho một hồi chỉ. Cụ thể với mỗi khái niệm $C_j$, giải thuật sử dụng mô hình phân loại đã được huấn luyện ở bước trước để xác định tính đồng tham chiếu cho từng cặp $(C_i,\,C_j)$ mà $i<j$. Sau khi gặp một cặp $(C_k,\,C_j)$ đầu tiên được xác định là đồng tham chiếu, giải thuật đưa cặp vào danh sách $L$. Sau khi đã chọn tiền cho toàn bộ hồi chỉ, từ danh sách $L$ các cặp có một chung khái niệm được gom lại với nhau thành từng cụm, mỗi cụm ứng với một chuỗi đồng tham chiếu \cite{Soon2001}.
+\item \emph{Gom cụm tốt nhất trước (best-first clustering):}
+
+Sự khác biệt của giải thuật này so với giải thuật trên là: thay vì chọn tiền đề ở gần nhất, giải thuật gom cụm tốt nhất trước lựa chọn tiền đề có độ tin cậy đồng tham chiếu cao nhất. Điều này có thể được thực hiện nhờ sử dụng các mô hình phân loại thống kê, điển hình là SVM. Theo các tác giả của giải thuật này, nhờ tận dụng được độ tin cậy đồng tham chiếu của mô hình phân loại, giải thuật gom cụm tốt nhất trước cho kết quả tốt hơn giải thuật gom cụm gần nhất trước \cite{VincentNg2002a}.
+\end{enumerate}
 
 \section{Support Vector Machine}
-\section{Các mô hình học máy phân giải đồng tham chiếu}
+Trong lĩnh vực học máy, support vector machine (SVM) là mô hình học có giám với giải thuật huấn luyện có thể phân tích và nhận diện mẫu. Lần đầu tiên được giới thiệu bởi Vapnik vào năm 1992, SVM là một trong những giải thuật học máy được sử dụng phổ biến nhất trong lĩnh vực học máy hiện đại, đa phần là bởi vì SVM thường tỏ ra hiệu quả hơn nhiều so với các giải thuật học máy khác khi được huấn luyện trên một tập dữ liệu vừa (SVM không làm việc tốt trên các tập dữ liệu quá lớn, vì giải thuật học của SVM có liên quan đến việc nghịch đảo các ma trận, một việc làm rất tốn kém về mặt tính toán). 
 
+Tư tưởng cơ bản của SVM là cố gắng tìm kiếm một hoặc một tập các đường siêu phẳng (hyperplane) trong một không gian có nhiều chiều để phân chia các điểm đại diện của tập dữ liệu ra hai hay nhiều phần, từ đó có thể thực hiện các tác vụ phân loại hay hồi quy. Một đặc điểm của SVM là giải thuật học của nó cho phép chúng ta phân biệt được giữa một mô hình phân loại tốt và một mô hình không tốt, ngay cả khi cả hai mô hình đều cho cùng một kết quả phân loại trên một tập dữ liệu.
+
+Hình \ref{sep-eg} mô tả ba đường phân loại có thể cho một tập dữ liệu. Mặc dù cả ba đường đều phân loại các điểm thuộc các lớp khác nhau một cách chính xác, có thể cảm thấy rằng hình thứ ba cho một đường phân loại tốt hơn hai hình còn lại. Điều này có thể được giải thích là: khi sử dụng các đường ở Hình \ref{sep-eg} để phân loại cho các điểm dữ liệu mới, đường phân loại thứ ba cho xác suất các điểm này rơi vào phía phân lớp sai thấp hơn so với hai đường còn lại. Lý do là bởi vì khoảng cách từ đường phân loại thứ ba đến ba đến các điểm dữ liệu của hai lớp là lớn nhất và gần như là bằng nhau cho cả hai bên.
+
+\begin{figure}[ht]
+\centering
+\begin{subfigure}[b]{0.32\textwidth}
+\centering
+\resizebox{\linewidth}{!}{
+	\begin{tikzpicture}
+		\draw[->] (-0.1,0) -- (4.1,0) node[below]{$x_1$};
+		\draw[->] (0,-0.1) -- (0,4.1) node[left]{$x_2$};
+		
+		\draw (0.5,2.5) node[bpoint]{};
+		\draw (1.5,2.85) node[bpoint]{};
+		\draw (2.5,3.2) node[bpoint]{};
+		\draw (0.7,3.7) node[bpoint]{};
+		\draw (0.8,3.1) node[bpoint]{};
+		\draw (1.3,3.8) node[bpoint]{};
+		\draw (1.8,3.4) node[bpoint]{};
+		
+		\draw (1.2,1.5) node[wpoint]{};
+		\draw (1.8,1.1) node[wpoint]{};
+		\draw (2,1.8) node[wpoint]{};
+		\draw (1.6,0.6) node[wpoint]{};
+		\draw (2.3,0.8) node[wpoint]{};
+		\draw (2.4,1.4) node[wpoint]{};
+		\draw (2.8,1.7) node[wpoint]{};
+		
+		\draw (-0.5375,2.55) -- (3.975,1.6);
+	\end{tikzpicture}
+}
+\end{subfigure}
+\begin{subfigure}[b]{0.32\textwidth}
+\centering
+\resizebox{\linewidth}{!}{
+	\begin{tikzpicture}
+		\draw[->] (-0.1,0) -- (4.1,0) node[below]{$x_1$};
+		\draw[->] (0,-0.1) -- (0,4.1) node[left]{$x_2$};
+		
+		\draw (0.5,2.5) node[bpoint]{};
+		\draw (1.5,2.85) node[bpoint]{};
+		\draw (2.5,3.2) node[bpoint]{};
+		\draw (0.7,3.7) node[bpoint]{};
+		\draw (0.8,3.1) node[bpoint]{};
+		\draw (1.3,3.8) node[bpoint]{};
+		\draw (1.8,3.4) node[bpoint]{};
+		
+		\draw (1.2,1.5) node[wpoint]{};
+		\draw (1.8,1.1) node[wpoint]{};
+		\draw (2,1.8) node[wpoint]{};
+		\draw (1.6,0.6) node[wpoint]{};
+		\draw (2.3,0.8) node[wpoint]{};
+		\draw (2.4,1.4) node[wpoint]{};
+		\draw (2.8,1.7) node[wpoint]{};		
+		
+		\draw (-0.5,0) -- (3.5,4);
+	\end{tikzpicture}
+}
+\end{subfigure}
+\begin{subfigure}[b]{0.32\textwidth}
+\centering
+\resizebox{\linewidth}{!}{
+	\begin{tikzpicture}
+		\draw[->] (-0.1,0) -- (4.1,0) node[below]{$x_1$};
+		\draw[->] (0,-0.1) -- (0,4.1) node[left]{$x_2$};
+		
+		\draw (0.5,2.5) node[bpoint]{};
+		\draw (1.5,2.85) node[bpoint]{};
+		\draw (2.5,3.2) node[bpoint]{};
+		\draw (0.7,3.7) node[bpoint]{};
+		\draw (0.8,3.1) node[bpoint]{};
+		\draw (1.3,3.8) node[bpoint]{};
+		\draw (1.8,3.4) node[bpoint]{};
+		
+		\draw (1.2,1.5) node[wpoint]{};
+		\draw (1.8,1.1) node[wpoint]{};
+		\draw (2,1.8) node[wpoint]{};
+		\draw (1.6,0.6) node[wpoint]{};
+		\draw (2.3,0.8) node[wpoint]{};
+		\draw (2.4,1.4) node[wpoint]{};
+		\draw (2.8,1.7) node[wpoint]{};	
+		
+		\draw (-0.5,1.5375) -- (4,3.1125);
+	\end{tikzpicture}
+}
+\end{subfigure}
+\caption{Ví dụ về các đường phân loại có thể cho một tập dữ liệu\label{sep-eg}}
+\end{figure}
+
+Như vậy mục đích của giải thuật học SVM chính tìm ra một đường phân loại tối ưu theo tiêu chí đã kể trên, tức là cực đại hóa khoảng cách của đường phân loại tới điểm gần nhất của hai lớp. Các điểm gần với đường phân loại nhất được gọi là các \emph{vector hỗ trợ} (support vector), các điểm này là quan trọng bởi vì chúng là những điểm dễ bị phân loại sai nhất trong quá trình học. Điều này dẫn đến một đặc điểm thú vị của giải thuật học SVM: sau khi huấn luyện, các điểm dữ liệu khác của tập huấn luyện có thể bỏ đi và chỉ cần giữ lại các vector hỗ trợ là đủ.
+
+Giả sử tập dữ diệu huấn luyện được biểu diễn bằng một tập các điểm \[\mathcal{D}=\left\{(\vec{x}_i,y_i)\,|\,\vec{x}_i\in\mathbb{R}^p,\,y_i\in\{-1,1\}\right\}_{i=1}^{n}\] trong đó $y_i$ có thể là $-1$ hoặc $1$ mang ý nghĩa là lớp mà $\vec{x}_i$ thuộc vào, mỗi $\vec{x}_i$ là một vector có $p$ chiều. Một đường siêu phẳng bất kì trong không gian $p$ chiều có thể được biểu diễn dưới dạng $\vec{w}\cdot\vec{x}+b=0$ với $\vec{w}\cdot\vec{x}$ là tích vô hướng của hai vector $\vec{w}$ và $\vec{x}$, tức $\vec{w}\cdot\vec{x}=\sum_{i=1}^{p}w_ix_i$. Có thể hiểu $\vec{w}$ là vector pháp tuyến của đường siêu phẳng $\vec{w}\cdot\vec{x}+b=0$, còn $\frac{b}{||\vec{w}||}$ là khoảng cách từ đường đến góc tọa độ.
+
+Với mỗi đường phân loại bất kì, xét hai đường song song với nó và đi qua các điểm gần nhất của hai lớp (Hình \ref{optimal-sep}), gọi là hai đường biên. Để cho thuận tiện, gọi các điểm đen $\vec{x}^\bullet$ trên Hình \ref{optimal-sep} là các điểm thuộc vào lớp 1, còn các điểm trắng $\vec{x}^\circ$ là các điểm thuộc vào lớp $-1$. Như vậy nếu đường phân loại có dạng $\vec{w}\cdot\vec{x}+b=0$ thì các điểm đen và trắng được phân loại theo tiêu chí $\vec{w}\cdot\vec{x}^\bullet+b\geq1$ và $\vec{w}\cdot\vec{x}^\circ+b\leq-1$. Dễ dàng suy ra phương trình của đường biên đen là $\vec{w}\cdot\vec{x}+b=1$ và của đường biên trắng là $\vec{w}\cdot\vec{x}+b=-1$. Từ đó tính được khoảng cách của hai đường biên này là $\frac{2}{||\vec{w}||}$.
+
+Như đã nói ở trên, các điểm đen có phân lớp $y=1$, tiêu chí phân loại các điểm này là $\vec{w}\cdot\vec{x}^\bullet+b\geq1$. Trong khi đó các điểm trắng có phân lớp $y=-1$ được phân loại theo tiêu chí $\vec{w}\cdot\vec{x}^\circ+b\leq-1$. Từ đó tiêu chí phân loại có thể được viết lại một cách đơn giản như sau: $y(\vec{w}\cdot\vec{x}+b)\geq1$. Mặt khác, để cực đại hóa khoảng cách của hai đường biên, tức cực đại hóa $\frac{2}{||\vec{w}||}$, thì $||\vec{w}||$ phải đạt cực tiểu. Như vậy mục đích cuối cùng của giải thuật học SVM là cực tiểu hóa $||\vec{w}||$ với điều kiện $y_i(\vec{w}\cdot\vec{x}_i+b)\geq1$ cho mọi $i=1,\dots,n$.
+
+\begin{figure}[ht]
+\centering
+\scalebox{1.5}{
+	\begin{tikzpicture}[font=\tiny]
+		\draw[->] (-0.1, 0) -- (4.1, 0) node[below]{$x_1$};
+		\draw[->] (0, -0.1) -- (0, 4.1) node[left]{$x_2$};
+			
+		\draw[very thick,gray!60] (0.5, 2.5) node[bpoint]{};
+		\draw[very thick,gray!60] (1.5, 2.85) node[bpoint]{};
+		\draw[very thick,gray!60] (2.5, 3.2) node[bpoint]{};
+		\draw (0.7, 3.7) node[bpoint]{};
+		\draw (0.8, 3.1) node[bpoint]{};
+		\draw (1.3, 3.8) node[bpoint]{};
+		\draw (1.8, 3.4) node[bpoint]{};
+		
+		\draw[very thick] (1.2, 1.5) node[wpoint]{};
+		\draw (1.8, 1.1) node[wpoint]{};
+		\draw[very thick] (2, 1.8) node[wpoint]{};
+		\draw (1.6, 0.6) node[wpoint]{};
+		\draw (2.3, 0.8) node[wpoint]{};
+		\draw (2.4, 1.4) node[wpoint]{};
+		\draw (2.8, 1.7) node[wpoint]{};	
+			
+		\draw (-0.55,1.52) -- (3.809,3.0457) node[pos=0.8,sloped,above,outer sep=0,inner sep=0.5mm]{$\vec{w}\cdot\vec{x}+b=0$};
+		
+		\draw[dashed] (-0.5,2.15) -- (3.618,3.5913) node[pos=1,sloped,above,outer sep=0,inner sep=0.5mm]{$\vec{w}\cdot\vec{x}+b=1$};
+		\draw[dashed] (-0.3,0.9825) -- (4.004,2.4889) node[pos=0.8,sloped,above,outer sep=0,inner sep=0.5mm]{$\vec{w}\cdot\vec{x}+b=-1$};
+		
+		\draw[<->] (4.0707,2.5122) -- (3.6859,3.6147) node[midway,above,sloped]{$\frac{2}{||\vec{w}||}$};
+		\draw[<->] (-0.0668,-0.0234) -- (-0.6001,1.5022) node[midway,below,sloped]{$\frac{b}{||\vec{w}||}$};
+	\end{tikzpicture}
+}
+\caption{Tối ưu hóa khoảng cách\label{optimal-sep}}
+\end{figure}
+
+\subsection*{Kĩ thuật kernel}
+Trong nhiều trường hợp, các điểm đại diện của tập dữ liệu không thể nào được phân cách bằng một đường thẳng hoàn hảo. Khi này, một kĩ thuật biến đổi dữ liệu được áp dụng để nâng số chiều của không gian dữ liệu lên, với mục đích là tìm kiếm đường phân loại siêu phẳng tối ưu trong các chiều không gian mới này. Hình \ref{kernel-trick} mô tả một tập dữ liệu ở hai chiều được biến đổi sang một không gian ba chiều. Có thể dễ dàng nhận thấy, trong không gian hai chiều, các điểm dữ liệu của hai lớp không thể được phân cách bằng một đường thẳng. Tuy nhiên sau khi biến đổi dữ liệu để tăng số chiều lên, chúng dễ dàng được phân cách bởi một mặt phẳng.
+
+\begin{figure}[ht]
+\begin{subfigure}[b]{0.49\textwidth}
+\centering
+\begin{tikzpicture}
+	\draw[->] (-2.5, 0) -- (2.5, 0) node[below]{$x_1$};
+	\draw[->] (0, -2.5) -- (0, 2.5) node[left]{$x_2$};
+	
+	\draw[dashed] (0,0) node[ellipse,draw,minimum width=3cm,minimum height=2cm]{};
+	
+	\draw (0.1,0.15) node[swpoint]{};
+	\draw (0.5,0.65) node[swpoint]{};
+	\draw (1,0.25) node[swpoint]{};
+	\draw (0.9,-0.45) node[swpoint]{};
+	\draw (0.3,-0.25) node[swpoint]{};
+	\draw (-0.45,-0.55) node[swpoint]{};
+	\draw (-0.45,0.5) node[swpoint]{};
+	\draw (-1.2,0.15) node[swpoint]{};
+	
+	\draw (0.6,1.5) node[sbpoint]{};
+	\draw (1.7,0.6875) node[sbpoint]{};
+	\draw (1.803,1.845) node[sbpoint]{};
+	\draw (1.1,1.1) node[sbpoint]{};
+	\draw (0.9,1.92) node[sbpoint]{};
+	
+	\draw (1.5,-0.7) node[sbpoint]{};
+	\draw (2.2,-0.9) node[sbpoint]{};
+	\draw (2,-1.85) node[sbpoint]{};
+	\draw (1.1,-1.3) node[sbpoint]{};
+	\draw (0.7,-2) node[sbpoint]{};
+	
+	\draw (-0.5,-1.85) node[sbpoint]{};
+	\draw (-1.35,-1.9) node[sbpoint]{};
+	\draw (-0.7,-1.2) node[sbpoint]{};
+	\draw (-1.4,-0.8) node[sbpoint]{};
+	\draw (-2,-0.5) node[sbpoint]{};
+	
+	\draw (-2.2,0.8) node[sbpoint]{};
+	\draw (-1.45,0.7) node[sbpoint]{};
+	\draw (-1,1.4) node[sbpoint]{};
+	\draw (-0.9,2.2) node[sbpoint]{};
+	\draw (-2,1.9) node[sbpoint]{};
+\end{tikzpicture}
+\end{subfigure}
+\begin{subfigure}[b]{0.49\textwidth}
+\centering
+\begin{tikzpicture}
+	\draw[-,dashed] (0,0) -- (1.5,0);
+	\draw[->] (1.5,0) -- (3.8,0) node[below]{$z_1$};
+	\draw[-,dashed] (0,0) -- (0,2.5);
+	\draw[->] (0,2.5) -- (0,3.8) node[left]{$z_3$};
+	\draw[dashed] (0,0) -- (0,0,0.8);
+	\draw[->] (0,0,0.8) -- (0,0,3.8) node[below right]{$z_2$};
+	
+	\draw (1.5,0) -- (0,2.5);
+	\draw (1.5,0) -- (1.5,0,3.5) -- (0,2.5,3.5) -- (0,2.5);
+	
+	\draw (0.3,1.75) node[swpoint]{};
+	\draw (0.35,1.4) node[swpoint]{};
+	\draw (0.7,1) node[swpoint]{};
+	\draw (0.5,0.7) node[swpoint]{};
+	\draw (0.8,0.6) node[swpoint]{};
+	\draw (0.7,0.35) node[swpoint]{};
+	\draw (0.2,0.35) node[swpoint]{};
+	\draw (1.1,0.2) node[swpoint]{};
+	
+	\draw (0.4,2.2) node[sbpoint]{};
+	\draw (0.8,2.55) node[sbpoint]{};
+	\draw (0.75,3.2) node[sbpoint]{};
+	\draw (1,1.85) node[sbpoint]{};
+	\draw (1.15,1.2) node[sbpoint]{};
+	\draw (1.45,0.7) node[sbpoint]{};
+	\draw (2,0.5) node[sbpoint]{};
+	\draw (1.3,2.9) node[sbpoint]{};
+	\draw (1.55,2) node[sbpoint]{};
+	\draw (1.95,2.45) node[sbpoint]{};
+	\draw (2.1,3.3) node[sbpoint]{};
+	\draw (2.45,2.25) node[sbpoint]{};
+	\draw (2.75,1.35) node[sbpoint]{};
+\end{tikzpicture}
+\end{subfigure}
+\caption{Minh họa kĩ thuật kernel giúp biến đổi không gian dữ liệu\label{kernel-trick}}
+\end{figure}
+
+Để giúp SVM có thể tìm kiếm các đường siêu phẳng trong các chiều không gian cao hơn, một kĩ thuật được giới thiệu có tên là kernel giúp làm tăng số chiều của dữ liệu mà không làm mất đi bản chất của nó. Cơ sở của kĩ thuật này là khi sử dụng một vector $\Phi(\vec{x})$ có nhiều số chiều hơn được biến đổi từ vector $\vec{x}$, tích $\Phi(\vec{x}_j)\cdot\Phi(\vec{x}_j)$ sau một số phép biến đổi sẽ trở thành một hàm kernel đối với $\vec{x}_i$ và $\vec{x}_j$, $\Kernel(\vec{x}_i,\vec{x}_j)$. Trong đó $\vec{x}_i\cdot \vec{x}_j$ (hay $\Phi(\vec{x}_i)\cdot\Phi(\vec{x}_j)$ sau khi biến đổi số chiều) xuất hiện trong hàm lỗi (error function) mà giải thuật học SVM cần cực tiểu hóa. Vì số chiều của $\Phi(\vec{x})$ có thể là rất lớn, phép biến đổi kernel giúp cho giải thuật có tính khả thi về mặt tính toán. Cụ thể là thay vì sử dụng trực tiếp các $\Phi(\vec{x})$, ta có thể thay thế tích $\vec{x}_i\cdot\vec{x}_j$ bằng ngay chính hàm kernel $\Kernel(\vec{x}_i,\vec{x}_j)$. Sau đây là một số hàm kernel thông dụng:
+
+\begin{itemize}
+\item hàm đa thức (polynomial) biến đổi số chiều lên một mức độ $s$ nào đó:
+\[\Kernel(\vec{x},\vec{y})=(1+\vec{x}\cdot\vec{y})^s\]
+\item hàm xichma (sigmoid function) với tham số $\kappa$ và $\delta$:
+\[\Kernel(\vec{x},\vec{y})=\tanh(\kappa \vec{x}\cdot \vec{y}-\delta)\]
+\item hàm tia cơ sở (radial basis function) với tham số $\sigma$:
+\[\Kernel(\vec{x},\vec{y})=\exp\left(-\frac{||\vec{x}-\vec{y}||^2}{2\sigma^2}\right)\]
+\end{itemize}
+
+Việc tìm kiếm các bộ tham số tốt nhất cho hàm kernel có thể được thực hiện bằng nhiều cách, trong đó cách tìm kiếm lưới (grid search) được cho là đơn giản nhất và có thể song song hóa được. Ví dụ để huấn luyện một mô hình SVM với kernel tia cơ sở, có hai tham số cần được xác định là $C$ (tham số của khoảng cách $M$) và $\gamma=\frac{1}{2\sigma^2}$ là tham số của kernel. Một cách tìm kiếm lưới thường được thực hiện là duyệt toàn bộ các cặp $(C,\gamma)$ với $C\in\{2^{-5},2^{-3},\dots,2^{13},2^{15}\}$ và $\gamma\in\{2^{-15},2^{-13},\dots,2^1,2^3\}$.
+
+\subsection*{Mô hình SVM mở rộng}
+Mô hình SVM về bản chất chỉ phân loại được cho hai lớp, tuy nhiên trong thực tế có nhiều bài toán mà dữ liệu được phân vào nhiều hơn hai lớp. Để giải quyết các bài toán dạng này, một số phương pháp được đề xuất để mở rộng SVM cho các bài toán phân loại nhiều lớp. Tư tưởng cơ bản của các phương pháp này là thay vì chỉ huấn luyện một mô hình, giải thuật học mở rộng huấn luyện nhiều mô hình SVM và sau đó sử dụng biểu quyết (vote) để quyết định phân lớp của dữ liệu. Có hai phương pháp thông dụng để mở rộng SVM cho phân loại nhiều lớp:
+\begin{enumerate}
+\item \emph{Một đấu với tất cả (one-against-all):}
+
+Huấn luyện tất cả $n$ mô hình ứng với $n$ lớp. Mô hình thứ $i$ được huấn luyện để phân loại dữ liệu vào lớp $i$ hoặc lớp khác $i$. Như vậy ứng với $n$ mô hình là $n$ phương trình đường siêu phẳng:
+\[
+\begin{matrix}
+\vec{w}_1\cdot\vec{x}+b_1\\
+\vdots\\
+\vec{w}_n\cdot\vec{x}+b_n
+\end{matrix}
+\]
+
+Sau khi huấn luyện, với mỗi điểm dữ liệu cần phân loại $\vec{x}^*$, giải thuật lựa chọn phân lớp $k$ sao cho $|\vec{w}_k\cdot\vec{x}^*+b_k|$ có giá trị lớn nhất.
+\item \emph{Một đấu với một (one-against-one):}
+
+Huấn luyện $m$ mô hình cho bài toán có $n$ lớp, mỗi mô hình có nhiệm vụ phân loại dữ liệu vào hai lớp bất kì trong $n$, tức $m$ chính là tổ hợp chập 2 của $n$: $m=\frac{n(n-1)}{2}$:\[(1,2),(1,3),\dots,(1,n),(2,3),(2,4),\dots,(2,n),\dots,(n-1,n)\]
+
+Sau khi huấn luyện, giải thuật lựa chọn phân lớp mà được phần lớn $m$ mô hình phân loại vào.
+\end{enumerate}
 
 \section{Các công cụ hỗ trợ rút trích đặc trưng} \label{tools}
 
@@ -61,7 +345,7 @@ MetaMap là công cụ hỗ trợ nhận dạng các khái niệm trong bộ t�
 	numbersep=5pt,
 	breaklines=true,
 	showstringspaces=false,
-	basicstyle=\footnotesize}
+	basicstyle=\footnotesize\ttfamily}
 \lstinputlisting{sample_code/metamap_output.txt}
 \caption{Mẫu kết quả của công cụ MetaMap\label{metamapoutput}}
 \end{figure}
@@ -94,7 +378,7 @@ cTakes được xây dựng dựa trên framework UIMA giúp ứng dụng đư�
 	numbersep=5pt,
 	breaklines=true,
 	showstringspaces=false,
-	basicstyle=\footnotesize}
+	basicstyle=\footnotesize\ttfamily}
 \lstinputlisting{sample_code/ctakes_desc.xml}
 \caption{Tập tin XML mô tả bộ phận con cTakes\label{ctakesdesc}}
 \end{figure}
@@ -105,9 +389,9 @@ MedEx là công cụ hỗ trợ trích xuất các thông tin về thuốc y t�
 \textit{<Chỉ số câu>	Nội dung câu|Thông tin thuốc|Tên thuốc được chuẩn hóa}
 \end{center}
 
-Trong đó thông tin về thuốc bao gồm:
+\noindent Trong đó thông tin về thuốc bao gồm:
 
-\begin{itemize}[noitemsep]
+\begin{itemize}
 \item Tên thuốc (Drug name) như kháng sinh, Vancomycin , ...
 \item Nhà sản xuất (Brand name) như Zocor, ...
 \item Dạng thuốc (Drug form) như dạng viên nén, dạng viên nhộng, ...

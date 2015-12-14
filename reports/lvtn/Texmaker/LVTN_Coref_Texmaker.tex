@@ -20,14 +20,15 @@
 \usepackage{enumitem}
 %\usepackage{hanging}
 \usepackage{etoolbox}
+\usepackage[linewidth=0.8pt,skipbelow=0pt]{mdframed}
 %\usepackage{layout}
 %\usepackage{showframe}
-
 \usepackage{listings}
 \usepackage{color}
-
+\usepackage{subcaption}
 
 \makeatletter
+
 \pagestyle{fancy}
 \onehalfspacing
 \usetikzlibrary{
@@ -65,7 +66,11 @@
 	multidoc/.style = { doc, double copy shadow={shadow xshift=.5ex, shadow yshift=.5ex} },
 	proc/.style = { base, rectangle, text width=4em, minimum height=2em },
 	io/.style = { base, trapezium, trapezium left angle=60, trapezium right angle=120, text width=4em, minimum height=2em },
-	altproc/.style = { base, rounded rectangle, text width=3.5em, minimum height=2em }
+	altproc/.style = { base, rounded rectangle, text width=3.5em, minimum height=2em },	
+	wpoint/.style = { circle, draw, minimum size=0.25cm, inner sep=0cm, outer sep=0cm },
+	bpoint/.style = { wpoint, fill=black }, 
+	swpoint/.style={wpoint,minimum size=0.15cm},
+	sbpoint/.style={bpoint,minimum size=0.15cm},
 }
 
 \setlength{\headheight}{16.5pt}
@@ -111,6 +116,8 @@
 \setlist[enumerate]{leftmargin=\parindent,parsep=0pt,partopsep=0pt}
 
 \DeclareMathOperator{\BigO}{O}
+\DeclareMathOperator{\Kernel}{\mathbf{K}}
+\renewcommand{\vec}[1]{\mathbf{#1}}
 
 \newenvironment{newtable}[2]
 {
@@ -125,6 +132,35 @@
 
 \addto\captionsvietnam{
 	\renewcommand{\listfigurename}{Danh sách hình}
+	\renewcommand{\listtablename}{Danh sách bảng}
+	\renewcommand{\bibname}{Tài liệu tham khảo}
+}
+
+\newcolumntype{+}{>{\global\let\currentrowstyle\relax}}
+\newcolumntype{^}{>{\currentrowstyle}}
+\newcommand{\rowstyle}[1]{\gdef\currentrowstyle{#1}%
+#1\ignorespaces
+}
+
+\newenvironment{rtable}[2][ht]
+{
+	\@float{table}[#1]
+	\renewcommand{\tabcolsep}{3.75pt}
+	\centering\ra{1.2}
+	\caption{#2}
+	\footnotesize\sffamily
+	
+	\tabular{@{}llllclllclllclll@{}}
+	\toprule
+	&\multicolumn{3}{l}{\textbf{MUC}}&\phantom{a}&\multicolumn{3}{l}{\textbf{B-CUBED}}&\phantom{a}&\multicolumn{3}{l}{\textbf{CEAF}}&\phantom{a}&\multicolumn{3}{l}{\textbf{Trung bình}}\\
+	\cmidrule{2-4} \cmidrule{6-8} \cmidrule{10-12} \cmidrule{14-16}
+	& \textbf{P} & \textbf{R} & \textbf{F} && \textbf{P} & \textbf{R} & \textbf{F} && \textbf{P} & \textbf{R} & \textbf{F} && \textbf{P} & \textbf{R} & \textbf{F}\\
+	\midrule
+}
+{
+	\bottomrule
+	\endtabular
+	\end@float
 }
 
 \makeatother
@@ -150,11 +186,15 @@
 
 \tableofcontents{}
 
-\listoffigures
+\clearpage
+\phantomsection
 \addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
 
-\listoftables
+\clearpage
+\phantomsection
 \addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
 
 \input{./chapter1.tex}
 \input{./chapter2.tex}
@@ -163,9 +203,10 @@
 \input{./chapter6.tex}
 \input{./chapter7.tex}
 
-\bibliographystyle{ieeetr}
-\bibliography{referrence}
+\clearpage
 \phantomsection
 \addcontentsline{toc}{chapter}{\bibname}
+\bibliographystyle{ieeetr}
+\bibliography{referrence}
 
 \end{document}
