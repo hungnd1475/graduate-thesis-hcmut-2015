@@ -1,0 +1,2 @@
+TestPair: c=32.0, g=0.5, rate=85.6427
+ProblemPair: 

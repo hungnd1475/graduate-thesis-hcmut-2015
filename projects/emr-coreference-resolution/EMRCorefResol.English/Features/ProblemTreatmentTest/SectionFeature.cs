@@ -15,16 +15,26 @@ namespace HCMUT.EMRCorefResol.English.Features
             var anaSection = EMRExtensions.GetSection(emr, instance.Anaphora);
             var anteSection = EMRExtensions.GetSection(emr, instance.Antecedent);
 
-            if(anaSection == null || anteSection == null)
+            if (anaSection == null || anteSection == null)
             {
                 Value[0] = 1d;
-                return;
             }
+            else
+            {
+                Value[0] = 0d;
 
-            var anaSectionIndex = keywords.SearchDictionaryIndices(anaSection.Title, KWSearchOptions.WholeWordIgnoreCase)[0];
-            var anteSectionIndex = keywords.SearchDictionaryIndices(anteSection.Title, KWSearchOptions.WholeWordIgnoreCase)[0];
-            Value[anaSectionIndex + 1] = 1d;
-            Value[anteSectionIndex + 1] = 1d;
+                var anaSectionIndex = keywords.SearchDictionaryIndices(anaSection.Title, KWSearchOptions.WholeWordIgnoreCase);
+                var anteSectionIndex = keywords.SearchDictionaryIndices(anteSection.Title, KWSearchOptions.WholeWordIgnoreCase);
+
+                if (anaSectionIndex.Length > 0)
+                {
+                    Value[anaSectionIndex[0] + 1] = 1d;
+                }
+                if (anteSectionIndex.Length > 0)
+                {
+                    Value[anteSectionIndex[0] + 1] = 1d;
+                }
+            }
         }
     }
 }

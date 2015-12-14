@@ -7,6 +7,7 @@
 );
 
 Write-Host "Extracting features to '$dir'...";
+[System.IO.Directory]::CreateDirectory("result\$dir");
 
 if ($ins -ne ""){
     $ins = "-i " + $ins;

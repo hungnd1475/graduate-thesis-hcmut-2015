@@ -1,0 +1,26 @@
+#You must ensure nmake.exe, cl.exe, link.exe are in system path.
+#VCVARS32.bat
+#Under dosbox prompt
+#nmake -f Makefile.win
+
+##########################################
+CXX = cl.exe
+CFLAGS = /nologo /O2 /EHsc /I. /D _WIN64 /D _CRT_SECURE_NO_DEPRECATE
+TARGET = windows-fcv
+
+all: $(TARGET)\svm-train-fcv.exe $(TARGET)\svm-predict-fcv.exe lib
+
+$(TARGET)\svm-train-fcv.exe: svm.h svm-train-fcv.c svm.obj
+	$(CXX) $(CFLAGS) svm-train-fcv.c svm.obj -Fe$(TARGET)\svm-train-fcv.exe
+	
+$(TARGET)\svm-predict-fcv.exe: svm.h svm-predict-fcv.c svm.obj
+	$(CXX) $(CFLAGS) svm-predict-fcv.c svm.obj -Fe$(TARGET)\svm-predict-fcv.exe
+
+svm.obj: svm.cpp svm.h
+	$(CXX) $(CFLAGS) -c svm.cpp
+
+lib: svm.cpp svm.h svm.def
+	$(CXX) $(CFLAGS) -LD svm.cpp -Fe$(TARGET)\libsvm -link -DEF:svm.def 
+
+clean:
+	-erase /Q *.obj $(TARGET)\.

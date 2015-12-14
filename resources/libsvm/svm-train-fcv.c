@@ -122,10 +122,11 @@ int main(int argc, char **argv)
 void do_cross_validation()
 {
 	int i;
-	int total_correct = 0;
+	//int total_correct = 0;
 	double total_error = 0;
 	double sumv = 0, sumy = 0, sumvv = 0, sumyy = 0, sumvy = 0;
 	double *target = Malloc(double,prob.l);
+	int tp = 0, fp = 0, fn = 0;
 
 	svm_cross_validation(&prob,&param,nr_fold,target);
 	if(param.svm_type == EPSILON_SVR ||
@@ -149,13 +150,26 @@ void do_cross_validation()
 			);
 	}
 	else
-	{
+	{		
 		for(i=0;i<prob.l;i++)
 		{
-			if(target[i] == prob.y[i])
-				++total_correct;
+			if(target[i] == 1)
+			{
+				if(prob.y[i] == 1)
+					++tp;
+				else ++fp;
+			}
+			else if(target[i] == 0 && prob.y[i] == 1)
+			{
+				++fn;
+			}
+			// if(target[i] == prob.y[i])
+				// ++total_correct;
 		}
-		printf("Cross Validation Accuracy = %g%%\n",100.0*total_correct/prob.l);
+		double p = (tp + fp) != 0 ? (double) tp / (tp + fp) : 0;
+		double r = (tp + fn) != 0 ? (double) tp / (tp + fn) : 0;
+		double f = (p + r) != 0 ? 2 * p * r / (p + r) : 0;
+		printf("Cross Validation = %g%%\n",100.0*f);
 	}
 	free(target);
 }
