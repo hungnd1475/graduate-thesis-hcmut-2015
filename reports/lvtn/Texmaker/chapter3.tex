@@ -314,7 +314,34 @@ Thư viện Apache OpenNLP bao gồm các công cụ dựa trên học máy dùn
 
 Trong việc phân tích từ vựng (lexical analysis), tác vụ tách từ là quá trình chia nhỏ câu văn thành các thành phần nhỏ hơn như từ, cụm từ, ký hiệu, hoặc các yếu tố có ý nghĩa khác gọi là Token. Các Token này là đầu vào cho các tác vụ xử lý ngôn ngữ tự nhiên khác như đánh dấu vai trò ngữ pháp, phân đoạn câu văn, ... Ví dụ câu văn ``Female patient is 65 years old .'' sau khi được phân giải sẽ gồm các Token là ``Female'', ``patient'', ``is'', ``65'', ``years'', ``old'' and ``.''. Lưu ý, các dấu câu hoặc các ký tự cũng được xem như Token. Tác vụ tách từ được thư viện OpenNLP hỗ trợ bằng phương thức nhận vào câu văn và trả về một mảng các Token tương ứng.
 
-Đánh dấu vai trò ngữ pháp là quá trình phân loại các từ dựa vào từ loại hoặc vai trò ngữ pháp của chúng trong câu. Danh sách các từ loại hoặc vai trò ngữ pháp trong tiếng Anh được định nghĩa sẵn dựa theo dự án Penn TreeBank \cite{Santorini1990}. Ví dụ một số nhãn nằm trong tập Penn TreeBank là: liên từ (Conjunction) được gán nhãn là CC, tính từ (Adjective) được gán nhãn là JJ, danh từ số ít (Singular noun) được gán nhãn là NN, ... Tác vụ đánh dấu vai trò ngữ pháp được thư viện OpenNLP hỗ trợ bằng phương thức nhận vào một mảng các Token và trả về một mảng các vai trò ngữ pháp tương ứng với các Token đó. Ví dụ câu văn ``They refuse to permit us'' được tách từ thành [\textit{They, refuse, to, permit, us}] và được đánh dấu vai trò ngữ pháp như sau [\textit{They/PRP, refuse/VBP, to/TO, permit/VB}]. Trong đó các nhãn mang ý nghĩa là: đại từ PRP, động từ ngôi 3 VBP, thể vô định TO, động từ nguyên mẫu VB.
+Đánh dấu vai trò ngữ pháp là quá trình phân loại các từ dựa vào từ loại hoặc vai trò ngữ pháp của chúng trong câu. Danh sách các từ loại hoặc vai trò ngữ pháp trong tiếng Anh được định nghĩa sẵn dựa theo dự án Penn TreeBank \cite{Santorini1990}. Bảng \ref{tab:POSTag} miêu tả một số nhãn ngữ pháp thông dụng. Tác vụ đánh dấu vai trò ngữ pháp được thư viện OpenNLP hỗ trợ bằng phương thức nhận vào một mảng các Token và trả về một mảng các vai trò ngữ pháp tương ứng với các Token đó. Ví dụ câu văn ``They refuse to permit us'' được tách từ thành [\textit{They, refuse, to, permit, us}] và được đánh dấu vai trò ngữ pháp như sau [\textit{They/PRP, refuse/VBP, to/TO, permit/VB}]. Trong đó các nhãn mang ý nghĩa là: đại từ PRP, động từ ngôi 3 VBP, thể vô định TO, động từ nguyên mẫu VB.
+
+\begin{table}[ht]
+\centering\ra{1.2}
+\caption{Các nhãn ngữ pháp thông dụng \label{tab:POSTag}}
+\footnotesize\sffamily
+
+\begin{tabularx}{0.8\textwidth}{@{}l *5{>{\arraybackslash}X}@{}}
+\toprule 
+\textbf{Nhãn} & \textbf{Ý nghĩa} & \textbf{Ví dụ}\\
+\midrule
+CC & Liên từ (conjunction) & and, or, but\\
+DT & Mạo từ xác định (determiner) & the, a, an, these\\
+JJ & Tính từ (adjective) & nice, easy \\
+NN & Danh từ số ít (singular noun) & tiger, chair \\
+NNS & Danh từ số nhiều (plural noun) & tigers, chairs \\
+PRP & Đại từ chỉ người (personal pronoun) & me, you, I \\
+RB & Phó từ (adverb) & extremely, loudly \\
+VB & Động từ nguyên mẫu & think  \\
+VBZ & Động từ ngôi thứ ba & thinks \\
+VBD & Động từ quá khứ & thought \\
+WDT & Nghi vấn từ xác định & which, whatever, whichever\\
+WP & Nghi vấn từ chỉ người & what, who, whom \\
+WRB & Nghi vấn từ chỉ phó từ & where, when \\
+WP\$ & Nghi vấn từ sở hữu & whose, whosever \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
 Phân đoạn câu văn là quá trình phân tích câu văn thành các cụm động từ, cụm giới từ, cụm danh từ, cụm trạng từ, ... cấu thành nên câu văn đó. Ví dụ trong câu văn ``The patient is a 47 years old male'' được phân đoạn thành ba cụm: cụm danh từ ``The patient'', cụm động từ ``is'', cụm danh từ ``a 47 years old male''. Vai trò cũng như loại của cụm từ được định nghĩa trong tập nhãn Penn TreeBank \cite{Santorini1990}. Các cụm từ được mô tả theo định dạng IBO giúp xác định vị trí của từ  đang xét trong cụm từ. B mang ý nghĩa từ đang xét nằm đầu cụm từ, I mang ý nghĩa từ đang xét nằm trong cụm từ nhưng không phải là từ đầu tiên, O mang ý nghĩa từ đang xét nằm ngoài cụm từ. Ví dụ cụm danh từ ``a 47 years old'' được cấu thành từ ``a|B'', ``47|I'', ``years|I'', ``old|I''.
 
