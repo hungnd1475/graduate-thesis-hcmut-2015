@@ -2,18 +2,10 @@ Phrase: The patient
 Meta Mapping (1000):
   1000   C0030705:*^patient (Patients) [Patient or Disabled Group]
 
-Phrase: has
+Phrase: is
 
-Phrase: a right upper lobe mass
-Meta Mapping (916):
-	756	C1261074:Right upper lobe (Structure of right upper lobe of lung) [Body Part, Organ, or Organ Component]
-	812	C0577573:Mass (Mass of body region) [Sign or Symptom]
-Meta Mapping (916):
-	756	C1261074:Right upper lobe (Structure of right upper lobe of lung) [Body Part, Organ, or Organ Component]
-	812	C0577559:MASS (Mass of body structure) [Finding]
-Meta Mapping (916):
-	756	C1261074:Right upper lobe (Structure of right upper lobe of lung) [Body Part, Organ, or Organ Component]
-	812	C1306372:*Mass (Mass, a measure of quantity of matter) [Quantitative Concept]
-Meta Mapping (916):
-	756	C1261074:Right upper lobe (Structure of right upper lobe of lung) [Body Part, Organ, or Organ Component]
-	812	C3152252:Mass (Molecular Mass) [Quantitative Concept]
+Phrase: HIV positive for two years
+Meta Mapping (875):
+   844   C0019699:positive for hiv (HIV Seropositivity) [Laboratory or Test Result]
+   593   C0205448:Two [Quantitative Concept]
+   593   C0439234:YEARS (year) [Temporal Concept]

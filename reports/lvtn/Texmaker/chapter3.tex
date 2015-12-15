@@ -346,7 +346,34 @@ Trong việc phân tích từ vựng (lexical analysis), tác vụ tách từ l�
 
 Xác định từ loại là tác vụ phân loại các từ dựa vào vai trò ngữ pháp của chúng trong câu. Danh sách các vai trò ngữ pháp trong tiếng Anh được định nghĩa sẵn dựa theo dự án Penn TreeBank \cite{Santorini1990}. Ví dụ một số nhãn nằm trong tập Penn TreeBank là: liên từ (conjunction) được gán nhãn là CC, tính từ (adjective) được gán nhãn là JJ, danh từ số ít (singular noun) được gán nhãn là NN, v.v... Tác vụ xác định từ loại được thư viện OpenNLP hỗ trợ bằng phương thức nhận vào một mảng các Token và trả về một mảng các vai trò ngữ pháp tương ứng với các Token đó. Ví dụ câu văn \texttt{"They refuse to permit us"} được tách từ thành \texttt{[They, refuse, to, permit, us]} và được đánh dấu vai trò ngữ pháp như sau \texttt{[They/PRP, refuse/VBP, to/TO, permit/VB]}. Trong đó các nhãn mang ý nghĩa là: PRP--đại từ, VBP--động từ ngôi 3, TO--thể vô định, VB--động từ nguyên mẫu.
 
-Phân định cụm từ là tác vụ phân tích câu văn thành các cụm động từ, cụm giới từ, cụm danh từ hay cụm trạng từ, ... cấu thành nên câu văn đó. Ví dụ trong câu văn \texttt{"The patient is a 47 years old male"} được phân đoạn thành ba cụm: cụm danh từ \texttt{"The patient"}, cụm động từ \texttt{"is"} và cụm danh từ \texttt{"a 47 years old male"}. Vai trò cũng như loại của cụm từ được định nghĩa trong tập nhãn Penn TreeBank \cite{Santorini1990}. Các cụm từ được mô tả theo định dạng IBO giúp xác định vị trí của từ đang xét trong cụm, trong đó B chỉ tới những từ nằm ở đầu cụm, I chỉ tới những từ nằm trong cụm nhưng không phải là từ đầu tiên, O chỉ tới những từ nằm ngoài cụm. Ví dụ cụm danh từ \texttt{"a 47 years old"} viết lại theo định dạng IBO là \texttt{"a|B", "47|I", "years|I", "old|I"}.
+Đánh dấu vai trò ngữ pháp là quá trình phân loại các từ dựa vào từ loại hoặc vai trò ngữ pháp của chúng trong câu. Danh sách các từ loại hoặc vai trò ngữ pháp trong tiếng Anh được định nghĩa sẵn dựa theo dự án Penn TreeBank \cite{Santorini1990}. Bảng \ref{tab:POSTag} miêu tả một số nhãn ngữ pháp thông dụng. Tác vụ đánh dấu vai trò ngữ pháp được thư viện OpenNLP hỗ trợ bằng phương thức nhận vào một mảng các Token và trả về một mảng các vai trò ngữ pháp tương ứng với các Token đó. Ví dụ câu văn ``They refuse to permit us'' được tách từ thành [\textit{They, refuse, to, permit, us}] và được đánh dấu vai trò ngữ pháp như sau [\textit{They/PRP, refuse/VBP, to/TO, permit/VB}]. Trong đó các nhãn mang ý nghĩa là: đại từ PRP, động từ ngôi 3 VBP, thể vô định TO, động từ nguyên mẫu VB.
+
+\begin{table}[ht]
+\centering\ra{1.2}
+\caption{Các nhãn ngữ pháp thông dụng \label{tab:POSTag}}
+\footnotesize\sffamily
+
+\begin{tabularx}{0.8\textwidth}{@{}l *5{>{\arraybackslash}X}@{}}
+\toprule 
+\textbf{Nhãn} & \textbf{Ý nghĩa} & \textbf{Ví dụ}\\
+\midrule
+CC & Liên từ (conjunction) & and, or, but\\
+DT & Mạo từ xác định (determiner) & the, a, an, these\\
+JJ & Tính từ (adjective) & nice, easy \\
+NN & Danh từ số ít (singular noun) & tiger, chair \\
+NNS & Danh từ số nhiều (plural noun) & tigers, chairs \\
+PRP & Đại từ chỉ người (personal pronoun) & me, you, I \\
+RB & Phó từ (adverb) & extremely, loudly \\
+VB & Động từ nguyên mẫu & think  \\
+VBZ & Động từ ngôi thứ ba & thinks \\
+VBD & Động từ quá khứ & thought \\
+WDT & Nghi vấn từ xác định & which, whatever, whichever\\
+WP & Nghi vấn từ chỉ người & what, who, whom \\
+WRB & Nghi vấn từ chỉ phó từ & where, when \\
+WP\$ & Nghi vấn từ sở hữu & whose, whosever \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
 Trong ngôn ngữ học, trung tâm của một cụm từ là từ giúp xác định vai trò ngữ pháp cụm từ đó. Ví dụ từ trung tâm của cụm danh từ \texttt{"boiling hot water"} là danh từ \texttt{"water"}. Thư viện OpenNLP hỗ trợ tác vụ xác định danh từ trung tâm bằng phương thức nhận vào một cụm từ theo định dạng IBO và trả về từ trung tâm của cụm từ đó.
 
