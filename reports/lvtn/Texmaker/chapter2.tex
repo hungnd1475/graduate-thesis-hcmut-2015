@@ -10,7 +10,7 @@ Bệnh án là văn bản ghi chép các thông tin sức khỏe của một cá
 
 So với bệnh án được lưu trữ bằng giấy, bệnh án điện tử có nhiều ưu điểm như:
 
-\begin{itemize}[noitemsep]
+\begin{itemize}
 \item Lưu trữ chính xác và đầy đủ thông tin bệnh nhân, tránh trùng lặp dữ liệu.
 \item Hỗ trợ quá trình tìm kiếm và truy xuất thông tin nhanh chóng.
 \item Dữ liệu có thể được chia sẻ hoặc tích hợp.
@@ -18,12 +18,11 @@ So với bệnh án được lưu trữ bằng giấy, bệnh án điện tử c
 
 Dữ liệu trong BAĐT thường tồn tại dưới dạng tường thuật, ghi chép của bác sĩ hoặc y tá, đây là dạng dữ liệu không có cấu trúc. Một số thông tin hữu ích có trong dữ liệu không cấu trúc của BAĐT là:
 
-\begin{itemize}[noitemsep]
+\begin{itemize}
 \item Lý do nhập viện, lịch sử điều trị, tiền sử thuốc sử dụng.
 \item Ghi chép của bác sĩ hoặc y tá trong quá trình điều trị hàng ngày.
-\item Các kết quả xét nghiệm
+\item Các kết quả xét nghiệm.
 \item Các ghi chú về quá trình phẫu thuật.
-\item ...
 \end{itemize}
 
 Ngoài các văn bản lâm sàng còn được lưu trữ dưới dạng phi cấu trúc, một số tiêu chuẩn được đưa ra để lưu trữ một cách có cấu trúc các BAĐT:
@@ -36,28 +35,28 @@ Ngoài các văn bản lâm sàng còn được lưu trữ dưới dạng phi c�
 BAĐT hiện đang là vấn đề được quan tâm và phát triển tại nhiều nơi trên thế giới. Vào năm 2009, ngay sau khi trở thành tổng thống Hoa Kỳ, Barack Obama đã yêu cầu chuẩn hóa và số hóa mọi bệnh án của các bệnh viện trong vòng 5 năm. Ở Nhật Bản, các bệnh viện lớn và vừa cũng được chính phủ tạo điều kiện để xây dựng BAĐT. Tính đến năm 2011, khoảng 34.7\% bệnh viện lớn và vừa tại Nhật đã có hệ thống BAĐT sử dụng được \cite{HoTuBao2015}. Một số ví dụ thực tiễn trong việc ứng dụng BAĐT vào dự đoán, điều trị bệnh là hệ thống dự đoán nguy cơ mắc bệnh đái tháo đường loại 2 từ cấu trúc gen \cite{AbelKho2012} hoặc hệ thống cho phép nghiên cứu diện rộng bệnh tâm thần và cách điều trị chứng phiền muộn \cite{Perlis2012}. Lí do vì việc sử dụng BAĐT không những thuận tiện hơn bệnh án giấy trong việc lưu giữ các thông tin và tri thức thu thập được trong quá trình khám chữa bệnh mà còn cho phép chia sẻ nguồn thông tin đó giữa các bệnh viện, các thành phố hoặc giữa các quốc gia với nhau. Thông qua việc chia sẻ, rất nhiều BAĐT sẽ được đối chiếu và phân tích để phát hiện những tri thức y học mới hoặc kiểm chứng những kiến thức đã có. Vì vậy BAĐT đóng vai trò quan trọng trong sự phát triển của việc khám chữa bệnh cũng như nghiên cứu trong y học.
 
 \section{Nhận dạng thực thể có tên}
-Rút trích thông tin (Information extraction) là công việc tự động rút trích thông tin từ những dữ liệu không có cấu trúc hoặc dữ liệu bán cấu trúc. Dữ liệu có cấu trúc là dữ liệu máy tính hiểu hoàn toàn. dữ liệu có cấu trúc thông thường nằm ở dạng bảng, hoặc trong các hệ quản trị dữ liệu quan hệ. Dữ liệu không có cấu trúc là dữ liệu máy hoàn toàn không hiểu, như ngôn ngữ tự nhiên. Dữ liệu bán cấu trúc là dữ liệu chứa các thẻ hoặc các hình thức đánh dấu khác giúp phân tách bộ phận ngữ cảnh nền ra khỏi dữ liệu, điển hình là các ngôn ngữ đánh dấu như XML, JSON, HTML. Rúc trích thông tin là một trong những vấn đề của xử lý ngôn ngữ tự nhiên.
+Rút trích thông tin (information extraction) là công việc tự động rút trích thông tin từ những dữ liệu không có cấu trúc hoặc dữ liệu bán cấu trúc. Dữ liệu có cấu trúc là dữ liệu máy tính hiểu hoàn toàn. dữ liệu có cấu trúc thông thường nằm ở dạng bảng, hoặc trong các hệ quản trị dữ liệu quan hệ. Dữ liệu không có cấu trúc là dữ liệu máy hoàn toàn không hiểu, như ngôn ngữ tự nhiên. Dữ liệu bán cấu trúc là dữ liệu chứa các thẻ hoặc các hình thức đánh dấu khác giúp phân tách bộ phận ngữ cảnh nền ra khỏi dữ liệu, điển hình là các ngôn ngữ đánh dấu như XML, JSON, HTML. Rúc trích thông tin là một trong những vấn đề của xử lý ngôn ngữ tự nhiên.
 
 Tác vụ rút trích thông tin gồm hai bước con là nhận dạng thực thể và rút trích quan hệ. Trong đó, nhận dạng thực thể là bước đầu tiên của bài toán rút trích thông tin. Nhận dạng thực thể có tên là xác định các thực thể có trong văn bản và phân loại chúng vào các lớp khái niệm được định nghĩa sẵn, trong đó khái niệm có tên là các cụm từ có chứa tên của người, tổ chức hoặc địa điểm \cite{KimSang2003}. Ví dụ đầu ra của bước nhận dạng thực thể từ câu văn ``Duy Hưng là sinh viên đại học Bách Khoa của thành phố Hồ Chí Minh'' là:
 
-\begin{itemize}[noitemsep]
+\begin{itemize}
 \item ``Duy Hưng'' - Con người
 \item ``đại học Bách Khoa'' - Tổ chức
-\item ``thành phố Hồ Chí Minh'' - Địa điểm
+\item ``thành phố Hồ Chí Minh'' - Nơi chốn
 \end{itemize}
 
 Bài toán nhận dạng thực thể có tên thường bao gồm 2 bước: xác định thực thể và phân loại thực thể vào các nhóm ngữ nghĩa (như con người, nơi chốn, tổ chức, ...) \cite{KimSang2003}. Trong đó, bước đầu tiên của bài toán thường được xem đơn giản như là một bài toán phân mảnh các từ trong câu thành các ``tên'', với ``tên'' là một chuỗi các từ liên tục có ý nghĩa và chỉ tới một thực thể có thật, không lồng ghép trong ``tên'' khác. Vì vậy từ ``Ngân hàng Việt Nam'' chỉ được xem như là một tên duy nhất, mặc dù từ ``ngân hàng'' và ``Việt Nam'' bản thân cũng mang ý nghĩa.
 
-Các hệ thống nhận diện thực thể có tên nếu hoạt động tốt trong một lĩnh vực cụ thể (như y tế, địa chất, ký sự, ...) thì sẽ cho kết quả không tốt nếu đem ứng dụng vào lĩnh vực khác. Để có thể chỉnh sửa cho một hệ thống có sẵn hoạt động tốt trong một lĩnh vực mới thường tiêu tốn rất nhiều công sức.
+Các hệ thống nhận diện thực thể có tên nếu hoạt động tốt trong một lĩnh vực cụ thể (như y tế, địa chất, ký sự, ...) thì sẽ cho kết quả không tốt nếu đem ứng dụng vào lĩnh vực khác. Việc chỉnh sửa cho một hệ thống có sẵn hoạt động tốt trong một lĩnh vực mới thường tiêu tốn rất nhiều công sức.
 
 Tùy theo mỗi lĩnh vực quan tâm cụ thể, các loại thực thể sẽ được định nghĩa khác nhau. Với những vấn đề không đặc thù, những nhóm thực thể thường được nhắc đến là: động vật, người, tổ chức, vật, ... Khi nghiên cứu về nhận dạng thực thể trong bệnh án điện tử, năm loại thực thể cần được quan tâm là: vấn đề (Problem), phương pháp điều trị (Treatment), các xét nghiệm (Test), con người (Person) và đại từ (Pronoun).
 
-Năm 2010, tổ chức I2B2 đưa ra Thách thức về vấn đề xử lý ngôn ngữ tự nhiên cho các văn bản y tế lâm sàng bao gồm ba tác vụ:
+Năm 2010, trung tâm i2b2 đưa ra Thách thức về vấn đề xử lý ngôn ngữ tự nhiên cho các văn bản y tế lâm sàng bao gồm ba tác vụ:
 
-\begin{enumerate}[leftmargin=\the\parindent]
+\begin{enumerate}
 \item Trích xuất và nhận dạng các thực thể có tên trong y học.
 \item Phân loại bệnh vào một trong các dạng: đang xảy ra ở hiện tại, không xảy ra ở hiện tại, có thể xảy ra trong tương lai, ...
 \item Rút trích các quan hệ giữa các bệnh, phương pháp điều trị và thủ tục y tế.
 \end{enumerate}
 
-Đối với Thách thức này, i2b2 tập trung vào giải quyết nhóm bài toán rút trích thông tin vì đây là nhóm bài toán nền tảng, tạo tiền đề để nghiên cứu cho các hướng đi khác. Tuy Thách thức i2b2 năm 2010 có đề cập đến việc rút trích các quan hệ giữa các thực thể trong bệnh án (tác vụ thứ 3), nhưng mối quan hệ đồng tham chiếu lại không được bao gồm trong số đó. Chính vì thế, năm 2011 I2B2 tổ chức Thách thức lần thứ 5 dành riêng cho việc giải quyết vấn đề phân giải đồng tham chiếu trên dữ liệu BAĐT với đầu vào là kết quả nhận diện thực thể từ Thách thức 2010. Vấn đề được nêu trong Thách thức I2B2 2011 cũng chính là vấn đề được chúng tôi giải quyết trong nội dung Luận văn tốt nghiệp, chi tiết vấn đề và hướng giải quyết được đề cập trong phần \ref{hienthuchethong}.
+Đối với Thách thức này, i2b2 tập trung vào giải quyết nhóm bài toán rút trích thông tin vì đây là nhóm bài toán nền tảng, tạo tiền đề để nghiên cứu cho các hướng đi khác. Tuy Thách thức i2b2 năm 2010 có đề cập đến việc rút trích các quan hệ giữa các thực thể trong bệnh án (tác vụ thứ 3), nhưng mối quan hệ đồng tham chiếu lại không được bao gồm trong số đó. Chính vì thế, năm 2011 i2b2 tổ chức Thách thức lần thứ 5 dành riêng cho việc giải quyết vấn đề phân giải đồng tham chiếu trên dữ liệu BAĐT với đầu vào là kết quả nhận diện thực thể từ Thách thức năm 2010. Vấn đề được nêu trong Thách thức i2b2 2011 cũng chính là vấn đề được chúng tôi giải quyết trong nội dung luận án mà chúng tôi trình bày chi tiết trong các phần sau.
