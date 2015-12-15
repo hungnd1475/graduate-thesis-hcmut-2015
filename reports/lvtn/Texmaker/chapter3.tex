@@ -24,7 +24,7 @@ Bắt đầu từ những năm 1990, khi các mô hình xác suất trở nên p
 
 Mặc dù tính bổ biến và sự hiệu quả của các phương pháp học máy có giám sát, sự khó khăn trong việc xây dựng các tập dữ liệu gán nhãn nhất là đối với các ngôn ngữ khác tiếng Anh đã làm động lực cho sự ra đời của các phương pháp học máy bán giám sát hoặc không giám sát. Ưu điểm của các phương pháp này là không cần đòi hỏi các tập dữ liệu đã gán nhãn hoặc chỉ cần gán nhãn một phần \cite{CardieWagstaff1999}.
 
-Có ba mô hình học máy có giám sát được đề xuất để phân giải đồng tham chiếu là: mô hình \emph{cặp khái niệm}, mô hình \emph{đề cập thực thể} và mô hình \emph{xếp hạng}. Mô hình cặp khái niệm ra đời đầu tiên và có ý tưởng đơn giản nhất, tuy nhiên cũng chính vì thế mà nó có một số nhược điểm khiến cho việc hiện thực không thực sự dễ dàng. Hai mô hình đề cập thực thể và xếp hạng được đề xuất sau đó nhằm khắc phục các nhược điểm của mô hình cặp khái niệm bằng cách đưa vào các ý tưởng thực tế hơn như \emph{đặc trưng ở mức cụm} \cite{Yang2004} hay huấn luyện một mô hình xếp hạng lựa chọn tiền đề \cite{Yang2003}.
+Có ba mô hình học máy có giám sát được đề xuất để phân giải đồng tham chiếu: mô hình \emph{cặp khái niệm}, mô hình \emph{đề cập thực thể} và mô hình \emph{xếp hạng}. Mô hình cặp khái niệm ra đời đầu tiên và có ý tưởng đơn giản nhất, tuy nhiên cũng chính vì thế mà nó có một số nhược điểm khiến cho việc hiện thực không thực sự dễ dàng. Hai mô hình đề cập thực thể và xếp hạng được đề xuất sau đó nhằm khắc phục các nhược điểm của mô hình cặp khái niệm bằng cách đưa vào các ý tưởng thực tế hơn như \emph{đặc trưng ở mức cụm} \cite{Yang2004} hay huấn luyện một mô hình xếp hạng lựa chọn tiền đề \cite{Yang2003}.
 
 Mặc dù có nhiều nhược điểm, mô hình cặp thực thể vẫn rất phổ biến nhờ ý tưởng đơn giản của nó, đặc biệt là trong các miền văn bản chuyển môn khi mà các đặc trưng chuyên sâu về một hay một vài lĩnh vực mang nhiều ý nghĩa hơn cho việc xác định tính đồng tham chiếu của các khái niệm. Điển hình là hệ thống có kết quả cao nhất trong Thử thách i2b2 năm 2011 sử dụng mô hình cặp khái niệm và tận dụng các thông tin về sự cập đến bệnh nhân, các kiến thức nền (Wikipedia, WordNet, v.v...) và các thông tin ngữ cảnh trong bệnh án \cite{YanXu2012}. Trong phần này chúng tôi chỉ trình bày cụ thể về mô hình cặp khái niệm vì đây cũng là mô hình được chúng tôi hiện thực trong hệ thống của mình.
 
@@ -49,9 +49,9 @@ Sự khác biệt của giải thuật này so với giải thuật trên là: t
 \end{enumerate}
 
 \section{Support Vector Machine}
-Trong lĩnh vực học máy, support vector machine (SVM) là mô hình học có giám với giải thuật huấn luyện có thể phân tích và nhận diện mẫu. Lần đầu tiên được giới thiệu bởi Vapnik vào năm 1992, SVM là một trong những giải thuật học máy được sử dụng phổ biến nhất trong lĩnh vực học máy hiện đại, đa phần là bởi vì SVM thường tỏ ra hiệu quả hơn nhiều so với các giải thuật học máy khác khi được huấn luyện trên một tập dữ liệu vừa (SVM không làm việc tốt trên các tập dữ liệu quá lớn, vì giải thuật học của SVM có liên quan đến việc nghịch đảo các ma trận, một việc làm rất tốn kém về mặt tính toán). 
+Trong lĩnh vực học máy, support vector machine (SVM) là mô hình học có giám với giải thuật huấn luyện có thể phân tích và nhận diện mẫu. Lần đầu tiên được giới thiệu bởi Vladimir N. Vapnik vào năm 1992, SVM là một trong những giải thuật học máy được sử dụng phổ biến nhất trong lĩnh vực học máy hiện đại, đa phần là bởi vì SVM thường tỏ ra hiệu quả hơn nhiều so với các giải thuật học máy khác khi được huấn luyện trên một tập dữ liệu vừa (SVM không làm việc tốt trên các tập dữ liệu quá lớn, vì giải thuật học của SVM có liên quan đến việc nghịch đảo các ma trận, một việc làm rất tốn kém về mặt tính toán). 
 
-Tư tưởng cơ bản của SVM là cố gắng tìm kiếm một hoặc một tập các đường siêu phẳng (hyperplane) trong một không gian có nhiều chiều để phân chia các điểm đại diện của tập dữ liệu ra hai hay nhiều phần, từ đó có thể thực hiện các tác vụ phân loại hay hồi quy. Một đặc điểm của SVM là giải thuật học của nó cho phép chúng ta phân biệt được giữa một mô hình phân loại tốt và một mô hình không tốt, ngay cả khi cả hai mô hình đều cho cùng một kết quả phân loại trên một tập dữ liệu.
+Tư tưởng cơ bản của SVM là cố gắng tìm kiếm một hoặc một tập các mặt siêu phẳng (hyperplane) trong một không gian có nhiều chiều để phân chia các điểm đại diện của tập dữ liệu ra hai hay nhiều phần, từ đó có thể thực hiện các tác vụ phân loại hay hồi quy. Một đặc điểm của SVM là giải thuật học của nó cho phép chúng ta phân biệt được giữa một mô hình phân loại tốt và một mô hình không tốt, ngay cả khi cả hai mô hình đều cho cùng một kết quả phân loại trên một tập dữ liệu.
 
 Hình \ref{sep-eg} mô tả ba đường phân loại có thể cho một tập dữ liệu. Mặc dù cả ba đường đều phân loại các điểm thuộc các lớp khác nhau một cách chính xác, có thể cảm thấy rằng hình thứ ba cho một đường phân loại tốt hơn hai hình còn lại. Điều này có thể được giải thích là: khi sử dụng các đường ở Hình \ref{sep-eg} để phân loại cho các điểm dữ liệu mới, đường phân loại thứ ba cho xác suất các điểm này rơi vào phía phân lớp sai thấp hơn so với hai đường còn lại. Lý do là bởi vì khoảng cách từ đường phân loại thứ ba đến ba đến các điểm dữ liệu của hai lớp là lớn nhất và gần như là bằng nhau cho cả hai bên.
 
@@ -143,11 +143,11 @@ Hình \ref{sep-eg} mô tả ba đường phân loại có thể cho một tập 
 
 Như vậy mục đích của giải thuật học SVM chính tìm ra một đường phân loại tối ưu theo tiêu chí đã kể trên, tức là cực đại hóa khoảng cách của đường phân loại tới điểm gần nhất của hai lớp. Các điểm gần với đường phân loại nhất được gọi là các \emph{vector hỗ trợ} (support vector), các điểm này là quan trọng bởi vì chúng là những điểm dễ bị phân loại sai nhất trong quá trình học. Điều này dẫn đến một đặc điểm thú vị của giải thuật học SVM: sau khi huấn luyện, các điểm dữ liệu khác của tập huấn luyện có thể bỏ đi và chỉ cần giữ lại các vector hỗ trợ là đủ.
 
-Giả sử tập dữ diệu huấn luyện được biểu diễn bằng một tập các điểm \[\mathcal{D}=\left\{(\vec{x}_i,y_i)\,|\,\vec{x}_i\in\mathbb{R}^p,\,y_i\in\{-1,1\}\right\}_{i=1}^{n}\] trong đó $y_i$ có thể là $-1$ hoặc $1$ mang ý nghĩa là lớp mà $\vec{x}_i$ thuộc vào, mỗi $\vec{x}_i$ là một vector có $p$ chiều. Một đường siêu phẳng bất kì trong không gian $p$ chiều có thể được biểu diễn dưới dạng $\vec{w}\cdot\vec{x}+b=0$ với $\vec{w}\cdot\vec{x}$ là tích vô hướng của hai vector $\vec{w}$ và $\vec{x}$, tức $\vec{w}\cdot\vec{x}=\sum_{i=1}^{p}w_ix_i$. Có thể hiểu $\vec{w}$ là vector pháp tuyến của đường siêu phẳng $\vec{w}\cdot\vec{x}+b=0$, còn $\frac{b}{||\vec{w}||}$ là khoảng cách từ đường đến góc tọa độ.
+Giả sử tập dữ diệu huấn luyện được biểu diễn bằng một tập các điểm \[\mathcal{D}=\left\{(\vec{x}_i,y_i)\,|\,\vec{x}_i\in\mathbb{R}^p,\,y_i\in\{-1,1\}\right\}_{i=1}^{n}\] trong đó $y_i$ có thể là $-1$ hoặc $1$ mang ý nghĩa là lớp mà $\vec{x}_i$ thuộc vào, mỗi $\vec{x}_i$ là một vector có $p$ chiều. Một mặt siêu phẳng bất kì trong không gian $p$ chiều có thể được biểu diễn dưới dạng $\vec{w}\cdot\vec{x}+b=0$ với $\vec{w}\cdot\vec{x}$ là tích vô hướng của hai vector $\vec{w}$ và $\vec{x}$, tức $\vec{w}\cdot\vec{x}=\sum_{i=1}^{p}w_ix_i$. Trong đó $\vec{w}$ được gọi là vector pháp tuyến của mặt siêu phẳng $\vec{w}\cdot\vec{x}+b=0$, còn $\frac{b}{||\vec{w}||}$ là khoảng cách từ đường đến góc tọa độ.
 
-Với mỗi đường phân loại bất kì, xét hai đường song song với nó và đi qua các điểm gần nhất của hai lớp (Hình \ref{optimal-sep}), gọi là hai đường biên. Để cho thuận tiện, gọi các điểm đen $\vec{x}^\bullet$ trên Hình \ref{optimal-sep} là các điểm thuộc vào lớp 1, còn các điểm trắng $\vec{x}^\circ$ là các điểm thuộc vào lớp $-1$. Như vậy nếu đường phân loại có dạng $\vec{w}\cdot\vec{x}+b=0$ thì các điểm đen và trắng được phân loại theo tiêu chí $\vec{w}\cdot\vec{x}^\bullet+b\geq1$ và $\vec{w}\cdot\vec{x}^\circ+b\leq-1$. Dễ dàng suy ra phương trình của đường biên đen là $\vec{w}\cdot\vec{x}+b=1$ và của đường biên trắng là $\vec{w}\cdot\vec{x}+b=-1$. Từ đó tính được khoảng cách của hai đường biên này là $\frac{2}{||\vec{w}||}$.
+Với mỗi đường phân loại bất kì, xét hai đường song song với nó và đi qua các điểm gần nhất của hai lớp (Hình \ref{optimal-sep}), gọi là hai đường biên. Để cho thuận tiện, gọi các điểm đen $\vec{x}^\bullet$ trên Hình \ref{optimal-sep} là các điểm thuộc vào lớp 1, còn các điểm trắng $\vec{x}^\circ$ là các điểm thuộc vào lớp $-1$. Như vậy nếu đường phân loại có dạng $\vec{w}\cdot\vec{x}+b=0$ thì các điểm đen và trắng được phân loại theo tiêu chí $\vec{w}\cdot\vec{x}^\bullet+b\geq1$ và $\vec{w}\cdot\vec{x}^\circ+b\leq-1$. Dễ dàng suy ra phương trình của đường biên đen là $\vec{w}\cdot\vec{x}+b=1$ và của đường biên trắng là $\vec{w}\cdot\vec{x}+b=-1$, từ đó tính được khoảng cách của hai đường biên là $\frac{2}{||\vec{w}||}$.
 
-Như đã nói ở trên, các điểm đen có phân lớp $y=1$, tiêu chí phân loại các điểm này là $\vec{w}\cdot\vec{x}^\bullet+b\geq1$. Trong khi đó các điểm trắng có phân lớp $y=-1$ được phân loại theo tiêu chí $\vec{w}\cdot\vec{x}^\circ+b\leq-1$. Từ đó tiêu chí phân loại có thể được viết lại một cách đơn giản như sau: $y(\vec{w}\cdot\vec{x}+b)\geq1$. Mặt khác, để cực đại hóa khoảng cách của hai đường biên, tức cực đại hóa $\frac{2}{||\vec{w}||}$, thì $||\vec{w}||$ phải đạt cực tiểu. Như vậy mục đích cuối cùng của giải thuật học SVM là cực tiểu hóa $||\vec{w}||$ với điều kiện $y_i(\vec{w}\cdot\vec{x}_i+b)\geq1$ cho mọi $i=1,\dots,n$.
+Như đã nói ở trên, các điểm đen có phân lớp $y=1$, tiêu chí phân loại các điểm này là $\vec{w}\cdot\vec{x}^\bullet+b\geq1$. Trong khi đó các điểm trắng có phân lớp $y=-1$ được phân loại theo tiêu chí $\vec{w}\cdot\vec{x}^\circ+b\leq-1$. Các tiêu chí này có thể được viết lại một cách đơn giản là: $y(\vec{w}\cdot\vec{x}+b)\geq1$. Mặt khác, để cực đại hóa khoảng cách của hai đường biên, tức cực đại hóa $\frac{2}{||\vec{w}||}$, thì $||\vec{w}||$ phải đạt cực tiểu. Như vậy mục đích cuối cùng của giải thuật học SVM là cực tiểu hóa $||\vec{w}||$ với điều kiện $y_i(\vec{w}\cdot\vec{x}_i+b)\geq1$ cho mọi $i=1,\dots,n$.
 
 \begin{figure}[ht]
 \centering
@@ -156,17 +156,17 @@ Như đã nói ở trên, các điểm đen có phân lớp $y=1$, tiêu chí ph
 		\draw[->] (-0.1, 0) -- (4.1, 0) node[below]{$x_1$};
 		\draw[->] (0, -0.1) -- (0, 4.1) node[left]{$x_2$};
 			
-		\draw[very thick,gray!60] (0.5, 2.5) node[bpoint]{};
-		\draw[very thick,gray!60] (1.5, 2.85) node[bpoint]{};
-		\draw[very thick,gray!60] (2.5, 3.2) node[bpoint]{};
+		\draw[thick,gray!60] (0.5, 2.5) node[bpoint]{};
+		\draw[thick,gray!60] (1.5, 2.85) node[bpoint]{};
+		\draw[thick,gray!60] (2.5, 3.2) node[bpoint]{};
 		\draw (0.7, 3.7) node[bpoint]{};
 		\draw (0.8, 3.1) node[bpoint]{};
 		\draw (1.3, 3.8) node[bpoint]{};
 		\draw (1.8, 3.4) node[bpoint]{};
 		
-		\draw[very thick] (1.2, 1.5) node[wpoint]{};
+		\draw[thick] (1.2, 1.5) node[wpoint]{};
 		\draw (1.8, 1.1) node[wpoint]{};
-		\draw[very thick] (2, 1.8) node[wpoint]{};
+		\draw[thick] (2, 1.8) node[wpoint]{};
 		\draw (1.6, 0.6) node[wpoint]{};
 		\draw (2.3, 0.8) node[wpoint]{};
 		\draw (2.4, 1.4) node[wpoint]{};
@@ -174,18 +174,45 @@ Như đã nói ở trên, các điểm đen có phân lớp $y=1$, tiêu chí ph
 			
 		\draw (-0.55,1.52) -- (3.809,3.0457) node[pos=0.8,sloped,above,outer sep=0,inner sep=0.5mm]{$\vec{w}\cdot\vec{x}+b=0$};
 		
-		\draw[dashed] (-0.5,2.15) -- (3.618,3.5913) node[pos=1,sloped,above,outer sep=0,inner sep=0.5mm]{$\vec{w}\cdot\vec{x}+b=1$};
+		\draw[dashed] (-0.68,2.087) -- (3.618,3.5913) node[pos=1,sloped,above,outer sep=0,inner sep=0.5mm]{$\vec{w}\cdot\vec{x}+b=1$};
 		\draw[dashed] (-0.3,0.9825) -- (4.004,2.4889) node[pos=0.8,sloped,above,outer sep=0,inner sep=0.5mm]{$\vec{w}\cdot\vec{x}+b=-1$};
 		
 		\draw[<->] (4.0707,2.5122) -- (3.6859,3.6147) node[midway,above,sloped]{$\frac{2}{||\vec{w}||}$};
 		\draw[<->] (-0.0668,-0.0234) -- (-0.6001,1.5022) node[midway,below,sloped]{$\frac{b}{||\vec{w}||}$};
 	\end{tikzpicture}
 }
-\caption{Tối ưu hóa khoảng cách\label{optimal-sep}}
+\caption{Tối ưu hóa khoảng cách của đường phân loại\label{optimal-sep}}
 \end{figure}
 
+\subsection*{Đường biên mềm}
+Như đã đề cập ở trên, bài toán huấn luyện SVM mang bản chất là bài toán tối ưu tuyến tính với hàm mục tiêu (objective function)
+\begin{equation}\label{svm-hard-obj-func}
+L(\vec{w})=\vec{w}\cdot\vec{w}
+\end{equation}
+và các ràng buộc
+\begin{equation}\label{svm-hard-constraints}
+y_i(\vec{w}\cdot\vec{x}_i+b)\geq1\,,\forall i=1,\dots,n
+\end{equation}
+
+Tuy nhiên nhiều bài toán phân loại sẽ không giải quyết được với những điều kiện chặt như vậy, tức tìm kiếm một mặt siêu phẳng có thể phân chia các điểm dữ liệu của hai lớp ra hai bên một cách hoàn hảo. Một ví dụ điển hình là khi tập dữ liệu xuất hiện nhiễu (noise).
+
+Năm 1995, Corinna Cortes và Vladimir N. Vapnik đề xuất chỉnh sửa ý tưởng học SVM chặt để cho phép phân loại sai một số điểm dữ liệu, gọi là phương pháp \emph{đường biên mềm} (soft margin). Nếu không thể tìm ra một mặt siêu phẳng hoàn hảo, phương pháp đường biên mềm sẽ cố gắng tìm một mặt siêu phẳng nào đó có thể phân chia các điểm dữ liệu một cách càng gọn càng tốt, trong khi vẫn có thể duy trì khoảng cách cực đại từ nó đến các điểm phân loại đúng gần nhất. Để làm được điều đó, phương pháp này giới thiệu một biến mới $e_i$ vào trong ràng buộc ở (\ref{svm-hard-constraints}), gọi là \emph{biến lỏng} (slack variable):
+\begin{equation}
+y_i(\vec{w}\cdot\vec{x}_i+b)\geq1-e_i\,,\forall i=i,\dots,n
+\end{equation}
+
+Với chỉnh sửa như trên, hàm mục tiêu (\ref{svm-hard-obj-func}) trở thành:
+\begin{equation}\label{svm-soft-obj-func}
+L(\vec{w},\vec{e})=\vec{w}\cdot\vec{w}+C\sum_{i=1}^{n}e_i
+\end{equation}
+trong đó, $C$ là tham số đánh đổi (trade-off) giữa khoảng cách biên lớn và số điểm phân loại sai nhỏ. Đa phần các giải thuật SVM được hiện thực hiện nay đều sử dụng phương pháp đường biên mềm vì tính linh hoạt của nó. Để giải quyết bài toán tối ưu cho phương pháp đường biên mềm, khi mà hàm mục tiêu là một hàm hai biến, một kĩ thuật gọi là \emph{quy hoạch toàn phương} (quadratic programming) được giới thiệu để loại bỏ $\vec{w}$ ra khỏi phương trình (\ref{svm-soft-obj-func}) và biến đổi nó trở thành:
+\begin{equation}\label{svm-soft-obj-func-modified}
+L(\vec{a})=\sum_{i=1}^{n}a_i-\frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}a_ia_jt_it_j\vec{x}_i\cdot\vec{x}_j
+\end{equation}
+với các ràng buộc $0\leq a\leq C$ và $\sum_{i=1}^{n}a_i\vec{x}_k=0$.
+
 \subsection*{Kĩ thuật kernel}
-Trong nhiều trường hợp, các điểm đại diện của tập dữ liệu không thể nào được phân cách bằng một đường thẳng hoàn hảo. Khi này, một kĩ thuật biến đổi dữ liệu được áp dụng để nâng số chiều của không gian dữ liệu lên, với mục đích là tìm kiếm đường phân loại siêu phẳng tối ưu trong các chiều không gian mới này. Hình \ref{kernel-trick} mô tả một tập dữ liệu ở hai chiều được biến đổi sang một không gian ba chiều. Có thể dễ dàng nhận thấy, trong không gian hai chiều, các điểm dữ liệu của hai lớp không thể được phân cách bằng một đường thẳng. Tuy nhiên sau khi biến đổi dữ liệu để tăng số chiều lên, chúng dễ dàng được phân cách bởi một mặt phẳng.
+Trong nhiều trường hợp, các điểm đại diện của tập dữ liệu không thể nào được phân cách bằng một mặt siêu phẳng trong chiều không gian gốc của nó. Khi này, một kĩ thuật biến đổi dữ liệu được áp dụng để nâng số chiều của không gian dữ liệu lên, với mục đích là tìm kiếm mặt phân loại siêu phẳng tối ưu trong các chiều không gian mới. Hình \ref{kernel-trick} mô tả một tập dữ liệu ở hai chiều được biến đổi sang một không gian ba chiều. Có thể dễ dàng nhận thấy, trong không gian hai chiều, các điểm dữ liệu của hai lớp không thể được phân cách bằng một đường thẳng. Tuy nhiên sau khi biến đổi dữ liệu để số chiều tăng lên, chúng dễ dàng được phân cách bởi một mặt phẳng.
 
 \begin{figure}[ht]
 \begin{subfigure}[b]{0.49\textwidth}
@@ -270,25 +297,29 @@ Trong nhiều trường hợp, các điểm đại diện của tập dữ liệ
 \caption{Minh họa kĩ thuật kernel giúp biến đổi không gian dữ liệu\label{kernel-trick}}
 \end{figure}
 
-Để giúp SVM có thể tìm kiếm các đường siêu phẳng trong các chiều không gian cao hơn, một kĩ thuật được giới thiệu có tên là kernel giúp làm tăng số chiều của dữ liệu mà không làm mất đi bản chất của nó. Cơ sở của kĩ thuật này là khi sử dụng một vector $\Phi(\vec{x})$ có nhiều số chiều hơn được biến đổi từ vector $\vec{x}$, tích $\Phi(\vec{x}_j)\cdot\Phi(\vec{x}_j)$ sau một số phép biến đổi sẽ trở thành một hàm kernel đối với $\vec{x}_i$ và $\vec{x}_j$, $\Kernel(\vec{x}_i,\vec{x}_j)$. Trong đó $\vec{x}_i\cdot \vec{x}_j$ (hay $\Phi(\vec{x}_i)\cdot\Phi(\vec{x}_j)$ sau khi biến đổi số chiều) xuất hiện trong hàm lỗi (error function) mà giải thuật học SVM cần cực tiểu hóa. Vì số chiều của $\Phi(\vec{x})$ có thể là rất lớn, phép biến đổi kernel giúp cho giải thuật có tính khả thi về mặt tính toán. Cụ thể là thay vì sử dụng trực tiếp các $\Phi(\vec{x})$, ta có thể thay thế tích $\vec{x}_i\cdot\vec{x}_j$ bằng ngay chính hàm kernel $\Kernel(\vec{x}_i,\vec{x}_j)$. Sau đây là một số hàm kernel thông dụng:
+Để giúp SVM có thể tìm kiếm các mặt siêu phẳng trong các chiều không gian cao hơn, một kĩ thuật được giới thiệu có tên là kernel giúp làm tăng số chiều của dữ liệu mà không làm mất đi bản chất của nó. Cơ sở của kĩ thuật này là khi thay $\vec{x}$ trong phương trình (\ref{svm-soft-obj-func-modified}) bằng một vector $\Phi(\vec{x})$ có nhiều số chiều hơn được biến đổi từ $\vec{x}$, tích $\Phi(\vec{x}_j)\cdot\Phi(\vec{x}_j)$ trong phương trình sau một số phép biến đổi sẽ trở thành một hàm kernel đối với $\vec{x}_i$ và $\vec{x}_j$, $\Kernel(\vec{x}_i,\vec{x}_j)$. Vì số chiều của $\Phi(\vec{x})$ có thể là rất lớn, phép biến đổi kernel giúp cho giải thuật có tính khả thi về mặt tính toán. Cụ thể là thay vì sử dụng trực tiếp các $\Phi(\vec{x})$, ta có thể thay thế tích $\vec{x}_i\cdot\vec{x}_j$ bằng ngay chính hàm kernel $\Kernel(\vec{x}_i,\vec{x}_j)$. Sau đây là một số hàm kernel thông dụng:
 
 \begin{itemize}
 \item hàm đa thức (polynomial) biến đổi số chiều lên một mức độ $s$ nào đó:
 \[\Kernel(\vec{x},\vec{y})=(1+\vec{x}\cdot\vec{y})^s\]
 \item hàm xichma (sigmoid function) với tham số $\kappa$ và $\delta$:
 \[\Kernel(\vec{x},\vec{y})=\tanh(\kappa \vec{x}\cdot \vec{y}-\delta)\]
-\item hàm tia cơ sở (radial basis function) với tham số $\sigma$:
-\[\Kernel(\vec{x},\vec{y})=\exp\left(-\frac{||\vec{x}-\vec{y}||^2}{2\sigma^2}\right)\]
+\item một số dạng hàm bán kính cơ sở (radial basis function) như:
+\begin{itemize}
+\item kernel Gauss: $\Kernel(\vec{x},\vec{y})=\exp\left(-\dfrac{||\vec{x}-\vec{y}||^2}{2\sigma^2}\right)$
+\item kernel mũ: $\Kernel(\vec{x},\vec{y})=\exp\left(-\dfrac{||\vec{x}-\vec{y}||}{2\sigma^2}\right)$
+\item kernel Laplace: $\Kernel(\vec{x},\vec{y})=\exp\left(-\dfrac{||\vec{x}-\vec{y}||}{\sigma}\right)$
+\end{itemize}
 \end{itemize}
 
-Việc tìm kiếm các bộ tham số tốt nhất cho hàm kernel có thể được thực hiện bằng nhiều cách, trong đó cách tìm kiếm lưới (grid search) được cho là đơn giản nhất và có thể song song hóa được. Ví dụ để huấn luyện một mô hình SVM với kernel tia cơ sở, có hai tham số cần được xác định là $C$ (tham số của khoảng cách $M$) và $\gamma=\frac{1}{2\sigma^2}$ là tham số của kernel. Một cách tìm kiếm lưới thường được thực hiện là duyệt toàn bộ các cặp $(C,\gamma)$ với $C\in\{2^{-5},2^{-3},\dots,2^{13},2^{15}\}$ và $\gamma\in\{2^{-15},2^{-13},\dots,2^1,2^3\}$.
+Việc tìm kiếm các bộ tham số tốt nhất cho hàm kernel có thể được thực hiện bằng nhiều cách, trong đó cách tìm kiếm lưới (grid search) được cho là đơn giản nhất và có thể song song hóa được. Ví dụ để huấn luyện một mô hình SVM với kernel Gauss, có hai tham số cần được xác định là $C$ (tham số đánh đổi ở phương trình (\ref{svm-soft-obj-func})) và $\gamma=\frac{1}{2\sigma^2}$ là tham số của kernel. Một cách tìm kiếm lưới thường được thực hiện là duyệt toàn bộ các cặp $(C,\gamma)$ với $C\in\{2^{-5},2^{-3},\dots,2^{13},2^{15}\}$ và $\gamma\in\{2^{-15},2^{-13},\dots,2^1,2^3\}$ để tìm ra bộ $(C,\gamma)$ tối ưu nhất dựa trên một phép kiểm chứng nào đó, ví dụ phép kiểm chứng chéo $k$ mẫu ($k$-fold cross validation).
 
 \subsection*{Mô hình SVM mở rộng}
-Mô hình SVM về bản chất chỉ phân loại được cho hai lớp, tuy nhiên trong thực tế có nhiều bài toán mà dữ liệu được phân vào nhiều hơn hai lớp. Để giải quyết các bài toán dạng này, một số phương pháp được đề xuất để mở rộng SVM cho các bài toán phân loại nhiều lớp. Tư tưởng cơ bản của các phương pháp này là thay vì chỉ huấn luyện một mô hình, giải thuật học mở rộng huấn luyện nhiều mô hình SVM và sau đó sử dụng biểu quyết (vote) để quyết định phân lớp của dữ liệu. Có hai phương pháp thông dụng để mở rộng SVM cho phân loại nhiều lớp:
+Mô hình SVM về bản chất chỉ phân loại được cho hai lớp, tuy nhiên trong thực tế có nhiều bài toán mà dữ liệu được phân vào nhiều hơn hai lớp. Để giải quyết các bài toán dạng này, một số phương pháp được đề xuất để mở rộng SVM cho các bài toán phân loại nhiều lớp. Tư tưởng cơ bản của các phương pháp này là thay vì chỉ huấn luyện một mô hình, giải thuật học mở rộng huấn luyện nhiều mô hình SVM phân loại hai lớp, sau đó sử dụng biểu quyết (vote) để quyết định phân lớp của dữ liệu. Có hai phương pháp thông dụng để mở rộng SVM cho phân loại nhiều lớp:
 \begin{enumerate}
 \item \emph{Một đấu với tất cả (one-against-all):}
 
-Huấn luyện tất cả $n$ mô hình ứng với $n$ lớp. Mô hình thứ $i$ được huấn luyện để phân loại dữ liệu vào lớp $i$ hoặc lớp khác $i$. Như vậy ứng với $n$ mô hình là $n$ phương trình đường siêu phẳng:
+Huấn luyện tất cả $n$ mô hình ứng với $n$ lớp. Mô hình thứ $i$ được huấn luyện để phân loại dữ liệu vào lớp $i$ hoặc lớp khác $i$. Như vậy ứng với $n$ mô hình là $n$ phương trình mặt siêu phẳng:
 \[
 \begin{matrix}
 \vec{w}_1\cdot\vec{x}+b_1\\
@@ -302,34 +333,61 @@ Sau khi huấn luyện, với mỗi điểm dữ liệu cần phân loại $\vec
 
 Huấn luyện $m$ mô hình cho bài toán có $n$ lớp, mỗi mô hình có nhiệm vụ phân loại dữ liệu vào hai lớp bất kì trong $n$, tức $m$ chính là tổ hợp chập 2 của $n$: $m=\frac{n(n-1)}{2}$:\[(1,2),(1,3),\dots,(1,n),(2,3),(2,4),\dots,(2,n),\dots,(n-1,n)\]
 
-Sau khi huấn luyện, giải thuật lựa chọn phân lớp mà được phần lớn $m$ mô hình phân loại vào.
+Sau khi huấn luyện, với mỗi điểm dữ liệu cần phân loại $\vec{x}^*$, giải thuật lựa chọn phân lớp mà $\vec{x}^*$ được phần lớn $m$ mô hình phân loại vào.
 \end{enumerate}
 
 \section{Các công cụ hỗ trợ rút trích đặc trưng} \label{tools}
+Vì đầu vào của hệ thống phân giải đồng tham chiếu là các văn bản thô và danh sách các khái niệm, chúng cần được rút trích đặc trưng và mã hóa thành dạng số để có thể đưa vào huấn luyện SVM. Để thuận tiện, chúng tôi sử dụng một số công cụ để xử lý chung về ngôn ngữ tự nhiên hay hỗ trợ rút trích một số thông tin ngữ nghĩa như thời gian hoặc các thông tin từ vựng liên quan đến chuyên ngành y tế. Sau đây chúng tôi trình bày các công cụ được sử dụng và mục đích cụ thể của chúng.
 
 \subsection*{OpenNLP}
-Xử lý ngôn ngữ tự nhiên (Natural language processing) là một lĩnh vực của khoa học máy tính, trong đó vấn đề được quan tâm là cách thức tương tác giữa máy tính và ngôn ngữ tự nhiên của con người. Nhiều thách thức được đặt ra trong xử lý ngôn ngữ tự nhiên để giúp máy tính có thể hiểu được những suy nghĩ, ý nghĩa được hàm chứa trong ngôn ngữ tự nhiên.
+Thư viện Apache OpenNLP bao gồm các công cụ dựa trên học máy dùng để xử lý, phân tích các chuỗi văn bản được viết dưới dạng ngôn ngữ tự nhiên. OpenNLP hỗ trợ rất nhiều tác vụ cơ bản trong xử lý ngôn ngữ tự nhiên, trong số các tác vụ tách từ (tokenize), xác định từ loại (part-of-speech tagging), phân định cụm từ (chunking) và xác định danh từ trung tâm (head nouns) được chúng tôi sử dụng để hỗ trợ quá trình rút trích đặc trưng trong hệ thống. 
 
-Thư viện Apache OpenNLP bao gồm các công cụ dựa trên học máy dùng để xử lý, phân tích các chuỗi văn bản được viết dưới dạng ngôn ngữ tự nhiên. Thư viện OpenNLP hỗ trợ các tác vụ cơ bản trong việc xử lý ngôn ngữ tự nhiên như tách từ (Tokenize), phân giải đoạn văn thành các câu văn (Sentence segmentation), đánh dấu vai trò ngữ pháp (Part-of-speech tagging), phân đoạn câu văn (Chunking), đánh dấu danh từ trung tâm (Head nouns finding),... Trong phạm vi luận văn, chúng tôi sử dụng chức năng phân giải câu văn thành các từ, đánh dấu vai trò ngữ pháp, phân đoạn câu văn và đánh dấu danh từ trung tâm của bộ thư viện Apache OpenNLP trong quá trình rút trích đặc trưng lớp Person và Pronoun.
+Trong việc phân tích từ vựng (lexical analysis), tác vụ tách từ là tác vụ chia nhỏ câu văn thành các thành phần nhỏ hơn như từ, cụm từ, ký hiệu, hoặc các yếu tố có ý nghĩa khác được gọi chung là token. Ví dụ câu văn \texttt{"The female patient is 65 years old ."} sau khi được phân giải sẽ gồm các token là \texttt{"The"}, \texttt{"Female"}, \texttt{"patient"}, \texttt{"is"}, \texttt{"65"}, \texttt{"years"}, \texttt{"old"} và \texttt{"."}. Ở đây các dấu câu hoặc các ký tự đặc biệt cũng được xem như là token. Trong hệ thống của chúng tôi, tác vụ tách từ được sử dụng như một tác vụ hỗ trợ cho các tiến trình khác như xác định từ loại hay phân định cụm từ, v.v...
 
-Trong việc phân tích từ vựng (lexical analysis), tác vụ tách từ là quá trình chia nhỏ câu văn thành các thành phần nhỏ hơn như từ, cụm từ, ký hiệu, hoặc các yếu tố có ý nghĩa khác gọi là Token. Các Token này là đầu vào cho các tác vụ xử lý ngôn ngữ tự nhiên khác như đánh dấu vai trò ngữ pháp, phân đoạn câu văn, ... Ví dụ câu văn ``Female patient is 65 years old .'' sau khi được phân giải sẽ gồm các Token là ``Female'', ``patient'', ``is'', ``65'', ``years'', ``old'' and ``.''. Lưu ý, các dấu câu hoặc các ký tự cũng được xem như Token. Tác vụ tách từ được thư viện OpenNLP hỗ trợ bằng phương thức nhận vào câu văn và trả về một mảng các Token tương ứng.
+Xác định từ loại là tác vụ phân loại các từ dựa vào vai trò ngữ pháp của chúng trong câu. Danh sách các vai trò ngữ pháp trong tiếng Anh được định nghĩa sẵn dựa theo dự án Penn TreeBank \cite{Santorini1990}. Ví dụ một số nhãn nằm trong tập Penn TreeBank là: liên từ (conjunction) được gán nhãn là CC, tính từ (adjective) được gán nhãn là JJ, danh từ số ít (singular noun) được gán nhãn là NN, v.v... Tác vụ xác định từ loại được thư viện OpenNLP hỗ trợ bằng phương thức nhận vào một mảng các Token và trả về một mảng các vai trò ngữ pháp tương ứng với các Token đó. Ví dụ câu văn \texttt{"They refuse to permit us"} được tách từ thành \texttt{[They, refuse, to, permit, us]} và được đánh dấu vai trò ngữ pháp như sau \texttt{[They/PRP, refuse/VBP, to/TO, permit/VB]}. Trong đó các nhãn mang ý nghĩa là: PRP--đại từ, VBP--động từ ngôi 3, TO--thể vô định, VB--động từ nguyên mẫu.
 
-Đánh dấu vai trò ngữ pháp là quá trình phân loại các từ dựa vào từ loại hoặc vai trò ngữ pháp của chúng trong câu. Danh sách các từ loại hoặc vai trò ngữ pháp trong tiếng Anh được định nghĩa sẵn dựa theo dự án Penn TreeBank \cite{Santorini1990}. Ví dụ một số nhãn nằm trong tập Penn TreeBank là: liên từ (Conjunction) được gán nhãn là CC, tính từ (Adjective) được gán nhãn là JJ, danh từ số ít (Singular noun) được gán nhãn là NN, ... Tác vụ đánh dấu vai trò ngữ pháp được thư viện OpenNLP hỗ trợ bằng phương thức nhận vào một mảng các Token và trả về một mảng các vai trò ngữ pháp tương ứng với các Token đó. Ví dụ câu văn ``They refuse to permit us'' được tách từ thành [\textit{They, refuse, to, permit, us}] và được đánh dấu vai trò ngữ pháp như sau [\textit{They/PRP, refuse/VBP, to/TO, permit/VB}]. Trong đó các nhãn mang ý nghĩa là: đại từ PRP, động từ ngôi 3 VBP, thể vô định TO, động từ nguyên mẫu VB.
+Phân định cụm từ là tác vụ phân tích câu văn thành các cụm động từ, cụm giới từ, cụm danh từ hay cụm trạng từ, ... cấu thành nên câu văn đó. Ví dụ trong câu văn \texttt{"The patient is a 47 years old male"} được phân đoạn thành ba cụm: cụm danh từ \texttt{"The patient"}, cụm động từ \texttt{"is"} và cụm danh từ \texttt{"a 47 years old male"}. Vai trò cũng như loại của cụm từ được định nghĩa trong tập nhãn Penn TreeBank \cite{Santorini1990}. Các cụm từ được mô tả theo định dạng IBO giúp xác định vị trí của từ đang xét trong cụm, trong đó B chỉ tới những từ nằm ở đầu cụm, I chỉ tới những từ nằm trong cụm nhưng không phải là từ đầu tiên, O chỉ tới những từ nằm ngoài cụm. Ví dụ cụm danh từ \texttt{"a 47 years old"} viết lại theo định dạng IBO là \texttt{"a|B", "47|I", "years|I", "old|I"}.
 
-Phân đoạn câu văn là quá trình phân tích câu văn thành các cụm động từ, cụm giới từ, cụm danh từ, cụm trạng từ, ... cấu thành nên câu văn đó. Ví dụ trong câu văn ``The patient is a 47 years old male'' được phân đoạn thành ba cụm: cụm danh từ ``The patient'', cụm động từ ``is'', cụm danh từ ``a 47 years old male''. Vai trò cũng như loại của cụm từ được định nghĩa trong tập nhãn Penn TreeBank \cite{Santorini1990}. Các cụm từ được mô tả theo định dạng IBO giúp xác định vị trí của từ  đang xét trong cụm từ. B mang ý nghĩa từ đang xét nằm đầu cụm từ, I mang ý nghĩa từ đang xét nằm trong cụm từ nhưng không phải là từ đầu tiên, O mang ý nghĩa từ đang xét nằm ngoài cụm từ. Ví dụ cụm danh từ ``a 47 years old'' được cấu thành từ ``a|B'', ``47|I'', ``years|I'', ``old|I''.
-
-Trong ngôn ngữ học, từ trung tâm của cụm từ là từ giúp xác định vai trò ngữ pháp cụm từ đó. Ví dụ từ trung tâm của \textit{cụm danh từ} ``boiling hot water'' là \textit{danh từ} ``water''. Thư viện OpenNLP hỗ trợ tác vụ xác định danh từ trung tâm bằng phương thức nhận vào một cụm từ theo định dạng IBO và trả về từ trung tâm của cụm từ đó.
+Trong ngôn ngữ học, trung tâm của một cụm từ là từ giúp xác định vai trò ngữ pháp cụm từ đó. Ví dụ từ trung tâm của cụm danh từ \texttt{"boiling hot water"} là danh từ \texttt{"water"}. Thư viện OpenNLP hỗ trợ tác vụ xác định danh từ trung tâm bằng phương thức nhận vào một cụm từ theo định dạng IBO và trả về từ trung tâm của cụm từ đó.
 
 \subsection*{MetaMap}
-UMLS là kho từ vựng y sinh do Thư viện Y học Quốc gia Hoa Kì tiến hành xây dựng từ năm 1986 nhằm phục vụ cho nhu cầu tra cứu thông tin đã được chuẩn hóa về các loại bệnh, thuốc, nguyên nhân hoặc các thuật ngữ trong y tế. Bộ từ điển UMLS tích hợp hơn hai triệu tên gọi cho khoảng 900000 khái niệm y sinh và khoảng 12 triệu tên gọi cho quan hệ giữa các khái niệm này \cite{Olivier2004}. Hiện nay, bộ từ điển UMLS vẫn đang được tiếp tục cập nhật và cho phép sử dụng miễn phí phục vụ mục đích nghiên cứu khoa học.
-
-MetaMap là công cụ hỗ trợ nhận dạng các khái niệm trong bộ từ điển UMLS từ văn bản y sinh. Đầu vào của MetaMap là văn bản thuần không có cấu trúc, kết quả là một chuỗi định dạng XML hoặc định dạng con người đọc được chứa các khái niệm trong từ điển UMLS nhận dạng được. Các thông tin từ UMLS rút trích được bao gồm: mã khái niệm trong bộ từ điển UMLS, các từ đồng nghĩa và lớp ngữ nghĩa của khái niệm trong UMLS. Hình \ref{metamapstructure} miêu tả kiến trúc tổng quát của MetaMap. Quá trình xử lý dữ liệu của MetaMap có thể được tóm tắt qua hai bước. Bước đầu tiên, dữ liệu dạng văn bản sẽ được thực hiện các tác vụ xử lý ngôn ngữ tự nhiên cơ bản như: tách câu văn (Sentence segmentation), tách từ (Tokenize), đánh dấu vai trò ngữ pháp (POS tag), tra cứu từ vựng (lexical lookup) và phân tích cú pháp. Sau bước đầu tiên, từ văn bản ngôn ngữ tự nhiênm MetaMap sẽ cho kết quả là các cụm từ (Phrase). Bước thứ hai, MetaMap sẽ tiến hành sinh các biến thể (variant) cho các cụm từ đã tìm được, xác định ứng cử viên (candidate) từ các khái niệm trong UMLS khớp với các biến thể được sinh ra và tính độ tin cậy cho các ứng cử viên đó. Đầu ra của bước thứ hai là các cụm từ được phân giải từ bước một, kèm theo các ứng cử viên trong bộ từ điển UMLS cho cụm từ đó. Trong phạm vi Luận văn, chúng tôi sử dụng kết quả tên khái niệm và lớp ngữ nghĩa của khái niệm cho quá trình rút trích đặc trưng lớp Problem, Treatment và Test.
+UMLS là kho từ vựng y sinh do Thư viện Y học Quốc gia Hoa Kì tiến hành xây dựng từ năm 1986 nhằm phục vụ cho nhu cầu tra cứu thông tin đã được chuẩn hóa về các loại bệnh, thuốc, nguyên nhân hoặc các thuật ngữ trong y tế. Bộ từ điển UMLS tích hợp hơn 2 triệu tên gọi cho khoảng 900.000 khái niệm y sinh và khoảng 12 triệu tên gọi cho quan hệ giữa các khái niệm này \cite{Olivier2004}. Hiện nay, bộ từ điển UMLS vẫn đang được tiếp tục cập nhật và cho phép sử dụng miễn phí phục vụ mục đích nghiên cứu khoa học.
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{image/metamap.png}
+\resizebox{\textwidth}{!}{
+\begin{tikzpicture}[%
+	>=angle 60,
+	start chain=going right,
+	node distance=3cm and 0.8cm,
+	every join/.style={->, draw},
+	font=\scriptsize\sffamily]
+	\tikzset{
+		bproc/.style = {draw, rectangle, on chain, on grid, text width=2.8cm, minimum height=1.4cm, inner sep=0.5mm, align=center}
+	};
+	
+	\node[bproc](tkn){Nhận diện câu văn và tách từ};
+	\node[bproc,join](pos){Đánh dấu vai trò ngữ pháp (POS)};
+	\node[bproc,join](lkw){Tra cứu từ vựng};
+	\node[bproc,join](sta){Phân tích cú pháp câu};
+	
+	\node[bproc,below=of tkn](vgp){Bộ sinh các biến thể từ cụm từ cho trước};
+	\node[bproc,join](cdd){Nhận dạng các ứng cử viên (candidate)};
+	\node[bproc,join](map){Xây dựng các ánh xạ};
+	\node[bproc,join](ars){Phân giải nhập nhằng};
+	\node[cylinder, minimum width=1.3cm, minimum height=1.3cm, draw, shape border rotate=90, below=1cm of map,shape aspect=.4](umls){UMLS};
+	
+	\draw[->] (sta.south) -- ++(down:0.8cm) -| (vgp.north);	
+	\draw[dashed] ($(tkn.north west)+(-0.4,0.4)$) rectangle ($(sta.south east)+(0.4,-0.4)$);
+	\coordinate[left=2.2cm of tkn.west](left-tkn);
+	\draw[->] (left-tkn) -- (tkn) node[above,midway]{dữ liệu đầu vào};
+	\draw[->] (umls.top) -- (map);
+\end{tikzpicture}
+}
 \caption{Kiến trúc tổng quát của MetaMap\label{metamapstructure}}
 \end{figure}
+
+MetaMap là công cụ hỗ trợ nhận dạng các khái niệm trong bộ từ điển UMLS từ các văn bản y sinh. Đầu vào của MetaMap là văn bản thuần không có cấu trúc, từ văn bản này MetaMap xuất ra các chuỗi định dạng XML hoặc định dạng gần gũi với con người chứa các khái niệm trong từ điển UMLS nhận dạng được. Các thông tin từ UMLS rút trích được bao gồm: mã khái niệm trong bộ từ điển UMLS, các từ đồng nghĩa và lớp ngữ nghĩa của khái niệm trong UMLS. Hình \ref{metamapstructure} miêu tả kiến trúc tổng quát của MetaMap. Quá trình xử lý dữ liệu của MetaMap có thể được tóm tắt qua hai bước. Bước đầu, dữ liệu dạng văn bản được áp dụng các tác vụ xử lý ngôn ngữ tự nhiên cơ bản như: tách câu, tách từ, xác định từ loại, tra cứu từ vựng và phân tích cú pháp. Kết quả của bước đầu tiên là các cụm từ (phrase) được xác định từ văn bản đầu vào. Ở bước thứ hai, MetaMap tiến hành sinh các biến thể (variant) cho các cụm từ đã tìm được, xác định ứng cử viên (candidate) từ các khái niệm trong UMLS khớp với các biến thể được sinh ra và tính độ tin cậy cho các ứng cử viên đó. Đầu ra của bước thứ hai là các cụm từ được phân giải từ bước đầu, kèm theo các ứng cử viên trong bộ từ điển UMLS ứng với mỗi cụm. Trong phạm vi luận án, chúng tôi sử dụng tên khái niệm và lớp ngữ nghĩa của khái niệm từ đầu ra của MetaMap cho quá trình rút trích đặc trưng.
 
 \begin{figure}[ht]
 \centering
@@ -350,18 +408,43 @@ MetaMap là công cụ hỗ trợ nhận dạng các khái niệm trong bộ t�
 \caption{Mẫu kết quả của công cụ MetaMap\label{metamapoutput}}
 \end{figure}
 
-Hình \ref{metamapoutput} là mẫu kết quả thu được từ MetaMap khi phân tích câu văn ``The patient has a right upper lobe mass''. Sau bước một, câu văn trên được phân giải thành ba cụm từ ``The patient'', ``has'' và ``a right upper lobe mass''. Trong đó kết quả ánh xạ các cụm từ vào bộ từ điển UMLS như sau:
+Ví dụ khi đưa câu văn \texttt{"The patient has a right upper lobe mass"} vào hệ thống MetaMap để phân tích thì ở kết quả của bước một, câu văn được phân tách thành ba cụm từ \texttt{"The patient}, \texttt{"has"} và \texttt{"a right upper lobe mass"}. Sau đó MetaMap thực hiện bước thứ hai lên các cụm từ này để cho ra kết quả cuối cùng, chúng được trình bày trên Hình \ref{metamapoutput}. Sau đây là các giải thích cho các kết quả này:
 
-\begin{itemize}[noitemsep]
-\item \emph{Cụm từ ``The patient''}: có duy nhất một ứng cử viên có độ tin cậy 1000 ứng với khái niệm ``patient'' mang mã số khái niệm là C0030705. Khái niệm ``patient'' thuộc lớp ngữ nghĩa bệnh nhân hoặc nhóm khuyết tật (Patient or Disabled Group) trong bộ từ điển UMLS.
-\item \emph{Cụm từ ``has''}: không tìm được ứng cử viên nào ứng với cụm từ.
-\item \emph{Cụm từ ``a right upper lobe mass''}: có bốn ứng cử viên đồng số điểm 916. Ứng cử viên đầu tiên bao gồm hai khái niệm mang mã số C1261074 và C0577573. Các ứng cử viên sau được ghi rõ trong Hình \ref{metamapoutput}. 
+\begin{itemize}
+\item Dòng 1 và 2 mô tả cụm từ \texttt{"The patient"} với một ứng cử viên có độ tin cậy 1000 ứng với khái niệm \texttt{"patient"} mang mã số khái niệm là C0030705. Khái niệm \texttt{"patient"} thuộc lớp ngữ nghĩa bệnh nhân hoặc nhóm khuyết tật (Patient or Disabled Group) trong bộ từ điển UMLS.
+\item Dòng 5 mô tả cụm từ \texttt{"has"} không được tìm thấy bất kì ứng cử viên nào.
+\item Các dòng từ 7 trở đi mô tả kết quả cho cụm từ \texttt{"a right upper lobe mass"}, trong đó có bốn ứng cử viên có đồng số điểm là 916. Ứng cử viên đầu tiên bao gồm hai khái niệm mang mã số C1261074 và C0577573 (dòng 9 và 10). Ngoài ra các ứng cử viên khác được trình bày trên Hình \ref{metamapoutput}. 
 \end{itemize}
 
 \subsection*{cTakes và các công cụ dựa trên cTakes}
-Apache cTakes (clinical Text Analysis and Knowledge Extraction System) là hệ thống xử lý ngôn ngữ tự nhiên giúp rút trích thông tin từ các bệnh án điện tử dưới dạng văn bản thuần không có cấu trúc. Hệ thống cTakes có khả năng nhận diện các thực thể trong y tế như thuốc, bất thường sức khỏe, triệu chứng, rối loạn, ... Hệ thống cTakes bao gồm nhiều bộ phận nhỏ như phát hiện câu văn, đánh dấu vai trò ngữ pháp, tra cứu dựa trên các bộ từ điển y tế, chuẩn hóa thông tin y tế, ... Mỗi bộ phận của cTakes đã được huấn luyện đặc biệt  cho riêng lĩnh vực y tế, các thông tin rút trích được có thể được sử dụng làm đầu vào cho các hệ thống hỗ trợ ra quyết định y tế hoặc dùng để nghiên cứu.
+Apache cTakes (clinical Text Analysis and Knowledge Extraction System) là hệ thống xử lý ngôn ngữ tự nhiên giúp rút trích thông tin từ các bệnh án điện tử dưới dạng văn bản thuần không có cấu trúc. Hệ thống cTakes có khả năng nhận diện các thực thể trong y tế như tên thuốc, các bất thường sức khỏe hay các triệu chứng/rối loạn, v.v... Hệ thống cTakes bao gồm nhiều bộ phận nhỏ như phát hiện câu văn, đánh dấu vai trò ngữ pháp, tra cứu dựa trên các bộ từ điển y tế hay chuẩn hóa thông tin y tế, v.v... Mỗi bộ phận của cTakes được huấn luyện chuyên biệt cho lĩnh vực y tế, các thông tin rút trích có thể được sử dụng làm đầu vào cho các hệ thống hỗ trợ ra quyết định y tế hoặc dùng để nghiên cứu.
 
-cTakes được xây dựng dựa trên framework UIMA giúp ứng dụng được phân tách thành các bộ phận con. Mỗi bộ phận con hiện thực một nhiệm vụ nhất định được và cung cấp một tập tin XML đóng vai trò là siêu dữ liệu mô tả bộ phận con đó. Hình \ref{ctakesdesc} là tập tin XML mô tả bộ phận POS Tagger của cTakes, bộ phận này được hiện thực bởi lớp \textit{org.apache.ctakes.postagger.POSTagger} và nhận vào tham số dạng chuỗi là đường dẫn tới tập tin mô hình đã được huấn luyện. Ngoài ra framework UIMA còn hỗ trợ cTakes trong việc gói bộ phận con lại như một mạng lưới các dịch vụ, trong đó bộ phận con này có thể sử dụng kết quả của bộ phận con khác bằng các miêu tả trong tập tin XML, tương tự như mô hình đường ống (pipeline). Trong phạm vi Luận văn, chúng tôi sử dụng các công cụ MedEx, MedTime xây dựng dựa trên cTakes và được cung cấp bởi hội đồng Open Health Natural Language Processing trong quá trình rút trích đặc trưng lớp Problem, Treatment và Test.
+cTakes được xây dựng dựa trên framework UIMA cho phép ứng dụng được cấu tách thành từ các hệ thống con (subsystem). Mỗi hệ thống con hiện thực một nhiệm vụ nhất định và được cung cấp một tập tin XML đóng vai trò là siêu dữ liệu mô tả hệ thống con đó. Hình \ref{ctakesdesc} trình bày tập tin XML mô tả hệ thống xác định từ loại của cTakes, đầu vào của hệ thống này là đường dẫn tới tập tin mô hình đã được huấn luyện cho việc xác định từ loại. Ngoài ra framework UIMA còn hỗ trợ cTakes gói các hệ thống con lại như một mạng lưới các dịch vụ, trong đó các hệ thống con của cùng mạng lưới có thể giao tiếp với nhau thông quá các miêu tả trong tập tin XML, tương tự như mô hình đường ống (pipeline). Trong phạm vi luận án, chúng tôi sử dụng công cụ MedEx \cite{HuaXu2009} và MedTime \cite{HuaXu2009} được xây dựng dựa trên cTakes và được cung cấp bởi hội đồng Open Health Natural Language Processing hỗ trợ cho quá trình rút trích đặc trưng.
+
+MedEx là công cụ hỗ trợ trích xuất các thông tin về thuốc y tế như tên thuốc (drug name), liều lượng (strength), đường hấp thu (route) hay tần số (frequency), v.v... Đầu vào của công cụ là văn bản thuần không có cấu trúc, kết quả là một tập tin chứa các thông tin thuốc y tế nhận dạng được. Mỗi dòng trong tập tin kết quả là một thông tin thuốc nhận dạng được theo định dạng:
+
+\begin{center}
+\texttt{<chỉ số câu> <nội dung câu>|<thông tin thuốc>|<tên thuốc được chuẩn hóa>}
+\end{center}
+
+\noindent trong đó thông tin về thuốc bao gồm:
+
+\begin{itemize}
+\item Tên thuốc (Drug name) như kháng sinh, Vancomycin , ...
+\item Nhà sản xuất (Brand name) như Zocor, ...
+\item Dạng thuốc (Drug form) như dạng viên nén, dạng viên nhộng, ...
+\item Mức độ (Strength) như 10mg, 5ml, ...
+\item Liều lượng (Dose amount) như 2 viên, ...
+\item Đường hấp thụ (Route) như qua đường miệng, qua đường tiêm, ...
+\item Tần số (Frequency) như 2 lần mỗi ngày, mỗi sáng, ...
+\item Thời gian (Duration) như trong 10 ngày, trong 1 tháng, ...
+\end{itemize}
+
+MedTime là công cụ hỗ trợ trích xuất các thông tin về thời gian trong văn bản thuần không có cấu trúc, bao gồm hai loại là thời gian tường minh và thời gian suy diễn. Thời gian tường minh là các dạng thời gian được ghi một cách cụ thể trong văn bản bao gồm ngày, tháng, năm, có hoặc không có thời điểm, ví dụ như 03/06/2015. Thời gian suy diễn là các mốc thời gian được trích xuất từ một số từ khóa đứng gần khái niệm đang xét hoặc các khái niệm chỉ về sự kiện trong y tế, ví dụ như \emph{ngày nhập viện} (admission date) hay \emph{ngày thứ 2 sau khi phẫu thuật} (post-op day 2). Giống như công cụ MedEx, MedTime nhận đầu vào là các văn bản thuần không có cấu trúc và xuất ra kết quả là một tập tin chứa các thông tin thời gian được nhận dạng. Mỗi dòng trong tập tin kết quả là một thông tin về thời gian được trình bày theo định dạng:
+
+\begin{center}
+\texttt{<TIMEX3 id=<chỉ số> start=<vị trí bắt đầu> end=<vị trí kết thúc> text=<chuỗi giá trị nhận dạng> type=<loại> val=<giá trị chuẩn hóa>/>}\\
+\end{center}
 
 \begin{figure}[ht]
 \centering
@@ -382,28 +465,3 @@ cTakes được xây dựng dựa trên framework UIMA giúp ứng dụng đư�
 \lstinputlisting{sample_code/ctakes_desc.xml}
 \caption{Tập tin XML mô tả bộ phận con cTakes\label{ctakesdesc}}
 \end{figure}
-
-MedEx là công cụ hỗ trợ trích xuất các thông tin về thuốc y tế như tên thuốc (Drug name), liều lượng (strength), đường hấp thu (route), tần số (frequency), ... \cite{HuaXu2009}. Đầu vào công cụ là văn bản thuần không có cấu trúc, kết quả là một tập tin chứa các thông tin thuốc y tế nhận dạng được. Mỗi dòng trong tập tin kết quả là một thông tin thuốc nhận dạng được theo định dạng:
-
-\begin{center}
-\textit{<Chỉ số câu>	Nội dung câu|Thông tin thuốc|Tên thuốc được chuẩn hóa}
-\end{center}
-
-\noindent Trong đó thông tin về thuốc bao gồm:
-
-\begin{itemize}
-\item Tên thuốc (Drug name) như kháng sinh, Vancomycin , ...
-\item Nhà sản xuất (Brand name) như Zocor, ...
-\item Dạng thuốc (Drug form) như dạng viên nén, dạng viên nhộng, ...
-\item Mức độ (Strength) như 10mg, 5ml, ...
-\item Liều lượng (Dose amount) như 2 viên, ...
-\item Đường hấp thụ (Route) như qua đường miệng, qua đường tiêm, ...
-\item Tần số (Frequency) như 2 lần mỗi ngày, mỗi sáng, ...
-\item Thời gian (Duration) như trong 10 ngày, trong 1 tháng, ...
-\end{itemize}
-
-MedTime là công cụ hỗ trợ trích xuất các thông tin về thời gian trong văn bản thuần không có cấu trúc, bao gồm cả hai loại là thời gian tường minh và thời gian suy diễn \cite{Sohn2013}. Thời gian tường minh là các dạng thời gian được ghi chú rõ ràng, cụ thể trong văn bản như 03/06/2015. Loại thời gian tường minh có thể bao gồm ngày, tháng, năm và thời gian hoặc chỉ bao gồm ngày, tháng, năm. Thời gian suy diễn là các mốc thời gian được trích xuất từ một số từ khóa đứng gần khái niệm đang xét hoặc các khái niệm chỉ về sự kiện trong y tế, ví dụ như ``Admission date'' (ngày nhập viện) hay ``Post-op day 2'' (ngày thứ 2 sau khi phẫu thuật). Giống như công cụ MedEx, đầu vào của công cụ là văn bản thuần không có cấu trúc, kết quảlà một tập tin chứa các thông tin thời gian nhận dạng được. Mỗi dòng trong tập tin kết quả là một thông tin thời gian nhận dạng được theo định dạng:
-
-\begin{center}
-\textit{<TIMEX3 id=``chỉ số'' start=``vị trí bắt đầu'' end=``vị trí kết thúc'' text=``chuỗi giá trị nhận dạng'' type=``loại'' val=``giá trị chuẩn hóa''/>}\\
-\end{center}
