@@ -350,12 +350,12 @@ MetaMap là công cụ hỗ trợ nhận dạng các khái niệm trong bộ t�
 \caption{Mẫu kết quả của công cụ MetaMap\label{metamapoutput}}
 \end{figure}
 
-Hình \ref{metamapoutput} là mẫu kết quả thu được từ MetaMap khi phân tích câu văn ``The patient has a right upper lobe mass''. Sau bước một, câu văn trên được phân giải thành ba cụm từ ``The patient'', ``has'' và ``a right upper lobe mass''. Trong đó kết quả ánh xạ các cụm từ vào bộ từ điển UMLS như sau:
+Hình \ref{metamapoutput} là mẫu kết quả thu được từ MetaMap khi phân tích câu văn ``The patient is HIV positive for two years''. Sau bước một, câu văn trên được phân giải thành ba cụm từ ``The patient'', ``is'' và ``HIV positive for two years''. Trong đó kết quả ánh xạ các cụm từ vào bộ từ điển UMLS như sau:
 
 \begin{itemize}[noitemsep]
 \item \emph{Cụm từ ``The patient''}: có duy nhất một ứng cử viên có độ tin cậy 1000 ứng với khái niệm ``patient'' mang mã số khái niệm là C0030705. Khái niệm ``patient'' thuộc lớp ngữ nghĩa bệnh nhân hoặc nhóm khuyết tật (Patient or Disabled Group) trong bộ từ điển UMLS.
-\item \emph{Cụm từ ``has''}: không tìm được ứng cử viên nào ứng với cụm từ.
-\item \emph{Cụm từ ``a right upper lobe mass''}: có bốn ứng cử viên đồng số điểm 916. Ứng cử viên đầu tiên bao gồm hai khái niệm mang mã số C1261074 và C0577573. Các ứng cử viên sau được ghi rõ trong Hình \ref{metamapoutput}. 
+\item \emph{Cụm từ ``is''}: không tìm được ứng cử viên nào ứng với cụm từ.
+\item \emph{Cụm từ ``HIV positive for two years''}: có một ứng cử viên với độ tin cậy là 875. Ứng cử viên này bao gồm ba khái niệm: ``positive for hiv'' (dương tính với HIV) mang mã số C0019699, ``two'' (định lượng là hai) mang mã số C0205448 và ``years'' (khái niệm thời gian) mang mã số là C0439234.
 \end{itemize}
 
 \subsection*{cTakes và các công cụ dựa trên cTakes}
