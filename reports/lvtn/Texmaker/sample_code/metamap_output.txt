@@ -2,7 +2,9 @@ Phrase: The patient
 Meta Mapping (1000):
   1000   C0030705:*^patient (Patients) [Patient or Disabled Group]
 
-Phrase: is
+Phrase: has
+
+Phrase: been
 
 Phrase: HIV positive for two years
 Meta Mapping (875):
