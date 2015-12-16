@@ -1,13 +1,13 @@
 \chapter{Kiến thức nền tảng}
 \section{Các định nghĩa và thuật ngữ}
-Trong các công trình nghiên cứu về phân giải đồng tham chiếu, các tác giả thường sử dụng từ \emph{markable} để chỉ tới những từ/cụm từ cần được phân giải đồng chiếu, hoặc từ \emph{noun phrase} hay NP vì đa phần các công trình trước đây chỉ xem xét tới các danh từ/cụm danh từ. Một số tài liệu khác sử dụng từ \emph{mention} để chỉ tới những ``đề cập'' trong văn bản vì bản chất của phân giải đồng tham chiếu là xác định xem các từ/cụm từ có đề cập tới cùng một thực thể hay không. Để thuận tiện trong việc diễn đạt bằng tiếng Việt, chúng tôi sử dụng từ \emph{khái niệm} để chỉ tới những thực thể cần được phân giải đồng tham chiếu. Một lý do khác mà chúng tôi sử dụng từ này bắt nguồn từ việc Thách thức I2B2 năm 2011 gọi các tập tin chứa những thực thể đã được gán nhãn là ``concept files''.
+Trong các công trình nghiên cứu về phân giải đồng tham chiếu, các tác giả thường sử dụng từ \emph{markable} để chỉ tới những từ/cụm từ cần được phân giải đồng chiếu, hoặc từ \emph{noun phrase} hay NP vì đa phần các công trình trước đây chỉ xem xét tới các danh từ/cụm danh từ. Một số tài liệu khác sử dụng từ \emph{mention} để chỉ tới những ``đề cập'' trong văn bản vì bản chất của phân giải đồng tham chiếu là xác định xem các từ/cụm từ có đề cập tới cùng một thực thể hay không. Để thuận tiện trong việc diễn đạt bằng tiếng Việt, chúng tôi sử dụng từ \emph{khái niệm} để chỉ tới những thực thể cần được phân giải đồng tham chiếu. Một lý do khác mà chúng tôi sử dụng từ này bắt nguồn từ việc Thách thức i2b2 năm 2011 gọi các tập tin chứa những thực thể đã được gán nhãn là ``concept files''.
 
 Các khái niệm đa phần là danh từ hay cụm danh từ. Một khái niệm có thể được lồng trong khái niệm khác. Thông thường sự lồng nhau này xuất hiện ở những cụm danh từ mang ý nghĩa sở hữu, ví dụ cụm ``ngôi nhà của anh ta'' chứa hai khái niệm khác nhau là (ngôi nhà của anh ta) và (anh ta). Một số tài liệu gọi các khái niệm lồng nhau là \emph{khái niệm đầy đủ}. Một hệ thống phân giải đồng tham chiếu có xem xét đến sự lồng nhau này hay không phụ thuộc vào bước trích xuất và gán nhãn thực thể trước đó. Một số công trình nghiên cứu đề xuất các giải pháp phân giải riêng biệt cho các khái niệm lồng nhau, tuy nhiên phương pháp mà chúng tôi hiện thực ở đây không xem sự lồng nhau là một trường hợp đặc biệt.
 
 Hai khái niệm được xem là \emph{đồng tham chiếu} nếu cả hai cùng chỉ về một thực thể trong thế giới thực, ví dụ ``thủ tướng Việt Nam'' và ``Nguyễn Tấn Dũng''. Một đặc điểm cần lưu ý của tính đồng tham chiếu là nó phụ thuộc vào ngữ cảnh và thời điểm mà các khái niệm được đề cập đến. Như ở ví dụ trên, hai khái niệm ``thủ tướng Việt Nam'' và ``Nguyễn Tấn Dũng'' chỉ đồng tham chiếu nếu thời điểm mà chúng được đề cập trong văn bản nằm trong khoảng thời gian mà ông Nguyễn Tấn Dũng đang là thủ tướng Việt Nam.
 
 Có thể xem đồng tham chiếu là một mối quan hệ giữa hai hay nhiều khái niệm khi chúng cùng đề cập tới một thực thể. Dễ dàng nhận thấy đây là mối quan hệ tương đương vì nó có những tính chất sau:
-\begin{itemize}[noitemsep]
+\begin{itemize}
 \item \emph{Tính phản xạ}: một khái niệm bất kì thì luôn đồng tham chiếu với chính nó.
 \item \emph{Tính đối xứng}: nếu khái niệm $C_1$ đồng tham chiếu với $C_2$ thì $C_2$ cũng đồng tham chiếu với $C_1$.
 \item \emph{Tính bắc cầu}: nếu khái niệm $C_1$ đồng tham chiếu với $C_2$, $C_2$ đồng tham chiếu với $C_3$ thì $C_1$ cũng đồng tham chiếu với $C_3$.
@@ -17,7 +17,7 @@ Một \emph{cặp khái niệm} gồm hai khái niệm có thể có hoặc khô
 
 \emph{Phân giải đồng tham chiếu} là công việc xác định những chuỗi đồng tham chiếu trong văn bản. Xuyên suốt này luận văn này, chúng tôi gọi các chuỗi đồng tham chiếu được phân giải bởi con người là các \emph{chuỗi kết quả}, các chuỗi được xuất ra bởi hệ thống phân giải đồng tham chiếu là các \emph{chuỗi hệ thống}.
 
-\section{Các mô hình học máy phân giải đồng tham chiếu}
+\section{Các mô hình học máy phân giải đồng tham chiếu\label{coref-model}}
 Phân giải đồng tham chiếu, một trong những tác vụ cơ bản của xử lý ngôn ngữ tự nhiên, là công việc xác định xem những khái niệm nào trong văn bản cùng chỉ đến một thực thể trong thế giới thực. Mặc dù nhiều phương pháp giải quyết đã được nghiên cứu phát triển từ những năm 60 của thế kỉ 20, các hệ thống dựa trên luật hay theo hướng tiếp cận heuristic trong thời gian này đòi hỏi nhiều kiến thức phức tạp và không thực sự hiệu quả (một trong những nền tảng của các hệ thống này là \emph{lý thuyết trung tâm} \cite{Grosz1983}).
 
 Bắt đầu từ những năm 1990, khi các mô hình xác suất trở nên phổ biến vì tính hiệu quả của chúng, các phương pháp học máy phân giải đồng tham chiếu ra đời dần thay thế các phương pháp heuristic thủ công. Cùng với xu thế đó là sự xuất hiện của các tập dữ liệu được gán nhãn bắt nguồn từ hội nghị MUC-6 (1996) và MUC-7 (1997), các nghiên cứu về phân giải đồng tham chiếu dựa trên học máy càng được phát triển không chỉ cho các miền văn bản chung mà còn đi sâu vào các miền văn bản cụ thể (như Thách thức i2b2 năm 2011 về phân giải đồng tham chiếu cho bệnh án điện tử \cite{OzlemUzuner2012}).
@@ -378,9 +378,7 @@ WP\$ & Nghi vấn từ sở hữu & whose, whosever \\
 \subsection*{MetaMap}
 UMLS là kho từ vựng y sinh do Thư viện Y học Quốc gia Hoa Kì tiến hành xây dựng từ năm 1986 nhằm phục vụ cho nhu cầu tra cứu thông tin đã được chuẩn hóa về các loại bệnh, thuốc, nguyên nhân hoặc các thuật ngữ trong y tế. Bộ từ điển UMLS tích hợp hơn 2 triệu tên gọi cho khoảng 900.000 khái niệm y sinh và khoảng 12 triệu tên gọi cho quan hệ giữa các khái niệm này \cite{Olivier2004}. Hiện nay, bộ từ điển UMLS vẫn đang được tiếp tục cập nhật và cho phép sử dụng miễn phí phục vụ mục đích nghiên cứu khoa học.
 
-MetaMap là công cụ hỗ trợ nhận dạng các khái niệm trong bộ từ điển UMLS từ các văn bản y sinh. Đầu vào của MetaMap là văn bản thuần không có cấu trúc, từ văn bản này MetaMap xuất ra các chuỗi định dạng XML hoặc định dạng gần gũi với con người chứa các khái niệm trong từ điển UMLS nhận dạng được. Các thông tin từ UMLS rút trích được bao gồm: mã khái niệm trong bộ từ điển UMLS, các từ đồng nghĩa và lớp ngữ nghĩa của khái niệm trong UMLS. Hình \ref{metamapstructure} miêu tả kiến trúc tổng quát của MetaMap. Quá trình xử lý dữ liệu của MetaMap có thể được tóm tắt qua hai bước. Bước đầu, dữ liệu dạng văn bản được áp dụng các tác vụ xử lý ngôn ngữ tự nhiên cơ bản như: tách câu, tách từ, xác định từ loại, tra cứu từ vựng và phân tích cú pháp. Kết quả của bước đầu tiên là các cụm từ (phrase) được xác định từ văn bản đầu vào. Ở bước thứ hai, MetaMap tiến hành sinh các biến thể (variant) cho các cụm từ đã tìm được, xác định ứng cử viên (candidate) từ các khái niệm trong UMLS khớp với các biến thể được sinh ra và tính độ tin cậy cho các ứng cử viên đó. Đầu ra của bước thứ hai là các cụm từ được phân giải từ bước đầu, kèm theo các ứng cử viên trong bộ từ điển UMLS ứng với mỗi cụm. Trong phạm vi luận án, chúng tôi sử dụng tên khái niệm và lớp ngữ nghĩa của khái niệm từ đầu ra của MetaMap cho quá trình rút trích đặc trưng.
-
-\begin{figure}
+\begin{figure}[h]
 \centering
 \resizebox{\textwidth}{!}{
 \begin{tikzpicture}[%
@@ -414,12 +412,14 @@ MetaMap là công cụ hỗ trợ nhận dạng các khái niệm trong bộ t�
 \caption{Kiến trúc tổng quát của MetaMap\label{metamapstructure}}
 \end{figure}
 
-Ví dụ khi đưa câu văn \texttt{"The patient has a right upper lobe mass"} vào hệ thống MetaMap để phân tích thì ở kết quả của bước một, câu văn được phân tách thành ba cụm từ \texttt{"The patient}, \texttt{"has"} và \texttt{"a right upper lobe mass"}. Sau đó MetaMap thực hiện bước thứ hai lên các cụm từ này để cho ra kết quả cuối cùng, chúng được trình bày trên Hình \ref{metamapoutput}. Sau đây là các giải thích cho các kết quả này:
+MetaMap là công cụ hỗ trợ nhận dạng các khái niệm trong bộ từ điển UMLS từ các văn bản y sinh. Đầu vào của MetaMap là văn bản thuần không có cấu trúc, từ văn bản này MetaMap xuất ra các chuỗi định dạng XML hoặc định dạng gần gũi với con người chứa các khái niệm trong từ điển UMLS nhận dạng được. Các thông tin từ UMLS rút trích được bao gồm: mã khái niệm trong bộ từ điển UMLS, các từ đồng nghĩa và lớp ngữ nghĩa của khái niệm trong UMLS. Hình \ref{metamapstructure} miêu tả kiến trúc tổng quát của MetaMap. Quá trình xử lý dữ liệu của MetaMap có thể được tóm tắt qua hai bước. Bước đầu, dữ liệu dạng văn bản được áp dụng các tác vụ xử lý ngôn ngữ tự nhiên cơ bản như: tách câu, tách từ, xác định từ loại, tra cứu từ vựng và phân tích cú pháp. Kết quả của bước đầu tiên là các cụm từ (phrase) được xác định từ văn bản đầu vào. Ở bước thứ hai, MetaMap tiến hành sinh các biến thể (variant) cho các cụm từ đã tìm được, xác định ứng cử viên (candidate) từ các khái niệm trong UMLS khớp với các biến thể được sinh ra và tính độ tin cậy cho các ứng cử viên đó. Đầu ra của bước thứ hai là các cụm từ được phân giải từ bước đầu, kèm theo các ứng cử viên trong bộ từ điển UMLS ứng với mỗi cụm. Trong phạm vi luận án, chúng tôi sử dụng tên khái niệm và lớp ngữ nghĩa của khái niệm từ đầu ra của MetaMap cho quá trình rút trích đặc trưng.
+
+Ví dụ khi đưa câu văn \texttt{"The patient has been HIV positive for two years"} vào hệ thống MetaMap để phân tích thì ở kết quả của bước một, câu văn được phân tách thành ba cụm từ \texttt{"The patient}, \texttt{"has been"} và \texttt{"HIV positive for two years"}. Sau đó MetaMap thực hiện bước thứ hai lên các cụm từ này để cho ra kết quả cuối cùng, chúng được trình bày trên Hình \ref{metamapoutput}. Sau đây là các giải thích cho các kết quả này:
 
 \begin{itemize}
-\item Dòng 1 và 2 mô tả cụm từ \texttt{"The patient"} với một ứng cử viên có độ tin cậy 1000 ứng với khái niệm \texttt{"patient"} mang mã số khái niệm là C0030705. Khái niệm \texttt{"patient"} thuộc lớp ngữ nghĩa bệnh nhân hoặc nhóm khuyết tật (Patient or Disabled Group) trong bộ từ điển UMLS.
-\item Dòng 5 mô tả cụm từ \texttt{"is"} không được tìm thấy bất kì ứng cử viên nào.
-\item Các dòng từ 7 trở đi mô tả kết quả cho cụm từ \texttt{"HIV positive for two years"}, trong đó có bốn ứng cử viên có đồng số điểm là 916. Ứng cử viên đầu tiên bao gồm hai khái niệm mang mã số C1261074 và C0577573 (dòng 9 và 10). Ngoài ra các ứng cử viên khác được trình bày trên Hình \ref{metamapoutput}. 
+\item Dòng 1, 2 và 3 mô tả cụm từ \texttt{"The patient"} với một ứng cử viên có độ tin cậy 1000 ứng với khái niệm \texttt{"patient"} mang mã số khái niệm là C0030705. Khái niệm \texttt{"patient"} thuộc lớp ngữ nghĩa bệnh nhân hoặc nhóm khuyết tật (Patient or Disabled Group) trong bộ từ điển UMLS.
+\item Dòng 5 và 7 lần lượt mô tả các từ \texttt{"has"} và \texttt{"been"} không được tìm thấy bất kì ứng cử viên nào.
+\item Các dòng từ 9 trở đi mô tả kết quả cho cụm từ \texttt{"HIV positive for two years"} với một ứng cử viên có độ tin cậy 875. Ứng cử viên này bao gồm ba khái niệm là \texttt{"positive for HIV"} mang mã số là C0019699, \texttt{"two"} mang mã số là C0205448 và \texttt{"years"} mang mã số là C0439234. 
 \end{itemize}
 
 \begin{figure}[ht]
@@ -442,25 +442,12 @@ Ví dụ khi đưa câu văn \texttt{"The patient has a right upper lobe mass"} 
 \caption{Mẫu kết quả của công cụ MetaMap\label{metamapoutput}}
 \end{figure}
 
-Ví dụ khi đưa câu văn \texttt{"The patient has been HIV positive for two years"} vào hệ thống MetaMap để phân tích thì ở kết quả của bước một, câu văn được phân tách thành ba cụm từ \texttt{"The patient}, \texttt{"has been"} và \texttt{"HIV positive for two years"}. Sau đó MetaMap thực hiện bước thứ hai lên các cụm từ này để cho ra kết quả cuối cùng, chúng được trình bày trên Hình \ref{metamapoutput}. Sau đây là các giải thích cho các kết quả này:
-
-\begin{itemize}
-\item Dòng 1, 2 và 3 mô tả cụm từ \texttt{"The patient"} với một ứng cử viên có độ tin cậy 1000 ứng với khái niệm \texttt{"patient"} mang mã số khái niệm là C0030705. Khái niệm \texttt{"patient"} thuộc lớp ngữ nghĩa bệnh nhân hoặc nhóm khuyết tật (Patient or Disabled Group) trong bộ từ điển UMLS.
-\item Dòng 5 mô tả cụm từ \texttt{"has"} không được tìm thấy bất kì ứng cử viên nào.
-\item Dòng 7 mô tả cụm từ \texttt{"been"} không được tìm thấy bất kì ứng cử viên nào.
-\item Các dòng từ 9 trở đi mô tả kết quả cho cụm từ \texttt{"HIV positive for two years"} với một ứng cử viên có độ tin cậy 875. Ứng cử viên này bao gồm ba khái niệm là \texttt{"positive for HIV"} mang mã số khái niệm là C0019699, \texttt{"two"} mang mã số khái niệm là C0205448 và \texttt{"years"} mang mã số khái niệm là C0439234. 
-\end{itemize}
-
 \subsection*{cTakes và các công cụ dựa trên cTakes}
 Apache cTakes (clinical Text Analysis and Knowledge Extraction System) là hệ thống xử lý ngôn ngữ tự nhiên giúp rút trích thông tin từ các bệnh án điện tử dưới dạng văn bản thuần không có cấu trúc. Hệ thống cTakes có khả năng nhận diện các thực thể trong y tế như tên thuốc, các bất thường sức khỏe hay các triệu chứng/rối loạn, v.v... Hệ thống cTakes bao gồm nhiều bộ phận nhỏ như phát hiện câu văn, đánh dấu vai trò ngữ pháp, tra cứu dựa trên các bộ từ điển y tế hay chuẩn hóa thông tin y tế, v.v... Mỗi bộ phận của cTakes được huấn luyện chuyên biệt cho lĩnh vực y tế, các thông tin rút trích có thể được sử dụng làm đầu vào cho các hệ thống hỗ trợ ra quyết định y tế hoặc dùng để nghiên cứu.
 
 cTakes được xây dựng dựa trên framework UIMA cho phép ứng dụng được cấu tách thành từ các hệ thống con (subsystem). Mỗi hệ thống con hiện thực một nhiệm vụ nhất định và được cung cấp một tập tin XML đóng vai trò là siêu dữ liệu mô tả hệ thống con đó. Hình \ref{ctakesdesc} trình bày tập tin XML mô tả hệ thống xác định từ loại của cTakes, đầu vào của hệ thống này là đường dẫn tới tập tin mô hình đã được huấn luyện cho việc xác định từ loại. Ngoài ra framework UIMA còn hỗ trợ cTakes gói các hệ thống con lại như một mạng lưới các dịch vụ, trong đó các hệ thống con của cùng mạng lưới có thể giao tiếp với nhau thông quá các miêu tả trong tập tin XML, tương tự như mô hình đường ống (pipeline). Trong phạm vi luận án, chúng tôi sử dụng công cụ MedEx \cite{HuaXu2009} và MedTime \cite{Sohn2013} được xây dựng dựa trên cTakes và được cung cấp bởi hội đồng Open Health Natural Language Processing hỗ trợ cho quá trình rút trích đặc trưng.
 
-MedEx là công cụ hỗ trợ trích xuất các thông tin về thuốc y tế như tên thuốc (drug name), liều lượng (strength), đường hấp thu (route) hay tần số (frequency), v.v... Đầu vào của công cụ là văn bản thuần không có cấu trúc, kết quả là một tập tin chứa các thông tin thuốc y tế nhận dạng được. Mỗi dòng trong tập tin kết quả là một thông tin thuốc nhận dạng được theo định dạng sau, trong đó bao gồm các thông tin được trình bày trên Bảng \ref{tab:med-info}:
-
-\begin{center}
-\texttt{<chỉ số câu> <nội dung câu>|<thông tin thuốc>|<tên thuốc được chuẩn hóa>}
-\end{center}
+MedEx là công cụ hỗ trợ trích xuất các thông tin ngữ nghĩa về thuốc y tế từ các văn bản thuần không có cấu trúc. Trong bệnh án điện tử, các thông tin về thuốc, bao gồm tên thuốc và các chỉ dẫn về cách sử dụng, thường được lưu trữ dưới dạng những câu văn tường thuật. Ví dụ, hồ sơ xuất viện thường chứa những mô tả về các lần sử dụng thuốc của bệnh nhân trong quá trình điều trị, như câu \texttt{"The patient was upgraded to Prilosec 20 mg per day for possible treatment of gastritis"} chứa tên thuốc \texttt{"Prilosec"} với liều lượng là \texttt{"20 mg"} và sử dụng mỗi ngày (\texttt{"per day"}). Các thông tin về thuốc là những thông tin quan trọng để phân giải đồng tham chiếu, vì vậy chúng tôi sử dụng MedEx để hỗ trợ cho việc rút trích các đặc trưng liên quan đến chúng. Bảng \ref{tab:med-info} trình bày các thông tin thuốc mà MedEx hỗ trợ trích xuất. Hình \ref{medex-eg} mô tả một tập tin được xuất ra bởi MedEx.
 %
 %\noindent trong đó thông tin về thuốc bao gồm:
 %
@@ -484,23 +471,18 @@ MedEx là công cụ hỗ trợ trích xuất các thông tin về thuốc y t�
 \toprule
 \textbf{Thông tin} & \textbf{Ví dụ}\\
 \midrule
-Tên thuốc (drug name) & Vancomycin\\
-Nhà sản xuất (brand name) & Zocor\\
-Dạng thuốc (form) & \\
-Mức độ (strength) & 10mg, 5ml,...\\
-Liều lượng (dosage) & \\
-Đường hấp thụ (route) & \\
-Tần số (frequency) & 2 times a day, each morning,...\\
-Thời gian sử dụng (duration) & for 10 days, in a month,...\\
+Tên thuốc (drug name) & `Lisinopril', `Famotidine'\\
+Dạng thuốc (form) & `tablet', `ointment'\\
+Mức độ (strength) & `50 mg', `500/50'\\
+Liều lượng (dosage) & `take one tablet'\\
+Đường hấp thụ (route) & `by mouth', `intravenous'\\
+Tần số (frequency) & `2 times a day', `each morning',...\\
+Thời gian sử dụng (duration) & `for 10 days', `in a month',...\\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-MedTime là công cụ hỗ trợ trích xuất các thông tin về thời gian trong văn bản thuần không có cấu trúc, bao gồm hai loại là thời gian tường minh và thời gian suy diễn. Thời gian tường minh là các dạng thời gian được ghi một cách cụ thể trong văn bản bao gồm ngày, tháng, năm, có hoặc không có thời điểm, ví dụ như 03/06/2015. Thời gian suy diễn là các mốc thời gian được trích xuất từ một số từ khóa đứng gần khái niệm đang xét hoặc các khái niệm chỉ về sự kiện trong y tế, ví dụ như \emph{ngày nhập viện} (admission date) hay \emph{ngày thứ 2 sau khi phẫu thuật} (post-op day 2). Giống như công cụ MedEx, MedTime nhận đầu vào là các văn bản thuần không có cấu trúc và xuất ra kết quả là một tập tin chứa các thông tin thời gian được nhận dạng. Mỗi dòng trong tập tin kết quả là một thông tin về thời gian được trình bày theo định dạng:
-
-\begin{center}
-\texttt{<TIMEX3 id=<chỉ số> start=<vị trí bắt đầu> end=<vị trí kết thúc> text=<chuỗi giá trị nhận dạng> type=<loại> val=<giá trị chuẩn hóa>/>}\\
-\end{center}
+MedTime là công cụ hỗ trợ trích xuất các thông tin về thời gian trong văn bản thuần không có cấu trúc, bao gồm hai loại là thời gian tường minh và thời gian suy diễn. Thời gian tường minh là các dạng thời gian được ghi một cách cụ thể trong văn bản bao gồm ngày, tháng, năm và có hoặc không có thời điểm, ví dụ như 03/06/2015. Thời gian suy diễn là các mốc thời gian được trích xuất từ một số từ khóa đứng gần khái niệm đang xét hoặc các khái niệm chỉ về sự kiện trong y tế, ví dụ như \emph{ngày nhập viện} (admission date) hay \emph{ngày thứ 2 sau khi phẫu thuật} (post-op day 2). Giống như công cụ MedEx, MedTime nhận đầu vào là các văn bản thuần không có cấu trúc và xuất ra kết quả là một tập tin chứa các thông tin thời gian được nhận dạng (Hình \ref{medtime-eg}).
 
 \begin{figure}[ht]
 \centering
@@ -520,5 +502,43 @@ MedTime là công cụ hỗ trợ trích xuất các thông tin về thời gian
 	columns=fullflexible,
 	basicstyle=\footnotesize\ttfamily}
 \lstinputlisting{sample_code/ctakes_desc.xml}
-\caption{Tập tin XML mô tả bộ phận con cTakes\label{ctakesdesc}}
+\caption{Ví dụ nội dung tập tin XML mô tả hệ thống con cTakes\label{ctakesdesc}}
+\end{figure}
+\begin{figure}[ht]
+\centering
+\lstset{
+	keywords={},
+	tabsize=3,
+	%frame=lines,
+	frame=single,
+	xleftmargin=20pt,
+	framexleftmargin=15pt,
+	numbers=left,
+	numberstyle=\tiny,
+	numbersep=5pt,
+	breaklines=true,
+	showstringspaces=false,
+	columns=fullflexible,
+	basicstyle=\footnotesize\ttfamily}
+\lstinputlisting{sample_code/medex_output.txt}
+\caption{Ví dụ nội dung tập tin kết quả được xuất ra bởi MedEx\label{medex-eg}}
+\end{figure}
+\begin{figure}[h!]
+\centering
+\lstset{
+	keywords={},
+	tabsize=3,
+	%frame=lines,
+	frame=single,
+	xleftmargin=20pt,
+	framexleftmargin=15pt,
+	numbers=left,
+	numberstyle=\tiny,
+	numbersep=5pt,
+	breaklines=true,
+	showstringspaces=false,
+	columns=fullflexible,
+	basicstyle=\footnotesize\ttfamily}
+\lstinputlisting{sample_code/medtime_output.txt}
+\caption{Ví dụ nội dung tập tin kết quả được xuất ra bởi MedTime\label{medtime-eg}}
 \end{figure}

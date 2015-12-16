@@ -1,0 +1,4 @@
+rawTerm="09/16/2006"||temporal="09/16/2006"
+rawTerm="He was most recently discharged from Oaksgekesser/ Memorial Hospital on 03/06/99 ."||temporal="03/06/99"
+rawTerm="On the day of admission the patient noticed increasing shortness of breath ."||temporal="2015-11-04"
+rawTerm="This was started on 4/2/99 and should be continued for ten days ."||temporal="4/2/99"

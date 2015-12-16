@@ -1,0 +1,4 @@
+21	She has no relief from antacids or H2 blockers .|antacids[1174,1182]|||||||||C0003138|863|863|antacid
+21	She has no relief from antacids or H2 blockers .|H2 blockers[1186,1197]||||||||||992696|992696|h2 blockers
+34	On admission included Percocet , Prinovil , Dapsone , Mycelex troches .|Percocet[2067,2075]|||||||||C0086787|42844|161|paracetamol
+72	On the third hospital day , she did have some pain and was treated with Percocet .|Percocet[3549,3557]|||||||||C0086787|42844|161|paracetamol
