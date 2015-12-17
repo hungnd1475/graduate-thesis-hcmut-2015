@@ -1,6 +1,6 @@
 \chapter{Thí nghiệm đánh giá}
 \section{Tập dữ liệu}
-Tập dữ liệu chúng tôi sử dụng để đánh giá hiệu năng hệ thống được cung cấp bởi Partners Healthcare và Beth Israel Deaconess Medical Center. Đây cũng chính là tập được sử dụng ở tác vụ 1C của Thách thức I2B2 2011 để đánh giá các hệ thống tham gia. Như vậy để có được tập dữ liệu này, chúng tôi đã liên hệ với tổ chức I2B2 và cam kết về các điều khoản sử dụng dữ liệu (Data Usage Agreement) bao gồm việc chỉ sử dụng cho mục đích nghiên cứu. Bản cam kết cần được kí và gửi lại cho I2B2 qua email hoặc fax.
+Tập dữ liệu chúng tôi sử dụng để đánh giá hiệu năng hệ thống được cung cấp bởi Partners Healthcare và Beth Israel Deaconess Medical Center. Đây cũng chính là tập được sử dụng ở tác vụ 1C của Thách thức i2b2 2011 để đánh giá các hệ thống tham gia. Như vậy để có được tập dữ liệu này, chúng tôi đã liên hệ với trung tâm i2b2 và cam kết về các điều khoản sử dụng dữ liệu (Data Usage Agreement) bao gồm việc chỉ sử dụng cho mục đích nghiên cứu. Bản cam kết cần được kí và gửi lại cho i2b2 qua email hoặc fax.
 
 Tập dữ liệu chúng tôi nhận được bao gồm \emph{251 hồ sơ xuất viện} dùng cho huấn luyện và \emph{173 hồ sơ} dùng cho kiểm tra đánh giá. Trong đó, ngoài các hồ sơ xuất viện là các văn bản thuần được ghi chép lại bởi các bác sĩ, y tá (Hình \ref{hsxv-eg}) thì mỗi hồ sơ còn đi kèm với một tập tin chứa danh sách các khái niệm đã được gán nhãn bởi các chuyên gia y tế theo mẫu: \texttt{c="<khái niệm>" <bắt đầu> <kết thúc>||t="<lớp>"}. Ví dụ \texttt{c="the patient" 20:5 20:6||t="person"} mô tả khái niệm ``the patient'' xuất hiện bắt đầu từ dòng 20 từ thứ 5, kết thúc ở dòng 20 từ thứ 6 và thuộc lớp Person (Hình \ref{con-eg}).
 
@@ -50,7 +50,7 @@ c="cisplatin" 86:3 86:3||c="cisplatin chemotherapy" 99:25 99:26||t="coref treatm
 \end{figure}
 
 \section{Các phương pháp đánh giá}
-Hiệu năng hệ thống được đánh giá qua ba độ đo: \emph{độ đúng đắn} (precision), \emph{độ đầy đủ} (recall) và \emph{độ F} (F-measure). Bài báo đánh giá các hệ thống dự thi thử thách I2B2 sử dụng ba phương pháp khác nhau để tính toán các độ này, bao gồm: MUC, B-CUBED và CEAF.
+Hiệu năng hệ thống được đánh giá qua ba độ đo: \emph{độ đúng đắn} (precision), \emph{độ đầy đủ} (recall) và \emph{độ F} (F-measure). Bài báo đánh giá các hệ thống dự thi thử thách i2b2 sử dụng ba phương pháp khác nhau để tính toán các độ này, bao gồm: MUC, B-CUBED và CEAF.
 
 \subsection*{Hệ đo MUC}
 Hệ đo MUC \cite{MarcVilain1995} xem chuỗi đồng tham chiếu là một danh sách các liên kết giữa các cặp khái niệm tạo nên chuỗi, từ đó đánh giá hệ thống dựa trên số lượng ít nhất các liên kết cần được thêm vào và loại bỏ để các chuỗi đồng tham chiếu xuất ra bởi hệ thống trùng với các chuỗi kết quả. Có thể hiểu số liên kết cần được loại bỏ là độ thiếu chính xác (precision \emph{error}) và số liên kết cần được thêm vào là độ thiếu đầy đủ (recall \emph{error}). 
@@ -78,7 +78,7 @@ Hệ đo B-CUBED được thiết kể để khắc phục hai nhược điểm 
 Độ chính xác và đầy đủ trên toàn văn bản được tính theo công thức:
 \[P=\sum_{i=1}^{M} w_i \times P_i,\quad R=\sum_{i=1}^{M} w_i\times R_i\]
 
-\noindent trong đó, $w_i$ là trọng số của khái niệm thứ $i$, $M$ là số khái niệm của văn bản đang xét. Bài báo đánh giá các hệ thống dự thi thử thách I2B2 năm 2011 sử dụng chung một trọng số cho tất cả các khái niệm, $w_i=1/M$. Để tiện cho việc so sánh với hệ thống \cite{YanXu2012}, chúng tôi cũng dùng cách gán trọng số như trên.
+\noindent trong đó, $w_i$ là trọng số của khái niệm thứ $i$, $M$ là số khái niệm của văn bản đang xét. Bài báo đánh giá các hệ thống dự thi thử thách i2b2 năm 2011 sử dụng chung một trọng số cho tất cả các khái niệm, $w_i=1/M$. Để tiện cho việc so sánh với hệ thống \cite{YanXu2012}, chúng tôi cũng dùng cách gán trọng số như trên.
 
 Như vậy để thuận tiện trong tính toán, nếu gọi $m$ là một khái niệm trong văn bản $d$ có chứa $M$ khái niệm, $G_m$ là chuỗi kết quả có chứa $m$, $S_m$ là chuỗi hệ thống có chứa $m$, $O_m$ là chuỗi giao nhau giữa $G_m$ và $S_m$ (tức $O_m=G_m\cap S_m$) thì độ đúng đắn và độ đầy đủ của hệ B-CUBED cho $d$ được tính như sau:
 \[P_d=\frac{1}{M}\sum_{m\in d}\frac{|O_m|}{|S_m|},\quad R_d=\frac{1}{M}\sum_{m\in d}\frac{|O_m|}{|G_m|}\]
@@ -116,7 +116,7 @@ Trong trường hợp $|S|>|G|$, vai trò của $S$ và $G$ được hoán đổ
 \phi_3(s,g)=|s\cap g|&,\quad\phi_4(s,g)=\frac{2|s\cap g|}{|s|+|g|}
 \end{align*}
 
-Theo nhận định của chính tác giả, $\phi_3$ và $\phi_4$ tỏ ra hiệu quả hơn trong việc đánh giá các chuỗi đồng tham chiếu. Mặt khác, thử thách I2B2 năm 2011 sử dụng $\phi_4$ để đánh giá các hệ thống dự thi nên để cho tiện trong việc so sánh với hệ thống \cite{YanXu2012}, chúng tôi cũng sử dụng $\phi_4$ để đánh giá hệ thống của mình.
+Theo nhận định của chính tác giả, $\phi_3$ và $\phi_4$ tỏ ra hiệu quả hơn trong việc đánh giá các chuỗi đồng tham chiếu. Mặt khác, thử thách i2b2 năm 2011 sử dụng $\phi_4$ để đánh giá các hệ thống dự thi nên để cho tiện trong việc so sánh với hệ thống \cite{YanXu2012}, chúng tôi cũng sử dụng $\phi_4$ để đánh giá hệ thống của mình.
 
 Ngoài ra, việc tìm kiếm một sự sắp xếp tối ưu giữa hai tập chuỗi không thể được thực hiện bằng cách duyệt toàn bộ các sự sắp xếp đầy đủ có thể vì số các cách sắp xếp đầy đủ là rất lớn, $\binom{M}{m}m!$. Về mặt giải thuật, cách làm này được xem là có độ phức tạp hàm giai thừa. Tuy nhiên theo nhận định của tác giả CEAF, bài toán sắp xếp tối ưu này chính là bài toán giao công việc (\emph{assignment problem}) hay bài toán vận chuyển (\emph{transportation problem}) đã được giải quyết bởi Harold W. Kuhn vào năm 1955 với giải thuật có tên là \emph{phương pháp Hungary} \cite{HungarianMethod} có độ phức tạp là $\BigO(n^4)$.
 
