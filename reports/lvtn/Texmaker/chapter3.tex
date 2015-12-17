@@ -380,7 +380,7 @@ WP\$ & Nghi vấn từ sở hữu & whose, whosever \\
 \subsection*{MetaMap}
 UMLS là kho từ vựng y sinh do Thư viện Y học Quốc gia Hoa Kì tiến hành xây dựng từ năm 1986 nhằm phục vụ cho nhu cầu tra cứu thông tin đã được chuẩn hóa về các loại bệnh, thuốc, nguyên nhân hoặc các thuật ngữ trong y tế. Bộ từ điển UMLS tích hợp hơn 2 triệu tên gọi cho khoảng 900.000 khái niệm y sinh và khoảng 12 triệu tên gọi cho quan hệ giữa các khái niệm này \cite{Olivier2004}. Hiện nay, bộ từ điển UMLS vẫn đang được tiếp tục cập nhật và cho phép sử dụng miễn phí phục vụ mục đích nghiên cứu khoa học.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \resizebox{\textwidth}{!}{
 \begin{tikzpicture}[%
@@ -390,7 +390,7 @@ UMLS là kho từ vựng y sinh do Thư viện Y học Quốc gia Hoa Kì tiến
 	every join/.style={->, draw},
 	font=\scriptsize\sffamily]
 	\tikzset{
-		bproc/.style = {draw, rectangle, on chain, on grid, text width=2.8cm, minimum height=1.4cm, inner sep=0.5mm, align=center}
+		bproc/.style = {draw, rectangle, on chain, on grid, text width=2.5cm, minimum height=1.4cm, inner sep=0.5mm, align=center}
 	};
 	
 	\node[bproc](tkn){Nhận diện câu văn và tách từ};
@@ -418,13 +418,7 @@ MetaMap là công cụ hỗ trợ nhận dạng các khái niệm trong bộ t�
 
 Ví dụ khi đưa câu văn \texttt{"The patient has been HIV positive for two years"} vào hệ thống MetaMap để phân tích thì ở kết quả của bước một, câu văn được phân tách thành ba cụm từ \texttt{"The patient}, \texttt{"has been"} và \texttt{"HIV positive for two years"}. Sau đó MetaMap thực hiện bước thứ hai lên các cụm từ này để cho ra kết quả cuối cùng, chúng được trình bày trên Hình \ref{metamapoutput}. Sau đây là các giải thích cho các kết quả này:
 
-\begin{itemize}
-\item Dòng 1, 2 và 3 mô tả cụm từ \texttt{"The patient"} với một ứng cử viên có độ tin cậy 1000 ứng với khái niệm \texttt{"patient"} mang mã số khái niệm là C0030705. Khái niệm \texttt{"patient"} thuộc lớp ngữ nghĩa bệnh nhân hoặc nhóm khuyết tật (Patient or Disabled Group) trong bộ từ điển UMLS.
-\item Dòng 5 và 7 lần lượt mô tả các từ \texttt{"has"} và \texttt{"been"} không được tìm thấy bất kì ứng cử viên nào.
-\item Các dòng từ 9 trở đi mô tả kết quả cho cụm từ \texttt{"HIV positive for two years"} với một ứng cử viên có độ tin cậy 875. Ứng cử viên này bao gồm ba khái niệm là \texttt{"positive for HIV"} mang mã số là C0019699, \texttt{"two"} mang mã số là C0205448 và \texttt{"years"} mang mã số là C0439234. 
-\end{itemize}
-
-\begin{figure}[ht]
+\begin{figure}[t]
 \centering
 \lstset{
 	keywords={},
@@ -444,27 +438,20 @@ Ví dụ khi đưa câu văn \texttt{"The patient has been HIV positive for two 
 \caption{Mẫu kết quả của công cụ MetaMap\label{metamapoutput}}
 \end{figure}
 
+\begin{itemize}
+\item Dòng 1, 2 và 3 mô tả cụm từ \texttt{"The patient"} được tìm thấy một ứng cử viên có độ tin cậy 1000 ứng với khái niệm \texttt{"patient"} mang mã số C0030705. Khái niệm \texttt{"patient"} thuộc lớp ngữ nghĩa bệnh nhân hoặc nhóm khuyết tật (Patient or Disabled Group) trong bộ từ điển UMLS.
+\item Dòng 5 và 7 lần lượt mô tả các từ \texttt{"has"} và \texttt{"been"} không được tìm thấy bất kì ứng cử viên nào.
+\item Các dòng từ 9 trở đi mô tả kết quả cho cụm từ \texttt{"HIV positive for two years"} với một ứng cử viên có độ tin cậy 875. Ứng cử viên này bao gồm ba khái niệm là \texttt{"positive for HIV"} mang mã số là C0019699, \texttt{"two"} mang mã số là C0205448 và \texttt{"years"} mang mã số là C0439234. 
+\end{itemize}
+
 \subsection*{cTakes và các công cụ dựa trên cTakes}
 Apache cTakes (clinical Text Analysis and Knowledge Extraction System) là hệ thống xử lý ngôn ngữ tự nhiên giúp rút trích thông tin từ các bệnh án điện tử dưới dạng văn bản thuần không có cấu trúc. Hệ thống cTakes có khả năng nhận diện các thực thể trong y tế như tên thuốc, các bất thường sức khỏe hay các triệu chứng/rối loạn, v.v... Hệ thống cTakes bao gồm nhiều bộ phận nhỏ như phát hiện câu văn, đánh dấu vai trò ngữ pháp, tra cứu dựa trên các bộ từ điển y tế hay chuẩn hóa thông tin y tế, v.v... Mỗi bộ phận của cTakes được huấn luyện chuyên biệt cho lĩnh vực y tế, các thông tin rút trích có thể được sử dụng làm đầu vào cho các hệ thống hỗ trợ ra quyết định y tế hoặc dùng để nghiên cứu.
 
-cTakes được xây dựng dựa trên framework UIMA cho phép ứng dụng được cấu tách thành từ các hệ thống con (subsystem). Mỗi hệ thống con hiện thực một nhiệm vụ nhất định và được cung cấp một tập tin XML đóng vai trò là siêu dữ liệu mô tả hệ thống con đó. Hình \ref{ctakesdesc} trình bày tập tin XML mô tả hệ thống xác định từ loại của cTakes, đầu vào của hệ thống này là đường dẫn tới tập tin mô hình đã được huấn luyện cho việc xác định từ loại. Ngoài ra framework UIMA còn hỗ trợ cTakes gói các hệ thống con lại như một mạng lưới các dịch vụ, trong đó các hệ thống con của cùng mạng lưới có thể giao tiếp với nhau thông quá các miêu tả trong tập tin XML, tương tự như mô hình đường ống (pipeline). Trong phạm vi luận án, chúng tôi sử dụng công cụ MedEx \cite{HuaXu2009} và MedTime \cite{Sohn2013} được xây dựng dựa trên cTakes và được cung cấp bởi hội đồng Open Health Natural Language Processing hỗ trợ cho quá trình rút trích đặc trưng.
+%cTakes được xây dựng dựa trên framework UIMA cho phép ứng dụng được cấu tách thành từ các hệ thống con (subsystem). Mỗi hệ thống con hiện thực một nhiệm vụ nhất định và được cung cấp một tập tin XML đóng vai trò là siêu dữ liệu mô tả hệ thống con đó. Hình \ref{ctakesdesc} trình bày tập tin XML mô tả hệ thống xác định từ loại của cTakes, đầu vào của hệ thống này là đường dẫn tới tập tin mô hình đã được huấn luyện cho việc xác định từ loại. Ngoài ra framework UIMA còn hỗ trợ cTakes gói các hệ thống con lại như một mạng lưới các dịch vụ, trong đó các hệ thống con của cùng mạng lưới có thể giao tiếp với nhau thông quá các miêu tả trong tập tin XML, tương tự như mô hình đường ống (pipeline). Trong phạm vi luận án, chúng tôi sử dụng công cụ MedEx \cite{HuaXu2009} và MedTime \cite{Sohn2013} được xây dựng dựa trên cTakes và được cung cấp bởi hội đồng Open Health Natural Language Processing hỗ trợ cho quá trình rút trích đặc trưng.
 
-MedEx là công cụ hỗ trợ trích xuất các thông tin ngữ nghĩa về thuốc y tế từ các văn bản thuần không có cấu trúc. Trong bệnh án điện tử, các thông tin về thuốc, bao gồm tên thuốc và các chỉ dẫn về cách sử dụng, thường được lưu trữ dưới dạng những câu văn tường thuật. Ví dụ, hồ sơ xuất viện thường chứa những mô tả về các lần sử dụng thuốc của bệnh nhân trong quá trình điều trị, như câu \texttt{"The patient was upgraded to Prilosec 20 mg per day for possible treatment of gastritis"} chứa tên thuốc \texttt{"Prilosec"} với liều lượng là \texttt{"20 mg"} và sử dụng mỗi ngày (\texttt{"per day"}). Các thông tin về thuốc là những thông tin quan trọng để phân giải đồng tham chiếu, vì vậy chúng tôi sử dụng MedEx để hỗ trợ cho việc rút trích các đặc trưng liên quan đến chúng. Bảng \ref{tab:med-info} trình bày các thông tin thuốc mà MedEx hỗ trợ trích xuất. Hình \ref{medex-eg} mô tả một tập tin được xuất ra bởi MedEx.
-%
-%\noindent trong đó thông tin về thuốc bao gồm:
-%
-%\begin{itemize}
-%\item Tên thuốc (Drug name) như kháng sinh, Vancomycin , ...
-%\item Nhà sản xuất (Brand name) như Zocor, ...
-%\item Dạng thuốc (Drug form) như dạng viên nén, dạng viên nhộng, ...
-%\item Mức độ (Strength) như 10mg, 5ml, ...
-%\item Liều lượng (Dose amount) như 2 viên, ...
-%\item Đường hấp thụ (Route) như qua đường miệng, qua đường tiêm, ...
-%\item Tần số (Frequency) như 2 lần mỗi ngày, mỗi sáng, ...
-%\item Thời gian (Duration) như trong 10 ngày, trong 1 tháng, ...
-%\end{itemize}
+cTakes được xây dựng dựa trên framework UIMA cho phép ứng dụng được cấu tách thành từ các hệ thống con (subsystem). Mỗi hệ thống con hiện thực một nhiệm vụ nhất định và được cung cấp một tập tin XML đóng vai trò là siêu dữ liệu mô tả hệ thống con đó. Ngoài ra framework UIMA còn hỗ trợ cTakes gói các hệ thống con lại như một mạng lưới các dịch vụ, trong đó các hệ thống con của cùng mạng lưới có thể giao tiếp với nhau thông quá các miêu tả trong tập tin XML, tương tự như mô hình đường ống (pipeline). Trong phạm vi luận án, chúng tôi sử dụng công cụ MedEx \cite{HuaXu2009} và MedTime \cite{Sohn2013} được xây dựng dựa trên cTakes và được cung cấp bởi hội đồng Open Health Natural Language Processing hỗ trợ cho quá trình rút trích đặc trưng.
 
-\begin{table}[ht]
+\begin{table}[t]
 \centering\ra{1.2}
 \caption{Các loại thông tin thuốc được trích xuất bởi MedEx\label{tab:med-info}}
 \footnotesize\sffamily
@@ -484,28 +471,43 @@ Thời gian sử dụng (duration) & `for 10 days', `in a month',...\\
 \end{tabularx}
 \end{table}
 
+MedEx là công cụ hỗ trợ trích xuất các thông tin ngữ nghĩa về thuốc y tế từ các văn bản thuần không có cấu trúc. Trong bệnh án điện tử, các thông tin về thuốc, bao gồm tên thuốc và các chỉ dẫn về cách sử dụng, thường được lưu trữ dưới dạng những câu văn tường thuật. Ví dụ, hồ sơ xuất viện thường chứa những mô tả về các lần sử dụng thuốc của bệnh nhân trong quá trình điều trị, như câu \texttt{"The patient was upgraded to Prilosec 20 mg per day for possible treatment of gastritis"} chứa tên thuốc \texttt{"Prilosec"} với liều lượng là \texttt{"20 mg"} và sử dụng mỗi ngày (\texttt{"per day"}). Các thông tin về thuốc là những thông tin quan trọng để phân giải đồng tham chiếu, vì vậy chúng tôi sử dụng MedEx để hỗ trợ cho việc rút trích các đặc trưng liên quan đến chúng. Bảng \ref{tab:med-info} trình bày các thông tin thuốc mà MedEx hỗ trợ trích xuất. Hình \ref{medex-eg} mô tả một tập tin được xuất ra bởi MedEx.
+%
+%\noindent trong đó thông tin về thuốc bao gồm:
+%
+%\begin{itemize}
+%\item Tên thuốc (Drug name) như kháng sinh, Vancomycin , ...
+%\item Nhà sản xuất (Brand name) như Zocor, ...
+%\item Dạng thuốc (Drug form) như dạng viên nén, dạng viên nhộng, ...
+%\item Mức độ (Strength) như 10mg, 5ml, ...
+%\item Liều lượng (Dose amount) như 2 viên, ...
+%\item Đường hấp thụ (Route) như qua đường miệng, qua đường tiêm, ...
+%\item Tần số (Frequency) như 2 lần mỗi ngày, mỗi sáng, ...
+%\item Thời gian (Duration) như trong 10 ngày, trong 1 tháng, ...
+%\end{itemize}
+
 MedTime là công cụ hỗ trợ trích xuất các thông tin về thời gian trong văn bản thuần không có cấu trúc, bao gồm hai loại là thời gian tường minh và thời gian suy diễn. Thời gian tường minh là các dạng thời gian được ghi một cách cụ thể trong văn bản bao gồm ngày, tháng, năm và có hoặc không có thời điểm, ví dụ như 03/06/2015. Thời gian suy diễn là các mốc thời gian được trích xuất từ một số từ khóa đứng gần khái niệm đang xét hoặc các khái niệm chỉ về sự kiện trong y tế, ví dụ như \emph{ngày nhập viện} (admission date) hay \emph{ngày thứ 2 sau khi phẫu thuật} (post-op day 2). Giống như công cụ MedEx, MedTime nhận đầu vào là các văn bản thuần không có cấu trúc và xuất ra kết quả là một tập tin chứa các thông tin thời gian được nhận dạng (Hình \ref{medtime-eg}).
 
-\begin{figure}[ht]
-\centering
-\lstset{
-	language=xml,
-	keywords={},
-	tabsize=3,
-	%frame=lines,
-	frame=single,
-	xleftmargin=20pt,
-	framexleftmargin=15pt,
-	numbers=left,
-	numberstyle=\tiny,
-	numbersep=5pt,
-	breaklines=true,
-	showstringspaces=false,
-	columns=fullflexible,
-	basicstyle=\footnotesize\ttfamily}
-\lstinputlisting{sample_code/ctakes_desc.xml}
-\caption{Ví dụ nội dung tập tin XML mô tả hệ thống con cTakes\label{ctakesdesc}}
-\end{figure}
+%\begin{figure}[ht]
+%\centering
+%\lstset{
+%	language=xml,
+%	keywords={},
+%	tabsize=3,
+%	%frame=lines,
+%	frame=single,
+%	xleftmargin=20pt,
+%	framexleftmargin=15pt,
+%	numbers=left,
+%	numberstyle=\tiny,
+%	numbersep=5pt,
+%	breaklines=true,
+%	showstringspaces=false,
+%	columns=fullflexible,
+%	basicstyle=\footnotesize\ttfamily}
+%\lstinputlisting{sample_code/ctakes_desc.xml}
+%\caption{Ví dụ nội dung tập tin XML mô tả hệ thống con cTakes\label{ctakesdesc}}
+%\end{figure}
 \begin{figure}[ht]
 \centering
 \lstset{
