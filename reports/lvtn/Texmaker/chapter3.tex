@@ -15,6 +15,8 @@ Có thể xem đồng tham chiếu là một mối quan hệ giữa hai hay nhi�
 
 Một \emph{cặp khái niệm} gồm hai khái niệm có thể có hoặc không đồng tham chiếu với nhau. Đối với một cặp đồng tham chiếu, khái niệm đứng trước được gọi là \emph{tiền đề} (antecedent), khái niệm đứng sau được gọi là \emph{hồi chỉ} (anaphora). Những đặc trưng của một cặp khái niệm đa phần là những \emph{đặc trưng đồng thuận} (agreement feature), chúng mang giá trị là ``có'' khi cả hai khái niệm của cặp cùng đồng thuận về một đặc tính nào đó, ví dụ như sự đồng thuận về giới tính hay số lượng. Trong một văn bản, nhiều khái niệm có thể cùng tham chiếu tới cùng một thực thể, khi đó chúng tạo thành một chuỗi đồng tham chiếu.
 
+Mặc dù nhiều chuỗi đồng tham chiếu có thể được phân giải từ một văn bản, có một số lượng lớn các khái niệm không đồng tham chiếu với bất kì khái niệm nào khác. Các khái niệm loại này được gọi là \emph{khái niệm duy nhất} (singleton). Chúng có thể là những từ chỉ được đề cập một lần duy nhất hay là những khái niệm không diễn giải hay ám chỉ tới một thực thể nào trong thế giới thực, hoặc là những khái niệm tuy có cùng ý nghĩa nhưng lại là khái niệm duy nhất do ngữ cảnh mà chúng được đề cập đến. Số lượng các khái niệm duy nhất có thể rất nhiều tùy thuộc vào tập dữ liệu.
+
 \emph{Phân giải đồng tham chiếu} là công việc xác định những chuỗi đồng tham chiếu trong văn bản. Xuyên suốt luận văn này, chúng tôi gọi các chuỗi đồng tham chiếu được phân giải bởi con người là các \emph{chuỗi kết quả}, các chuỗi được xuất ra bởi hệ thống phân giải đồng tham chiếu là các \emph{chuỗi hệ thống}.
 
 \section{Các mô hình học máy phân giải đồng tham chiếu\label{coref-model}}
@@ -315,7 +317,7 @@ Trong nhiều trường hợp, các điểm đại diện của tập dữ liệ
 Việc tìm kiếm các bộ tham số tốt nhất cho hàm kernel có thể được thực hiện bằng nhiều cách, trong đó cách tìm kiếm lưới (grid search) được cho là đơn giản nhất và có thể song song hóa được. Ví dụ để huấn luyện một mô hình SVM với kernel Gauss, có hai tham số cần được xác định là $C$ (tham số đánh đổi ở phương trình (\ref{svm-soft-obj-func})) và $\gamma=\frac{1}{2\sigma^2}$ là tham số của kernel. Một cách tìm kiếm lưới thường được thực hiện là duyệt toàn bộ các cặp $(C,\gamma)$ với $C\in\{2^{-5},2^{-3},\dots,2^{13},2^{15}\}$ và $\gamma\in\{2^{-15},2^{-13},\dots,2^1,2^3\}$ để tìm ra bộ $(C,\gamma)$ tối ưu nhất dựa trên một phép kiểm chứng nào đó, ví dụ phép kiểm chứng chéo $k$ mẫu ($k$-fold cross validation).
 
 \subsection*{Mô hình SVM mở rộng}
-Mô hình SVM về bản chất chỉ phân loại được cho hai lớp, tuy nhiên trong thực tế có nhiều bài toán mà dữ liệu được phân vào nhiều hơn hai lớp. Để giải quyết các bài toán dạng này, một số phương pháp được đề xuất để mở rộng SVM cho các bài toán phân loại nhiều lớp. Tư tưởng cơ bản của các phương pháp này là thay vì chỉ huấn luyện một mô hình, giải thuật học mở rộng huấn luyện nhiều mô hình SVM phân loại hai lớp, sau đó sử dụng biểu quyết (vote) để quyết định phân lớp của dữ liệu. Có hai phương pháp thông dụng để mở rộng SVM cho phân loại nhiều lớp:
+Mô hình SVM về bản chất chỉ phân loại được cho hai lớp, tuy nhiên trong thực tế có nhiều bài toán mà dữ liệu được phân vào nhiều hơn hai lớp. Để giải quyết các bài toán dạng này, một số phương pháp được đề xuất để mở rộng SVM với tư tưởng cơ bản là: thay vì chỉ huấn luyện một mô hình duy nhất, giải thuật học mở rộng huấn luyện nhiều mô hình SVM phân loại hai lớp, sau đó sử dụng biểu quyết (vote) để quyết định phân lớp của dữ liệu. Có hai phương pháp thông dụng để mở rộng SVM cho phân loại nhiều lớp:
 \begin{enumerate}
 \item \emph{Một đấu với tất cả (one-against-all):}
 
@@ -336,7 +338,7 @@ Huấn luyện $m$ mô hình cho bài toán có $n$ lớp, mỗi mô hình có n
 Sau khi huấn luyện, với mỗi điểm dữ liệu cần phân loại $\vec{x}^*$, giải thuật lựa chọn phân lớp mà $\vec{x}^*$ được phần lớn $m$ mô hình phân loại vào.
 \end{enumerate}
 
-\section{Các công cụ hỗ trợ rút trích đặc trưng} \label{tools}
+\section{Các công cụ hỗ trợ rút trích đặc trưng\label{tools}}
 Vì đầu vào của hệ thống phân giải đồng tham chiếu là các văn bản thô và danh sách các khái niệm, chúng cần được rút trích đặc trưng và mã hóa thành dạng số để có thể đưa vào huấn luyện SVM. Để thuận tiện, chúng tôi sử dụng một số công cụ để xử lý chung về ngôn ngữ tự nhiên hay hỗ trợ rút trích một số thông tin ngữ nghĩa như thời gian hoặc các thông tin từ vựng liên quan đến chuyên ngành y tế. Sau đây chúng tôi trình bày các công cụ được sử dụng và mục đích cụ thể của chúng.
 
 \subsection*{OpenNLP}
@@ -386,11 +388,11 @@ UMLS là kho từ vựng y sinh do Thư viện Y học Quốc gia Hoa Kì tiến
 \begin{tikzpicture}[%
 	>=angle 60,
 	start chain=going right,
-	node distance=3cm and 0.8cm,
+	node distance=2.6cm and 0.8cm,
 	every join/.style={->, draw},
 	font=\scriptsize\sffamily]
 	\tikzset{
-		bproc/.style = {draw, rectangle, on chain, on grid, text width=2.5cm, minimum height=1.4cm, inner sep=0.5mm, align=center}
+		bproc/.style = {draw, rectangle, on chain, on grid, text width=2.3cm, minimum height=1.2cm, inner sep=0.5mm, align=center}
 	};
 	
 	\node[bproc](tkn){Nhận diện câu văn và tách từ};
@@ -398,13 +400,13 @@ UMLS là kho từ vựng y sinh do Thư viện Y học Quốc gia Hoa Kì tiến
 	\node[bproc,join](lkw){Tra cứu từ vựng};
 	\node[bproc,join](sta){Phân tích cú pháp câu};
 	
-	\node[bproc,below=of tkn](vgp){Bộ sinh các biến thể từ cụm từ cho trước};
+	\node[bproc,below=of tkn](vgp){Bộ sinh các biến thể};
 	\node[bproc,join](cdd){Nhận dạng các ứng cử viên (candidate)};
 	\node[bproc,join](map){Xây dựng các ánh xạ};
 	\node[bproc,join](ars){Phân giải nhập nhằng};
-	\node[cylinder, minimum width=1.3cm, minimum height=1.3cm, draw, shape border rotate=90, below=1cm of map,shape aspect=.4](umls){UMLS};
+	\node[cylinder, minimum width=1.3cm, minimum height=1.2cm, draw, shape border rotate=90, below=0.7cm of map,shape aspect=.4](umls){UMLS};
 	
-	\draw[->] (sta.south) -- ++(down:0.8cm) -| (vgp.north);	
+	\draw[->] (sta.south) -- ++(down:0.7cm) -| (vgp.north);	
 	\draw[dashed] ($(tkn.north west)+(-0.4,0.4)$) rectangle ($(sta.south east)+(0.4,-0.4)$);
 	\coordinate[left=2.2cm of tkn.west](left-tkn);
 	\draw[->] (left-tkn) -- (tkn) node[above,midway]{dữ liệu đầu vào};
@@ -451,6 +453,20 @@ Apache cTakes (clinical Text Analysis and Knowledge Extraction System) là hệ 
 
 cTakes được xây dựng dựa trên framework UIMA cho phép ứng dụng được cấu tách thành từ các hệ thống con (subsystem). Mỗi hệ thống con hiện thực một nhiệm vụ nhất định và được cung cấp một tập tin XML đóng vai trò là siêu dữ liệu mô tả hệ thống con đó. Ngoài ra framework UIMA còn hỗ trợ cTakes gói các hệ thống con lại như một mạng lưới các dịch vụ, trong đó các hệ thống con của cùng mạng lưới có thể giao tiếp với nhau thông quá các miêu tả trong tập tin XML, tương tự như mô hình đường ống (pipeline). Trong phạm vi luận án, chúng tôi sử dụng công cụ MedEx \cite{HuaXu2009} và MedTime \cite{Sohn2013} được xây dựng dựa trên cTakes và được cung cấp bởi hội đồng Open Health Natural Language Processing hỗ trợ cho quá trình rút trích đặc trưng.
 
+MedEx là công cụ hỗ trợ trích xuất các thông tin ngữ nghĩa về thuốc y tế từ các văn bản thuần không có cấu trúc. Trong bệnh án điện tử, các thông tin về thuốc, bao gồm tên thuốc và các chỉ dẫn về cách sử dụng, thường được lưu trữ dưới dạng những câu văn tường thuật. Ví dụ, hồ sơ xuất viện thường chứa những mô tả về các lần sử dụng thuốc của bệnh nhân trong quá trình điều trị, như câu \texttt{"The patient was upgraded to Prilosec 20 mg per day for possible treatment of gastritis"} chứa tên thuốc \texttt{"Prilosec"} với liều lượng là \texttt{"20 mg"} và sử dụng mỗi ngày (\texttt{"per day"}). Các thông tin về thuốc là những thông tin quan trọng để phân giải đồng tham chiếu, vì vậy chúng tôi sử dụng MedEx để hỗ trợ cho việc rút trích các đặc trưng liên quan đến chúng. Bảng \ref{tab:med-info} trình bày các thông tin thuốc mà MedEx hỗ trợ trích xuất. Hình \ref{medex-eg} mô tả một tập tin được xuất ra bởi MedEx.
+%
+%\noindent trong đó thông tin về thuốc bao gồm:
+%
+%\begin{itemize}
+%\item Tên thuốc (Drug name) như kháng sinh, Vancomycin , ...
+%\item Nhà sản xuất (Brand name) như Zocor, ...
+%\item Dạng thuốc (Drug form) như dạng viên nén, dạng viên nhộng, ...
+%\item Mức độ (Strength) như 10mg, 5ml, ...
+%\item Liều lượng (Dose amount) như 2 viên, ...
+%\item Đường hấp thụ (Route) như qua đường miệng, qua đường tiêm, ...
+%\item Tần số (Frequency) như 2 lần mỗi ngày, mỗi sáng, ...
+%\item Thời gian (Duration) như trong 10 ngày, trong 1 tháng, ...
+%\end{itemize}
 \begin{table}[t]
 \centering\ra{1.2}
 \caption{Các loại thông tin thuốc được trích xuất bởi MedEx\label{tab:med-info}}
@@ -470,21 +486,6 @@ Thời gian sử dụng (duration) & `for 10 days', `in a month',...\\
 \bottomrule
 \end{tabularx}
 \end{table}
-
-MedEx là công cụ hỗ trợ trích xuất các thông tin ngữ nghĩa về thuốc y tế từ các văn bản thuần không có cấu trúc. Trong bệnh án điện tử, các thông tin về thuốc, bao gồm tên thuốc và các chỉ dẫn về cách sử dụng, thường được lưu trữ dưới dạng những câu văn tường thuật. Ví dụ, hồ sơ xuất viện thường chứa những mô tả về các lần sử dụng thuốc của bệnh nhân trong quá trình điều trị, như câu \texttt{"The patient was upgraded to Prilosec 20 mg per day for possible treatment of gastritis"} chứa tên thuốc \texttt{"Prilosec"} với liều lượng là \texttt{"20 mg"} và sử dụng mỗi ngày (\texttt{"per day"}). Các thông tin về thuốc là những thông tin quan trọng để phân giải đồng tham chiếu, vì vậy chúng tôi sử dụng MedEx để hỗ trợ cho việc rút trích các đặc trưng liên quan đến chúng. Bảng \ref{tab:med-info} trình bày các thông tin thuốc mà MedEx hỗ trợ trích xuất. Hình \ref{medex-eg} mô tả một tập tin được xuất ra bởi MedEx.
-%
-%\noindent trong đó thông tin về thuốc bao gồm:
-%
-%\begin{itemize}
-%\item Tên thuốc (Drug name) như kháng sinh, Vancomycin , ...
-%\item Nhà sản xuất (Brand name) như Zocor, ...
-%\item Dạng thuốc (Drug form) như dạng viên nén, dạng viên nhộng, ...
-%\item Mức độ (Strength) như 10mg, 5ml, ...
-%\item Liều lượng (Dose amount) như 2 viên, ...
-%\item Đường hấp thụ (Route) như qua đường miệng, qua đường tiêm, ...
-%\item Tần số (Frequency) như 2 lần mỗi ngày, mỗi sáng, ...
-%\item Thời gian (Duration) như trong 10 ngày, trong 1 tháng, ...
-%\end{itemize}
 
 MedTime là công cụ hỗ trợ trích xuất các thông tin về thời gian trong văn bản thuần không có cấu trúc, bao gồm hai loại là thời gian tường minh và thời gian suy diễn. Thời gian tường minh là các dạng thời gian được ghi một cách cụ thể trong văn bản bao gồm ngày, tháng, năm và có hoặc không có thời điểm, ví dụ như 03/06/2015. Thời gian suy diễn là các mốc thời gian được trích xuất từ một số từ khóa đứng gần khái niệm đang xét hoặc các khái niệm chỉ về sự kiện trong y tế, ví dụ như \emph{ngày nhập viện} (admission date) hay \emph{ngày thứ 2 sau khi phẫu thuật} (post-op day 2). Giống như công cụ MedEx, MedTime nhận đầu vào là các văn bản thuần không có cấu trúc và xuất ra kết quả là một tập tin chứa các thông tin thời gian được nhận dạng (Hình \ref{medtime-eg}).
 

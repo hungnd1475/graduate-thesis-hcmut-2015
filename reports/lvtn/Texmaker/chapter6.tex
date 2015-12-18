@@ -56,11 +56,11 @@ Hiệu năng hệ thống được đánh giá qua ba độ đo: \emph{độ đ�
 Hệ đo MUC \cite{MarcVilain1995} xem chuỗi đồng tham chiếu là một danh sách các liên kết giữa các cặp khái niệm tạo nên chuỗi, từ đó đánh giá hệ thống dựa trên số lượng ít nhất các liên kết cần được thêm vào và loại bỏ để các chuỗi đồng tham chiếu xuất ra bởi hệ thống trùng với các chuỗi kết quả. Có thể hiểu số liên kết cần được loại bỏ là độ thiếu chính xác (precision \emph{error}) và số liên kết cần được thêm vào là độ thiếu đầy đủ (recall \emph{error}). 
 
 Với mỗi văn bản $d$, gọi $G$ là tập các chuỗi kết quả, $S$ là tập các chuỗi hệ thống. Các độ đúng đắn ($P$) và độ đầy đủ ($R$) được tính như sau:
-\[P_d=\frac{\sum_{s\in S} \left(|s| - m(s, G)\right)}{\sum_{s\in S}\left(|s| - 1\right)}\]
-\[R_d=\frac{\sum_{g\in G}(|g|-m(g,S))}{\sum_{g\in G}(|g|-1)}\]
+\[P_d^{\text{MUC}}=\frac{\sum_{s\in S} \left(|s| - m(s, G)\right)}{\sum_{s\in S}\left(|s| - 1\right)}\]
+\[R_d^{\text{MUC}}=\frac{\sum_{g\in G}(|g|-m(g,S))}{\sum_{g\in G}(|g|-1)}\]
 
 \noindent trong đó, $|s|$ là số khái niệm tạo thành chuỗi $s$, $m(s,G)$ được tính là tổng số chuỗi trong $G$ có giao nhau với $s$ cộng với số khái niệm trong $s$ không xuất hiện trong tất cả các chuỗi trong $G$. Độ $F$ của hệ MUC là trung bình điều hòa của độ chính xác và độ đầy đủ:
-\[F_d=\frac{2\times P_d\times R_d}{P_d + R_d}\]
+\[F_d^{\text{MUC}}=\frac{2\times P_d\times R_d}{P_d + R_d}\]
 
 \subsection*{Hệ đo B-CUBED}
 Khác với hệ đo MUC đánh giá dựa trên sự thiếu và thừa các liên kết trong chuỗi hệ thống, hệ đo B-CUBED đánh giá hiệu năng trên mỗi khái niệm trong văn bản. Theo nhận định của các tác giả hệ đo B-CUBED, cách đánh giá dựa trên các liên kết có hai nhược điểm \cite{AmitBagga1998}:
@@ -81,7 +81,7 @@ Hệ đo B-CUBED được thiết kể để khắc phục hai nhược điểm 
 \noindent trong đó, $w_i$ là trọng số của khái niệm thứ $i$, $M$ là số khái niệm của văn bản đang xét. Bài báo đánh giá các hệ thống dự thi thử thách i2b2 năm 2011 sử dụng chung một trọng số cho tất cả các khái niệm, $w_i=1/M$. Để tiện cho việc so sánh với hệ thống \cite{YanXu2012}, chúng tôi cũng dùng cách gán trọng số như trên.
 
 Như vậy để thuận tiện trong tính toán, nếu gọi $m$ là một khái niệm trong văn bản $d$ có chứa $M$ khái niệm, $G_m$ là chuỗi kết quả có chứa $m$, $S_m$ là chuỗi hệ thống có chứa $m$, $O_m$ là chuỗi giao nhau giữa $G_m$ và $S_m$ (tức $O_m=G_m\cap S_m$) thì độ đúng đắn và độ đầy đủ của hệ B-CUBED cho $d$ được tính như sau:
-\[P_d=\frac{1}{M}\sum_{m\in d}\frac{|O_m|}{|S_m|},\quad R_d=\frac{1}{M}\sum_{m\in d}\frac{|O_m|}{|G_m|}\]
+\[P_d^{\text{B-CUBED}}=\frac{1}{M}\sum_{m\in d}\frac{|O_m|}{|S_m|},\quad R_d^{\text{B-CUBED}}=\frac{1}{M}\sum_{m\in d}\frac{|O_m|}{|G_m|}\]
 
 Độ F của hệ B-CUBED được tính tương tự như hệ MUC.
 
@@ -118,10 +118,10 @@ Trong trường hợp $|S|>|G|$, vai trò của $S$ và $G$ được hoán đổ
 
 Theo nhận định của chính tác giả, $\phi_3$ và $\phi_4$ tỏ ra hiệu quả hơn trong việc đánh giá các chuỗi đồng tham chiếu. Mặt khác, thử thách i2b2 năm 2011 sử dụng $\phi_4$ để đánh giá các hệ thống dự thi nên để cho tiện trong việc so sánh với hệ thống \cite{YanXu2012}, chúng tôi cũng sử dụng $\phi_4$ để đánh giá hệ thống của mình.
 
-Ngoài ra, việc tìm kiếm một sự sắp xếp tối ưu giữa hai tập chuỗi không thể được thực hiện bằng cách duyệt toàn bộ các sự sắp xếp đầy đủ có thể vì số các cách sắp xếp đầy đủ là rất lớn, $\binom{M}{m}m!$. Về mặt giải thuật, cách làm này được xem là có độ phức tạp hàm giai thừa. Tuy nhiên theo nhận định của tác giả CEAF, bài toán sắp xếp tối ưu này chính là bài toán giao công việc (\emph{assignment problem}) hay bài toán vận chuyển (\emph{transportation problem}) đã được giải quyết bởi Harold W. Kuhn vào năm 1955 với giải thuật có tên là \emph{phương pháp Hungary} \cite{HungarianMethod} có độ phức tạp là $\BigO(n^4)$.
+Ngoài ra, việc tìm kiếm một sự sắp xếp tối ưu giữa hai tập chuỗi không thể được thực hiện bằng cách duyệt toàn bộ các sự sắp xếp đầy đủ có thể vì số các cách sắp xếp đầy đủ là rất lớn, $\binom{M}{m}m!$. Về mặt giải thuật, cách làm này được xem là có độ phức tạp hàm giai thừa. Tuy nhiên theo nhận định của tác giả CEAF, bài toán sắp xếp tối ưu này chính là bài toán giao công việc (\emph{assignment problem}) hay bài toán vận chuyển (\emph{transportation problem}) đã được giải quyết bởi Harold W. Kuhn vào năm 1955 với giải thuật có tên là \emph{phương pháp Hungary} có độ phức tạp là $\BigO(n^4)$ \cite{HungarianMethod}.
 
 Từ đây, hệ CEAF tính độ đúng đắn và độ đầy đủ cho một văn bản $d$ theo công thức:
-\[P_d=\frac{\Phi(H^*)}{\sum_{s\in S} \phi(s,s)},\quad R_d=\frac{\Phi(H^*)}{\sum_{g\in G} \phi(g,g)}\]
+\[P_d^{\text{CEAF}}=\frac{\Phi(H^*)}{\sum_{s\in S} \phi(s,s)},\quad R_d^{\text{CEAF}}=\frac{\Phi(H^*)}{\sum_{g\in G} \phi(g,g)}\]
 
 Độ F của hệ CEAF được tính tương tự như hệ MUC.
 
@@ -144,29 +144,25 @@ Test & 0,631 & 0,558 & 0,568 && 0,812 & 0,676 & 0,637 && 0,634 & 0,580 & 0,589 &
 Treatment & 0,795 & 0,763 & 0,759 && 0,821 & 0,805 & 0,772 && 0,779 & 0,772 & 0,761 && 0,798 & 0,780 & 0,764 \\
 \end{rtable} 
 
-Thực nghiệm của chúng tôi cho thấy hiệu năng của mô hình phân loại bệnh nhân dựa trên kiểm chứng chéo 5 mẫu (5-fold cross validation) có độ chính xác, độ đầy đủ và độ F lần lượt là 0,948; 0,961 và 0,955. Bảng \ref{tab:person-cmp} so sánh kết quả đánh giá phân giải đồng tham chiếu cho lớp Person với việc sử dụng và không sử dụng đặc trưng Patient-class. Hệ thống với đặc trưng Patient-class có hiệu năng được cải thiện lên đến xx\%, điều này cho thấy thông tin về bệnh nhân trong miền văn bản BAĐT là một thông tin rất hữu ích.
+Thực nghiệm của chúng tôi cho thấy hiệu năng của mô hình phân loại bệnh nhân dựa trên kiểm chứng chéo 5 mẫu (5-fold cross validation) có độ chính xác, độ đầy đủ và độ F lần lượt là 0,948; 0,961 và 0,955. Bảng \ref{tab:person-cmp} so sánh kết quả đánh giá phân giải đồng tham chiếu cho lớp Person với việc sử dụng và không sử dụng đặc trưng Patient-class. Hệ thống với đặc trưng Patient-class có hiệu năng được cải thiện lên đến 21,75\%, điều này cho thấy thông tin về bệnh nhân trong miền văn bản BAĐT là một thông tin rất hữu ích.
 
 \begin{table}[t]
 \centering\ra{1.3}
-\caption{Sự hiệu quả của phân giải lớp Person khi có đặc trưng phân loại bệnh nhân\label{tab:person-cmp}}
+\caption{Hiệu quả phân giải lớp Person khi có đặc trưng Patient-class\label{tab:person-cmp}}
 \footnotesize\sffamily
 \begin{tabularx}{0.9\textwidth}{@{}lCCCC@{}}
 \toprule
 & \textbf{P} & \textbf{R} & \textbf{F} & \% tăng lên\\
 \midrule
-Không có đặc trưng Patient-class & & & &\\
-Có đặc trưng Patient-class & 0.925 & 0.873 & 0.890 &\\
+Không có đặc trưng Patient-class & 0,770 & 0,755 & 0,731 &\\
+Có đặc trưng Patient-class & 0,925 & 0,873 & 0,890 & 21,75\%\\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-Ngoài ra, các kết quả đánh giá cho các lớp Problem, Test và Treatment của chúng tôi có độ F lần lượt là 0,670, 0,598 và 0,764. Tổng kết lại, chúng tôi rút ra một số nhận xét và giải thích về các kết quả đánh giá này:
+Ngoài ra, các kết quả đánh giá cho các lớp Problem, Test và Treatment của chúng tôi có độ F lần lượt là 0,670; 0,598 và 0,764. Tổng kết lại, chúng tôi rút ra một số nhận xét và giải thích về các kết quả đánh giá này:
 \begin{enumerate}
 \item Kết quả của lớp Test là thấp nhất vì theo quan sát của chúng tôi, tập vector đặc trưng dùng để huấn luyện của lớp Test chịu ảnh hưởng nhiều nhất bởi sự mất cân bằng mẫu (khi chưa qua chọn lọc mẫu, tỉ lệ mẫu âm trên mẫu dương là 381:1). Mặt khác, nhiều thủ tục y tế trong một hồ sơ xuất viện trùng tên hoàn toàn hoặc một phần với nhau nhưng lại là những khái niệm duy nhất không đồng tham chiếu với bất kì khái niệm nào, điều này khiến cho các đặc trưng so trùng chuỗi và tri thức nhân loại bị ảnh hưởng.
-\item Các kết quả đánh giá hệ thống của chúng tôi đều thấp hơn so với hệ thống \cite{YanXu2012}. Điều này có thể được giải thích một cách chủ quan như sau: các nhược điểm của mô hình cặp khái niệm khiến cho hiệu năng của mô hình này phụ thuộc rất nhiều vào hiệu năng của các mô hình phân loại. Vì giới hạn về thời gian và công nghệ, nhiều mô hình SVM được chúng tôi huấn luyện với bộ tham số mặc định mà không thông qua tìm kiếm lưới. Mặt khác, tuy chúng tôi đã hiện thực lại phần lớn các đặc trưng được nêu trong hệ thống \cite{YanXu2012}, các sai sót là không thể tránh khỏi, điển hình như:
-\begin{itemize}
-\item Sự khác biệt giữa các tập từ khóa và các biểu thức chính quy.
-\item Khác nhau trong thuật toán so sánh trùng chuỗi và tìm kiếm từ điển.
-\item Cách hiện thực các đặc trưng của chúng tôi có thể khác so với hệ thống \cite{YanXu2012} vì một số đặc trưng không được các tác giả hệ thống này giải thích hoặc giải thích rất sơ xài. Bênh cạnh đó còn có một số đặc trưng không được chúng tôi hiện thực, ví dụ đặc trưng giả định của thuốc (assertion), đặc trưng về không gian (spatial) hay đặc trưng so trùng dữ liệu MSRA sử dụng Probase--một nguồn tri thức nhân loại được xây dựng nội bộ bởi Micrsoft Research Asia (nơi các tác giả hệ thống \cite{YanXu2012} làm việc) mà chúng tôi không thể tiếp cận được.
-\end{itemize}
+\item Các kết quả đánh giá hệ thống của chúng tôi đều thấp hơn so với hệ thống \cite{YanXu2012}. Điều này có thể được giải thích một cách chủ quan như sau: các nhược điểm của mô hình cặp khái niệm khiến cho hiệu năng của mô hình này phụ thuộc rất nhiều vào hiệu năng của các mô hình phân loại. Vì giới hạn về thời gian và công nghệ, nhiều mô hình SVM được chúng tôi huấn luyện với bộ tham số mặc định mà không thông qua tìm kiếm lưới.
+\item Mặt khác, tuy chúng tôi đã hiện thực lại phần lớn các đặc trưng được nêu trong hệ thống \cite{YanXu2012}, các sai sót về chi tiết kĩ thuật là không thể tránh khỏi, ví dụ như sự khác biệt giữa các tập từ khóa và các biểu thức chính quy, hay sự khác nhau trong thuật toán so sánh trùng chuỗi và tìm kiếm từ điển. Bênh cạnh đó còn có một số đặc trưng không được chúng tôi hiện thực, ví dụ đặc trưng giả định của thuốc (assertion), đặc trưng về không gian (spatial) hay đặc trưng so trùng dữ liệu MSRA sử dụng Probase--một nguồn tri thức nhân loại được xây dựng nội bộ bởi Micrsoft Research Asia (nơi các tác giả hệ thống \cite{YanXu2012} làm việc) mà chúng tôi không thể tiếp cận được.
 \end{enumerate}
