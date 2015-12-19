@@ -146,7 +146,14 @@ Treatment & 0,795 & 0,763 & 0,759 && 0,821 & 0,805 & 0,772 && 0,779 & 0,772 & 0,
 
 Thực nghiệm của chúng tôi cho thấy hiệu năng của mô hình phân loại bệnh nhân dựa trên kiểm chứng chéo 5 mẫu (5-fold cross validation) có độ chính xác, độ đầy đủ và độ F lần lượt là 0,948; 0,961 và 0,955. Bảng \ref{tab:person-cmp} so sánh kết quả đánh giá phân giải đồng tham chiếu cho lớp Person với việc sử dụng và không sử dụng đặc trưng Patient-class. Hệ thống với đặc trưng Patient-class có hiệu năng được cải thiện lên đến 21,75\%, điều này cho thấy thông tin về bệnh nhân trong miền văn bản BAĐT là một thông tin rất hữu ích.
 
-\begin{table}[t]
+Ngoài ra, các kết quả đánh giá cho các lớp Problem, Test và Treatment của chúng tôi có độ F lần lượt là 0,670; 0,598 và 0,764. Tổng kết lại, chúng tôi rút ra một số nhận xét và giải thích về các kết quả đánh giá này:
+\begin{enumerate}
+\item Kết quả của lớp Test là thấp nhất vì theo quan sát của chúng tôi, tập vector đặc trưng dùng để huấn luyện của lớp Test chịu ảnh hưởng nhiều nhất bởi sự mất cân bằng mẫu (khi chưa qua chọn lọc mẫu, tỉ lệ mẫu âm trên mẫu dương là 381:1). Mặt khác, nhiều thủ tục y tế trong một hồ sơ xuất viện trùng tên hoàn toàn hoặc một phần với nhau nhưng lại là những khái niệm duy nhất không đồng tham chiếu với bất kì khái niệm nào, điều này khiến cho các đặc trưng so trùng chuỗi và tri thức nhân loại bị ảnh hưởng.
+\item Các kết quả đánh giá hệ thống của chúng tôi đều thấp hơn so với hệ thống \cite{YanXu2012}. Điều này có thể được giải thích một cách chủ quan như sau: các nhược điểm của mô hình cặp khái niệm khiến cho hiệu năng của mô hình này phụ thuộc rất nhiều vào hiệu năng của các mô hình phân loại. Vì giới hạn về thời gian và công nghệ, nhiều mô hình SVM được chúng tôi huấn luyện với bộ tham số mặc định mà không thông qua tìm kiếm lưới.
+\item Mặt khác, tuy chúng tôi đã hiện thực lại phần lớn các đặc trưng được nêu trong hệ thống \cite{YanXu2012}, các sai sót về chi tiết kĩ thuật là không thể tránh khỏi, ví dụ như sự khác biệt giữa các tập từ khóa và các biểu thức chính quy, hay sự khác nhau trong thuật toán so sánh trùng chuỗi và tìm kiếm từ điển. Bênh cạnh đó còn có một số đặc trưng không được chúng tôi hiện thực, ví dụ đặc trưng giả định của thuốc (assertion), đặc trưng về không gian (spatial) hay đặc trưng so trùng dữ liệu MSRA sử dụng Probase--một nguồn tri thức nhân loại được xây dựng nội bộ bởi Micrsoft Research Asia (nơi các tác giả hệ thống \cite{YanXu2012} làm việc) mà chúng tôi không thể tiếp cận được.
+\end{enumerate}
+
+\begin{table}[th]
 \centering\ra{1.3}
 \caption{Hiệu quả phân giải lớp Person khi có đặc trưng Patient-class\label{tab:person-cmp}}
 \footnotesize\sffamily
@@ -159,10 +166,3 @@ Có đặc trưng Patient-class & 0,925 & 0,873 & 0,890 & 21,75\%\\
 \bottomrule
 \end{tabularx}
 \end{table}
-
-Ngoài ra, các kết quả đánh giá cho các lớp Problem, Test và Treatment của chúng tôi có độ F lần lượt là 0,670; 0,598 và 0,764. Tổng kết lại, chúng tôi rút ra một số nhận xét và giải thích về các kết quả đánh giá này:
-\begin{enumerate}
-\item Kết quả của lớp Test là thấp nhất vì theo quan sát của chúng tôi, tập vector đặc trưng dùng để huấn luyện của lớp Test chịu ảnh hưởng nhiều nhất bởi sự mất cân bằng mẫu (khi chưa qua chọn lọc mẫu, tỉ lệ mẫu âm trên mẫu dương là 381:1). Mặt khác, nhiều thủ tục y tế trong một hồ sơ xuất viện trùng tên hoàn toàn hoặc một phần với nhau nhưng lại là những khái niệm duy nhất không đồng tham chiếu với bất kì khái niệm nào, điều này khiến cho các đặc trưng so trùng chuỗi và tri thức nhân loại bị ảnh hưởng.
-\item Các kết quả đánh giá hệ thống của chúng tôi đều thấp hơn so với hệ thống \cite{YanXu2012}. Điều này có thể được giải thích một cách chủ quan như sau: các nhược điểm của mô hình cặp khái niệm khiến cho hiệu năng của mô hình này phụ thuộc rất nhiều vào hiệu năng của các mô hình phân loại. Vì giới hạn về thời gian và công nghệ, nhiều mô hình SVM được chúng tôi huấn luyện với bộ tham số mặc định mà không thông qua tìm kiếm lưới.
-\item Mặt khác, tuy chúng tôi đã hiện thực lại phần lớn các đặc trưng được nêu trong hệ thống \cite{YanXu2012}, các sai sót về chi tiết kĩ thuật là không thể tránh khỏi, ví dụ như sự khác biệt giữa các tập từ khóa và các biểu thức chính quy, hay sự khác nhau trong thuật toán so sánh trùng chuỗi và tìm kiếm từ điển. Bênh cạnh đó còn có một số đặc trưng không được chúng tôi hiện thực, ví dụ đặc trưng giả định của thuốc (assertion), đặc trưng về không gian (spatial) hay đặc trưng so trùng dữ liệu MSRA sử dụng Probase--một nguồn tri thức nhân loại được xây dựng nội bộ bởi Micrsoft Research Asia (nơi các tác giả hệ thống \cite{YanXu2012} làm việc) mà chúng tôi không thể tiếp cận được.
-\end{enumerate}
