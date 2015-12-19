@@ -394,13 +394,13 @@ UMLS là kho từ vựng y sinh do Thư viện Y học Quốc gia Hoa Kì tiến
 
 MetaMap là công cụ hỗ trợ nhận dạng các khái niệm trong bộ từ điển UMLS từ các văn bản y sinh. Đầu vào của MetaMap là văn bản thuần không có cấu trúc, từ văn bản này MetaMap xuất ra các chuỗi định dạng XML hoặc định dạng gần gũi với con người chứa các khái niệm trong từ điển UMLS nhận dạng được. Các thông tin từ UMLS rút trích được bao gồm: mã khái niệm trong bộ từ điển UMLS, các từ đồng nghĩa và lớp ngữ nghĩa của khái niệm trong UMLS. Hình \ref{metamapstructure} miêu tả kiến trúc tổng quát của MetaMap. Quá trình xử lý dữ liệu của MetaMap có thể được tóm tắt qua hai bước. Bước đầu, dữ liệu dạng văn bản được áp dụng các tác vụ xử lý ngôn ngữ tự nhiên cơ bản như: tách câu, tách từ, xác định từ loại, tra cứu từ vựng và phân tích cú pháp. Kết quả của bước đầu tiên là các cụm từ (phrase) được xác định từ văn bản đầu vào. Ở bước thứ hai, MetaMap tiến hành sinh các biến thể (variant) cho các cụm từ đã tìm được, xác định ứng cử viên (candidate) từ các khái niệm trong UMLS khớp với các biến thể được sinh ra và tính độ tin cậy cho các ứng cử viên đó. Đầu ra của bước thứ hai là các cụm từ được phân giải từ bước đầu, kèm theo các ứng cử viên trong bộ từ điển UMLS ứng với mỗi cụm. Trong phạm vi luận án, chúng tôi sử dụng tên khái niệm và lớp ngữ nghĩa của khái niệm từ đầu ra của MetaMap cho quá trình rút trích đặc trưng.
 
-\begin{figure}[!h]
+\begin{figure}[t]
 \centering
 \resizebox{\textwidth}{!}{
 \begin{tikzpicture}[%
 	>=angle 60,
 	start chain=going right,
-	node distance=2cm and 0.8cm,
+	node distance=2.4cm and 0.8cm,
 	every join/.style={->, draw},
 	font=\scriptsize\sffamily]
 	\tikzset{
@@ -416,10 +416,10 @@ MetaMap là công cụ hỗ trợ nhận dạng các khái niệm trong bộ t�
 	\node[bproc,join](cdd){Nhận dạng các ứng cử viên};
 	\node[bproc,join](map){Xây dựng các ánh xạ};
 	\node[bproc,join](ars){Phân giải nhập nhằng};
-	\node[cylinder, minimum width=1.2cm, minimum height=1.1cm, draw, shape border rotate=90, below=0.5cm of map,shape aspect=.4](umls){UMLS};
+	\node[cylinder, minimum width=1.3cm, minimum height=1.2cm, draw, shape border rotate=90, below=0.6cm of map,shape aspect=.4](umls){UMLS};
 	
-	\draw[->] (sta.south) -- ++(down:0.5cm) -| (vgp.north);	
-	\draw[dashed] ($(tkn.north west)+(-0.25,0.25)$) rectangle ($(sta.south east)+(0.25,-0.25)$);
+	\draw[->] (sta.south) -- ++(down:0.6cm) -| (vgp.north);	
+	\draw[dashed] ($(tkn.north west)+(-0.3,0.3)$) rectangle ($(sta.south east)+(0.3,-0.3)$);
 	\coordinate[left=2.2cm of tkn.west](left-tkn);
 	\draw[->] (left-tkn) -- (tkn) node[above,midway]{dữ liệu đầu vào};
 	\draw[->] (umls.top) -- (map);
@@ -438,20 +438,6 @@ Ví dụ khi đưa câu văn \texttt{"The patient has been HIV positive for two 
 
 \begin{figure}[ht]
 \centering
-\lstset{
-	keywords={},
-	tabsize=3,
-	%frame=lines,
-	frame=single,
-	xleftmargin=20pt,
-	framexleftmargin=15pt,
-	numbers=left,
-	numberstyle=\tiny,
-	numbersep=5pt,
-	breaklines=true,
-	showstringspaces=false,
-	columns=fullflexible,
-	basicstyle=\footnotesize\ttfamily}
 \lstinputlisting{sample_code/metamap_output.txt}
 \caption{Mẫu kết quả của công cụ MetaMap\label{metamapoutput}}
 \end{figure}
@@ -463,7 +449,22 @@ Apache cTakes (clinical Text Analysis and Knowledge Extraction System) là hệ 
 
 cTakes được xây dựng dựa trên framework UIMA cho phép ứng dụng được cấu tách thành từ các hệ thống con (subsystem). Mỗi hệ thống con hiện thực một nhiệm vụ nhất định và được cung cấp một tập tin XML đóng vai trò là siêu dữ liệu mô tả hệ thống con đó. Ngoài ra framework UIMA còn hỗ trợ cTakes gói các hệ thống con lại như một mạng lưới các dịch vụ, trong đó các hệ thống con của cùng mạng lưới có thể giao tiếp với nhau thông quá các miêu tả trong tập tin XML, tương tự như mô hình đường ống (pipeline). Trong phạm vi luận án, chúng tôi sử dụng công cụ MedEx \cite{HuaXu2009} và MedTime \cite{Sohn2013} được xây dựng dựa trên cTakes và được cung cấp bởi hội đồng Open Health Natural Language Processing hỗ trợ cho quá trình rút trích đặc trưng.
 
-\begin{table}[h]
+MedEx là công cụ hỗ trợ trích xuất các thông tin ngữ nghĩa về thuốc y tế từ các văn bản thuần không có cấu trúc. Trong bệnh án điện tử, các thông tin về thuốc, bao gồm tên thuốc và các chỉ dẫn về cách sử dụng, thường được lưu trữ dưới dạng những câu văn tường thuật. Ví dụ, hồ sơ xuất viện thường chứa những mô tả về các lần sử dụng thuốc của bệnh nhân trong quá trình điều trị, như câu \texttt{"The patient was upgraded to Prilosec 20 mg per day for possible treatment of gastritis"} chứa tên thuốc \texttt{"Prilosec"} với liều lượng là \texttt{"20 mg"} và sử dụng mỗi ngày (\texttt{"per day"}). Các thông tin về thuốc là những thông tin quan trọng để phân giải đồng tham chiếu, vì vậy chúng tôi sử dụng MedEx để hỗ trợ cho việc rút trích các đặc trưng liên quan đến chúng (Hình \ref{medex-eg}). Bảng \ref{tab:med-info} trình bày các thông tin thuốc mà MedEx hỗ trợ trích xuất. Hình \ref{medex-eg} mô tả một tập tin được xuất ra bởi MedEx.
+%
+%\noindent trong đó thông tin về thuốc bao gồm:
+%
+%\begin{itemize}
+%\item Tên thuốc (Drug name) như kháng sinh, Vancomycin , ...
+%\item Nhà sản xuất (Brand name) như Zocor, ...
+%\item Dạng thuốc (Drug form) như dạng viên nén, dạng viên nhộng, ...
+%\item Mức độ (Strength) như 10mg, 5ml, ...
+%\item Liều lượng (Dose amount) như 2 viên, ...
+%\item Đường hấp thụ (Route) như qua đường miệng, qua đường tiêm, ...
+%\item Tần số (Frequency) như 2 lần mỗi ngày, mỗi sáng, ...
+%\item Thời gian (Duration) như trong 10 ngày, trong 1 tháng, ...
+%\end{itemize}
+
+\begin{table}[ht]
 \centering\ra{1.2}
 \caption{Các loại thông tin thuốc được trích xuất bởi MedEx\label{tab:med-info}}
 \footnotesize\sffamily
@@ -482,21 +483,6 @@ Thời gian sử dụng (duration) & `for 10 days', `in a month',...\\
 \bottomrule
 \end{tabularx}
 \end{table}
-
-MedEx là công cụ hỗ trợ trích xuất các thông tin ngữ nghĩa về thuốc y tế từ các văn bản thuần không có cấu trúc. Trong bệnh án điện tử, các thông tin về thuốc, bao gồm tên thuốc và các chỉ dẫn về cách sử dụng, thường được lưu trữ dưới dạng những câu văn tường thuật. Ví dụ, hồ sơ xuất viện thường chứa những mô tả về các lần sử dụng thuốc của bệnh nhân trong quá trình điều trị, như câu \texttt{"The patient was upgraded to Prilosec 20 mg per day for possible treatment of gastritis"} chứa tên thuốc \texttt{"Prilosec"} với liều lượng là \texttt{"20 mg"} và sử dụng mỗi ngày (\texttt{"per day"}). Các thông tin về thuốc là những thông tin quan trọng để phân giải đồng tham chiếu, vì vậy chúng tôi sử dụng MedEx để hỗ trợ cho việc rút trích các đặc trưng liên quan đến chúng (Hình \ref{medex-eg}). Bảng \ref{tab:med-info} trình bày các thông tin thuốc mà MedEx hỗ trợ trích xuất. %Hình \ref{medex-eg} mô tả một tập tin được xuất ra bởi MedEx.
-%
-%\noindent trong đó thông tin về thuốc bao gồm:
-%
-%\begin{itemize}
-%\item Tên thuốc (Drug name) như kháng sinh, Vancomycin , ...
-%\item Nhà sản xuất (Brand name) như Zocor, ...
-%\item Dạng thuốc (Drug form) như dạng viên nén, dạng viên nhộng, ...
-%\item Mức độ (Strength) như 10mg, 5ml, ...
-%\item Liều lượng (Dose amount) như 2 viên, ...
-%\item Đường hấp thụ (Route) như qua đường miệng, qua đường tiêm, ...
-%\item Tần số (Frequency) như 2 lần mỗi ngày, mỗi sáng, ...
-%\item Thời gian (Duration) như trong 10 ngày, trong 1 tháng, ...
-%\end{itemize}
 
 MedTime là công cụ hỗ trợ trích xuất các thông tin về thời gian trong văn bản thuần không có cấu trúc, bao gồm hai loại là thời gian tường minh và thời gian suy diễn. Thời gian tường minh là các dạng thời gian được ghi một cách cụ thể trong văn bản bao gồm ngày, tháng, năm và có hoặc không có thời điểm, ví dụ như 03/06/2015. Thời gian suy diễn là các mốc thời gian được trích xuất từ một số từ khóa đứng gần khái niệm đang xét hoặc các khái niệm chỉ về sự kiện trong y tế, ví dụ như \emph{ngày nhập viện} (admission date) hay \emph{ngày thứ 2 sau khi phẫu thuật} (post-op day 2). Giống như công cụ MedEx, MedTime nhận đầu vào là các văn bản thuần không có cấu trúc và xuất ra kết quả là một tập tin chứa các thông tin thời gian được nhận dạng (Hình \ref{medtime-eg}).
 
@@ -522,39 +508,11 @@ MedTime là công cụ hỗ trợ trích xuất các thông tin về thời gian
 %\end{figure}
 \begin{figure}[ht]
 \centering
-\lstset{
-	keywords={},
-	tabsize=3,
-	%frame=lines,
-	frame=single,
-	xleftmargin=20pt,
-	framexleftmargin=15pt,
-	numbers=left,
-	numberstyle=\tiny,
-	numbersep=5pt,
-	breaklines=true,
-	showstringspaces=false,
-	columns=fullflexible,
-	basicstyle=\footnotesize\ttfamily}
 \lstinputlisting{sample_code/medex_output.txt}
 \caption{Ví dụ nội dung tập tin kết quả được xuất ra bởi MedEx\label{medex-eg}}
 \end{figure}
 \begin{figure}[h!]
 \centering
-\lstset{
-	keywords={},
-	tabsize=3,
-	%frame=lines,
-	frame=single,
-	xleftmargin=20pt,
-	framexleftmargin=15pt,
-	numbers=left,
-	numberstyle=\tiny,
-	numbersep=5pt,
-	breaklines=true,
-	showstringspaces=false,
-	columns=fullflexible,
-	basicstyle=\footnotesize\ttfamily}
 \lstinputlisting{sample_code/medtime_output.txt}
 \caption{Ví dụ nội dung tập tin kết quả được xuất ra bởi MedTime\label{medtime-eg}}
 \end{figure}

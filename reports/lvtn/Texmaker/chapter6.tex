@@ -5,47 +5,20 @@ Tập dữ liệu chúng tôi sử dụng để đánh giá hiệu năng hệ th
 Tập dữ liệu chúng tôi nhận được bao gồm \emph{251 hồ sơ xuất viện} dùng cho huấn luyện và \emph{173 hồ sơ} dùng cho kiểm tra đánh giá. Trong đó, ngoài các hồ sơ xuất viện là các văn bản thuần được ghi chép lại bởi các bác sĩ, y tá (Hình \ref{hsxv-eg}) thì mỗi hồ sơ còn đi kèm với một tập tin chứa danh sách các khái niệm đã được gán nhãn bởi các chuyên gia y tế theo mẫu: \texttt{c="<khái niệm>" <bắt đầu> <kết thúc>||t="<lớp>"}. Ví dụ \texttt{c="the patient" 20:5 20:6||t="person"} mô tả khái niệm ``the patient'' xuất hiện bắt đầu từ dòng 20 từ thứ 5, kết thúc ở dòng 20 từ thứ 6 và thuộc lớp Person (Hình \ref{con-eg}).
 
 \begin{figure}[ht]
-\begin{mdframed}
-\ttfamily\footnotesize
-\protect\raggedright
-Discharge Date :\\
-06/22/1991\\
-DISCHARGE DIAGNOSIS :\\
-METASTATIC CERVICAL CARCINOMA .\\
-SECONDARY DIAGNOSES INCLUDE PERICARDIAL EFFUSION , PULMONARY LYMPHANGITIC SPREAD , AND LIVER AND SPLEEN METASTASES .\\
-OPERATIONS AND PROCEDURES :\\
-Echocardiogram times two .\\
-HISTORY OF PRESENT ILLNESS :\\
-Patient is a 28 year old gravida IV , para 2 with metastatic cervical cancer admitted with a question of malignant pericardial effusion .\\
-Patient underwent a total abdominal hysterectomy in 02/90 for a 4x3.6x2 cm cervical mass felt to be a fibroid at Vanor .
-\end{mdframed}
+\centering
+\lstinputlisting{sample_code/emr_sample.txt}
 \caption{Ví dụ nội dung tập tin hồ sơ xuất viện\label{hsxv-eg}}
 \end{figure}
 
 \begin{figure}[ht]
-\begin{mdframed}
-\ttfamily\footnotesize
-\protect\raggedright
-c="hallucinations" 94:9 94:9||t="problem"\\
-c="patient" 22:0 22:0||t="person"\\
-c="which" 29:21 29:21||t="pronoun"\\
-c="which" 65:9 65:9||t="pronoun"
-\end{mdframed}
+\lstinputlisting{sample_code/con_sample.txt}
 \caption{Ví dụ nội dung tập tin chứa các khái niệm\label{con-eg}}
 \end{figure}
 
 Ngoài danh sách khái niệm, mỗi hồ sơ còn đi kèm với một tập tin chứa danh sách các chuỗi đồng tham chiếu đã được phân giải bởi các chuyên gia (các \emph{chuỗi kết quả}) nhằm huấn luyện hệ thống phân loại có giám sát cũng như để đánh giá hiệu năng của hệ thống phân giải (Hình \ref{chains-eg}).
 
 \begin{figure}[ht]
-\begin{mdframed}
-\ttfamily\footnotesize
-\protect\raggedright
-c="pulmonary lymphangitic spread" 17:6 17:8||c="extensive lymphatic invasion" 23:25 23:27||c="a malignant lymphangitic spread" 72:6 72:9||c="lymphangitic spread" 83:2 83:3||t="coref problem"\\
-c="patient" 21:0 21:0||c="patient" 22:0 22:0||c="patient" 24:0 24:0||c="she" 24:11 24:11||c="the patient" 25:5 25:6||c="she" 26:0 26:0||c="the patient" 28:0 28:1||c="she" 29:0 29:0||c="her" 29:12 29:12||t="coref person"\\
-c="dr. mielke" 29:4 29:5||c="who" 29:10 29:10||c="dr. mielke" 101:5 101:6||c="earllamarg s. mielke , m.d" 104:1 104:5||t="coref person"\\
-c="a follow-up echocardiogram" 78:3 78:5||c="echocardiogram" 79:0 79:0||t="coref test"\\
-c="cisplatin" 86:3 86:3||c="cisplatin chemotherapy" 99:25 99:26||t="coref treatment"
-\end{mdframed}
+\lstinputlisting{sample_code/chains_sample.txt}
 \caption{Ví dụ nội dung tập tin chứa các chuỗi đồng tham chiếu\label{chains-eg}}
 \end{figure}
 

@@ -1,0 +1,5 @@
+c="pulmonary lymphangitic spread" 17:6 17:8||c="extensive lymphatic invasion" 23:25 23:27||c="a malignant lymphangitic spread" 72:6 72:9||c="lymphangitic spread" 83:2 83:3||t="coref problem"
+c="patient" 21:0 21:0||c="patient" 22:0 22:0||c="patient" 24:0 24:0||c="she" 24:11 24:11||c="the patient" 25:5 25:6||c="she" 26:0 26:0||c="the patient" 28:0 28:1||c="she" 29:0 29:0||c="her" 29:12 29:12||t="coref person"
+c="dr. mielke" 29:4 29:5||c="who" 29:10 29:10||c="dr. mielke" 101:5 101:6||c="earllamarg s. mielke , m.d" 104:1 104:5||t="coref person"
+c="a follow-up echocardiogram" 78:3 78:5||c="echocardiogram" 79:0 79:0||t="coref test"
+c="cisplatin" 86:3 86:3||c="cisplatin chemotherapy" 99:25 99:26||t="coref treatment"

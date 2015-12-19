@@ -1,0 +1,4 @@
+c="hallucinations" 94:9 94:9||t="problem"
+c="patient" 22:0 22:0||t="person"
+c="which" 29:21 29:21||t="pronoun"
+c="which" 65:9 65:9||t="pronoun"
