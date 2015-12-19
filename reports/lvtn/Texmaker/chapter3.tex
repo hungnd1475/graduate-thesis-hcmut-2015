@@ -20,7 +20,17 @@ Mặc dù nhiều chuỗi đồng tham chiếu có thể được phân giải t
 \emph{Phân giải đồng tham chiếu} là công việc xác định những chuỗi đồng tham chiếu trong văn bản. Xuyên suốt luận văn này, chúng tôi gọi các chuỗi đồng tham chiếu được phân giải bởi con người là các \emph{chuỗi kết quả}, các chuỗi được xuất ra bởi hệ thống phân giải đồng tham chiếu là các \emph{chuỗi hệ thống}.
 
 \section{Các mô hình học máy phân giải đồng tham chiếu\label{coref-model}}
-Phân giải đồng tham chiếu, một trong những tác vụ cơ bản của xử lý ngôn ngữ tự nhiên, là công việc xác định xem những khái niệm nào trong văn bản cùng chỉ đến một thực thể trong thế giới thực. Mặc dù nhiều phương pháp giải quyết đã được nghiên cứu phát triển từ những năm 60 của thế kỉ 20, các hệ thống dựa trên luật hay theo hướng tiếp cận heuristic trong thời gian này đòi hỏi nhiều kiến thức phức tạp và không thực sự hiệu quả (một trong những nền tảng của các hệ thống này là \emph{lý thuyết trung tâm} \cite{Grosz1983}).
+Học máy, một lĩnh vực của trí tuệ nhân tạo, được phát triển từ những nghiên cứu về nhận diện mẫu (pattern recognition) nhằm giúp máy tính có thể ``học'', hay nói cách khác là rút ra những kiến thức, từ những tập dữ liệu lớn mà không cần đến những chỉ dẫn của con người như những giải thuật thông thường\footnote{Wikipedia, Machine Learning, \url{https://en.wikipedia.org/wiki/Machine_learning}}. 
+
+Học máy có tính ứng dụng cao và được sử dụng trong nhiều lĩnh vực, như nhận diện giọng nói, chữ viết; ứng dụng trong tài chính chứng khoán hay trong y tế như chuẩn đoán y khoa, phân tích DNA. Ngoài việc giúp máy tính có thể hiểu được một phần của thế giới bên ngoài, học máy còn giúp khai thác nhiều tri thức tiềm ẩn trong những kho dữ liệu lớn mà con người không có khả năng phân tích được. Có thể chia học máy ra làm ba loại chính:
+\begin{enumerate}
+\item \emph{Học máy có giám sát:} Là giải thuật học máy dựa trên những tập dữ liệu đã biết được đầu ra mong muốn. Mục đích của việc học này là xây dựng một mô hình có thể nhận diện được sự liên quan giữa đầu vào và đầu ra. 
+\item \emph{Học máy không giám sát:} Là giải thuật học mà đầu ra mong muốn không được chỉ định trước, giải thuật phải tự nhận diện được cấu trúc của đầu vào mà không có bất kì chỉ dẫn nào khác.
+\item \emph{Học tăng cường:} Là giải thuật học có thể ứng biến với những thay đổi của trạng thái môi trường xung quanh mà không được chỉ dẫn rằng mục đích của việc học đã tiến tới hay chưa. Một ví dụ của giải thuật học tăng cường là các hệ thống chơi cờ vua.
+\end{enumerate}
+
+\subsection*{Học máy và phân giải đồng tham chiếu}
+Phân giải đồng tham chiếu, một trong những tác vụ cơ bản của xử lý ngôn ngữ tự nhiên, là công việc xác định xem những khái niệm nào trong văn bản cùng chỉ đến một thực thể trong thế giới thực. Mặc dù nhiều phương pháp giải quyết đã được nghiên cứu phát triển từ những năm 60 của thế kỉ 20, các hệ thống dựa trên luật hay theo hướng tiếp cận heuristic\footnote{Wikipedia, Heuristic, \url{https://en.wikipedia.org/wiki/Heuristic}} trong thời gian này đòi hỏi nhiều kiến thức phức tạp và không thực sự hiệu quả (một trong những nền tảng của các hệ thống này là \emph{lý thuyết trung tâm} \cite{Grosz1983}).
 
 Bắt đầu từ những năm 1990, khi các mô hình xác suất trở nên phổ biến vì tính hiệu quả của chúng, các phương pháp học máy phân giải đồng tham chiếu ra đời dần thay thế các phương pháp heuristic thủ công. Cùng với xu thế đó là sự xuất hiện của các tập dữ liệu được gán nhãn bắt nguồn từ hội nghị MUC-6 (1996) và MUC-7 (1997), các nghiên cứu về phân giải đồng tham chiếu dựa trên học máy càng được phát triển không chỉ cho các miền văn bản chung mà còn đi sâu vào các miền văn bản cụ thể (như Thách thức i2b2 năm 2011 về phân giải đồng tham chiếu cho bệnh án điện tử \cite{OzlemUzuner2012}).
 
@@ -51,7 +61,7 @@ Sự khác biệt của giải thuật này so với giải thuật trên là: t
 \end{enumerate}
 
 \section{Support Vector Machine}
-Trong lĩnh vực học máy, support vector machine (SVM) là mô hình học có giám sát với giải thuật huấn luyện có thể phân tích và nhận diện mẫu. Lần đầu tiên được giới thiệu bởi Vladimir N. Vapnik vào năm 1992, SVM là một trong những giải thuật học máy được sử dụng phổ biến nhất trong lĩnh vực học máy hiện đại, đa phần là bởi vì SVM thường tỏ ra hiệu quả hơn nhiều so với các giải thuật học máy khác khi được huấn luyện trên một tập dữ liệu vừa (SVM không làm việc tốt trên các tập dữ liệu quá lớn, vì giải thuật học của SVM có liên quan đến việc nghịch đảo các ma trận, một việc làm rất tốn kém về mặt tính toán). 
+Trong lĩnh vực học máy, support vector machine (SVM) là mô hình học có giám sát với giải thuật huấn luyện có thể phân tích và phân loại mẫu. Lần đầu tiên được giới thiệu bởi Vladimir N. Vapnik vào năm 1992, SVM là một trong những giải thuật học máy được sử dụng phổ biến nhất trong lĩnh vực học máy hiện đại, đa phần là bởi vì SVM thường tỏ ra hiệu quả hơn nhiều so với các giải thuật học máy khác khi được huấn luyện trên một tập dữ liệu vừa (SVM không làm việc tốt trên các tập dữ liệu quá lớn, vì giải thuật học của SVM có liên quan đến việc nghịch đảo các ma trận, một việc làm rất tốn kém về mặt tính toán). 
 
 Tư tưởng cơ bản của SVM là cố gắng tìm kiếm một hoặc một tập các mặt siêu phẳng (hyperplane) trong một không gian có nhiều chiều để phân chia các điểm đại diện của tập dữ liệu ra hai hay nhiều phần, từ đó có thể thực hiện các tác vụ phân loại hay hồi quy. Một đặc điểm của SVM là giải thuật học của nó cho phép chúng ta phân biệt được giữa một mô hình phân loại tốt và một mô hình không tốt, ngay cả khi cả hai mô hình đều cho cùng một kết quả phân loại trên một tập dữ liệu.
 
@@ -382,17 +392,19 @@ WP\$ & Nghi vấn từ sở hữu & whose, whosever \\
 \subsection*{MetaMap}
 UMLS là kho từ vựng y sinh do Thư viện Y học Quốc gia Hoa Kì tiến hành xây dựng từ năm 1986 nhằm phục vụ cho nhu cầu tra cứu thông tin đã được chuẩn hóa về các loại bệnh, thuốc, nguyên nhân hoặc các thuật ngữ trong y tế. Bộ từ điển UMLS tích hợp hơn 2 triệu tên gọi cho khoảng 900.000 khái niệm y sinh và khoảng 12 triệu tên gọi cho quan hệ giữa các khái niệm này \cite{Olivier2004}. Hiện nay, bộ từ điển UMLS vẫn đang được tiếp tục cập nhật và cho phép sử dụng miễn phí phục vụ mục đích nghiên cứu khoa học.
 
-\begin{figure}[ht]
+MetaMap là công cụ hỗ trợ nhận dạng các khái niệm trong bộ từ điển UMLS từ các văn bản y sinh. Đầu vào của MetaMap là văn bản thuần không có cấu trúc, từ văn bản này MetaMap xuất ra các chuỗi định dạng XML hoặc định dạng gần gũi với con người chứa các khái niệm trong từ điển UMLS nhận dạng được. Các thông tin từ UMLS rút trích được bao gồm: mã khái niệm trong bộ từ điển UMLS, các từ đồng nghĩa và lớp ngữ nghĩa của khái niệm trong UMLS. Hình \ref{metamapstructure} miêu tả kiến trúc tổng quát của MetaMap. Quá trình xử lý dữ liệu của MetaMap có thể được tóm tắt qua hai bước. Bước đầu, dữ liệu dạng văn bản được áp dụng các tác vụ xử lý ngôn ngữ tự nhiên cơ bản như: tách câu, tách từ, xác định từ loại, tra cứu từ vựng và phân tích cú pháp. Kết quả của bước đầu tiên là các cụm từ (phrase) được xác định từ văn bản đầu vào. Ở bước thứ hai, MetaMap tiến hành sinh các biến thể (variant) cho các cụm từ đã tìm được, xác định ứng cử viên (candidate) từ các khái niệm trong UMLS khớp với các biến thể được sinh ra và tính độ tin cậy cho các ứng cử viên đó. Đầu ra của bước thứ hai là các cụm từ được phân giải từ bước đầu, kèm theo các ứng cử viên trong bộ từ điển UMLS ứng với mỗi cụm. Trong phạm vi luận án, chúng tôi sử dụng tên khái niệm và lớp ngữ nghĩa của khái niệm từ đầu ra của MetaMap cho quá trình rút trích đặc trưng.
+
+\begin{figure}[!h]
 \centering
 \resizebox{\textwidth}{!}{
 \begin{tikzpicture}[%
 	>=angle 60,
 	start chain=going right,
-	node distance=2.6cm and 0.8cm,
+	node distance=2cm and 0.8cm,
 	every join/.style={->, draw},
 	font=\scriptsize\sffamily]
 	\tikzset{
-		bproc/.style = {draw, rectangle, on chain, on grid, text width=2.3cm, minimum height=1.2cm, inner sep=0.5mm, align=center}
+		bproc/.style = {draw, rectangle, on chain, on grid, text width=2.3cm, minimum height=1cm, inner sep=0.5mm, align=center}
 	};
 	
 	\node[bproc](tkn){Nhận diện câu văn và tách từ};
@@ -401,13 +413,13 @@ UMLS là kho từ vựng y sinh do Thư viện Y học Quốc gia Hoa Kì tiến
 	\node[bproc,join](sta){Phân tích cú pháp câu};
 	
 	\node[bproc,below=of tkn](vgp){Bộ sinh các biến thể};
-	\node[bproc,join](cdd){Nhận dạng các ứng cử viên (candidate)};
+	\node[bproc,join](cdd){Nhận dạng các ứng cử viên};
 	\node[bproc,join](map){Xây dựng các ánh xạ};
 	\node[bproc,join](ars){Phân giải nhập nhằng};
-	\node[cylinder, minimum width=1.3cm, minimum height=1.2cm, draw, shape border rotate=90, below=0.7cm of map,shape aspect=.4](umls){UMLS};
+	\node[cylinder, minimum width=1.2cm, minimum height=1.1cm, draw, shape border rotate=90, below=0.5cm of map,shape aspect=.4](umls){UMLS};
 	
-	\draw[->] (sta.south) -- ++(down:0.7cm) -| (vgp.north);	
-	\draw[dashed] ($(tkn.north west)+(-0.4,0.4)$) rectangle ($(sta.south east)+(0.4,-0.4)$);
+	\draw[->] (sta.south) -- ++(down:0.5cm) -| (vgp.north);	
+	\draw[dashed] ($(tkn.north west)+(-0.25,0.25)$) rectangle ($(sta.south east)+(0.25,-0.25)$);
 	\coordinate[left=2.2cm of tkn.west](left-tkn);
 	\draw[->] (left-tkn) -- (tkn) node[above,midway]{dữ liệu đầu vào};
 	\draw[->] (umls.top) -- (map);
@@ -415,8 +427,6 @@ UMLS là kho từ vựng y sinh do Thư viện Y học Quốc gia Hoa Kì tiến
 }
 \caption{Kiến trúc tổng quát của MetaMap\label{metamapstructure}}
 \end{figure}
-
-MetaMap là công cụ hỗ trợ nhận dạng các khái niệm trong bộ từ điển UMLS từ các văn bản y sinh. Đầu vào của MetaMap là văn bản thuần không có cấu trúc, từ văn bản này MetaMap xuất ra các chuỗi định dạng XML hoặc định dạng gần gũi với con người chứa các khái niệm trong từ điển UMLS nhận dạng được. Các thông tin từ UMLS rút trích được bao gồm: mã khái niệm trong bộ từ điển UMLS, các từ đồng nghĩa và lớp ngữ nghĩa của khái niệm trong UMLS. Hình \ref{metamapstructure} miêu tả kiến trúc tổng quát của MetaMap. Quá trình xử lý dữ liệu của MetaMap có thể được tóm tắt qua hai bước. Bước đầu, dữ liệu dạng văn bản được áp dụng các tác vụ xử lý ngôn ngữ tự nhiên cơ bản như: tách câu, tách từ, xác định từ loại, tra cứu từ vựng và phân tích cú pháp. Kết quả của bước đầu tiên là các cụm từ (phrase) được xác định từ văn bản đầu vào. Ở bước thứ hai, MetaMap tiến hành sinh các biến thể (variant) cho các cụm từ đã tìm được, xác định ứng cử viên (candidate) từ các khái niệm trong UMLS khớp với các biến thể được sinh ra và tính độ tin cậy cho các ứng cử viên đó. Đầu ra của bước thứ hai là các cụm từ được phân giải từ bước đầu, kèm theo các ứng cử viên trong bộ từ điển UMLS ứng với mỗi cụm. Trong phạm vi luận án, chúng tôi sử dụng tên khái niệm và lớp ngữ nghĩa của khái niệm từ đầu ra của MetaMap cho quá trình rút trích đặc trưng.
 
 Ví dụ khi đưa câu văn \texttt{"The patient has been HIV positive for two years"} vào hệ thống MetaMap để phân tích thì ở kết quả của bước một, câu văn được phân tách thành ba cụm từ \texttt{"The patient}, \texttt{"has been"} và \texttt{"HIV positive for two years"}. Sau đó MetaMap thực hiện bước thứ hai lên các cụm từ này để cho ra kết quả cuối cùng, chúng được trình bày trên Hình \ref{metamapoutput}. Sau đây là các giải thích cho các kết quả này:
 
@@ -426,7 +436,7 @@ Ví dụ khi đưa câu văn \texttt{"The patient has been HIV positive for two 
 \item Các dòng từ 9 trở đi mô tả kết quả cho cụm từ \texttt{"HIV positive for two years"} với một ứng cử viên có độ tin cậy 875. Ứng cử viên này bao gồm ba khái niệm là \texttt{"positive for HIV"} mang mã số là C0019699, \texttt{"two"} mang mã số là C0205448 và \texttt{"years"} mang mã số là C0439234. 
 \end{itemize}
 
-\begin{figure}[t]
+\begin{figure}[ht]
 \centering
 \lstset{
 	keywords={},
@@ -473,7 +483,7 @@ Thời gian sử dụng (duration) & `for 10 days', `in a month',...\\
 \end{tabularx}
 \end{table}
 
-MedEx là công cụ hỗ trợ trích xuất các thông tin ngữ nghĩa về thuốc y tế từ các văn bản thuần không có cấu trúc. Trong bệnh án điện tử, các thông tin về thuốc, bao gồm tên thuốc và các chỉ dẫn về cách sử dụng, thường được lưu trữ dưới dạng những câu văn tường thuật. Ví dụ, hồ sơ xuất viện thường chứa những mô tả về các lần sử dụng thuốc của bệnh nhân trong quá trình điều trị, như câu \texttt{"The patient was upgraded to Prilosec 20 mg per day for possible treatment of gastritis"} chứa tên thuốc \texttt{"Prilosec"} với liều lượng là \texttt{"20 mg"} và sử dụng mỗi ngày (\texttt{"per day"}). Các thông tin về thuốc là những thông tin quan trọng để phân giải đồng tham chiếu, vì vậy chúng tôi sử dụng MedEx để hỗ trợ cho việc rút trích các đặc trưng liên quan đến chúng. Bảng \ref{tab:med-info} trình bày các thông tin thuốc mà MedEx hỗ trợ trích xuất. Hình \ref{medex-eg} mô tả một tập tin được xuất ra bởi MedEx.
+MedEx là công cụ hỗ trợ trích xuất các thông tin ngữ nghĩa về thuốc y tế từ các văn bản thuần không có cấu trúc. Trong bệnh án điện tử, các thông tin về thuốc, bao gồm tên thuốc và các chỉ dẫn về cách sử dụng, thường được lưu trữ dưới dạng những câu văn tường thuật. Ví dụ, hồ sơ xuất viện thường chứa những mô tả về các lần sử dụng thuốc của bệnh nhân trong quá trình điều trị, như câu \texttt{"The patient was upgraded to Prilosec 20 mg per day for possible treatment of gastritis"} chứa tên thuốc \texttt{"Prilosec"} với liều lượng là \texttt{"20 mg"} và sử dụng mỗi ngày (\texttt{"per day"}). Các thông tin về thuốc là những thông tin quan trọng để phân giải đồng tham chiếu, vì vậy chúng tôi sử dụng MedEx để hỗ trợ cho việc rút trích các đặc trưng liên quan đến chúng (Hình \ref{medex-eg}). Bảng \ref{tab:med-info} trình bày các thông tin thuốc mà MedEx hỗ trợ trích xuất. %Hình \ref{medex-eg} mô tả một tập tin được xuất ra bởi MedEx.
 %
 %\noindent trong đó thông tin về thuốc bao gồm:
 %
