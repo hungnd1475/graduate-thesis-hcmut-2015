@@ -54,7 +54,8 @@ Hệ đo B-CUBED được thiết kể để khắc phục hai nhược điểm 
 \noindent trong đó, $w_i$ là trọng số của khái niệm thứ $i$, $M$ là số khái niệm của văn bản đang xét. Bài báo đánh giá các hệ thống dự thi thử thách i2b2 năm 2011 sử dụng chung một trọng số cho tất cả các khái niệm, $w_i=1/M$. Để tiện cho việc so sánh với hệ thống \cite{YanXu2012}, chúng tôi cũng dùng cách gán trọng số như trên.
 
 Như vậy để thuận tiện trong tính toán, nếu gọi $m$ là một khái niệm trong văn bản $d$ có chứa $M$ khái niệm, $G_m$ là chuỗi kết quả có chứa $m$, $S_m$ là chuỗi hệ thống có chứa $m$, $O_m$ là chuỗi giao nhau giữa $G_m$ và $S_m$ (tức $O_m=G_m\cap S_m$) thì độ đúng đắn và độ đầy đủ của hệ B-CUBED cho $d$ được tính như sau:
-\[P_d^{\text{B-CUBED}}=\frac{1}{M}\sum_{m\in d}\frac{|O_m|}{|S_m|},\quad R_d^{\text{B-CUBED}}=\frac{1}{M}\sum_{m\in d}\frac{|O_m|}{|G_m|}\]
+\[P_d^{\text{B-CUBED}}=\frac{1}{M}\sum_{m\in d}\frac{|O_m|}{|S_m|}\]
+\[R_d^{\text{B-CUBED}}=\frac{1}{M}\sum_{m\in d}\frac{|O_m|}{|G_m|}\]
 
 Độ F của hệ B-CUBED được tính tương tự như hệ MUC.
 
@@ -123,7 +124,7 @@ Ngoài ra, các kết quả đánh giá cho các lớp Problem, Test và Treatme
 \begin{enumerate}
 \item Kết quả của lớp Test là thấp nhất vì theo quan sát của chúng tôi, tập vector đặc trưng dùng để huấn luyện của lớp Test chịu ảnh hưởng nhiều nhất bởi sự mất cân bằng mẫu (khi chưa qua chọn lọc mẫu, tỉ lệ mẫu âm trên mẫu dương là 381:1). Mặt khác, nhiều thủ tục y tế trong một hồ sơ xuất viện trùng tên hoàn toàn hoặc một phần với nhau nhưng lại là những khái niệm duy nhất không đồng tham chiếu với bất kì khái niệm nào, điều này khiến cho các đặc trưng so trùng chuỗi và tri thức nhân loại bị ảnh hưởng.
 \item Các kết quả đánh giá hệ thống của chúng tôi đều thấp hơn so với hệ thống \cite{YanXu2012}. Điều này có thể được giải thích một cách chủ quan như sau: các nhược điểm của mô hình cặp khái niệm khiến cho hiệu năng của mô hình này phụ thuộc rất nhiều vào hiệu năng của các mô hình phân loại. Vì giới hạn về thời gian và công nghệ, nhiều mô hình SVM được chúng tôi huấn luyện với bộ tham số mặc định mà không thông qua tìm kiếm lưới.
-\item Mặt khác, tuy chúng tôi đã hiện thực lại phần lớn các đặc trưng được nêu trong hệ thống \cite{YanXu2012}, các sai sót về chi tiết kĩ thuật là không thể tránh khỏi, ví dụ như sự khác biệt giữa các tập từ khóa và các biểu thức chính quy, hay sự khác nhau trong thuật toán so sánh trùng chuỗi và tìm kiếm từ điển. Bênh cạnh đó còn có một số đặc trưng không được chúng tôi hiện thực, ví dụ đặc trưng giả định của thuốc (assertion), đặc trưng về không gian (spatial) hay đặc trưng so trùng dữ liệu MSRA sử dụng Probase--một nguồn tri thức nhân loại được xây dựng nội bộ bởi Micrsoft Research Asia (nơi các tác giả hệ thống \cite{YanXu2012} làm việc) mà chúng tôi không thể tiếp cận được.
+\item Mặt khác, tuy chúng tôi đã hiện thực lại phần lớn các đặc trưng được nêu trong hệ thống \cite{YanXu2012}, các sai sót về chi tiết kĩ thuật là không thể tránh khỏi, ví dụ như sự khác biệt giữa các tập từ khóa và các biểu thức chính quy, hay sự khác nhau trong thuật toán so sánh trùng chuỗi và tìm kiếm từ điển. Bên cạnh đó, còn có một số đặc trưng không được chúng tôi hiện thực, ví dụ đặc trưng giả định của các chuẩn đoán về bệnh (assertion), đặc trưng về không gian (spatial) hay đặc trưng so trùng dữ liệu MSRA sử dụng Probase--một nguồn tri thức nhân loại được xây dựng nội bộ bởi Micrsoft Research Asia (nơi các tác giả hệ thống \cite{YanXu2012} làm việc) mà chúng tôi không thể tiếp cận được.
 \end{enumerate}
 
 \begin{table}[th]
