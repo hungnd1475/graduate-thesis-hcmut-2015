@@ -23,7 +23,7 @@ Ngoài danh sách khái niệm, mỗi hồ sơ còn đi kèm với một tập t
 \end{figure}
 
 \section{Các phương pháp đánh giá}
-Hiệu năng hệ thống được đánh giá qua ba độ đo: \emph{độ đúng đắn} (precision), \emph{độ đầy đủ} (recall) và \emph{độ F} (F-measure). Bài báo đánh giá các hệ thống dự thi thử thách i2b2 sử dụng ba phương pháp khác nhau để tính toán các độ này, bao gồm: MUC, B-CUBED và CEAF.
+Hiệu năng hệ thống được đánh giá qua ba độ đo: \emph{độ đúng đắn} (precision), \emph{độ đầy đủ} (recall) và \emph{độ F} (F-measure). Bài báo đánh giá các hệ thống dự thi thử thách i2b2 sử dụng ba phương pháp khác nhau để tính toán các độ đo này, bao gồm: MUC, B-CUBED và CEAF.
 
 \subsection*{Hệ đo MUC}
 Hệ đo MUC \cite{MarcVilain1995} xem chuỗi đồng tham chiếu là một danh sách các liên kết giữa các cặp khái niệm tạo nên chuỗi, từ đó đánh giá hệ thống dựa trên số lượng ít nhất các liên kết cần được thêm vào và loại bỏ để các chuỗi đồng tham chiếu xuất ra bởi hệ thống trùng với các chuỗi kết quả. Có thể hiểu số liên kết cần được loại bỏ là độ thiếu chính xác (precision \emph{error}) và số liên kết cần được thêm vào là độ thiếu đầy đủ (recall \emph{error}). 
