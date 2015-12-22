@@ -1,0 +1,52 @@
+\documentclass[utf8]{beamer}
+\mode<presentation>
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[vietnam]{babel}
+\usepackage{lmodern}
+\usepackage{tikz,etoolbox}
+
+\usetheme{Rochester}
+%\useoutertheme{infolines}
+
+\setbeamercolor*{author in head/foot}{parent=palette tertiary}
+\setbeamercolor*{title in head/foot}{parent=palette secondary}
+\setbeamercolor*{date in head/foot}{parent=palette primary}
+
+\setbeamercolor*{section in head/foot}{parent=palette tertiary}
+\setbeamercolor*{subsection in head/foot}{parent=palette primary}
+
+\newcommand*\putlogo[1][east]{%
+  \tikz[remember picture, overlay]\node[anchor=north #1, yshift=2pt] at (current page.north #1) {\includegraphics[height=14.5mm]{logo.pdf}};}
+
+\setbeamertemplate{footline}{%
+	\leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+\title[Luận văn tốt nghiệp đại học]{Phân giải đồng tham chiếu\\trong bệnh án điện tử}
+\author[Hưng \& Tuấn]{Nguyễn Duy Hưng (51101475)\\Vương Anh Tuấn (51104040)}
+\date[TP.HCM, 12/2015]{TP. Hồ Chí Minh, 12/2015}
+
+\begin{document}
+\begin{frame}{\hspace{15mm}Đại học quốc gia TP.HCM}{\hspace{15mm}Trường đại học Bách Khoa\\\hspace{15mm}Khoa Khoa học \& Kĩ thuật Máy tính}
+\putlogo[west]
+\maketitle
+\end{frame}
+\begin{frame}{Giới thiệu}
+\putlogo
+
+\end{frame}
+\end{document}
