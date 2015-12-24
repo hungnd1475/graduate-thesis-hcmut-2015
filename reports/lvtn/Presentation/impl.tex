@@ -21,3 +21,87 @@
 \begin{frame}{Xây dựng các cặp khái niệm}
 \putlogo
 \end{frame}
+
+%person extraction
+\subsection{Đặc trưng lớp Person}
+\begin{frame}{Đặc trưng lớp Person}
+\putlogo
+\begin{itemize}
+	\item Thường là tên riêng, chức danh và đại từ nhân xưng
+	\item Gồm 3 nhóm chính: bệnh nhân, người thân bệnh nhân và nhân sự bệnh viện
+	\begin{itemize}
+		\item Nhóm bệnh nhân có số lượng khái niệm nhiều nhất
+		\item Xác định khái niệm thuộc nhóm nào đóng vai trò quan trọng
+	\end{itemize}
+	\item Các khái niệm chỉ bệnh nhân được đưa vào cùng một chuỗi đồng tham chiếu
+	\item Các đặc trưng được sử dụng bao gồm:
+	\begin{itemize}
+		\item Đặc trưng lớp bệnh nhân
+		\item Nhóm đặc trưng ngữ nghĩa
+		\item Nhóm đặc trưng ngữ pháp
+		\item Nhóm đặc trưng khoảng cách
+		\item Nhóm đặc trưng từ vựng
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+%pronoun extraction
+\subsection{Đặc trưng lớp Pronoun}
+\begin{frame}{Đặc trưng lớp Pronoun}
+\putlogo
+\begin{itemize}
+	\item Là các khái niệm có thể chỉ về bất kì khái niệm thuộc bốn lớp Person, Problem, Treatment và Test
+	\begin{itemize}
+		\item Ví dụ: which, this, that,...
+	\end{itemize}
+	\item Cần được xác định lớp khái niệm mà đại từ ám chỉ
+	\item Đại từ đang xét được ghép chung vào chuỗi đồng tham chiếu của khái niệm gần nhất trước đó có cùng lớp khái niệm
+	\item Các đặc trưng được sử dụng bao gồm:
+	\begin{itemize}
+		\item Nhóm đặc trưng quan hệ
+		\item Nhóm đặc trưng ngữ nghĩa
+		\item Nhóm đặc trưng ngữ pháp
+		\item Nhóm đặc trưng khoảng cách
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+%problem/treatment/test extraction
+\subsection{Đặc trưng lớp Problem/Treatment/Test}
+\begin{frame}{Đặc trưng lớp Problem/Treatment/Test}
+\putlogo
+\begin{itemize}
+	\item Là nhóm khái niệm chỉ bất thường sức khỏe, phương pháp chữa trị và thủ tục y tế
+	\item Chịu ảnh hưởng mạnh bởi ngữ cảnh văn bản và chứa nhiều từ ngữ chuyên môn
+	\begin{itemize}
+		\item Các khái niệm có cùng chuỗi nhưng không đồng tham chiếu do thông tin ngữ cảnh khác nhau
+		\item Cùng một thực thể nhưng có nhiều cách diễn đạt bằng nhiều hình thức khác nhau
+	\end{itemize}
+	\item Các đặc trưng về tri thức nhân loại:
+	\begin{itemize}
+		\item Wikipedia
+		\item UMLS
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Đặc trưng lớp Problem/Treatment/Test}
+\begin{itemize}
+	\item Các đặc trưng về ngữ nghĩa văn bản:
+	\begin{itemize}
+		\item Thông tin cơ quan trên cơ thể (Anatomy)
+		\item Thông tin vị trí (Position)
+		\item Thông tin thuốc y tế (Medical information)
+		\item Thông tin chỉ định của thủ tục y tế (Indicator)
+		\item Thông tin thời gian (Temporal)
+		\item Thông tin phân đoạn bệnh án (Section)
+		\item Thông tin bổ từ (Modifier)
+		\item Thông tin thiết bị y tế (Equipment)
+		\item Thông tin phẫu thuật y tế (Operation)
+	\end{itemize}
+	\item Ngoài ra các đặc trưng cơ bản cũng được sử dụng
+	\begin{itemize}
+		\item Ví dụ nhóm đặc trưng khoảng cách, ngữ nghĩa,...
+	\end{itemize}
+\end{itemize}
+\end{frame}
