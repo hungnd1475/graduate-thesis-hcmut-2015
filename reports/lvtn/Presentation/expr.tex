@@ -1,1 +1,43 @@
 \section{Thí nghiệm đánh giá}
+\begin{frame}{Các phương pháp đánh giá}
+\putlogo
+Ba độ đo: \emph{độ đúng đắn} (precision), \emph{độ đầy đủ} (recall) và \emph{độ F} (F-measure)
+
+Ba hệ đo:
+\begin{itemize}
+	\item Hệ MUC
+	\begin{itemize}
+		\item Dựa trên sự thiếu và thừa các liên kết giữa hai khái niệm trong văn bản
+	\end{itemize}
+	\item Hệ B-CUBED
+	\begin{itemize}
+		\item Tính toán các độ đo cho từng khái niệm trong văn bản
+	\end{itemize}
+	\item Hệ CEAF
+	\begin{itemize}
+		\item Dựa trên một sự ghép cặp tối ưu giữa các chuỗi kết quả và các chuỗi được xuất ra bởi hệ thống
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Kết quả đánh giá}
+\putlogo
+{
+	\renewcommand{\tabcolsep}{3pt}
+	\renewcommand{\arraystretch}{1.2}
+	\footnotesize\sffamily
+	
+	\centering
+	\tabular{@{}lcccccccc@{}}
+	\toprule
+	&\phantom{a}&\textbf{MUC}&\phantom{a}&\textbf{B-CUBED}&\phantom{a}&\textbf{CEAF}&\phantom{a}&\textbf{Trung bình}\\
+	\midrule
+	Tất cả && 0,845 && 0,895 && 0,707 && \underline{0,815} \\
+	Person && 0,944 && 0,910 && 0,816 && 0,890 \\
+	Problem && 0,666 && 0,689 && 0,654 && 0,670 \\
+	Test && 0,568 && 0,637 && 0,589 && 0,598 \\
+	Treatment && 0,759 && 0,772 && 0,761 && 0,764 \\
+	\bottomrule
+	\endtabular
+}
+\end{frame}
