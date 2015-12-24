@@ -26,7 +26,7 @@ Ngoài danh sách khái niệm, mỗi hồ sơ còn đi kèm với một tập t
 Hiệu năng hệ thống được đánh giá qua ba độ đo: \emph{độ đúng đắn} (precision), \emph{độ đầy đủ} (recall) và \emph{độ F} (F-measure). Bài báo đánh giá các hệ thống dự thi thử thách i2b2 sử dụng ba phương pháp khác nhau để tính toán các độ đo này, bao gồm: MUC, B-CUBED và CEAF.
 
 \subsection*{Hệ đo MUC}
-Hệ đo MUC \cite{MarcVilain1995} xem chuỗi đồng tham chiếu là một danh sách các liên kết giữa các cặp khái niệm tạo nên chuỗi, từ đó đánh giá hệ thống dựa trên số lượng ít nhất các liên kết cần được thêm vào và loại bỏ để các chuỗi đồng tham chiếu xuất ra bởi hệ thống trùng với các chuỗi kết quả. Có thể hiểu số liên kết cần được loại bỏ là độ thiếu chính xác (precision \emph{error}) và số liên kết cần được thêm vào là độ thiếu đầy đủ (recall \emph{error}). 
+Hệ đo MUC xem chuỗi đồng tham chiếu là một danh sách các liên kết giữa các cặp khái niệm tạo nên chuỗi, từ đó đánh giá hệ thống dựa trên số lượng ít nhất các liên kết cần được thêm vào và loại bỏ để các chuỗi đồng tham chiếu xuất ra bởi hệ thống trùng với các chuỗi kết quả \cite{MarcVilain1995}. Có thể hiểu số liên kết cần được loại bỏ là độ thiếu chính xác (precision \emph{error}) và số liên kết cần được thêm vào là độ thiếu đầy đủ (recall \emph{error}). 
 
 Với mỗi văn bản $d$, gọi $G$ là tập các chuỗi kết quả, $S$ là tập các chuỗi hệ thống. Các độ đúng đắn ($P$) và độ đầy đủ ($R$) được tính như sau:
 \[P_d^{\text{MUC}}=\frac{\sum_{s\in S} \left(|s| - m(s, G)\right)}{\sum_{s\in S}\left(|s| - 1\right)}\]
@@ -38,7 +38,7 @@ Với mỗi văn bản $d$, gọi $G$ là tập các chuỗi kết quả, $S$ l�
 \subsection*{Hệ đo B-CUBED}
 Khác với hệ đo MUC đánh giá dựa trên sự thiếu và thừa các liên kết trong chuỗi hệ thống, hệ đo B-CUBED đánh giá hiệu năng trên mỗi khái niệm trong văn bản. Theo nhận định của các tác giả hệ đo B-CUBED, cách đánh giá dựa trên các liên kết có hai nhược điểm \cite{AmitBagga1998}:
 
-\begin{enumerate}[leftmargin=\parindent]
+\begin{enumerate}
 \item Không xét tới các \emph{khái niệm duy nhất} vì các liên kết chỉ tồn tại khi có ít nhất hai khái niệm. Mặt khác, theo quy ước, các chuỗi chỉ chứa một khái niệm không được đưa vào tập kết quả và các hệ thống tuân theo quy ước cũng không xuất những chuỗi như vậy ra.
 
 \item Các lỗi của hệ thống được xem là như nhau, tức hệ đo MUC đánh giá cùng một mức phạt như nhau cho tất cả các sai sót của hệ thống. Tuy nhiên có thể nhận thấy là có vài loại sai sót làm cho chuỗi hệ thống bị sai lệch nhiều hơn so với các loại khác.
