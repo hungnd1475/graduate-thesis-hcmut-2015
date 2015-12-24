@@ -29,12 +29,39 @@ Phân giải đồng tham chiếu cho các hồ sơ xuất viện tiếng Anh v�
 \subsection{Kiến trúc hệ thống}
 \begin{frame}{Kiến trúc hệ thống}
 \putlogo
+Mô hình được sử dụng: mô hình \emph{cặp khái niệm}
+\begin{itemize}
+	\item Xác định tính đồng tham chiếu cho từng cặp hai khái niệm
+	\item Gom cụm các cặp đồng tham chiếu lại và xây dựng các chuỗi đồng tham chiếu ứng với mỗi cụm
+\end{itemize}
+Hai quy trình
+\begin{itemize}
+	\item Quy trình huấn luyện
+	\begin{itemize}
+		\item Huấn luyện các mô hình phân loại dựa trên dữ liệu mẫu 
+	\end{itemize}
+	\item Quy trình phân giải
+	\begin{itemize}
+		\item Cho các BAĐT mới
+		\item Sử dụng các mô hình phân loại đã được huấn luyện
+		\item Giải thuật gom cụm
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Kiến trúc hệ thống}
+\putlogo
+Trình bày rõ 2 quy trình...
 \end{frame}
 
 %pair construction
 \subsection{Xây dựng các cặp khái niệm}
 \begin{frame}{Xây dựng các cặp khái niệm}
 \putlogo
+\begin{itemize}
+\item Trình bày về sự mất cân bằng mẫu
+\item Các cách giải quyết
+\end{itemize}
 \end{frame}
 
 %person extraction
@@ -101,6 +128,7 @@ Phân giải đồng tham chiếu cho các hồ sơ xuất viện tiếng Anh v�
 \end{frame}
 
 \begin{frame}{Đặc trưng lớp Problem/Treatment/Test}
+\putlogo
 \begin{itemize}
 	\item Các đặc trưng về ngữ nghĩa văn bản:
 	\begin{itemize}
@@ -118,5 +146,22 @@ Phân giải đồng tham chiếu cho các hồ sơ xuất viện tiếng Anh v�
 	\begin{itemize}
 		\item Ví dụ nhóm đặc trưng khoảng cách, ngữ nghĩa,...
 	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\subsection{Gom cụm}
+\begin{frame}{Gom cụm và xây dựng chuỗi đồng tham chiếu}
+\putlogo
+Giải thuật gom cụm tốt nhất trước (best-first clustering)
+\begin{itemize}
+	\item Person/Problem/Test/Treatment
+	\begin{itemize}
+		\item Chọn ra cặp đồng tham chiếu có độ tin cậy cao nhất (được xuất ra bởi SVM)
+	\end{itemize} 
+	\item Pronoun
+	\begin{itemize}
+		\item Xác định lớp chính của đại từ và tạo một cặp gồm đại từ đó và khái niệm thuộc lớp chính ở gần nhất trước đó
+	\end{itemize}
+	\item Gom các cặp mà có chung một khái niệm lại để tạo thành các cụm và xây dựng chuỗi đồng tham chiếu ứng với mỗi cụm
 \end{itemize}
 \end{frame}

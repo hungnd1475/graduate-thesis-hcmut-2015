@@ -7,7 +7,7 @@ Ba hệ đo:
 \begin{itemize}
 	\item Hệ MUC
 	\begin{itemize}
-		\item Dựa trên sự thiếu và thừa các liên kết giữa hai khái niệm trong văn bản
+		\item Dựa trên sự thiếu và thừa các liên kết giữa hai khái niệm trong chuỗi đồng tham chiếu xuất ra bởi hệ thống
 	\end{itemize}
 	\item Hệ B-CUBED
 	\begin{itemize}
@@ -22,12 +22,12 @@ Ba hệ đo:
 
 \begin{frame}{Kết quả đánh giá}
 \putlogo
-{
+Các kết quả độ F đánh giá hệ thống:
+\begin{center}
 	\renewcommand{\tabcolsep}{3pt}
 	\renewcommand{\arraystretch}{1.2}
 	\footnotesize\sffamily
 	
-	\centering
 	\tabular{@{}lcccccccc@{}}
 	\toprule
 	&\phantom{a}&\textbf{MUC}&\phantom{a}&\textbf{B-CUBED}&\phantom{a}&\textbf{CEAF}&\phantom{a}&\textbf{Trung bình}\\
@@ -39,5 +39,34 @@ Ba hệ đo:
 	Treatment && 0,759 && 0,772 && 0,761 && 0,764 \\
 	\bottomrule
 	\endtabular
-}
+\end{center}
+
+\end{frame}
+
+\begin{frame}{Kết quả đánh giá}
+Thông tin về bệnh nhân là một thông tin quan trọng
+\begin{center}
+	\renewcommand{\tabcolsep}{3pt}
+	%\renewcommand{\arraystretch}{1.2}
+	\footnotesize\sffamily
+	
+	\begin{tabular}{@{}lcccc@{}}
+	\toprule
+	& \textbf{P} & \textbf{R} & \textbf{F} & \% tăng lên\\
+	\midrule
+	Không có đặc trưng Patient-class & 0,770 & 0,755 & 0,731 &\\
+	Có đặc trưng Patient-class & 0,925 & 0,873 & 0,890 & 21,75\%\\
+	\bottomrule
+	\end{tabular}
+\end{center}
+
+Kết quả đánh giá cho các lớp Problem, Test và Treatment có độ F lần lượt là 0,670; 0,598 và 0,764.
+\begin{itemize}
+	\item Lớp Test chịu sự mất cân bằng mẫu nhiều nhất
+	\item Nhiều mô hình SVM được huấn luyện với tham số mặc định
+	\item Sự khác biệt trong chi tiết hiện thực các đặc trưng
+	\begin{itemize}
+		\item Một số đặc trưng không được hiện thực
+	\end{itemize}
+\end{itemize}
 \end{frame}
