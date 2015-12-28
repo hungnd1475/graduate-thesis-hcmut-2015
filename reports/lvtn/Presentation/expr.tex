@@ -22,8 +22,9 @@ Ba hệ đo:
 
 \begin{frame}{Kết quả đánh giá}
 \putlogo
-Các kết quả độ F đánh giá hệ thống:
+\vspace{-0.7cm}
 \begin{center}
+	Các kết quả độ F đánh giá hệ thống\vspace{0.1cm}
 	\renewcommand{\tabcolsep}{3pt}
 	\renewcommand{\arraystretch}{1.2}
 	\footnotesize\sffamily
@@ -32,7 +33,7 @@ Các kết quả độ F đánh giá hệ thống:
 	\toprule
 	&\phantom{a}&\textbf{MUC}&\phantom{a}&\textbf{B-CUBED}&\phantom{a}&\textbf{CEAF}&\phantom{a}&\textbf{Trung bình}\\
 	\midrule
-	Tất cả && 0,845 && 0,895 && 0,707 && \underline{0,815} \\
+	Tất cả && 0,845 && 0,895 && 0,707 && \emph{0,815} \\
 	Person && 0,944 && 0,910 && 0,816 && 0,890 \\
 	Problem && 0,666 && 0,689 && 0,654 && 0,670 \\
 	Test && 0,568 && 0,637 && 0,589 && 0,598 \\
@@ -40,12 +41,20 @@ Các kết quả độ F đánh giá hệ thống:
 	\bottomrule
 	\endtabular
 \end{center}
-
+\begin{itemize}
+	\item Lớp Test chịu sự mất cân bằng mẫu nhiều nhất
+	\item Nhiều mô hình SVM được huấn luyện với tham số mặc định
+	\item Sự khác biệt trong chi tiết hiện thực các đặc trưng
+	\begin{itemize}
+		\item Một số đặc trưng không được hiện thực
+	\end{itemize}
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Kết quả đánh giá}
 \putlogo
-Thông tin về bệnh nhân là một thông tin quan trọng
+\begin{itemize}
+\item Thông tin về bệnh nhân là một thông tin quan trọng
 \begin{center}
 	\renewcommand{\tabcolsep}{3pt}
 	%\renewcommand{\arraystretch}{1.2}
@@ -60,14 +69,5 @@ Thông tin về bệnh nhân là một thông tin quan trọng
 	\bottomrule
 	\end{tabular}
 \end{center}
-
-Kết quả đánh giá cho các lớp Problem, Test và Treatment có độ F lần lượt là 0,670; 0,598 và 0,764.
-\begin{itemize}
-	\item Lớp Test chịu sự mất cân bằng mẫu nhiều nhất
-	\item Nhiều mô hình SVM được huấn luyện với tham số mặc định
-	\item Sự khác biệt trong chi tiết hiện thực các đặc trưng
-	\begin{itemize}
-		\item Một số đặc trưng không được hiện thực
-	\end{itemize}
 \end{itemize}
 \end{frame}

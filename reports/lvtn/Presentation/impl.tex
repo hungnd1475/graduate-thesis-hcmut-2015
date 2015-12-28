@@ -1,57 +1,142 @@
 \section{Hiện thực hệ thống}
 %the problem
-\subsection{Nội dung bài toán}
-\begin{frame}{Nội dung bài toán}
-\putlogo
-Phân giải đồng tham chiếu cho các hồ sơ xuất viện tiếng Anh với các khái niệm đã được trích xuất và gán nhãn
-
-Đầu vào:
-\begin{itemize}
-	\item Tập các hồ sơ xuất viện (HSXV)
-	\begin{itemize}
-		\item Những văn bản lâm sàng mô tả thông tin điều trị bệnh nhân
-	\end{itemize}
-	\item Tập các khái niệm đã được trích xuất và gán nhãn
-	\begin{itemize}
-		\item Person
-		\item Problem/Test/Treatment
-		\item Pronoun
-	\end{itemize}
-\end{itemize}
-
-Đầu ra: 
-\begin{itemize}
-\item Danh sách các chuỗi đồng tham chiếu cho mỗi HSXV
-\end{itemize}
-\end{frame}
+%\subsection{Nội dung bài toán}
+%\begin{frame}{Nội dung bài toán}
+%\putlogo
+%Phân giải đồng tham chiếu cho các hồ sơ xuất viện tiếng Anh với các khái niệm đã được trích xuất và gán nhãn
+%
+%Đầu vào:
+%\begin{itemize}
+%	\item Tập các hồ sơ xuất viện (HSXV)
+%	\begin{itemize}
+%		\item Những văn bản lâm sàng mô tả thông tin điều trị bệnh nhân
+%	\end{itemize}
+%	\item Tập các khái niệm đã được trích xuất và gán nhãn
+%	\begin{itemize}
+%		\item Person
+%		\item Problem/Test/Treatment
+%		\item Pronoun
+%	\end{itemize}
+%\end{itemize}
+%
+%Đầu ra: 
+%\begin{itemize}
+%\item Danh sách các chuỗi đồng tham chiếu cho mỗi HSXV
+%\end{itemize}
+%\end{frame}
 
 %system architecture
-\subsection{Kiến trúc hệ thống}
-\begin{frame}{Kiến trúc hệ thống}
+\subsection{Ý tưởng hiện thực}
+\begin{frame}{Ý tưởng hiện thực}
 \putlogo
-Mô hình được sử dụng: mô hình \emph{cặp khái niệm}
 \begin{itemize}
-	\item Xác định tính đồng tham chiếu cho từng cặp hai khái niệm
-	\item Gom cụm các cặp đồng tham chiếu lại và xây dựng các chuỗi đồng tham chiếu ứng với mỗi cụm
-\end{itemize}
-Hai quy trình
-\begin{itemize}
+	\item Mô hình \emph{cặp khái niệm}
+	\begin{itemize}
+		\item Xác định tính đồng tham chiếu cho từng cặp hai khái niệm
+		\item Gom cụm các cặp đồng tham chiếu lại và xây dựng các chuỗi đồng tham chiếu ứng với mỗi cụm
+	\end{itemize}
 	\item Quy trình huấn luyện
 	\begin{itemize}
 		\item Huấn luyện các mô hình phân loại dựa trên dữ liệu mẫu 
 	\end{itemize}
 	\item Quy trình phân giải
 	\begin{itemize}
-		\item Cho các BAĐT mới
 		\item Sử dụng các mô hình phân loại đã được huấn luyện
 		\item Giải thuật gom cụm
+		\item Xuất ra các chuỗi đồng tham chiếu cho các HSXV mới
 	\end{itemize}
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Kiến trúc hệ thống}
+\begin{frame}{Quy trình huấn luyện}
 \putlogo
-Trình bày rõ 2 quy trình...
+\resizebox{\textwidth}{!}{
+\begin{tikzpicture}[%
+	>=angle 60,
+	start chain=going below,
+	node distance=1.5cm and 2cm,
+	every join/.style={->, draw},
+	font=\scriptsize\sffamily]
+
+	\node[multidoc](emr){HSXV};
+	\node[multidoc, right=of emr, text width=3.5em](con){Danh sách khái niệm};
+	\node[proc,below=1.3cm of $(emr)!0.5!(con)$](prep){Tiền xử lý};
+	\node[io,join]{Các khái niệm/cặp khái niệm};
+	\node[proc,join](ex){Rút trích đặc trưng};
+	\node[io, right=3cm of con](perp){Đặc trưng cặp Person};
+	\node[io](pati){Đặc trưng Person};
+	\node[io](prop){Đặc trưng cặp Problem};
+	\node[io](tstp){Đặc trưng cặp Test};
+	\node[io](trep){Đặc trưng cặp Treatment};
+	\node[io](pron){Đặc trưng Pronoun};	
+	\node[proc, right=2.3cm of $(prop)!0.5!(tstp)$](train){Huấn luyện};
+	\node[io,right=6.3cm of perp](perm){Mô hình SVM \textbf{{\color{red}cặp Person}}};
+	\node[io](prom){Mô hình SVM \textbf{{\color{red}cặp Problem}}};
+	\node[io](tstm){Mô hình SVM \textbf{{\color{red}cặp Test}}};
+	\node[io](trem){Mô hình SVM \textbf{{\color{red}cặp Treatment}}};
+	\node[io](pronm){Mô hình SVM \textbf{{\color{blue}Pronoun}}};
+	\node[io](patim){Mô hình SVM \textbf{{\color{violet}lớp Patient}}};
+
+	\draw[->] (emr) -- ++(down:0.9cm) -| (prep.130);
+	\draw[->] (con) -- ++(down:0.9cm) -| (prep.50);
+	\draw[->] (ex) -- ++(right:2.3cm) |- (perp);
+	\draw[->] (ex) -- ++(right:2.3cm) |- (pati);
+	\draw[->] (ex) -- ++(right:2.3cm) |- (prop);
+	\draw[->] (ex) -- ++(right:2.3cm) |- (tstp);
+	\draw[->] (ex) -- ++(right:2.3cm) |- (trep);
+	\draw[->] (ex) -- ++(right:2.3cm) |- (pron);
+	\draw[->] (perp) -- ++(right:1.8cm) |- (train);
+	\draw[->] (pati) -- ++(right:1.8cm) |- (train);
+	\draw[->] (prop) -- ++(right:1.8cm) |- (train);
+	\draw[->] (tstp) -- ++(right:1.8cm) |- (train);
+	\draw[->] (trep) -- ++(right:1.8cm) |- (train);
+	\draw[->] (pron) -- ++(right:1.8cm) |- (train);
+	\draw[->] (train) -- ++(right:1.3cm) |- (perm);
+	\draw[->] (train) -- ++(right:1.3cm) |- (patim);
+	\draw[->] (train) -- ++(right:1.3cm) |- (prom);
+	\draw[->] (train) -- ++(right:1.3cm) |- (tstm);
+	\draw[->] (train) -- ++(right:1.3cm) |- (trem);
+	\draw[->] (train) -- ++(right:1.3cm) |- (pronm);
+\end{tikzpicture}
+}
+\end{frame}
+
+\begin{frame}{Quy trình phân loại}
+\putlogo
+\centering
+\resizebox{!}{0.95\textheight}{
+\begin{tikzpicture}[%
+	>=angle 60,
+	start chain=going below,
+	node distance=1.7cm and 2.7cm,
+	every join/.style={->, draw},
+	font=\scriptsize\sffamily]
+
+	\node[doc](emr){HSXV};
+	\node[doc, right=of emr, text width=3.5em](con){Danh sách khái niệm};
+	\node[proc, below=1.3cm of $(emr)!0.5!(con)$](prep){Tiền xử lý};
+	\node[io,join](ins){Các khái niệm/cặp khái niệm};
+	\node[proc,join](ex){Rút trích đặc trưng};
+	\node[io, right=of ex, join](feat){Tập vector đặc trưng};
+	\node[proc, right=of feat, join](clas){Phân loại};
+	\node[multidoc, above=of clas, text width=3.5em](model){6 mô hình SVM};
+	\node[io,below=of clas](conf){Độ tin cậy đồng tham chiếu};
+	\node[proc,join,below=of ex](clus){Gom cụm};
+	\node[io,join](sysc){Các chuỗi đồng tham chiếu};
+	\node[proc,join,right=of sysc](eval){Đánh giá hiệu năng};
+	\node[doc,right=of eval, text width=2cm](gt){Các chuỗi đồng tham chiếu kết quả (ground truth)};
+	\node[io,below=of eval](res){Các số liệu độ đo};
+
+	\draw[->] (emr) -- ++(down:0.9cm) -| (prep.130);
+	\draw[->] (con) -- ++(down:0.9cm) -| (prep.50);
+	\draw[->] (model) -> (clas);
+	\draw[->] (clas) -> (conf);
+	\draw[->] (ins) -- ++(left:1.8cm) |- (clus);
+	\draw[->] (gt) -> (eval);
+	\draw[->] (eval) -> (res);
+	\draw[->] (model.200) -- ++(left:3cm) node[midway,above,sloped]{SVM Patient-class} -> (ex.north east);
+\end{tikzpicture}
+}
 \end{frame}
 
 %pair construction

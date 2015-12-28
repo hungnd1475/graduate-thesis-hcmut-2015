@@ -1,4 +1,4 @@
-\documentclass[utf8]{beamer}
+\documentclass[utf8,t]{beamer}
 \mode<presentation>
 
 \usepackage[T1]{fontenc}
@@ -9,7 +9,7 @@
 \usepackage{array}
 \usepackage{booktabs}
 \usepackage{graphicx}
-
+%\usepackage{enumitem}
 
 \usetheme{Rochester}
 %\useoutertheme{infolines}
@@ -40,9 +40,29 @@
   \vskip0pt%
 }
 
-\title[Luận văn tốt nghiệp đại học]{Phân giải đồng tham chiếu\\trong bệnh án điện tử}
+\title[Luận văn tốt nghiệp đại học]{\textbf{Phân giải đồng tham chiếu\\trong bệnh án điện tử}}
 \author[Hưng \& Tuấn]{Nguyễn Duy Hưng (51101475) \\ Vương Anh Tuấn (51104040)}
 \date[TP.HCM, 12/2015]{TP. Hồ Chí Minh, 12/2015}
+
+\renewcommand{\emph}[1]{{\color{red}#1}}
+\setlength{\leftmargini}{0.8em}
+
+\usetikzlibrary{
+	shapes,arrows,shapes.symbols,shapes.geometric,shadows,
+	chains,calc,positioning,shapes.misc
+}
+\tikzset{
+	base/.style = { draw, on grid, align=center, on chain, inner sep=2pt },
+	doc/.style = { base, shape=tape, fill=white, tape bend top=none, minimum height=2.5em, text width=3em },
+	multidoc/.style = { doc, double copy shadow={shadow xshift=.5ex, shadow yshift=.5ex} },
+	proc/.style = { base, rectangle, text width=4em, minimum height=2em },
+	io/.style = { base, trapezium, trapezium left angle=60, trapezium right angle=120, text width=4em, minimum height=2em },
+	altproc/.style = { base, rounded rectangle, text width=3.5em, minimum height=2em },	
+	wpoint/.style = { circle, draw, minimum size=0.25cm, inner sep=0cm, outer sep=0cm },
+	bpoint/.style = { wpoint, fill=black }, 
+	swpoint/.style={wpoint,minimum size=0.15cm},
+	sbpoint/.style={bpoint,minimum size=0.15cm},
+}
 
 \begin{document}
 
@@ -52,8 +72,8 @@
 \titlepage
 \end{frame}
 
-\input{./intro2.tex}
-\input{./base.tex}
+\input{./intro3.tex}
+%\input{./base.tex}
 \input{./impl.tex}
 \input{./expr.tex}
 \input{./conclusion.tex}
