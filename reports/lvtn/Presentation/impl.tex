@@ -37,13 +37,13 @@
 	\end{itemize}
 	\item Quy trình huấn luyện
 	\begin{itemize}
-		\item Huấn luyện các mô hình phân loại dựa trên dữ liệu mẫu 
+		\item Huấn luyện các mô hình SVM phân loại tính đồng tham chiếu 
 	\end{itemize}
 	\item Quy trình phân giải
 	\begin{itemize}
 		\item Sử dụng các mô hình phân loại đã được huấn luyện
-		\item Giải thuật gom cụm
-		\item Xuất ra các chuỗi đồng tham chiếu cho các HSXV mới
+		\item Giải thuật \emph{gom cụm tốt nhất trước}
+		\item[\boldmath$\rightarrow$] Các chuỗi đồng tham chiếu cho các HSXV mới
 	\end{itemize}
 \end{itemize}
 \end{frame}
@@ -63,19 +63,19 @@
 	\node[proc,below=1.3cm of $(emr)!0.5!(con)$](prep){Tiền xử lý};
 	\node[io,join]{Các khái niệm/cặp khái niệm};
 	\node[proc,join](ex){Rút trích đặc trưng};
-	\node[io, right=3cm of con](perp){Đặc trưng cặp Person};
-	\node[io](pati){Đặc trưng Person};
-	\node[io](prop){Đặc trưng cặp Problem};
-	\node[io](tstp){Đặc trưng cặp Test};
-	\node[io](trep){Đặc trưng cặp Treatment};
-	\node[io](pron){Đặc trưng Pronoun};	
-	\node[proc, right=2.3cm of $(prop)!0.5!(tstp)$](train){Huấn luyện};
-	\node[io,right=6.3cm of perp](perm){Mô hình SVM \textbf{{\color{red}cặp Person}}};
-	\node[io](prom){Mô hình SVM \textbf{{\color{red}cặp Problem}}};
-	\node[io](tstm){Mô hình SVM \textbf{{\color{red}cặp Test}}};
-	\node[io](trem){Mô hình SVM \textbf{{\color{red}cặp Treatment}}};
-	\node[io](pronm){Mô hình SVM \textbf{{\color{blue}Pronoun}}};
-	\node[io](patim){Mô hình SVM \textbf{{\color{violet}lớp Patient}}};
+	\node[io, right=3cm of con, emph=<2>](perp){Đặc trưng cặp Person};
+	\node[io, emph=<2>](prop){Đặc trưng cặp Problem};
+	\node[io, emph=<2>](tstp){Đặc trưng cặp Test};
+	\node[io, emph=<2>](trep){Đặc trưng cặp Treatment};
+	\node[io, emph=<3>](pron){Đặc trưng Pronoun};	
+	\node[io, emph=<4>](pati){Đặc trưng Person};
+	\node[proc, right=2.3cm of $(trep)!0.5!(tstp)$](train){Huấn luyện};
+	\node[io,right=6.3cm of perp, emph=<2>](perm){Mô hình SVM cặp Person};
+	\node[io, emph=<2>](prom){Mô hình SVM cặp Problem};
+	\node[io, emph=<2>](tstm){Mô hình SVM cặp Test};
+	\node[io, emph=<2>](trem){Mô hình SVM cặp Treatment};
+	\node[io, emph=<3>](pronm){Mô hình SVM Pronoun};
+	\node[io, emph=<4>](patim){Mô hình SVM lớp Patient};
 
 	\draw[->] (emr) -- ++(down:0.9cm) -| (prep.130);
 	\draw[->] (con) -- ++(down:0.9cm) -| (prep.50);
@@ -123,17 +123,17 @@
 	\node[io,below=of clas](conf){Độ tin cậy đồng tham chiếu};
 	\node[proc,join,below=of ex](clus){Gom cụm};
 	\node[io,join](sysc){Các chuỗi đồng tham chiếu};
-	\node[proc,join,right=of sysc](eval){Đánh giá hiệu năng};
-	\node[doc,right=of eval, text width=2cm](gt){Các chuỗi đồng tham chiếu kết quả (ground truth)};
-	\node[io,below=of eval](res){Các số liệu độ đo};
+%	\node[proc,join,right=of sysc](eval){Đánh giá hiệu năng};
+%	\node[doc,right=of eval, text width=2cm](gt){Các chuỗi đồng tham chiếu kết quả (ground truth)};
+%	\node[io,below=of eval](res){Các số liệu độ đo};
 
 	\draw[->] (emr) -- ++(down:0.9cm) -| (prep.130);
 	\draw[->] (con) -- ++(down:0.9cm) -| (prep.50);
 	\draw[->] (model) -> (clas);
 	\draw[->] (clas) -> (conf);
 	\draw[->] (ins) -- ++(left:1.8cm) |- (clus);
-	\draw[->] (gt) -> (eval);
-	\draw[->] (eval) -> (res);
+%	\draw[->] (gt) -> (eval);
+%	\draw[->] (eval) -> (res);
 	\draw[->] (model.200) -- ++(left:3cm) node[midway,above,sloped]{SVM Patient-class} -> (ex.north east);
 \end{tikzpicture}
 }

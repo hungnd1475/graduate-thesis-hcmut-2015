@@ -24,7 +24,7 @@
 \begin{itemize}
 	\item Vấn đề cần giải quyết: \textit{Xác định những khái niệm được đề cập trong BAĐT có cùng chỉ tới một thực thể trong thế giới thực hay không}
 	\begin{itemize}
-		\item[$\longrightarrow$] Phân giải đồng tham chiếu
+		\item[\boldmath$\rightarrow$] Phân giải đồng tham chiếu
 	\end{itemize}
 	\item Ví dụ:
 	\begin{center}
@@ -33,7 +33,7 @@
 		``\tikz[baseline=(I.base)]\node[na](I){\color{red}I}; voted for \tikz[baseline=(Nader.base)]\node[na](Nader){\color{blue}Nader}; because \tikz[baseline=(he.base)]\node[na](he){\color{blue}he}; was most\\\addvspace{.5cm}
 		aligned with \tikz[baseline=(my.base)]{\node[na](my){\color{red}my};} value'', \tikz[baseline=(she.base)]\node[na](she){\color{red}she}; said
 		\begin{tikzpicture}[overlay]
-			\path[->,thick] (she.north) edge[out=150,in=30] (my.north);
+			\path[->,thick] (she) edge[out=150,in=30] (my.north);
 			\path[->,thick] (my) edge[out=120,in=300] (I.south);
 			\path[->, thick] (he.north west) edge[out=150,in=30] (Nader.north);
 		\end{tikzpicture}
