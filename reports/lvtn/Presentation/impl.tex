@@ -247,21 +247,29 @@
 		\item Xác định khái niệm thuộc nhóm nào đóng vai trò quan trọng
 	\end{itemize}
 	\item Các khái niệm chỉ bệnh nhân được đưa vào cùng một chuỗi đồng tham chiếu
+	\item Có thể được phân loại dựa vào {\color{red} từ khóa}
+	\begin{itemize}
+		\item Bệnh nhân: pt, patient,...
+		\item Người thân: wife, brother, sibling,...
+		\item Nhân sự bệnh viện: doctor, dr, dentist,...
+	\end{itemize}
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Đặc trưng lớp Person}
 \putlogo
 \begin{itemize}
-	\item Có thể được phân loại dựa vào {\color{red} từ khóa}
-	\item Các đặc trưng được sử dụng bao gồm:
+	\item Các đặc trưng {\color{red} cơ bản}:
 	\begin{itemize}
-		\item Đặc trưng lớp bệnh nhân
-		\item Ngữ nghĩa
-		\item Ngữ pháp
 		\item Khoảng cách
-		\item Từ vựng
-	\end{itemize}	
+		\item Ngữ pháp
+		\item Ngữ nghĩa
+	\end{itemize}		
+	\item Các đặc trưng riêng trong {\color{red} lĩnh vực y tế}:
+	\begin{itemize}
+		\item Patient-class
+		\item Từ khóa chỉ nhóm
+	\end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -270,16 +278,16 @@
 \begin{frame}{Đặc trưng lớp Pronoun}
 \putlogo
 \begin{itemize}
-	\item Là các khái niệm có thể chỉ về bất kì khái niệm thuộc bốn lớp Person, Problem, Treatment và Test
+	\item Là các khái niệm có thể chỉ về bất kì khái niệm thuộc 4 lớp chính Person, Problem, Treatment và Test
 	\begin{itemize}
 		\item Ví dụ: which, this, that,...
 	\end{itemize}
-	\item Cần được {\color{red} xác định lớp khái niệm} mà đại từ ám chỉ
+	\item Cần được {\color{red} xác định lớp chính} mà đại từ ám chỉ
 	\item Đại từ đang xét được ghép chung vào chuỗi đồng tham chiếu của khái niệm gần nhất trước đó có cùng lớp khái niệm
+	\item Chứa ít thông tin ngữ nghĩa, dựa phần lớn vào từ vựng và ngữ pháp
 	\item Các nhóm đặc trưng được sử dụng bao gồm:
 	\begin{itemize}
 		\item Quan hệ
-		\item Ngữ nghĩa
 		\item Ngữ pháp
 		\item Khoảng cách
 	\end{itemize}
@@ -297,7 +305,7 @@
 		\item ``Pain in \underline{right leg}'' và ``Pain in \underline{left leg}''
 		\item ``Head injury'' và ``Head trauma''
 	\end{itemize}
-	\item Các đặc trưng về tri thức nhân loại:
+	\item Sử dụng các tri thức nhân loại:
 	\begin{itemize}
 		\item Tiêu đề, từ in đậm và liên kết của {\color{red} Wikipedia}
 		\item Tên khái niệm và lớp ngữ nghĩa của {\color{red} UMLS}
