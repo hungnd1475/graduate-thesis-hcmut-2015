@@ -9,7 +9,7 @@
 \usepackage{array}
 \usepackage{booktabs}
 \usepackage{graphicx}
-%\usepackage{enumitem}
+\usepackage{pgfplots}
 
 \usetheme{Rochester}
 %\useoutertheme{infolines}
@@ -67,6 +67,8 @@
 	alt/.code args={<#1>#2#3}{
 		\alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}}},
 }
+
+\pgfplotsset{compat=1.12}
 
 \begin{document}
 

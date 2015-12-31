@@ -26,17 +26,17 @@ Ba hệ đo:
 \begin{center}
 	Các kết quả độ F đánh giá hệ thống\vspace{0.1cm}
 	\renewcommand{\tabcolsep}{3pt}
-	\renewcommand{\arraystretch}{1.2}
+	%\renewcommand{\arraystretch}{1.2}
 	\footnotesize\sffamily
 	
 	\tabular{@{}lcccccccc@{}}
 	\toprule
 	&\phantom{a}&\textbf{MUC}&\phantom{a}&\textbf{B-CUBED}&\phantom{a}&\textbf{CEAF}&\phantom{a}&\textbf{Trung bình}\\
 	\midrule
-	Tất cả && 0,845 && 0,895 && 0,707 && \emph{0,815} \\
-	Person && 0,944 && 0,910 && 0,816 && 0,890 \\
-	Problem && 0,666 && 0,689 && 0,654 && 0,670 \\
-	Test && 0,568 && 0,637 && 0,589 && 0,598 \\
+	Tất cả && 0,845 && 0,895 && 0,707 && \emph{0,815}\\\cmidrule{1-9}
+	Person && 0,944 && 0,910 && 0,816 && 0,890 \\\cmidrule{1-9}
+	Problem && 0,666 && 0,689 && 0,654 && 0,670 \\\cmidrule{1-9}
+	Test && 0,568 && 0,637 && 0,589 && 0,598 \\\cmidrule{1-9}
 	Treatment && 0,759 && 0,772 && 0,761 && 0,764 \\
 	\bottomrule
 	\endtabular
@@ -53,21 +53,51 @@ Ba hệ đo:
 
 \begin{frame}{Kết quả đánh giá}
 \putlogo
-\begin{itemize}
-\item Thông tin về bệnh nhân là một thông tin quan trọng
+
+\pgfplotstableread[row sep=\\,col sep=&]{
+	measures & wo & w\\
+	P & 0.770 & 0.925\\
+	R & 0.755 & 0.873\\
+	F & 0.731 & 0.890\\                                                                                                         
+}\ptperf
+
+\vspace{-1cm}
 \begin{center}
-	\renewcommand{\tabcolsep}{3pt}
-	%\renewcommand{\arraystretch}{1.2}
-	\footnotesize\sffamily
-	
-	\begin{tabular}{@{}lcccc@{}}
-	\toprule
-	& \textbf{P} & \textbf{R} & \textbf{F} & \% tăng lên\\
-	\midrule
-	Không có đặc trưng Patient-class & 0,770 & 0,755 & 0,731 &\\
-	Có đặc trưng Patient-class & 0,925 & 0,873 & 0,890 & 21,75\%\\
-	\bottomrule
-	\end{tabular}
+{
+\scriptsize
+\begin{tikzpicture}
+\pgfplotsset{width=7cm}
+\begin{axis}[%
+	ybar,
+	symbolic x coords={P, R, F},
+	xtick=data,
+	bar width=.6cm,
+	enlarge x limits=.3,
+	enlarge y limits=.5,
+	nodes near coords,
+	legend cell align=left,
+	legend pos=outer north east]
+	\addplot table[x=measures,y=wo]{\ptperf};
+	\addplot table[x=measures,y=w]{\ptperf};
+	\legend{Không có đặc trưng Patient-class, Có đặc trưng Patient-class};	
+\end{axis}
+\end{tikzpicture}
+}
+Khi có đặc trưng Patient-class, hiệu năng phân giải cho lớp Person tăng lên \emph{21.75\%}
 \end{center}
-\end{itemize}
+
+%\begin{center}
+%	\renewcommand{\tabcolsep}{3pt}
+%	%\renewcommand{\arraystretch}{1.2}
+%	\footnotesize\sffamily
+%	
+%	\begin{tabular}{@{}lcccc@{}}
+%	\toprule
+%	& \textbf{P} & \textbf{R} & \textbf{F} & \% tăng lên\\
+%	\midrule
+%	Không có đặc trưng Patient-class & 0,770 & 0,755 & 0,731 &\\
+%	Có đặc trưng Patient-class & 0,925 & 0,873 & 0,890 & 21,75\%\\
+%	\bottomrule
+%	\end{tabular}
+%\end{center}
 \end{frame}
