@@ -1,35 +1,24 @@
 \section{Thí nghiệm đánh giá}
 \begin{frame}{Các phương pháp đánh giá}
 \putlogo
-Ba độ đo: \emph{độ đúng đắn} (precision), \emph{độ đầy đủ} (recall) và \emph{độ F} (F-measure)
-
-Ba hệ đo:
 \begin{itemize}
-	\item Hệ MUC
-	\begin{itemize}
-		\item Dựa trên sự thiếu và thừa các liên kết giữa hai khái niệm trong chuỗi đồng tham chiếu xuất ra bởi hệ thống
-	\end{itemize}
-	\item Hệ B-CUBED
-	\begin{itemize}
-		\item Tính toán các độ đo cho từng khái niệm trong văn bản
-	\end{itemize}
-	\item Hệ CEAF
-	\begin{itemize}
-		\item Dựa trên một sự ghép cặp tối ưu giữa các chuỗi kết quả và các chuỗi được xuất ra bởi hệ thống
-	\end{itemize}
+	\item \textbf{Hệ MUC:} Dựa trên sự \emph{thiếu và thừa các liên kết} giữa hai khái niệm trong chuỗi đồng tham chiếu xuất ra bởi hệ thống
+	\item \textbf{Hệ B-CUBED:} Tính toán các độ đo cho \emph{từng khái niệm} trong văn bản
+	\item \textbf{Hệ CEAF:} Dựa trên một \emph{sự ghép cặp tối ưu} giữa các chuỗi kết quả và các chuỗi được xuất ra bởi hệ thống	
+	\item[\boldmath$\rightarrow$] \emph{Trung bình không trọng số} của ba hệ được lấy làm kết quả cuối cùng
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Kết quả đánh giá}
 \putlogo
-\vspace{-0.7cm}
+\vspace{-0.25cm}
 \begin{center}
 	Các kết quả độ F đánh giá hệ thống\vspace{0.1cm}
 	\renewcommand{\tabcolsep}{3pt}
 	%\renewcommand{\arraystretch}{1.2}
 	\footnotesize\sffamily
 	
-	\tabular{@{}lcccccccc@{}}
+	\tabular{lcccccccc}
 	\toprule
 	&\phantom{a}&\textbf{MUC}&\phantom{a}&\textbf{B-CUBED}&\phantom{a}&\textbf{CEAF}&\phantom{a}&\textbf{Trung bình}\\
 	\midrule
@@ -61,7 +50,7 @@ Ba hệ đo:
 	F & 0.731 & 0.890\\                                                                                                         
 }\ptperf
 
-\vspace{-1cm}
+\vspace{-.25cm}
 \begin{center}
 {
 \scriptsize
@@ -79,10 +68,11 @@ Ba hệ đo:
 	legend pos=outer north east]
 	\addplot table[x=measures,y=wo]{\ptperf};
 	\addplot table[x=measures,y=w]{\ptperf};
-	\legend{Không có đặc trưng Patient-class, Có đặc trưng Patient-class};	
+	\legend{Không có Patient-class, Có Patient-class};	
 \end{axis}
 \end{tikzpicture}
 }
+
 Khi có đặc trưng Patient-class, hiệu năng phân giải cho lớp Person tăng lên \emph{21.75\%}
 \end{center}
 

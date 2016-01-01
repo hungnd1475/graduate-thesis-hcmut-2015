@@ -21,8 +21,12 @@
 \setbeamercolor*{section in head/foot}{parent=palette tertiary}
 \setbeamercolor*{subsection in head/foot}{parent=palette primary}
 
-\newcommand*\putlogo[1][east]{%
-  \tikz[remember picture, overlay]\node[anchor=north #1, yshift=2pt] at (current page.north #1) {\includegraphics[height=14.5mm]{logo.pdf}};}
+\newcommand*\putlogo{%
+	\tikz[remember picture, overlay]\node[anchor=north east, yshift=2pt] at (current page.north east) {\includegraphics[height=14.5mm]{logo.pdf}};\vspace{-12pt}}
+  
+\newcommand*\puttitlelogo{%
+	\tikz[remember picture, overlay]\node[anchor=north west, yshift=2pt] at (current page.north west) {\includegraphics[height=14.5mm]{logo.pdf}};
+}
 
 \setbeamertemplate{footline}{%
 	\leavevmode%
@@ -64,17 +68,28 @@
 	sbpoint/.style={bpoint,minimum size=0.15cm},
 	emph/.style={alt={#1{draw=red,very thick}{}}},
 	emph2/.style={alt={#1{draw=blue,very thick}{}}},
+	invisible/.style={opacity=0,text opacity=0},
+    visible on/.style={alt={#1{}{invisible}}},
 	alt/.code args={<#1>#2#3}{
 		\alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}}},
 }
 
 \pgfplotsset{compat=1.12}
 
+\makeatletter
+\def\@listi{\leftmargin 1em
+            \topsep    0pt
+            \partopsep 0pt
+            \parsep    0pt
+            \itemsep   5pt}
+\let\@listI\@listi
+\makeatother
+
 \begin{document}
 
 %title
 \begin{frame}{\hspace{15mm}Đại học Quốc gia TP.HCM}{\hspace{15mm}Trường đại học Bách Khoa\\\hspace{15mm}Khoa Khoa học \& Kĩ thuật Máy tính}
-\putlogo[west]
+\puttitlelogo
 \titlepage
 \end{frame}
 

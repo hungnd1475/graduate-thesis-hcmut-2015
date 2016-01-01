@@ -163,7 +163,10 @@
 		\item Xảy ra ở ba lớp Problem, Test và Treatment
 		\item Mô hình SVM có xu hướng phân loại về âm
 	\end{itemize}
-	\item \textbf{Cách giải quyết:} Thêm mẫu dương hoặc \emph{loại bỏ mẫu âm}
+	\item \textbf{Cách giải quyết:} Loại bỏ bớt mẫu âm theo phương pháp của Ng and Cardie (2002)
+	\begin{itemize}
+		\item Giữ lại các cặp hai \textit{khái niệm duy nhất} có chuỗi con trùng nhau
+	\end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -249,9 +252,9 @@
 	\item Các khái niệm chỉ bệnh nhân được đưa vào cùng một chuỗi đồng tham chiếu
 	\item Có thể được phân loại dựa vào {\color{red} từ khóa}
 	\begin{itemize}
-		\item Bệnh nhân: pt, patient,...
-		\item Người thân: wife, brother, sibling,...
-		\item Nhân sự bệnh viện: doctor, dr, dentist,...
+		\item Bệnh nhân: pt, patient, ...
+		\item Người thân: wife, brother, sibling, ...
+		\item Nhân sự bệnh viện: doctor, dr, dentist, ...
 	\end{itemize}
 \end{itemize}
 \end{frame}
@@ -338,16 +341,45 @@
 \subsection{Gom cụm}
 \begin{frame}{Gom cụm và xây dựng chuỗi đồng tham chiếu}
 \putlogo
-Giải thuật gom cụm tốt nhất trước (best-first clustering)
 \begin{itemize}
-	\item Person/Problem/Test/Treatment
-	\begin{itemize}
-		\item Chọn ra cặp đồng tham chiếu có độ tin cậy cao nhất (được xuất ra bởi SVM)
-	\end{itemize} 
-	\item Pronoun
-	\begin{itemize}
-		\item Xác định lớp chính của đại từ và tạo một cặp gồm đại từ đó và khái niệm thuộc lớp chính ở gần nhất trước đó
-	\end{itemize}
-	\item Gom các cặp mà có chung một khái niệm lại để tạo thành các cụm và xây dựng chuỗi đồng tham chiếu ứng với mỗi cụm
+\item Sử dụng giải thuật \emph{gom cụm tốt nhất trước}
 \end{itemize}
+\begin{center}
+\begin{tikzpicture}[%
+	>=angle 60,
+	start chain=going right,
+	node distance=1.5cm and 4.5cm,
+	every join/.style={->, draw}]
+	\node[proc, text width=7em,inner sep=2mm](step1){Lựa chọn các cặp đồng tham chiếu tốt nhất};
+	\node[proc,join,text width=7em,inner sep=2mm](step2){Gom các cặp có chung một khái niệm};
+	\node[draw,rectangle callout,callout absolute pointer={(step1.south)},below=0.7cm of $(step1.south)!0.5!(step2.south)$, text width=0.95\textwidth, visible on=<2->](step1note){
+		\vspace{-3pt}
+		\begin{itemize}
+			\item Đối với nhóm lớp Person/Problem/Test/Treatment
+			\begin{itemize}
+				\item Với mỗi khái niệm $C_j$, chọn khái niệm $C_i$ đứng trước có độ tin cậy đồng tham chiếu cao nhất
+			\end{itemize}
+			\item Đối với lớp Pronoun
+			\begin{itemize}
+				\item Xác định lớp chính của đại từ và tạo một cặp gồm đại từ đó và khái niệm thuộc lớp chính ở gần nhất trước đó
+			\end{itemize}
+		\end{itemize}		
+	};
+\end{tikzpicture}
+\end{center}
+%\begin{itemize}
+%\item Sử dụng giải thuật \emph{gom cụm tốt nhất trước}
+%\item Với nhóm lớp Person/Problem/Test/Treatment
+%	\begin{itemize}
+%		\item Với mỗi khái niệm $C_j$, chọn khái niệm $C_i$ đứng trước có độ tin cậy đồng tham chiếu cao nhất
+%	\end{itemize} 
+%\item Với lớp Pronoun
+%	\begin{itemize}
+%		\item Xác định lớp chính của đại từ và tạo một cặp gồm đại từ đó và khái niệm thuộc lớp chính ở gần nhất trước đó
+%	\end{itemize}
+%\item Gom các cặp được chọn mà có chung một khái niệm để tạo thành các cụm
+%	\begin{itemize}
+%	\item[\boldmath$\rightarrow$] Mỗi cụm ứng với một chuỗi đồng tham chiếu
+%	\end{itemize}
+%\end{itemize}
 \end{frame}
