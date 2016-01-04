@@ -1,11 +1,20 @@
 \section{Thí nghiệm đánh giá}
-\begin{frame}{Các phương pháp đánh giá}
+\begin{frame}{Tập dữ liệu \& Các phương pháp đánh giá}
 \putlogo
 \begin{itemize}
-	\item \textbf{Hệ MUC:} Dựa trên sự \emph{thiếu và thừa các liên kết} giữa hai khái niệm trong chuỗi đồng tham chiếu xuất ra bởi hệ thống
-	\item \textbf{Hệ B-CUBED:} Tính toán các độ đo cho \emph{từng khái niệm} trong văn bản
-	\item \textbf{Hệ CEAF:} Dựa trên một \emph{sự ghép cặp tối ưu} giữa các chuỗi kết quả và các chuỗi được xuất ra bởi hệ thống	
-	\item[\boldmath$\rightarrow$] \emph{Trung bình không trọng số} của ba hệ được lấy làm kết quả cuối cùng
+	\item \textbf{Tập dữ liệu:} Được cung cấp bởi i2b2
+	\begin{itemize}
+		\item 251 HSXV cho tập huấn luyện
+		\item 173 HSXV cho tập kiểm tra
+		\item Được gán nhãn và phân giải đồng tham chiếu bởi các chuyên gia
+	\end{itemize}
+	\item \textbf{Các độ đo:} \emph{độ đúng đắn} (precision), \emph{độ đầy đủ} (recall) và \emph{độ F} (F-measure) được tính theo ba phương pháp:
+	\begin{itemize}
+		\item MUC
+		\item B-CUBED
+		\item CEAF
+	\end{itemize}
+	\item[\boldmath$\rightarrow$] Trung bình không trọng số của ba phương pháp được lấy làm kết quả cuối cùng
 \end{itemize}
 \end{frame}
 
@@ -17,8 +26,7 @@
 	\renewcommand{\tabcolsep}{3pt}
 	%\renewcommand{\arraystretch}{1.2}
 	\footnotesize\sffamily
-	
-	\tabular{lcccccccc}
+	\begin{tabular}{lcccccccc}
 	\toprule
 	&\phantom{a}&\textbf{MUC}&\phantom{a}&\textbf{B-CUBED}&\phantom{a}&\textbf{CEAF}&\phantom{a}&\textbf{Trung bình}\\
 	\midrule
@@ -28,7 +36,7 @@
 	Test && 0,568 && 0,637 && 0,589 && 0,598 \\\cmidrule{1-9}
 	Treatment && 0,759 && 0,772 && 0,761 && 0,764 \\
 	\bottomrule
-	\endtabular
+	\end{tabular}
 \end{center}
 \begin{itemize}
 	\item Lớp Test chịu sự mất cân bằng mẫu nhiều nhất
