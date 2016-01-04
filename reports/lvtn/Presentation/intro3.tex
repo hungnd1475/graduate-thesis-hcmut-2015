@@ -29,7 +29,6 @@
 	\item Ví dụ:
 	\begin{center}
 		\tikzstyle{every picture}+=[remember picture]
-		\tikzstyle{na} = [shape=rectangle,inner ysep=1mm,inner xsep=0pt]
 		``\tikz[baseline=(I.base)]\node[na](I){\color{red}I}; voted for \tikz[baseline=(Nader.base)]\node[na](Nader){\color{blue}Nader}; because \tikz[baseline=(he.base)]\node[na](he){\color{blue}he}; was most\\\addvspace{.5cm}
 		aligned with \tikz[baseline=(my.base)]{\node[na](my){\color{red}my};} value'', \tikz[baseline=(she.base)]\node[na](she){\color{red}she}; said
 		\begin{tikzpicture}[overlay]
@@ -58,23 +57,33 @@
 	\item \textbf{Đầu ra:} Danh sách các chuỗi đồng tham chiếu cho mỗi HSXV	
 \end{itemize}
 
-\uncover<2>{
+\uncover<2->{
 \begin{center}
 Ý nghĩa các nhãn khái niệm\vspace{0.1cm}
 {
 \footnotesize
+\tikzstyle{every picture}+=[remember picture]
 \begin{tabular}{lll}
 \toprule
 \textbf{Nhãn} & \textbf{Ý nghĩa} & \textbf{Ví dụ}\\
 \midrule
-\textit{Person} & Các khái niệm chỉ người & the patient, Dr. John\\
-\textit{Problem} & Các vấn đề về sức khỏe & cancer, pain\\
-\textit{Test} & Các thủ tục y tế & blood pressure\\
-\textit{Treatment} & Các phương pháp điều trị & anti-biotic\\
+\tikz\node[na, inner ysep=0mm](Person){\textit{\color<3>{red}Person}}; & Các khái niệm chỉ người & the patient, Dr. John\\
+\textit{\color<3>{red}Problem} & Các vấn đề về sức khỏe & cancer, pain\\
+\textit{\color<3>{red}Test} & Các thủ tục y tế & blood pressure\\
+\tikz\node[na, inner ysep=0mm](Treatment){\textit{\color<3>{red}Treatment}}; & Các phương pháp điều trị & anti-biotic\\
 \textit{Pronoun} & Các đại từ & which, who, that\\
 \bottomrule
+\uncover<3>{
+\begin{tikzpicture}[overlay]
+\coordinate[left=.2cm of $(Person.west)!0.5!(Treatment.west)$](tmp-node);
+\path (Treatment.south west) edge[out=150,in=330] (tmp-node);
+\path (tmp-node) edge[out=30,in=210] (Person.north west);
+\node[na,text width=0.5cm,left=.3cm of tmp-node]{Lớp chính};
+\end{tikzpicture}
 \end{tabular}
 }
+}
+
 \end{center}
 }
 \end{frame}
