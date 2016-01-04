@@ -240,39 +240,34 @@
 
 %person extraction
 \subsection*{Đặc trưng lớp Person}
-\begin{frame}{Đặc trưng lớp Person}
+\begin{frame}{Đặc trưng lớp Person}{Cặp khái niệm lớp Person}
 \putlogo
 \begin{itemize}
-	\item Trong {\color{red} mọi lĩnh vực}: thường là tên riêng, chức danh và đại từ nhân xưng
-	\item Trong {\color{red} lĩnh vực y tế}: gồm 3 nhóm chính là bệnh nhân, người thân bệnh nhân và nhân sự bệnh viện
+	\item \emph{Đặc tính chung}: thường là tên riêng, chức danh và đại từ nhân xưng
 	\begin{itemize}
-		\item Bệnh nhân có số lượng khái niệm nhiều nhất
-		\item Xác định khái niệm thuộc nhóm nào đóng vai trò quan trọng
+		\item Khoảng cách: câu, khái niệm
+		\item So trùng chuỗi
+		\item Số lượng, giới tính, ...
 	\end{itemize}
-	\item Các khái niệm chỉ bệnh nhân được đưa vào cùng một chuỗi đồng tham chiếu
-	\item Có thể được phân loại dựa vào {\color{red} từ khóa}
+	\item Trong \emph{lĩnh vực y tế}: các khái niệm chỉ về bệnh nhân có số lượng nhiều nhất $\rightarrow$ đặc trưng Patient-class:
 	\begin{itemize}
-		\item Bệnh nhân: pt, patient, ...
-		\item Người thân: wife, brother, sibling, ...
-		\item Nhân sự bệnh viện: doctor, dr, dentist, ...
+		\item Bằng 1 khi cả 2 khái niệm đều chỉ về bệnh nhân
+		\item Bằng 0 trong các trường hợp khác
 	\end{itemize}
+
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Đặc trưng lớp Person}
+\begin{frame}{Đặc trưng lớp Person}{Xác định đặc trưng Patient-class}
 \putlogo
 \begin{itemize}
-	\item Các đặc trưng {\color{red} cơ bản}:
+	\item Có thể xác định dựa vào các {\color{red} từ khóa:}
 	\begin{itemize}
-		\item Khoảng cách
-		\item Ngữ pháp
-		\item Ngữ nghĩa
-	\end{itemize}		
-	\item Các đặc trưng riêng trong {\color{red} lĩnh vực y tế}:
-	\begin{itemize}
-		\item Patient-class
-		\item Từ khóa chỉ nhóm
+		\item Bệnh nhân: patient, pt, mr, ...
+		\item Người thân: wife, sibling, brother, ...
+		\item Nhân sự bệnh viên: doctor, dr, dentist, ...
 	\end{itemize}
+	\item Thuộc nhóm đại từ chỉ giới tính chiếm đa số
 \end{itemize}
 \end{frame}
 
@@ -281,15 +276,11 @@
 \begin{frame}{Đặc trưng lớp Pronoun}
 \putlogo
 \begin{itemize}
-	\item Là các khái niệm có thể chỉ về bất kì khái niệm thuộc 4 lớp chính Person, Problem, Treatment và Test
-	\item Cần được {\color{red} xác định lớp chính} mà đại từ ám chỉ
-	\item Đại từ đang xét được ghép chung vào chuỗi đồng tham chiếu của khái niệm gần nhất trước đó có cùng lớp khái niệm
-	\item Chứa ít thông tin ngữ nghĩa, dựa phần lớn vào từ vựng và ngữ pháp
-	\item Các nhóm đặc trưng được sử dụng bao gồm:
+	\item Cần được xác định chỉ vào lớp nào trong 4 lớp chính Person, Problem, Treatment hoặc Test
+	\item Chứa ít thông tin ngữ nghĩa, dựa phần lớn vào từ vựng, ngữ pháp và ngữ cảnh xung quanh:
 	\begin{itemize}
-		\item Quan hệ
-		\item Ngữ pháp
-		\item Khoảng cách
+		\item Quan hệ với các khái niệm xung quanh
+		\item Vai trò ngữ pháp: đại từ, nghi vấn từ, sở hữu từ, ...
 	\end{itemize}
 \end{itemize}
 \end{frame}
@@ -299,16 +290,14 @@
 \begin{frame}{Đặc trưng lớp Problem/Treatment/Test}
 \putlogo
 \begin{itemize}
-	\item Là nhóm khái niệm chỉ bất thường sức khỏe, phương pháp chữa trị và thủ tục y tế
-	\item Chịu ảnh hưởng mạnh bởi {\color{red} ngữ cảnh trong văn bản} và chứa nhiều {\color{red} từ ngữ chuyên môn}
+	\item Hai khái niệm đồng tham chiếu thường {\color{red} trùng chuỗi}
+	\item Nhiều \emph{từ đồng nghĩa}
 	\begin{itemize}
-		\item ``Pain in \underline{right leg}'' và ``Pain in \underline{left leg}''
 		\item ``Head injury'' và ``Head trauma''
 	\end{itemize}
-	\item Sử dụng các tri thức nhân loại:
+	\item Ảnh hưởng bởi \emph{ngữ cảnh trong văn bản}
 	\begin{itemize}
-		\item Tiêu đề, từ in đậm và liên kết của {\color{red} Wikipedia}
-		\item Tên khái niệm và lớp ngữ nghĩa của {\color{red} UMLS}
+		\item ``Pain in \underline{right leg}'' và ``Pain in \underline{left leg}''
 	\end{itemize}
 \end{itemize}
 \end{frame}
@@ -316,21 +305,16 @@
 \begin{frame}{Đặc trưng lớp Problem/Treatment/Test}
 \putlogo
 \begin{itemize}
-	\item Các đặc trưng về {\color{red} ngữ nghĩa} văn bản:
+	\item So trùng chuỗi, khoảng cách, ...
+	\item Tiêu đề, từ in đậm và liên kết của {\color{red} Wikipedia}
+	\item Trích xuất thông tin ngữ cảnh trong văn bản:
 	\begin{itemize}
 		\item Cơ quan trên cơ thể
-		\item Vị trí
-		\item Thuốc y tế
-		\item Chỉ định của thủ tục y tế
+		\item Vị trí: left, right, upper, ...
+		\item Thuốc y tế: tên thuốc, liều lượng, thời gian, ...
+		\item Kết quả của xét nghiệm
 		\item Thời gian
-		\item Phân đoạn bệnh án
-		\item Bổ từ
-		\item Thiết bị y tế
-		\item Phẫu thuật y tế
-	\end{itemize}
-	\item Ngoài ra các đặc trưng cơ bản cũng được sử dụng
-	\begin{itemize}
-		\item Ví dụ nhóm đặc trưng khoảng cách, ngữ nghĩa,...
+		\item Mục bệnh án
 	\end{itemize}
 \end{itemize}
 \end{frame}
