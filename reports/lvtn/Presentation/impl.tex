@@ -35,16 +35,23 @@
 		\item Xác định tính đồng tham chiếu cho từng cặp hai khái niệm
 		\item Gom cụm các cặp đồng tham chiếu lại và xây dựng các chuỗi đồng tham chiếu ứng với mỗi cụm
 	\end{itemize}
-	\item Quy trình huấn luyện
+	\item Tận dụng các đặc điểm chuyên biệt trong BAĐT
 	\begin{itemize}
-		\item Huấn luyện các mô hình SVM phân loại tính đồng tham chiếu 
+		\item Sự đề cập đến bệnh nhân
+		\item Trùng chuỗi kí tự là một đặc trưng mạnh
+		\item Sử dụng Wipedia để xác định các từ đồng nghĩa
+		\item Trích xuất các thông tin ngữ cảnh trong văn bản
 	\end{itemize}
-	\item Quy trình phân giải
-	\begin{itemize}
-		\item Sử dụng các mô hình phân loại đã được huấn luyện
-		\item Giải thuật \emph{gom cụm tốt nhất trước}
-		\item[\boldmath$\rightarrow$] Các chuỗi đồng tham chiếu cho các HSXV mới
-	\end{itemize}
+%	\item Quy trình huấn luyện
+%	\begin{itemize}
+%		\item Huấn luyện các mô hình SVM phân loại tính đồng tham chiếu 
+%	\end{itemize}
+%	\item Quy trình phân giải
+%	\begin{itemize}
+%		\item Sử dụng các mô hình phân loại đã được huấn luyện
+%		\item Giải thuật \emph{gom cụm tốt nhất trước}
+%		\item[\boldmath$\rightarrow$] Các chuỗi đồng tham chiếu cho các HSXV mới
+%	\end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -101,7 +108,7 @@
 }
 \end{frame}
 
-\begin{frame}{Quy trình phân loại}
+\begin{frame}{Quy trình phân giải}
 \putlogo
 \centering
 \resizebox{!}{0.95\textheight}{
@@ -270,7 +277,7 @@
 		\item Người thân: wife, sibling, brother, ...
 		\item Nhân sự bệnh viên: doctor, dr, dentist, ...
 	\end{itemize}
-	\item Thuộc nhóm đại từ chỉ giới tính chiếm đa số
+	\item Thuộc nhóm đại từ chỉ giới tính chiếm đa số trong văn bản
 \end{itemize}
 \end{frame}
 
