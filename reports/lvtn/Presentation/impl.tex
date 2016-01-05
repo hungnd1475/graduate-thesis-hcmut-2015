@@ -36,12 +36,12 @@
 		\item Gom cụm các cặp đồng tham chiếu lại và xây dựng các chuỗi đồng tham chiếu ứng với mỗi cụm
 	\end{itemize}
 	\item Tận dụng các đặc điểm chuyên biệt trong BAĐT
-	\begin{itemize}
-		\item Sự đề cập đến bệnh nhân
-		\item Trùng chuỗi kí tự là một đặc trưng mạnh
-		\item Sử dụng Wipedia để xác định các từ đồng nghĩa
-		\item Trích xuất các thông tin ngữ cảnh trong văn bản
-	\end{itemize}
+%	\begin{itemize}
+%		\item Sự đề cập đến bệnh nhân
+%		\item Trùng chuỗi kí tự là một đặc trưng mạnh
+%		\item Sử dụng Wipedia để xác định các từ đồng nghĩa
+%		\item Trích xuất các thông tin ngữ cảnh trong văn bản
+%%	\end{itemize}
 %	\item Quy trình huấn luyện
 %	\begin{itemize}
 %		\item Huấn luyện các mô hình SVM phân loại tính đồng tham chiếu 
@@ -256,7 +256,7 @@
 	\item \emph{Đặc tính chung}: thường là tên riêng, chức danh và đại từ nhân xưng
 	\begin{itemize}
 		\item Khoảng cách: câu, khái niệm
-		\item So trùng chuỗi
+		\item So trùng chuỗi kí tự
 		\item Số lượng, giới tính, ...
 	\end{itemize}
 	\item Trong \emph{lĩnh vực y tế}: các khái niệm chỉ về bệnh nhân có số lượng nhiều nhất $\rightarrow$ đặc trưng Patient-class:
@@ -308,7 +308,7 @@
 \begin{frame}{Đặc trưng lớp Problem/Treatment/Test}
 \putlogo
 \begin{itemize}
-	\item Hai khái niệm đồng tham chiếu thường {\color{red} trùng chuỗi}
+	\item Hai khái niệm đồng tham chiếu thường {\color{red} trùng chuỗi kí tự}
 	\item Nhiều \emph{từ đồng nghĩa}
 	\begin{itemize}
 		\item ``Head injury'' và ``Head trauma''
@@ -323,7 +323,7 @@
 \begin{frame}{Đặc trưng lớp Problem/Treatment/Test}
 \putlogo
 \begin{itemize}
-	\item So trùng chuỗi, khoảng cách, ...
+	\item So trùng chuỗi kí tự, khoảng cách, ...
 	\item Tiêu đề, từ in đậm và liên kết của {\color{red} Wikipedia}
 	\item Trích xuất thông tin ngữ cảnh trong văn bản:
 	\begin{itemize}
