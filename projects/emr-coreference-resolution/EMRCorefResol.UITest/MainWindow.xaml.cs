@@ -28,6 +28,7 @@ using HCMUT.EMRCorefResol.Classification.LibSVM;
 using HCMUT.EMRCorefResol.CorefResolvers;
 using HCMUT.EMRCorefResol.Scoring;
 using System.ComponentModel;
+using ICSharpCode.AvalonEdit.Rendering;
 
 namespace EMRCorefResol.UITest
 {
@@ -43,6 +44,7 @@ namespace EMRCorefResol.UITest
         private IEMRReader dataReader = new I2B2EMRReader();
         private EMR currentEMR = null;
         private Concept currentConcept = null;
+        private ChainsHighlighter chainsHighlighter = new ChainsHighlighter();
 
         private SelectionInfo conceptSelectionInfo = new SelectionInfo(); // stores selection info on concepts text area
         private SelectionInfo chainSelectionInfo = new SelectionInfo(); // stores selection info on chains text area
@@ -87,6 +89,46 @@ namespace EMRCorefResol.UITest
             txtScores.TextArea.SelectionCornerRadius = 0;
             txtScores.Document = new TextDocument();
             lbTypes.ItemsSource = types;
+
+            txtEMR.TextArea.TextView.BackgroundRenderers.Add(chainsHighlighter);
+            txtSystemChains.TextArea.Caret.PositionChanged += (s, e) => highlightCoref(txtSystemChains, chainsHighlighter);
+            txtChains.TextArea.Caret.PositionChanged += (s, e) => highlightCoref(txtChains, chainsHighlighter);
+        }
+
+        private void highlightCoref(TextEditor textEditor, ChainsHighlighter highlighter)
+        {
+            if (currentEMR != null)
+            {
+                var chainsInfo = highlighter.ChainsInfo;
+                var caretLine = textEditor.TextArea.Caret.Line;
+
+                if (chainsInfo.Raiser == textEditor && chainsInfo.CurrentLine == caretLine)
+                    return;
+
+                var docLine = textEditor.Document.GetLineByNumber(caretLine);
+                var lineText = textEditor.Document.GetText(docLine);
+
+                var concepts = dataReader.ReadMultiple(lineText);
+                chainsInfo.Segments = new TextSegmentCollection<TextSegment>();
+
+                foreach (var c in concepts)
+                {
+                    var beginIndex = currentEMR.BeginIndexOf(c);
+                    var endIndex = currentEMR.EndIndexOf(c);
+
+                    var segment = new TextSegment();
+                    segment.StartOffset = beginIndex;
+                    segment.EndOffset = endIndex;
+                    segment.Length = endIndex - beginIndex + 1;
+
+                    chainsInfo.Segments.Add(segment);
+                }
+
+                chainsInfo.CurrentLine = caretLine;
+                chainsInfo.Raiser = textEditor;
+                txtEMR.TextArea.TextView.InvalidateLayer(KnownLayer.Background);
+            }
+
         }
 
         private void initTextEditor(TextEditor textEditor, bool wordWrap, SelectionInfo selectionInfo,
@@ -200,10 +242,12 @@ namespace EMRCorefResol.UITest
                 }
             }
 
+            Concept selectedConcept = null;
+
             if (!string.IsNullOrEmpty(selected))
             {
                 // if there is a selected value, parse it to a Concept instance
-                currentConcept = dataReader.ReadSingle(selected);
+                selectedConcept = dataReader.ReadSingle(selected);
 
                 // store the value position
                 selectionInfo.StartOffset = line.Offset + startAt;
@@ -216,8 +260,11 @@ namespace EMRCorefResol.UITest
             else
             {
                 selectionInfo.IsSelected = false;
-                currentConcept = null;
+                selectedConcept = null;
+            }
 
+            if (!Equals(selectedConcept, currentConcept))
+            {
                 if (emrSelectionInfo.IsSelected)
                 {
                     // if there is no selected value but there is highlighted text on emr text area (the old one)
@@ -227,6 +274,8 @@ namespace EMRCorefResol.UITest
                         emrSelectionInfo.EndOffset - emrSelectionInfo.StartOffset + 1);
                 }
             }
+
+            currentConcept = selectedConcept;
 
             if (oldSelection.IsSelected)
             {
