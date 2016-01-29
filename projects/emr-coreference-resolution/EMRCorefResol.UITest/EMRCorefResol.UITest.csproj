@@ -78,6 +78,7 @@
     </ApplicationDefinition>
     <Compile Include="ChainsHighlighter.cs" />
     <Compile Include="ChainsInfo.cs" />
+    <Compile Include="ConceptItem.cs" />
     <Compile Include="SelectionInfo.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

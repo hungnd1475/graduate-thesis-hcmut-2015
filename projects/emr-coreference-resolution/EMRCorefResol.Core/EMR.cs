@@ -30,6 +30,8 @@ namespace HCMUT.EMRCorefResol
 
         public string Path { get; }
 
+        public int BaseConceptIndex { get; set; } = 0;
+
         /// <summary>
         /// Initializes an <see cref="EMR"/> instance from raw content and concepts file.
         /// </summary>

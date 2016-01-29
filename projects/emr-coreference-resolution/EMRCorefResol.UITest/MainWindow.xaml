@@ -8,6 +8,154 @@
         mc:Ignorable="d"
         FontSize="13"
         Title="MainWindow" MinHeight="720" MinWidth="1280" Height="720" Width="1280" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Window.Resources>
+        <!--<Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>-->
+        <SolidColorBrush x:Key="Item.Static.Background" Color="#FFFCFCFC" />
+        <SolidColorBrush x:Key="Item.Static.Border" Color="#FFFCFCFC" />
+        <SolidColorBrush x:Key="Item.MouseOver.Background" Color="#1F26A0DA" />
+        <SolidColorBrush x:Key="Item.MouseOver.Border" Color="#a826A0Da" />
+        <SolidColorBrush x:Key="Item.SelectedActive.Background" Color="#3D26A0DA" />
+        <SolidColorBrush x:Key="Item.SelectedActive.Border" Color="#FF26A0DA" />
+        <SolidColorBrush x:Key="Item.SelectedInactive.Background" Color="#3DDADADA" />
+        <SolidColorBrush x:Key="Item.SelectedInactive.Border" Color="#FFDADADA" />
+        <Style TargetType="GroupItem" x:Key="ConceptGroupStyle">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="GroupItem">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="25"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border BorderThickness="0,0,0.25,0" BorderBrush="Gray" Padding="0,1,0,1">
+                                <TextBlock Text="{Binding Path=Name}" HorizontalAlignment="Right"
+                                           VerticalAlignment="Top" Foreground="Gray" Margin="0,0,2,0"/>
+                            </Border>
+                            <ItemsPresenter Grid.Column="1"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="ListBoxItem" x:Key="ConceptItemStyle">
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+            <Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="||" x:Name="separator" IsHitTestVisible="False"/>
+                            <Border x:Name="Bd" 
+                                    BorderBrush="{TemplateBinding BorderBrush}" 
+                                    BorderThickness="{TemplateBinding BorderThickness}" 
+                                    Background="{TemplateBinding Background}" 
+                                    Padding="{TemplateBinding Padding}" 
+                                    SnapsToDevicePixels="true" Grid.Column="1">
+                                <ContentPresenter 
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=PreviousData}}" Value="{x:Null}">
+                                <Setter TargetName="separator" Property="Visibility" Value="Collapsed"/>
+                            </DataTrigger>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsMouseOver" Value="True" />
+                                </MultiTrigger.Conditions>
+                                <Setter TargetName="Bd" Property="Background" Value="{StaticResource Item.MouseOver.Background}" />
+                                <Setter TargetName="Bd" Property="BorderBrush" Value="{StaticResource Item.MouseOver.Border}" />
+                            </MultiTrigger>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="Selector.IsSelectionActive" Value="False" />
+                                    <Condition Property="IsSelected" Value="True" />
+                                </MultiTrigger.Conditions>
+                                <Setter TargetName="Bd" Property="Background" Value="{StaticResource Item.SelectedActive.Background}" />
+                                <Setter TargetName="Bd" Property="BorderBrush" Value="{StaticResource Item.SelectedActive.Border}" />
+                            </MultiTrigger>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="Selector.IsSelectionActive" Value="True" />
+                                    <Condition Property="IsSelected" Value="True" />
+                                </MultiTrigger.Conditions>
+                                <Setter TargetName="Bd" Property="Background" Value="{StaticResource Item.SelectedActive.Background}" />
+                                <Setter TargetName="Bd" Property="BorderBrush" Value="{StaticResource Item.SelectedActive.Border}" />
+                            </MultiTrigger>
+                            <!--<Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="Bd" Property="TextElement.Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                            </Trigger>-->
+                            <DataTrigger Binding="{Binding IsType}" Value="True">
+                                <Setter Property="IsEnabled" Value="False"/>
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <DataTemplate x:Key="ConceptItemTemplate">
+            <Grid>
+                <TextBlock x:Name="conceptText" Text="{Binding Concept}"/>
+                <TextBlock x:Name="typeText" Text="{Binding Type}" Visibility="Collapsed"/>
+            </Grid>
+            <DataTemplate.Triggers>
+                <DataTrigger Binding="{Binding IsType}" Value="True">
+                    <Setter TargetName="conceptText" Property="Visibility" Value="Collapsed"/>
+                    <Setter TargetName="typeText" Property="Visibility" Value="Visible"/>
+                </DataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+        <Style x:Key="ConceptsListBoxStyle" TargetType="ListBox">
+            <Setter Property="FontFamily" Value="Consolas"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="ItemContainerStyle" Value="{StaticResource ConceptItemStyle}"/>
+            <Setter Property="ItemTemplate" Value="{StaticResource ConceptItemTemplate}"/>
+            <Setter Property="SelectionMode" Value="Extended"/>
+            <Setter Property="ItemsPanel">
+                <Setter.Value>
+                    <ItemsPanelTemplate>
+                        <WrapPanel/>
+                    </ItemsPanelTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <ContextMenu x:Key="ChainsEditingMenu">
+            <MenuItem x:Name="CreateMenuItem" Header="Create new or add to chains" Click="CreateMenuItem_Click"/>
+        </ContextMenu>
+        <!-- Collections -->
+        <CollectionViewSource x:Key="Chains">
+            <CollectionViewSource.GroupDescriptions>
+                <PropertyGroupDescription PropertyName="Index"/>
+            </CollectionViewSource.GroupDescriptions>
+        </CollectionViewSource>
+        <CollectionViewSource x:Key="Concepts">
+            <CollectionViewSource.GroupDescriptions>
+                <PropertyGroupDescription PropertyName="Index"/>
+            </CollectionViewSource.GroupDescriptions>
+        </CollectionViewSource>
+    </Window.Resources>
     <Grid Margin="5">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -96,11 +244,39 @@
                 </TabItem>
             </TabControl>
             <TabControl Grid.Column="2" x:Name="tab">
-                <TabItem Header="Concepts">
+                <!--<TabItem Header="Concepts">
                     <avalonEdit:TextEditor x:Name="txtCons" FontFamily="Consolas" FontSize="15" IsReadOnly="True"/>
                 </TabItem>
                 <TabItem Header="Ground Truth">
                     <avalonEdit:TextEditor x:Name="txtChains" FontFamily="Consolas" FontSize="15" IsReadOnly="True"/>
+                </TabItem>
+                <TabItem Header="Features">
+                    <avalonEdit:TextEditor x:Name="txtFeatures" FontFamily="Consolas" FontSize="15" IsReadOnly="True"/>
+                </TabItem>
+                <TabItem Header="System Chains">
+                    <avalonEdit:TextEditor x:Name="txtSystemChains" FontFamily="Consolas" FontSize="15" IsReadOnly="True"/>
+                </TabItem>
+                <TabItem Header="Scores">
+                    <avalonEdit:TextEditor x:Name="txtScores" FontFamily="Consolas" FontSize="15" IsReadOnly="True"/>
+                </TabItem>
+                <TabItem Header="Classification">
+                    <avalonEdit:TextEditor x:Name="txtClas" FontFamily="Consolas" FontSize="15" IsReadOnly="True"/>
+                </TabItem>-->
+                <TabItem Header="Concepts">
+                    <ListBox x:Name="lbConcepts" ItemsSource="{Binding Source={StaticResource Concepts}}"
+                             Style="{StaticResource ConceptsListBoxStyle}" PreviewMouseRightButtonDown="lbConcepts_PreviewMouseRightButtonDown">
+                        <ListBox.GroupStyle>
+                            <GroupStyle ContainerStyle="{StaticResource ConceptGroupStyle}"/>
+                        </ListBox.GroupStyle>
+                    </ListBox>
+                </TabItem>
+                <TabItem Header="Ground Truth">
+                    <ListBox x:Name="lbChains" ItemsSource="{Binding Source={StaticResource Chains}}"
+                             Style="{StaticResource ConceptsListBoxStyle}">
+                        <ListBox.GroupStyle>
+                            <GroupStyle ContainerStyle="{StaticResource ConceptGroupStyle}"/>
+                        </ListBox.GroupStyle>
+                    </ListBox>
                 </TabItem>
                 <TabItem Header="Features">
                     <avalonEdit:TextEditor x:Name="txtFeatures" FontFamily="Consolas" FontSize="15" IsReadOnly="True"/>

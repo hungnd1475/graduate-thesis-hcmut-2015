@@ -15,11 +15,11 @@ namespace HCMUT.EMRCorefResol
             while (line < c.Begin.Line)
             {
                 index = nextIndex;
-                nextIndex = emr.Content.IndexOf(Environment.NewLine, nextIndex) + Environment.NewLine.Length;
+                nextIndex = emr.Content.IndexOf('\n', nextIndex) + 1;
                 line += 1;
             }
 
-            int word = -1;
+            int word = -1 + emr.BaseConceptIndex;
             while (word < c.Begin.WordIndex)
             {
                 index = nextIndex;

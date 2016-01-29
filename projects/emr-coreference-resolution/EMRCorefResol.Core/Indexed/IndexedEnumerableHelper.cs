@@ -19,9 +19,18 @@ namespace HCMUT.EMRCorefResol
             return new DefaultIndexedEnumerable<T>(array);
         }
 
-        public static IIndexedEnumerable<T> ToIndexedEnumerable<T>(this System.Collections.Generic.IEnumerable<T> sequence)
+        public static IIndexedEnumerable<T> ToIndexedEnumerable<T>(this IEnumerable<T> sequence)
         {
             return new DefaultIndexedEnumerable<T>(sequence);
+        }
+
+        public static IEnumerable<TResult> SelectIndex<TSource, TResult>(this IIndexedEnumerable<TSource> iEnum,
+            Func<TSource, int, TResult> selector)
+        {
+            for (int i = 0; i < iEnum.Count; i++)
+            {
+                yield return selector(iEnum[i], i);
+            }
         }
     }
 
