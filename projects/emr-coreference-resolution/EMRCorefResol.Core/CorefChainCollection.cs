@@ -128,6 +128,22 @@ namespace HCMUT.EMRCorefResol
             return null;
         }
 
+        public CorefChain FindChainContains(Concept concept, out int chainIndex)
+        {
+            for (int i = 0; i < Count; i++)
+            {
+                var c = _chains[i];
+                if (c.Contains(concept))
+                {
+                    chainIndex = i;
+                    return c;
+                }
+            }
+
+            chainIndex = -1;
+            return null;
+        }
+
         /// <summary>
         /// Checks if a concept pair is coreferent.
         /// </summary>

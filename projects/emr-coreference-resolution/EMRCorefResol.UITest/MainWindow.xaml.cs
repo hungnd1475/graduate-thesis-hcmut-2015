@@ -71,12 +71,34 @@ namespace EMRCorefResol.UITest
             new TypeItem(typeof(PronounInstance), true)
         };
 
+        private CorefChainCollection _groundTruth;
+
+        public bool UseZeroBase
+        {
+            get { return (bool)GetValue(UseZeroBaseProperty); }
+            set { SetValue(UseZeroBaseProperty, value); }
+        }
+
+        public static readonly DependencyProperty UseZeroBaseProperty =
+            DependencyProperty.Register("UseZeroBase", typeof(bool), typeof(MainWindow),
+                new PropertyMetadata(true, new PropertyChangedCallback(useZeroBaseChanged)));
+
+        private static void useZeroBaseChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var mainWin = (MainWindow)d;
+            var value = (bool)e.NewValue;
+            if (mainWin.currentEMR != null)
+            {
+                mainWin.currentEMR.BaseConceptIndex = value ? 0 : 1;
+            }
+        }
+
         public MainWindow()
         {
             InitializeComponent();
 
-            //txtEMRPath.Text = @"D:\Documents\HCMUT\AI Research\DataInput\DataInput";
-            txtEMRPath.Text = @"..\..\..\..\..\dataset\i2b2_Test";
+            txtEMRPath.Text = @"D:\Documents\HCMUT\AI Research\DataInput\DataInput";
+            //txtEMRPath.Text = @"..\..\..\..\..\dataset\i2b2_Test";
             emrCollection = new EMRCollection(txtEMRPath.Text);
 
             var emrHighlightBrush = new SolidColorBrush(Color.FromRgb(112, 183, 255));
@@ -117,17 +139,20 @@ namespace EMRCorefResol.UITest
 
         private void lbConcepts_PreviewMouseRightButtonDown(object sender, MouseButtonEventArgs e)
         {
-            var listBox = sender as ListBox;
-            if (listBox != null && listBox.SelectedItems.Count >= 1)
+            var chains = btnEditChains.Tag as List<CorefChain>;
+            if (chains != null)
             {
-                var lbItem = listBox.ContainerFromElement(e.OriginalSource as DependencyObject) as ListBoxItem;
-                if (lbItem != null && lbItem.IsSelected)
+                var listBox = sender as ListBox;
+                if (listBox != null && listBox.SelectedItems.Count >= 1)
                 {
-                    var menu = (ContextMenu)Resources["ChainsEditingMenu"];
-                    menu.Tag = listBox.SelectedItems;
-                    menu.Placement = System.Windows.Controls.Primitives.PlacementMode.MousePoint;
-                    menu.IsOpen = true;
-                    
+                    var lbItem = listBox.ContainerFromElement(e.OriginalSource as DependencyObject) as ListBoxItem;
+                    if (lbItem != null && lbItem.IsSelected)
+                    {
+                        var menu = (ContextMenu)Resources["ChainsEditingMenu"];
+                        menu.Tag = listBox;
+                        menu.Placement = System.Windows.Controls.Primitives.PlacementMode.MousePoint;
+                        menu.IsOpen = true;
+                    }
                 }
             }
         }
@@ -393,7 +418,7 @@ namespace EMRCorefResol.UITest
 
                     currentEMRIndex = nextEMRIndex;
                     currentEMR = new EMR(emrPath, conceptsPath, dataReader);
-                    //currentEMR.BaseConceptIndex = 1;
+                    currentEMR.BaseConceptIndex = UseZeroBase ? 0 : 1;
                     txtEMR.Document.Text = currentEMR.Content;
                     txtEMR.ScrollTo(1, 1);
 
@@ -411,51 +436,35 @@ namespace EMRCorefResol.UITest
                     });
 
                     cvs = (CollectionViewSource)Resources["Concepts"];
-                    cvs.Source = concepts;
+                    cvs.Source = concepts;          
 
-                    //lbConcepts.ItemsSource = new List<ConceptItems>(currentEMR.Concepts.Select(c => new ConceptItems(c)));
+                    var chainsPath = emrCollection.GetChainsPath(nextEMRIndex);                      
+                    _groundTruth = File.Exists(chainsPath) ? new CorefChainCollection(chainsPath, dataReader) : null;
 
-                    if (emrCollection.HasGroundTruth)
+                    cvs = (CollectionViewSource)Resources["Chains"];
+                    presentChains(_groundTruth, cvs);
+
+                    if (!string.IsNullOrEmpty(txtSystemChainsPath.Text))
                     {
-                        var chainsPath = emrCollection.GetChainsPath(nextEMRIndex);
-                        //sr = new StreamReader(chainsPath);
-                        //txtChains.Document.Text = sr.ReadToEnd();
-                        //txtChains.ScrollTo(1, 1);
-                        //sr.Close();
-                        var chains = new CorefChainCollection(chainsPath, dataReader);
-                        var conceptIndex = chains.SelectIndex((c, i) => i);
-                        var conceptGroups = conceptIndex.SelectMany(i =>
+                        var chainsFileName = IOPath.GetFileName(chainsPath);
+                        var systemChainsPath = IOPath.Combine(txtSystemChainsPath.Text, chainsFileName);
+
+                        if (File.Exists(systemChainsPath))
                         {
-                            var items = chains[i].Select(c => new ConceptItem(i + 1, c)).ToList().ToList();
-                            items.Add(new ConceptItem(i + 1, chains[i].Type));
-                            return items;
-                        });
+                            sr = new StreamReader(systemChainsPath);
+                            txtSystemChains.Document.Text = sr.ReadToEnd();
+                            txtSystemChains.ScrollTo(1, 1);
+                            sr.Close();
+                        }
 
-                        cvs = (CollectionViewSource)Resources["Chains"];
-                        cvs.Source = conceptGroups;
-
-                        if (!string.IsNullOrEmpty(txtSystemChainsPath.Text))
+                        var emrFileName = IOPath.GetFileName(emrPath);
+                        var scoresPath = IOPath.Combine(txtSystemChainsPath.Text, $"{emrFileName}.scores");
+                        if (File.Exists(scoresPath))
                         {
-                            var chainsFileName = IOPath.GetFileName(chainsPath);
-                            var systemChainsPath = IOPath.Combine(txtSystemChainsPath.Text, chainsFileName);
-
-                            if (File.Exists(systemChainsPath))
-                            {
-                                sr = new StreamReader(systemChainsPath);
-                                txtSystemChains.Document.Text = sr.ReadToEnd();
-                                txtSystemChains.ScrollTo(1, 1);
-                                sr.Close();
-                            }
-
-                            var emrFileName = IOPath.GetFileName(emrPath);
-                            var scoresPath = IOPath.Combine(txtSystemChainsPath.Text, $"{emrFileName}.scores");
-                            if (File.Exists(scoresPath))
-                            {
-                                sr = new StreamReader(scoresPath);
-                                txtScores.Document.Text = sr.ReadToEnd();
-                                txtScores.ScrollTo(1, 1);
-                                sr.Close();
-                            }
+                            sr = new StreamReader(scoresPath);
+                            txtScores.Document.Text = sr.ReadToEnd();
+                            txtScores.ScrollTo(1, 1);
+                            sr.Close();
                         }
                     }
 
@@ -741,10 +750,109 @@ namespace EMRCorefResol.UITest
         private void CreateMenuItem_Click(object sender, RoutedEventArgs e)
         {
             var contextMenu = (ContextMenu)Resources["ChainsEditingMenu"];
-            var items = contextMenu.Tag as IList;
+            var listBox = contextMenu.Tag as ListBox;
+            var items = listBox?.SelectedItems.OfType<ConceptItem>();
+
             if (items != null)
             {
-                MessageBox.Show(string.Join(Environment.NewLine, items.OfType<ConceptItem>().Select(c => c.Concept)));
+                var chains = btnEditChains.Tag as List<CorefChain>;
+                CorefChain containedChain = null;
+                int chainIndex = -1;
+
+                foreach (var i in items)
+                {
+                    containedChain = _groundTruth.FindChainContains(i.Concept, out chainIndex);
+                    if (containedChain != null)
+                        break;
+                }
+
+                if (containedChain != null)
+                {
+                    var newChain = new List<Concept>(containedChain);
+                    newChain.AddRange(items.Select(c => c.Concept));
+                    chains[chainIndex] = new CorefChain(newChain, containedChain.Type);
+                }
+                else
+                {
+                    ConceptType type = ConceptType.None;
+                    var typeChooser = new ConceptTypeChooser();
+                    typeChooser.Owner = this;
+                    if (typeChooser.ShowDialog() == true)
+                    {
+                        type = typeChooser.SelectedType;
+                    }
+
+                    var newChain = new List<Concept>(items.Select(c => c.Concept));
+                    chains.Add(new CorefChain(newChain, type));
+                }
+
+                presentChains(_groundTruth, (CollectionViewSource)Resources["Chains"]);
+            }
+        }
+
+        private void btnEditChains_Click(object sender, RoutedEventArgs e)
+        {
+            bool editable = true;
+            if (_groundTruth != null)
+            {
+                var result = MessageBox.Show("Do you want to override existing ground truth?",
+                    "Warning", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (result == MessageBoxResult.No)
+                {
+                    editable = false;
+                }
+            }
+
+            if (editable)
+            {
+                btnEditChains.IsEnabled = false;
+                btnSaveChains.IsEnabled = true;
+
+                var chains = new List<CorefChain>();
+                btnEditChains.Tag = chains;
+
+                _groundTruth = new CorefChainCollection(chains);
+                var cvs = (CollectionViewSource)Resources["Chains"];
+                presentChains(_groundTruth, cvs);
+            }
+        }
+
+        private void btnSaveChains_Click(object sender, RoutedEventArgs e)
+        {
+            var chainsFile = emrCollection.GetChainsPath(currentEMRIndex);
+            Directory.CreateDirectory(IOPath.GetDirectoryName(chainsFile));
+            File.WriteAllLines(chainsFile, _groundTruth.Select(c => c.ToString()));
+
+            btnEditChains.IsEnabled = true;
+            btnSaveChains.IsEnabled = false;
+            btnEditChains.Tag = null;
+        }
+
+        private void presentChains(CorefChainCollection chains, CollectionViewSource cvs)
+        {
+            if (chains != null)
+            {
+                if (chains.Count == 0)
+                {
+                    var uiChains = new ConceptItem[] { new EmptyConcept("Chains file empty.") };
+                    cvs.Source = uiChains;
+                }
+                else
+                {
+                    var conceptIndex = chains.SelectIndex((c, i) => i);
+                    var uiChains = conceptIndex.SelectMany(i =>
+                    {
+                        var items = chains[i].Select(c => new ConceptItem(i + 1, c)).ToList().ToList();
+                        items.Add(new ConceptItem(i + 1, chains[i].Type));
+                        return items;
+                    });
+                    cvs.Source = uiChains;
+                }
+            }
+            else
+            {
+                var uiChains = new ConceptItem[] { new EmptyConcept("Chains file not found.") };
+                cvs.Source = uiChains;
             }
         }
     }

@@ -16,7 +16,7 @@ namespace EMRCorefResol.UITest
         public bool IsType { get; }
 
         private readonly ConceptType _type;
-        public string Type
+        public virtual string Type
         {
             get { return $"t=\"{_type.ToString().ToLower()}\""; }
         }

@@ -13,7 +13,7 @@ namespace HCMUT.EMRCorefResol
     public enum ConceptType
     {
         /// <summary>
-        /// Represents type of concepts that have to type (i.e. from coref chain)
+        /// Represents type of concepts that have no type (i.e. from coref chain)
         /// </summary>
         None = 0,
         /// <summary>

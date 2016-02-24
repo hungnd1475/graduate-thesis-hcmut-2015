@@ -1,0 +1,30 @@
+﻿<Window x:Class="EMRCorefResol.UITest.ConceptTypeChooser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EMRCorefResol.UITest"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="Choose chain type" ResizeMode="NoResize" WindowStyle="ToolWindow"
+        SizeToContent="Height" WindowStartupLocation="CenterOwner" Width="200">
+    <Window.Resources>
+        <x:Array x:Key="ConceptTypes" Type="sys:String">
+            <sys:String>Person</sys:String>
+            <sys:String>Problem</sys:String>
+            <sys:String>Treatment</sys:String>
+            <sys:String>Test</sys:String>
+        </x:Array>
+    </Window.Resources>
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ListBox x:Name="lbTypes" SelectionMode="Single" ItemsSource="{StaticResource ConceptTypes}"/>
+        <StackPanel Margin="0,5,0,0" Grid.Row="1" HorizontalAlignment="Center" Orientation="Horizontal">
+            <Button Content="Save" IsDefault="True" Click="Button_Click"/>
+            <Button Content="Cancel" Margin="5,0,0,0" IsCancel="True"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -142,7 +142,7 @@
             </Setter>
         </Style>
         <ContextMenu x:Key="ChainsEditingMenu">
-            <MenuItem x:Name="CreateMenuItem" Header="Create new or add to chains" Click="CreateMenuItem_Click"/>
+            <MenuItem x:Name="CreateMenuItem" Header="Create a new or add to an existing chain" Click="CreateMenuItem_Click"/>
         </ContextMenu>
         <!-- Collections -->
         <CollectionViewSource x:Key="Chains">
@@ -199,6 +199,9 @@
             <TextBlock Text=" of " VerticalAlignment="Center"/>
             <TextBlock x:Name="txtTotalEMR" Text="0" Margin="0,0,5,0" VerticalAlignment="Center"/>
             <Button Content="Next" Width="60" Height="25" x:Name="btnNext" Click="btnNext_Click" Margin="0,0,5,0"/>
+            <Rectangle Stroke="Black" StrokeThickness="1" Margin="0,0,5,0"/>
+            <CheckBox Content="Use zero base" VerticalAlignment="Center"
+                      IsChecked="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=local:MainWindow}, Path=UseZeroBase}"/>
         </StackPanel>
 
         <Grid Grid.Row="2" Margin="0,5,0,0">
@@ -229,6 +232,9 @@
                 <Button Content="Extract Features" x:Name="btnExtract" IsEnabled="False" Click="btnExtract_Click"/>
                 <Button Content="Classifiy" x:Name="btnClassify" Click="btnClassify_Click" Margin="5,0,0,0"/>
                 <Button Content="Resolve" x:Name="btnResolve" Click="btnResolve_Click" Margin="5,0,0,0"/>
+                <Rectangle Stroke="Black" StrokeThickness="1" Margin="5,0,0,0"/>
+                <Button Content="Edit Chains" x:Name="btnEditChains" Click="btnEditChains_Click" Margin="5,0,0,0"/>
+                <Button Content="Save Chains" x:Name="btnSaveChains" IsEnabled="False" Click="btnSaveChains_Click" Margin="5,0,0,0"/>
             </StackPanel>
         </Grid>
 
