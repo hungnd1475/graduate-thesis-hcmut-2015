@@ -30,6 +30,7 @@ using HCMUT.EMRCorefResol.Scoring;
 using System.ComponentModel;
 using ICSharpCode.AvalonEdit.Rendering;
 using System.Collections;
+using EMRCorefResol.UITest.Properties;
 
 namespace EMRCorefResol.UITest
 {
@@ -97,16 +98,21 @@ namespace EMRCorefResol.UITest
         {
             InitializeComponent();
 
-            txtEMRPath.Text = @"D:\Documents\HCMUT\AI Research\DataInput\DataInput";
+            //txtEMRPath.Text = @"D:\Documents\HCMUT\AI Research\DataInput\DataInput";
             //txtEMRPath.Text = @"..\..\..\..\..\dataset\i2b2_Test";
-            emrCollection = new EMRCollection(txtEMRPath.Text);
+            var initPath = Settings.Default.AltEMRPath;
+            if (Directory.Exists(initPath))
+            {
+                txtEMRPath.Text = initPath;
+                emrCollection = new EMRCollection(txtEMRPath.Text);
+            }
 
             var emrHighlightBrush = new SolidColorBrush(Color.FromRgb(112, 183, 255));
             var conceptHighlightBrush = new SolidColorBrush(Color.FromRgb(226, 230, 214));
 
             initTextEditor(txtEMR, false, emrSelectionInfo, emrHighlightBrush, Brushes.White, false);
-            //initTextEditor(txtCons, true, conceptSelectionInfo, conceptHighlightBrush, null, true);
-            //initTextEditor(txtChains, true, chainSelectionInfo, conceptHighlightBrush, null, true);
+            initTextEditor(txtCons, true, conceptSelectionInfo, conceptHighlightBrush, null, true);
+            initTextEditor(txtChains, true, chainSelectionInfo, conceptHighlightBrush, null, true);
             initTextEditor(txtSystemChains, true, systemChainsSelectionInfo, conceptHighlightBrush, null, true);
             initTextEditor(txtFeatures, true, featuresSelectionInfo, conceptHighlightBrush, null, true);
             initTextEditor(txtClas, true, clasSelectionInfo, conceptHighlightBrush, null, true);
@@ -118,10 +124,11 @@ namespace EMRCorefResol.UITest
 
             txtEMR.TextArea.TextView.BackgroundRenderers.Add(chainsHighlighter);
             txtSystemChains.TextArea.Caret.PositionChanged += (s, e) => highlightCoref(txtSystemChains, chainsHighlighter);
-            //txtChains.TextArea.Caret.PositionChanged += (s, e) => highlightCoref(txtChains, chainsHighlighter);
+            txtChains.TextArea.Caret.PositionChanged += (s, e) => highlightCoref(txtChains, chainsHighlighter);
 
             lbChains.SelectionChanged += conceptsListBox_SelectionChanged;
             lbConcepts.SelectionChanged += conceptsListBox_SelectionChanged;
+            lbFindRes.SelectionChanged += conceptsListBox_SelectionChanged;
         }
 
         private void conceptsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -422,10 +429,10 @@ namespace EMRCorefResol.UITest
                     txtEMR.Document.Text = currentEMR.Content;
                     txtEMR.ScrollTo(1, 1);
 
-                    //sr = new StreamReader(conceptsPath);
-                    //txtCons.Document.Text = sr.ReadToEnd();
-                    //txtCons.ScrollTo(1, 1);
-                    //sr.Close();
+                    sr = new StreamReader(conceptsPath);
+                    txtCons.Document.Text = sr.ReadToEnd();
+                    txtCons.ScrollTo(1, 1);
+                    sr.Close();
 
                     var concepts = currentEMR.Concepts.SelectIndex((c, i) => i).SelectMany(i =>
                     {
@@ -443,6 +450,9 @@ namespace EMRCorefResol.UITest
 
                     cvs = (CollectionViewSource)Resources["Chains"];
                     presentChains(_groundTruth, cvs);
+
+                    txtChains.Document.Text = _groundTruth != null ? string.Join(Environment.NewLine, _groundTruth.Select(ch => ch.ToString()))
+                        : string.Empty;
 
                     if (!string.IsNullOrEmpty(txtSystemChainsPath.Text))
                     {
@@ -807,6 +817,9 @@ namespace EMRCorefResol.UITest
             {
                 btnEditChains.IsEnabled = false;
                 btnSaveChains.IsEnabled = true;
+                btnNext.IsEnabled = false;
+                btnPrev.IsEnabled = false;
+                txtCurrentEMRIndex.IsEnabled = false;
 
                 var chains = new List<CorefChain>();
                 btnEditChains.Tag = chains;
@@ -825,6 +838,9 @@ namespace EMRCorefResol.UITest
 
             btnEditChains.IsEnabled = true;
             btnSaveChains.IsEnabled = false;
+            btnNext.IsEnabled = true;
+            btnPrev.IsEnabled = true;
+            txtCurrentEMRIndex.IsEnabled = true;
             btnEditChains.Tag = null;
         }
 
@@ -854,6 +870,87 @@ namespace EMRCorefResol.UITest
                 var uiChains = new ConceptItem[] { new EmptyConcept("Chains file not found.") };
                 cvs.Source = uiChains;
             }
+        }
+
+        private async void btnFind_Click(object sender, RoutedEventArgs e)
+        {
+            var cvs = (CollectionViewSource)Resources["Result"];
+            var resultSet = new HashSet<IFindResult>();
+
+            tab.SelectedIndex = 8;
+            const ConceptType _InterestingType = ConceptType.Treatment;
+
+            if (currentEMR != null && _groundTruth != null)
+            {
+                cvs.Source = new ConceptItem[] { new EmptyConcept("Please wait...") };
+
+                var t = await Task.Run(() =>
+                {
+                    for (int i = 0; i < _groundTruth.Count; i++)
+                    {
+                        var ch = _groundTruth[i];
+                        if (ch.Type == _InterestingType)
+                        {
+                            var fc = ch.First();
+                            foreach (var c in currentEMR.Concepts)
+                            {
+                                IEnumerable<string> matchedTerms;
+                                if (c.Type == fc.Type && isSubstringMatch(fc, c, out matchedTerms) && !ch.Contains(c))
+                                {
+                                    resultSet.Add(new ResultFromChain(c, matchedTerms, i + 1));
+                                }
+                            }
+                        }
+                    }      
+                    
+                    for (int i = 0; i < currentEMR.Concepts.Count; i++)
+                    {
+                        var c1 = currentEMR.Concepts[i];
+                        if (c1.Type == _InterestingType)
+                        {
+                            for (int j = i + 1; j < currentEMR.Concepts.Count; j++)
+                            {
+                                var c2 = currentEMR.Concepts[j];
+                                IEnumerable<string> matchedTerms;
+                                if (c1.Type == c2.Type && _groundTruth.IsSingleton(c1) && _groundTruth.IsSingleton(c2) &&
+                                    isSubstringMatch(c1, c2, out matchedTerms))
+                                {
+                                    resultSet.Add(new ResultFromSingletons(c1, c2, matchedTerms));
+                                }
+                            }
+                        }
+                    }                                 
+
+                    var r = resultSet.ToIndexedEnumerable();
+                    return r.SelectIndex((c, i) => i).SelectMany(i => r[i].ToConceptItems(i + 1));
+                });              
+
+                cvs.Source = t.Any() ? t : new ConceptItem[] { new EmptyConcept("No result") };
+            }
+            else
+            {
+                cvs.Source = new ConceptItem[] { new EmptyConcept("Nothing to show.") };
+            }
+        }
+
+        private bool isSubstringMatch(Concept c1, Concept c2)
+        {
+            IEnumerable<string> matchedTerms;
+            return isSubstringMatch(c1, c2, out matchedTerms);
+        }
+
+        static readonly HashSet<string> stopWords = 
+            new HashSet<string>() { "a", "an", "the", "this", "that", "of", "in", "at", "above", "below", "on",
+                "left", "right", "upper", "lower", "her", "his", "from", "to", "further" };
+
+        private bool isSubstringMatch(Concept c1, Concept c2, out IEnumerable<string> matchedTerms)
+        {
+            var w1 = c1.Lexicon.Split(' ');
+            var w2 = c2.Lexicon.Split(' ');
+            matchedTerms = w1.Intersect(w2).ToList();
+
+            var areAllStopWords = matchedTerms.All(t => stopWords.Contains(t));
+            return !areAllStopWords;
         }
     }
 }

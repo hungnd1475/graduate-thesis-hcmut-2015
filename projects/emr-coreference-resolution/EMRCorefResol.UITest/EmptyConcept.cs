@@ -20,5 +20,11 @@ namespace EMRCorefResol.UITest
         {
             _message = message;
         }
+
+        public EmptyConcept(int index, string message)
+            : base(index, ConceptType.None)
+        {
+            _message = message;
+        }
     }
 }

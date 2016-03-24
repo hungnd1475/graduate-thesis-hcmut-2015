@@ -155,6 +155,11 @@
                 <PropertyGroupDescription PropertyName="Index"/>
             </CollectionViewSource.GroupDescriptions>
         </CollectionViewSource>
+        <CollectionViewSource x:Key="Result">
+            <CollectionViewSource.GroupDescriptions>
+                <PropertyGroupDescription PropertyName="Index"/>
+            </CollectionViewSource.GroupDescriptions>
+        </CollectionViewSource>
     </Window.Resources>
     <Grid Margin="5">
         <Grid.RowDefinitions>
@@ -235,6 +240,8 @@
                 <Rectangle Stroke="Black" StrokeThickness="1" Margin="5,0,0,0"/>
                 <Button Content="Edit Chains" x:Name="btnEditChains" Click="btnEditChains_Click" Margin="5,0,0,0"/>
                 <Button Content="Save Chains" x:Name="btnSaveChains" IsEnabled="False" Click="btnSaveChains_Click" Margin="5,0,0,0"/>
+                <Rectangle Stroke="Black" StrokeThickness="1" Margin="5,0,0,0"/>
+                <Button Content="Find!" x:Name="btnFind" Click="btnFind_Click" Margin="5,0,0,0"/>
             </StackPanel>
         </Grid>
 
@@ -250,13 +257,13 @@
                 </TabItem>
             </TabControl>
             <TabControl Grid.Column="2" x:Name="tab">
-                <!--<TabItem Header="Concepts">
+                <TabItem Header="Concepts">
                     <avalonEdit:TextEditor x:Name="txtCons" FontFamily="Consolas" FontSize="15" IsReadOnly="True"/>
                 </TabItem>
                 <TabItem Header="Ground Truth">
                     <avalonEdit:TextEditor x:Name="txtChains" FontFamily="Consolas" FontSize="15" IsReadOnly="True"/>
                 </TabItem>
-                <TabItem Header="Features">
+                <!--<TabItem Header="Features">
                     <avalonEdit:TextEditor x:Name="txtFeatures" FontFamily="Consolas" FontSize="15" IsReadOnly="True"/>
                 </TabItem>
                 <TabItem Header="System Chains">
@@ -295,6 +302,14 @@
                 </TabItem>
                 <TabItem Header="Classification">
                     <avalonEdit:TextEditor x:Name="txtClas" FontFamily="Consolas" FontSize="15" IsReadOnly="True"/>
+                </TabItem>
+                <TabItem Header="Result">
+                    <ListBox x:Name="lbFindRes" ItemsSource="{Binding Source={StaticResource Result}}"
+                             Style="{StaticResource ConceptsListBoxStyle}">
+                        <ListBox.GroupStyle>
+                            <GroupStyle ContainerStyle="{StaticResource ConceptGroupStyle}"/>
+                        </ListBox.GroupStyle>
+                    </ListBox>
                 </TabItem>
             </TabControl>
         </Grid>

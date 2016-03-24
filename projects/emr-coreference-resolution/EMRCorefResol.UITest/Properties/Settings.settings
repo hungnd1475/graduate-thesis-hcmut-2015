@@ -1,7 +1,12 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="EMRCorefResol.UITest.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="InitialEMRPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\Documents\HCMUT\AI Research\DataInput\DataInput</Value>
+    </Setting>
+    <Setting Name="AltEMRPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\Documents\GitHub\graduate-thesis-hcmut-2015\dataset\i2b2_Train</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>
