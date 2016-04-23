@@ -878,7 +878,7 @@ namespace EMRCorefResol.UITest
             var resultSet = new HashSet<IFindResult>();
 
             tab.SelectedIndex = 8;
-            const ConceptType _InterestingType = ConceptType.Treatment;
+            const ConceptType _InterestingType = ConceptType.Test;
 
             if (currentEMR != null && _groundTruth != null)
             {

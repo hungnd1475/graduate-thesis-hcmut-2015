@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMRCorefResol.Core", "EMRCorefResol.Core\EMRCorefResol.Core.csproj", "{66284726-8E94-4438-B366-F14B04874734}"
 EndProject
@@ -36,6 +36,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature Languages", "Feature Languages", "{34F76752-832C-4017-97A9-1D507B2964FF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helpers", "Helpers", "{814A412F-D525-4135-9F66-08302A8A5B22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMRCorefResol.TestingGUI", "EMRCorefResol.TestingGUI\EMRCorefResol.TestingGUI.csproj", "{96AC9773-4DA0-4442-AD0B-D1A3F0296A5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HungND.WPF", "..\..\..\..\Visual Studio 2015\Projects\HungND.WPF\HungND.WPF\HungND.WPF.csproj", "{37761359-93CA-4026-B1D6-1F83EB2E8CFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -215,6 +219,30 @@ Global
 		{1D8AB152-867A-4C66-9826-B17DBB98CDFA}.Release|x64.Build.0 = Release|Any CPU
 		{1D8AB152-867A-4C66-9826-B17DBB98CDFA}.Release|x86.ActiveCfg = Release|Any CPU
 		{1D8AB152-867A-4C66-9826-B17DBB98CDFA}.Release|x86.Build.0 = Release|Any CPU
+		{96AC9773-4DA0-4442-AD0B-D1A3F0296A5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96AC9773-4DA0-4442-AD0B-D1A3F0296A5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96AC9773-4DA0-4442-AD0B-D1A3F0296A5F}.Debug|x64.ActiveCfg = Debug|x64
+		{96AC9773-4DA0-4442-AD0B-D1A3F0296A5F}.Debug|x64.Build.0 = Debug|x64
+		{96AC9773-4DA0-4442-AD0B-D1A3F0296A5F}.Debug|x86.ActiveCfg = Debug|x86
+		{96AC9773-4DA0-4442-AD0B-D1A3F0296A5F}.Debug|x86.Build.0 = Debug|x86
+		{96AC9773-4DA0-4442-AD0B-D1A3F0296A5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96AC9773-4DA0-4442-AD0B-D1A3F0296A5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96AC9773-4DA0-4442-AD0B-D1A3F0296A5F}.Release|x64.ActiveCfg = Release|Any CPU
+		{96AC9773-4DA0-4442-AD0B-D1A3F0296A5F}.Release|x64.Build.0 = Release|Any CPU
+		{96AC9773-4DA0-4442-AD0B-D1A3F0296A5F}.Release|x86.ActiveCfg = Release|Any CPU
+		{96AC9773-4DA0-4442-AD0B-D1A3F0296A5F}.Release|x86.Build.0 = Release|Any CPU
+		{37761359-93CA-4026-B1D6-1F83EB2E8CFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37761359-93CA-4026-B1D6-1F83EB2E8CFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37761359-93CA-4026-B1D6-1F83EB2E8CFF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{37761359-93CA-4026-B1D6-1F83EB2E8CFF}.Debug|x64.Build.0 = Debug|Any CPU
+		{37761359-93CA-4026-B1D6-1F83EB2E8CFF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{37761359-93CA-4026-B1D6-1F83EB2E8CFF}.Debug|x86.Build.0 = Debug|Any CPU
+		{37761359-93CA-4026-B1D6-1F83EB2E8CFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37761359-93CA-4026-B1D6-1F83EB2E8CFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37761359-93CA-4026-B1D6-1F83EB2E8CFF}.Release|x64.ActiveCfg = Release|Any CPU
+		{37761359-93CA-4026-B1D6-1F83EB2E8CFF}.Release|x64.Build.0 = Release|Any CPU
+		{37761359-93CA-4026-B1D6-1F83EB2E8CFF}.Release|x86.ActiveCfg = Release|Any CPU
+		{37761359-93CA-4026-B1D6-1F83EB2E8CFF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

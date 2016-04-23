@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="EMRCorefResol.TestingGUI.NotificationContent"
+             x:Name="Self"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:h="http://schemas.hungnd.com/wpf"
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <Style BasedOn="{StaticResource {x:Type Button}}" TargetType="{x:Type Button}">
+            <Setter Property="MinHeight" Value="24"/>
+            <Setter Property="MinWidth" Value="65"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid Background="{StaticResource BackgroundBrushKey}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ContentControl Content="{Binding}" 
+                        ContentTemplate="{Binding NotificationTemplate,ElementName=Self}"/>
+        <Grid Grid.Row="2" Margin="5,10,5,10">
+            <ContentControl Content="{Binding}" 
+                            ContentTemplate="{Binding ButtonTemplate,ElementName=Self}"/>
+        </Grid>
+    </Grid>
+</UserControl>

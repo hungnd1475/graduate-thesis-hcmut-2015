@@ -105,5 +105,11 @@ namespace HCMUT.EMRCorefResol
         {
             return Array.IndexOf(_emrPaths, Path.Combine(_emrDir, emrFileName));
         }
+
+        public static bool IsPathOk(string emrTopLevelDir)
+        {
+            return Directory.Exists(Path.Combine(emrTopLevelDir, "docs"))
+                && Directory.Exists(Path.Combine(emrTopLevelDir, "concepts"));
+        }
     }
 }

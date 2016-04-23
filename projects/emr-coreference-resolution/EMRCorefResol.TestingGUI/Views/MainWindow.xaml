@@ -1,0 +1,103 @@
+﻿<h:VSWindow x:Class="EMRCorefResol.TestingGUI.MainWindow"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:local="clr-namespace:EMRCorefResol.TestingGUI"
+            xmlns:h="http://schemas.hungnd.com/wpf"
+            xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
+            xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+            xmlns:p="http://prismlibrary.com/"
+            xmlns:xcad="http://schemas.xceed.com/wpf/xaml/avalondock"
+            mc:Ignorable="d"
+            Title="MainWindow" Height="810" Width="1080"
+            MinWidth="1080" MinHeight="810" ResizeMode="CanResizeWithGrip">
+    <i:Interaction.Triggers>
+        <p:InteractionRequestTrigger SourceObject="{Binding Notification}">
+            <local:PopupVSWindowAction CenterOverAssociatedObject="True" IsModal="True">
+                <local:PopupVSWindowAction.WindowContent>
+                    <local:NotificationContent
+                        NotificationTemplate="{StaticResource MessageContentTemplate}"
+                        ButtonTemplate="{StaticResource OkButtonTemplate}"/>
+                </local:PopupVSWindowAction.WindowContent>
+            </local:PopupVSWindowAction>
+        </p:InteractionRequestTrigger>
+        <p:InteractionRequestTrigger SourceObject="{Binding Confirmation}">
+            <local:PopupVSWindowAction CenterOverAssociatedObject="True" IsModal="True">
+                <local:PopupVSWindowAction.WindowContent>
+                    <local:NotificationContent
+                        NotificationTemplate="{StaticResource MessageContentTemplate}"
+                        ButtonTemplate="{StaticResource YesNoButtonTemplate}"/>
+                </local:PopupVSWindowAction.WindowContent>
+            </local:PopupVSWindowAction>
+        </p:InteractionRequestTrigger>
+    </i:Interaction.Triggers>
+    <DockPanel LastChildFill="True">
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar ToolBarTray.IsLocked="True">
+                <Button Content="Open Folder" ToolTip="Open Folder"
+                        h:Icon.Source="{h:PathIcon Data={x:Static h:PathData.FolderOpen}}"
+                        h:Icon.Color="{x:Static h:IconColors.Neutral}"
+                        Command="{Binding LoadCommand}"/>
+                <CheckBox IsChecked="{Binding ZeroBase}" Content="0-Base"/>
+                <Button Content="Test" x:Name="testButton" Click="testButton_Click"
+                        Visibility="Visible"/>
+                <Separator/>
+                <Button h:Icon.Source="{h:PathIcon Data={x:Static h:PathData.NavigatePrevious}}"
+                        h:Icon.Color="{x:Static h:IconColors.Neutral}"
+                        Command="{Binding GoPreviousCommand}"/>
+                <h:IntegerUpDown Value="{Binding CurrentEMRIndex, UpdateSourceTrigger=LostFocus, NotifyOnSourceUpdated=True}"
+                                 MinValue="0" MaxValue="{Binding TotalEMRCount}" Width="30">
+                    <i:Interaction.Behaviors>
+                        <local:UpdateSourceOnReturnBehavior BoundPropertyName="Value"/>
+                        <local:EnablingCommandBehavior Command="{Binding GoToIndexCommand}"/>
+                    </i:Interaction.Behaviors>
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="SourceUpdated">
+                            <i:InvokeCommandAction Command="{Binding GoToIndexCommand}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>                    
+                </h:IntegerUpDown>
+                <TextBlock VerticalAlignment="Center">
+                    <Run Text=" of "/>
+                    <Run Text="{Binding TotalEMRCount, Mode=OneWay}"/>
+                </TextBlock>
+                <Button h:Icon.Source="{h:PathIcon Data={x:Static h:PathData.NavigateNext}}"
+                        h:Icon.Color="{x:Static h:IconColors.Neutral}"
+                        Command="{Binding GoNextCommand}"/>
+                <Separator/>
+                <Button Content="Annotate" Command="{Binding AnnotateCommand}"
+                        Visibility="{Binding RelativeSource={RelativeSource Self},Path=IsEnabled,Converter={StaticResource BooleanToVisibilityConverter}}"
+                        h:Icon.Source="{h:PathIcon Data={x:Static h:PathData.EditBox}}"
+                        h:Icon.Color="{x:Static h:IconColors.Neutral}"/>
+                <Button Content="Save" Command="{Binding SaveAnnotationCommand}"
+                        h:Icon.Source="{h:PathIcon Data={x:Static h:PathData.Ok}}"
+                        h:Icon.Color="{x:Static h:IconColors.Positive}"
+                        Visibility="{Binding RelativeSource={RelativeSource Self},Path=IsEnabled,Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <Button Content="Cancel" Command="{Binding CancelAnnotationCommand}"
+                        h:Icon.Source="{h:PathIcon Data={x:Static h:PathData.Delete1}}"
+                        h:Icon.Color="{x:Static h:IconColors.Negative}"
+                        Visibility="{Binding RelativeSource={RelativeSource Self},Path=IsEnabled,Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            </ToolBar>
+        </ToolBarTray>
+        <StatusBar DockPanel.Dock="Bottom" Foreground="{StaticResource HighlightTextBrushKey}"
+                   Background="{StaticResource AccentBrushKey}">
+            <TextBlock Text="{Binding CurrentState}"/>
+        </StatusBar>
+        <xcad:DockingManager BorderThickness="0"
+                             p:RegionManager.RegionName="{x:Static local:RegionNames.Workspace}"
+                             DocumentPaneControlStyle="{StaticResource AvalonDock_ThemeVS2012_DocumentPaneControlStyle}"
+                             x:Name="DockingManager">
+            <i:Interaction.Behaviors>
+                <local:AvalonDockLayoutSerializationBehavior/>
+            </i:Interaction.Behaviors>
+            <xcad:DockingManager.LayoutItemContainerStyle>
+                <Style TargetType="{x:Type xcad:LayoutItem}">
+                    <Setter Property="Title" Value="{Binding Model.DataContext.Title}"/>
+                    <Setter Property="ContentId" Value="{Binding Model.DataContext.ContentId}"/>
+                    <Setter Property="CanClose" Value="False"/>
+                </Style>
+            </xcad:DockingManager.LayoutItemContainerStyle>
+        </xcad:DockingManager>
+    </DockPanel>
+</h:VSWindow>
