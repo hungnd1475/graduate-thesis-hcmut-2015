@@ -89,7 +89,7 @@ namespace EMRCorefResol.TestingGUI
             _regionManager = regionManager;
         }
 
-        private void OnAnnotationEnded(CorefChainCollection obj)
+        private void OnAnnotationEnded(CorefChainCollection resultChains)
         {
             IsAnnotating = false;
         }

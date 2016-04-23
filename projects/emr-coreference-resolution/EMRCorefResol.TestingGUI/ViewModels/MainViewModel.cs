@@ -145,7 +145,7 @@ namespace EMRCorefResol.TestingGUI
             Directory.CreateDirectory(chainFolder);
             File.WriteAllLines(chainPath, _editingChains.Select(c => c.ToString()));
             
-            _currentGT = new CorefChainCollection(_editingChains);
+            _currentGT = new CorefChainCollection(_editingChains.ToList());
             _editingChains = null;
             _eventAggregator.GetEvent<AnnotationEndedEvent>().Publish(_currentGT);
         }

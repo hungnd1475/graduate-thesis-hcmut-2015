@@ -10,12 +10,19 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
         <DataTemplate x:Key="ConceptTypesTemplate">
-            <StackPanel Orientation="Vertical" Margin="5" Width="200">
+            <Grid Width="200">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
                 <TextBlock Text="Please choose a chain type from the list below:"
-                           TextWrapping="Wrap"
-                           Margin="0,0,0,5"/>
-                <ListBox ItemsSource="{Binding Content, Mode=OneTime}" SelectedItem="{Binding SelectedType, Mode=OneWayToSource}"/>                
-            </StackPanel>
+                           TextWrapping="Wrap"/>
+                <ListBox ItemsSource="{Binding Content, Mode=OneTime}"
+                         SelectedIndex="0"
+                         SelectedItem="{Binding SelectedType, Mode=OneWayToSource}"
+                         Grid.Row="2"/>                
+            </Grid>
         </DataTemplate>
     </UserControl.Resources>
     <i:Interaction.Triggers>

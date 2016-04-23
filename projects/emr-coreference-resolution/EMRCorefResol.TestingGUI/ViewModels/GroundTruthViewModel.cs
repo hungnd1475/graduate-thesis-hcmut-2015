@@ -78,6 +78,7 @@ namespace EMRCorefResol.TestingGUI
 
         private void OnAnnotationEnded(CorefChainCollection resultChains)
         {
+            _editingChains.CollectionChanged -= _editingChains_CollectionChanged;
             _editingChains = null;
             GroundTruth = resultChains;
         }
