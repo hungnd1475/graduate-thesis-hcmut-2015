@@ -6,8 +6,9 @@
         GoNext,
         GoPrevious,
         GoToIndex,
-        Annotate,
+        AnnotateEntity,
+        AnnotateCoref,
         SaveAnnotation,
-        CancelAnnotation
+        CancelAnnotation,
     }
 }

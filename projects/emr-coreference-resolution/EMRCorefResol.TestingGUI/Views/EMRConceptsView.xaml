@@ -1,14 +1,26 @@
-﻿<UserControl x:Class="EMRCorefResol.TestingGUI.EMRConceptsView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:EMRCorefResol.TestingGUI"
-             xmlns:p="http://prismlibrary.com/"            
-             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-             xmlns:h="http://schemas.hungnd.com/wpf"
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+﻿<local:DockableView x:Class="EMRCorefResol.TestingGUI.EMRConceptsView"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                    xmlns:local="clr-namespace:EMRCorefResol.TestingGUI"
+                    xmlns:p="http://prismlibrary.com/"            
+                    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+                    xmlns:h="http://schemas.hungnd.com/wpf"
+                    mc:Ignorable="d" 
+                    d:DesignHeight="300" d:DesignWidth="300"
+                    Title="Concepts">
+    <i:Interaction.Triggers>
+        <p:InteractionRequestTrigger SourceObject="{Binding ChainTypeNotification,Mode=OneTime}">
+            <local:PopupVSWindowAction CenterOverAssociatedObject="True" IsModal="True">
+                <local:PopupVSWindowAction.WindowContent>
+                    <local:NotificationContent 
+                        NotificationTemplate="{StaticResource ConceptTypesTemplate}"
+                        ButtonTemplate="{StaticResource OkButtonTemplate}"/>
+                </local:PopupVSWindowAction.WindowContent>
+            </local:PopupVSWindowAction>
+        </p:InteractionRequestTrigger>
+    </i:Interaction.Triggers>
     <DockPanel LastChildFill="True">
         <ToolBarTray DockPanel.Dock="Top">
             <ToolBar ToolBarTray.IsLocked="True">
@@ -21,6 +33,10 @@
                         h:Icon.Source="{h:PathIcon Data={x:Static h:PathData.Export1}}"
                         h:Icon.Color="{x:Static h:IconColors.Neutral}"
                         Command="{Binding CreateChainOrMergeCommand}"/>
+                <Button Content="Remove"
+                        h:Icon.Source="{h:PathIcon Data={x:Static h:PathData.Delete3}}"
+                        h:Icon.Color="{x:Static h:IconColors.Negative}"
+                        Command="{Binding RemoveConceptsCommand}"/>
             </ToolBar>
         </ToolBarTray>
         <local:BindableTextEditor Text="{Binding ConceptsText, Mode=OneWay}"
@@ -40,4 +56,4 @@
             </i:Interaction.Triggers>
         </local:BindableTextEditor>
     </DockPanel>
-</UserControl>
+</local:DockableView>

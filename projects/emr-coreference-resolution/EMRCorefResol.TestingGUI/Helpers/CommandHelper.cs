@@ -4,7 +4,7 @@ using System;
 
 namespace EMRCorefResol.TestingGUI
 {
-    static class CommandHelpers
+    static class CommandHelper
     {
         public static DelegateCommand TriggerToCommand<TSTate, TTrigger>(
             this StateMachine<TSTate, TTrigger> stateMachine,

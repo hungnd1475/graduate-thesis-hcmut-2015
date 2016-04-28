@@ -8,10 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EMRCorefResol.TestingGUI.Properties
-{
-
-
+namespace EMRCorefResol.TestingGUI.Properties {
+    
+    
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
@@ -33,6 +32,17 @@ namespace EMRCorefResol.TestingGUI.Properties
             }
             set {
                 this["DockingLayout"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.StringCollection LastOpenedViews {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["LastOpenedViews"]));
+            }
+            set {
+                this["LastOpenedViews"] = value;
             }
         }
     }

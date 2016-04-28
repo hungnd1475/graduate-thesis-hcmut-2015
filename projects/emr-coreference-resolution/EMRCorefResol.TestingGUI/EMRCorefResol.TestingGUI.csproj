@@ -137,30 +137,40 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\EMRToTitleConverter.cs" />
     <Compile Include="Converters\NotificationTypeToIconVisibility.cs" />
-    <Compile Include="Events\AnnotationEndedEvent.cs" />
+    <Compile Include="Events\CorefAnnotationEndedEvent.cs" />
     <Compile Include="Events\EMRBaseChangedEvent.cs" />
-    <Compile Include="Helpers\ChainCollectionHelpers.cs" />
-    <Compile Include="Helpers\CommandHelpers.cs" />
+    <Compile Include="Events\EntityAnnotationBegunEvent.cs" />
+    <Compile Include="Events\EntityAnnotationEndedEvent.cs" />
+    <Compile Include="Events\OutputEvent.cs" />
+    <Compile Include="Helpers\ChainCollectionHelper.cs" />
+    <Compile Include="Helpers\CommandHelper.cs" />
     <Compile Include="Events\CreateChainOrMergeEvent.cs" />
+    <Compile Include="Helpers\StringHelper.cs" />
+    <Compile Include="IAvalonDockViewsRegistry.cs" />
     <Compile Include="Interactivity\AvalonDockLayoutSerializationBehavior.cs" />
-    <Compile Include="Interactivity\ChainTypeNotification.cs" />
-    <Compile Include="Interactivity\EnablingCommandBehavior.cs" />
+    <Compile Include="Interactivity\ConceptTypeNotification.cs" />
     <Compile Include="Events\EMRChangedEventArgs.cs" />
     <Compile Include="Events\SelectedConceptChangedEvent.cs" />
+    <Compile Include="MainDockingViewsRegistry.cs" />
+    <Compile Include="TextSelectionInfo.cs" />
+    <Compile Include="Test.cs" />
     <Compile Include="TextEditor\FocusConceptBehavior.cs" />
     <Compile Include="TextEditor\SegmentsHighlighter.cs" />
     <Compile Include="TextEditor\SelectConceptBehavior.cs" />
     <Compile Include="Interactivity\UpdateSourceOnReturnBehavior.cs" />
     <Compile Include="ViewModels\EMRConceptsViewModel.cs" />
     <Compile Include="ViewModels\GroundTruthViewModel.cs" />
+    <Compile Include="ViewModels\OutputViewModel.cs" />
+    <Compile Include="Views\DockableView.cs" />
     <Compile Include="Views\EMRConceptsView.xaml.cs">
       <DependentUpon>EMRConceptsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Events\EMRChangedEvent.cs" />
     <Compile Include="Regions\AvalonDockRegionAdapter.cs" />
     <Compile Include="Regions\DockableType.cs" />
-    <Compile Include="Regions\IDecideDockableType.cs" />
+    <Compile Include="Regions\IDockableView.cs" />
     <Compile Include="Regions\RegionNames.cs" />
     <Compile Include="TextEditor\BindableTextEditor.cs" />
     <Compile Include="Converters\NegIntToEnability.cs" />
@@ -174,7 +184,6 @@
     <Compile Include="StateTriggers\MainTrigger.cs" />
     <Compile Include="TestingGUIBootstrapper.cs" />
     <Compile Include="TestingGUIModule.cs" />
-    <Compile Include="ViewModels\DockableContentViewModel.cs" />
     <Compile Include="ViewModels\EMRContentViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Views\EMRContentView.xaml.cs">
@@ -185,6 +194,9 @@
     </Compile>
     <Compile Include="Views\NotificationContent.xaml.cs">
       <DependentUpon>NotificationContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OutputView.xaml.cs">
+      <DependentUpon>OutputView.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\EMRConceptsView.xaml">
       <SubType>Designer</SubType>
@@ -214,6 +226,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\OutputView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="VS2012.AvalonDock.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -237,7 +253,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Events\AnnotationBegunEvent.cs" />
+    <Compile Include="Events\CorefAnnotationBegunEvent.cs" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

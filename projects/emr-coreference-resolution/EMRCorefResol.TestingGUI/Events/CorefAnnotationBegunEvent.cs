@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 
 namespace EMRCorefResol.TestingGUI
 {
-    class AnnotationBegunEvent : PubSubEvent<ObservableCollection<CorefChain>>
+    class CorefAnnotationBegunEvent : PubSubEvent<ObservableCollection<CorefChain>>
     {
     }
 }

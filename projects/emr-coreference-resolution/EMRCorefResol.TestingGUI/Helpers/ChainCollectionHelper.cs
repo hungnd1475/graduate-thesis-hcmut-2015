@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace EMRCorefResol.TestingGUI
 {
-    static class ChainCollectionHelpers
+    static class ChainCollectionHelper
     {
         public static CorefChain FindChainContains(this IEnumerable<CorefChain> chains, Concept concept, out int index)
         {

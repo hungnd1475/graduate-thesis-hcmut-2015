@@ -12,6 +12,19 @@
             mc:Ignorable="d"
             Title="MainWindow" Height="810" Width="1080"
             MinWidth="1080" MinHeight="810" ResizeMode="CanResizeWithGrip">
+    <h:VSWindow.Resources>
+        <DataTemplate x:Key="EMRBaseCheckboxContentTemplate">
+            <TextBlock x:Name="Content"/>
+            <DataTemplate.Triggers>
+                <DataTrigger Binding="{Binding}" Value="True">
+                    <Setter Property="Text" TargetName="Content" Value="1-Base"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding}" Value="False">
+                    <Setter Property="Text" TargetName="Content" Value="0-Base"/>
+                </DataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+    </h:VSWindow.Resources>
     <i:Interaction.Triggers>
         <p:InteractionRequestTrigger SourceObject="{Binding Notification}">
             <local:PopupVSWindowAction CenterOverAssociatedObject="True" IsModal="True">
@@ -39,7 +52,8 @@
                         h:Icon.Source="{h:PathIcon Data={x:Static h:PathData.FolderOpen}}"
                         h:Icon.Color="{x:Static h:IconColors.Neutral}"
                         Command="{Binding LoadCommand}"/>
-                <CheckBox IsChecked="{Binding ZeroBase}" Content="0-Base"/>
+                <CheckBox IsChecked="{Binding ZeroBase}" Content="{Binding ZeroBase}" 
+                          ContentTemplate="{StaticResource EMRBaseCheckboxContentTemplate}"/>
                 <Button Content="Test" x:Name="testButton" Click="testButton_Click"
                         Visibility="Visible"/>
                 <Separator/>
@@ -50,11 +64,11 @@
                                  MinValue="0" MaxValue="{Binding TotalEMRCount}" Width="30">
                     <i:Interaction.Behaviors>
                         <local:UpdateSourceOnReturnBehavior BoundPropertyName="Value"/>
-                        <local:EnablingCommandBehavior Command="{Binding GoToIndexCommand}"/>
                     </i:Interaction.Behaviors>
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="SourceUpdated">
-                            <i:InvokeCommandAction Command="{Binding GoToIndexCommand}"/>
+                            <p:InvokeCommandAction Command="{Binding GoToIndexCommand}"
+                                                   AutoEnable="True"/>
                         </i:EventTrigger>
                     </i:Interaction.Triggers>                    
                 </h:IntegerUpDown>
@@ -66,10 +80,18 @@
                         h:Icon.Color="{x:Static h:IconColors.Neutral}"
                         Command="{Binding GoNextCommand}"/>
                 <Separator/>
-                <Button Content="Annotate" Command="{Binding AnnotateCommand}"
-                        Visibility="{Binding RelativeSource={RelativeSource Self},Path=IsEnabled,Converter={StaticResource BooleanToVisibilityConverter}}"
-                        h:Icon.Source="{h:PathIcon Data={x:Static h:PathData.EditBox}}"
-                        h:Icon.Color="{x:Static h:IconColors.Neutral}"/>
+                <h:MenuButton Content="Annotate"
+                              Visibility="{Binding CanBeginAnnotate,Converter={StaticResource BooleanToVisibilityConverter}}"
+                              h:Icon.Source="{h:PathIcon Data={x:Static h:PathData.EditBox}}"
+                              h:Icon.Color="{x:Static h:IconColors.Neutral}"
+                              Style="{StaticResource ToolBarMenuButtonStyle}">
+                    <h:MenuButton.Menu>
+                        <ContextMenu>
+                            <MenuItem Header="Entity" Command="{Binding AnnotateEntityCommand}"/>
+                            <MenuItem Header="Coreference" Command="{Binding AnnotateCorefCommand}"/>
+                        </ContextMenu>
+                    </h:MenuButton.Menu>                    
+                </h:MenuButton>
                 <Button Content="Save" Command="{Binding SaveAnnotationCommand}"
                         h:Icon.Source="{h:PathIcon Data={x:Static h:PathData.Ok}}"
                         h:Icon.Color="{x:Static h:IconColors.Positive}"
@@ -89,12 +111,20 @@
                              DocumentPaneControlStyle="{StaticResource AvalonDock_ThemeVS2012_DocumentPaneControlStyle}"
                              x:Name="DockingManager">
             <i:Interaction.Behaviors>
-                <local:AvalonDockLayoutSerializationBehavior/>
+                <local:AvalonDockLayoutSerializationBehavior 
+                    SavedLayoutSettingName="DockingLayout"
+                    LastViewsSettingName="LastOpenedViews">
+                    <local:AvalonDockLayoutSerializationBehavior.ViewsRegistry>
+                        <local:MainDockingViewsRegistry 
+                            LastViewsSettingName="LastOpenedViews"
+                            RegionName="{x:Static local:RegionNames.Workspace}"/>
+                    </local:AvalonDockLayoutSerializationBehavior.ViewsRegistry>
+                </local:AvalonDockLayoutSerializationBehavior>
             </i:Interaction.Behaviors>
             <xcad:DockingManager.LayoutItemContainerStyle>
                 <Style TargetType="{x:Type xcad:LayoutItem}">
-                    <Setter Property="Title" Value="{Binding Model.DataContext.Title}"/>
-                    <Setter Property="ContentId" Value="{Binding Model.DataContext.ContentId}"/>
+                    <Setter Property="Title" Value="{Binding Model.Title}"/>
+                    <Setter Property="ContentId" Value="{Binding Model.ContentId}"/>
                     <Setter Property="CanClose" Value="False"/>
                 </Style>
             </xcad:DockingManager.LayoutItemContainerStyle>

@@ -1,23 +1,45 @@
-﻿<UserControl x:Class="EMRCorefResol.TestingGUI.EMRContentView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:EMRCorefResol.TestingGUI"
-             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
+﻿<local:DockableView x:Class="EMRCorefResol.TestingGUI.EMRContentView"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                    xmlns:local="clr-namespace:EMRCorefResol.TestingGUI"
+                    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+                    xmlns:h="http://schemas.hungnd.com/wpf"
+                    xmlns:p="http://prismlibrary.com/"
+                    mc:Ignorable="d" 
+                    d:DesignHeight="300" d:DesignWidth="300"
+                    Title="{Binding CurrentEMR,Converter={StaticResource EMRToTitleConverter}}">
+    <i:Interaction.Triggers>
+        <p:InteractionRequestTrigger SourceObject="{Binding ConceptTypeNotification,Mode=OneTime}">
+            <local:PopupVSWindowAction CenterOverAssociatedObject="True" IsModal="True">
+                <local:PopupVSWindowAction.WindowContent>
+                    <local:NotificationContent 
+                        NotificationTemplate="{StaticResource ConceptTypesTemplate}"
+                        ButtonTemplate="{StaticResource OkButtonTemplate}"/>
+                </local:PopupVSWindowAction.WindowContent>
+            </local:PopupVSWindowAction>
+        </p:InteractionRequestTrigger>
+    </i:Interaction.Triggers>
+    <DockPanel LastChildFill="True">
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar ToolBarTray.IsLocked="True">
+                <Button Content="Annotate" Command="{Binding AnnotateCommand}"
+                        h:Icon.Source="{h:PathIcon Data={x:Static h:PathData.Export1}}"
+                        h:Icon.Color="{x:Static h:IconColors.Neutral}"/>
+            </ToolBar>
+        </ToolBarTray>
         <local:BindableTextEditor Text="{Binding Path=CurrentEMR.Content, FallbackValue='&lt;empty&gt;', Mode=OneWay}"
                                   ScrollToTopWhenTextChanged="True"
                                   FontFamily="Consolas" FontSize="15"
                                   IsReadOnly="True" ShowLineNumbers="True"
-                                  WordWrap="True">
+                                  WordWrap="True" IsSearchEnabled="True"
+                                  Selection="{Binding TextSelection,Mode=OneWayToSource}">
             <i:Interaction.Behaviors>
                 <local:SelectConceptBehavior Background="#FF70B7FF"
                                              CurrentEMR="{Binding CurrentEMR, Mode=OneWay}"
                                              SelectedConcept="{Binding SelectedConcept, Mode=OneWay}"/>
             </i:Interaction.Behaviors>
         </local:BindableTextEditor>
-    </Grid>
-</UserControl>
+    </DockPanel>
+</local:DockableView>

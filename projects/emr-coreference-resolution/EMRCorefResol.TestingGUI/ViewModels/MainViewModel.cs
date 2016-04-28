@@ -23,9 +23,12 @@ namespace EMRCorefResol.TestingGUI
 
         private EMRCollection _emrCollection;
         private EMR _currentEMR;
-        private CorefChainCollection _currentGT;
-        private ObservableCollection<CorefChain> _editingChains;
+        private CorefChainCollection _currentGT;        
         private readonly IEMRReader _emrReader = new I2B2EMRReader();
+        private readonly OutputEvent _outputEvent;
+
+        private ObservableCollection<CorefChain> _editingChains;
+        private ObservableCollection<Concept> _editingConcepts;
 
         private string _emrDirPath;
         public string EMRDirPath
@@ -65,12 +68,19 @@ namespace EMRCorefResol.TestingGUI
             get { return _emrCollection?.Count - 1 ?? -1; }
         }
 
+        public bool CanBeginAnnotate
+        {
+            get { return _mainSM.CanFire(MainTrigger.AnnotateCoref) || _mainSM.CanFire(MainTrigger.AnnotateEntity); }
+        }
+
         public DelegateCommand GoNextCommand { get; }
         public DelegateCommand GoPreviousCommand { get; }
         public DelegateCommand GoToIndexCommand { get; }
         public DelegateCommand LoadCommand { get; }
 
-        public DelegateCommand AnnotateCommand { get; }
+        public DelegateCommand AnnotateCorefCommand { get; }
+        public DelegateCommand AnnotateEntityCommand { get; }
+
         public DelegateCommand SaveAnnotationCommand { get; }
         public DelegateCommand CancelAnnotationCommand { get; }
 
@@ -84,7 +94,6 @@ namespace EMRCorefResol.TestingGUI
             _mainSM = new StateMachine<MainState, MainTrigger>(MainState.NotLoaded);
 
             var loadWithState = _mainSM.SetTriggerParameters<MainState>(MainTrigger.Load);
-            var goToIndex = _mainSM.SetTriggerParameters<int>(MainTrigger.GoToIndex);
 
             _mainSM.Configure(MainState.NotLoaded)
                 .OnEntry(Unload)
@@ -109,10 +118,17 @@ namespace EMRCorefResol.TestingGUI
                 .PermitReentryIf(MainTrigger.GoPrevious, () => _currentEMRIndex > 0)
                 .PermitReentry(MainTrigger.GoToIndex)
                 .PermitDynamic(loadWithState, Load)
-                .Permit(MainTrigger.Annotate, MainState.Annotating);
+                .Permit(MainTrigger.AnnotateEntity, MainState.EntityAnnotating)
+                .Permit(MainTrigger.AnnotateCoref, MainState.CorefAnnotating);
 
-            _mainSM.Configure(MainState.Annotating)
-                .OnEntry(BeginAnnotation)
+            _mainSM.Configure(MainState.CorefAnnotating)
+                .OnEntry(BeginCorefAnnotation)
+                .OnEntry(OnStateReady)
+                .Permit(MainTrigger.SaveAnnotation, MainState.Presenting)
+                .Permit(MainTrigger.CancelAnnotation, MainState.Presenting);
+
+            _mainSM.Configure(MainState.EntityAnnotating)
+                .OnEntry(BeginEntityAnnotation)
                 .OnEntry(OnStateReady)
                 .Permit(MainTrigger.SaveAnnotation, MainState.Presenting)
                 .Permit(MainTrigger.CancelAnnotation, MainState.Presenting);
@@ -122,56 +138,111 @@ namespace EMRCorefResol.TestingGUI
             GoToIndexCommand = _mainSM.TriggerToCommand(MainTrigger.GoToIndex);
             GoPreviousCommand = _mainSM.TriggerToCommand(MainTrigger.GoPrevious);
 
-            AnnotateCommand = _mainSM.TriggerToCommand(MainTrigger.Annotate);
+            AnnotateCorefCommand = _mainSM.TriggerToCommand(MainTrigger.AnnotateCoref);
+            AnnotateEntityCommand = _mainSM.TriggerToCommand(MainTrigger.AnnotateEntity);
+
             SaveAnnotationCommand = _mainSM.TriggerToCommand(MainTrigger.SaveAnnotation);
             CancelAnnotationCommand = _mainSM.TriggerToCommand(MainTrigger.CancelAnnotation);
 
             Notification = new InteractionRequest<INotification>();
             Confirmation = new InteractionRequest<IConfirmation>();
+
+            _outputEvent = eventAggregator.GetEvent<OutputEvent>();
+            _mainSM.OnTransitioned(OnTransition);
         }
 
-        private void CancelAnnotation()
+        private void OnTransition(StateMachine<MainState, MainTrigger>.Transition t)
         {
-            _editingChains = null;
-            _eventAggregator.GetEvent<AnnotationEndedEvent>().Publish(_currentGT);
+            var text = $"{t.Trigger}: {t.Source} -> {t.Destination} (re-entry: {t.IsReentry})";
+            _outputEvent.Publish(text);
         }
 
-        private void SaveAnnotation()
+        private void CancelAnnotation(StateMachine<MainState, MainTrigger>.Transition transition)
         {
-            // TODO: check if ground truth is saved properly, we assume it is for now
-
-            var chainPath = _emrCollection.GetChainsPath(_currentEMRIndex);
-            var chainFolder = Path.GetDirectoryName(chainPath);
-            Directory.CreateDirectory(chainFolder);
-            File.WriteAllLines(chainPath, _editingChains.Select(c => c.ToString()));
-            
-            _currentGT = new CorefChainCollection(_editingChains.ToList());
-            _editingChains = null;
-            _eventAggregator.GetEvent<AnnotationEndedEvent>().Publish(_currentGT);
+            switch (transition.Source)
+            {
+                case MainState.CorefAnnotating:
+                    _editingChains = null;
+                    _eventAggregator.GetEvent<CorefAnnotationEndedEvent>().Publish(_currentGT);
+                    break;
+                case MainState.EntityAnnotating:
+                    _editingConcepts = null;
+                    _eventAggregator.GetEvent<EntityAnnotationEndedEvent>().Publish(_currentEMR);
+                    break;
+            }
         }
 
-        private void BeginAnnotation()
+        private void SaveAnnotation(StateMachine<MainState, MainTrigger>.Transition transition)
+        {
+            // TODO: check if ground truth or concepts is saved properly, we assume they are for now
+
+            switch (transition.Source)
+            {
+                case MainState.CorefAnnotating:
+                    {
+                        var chainPath = _emrCollection.GetChainsPath(_currentEMRIndex);
+                        var chainFolder = Path.GetDirectoryName(chainPath);
+                        Directory.CreateDirectory(chainFolder);
+                        File.WriteAllLines(chainPath, _editingChains.Select(c => c.ToString()));
+
+                        _currentGT = new CorefChainCollection(_editingChains.ToList());
+                        _editingChains = null;
+                        _eventAggregator.GetEvent<CorefAnnotationEndedEvent>().Publish(_currentGT);
+                    }
+                    break;
+                case MainState.EntityAnnotating:
+                    {
+                        var conceptsPath = _emrCollection.GetConceptsPath(_currentEMRIndex);
+                        File.WriteAllLines(conceptsPath, _editingConcepts.Select(c => $"{c}||t=\"{c.Type.ToString().ToLower()}\""));
+
+                        var emrPath = _emrCollection.GetEMRPath(_currentEMRIndex);
+                        _currentEMR = new EMR(emrPath, conceptsPath, _emrReader);
+                        _editingConcepts = null;
+                        _eventAggregator.GetEvent<EntityAnnotationEndedEvent>().Publish(_currentEMR);
+                    }
+                    break;
+            }
+        }
+
+        private void BeginEntityAnnotation()
+        {
+            Confirmation.Raise(new Confirmation(NotificationType.None)
+            {
+                Title = "Annotate Entity",
+                Content = "Do you want to override existing concepts?"
+            },
+            c => DoEntityAnnotation(c.Confirmed));
+        }
+
+        private void DoEntityAnnotation(bool isOverrode)
+        {
+            _editingConcepts = isOverrode ? new ObservableCollection<Concept>()
+                : new ObservableCollection<Concept>(_currentEMR.Concepts);
+            _eventAggregator.GetEvent<EntityAnnotationBegunEvent>().Publish(_editingConcepts);
+        }
+
+        private void BeginCorefAnnotation()
         {
             if (_currentGT != null)
             {
                 Confirmation.Raise(new Confirmation(NotificationType.None)
                 {
-                    Title = "Confirmation",
+                    Title = "Annotate Coreference",
                     Content = "Do you want to override existing ground truth?"
                 }, 
-                c => DoAnnotation(c.Confirmed));
+                c => DoCorefAnnotation(c.Confirmed));
             }
             else
             {
-                DoAnnotation(true);
+                DoCorefAnnotation(true);
             }
         }
 
-        private void DoAnnotation(bool isOverrode)
+        private void DoCorefAnnotation(bool isOverrode)
         {
             _editingChains = isOverrode ? new ObservableCollection<CorefChain>() 
                 : new ObservableCollection<CorefChain>(_currentGT);
-            _eventAggregator.GetEvent<AnnotationBegunEvent>().Publish(_editingChains);
+            _eventAggregator.GetEvent<CorefAnnotationBegunEvent>().Publish(_editingChains);
         }
 
         private void Unload()
@@ -206,7 +277,7 @@ namespace EMRCorefResol.TestingGUI
                     {
                         Notification.Raise(new Notification(NotificationType.Information)
                         {
-                            Title = "Bad EMR Directory",
+                            Title = "Load EMR Directory",
                             Content = $"Cannot load. The directory '{d.FileName}' is not a proper EMR directory."
                         });
                     }
@@ -272,7 +343,9 @@ namespace EMRCorefResol.TestingGUI
             GoToIndexCommand.RaiseCanExecuteChanged();
             LoadCommand.RaiseCanExecuteChanged();
 
-            AnnotateCommand.RaiseCanExecuteChanged();
+            AnnotateCorefCommand.RaiseCanExecuteChanged();
+            AnnotateEntityCommand.RaiseCanExecuteChanged();
+
             SaveAnnotationCommand.RaiseCanExecuteChanged();
             CancelAnnotationCommand.RaiseCanExecuteChanged();
         }
@@ -281,6 +354,7 @@ namespace EMRCorefResol.TestingGUI
         {
             UpdateCommandStates();
             OnPropertyChanged(nameof(CurrentState));
+            OnPropertyChanged(nameof(CanBeginAnnotate));
         }
     }
 }

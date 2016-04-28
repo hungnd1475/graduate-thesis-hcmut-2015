@@ -3,7 +3,7 @@ using Prism.Events;
 
 namespace EMRCorefResol.TestingGUI
 {
-    class AnnotationEndedEvent : PubSubEvent<CorefChainCollection>
+    class CorefAnnotationEndedEvent : PubSubEvent<CorefChainCollection>
     {
     }
 }

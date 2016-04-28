@@ -5,6 +5,7 @@
         NotLoaded,
         Ready,
         Presenting,
-        Annotating
+        EntityAnnotating,
+        CorefAnnotating
     }
 }

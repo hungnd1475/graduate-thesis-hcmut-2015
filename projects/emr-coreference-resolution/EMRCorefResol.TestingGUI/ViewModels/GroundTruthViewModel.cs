@@ -2,6 +2,7 @@
 using Prism.Commands;
 using Prism.Events;
 using Prism.Interactivity.InteractionRequest;
+using Prism.Mvvm;
 using Prism.Regions;
 using System;
 using System.Collections.Generic;
@@ -9,19 +10,19 @@ using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel.Composition;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace EMRCorefResol.TestingGUI
 {
     [Export]
     [PartCreationPolicy(CreationPolicy.Shared)]
-    public class GroundTruthViewModel : DockableContentViewModel
+    public class GroundTruthViewModel : BindableBase
     {
-        public static readonly string ID = "GroundTruth";
-
         private readonly IEventAggregator _eventAggregator;
         private readonly IRegionManager _regionManager;
 
         private ObservableCollection<CorefChain> _editingChains;
+        private bool _removingConcepts = false;
 
         private IEnumerable<CorefChain> _groundTruth;
         private IEnumerable<CorefChain> GroundTruth
@@ -31,7 +32,7 @@ namespace EMRCorefResol.TestingGUI
             {
                 if (SetProperty(ref _groundTruth, value) && value != null)
                 {
-                    GTText = string.Join(Environment.NewLine, value.Select(c => c.ToString()));
+                    GTText = value.ToStringLines();
                 }
             }
         }
@@ -52,84 +53,81 @@ namespace EMRCorefResol.TestingGUI
                 if (SetProperty(ref _focusedConcepts, value))
                 {
                     _eventAggregator.GetEvent<SelectedConceptChangedEvent>().Publish(null);
+                    RemoveConceptsCommand.RaiseCanExecuteChanged();
                 }
             }
         }
 
         public DelegateCommand SelectConceptCommand { get; }
-        public InteractionRequest<ChainTypeNotification> TypeChoosingRequest { get; }
+        public DelegateCommand RemoveConceptsCommand { get; }
 
         [ImportingConstructor]
         public GroundTruthViewModel(IEventAggregator eventAggregator, IRegionManager regionManager)
-            : base(ID)
         {
-            Title = "Ground Truth";
             SelectConceptCommand = new DelegateCommand(SelectConcepts);
-            TypeChoosingRequest = new InteractionRequest<ChainTypeNotification>();
+            RemoveConceptsCommand = new DelegateCommand(RemoveConcepts, () => _editingChains != null && _focusedConcepts.Count > 0);
 
             _eventAggregator = eventAggregator;
             eventAggregator.GetEvent<EMRChangedEvent>().Subscribe(EMRChanged, ThreadOption.UIThread);
-            eventAggregator.GetEvent<AnnotationBegunEvent>().Subscribe(OnAnnotationBegun, ThreadOption.UIThread);
-            eventAggregator.GetEvent<CreateChainOrMergeEvent>().Subscribe(OnCreateChainOrMerge, ThreadOption.UIThread);
-            eventAggregator.GetEvent<AnnotationEndedEvent>().Subscribe(OnAnnotationEnded, ThreadOption.UIThread);
+            eventAggregator.GetEvent<CorefAnnotationBegunEvent>().Subscribe(OnCorefAnnotationBegun, ThreadOption.UIThread);
+            eventAggregator.GetEvent<CorefAnnotationEndedEvent>().Subscribe(OnCorefAnnotationEnded, ThreadOption.UIThread);
 
             _regionManager = regionManager;
         }
 
-        private void OnAnnotationEnded(CorefChainCollection resultChains)
+        private async void RemoveConcepts()
         {
-            _editingChains.CollectionChanged -= _editingChains_CollectionChanged;
-            _editingChains = null;
-            GroundTruth = resultChains;
-        }
+            _removingConcepts = true;
 
-        private void OnCreateChainOrMerge(IEnumerable<Concept> concepts)
-        {
-            if (_editingChains != null)
+            await Task.Run(() =>
             {
-                _regionManager.RequestNavigate(RegionNames.Workspace, "GroundTruthView");
-
-                CorefChain containedChain = null;
-                int chainIndex = -1;
-
-                foreach (var c in concepts)
+                int index = -1;
+                foreach (var c in _focusedConcepts)
                 {
-                    containedChain = _editingChains.FindChainContains(c, out chainIndex);
-                    if (containedChain != null)
-                        break;
-                }
-
-                if (containedChain != null)
-                {
-                    var newChain = new List<Concept>(containedChain);
-                    newChain.AddRange(concepts);
-                    _editingChains[chainIndex] = new CorefChain(newChain, containedChain.Type);
-                }
-                else
-                {
-                    TypeChoosingRequest.Raise(new ChainTypeNotification()
+                    var oldChain = _editingChains.FindChainContains(c, out index);
+                    if (oldChain != null)
                     {
-                        Title = "Choose chain type",
-                        Content = Enum.GetValues(typeof(ConceptType)).Cast<ConceptType>()
-                    },
-                    n =>
-                    {
-                        var newChain = new List<Concept>(concepts);
-                        _editingChains.Add(new CorefChain(newChain, n.SelectedType));
-                    });
+                        if (oldChain.Count <= 2)
+                        {
+                            _editingChains.Remove(oldChain);
+                        }
+                        else
+                        {
+                            var newChain = new List<Concept>(oldChain);
+                            newChain.Remove(c);
+                            _editingChains[index] = new CorefChain(newChain, oldChain.Type);
+                        }
+                    }
                 }
+            });
+
+            _removingConcepts = false;
+            GTText = await _editingChains.ToStringLinesAsync();
+        }
+
+        private void OnCorefAnnotationEnded(CorefChainCollection resultChains)
+        {
+            _editingChains.CollectionChanged -= EditingChains_CollectionChanged;
+            _editingChains = null;
+
+            GroundTruth = resultChains;
+            RemoveConceptsCommand.RaiseCanExecuteChanged();
+        }
+
+        private void OnCorefAnnotationBegun(ObservableCollection<CorefChain> editingChains)
+        {
+            editingChains.CollectionChanged += EditingChains_CollectionChanged;
+
+            GroundTruth = _editingChains = editingChains;            
+            RemoveConceptsCommand.RaiseCanExecuteChanged();
+        }
+
+        private async void EditingChains_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            if (!_removingConcepts)
+            {
+                GTText = await _editingChains.ToStringLinesAsync();
             }
-        }
-
-        private void OnAnnotationBegun(ObservableCollection<CorefChain> editingChains)
-        {
-            GroundTruth = _editingChains = editingChains;
-            _editingChains.CollectionChanged += _editingChains_CollectionChanged;
-        }
-
-        private void _editingChains_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
-        {
-            GTText = string.Join(Environment.NewLine, _editingChains.Select(c => c.ToString()));
         }
 
         private void SelectConcepts()

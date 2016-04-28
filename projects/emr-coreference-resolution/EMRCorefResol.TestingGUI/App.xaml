@@ -18,6 +18,23 @@
             <c:NotificationTypeToColor x:Key="NotificationTypeToColor"/>
             <c:NotificationTypeToPath x:Key="NotificationTypeToPath"/>
             <c:NotificationTypeToIconVisibility x:Key="NotificationTypeToIconVisibility"/>
+            <c:EMRToTitleConverter x:Key="EMRToTitleConverter"/>
+
+            <DataTemplate x:Key="ConceptTypesTemplate">
+                <Grid Width="200">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Please choose a type from the list below:"
+                               TextWrapping="Wrap"/>
+                    <ListBox ItemsSource="{Binding Content, Mode=OneTime}"
+                             SelectedIndex="0"
+                             SelectedItem="{Binding SelectedType, Mode=OneWayToSource}"
+                             Grid.Row="2"/>
+                </Grid>
+            </DataTemplate>
 
             <DataTemplate x:Key="MessageContentTemplate">
                 <Grid MinHeight="60">
@@ -32,9 +49,14 @@
                                        Color="{Binding NotificationType, Converter={StaticResource NotificationTypeToColor}}" Size="Medium"/>
                     </Grid>
                     <TextBlock Grid.Column="2" Text="{Binding Content}" MinWidth="200"
-                               TextWrapping="Wrap" VerticalAlignment="Center" MaxWidth="420"
-                               Margin="5"/>
+                               TextWrapping="Wrap" VerticalAlignment="Center" MaxWidth="370"
+                               Margin="5" x:Name="Message"/>
                 </Grid>
+                <DataTemplate.Triggers>
+                    <DataTrigger Binding="{Binding NotificationType}" Value="None">
+                        <Setter Property="MaxWidth" Value="450" TargetName="Message"/>
+                    </DataTrigger>
+                </DataTemplate.Triggers>
             </DataTemplate>
 
             <DataTemplate x:Key="YesNoButtonTemplate">
@@ -64,7 +86,7 @@
                 <Setter Property="Padding" Value="0"/>
                 <Setter Property="Template">
                     <Setter.Value>
-                        <ControlTemplate TargetType="ToggleButton">
+                        <ControlTemplate TargetType="{x:Type ToggleButton}">
                             <Border BorderBrush="{TemplateBinding BorderBrush}"
                                     Background="{TemplateBinding Background}"
                                     BorderThickness="{TemplateBinding BorderThickness}">
@@ -73,7 +95,6 @@
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
-
                 <Style.Triggers>
                     <Trigger Property="IsMouseOver" Value="True">
                         <Setter Property="BorderBrush" Value="{StaticResource AccentHighlightBrushKey}"/>
@@ -138,33 +159,29 @@
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
                                     <xcad:DocumentPaneTabPanel x:Name="HeaderPanel" Grid.Column="0" IsItemsHost="true" Margin="0,0,0,0" Grid.Row="0" KeyboardNavigation.TabIndex="1"/>
-                                    <xcad:DropDownButton
-                                        x:Name="MenuDropDownButton"
-                                        Style="{StaticResource AvalonDock_ThemeVS2012_ToolButtonStyle}"
-                                        Focusable="False"
-                                        VerticalAlignment="Bottom"
-                                        BorderThickness="0"
-                                        Grid.Column="1">
-                                        <xcad:DropDownButton.DropDownContextMenu>
-                                            <xcad:ContextMenuEx
-                                                ItemsSource="{Binding Model.ChildrenSorted, RelativeSource={RelativeSource TemplatedParent}}">
-                                                <xcad:ContextMenuEx.ItemContainerStyle>
-                                                    <Style TargetType="{x:Type xcad:MenuItemEx}" BasedOn="{StaticResource {x:Type MenuItem}}">
+                                    <h:MenuButton x:Name="MenuDropDownButton"
+                                                  Style="{StaticResource AvalonDock_ThemeVS2012_ToolButtonStyle}"
+                                                  Focusable="False"
+                                                  VerticalAlignment="Bottom"
+                                                  BorderThickness="0"
+                                                  Grid.Column="1">
+                                        <h:MenuButton.Menu>
+                                            <ContextMenu ItemsSource="{Binding Model.ChildrenSorted, RelativeSource={RelativeSource TemplatedParent}}">
+                                                <ContextMenu.ItemContainerStyle>
+                                                    <Style TargetType="{x:Type MenuItem}" BasedOn="{StaticResource {x:Type MenuItem}}">
                                                         <Setter Property="HeaderTemplate" Value="{Binding Path=Root.Manager.DocumentPaneMenuItemHeaderTemplate}"/>
                                                         <Setter Property="HeaderTemplateSelector" Value="{Binding Path=Root.Manager.DocumentPaneMenuItemHeaderTemplateSelector}"/>
-                                                        <Setter Property="IconTemplate" Value="{Binding Path=Root.Manager.IconContentTemplate}"/>
-                                                        <Setter Property="IconTemplateSelector" Value="{Binding Path=Root.Manager.IconContentTemplateSelector}"/>
                                                         <Setter Property="Command" Value="{Binding Path=., Converter={StaticResource ActivateCommandLayoutItemFromLayoutModelConverter}}"/>
                                                     </Style>
-                                                </xcad:ContextMenuEx.ItemContainerStyle>
-                                            </xcad:ContextMenuEx>
-                                        </xcad:DropDownButton.DropDownContextMenu>
+                                                </ContextMenu.ItemContainerStyle>
+                                            </ContextMenu>
+                                        </h:MenuButton.Menu>
                                         <Polygon HorizontalAlignment="Center" 
                                                  VerticalAlignment="Bottom" 
                                                  Points="0,0 4,4 8,0" Margin="3,8,3,3"
                                                  Fill="{StaticResource AssetBrushKey}" 
                                                  x:Name="MenuDropDownArrow"/>
-                                    </xcad:DropDownButton>
+                                    </h:MenuButton>
                                 </Grid>
                                 <Border x:Name="ContentPanel" 
                                         VerticalAlignment="Stretch" 
@@ -234,7 +251,7 @@
                                             <DataTrigger Binding="{Binding CanClose}" Value="False">
                                                 <Setter Property="Padding" Value="6,2,6,2"/>
                                             </DataTrigger>
-                                            
+
                                             <Trigger Property="IsSelected" Value="true">
                                                 <Setter Property="Background" Value="{StaticResource AccentBrushKey}" />
                                                 <Setter Property="Foreground" Value="{StaticResource HighlightTextBrushKey}"/>
@@ -307,7 +324,7 @@
                             <xcad:DropDownControlArea 
                                 DropDownContextMenu="{Binding Root.Manager.DocumentContextMenu}"
                                 DropDownContextMenuDataContext="{Binding LayoutItem, RelativeSource={RelativeSource TemplatedParent}}" >
-                                    <Border Background="{TemplateBinding Background}"
+                                <Border Background="{TemplateBinding Background}"
                                             BorderBrush="{TemplateBinding BorderBrush}"
                                             BorderThickness="{TemplateBinding BorderThickness}"
                                             Padding="0">
@@ -361,5 +378,7 @@
                 </Setter>
             </Style>
         </ResourceDictionary>
+
+
     </Application.Resources>
 </Application>

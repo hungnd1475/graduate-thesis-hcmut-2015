@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.Composition;
+﻿using System;
+using System.ComponentModel.Composition;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace EMRCorefResol.TestingGUI
@@ -7,23 +9,22 @@ namespace EMRCorefResol.TestingGUI
     /// Interaction logic for EMRContentView.xaml
     /// </summary>
     [Export]
-    public partial class EMRContentView : UserControl, IDecideDockableType
+    [PartCreationPolicy(CreationPolicy.Shared)]
+    public partial class EMRContentView : DockableView
     {
+        public static readonly string ID = typeof(EMRContentView).FullName;
+
         public EMRContentView()
+            : base(DockableType.Document, ID)
         {
             InitializeComponent();
         }
 
         [ImportingConstructor]
         public EMRContentView(EMRContentViewModel emrContentVM)
-            :this()
+            : this()
         {
             DataContext = emrContentVM;
-        }
-
-        public DockableType DockableType
-        {
-            get { return DockableType.Document; }
         }
     }
 }

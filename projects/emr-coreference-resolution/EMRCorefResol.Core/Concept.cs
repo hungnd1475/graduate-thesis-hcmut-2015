@@ -61,9 +61,11 @@ namespace HCMUT.EMRCorefResol
         /// <returns>True if equal, otherwise false.</returns>
         public bool Equals(Concept other)
         {
-            return string.Equals(Lexicon, other.Lexicon) &&
+            return other != null ? 
+                string.Equals(Lexicon, other.Lexicon) &&
                 other.Begin.Equals(Begin) &&
-                other.End.Equals(End);
+                other.End.Equals(End) :
+                false;
         }
 
         public override bool Equals(object obj)

@@ -1,7 +1,9 @@
-﻿using Prism.Mef.Modularity;
+﻿using Microsoft.Practices.ServiceLocation;
+using Prism.Mef.Modularity;
 using Prism.Modularity;
 using Prism.Regions;
 using System.ComponentModel.Composition;
+using System.Diagnostics;
 
 namespace EMRCorefResol.TestingGUI
 {
@@ -18,9 +20,6 @@ namespace EMRCorefResol.TestingGUI
 
         public void Initialize()
         {
-            _regionManager.RegisterViewWithRegion(RegionNames.Workspace, typeof(EMRContentView));
-            _regionManager.RegisterViewWithRegion(RegionNames.Workspace, typeof(EMRConceptsView));
-            _regionManager.RegisterViewWithRegion(RegionNames.Workspace, typeof(GroundTruthView));
         }
     }
 }

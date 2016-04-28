@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.Composition;
+﻿using System;
+using System.ComponentModel.Composition;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace EMRCorefResol.TestingGUI
@@ -7,9 +9,13 @@ namespace EMRCorefResol.TestingGUI
     /// Interaction logic for EMRConceptsView.xaml
     /// </summary>
     [Export]
-    public partial class EMRConceptsView : UserControl
+    [PartCreationPolicy(CreationPolicy.Shared)]
+    public partial class EMRConceptsView
     {
+        public static readonly string ID = typeof(EMRConceptsView).FullName;
+
         public EMRConceptsView()
+            : base(DockableType.Document, ID)
         {
             InitializeComponent();
         }

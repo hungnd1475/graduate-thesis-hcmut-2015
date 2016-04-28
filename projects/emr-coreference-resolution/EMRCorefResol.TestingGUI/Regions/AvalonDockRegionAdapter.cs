@@ -47,8 +47,13 @@ namespace EMRCorefResol.TestingGUI
             // add all views to Documents/Anchorables accordingly
             foreach (var v in region.Views)
             {
-                var t = (v as IDecideDockableType)?.DockableType;
-                if (!t.HasValue || t.Value == DockableType.Document)
+                var t = v as IDockableView;
+                if (t == null)
+                {
+                    throw new InvalidOperationException("Only view that implement IDockableView interface can be registered with this region.");
+                }
+                
+                if (t.DockableType == DockableType.Document)
                 {
                     Documents.Add(v);
                 }
@@ -75,6 +80,14 @@ namespace EMRCorefResol.TestingGUI
             {
                 RegionTarget_ActiveContentChanged(s, e, region, regionTarget);
             };
+
+            regionTarget.DocumentClosed += RegionTarget_DocumentClosed;
+        }
+
+        private void RegionTarget_DocumentClosed(object sender, DocumentClosedEventArgs e)
+        {
+            Documents.Remove(e.Document.Content);
+            Anchorables.Remove(e.Document.Content);
         }
 
         private void RegionTarget_ActiveContentChanged(object sender, EventArgs e,
@@ -138,8 +151,13 @@ namespace EMRCorefResol.TestingGUI
             {
                 foreach (var newItem in e.NewItems)
                 {
-                    var t = (newItem as IDecideDockableType)?.DockableType;
-                    if (!t.HasValue || t.Value == DockableType.Document)
+                    var t = newItem as IDockableView;
+                    if (t == null)
+                    {
+                        throw new InvalidOperationException("Only view that implement IDockableView interface can be registered with this region.");
+                    }
+                    
+                    if (t.DockableType == DockableType.Document)
                     {
                         Documents.Add(newItem);
                     }

@@ -2,7 +2,7 @@
 
 namespace EMRCorefResol.TestingGUI
 {
-    public class ChainTypeNotification : Notification
+    public class ConceptTypeNotification : Notification
     {
         private ConceptType _selectedType;
         public ConceptType SelectedType
@@ -11,7 +11,7 @@ namespace EMRCorefResol.TestingGUI
             set { SetProperty(ref _selectedType, value); }
         }
 
-        public ChainTypeNotification()
+        public ConceptTypeNotification()
             : base(NotificationType.None)
         {
         }
