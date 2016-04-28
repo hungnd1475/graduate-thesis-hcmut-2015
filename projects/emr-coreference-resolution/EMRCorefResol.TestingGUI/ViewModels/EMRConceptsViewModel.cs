@@ -43,7 +43,7 @@ namespace EMRCorefResol.TestingGUI
                 if (SetProperty(ref _displayConcepts, value))
                 {
                     ConceptsText = value != null
-                        ? value.ToStringLines(ConceptToString)
+                        ? value.ToJointString(ConceptToString)
                         : EMPTY_EMR_CONCEPTS;
                 }
             }
@@ -111,7 +111,7 @@ namespace EMRCorefResol.TestingGUI
             {
                 _editingConcepts.Remove(c);
             }
-            ConceptsText = await _editingConcepts.ToStringLinesAsync(ConceptToString);
+            ConceptsText = await _editingConcepts.ToJointStringAsync(ConceptToString);
             _isRemovingConcepts = false;
         }
 
@@ -134,7 +134,7 @@ namespace EMRCorefResol.TestingGUI
         {
             if (!_isRemovingConcepts)
             {
-                ConceptsText = await _editingConcepts.ToStringLinesAsync(ConceptToString);
+                ConceptsText = await _editingConcepts.ToJointStringAsync(ConceptToString);
             }
         }
 

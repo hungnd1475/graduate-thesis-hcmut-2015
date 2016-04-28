@@ -36,14 +36,9 @@ namespace EMRCorefResol.TestingGUI
 
         protected override RegionAdapterMappings ConfigureRegionAdapterMappings()
         {
-            var m = base.ConfigureRegionAdapterMappings();
-            if (m == null)
-            {
-                return null;
-            }
-
-            m.RegisterMapping(typeof(DockingManager), new AvalonDockRegionAdapter(ConfigureDefaultRegionBehaviors()));
-            return m;
+            var mappings = base.ConfigureRegionAdapterMappings();
+            mappings?.RegisterMapping(typeof(DockingManager), new AvalonDockRegionAdapter(ConfigureDefaultRegionBehaviors()));
+            return mappings;
         }
     }
 }

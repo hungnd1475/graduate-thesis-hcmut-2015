@@ -146,16 +146,14 @@
     <Compile Include="Events\OutputEvent.cs" />
     <Compile Include="Helpers\ChainCollectionHelper.cs" />
     <Compile Include="Helpers\CommandHelper.cs" />
-    <Compile Include="Events\CreateChainOrMergeEvent.cs" />
     <Compile Include="Helpers\StringHelper.cs" />
-    <Compile Include="IAvalonDockViewsRegistry.cs" />
-    <Compile Include="Interactivity\AvalonDockLayoutSerializationBehavior.cs" />
+    <Compile Include="AvalonDock\IAvalonDockViewsRegistry.cs" />
+    <Compile Include="AvalonDock\AvalonDockLayoutSerializationBehavior.cs" />
     <Compile Include="Interactivity\ConceptTypeNotification.cs" />
     <Compile Include="Events\EMRChangedEventArgs.cs" />
     <Compile Include="Events\SelectedConceptChangedEvent.cs" />
-    <Compile Include="MainDockingViewsRegistry.cs" />
-    <Compile Include="TextSelectionInfo.cs" />
-    <Compile Include="Test.cs" />
+    <Compile Include="AvalonDock\MainDockingViewsRegistry.cs" />
+    <Compile Include="Misc\TextSelectionInfo.cs" />
     <Compile Include="TextEditor\FocusConceptBehavior.cs" />
     <Compile Include="TextEditor\SegmentsHighlighter.cs" />
     <Compile Include="TextEditor\SelectConceptBehavior.cs" />
@@ -163,15 +161,15 @@
     <Compile Include="ViewModels\EMRConceptsViewModel.cs" />
     <Compile Include="ViewModels\GroundTruthViewModel.cs" />
     <Compile Include="ViewModels\OutputViewModel.cs" />
-    <Compile Include="Views\DockableView.cs" />
+    <Compile Include="AvalonDock\DockableView.cs" />
     <Compile Include="Views\EMRConceptsView.xaml.cs">
       <DependentUpon>EMRConceptsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Events\EMRChangedEvent.cs" />
-    <Compile Include="Regions\AvalonDockRegionAdapter.cs" />
-    <Compile Include="Regions\DockableType.cs" />
-    <Compile Include="Regions\IDockableView.cs" />
-    <Compile Include="Regions\RegionNames.cs" />
+    <Compile Include="AvalonDock\AvalonDockRegionAdapter.cs" />
+    <Compile Include="AvalonDock\DockableType.cs" />
+    <Compile Include="AvalonDock\IDockableView.cs" />
+    <Compile Include="Misc\RegionNames.cs" />
     <Compile Include="TextEditor\BindableTextEditor.cs" />
     <Compile Include="Converters\NegIntToEnability.cs" />
     <Compile Include="Converters\NotificationTypeToColor.cs" />

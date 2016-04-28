@@ -32,7 +32,7 @@ namespace EMRCorefResol.TestingGUI
             {
                 if (SetProperty(ref _groundTruth, value) && value != null)
                 {
-                    GTText = value.ToStringLines();
+                    GTText = value.ToJointString();
                 }
             }
         }
@@ -102,7 +102,7 @@ namespace EMRCorefResol.TestingGUI
             });
 
             _removingConcepts = false;
-            GTText = await _editingChains.ToStringLinesAsync();
+            GTText = await _editingChains.ToJointStringAsync();
         }
 
         private void OnCorefAnnotationEnded(CorefChainCollection resultChains)
@@ -126,7 +126,7 @@ namespace EMRCorefResol.TestingGUI
         {
             if (!_removingConcepts)
             {
-                GTText = await _editingChains.ToStringLinesAsync();
+                GTText = await _editingChains.ToJointStringAsync();
             }
         }
 

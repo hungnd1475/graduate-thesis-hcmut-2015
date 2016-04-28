@@ -149,7 +149,7 @@ namespace EMRCorefResol.TestingGUI
                 var startOffset = _focusedSegments.FirstSegment.StartOffset;
                 var endOffset = _focusedSegments.LastSegment.EndOffset;
                 _focusedSegments.Clear();
-                AssociatedObject.TextArea.TextView.Redraw(startOffset, endOffset - startOffset);
+                AssociatedObject.TextArea.TextView.Redraw(startOffset, endOffset - startOffset + 1);
                 _focusedConcepts.Clear();
             }
         }

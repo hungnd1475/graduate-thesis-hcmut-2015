@@ -55,7 +55,7 @@
                 <CheckBox IsChecked="{Binding ZeroBase}" Content="{Binding ZeroBase}" 
                           ContentTemplate="{StaticResource EMRBaseCheckboxContentTemplate}"/>
                 <Button Content="Test" x:Name="testButton" Click="testButton_Click"
-                        Visibility="Visible"/>
+                        Visibility="Collapsed"/>
                 <Separator/>
                 <Button h:Icon.Source="{h:PathIcon Data={x:Static h:PathData.NavigatePrevious}}"
                         h:Icon.Color="{x:Static h:IconColors.Neutral}"

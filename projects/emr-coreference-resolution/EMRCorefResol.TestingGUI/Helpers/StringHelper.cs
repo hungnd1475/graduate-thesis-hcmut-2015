@@ -8,24 +8,24 @@ namespace EMRCorefResol.TestingGUI
 {
     static class StringHelper
     {
-        public static string ToStringLines<T>(this IEnumerable<T> sequence)
+        public static string ToJointString<T>(this IEnumerable<T> source)
         {
-            return sequence.ToStringLines(e => e.ToString());
+            return source.ToJointString(e => e.ToString());
         }
 
-        public static string ToStringLines<T>(this IEnumerable<T> sequence, Func<T, string> toString)
+        public static string ToJointString<T>(this IEnumerable<T> source, Func<T, string> elementToString)
         {
-            return string.Join(Environment.NewLine, sequence.Select(e => toString(e)));
+            return string.Join(Environment.NewLine, source.Select(elementToString));
         }
 
-        public static Task<string> ToStringLinesAsync<T>(this IEnumerable<T> sequence)
+        public static Task<string> ToJointStringAsync<T>(this IEnumerable<T> source)
         {
-            return Task.Run(() => sequence.ToStringLines());
+            return Task.Run(() => source.ToJointString());
         }
 
-        public static Task<string> ToStringLinesAsync<T>(this IEnumerable<T> sequence, Func<T, string> toString)
+        public static Task<string> ToJointStringAsync<T>(this IEnumerable<T> source, Func<T, string> elementToString)
         {
-            return Task.Run(() => sequence.ToStringLines(toString));
+            return Task.Run(() => source.ToJointString(elementToString));
         }
     }
 }
