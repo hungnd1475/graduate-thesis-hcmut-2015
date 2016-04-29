@@ -2,3 +2,4 @@ Output
 *.suo
 bin/
 obj/
+packages/

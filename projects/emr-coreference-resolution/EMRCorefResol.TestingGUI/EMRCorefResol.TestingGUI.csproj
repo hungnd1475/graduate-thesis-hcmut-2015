@@ -75,6 +75,10 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HungND.WPF, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\HungND.WPF.dll</HintPath>
+    </Reference>
     <Reference Include="ICSharpCode.AvalonEdit, Version=5.0.1.0, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
       <HintPath>..\packages\AvalonEdit.5.0.2\lib\Net40\ICSharpCode.AvalonEdit.dll</HintPath>
       <Private>True</Private>
@@ -263,10 +267,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\Visual Studio 2015\Projects\HungND.WPF\HungND.WPF\HungND.WPF.csproj">
-      <Project>{37761359-93ca-4026-b1d6-1f83eb2e8cff}</Project>
-      <Name>HungND.WPF</Name>
-    </ProjectReference>
     <ProjectReference Include="..\EMRCorefResol.Core\EMRCorefResol.Core.csproj">
       <Project>{66284726-8e94-4438-b366-f14b04874734}</Project>
       <Name>EMRCorefResol.Core</Name>
