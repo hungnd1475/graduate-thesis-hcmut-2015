@@ -1,9 +1,10 @@
 ﻿using HCMUT.EMRCorefResol;
 using Prism.Events;
+using System.Collections.Generic;
 
 namespace EMRCorefResol.TestingGUI
 {
-    class SelectedConceptChangedEvent : PubSubEvent<Concept>
+    class SelectedConceptsChangedEvent : PubSubEvent<IReadOnlyList<Concept>>
     {
     }
 }

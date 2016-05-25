@@ -30,7 +30,7 @@
             </ToolBar>
         </ToolBarTray>
         <local:BindableTextEditor Text="{Binding Path=CurrentEMR.Content, FallbackValue='&lt;empty&gt;', Mode=OneWay}"
-                                  ScrollToTopWhenTextChanged="True"
+                                  ScrollWhenTextChanged="ToTop"
                                   FontFamily="Consolas" FontSize="15"
                                   IsReadOnly="True" ShowLineNumbers="True"
                                   WordWrap="True" IsSearchEnabled="True"
@@ -38,7 +38,7 @@
             <i:Interaction.Behaviors>
                 <local:SelectConceptBehavior Background="#FF70B7FF"
                                              CurrentEMR="{Binding CurrentEMR, Mode=OneWay}"
-                                             SelectedConcept="{Binding SelectedConcept, Mode=OneWay}"/>
+                                             SelectedConcepts="{Binding SelectedConcepts, Mode=OneWay}"/>
             </i:Interaction.Behaviors>
         </local:BindableTextEditor>
     </DockPanel>

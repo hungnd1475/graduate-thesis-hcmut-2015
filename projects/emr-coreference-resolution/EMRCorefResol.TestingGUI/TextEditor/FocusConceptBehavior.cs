@@ -15,6 +15,8 @@ namespace EMRCorefResol.TestingGUI
     public class FocusConceptBehavior : Behavior<TextEditor>
     {
         private static Regex ConceptPattern = new Regex("c=\"[^|]+\" \\d+:\\d+ \\d+:\\d+");
+        private static Regex ConceptTypePattern = new Regex("t=\"([^|]+)\"");
+
         private readonly TextSegmentCollection<TextSegment> _focusedSegments =
             new TextSegmentCollection<TextSegment>();
         private readonly List<Concept> _focusedConcepts = new List<Concept>();
@@ -64,8 +66,8 @@ namespace EMRCorefResol.TestingGUI
 
         private void Caret_PositionChanged(object sender, EventArgs e)
         {
-            var txt = AssociatedObject;
-            var caretOffset = txt.CaretOffset; // first get the caret offset
+            var textEditor = AssociatedObject;
+            var caretOffset = textEditor.CaretOffset; // first get the caret offset
 
             if (_focusedSegments.FindSegmentsContaining(caretOffset).Count > 0)
             {
@@ -73,9 +75,9 @@ namespace EMRCorefResol.TestingGUI
                 return;
             }
 
-            var caretCol = txt.TextArea.Caret.Location.Column - 1;
-            var line = txt.Document.GetLineByOffset(caretOffset); // get the line info the caret currently lies on
-            var lineText = txt.Document.GetText(line.Offset, line.Length); // retrieve the line text
+            var caretCol = textEditor.TextArea.Caret.Location.Column - 1;
+            var line = textEditor.Document.GetLineByOffset(caretOffset); // get the line info the caret currently lies on
+            var lineText = textEditor.Document.GetText(line.Offset, line.Length); // retrieve the line text
 
             var startAt = caretCol == lineText.Length ? caretCol - 1 : caretCol; // we will start at the caret column
             var focusedText = string.Empty; // stores the focused text (if any)
@@ -114,7 +116,9 @@ namespace EMRCorefResol.TestingGUI
             if (!string.IsNullOrEmpty(focusedText))
             {
                 // if there is a focused text, parse it to a Concept instance
+                var conceptType = emrReader.ReadType(lineText);
                 currentFocusedConcept = emrReader.ReadSingle(focusedText);
+                currentFocusedConcept = currentFocusedConcept.Clone(conceptType);
 
                 // store the text position
                 currentFocusedSegment = new TextSegment();
@@ -124,7 +128,7 @@ namespace EMRCorefResol.TestingGUI
 
             if (!Keyboard.IsKeyDown(Key.LeftCtrl) && !Keyboard.IsKeyDown(Key.RightCtrl))
             {
-                // if user don't want to focus multiple concepts using Ctrl key,
+                // if user doesn't want to focus multiple concepts using Ctrl key,
                 // remove all currently tracked segments and coresponding concepts
                 ClearFocusedIfAny();
             }
@@ -133,7 +137,7 @@ namespace EMRCorefResol.TestingGUI
             {
                 // add the current focused segment if it presents
                 _focusedSegments.Add(currentFocusedSegment);
-                txt.TextArea.TextView.Redraw(currentFocusedSegment.StartOffset, currentFocusedSegment.Length);
+                textEditor.TextArea.TextView.Redraw(currentFocusedSegment.StartOffset, currentFocusedSegment.Length);
 
                 // also track the coresponding concept
                 _focusedConcepts.Add(currentFocusedConcept);

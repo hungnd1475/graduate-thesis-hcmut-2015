@@ -11,7 +11,7 @@
                     d:DesignHeight="300" d:DesignWidth="300"
                     Title="Concepts">
     <i:Interaction.Triggers>
-        <p:InteractionRequestTrigger SourceObject="{Binding ChainTypeNotification,Mode=OneTime}">
+        <p:InteractionRequestTrigger SourceObject="{Binding TypeNotification,Mode=OneTime}">
             <local:PopupVSWindowAction CenterOverAssociatedObject="True" IsModal="True">
                 <local:PopupVSWindowAction.WindowContent>
                     <local:NotificationContent 
@@ -24,15 +24,19 @@
     <DockPanel LastChildFill="True">
         <ToolBarTray DockPanel.Dock="Top">
             <ToolBar ToolBarTray.IsLocked="True">
-                <TextBlock VerticalAlignment="Center">
+                <!--<TextBlock VerticalAlignment="Center">
                     <Run Text="Focused concepts:"/>
                     <Run Text="{Binding ElementName=focusBehavior, Path=FocusedConcepts.Count, Mode=OneWay}"/>
                 </TextBlock>
-                <Separator/>
+                <Separator/>-->
                 <Button Content="Create/Merge"
                         h:Icon.Source="{h:PathIcon Data={x:Static h:PathData.Export1}}"
                         h:Icon.Color="{x:Static h:IconColors.Neutral}"
                         Command="{Binding CreateChainOrMergeCommand}"/>
+                <Button Content="Change Type"
+                        h:Icon.Source="{h:PathIcon Data={x:Static h:PathData.EditBox}}"
+                        h:Icon.Color="{x:Static h:IconColors.Neutral}"
+                        Command="{Binding ChangeConceptTypeCommand}"/>
                 <Button Content="Remove"
                         h:Icon.Source="{h:PathIcon Data={x:Static h:PathData.Delete3}}"
                         h:Icon.Color="{x:Static h:IconColors.Negative}"
@@ -40,7 +44,7 @@
             </ToolBar>
         </ToolBarTray>
         <local:BindableTextEditor Text="{Binding ConceptsText, Mode=OneWay}"
-                                  ScrollToTopWhenTextChanged="True"
+                                  ScrollWhenTextChanged="ToTop"
                                   FontFamily="Consolas" FontSize="15"
                                   IsReadOnly="True" ShowLineNumbers="True">
             <i:Interaction.Behaviors>
@@ -51,7 +55,7 @@
             </i:Interaction.Behaviors>
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="PreviewMouseDoubleClick">
-                    <i:InvokeCommandAction Command="{Binding SelectConceptCommand}"/>
+                    <i:InvokeCommandAction Command="{Binding SelectConceptsCommand}"/>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </local:BindableTextEditor>

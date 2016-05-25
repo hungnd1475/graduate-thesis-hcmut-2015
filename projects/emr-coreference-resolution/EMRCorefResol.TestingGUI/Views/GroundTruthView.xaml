@@ -13,13 +13,16 @@
     <DockPanel LastChildFill="True">
         <ToolBarTray DockPanel.Dock="Top">
             <ToolBar ToolBarTray.IsLocked="True">
-                <Button Content="Remove" Command="{Binding RemoveConceptsCommand}"
+                <Button Content="Change Type" Command="{Binding ChangeChainTypeCommand}"
+                        h:Icon.Source="{h:PathIcon Data={x:Static h:PathData.EditBox}}"
+                        h:Icon.Color="{x:Static h:IconColors.Neutral}"/>
+                <Button Content="Remove Concept" Command="{Binding RemoveConceptsCommand}"
                         h:Icon.Source="{h:PathIcon Data={x:Static h:PathData.Delete3}}"
                         h:Icon.Color="{x:Static h:IconColors.Negative}"/>
             </ToolBar>
         </ToolBarTray>
         <local:BindableTextEditor Text="{Binding GTText, Mode=OneWay}"
-                                  ScrollToTopWhenTextChanged="True"
+                                  ScrollWhenTextChanged="ToTop"
                                   FontFamily="Consolas" FontSize="15"
                                   IsReadOnly="True" ShowLineNumbers="True"
                                   WordWrap="True">
@@ -31,7 +34,7 @@
             </i:Interaction.Behaviors>
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="PreviewMouseDoubleClick">
-                    <i:InvokeCommandAction Command="{Binding SelectConceptCommand}"/>
+                    <i:InvokeCommandAction Command="{Binding SelectConceptsCommand}"/>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </local:BindableTextEditor>

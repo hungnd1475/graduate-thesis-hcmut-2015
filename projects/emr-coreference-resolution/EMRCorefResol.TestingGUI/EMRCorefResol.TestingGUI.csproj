@@ -117,13 +117,12 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
-    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
@@ -145,27 +144,44 @@
     <Compile Include="Converters\NotificationTypeToIconVisibility.cs" />
     <Compile Include="Events\CorefAnnotationEndedEvent.cs" />
     <Compile Include="Events\EMRBaseChangedEvent.cs" />
+    <Compile Include="Events\EMRCollectionChangedEvent.cs" />
+    <Compile Include="Events\EMRIndexChangedEvent.cs" />
     <Compile Include="Events\EntityAnnotationBegunEvent.cs" />
     <Compile Include="Events\EntityAnnotationEndedEvent.cs" />
     <Compile Include="Events\OutputEvent.cs" />
+    <Compile Include="Events\SelectedChainChangedEvent.cs" />
+    <Compile Include="Helpers\AnnotationOperationCompletedEventArgs.cs" />
+    <Compile Include="Helpers\AnnotationOperationResult.cs" />
     <Compile Include="Helpers\ChainCollectionHelper.cs" />
     <Compile Include="Helpers\CommandHelper.cs" />
+    <Compile Include="Helpers\CorefAnnotator.cs" />
+    <Compile Include="Helpers\EntityAnnotator.cs" />
     <Compile Include="Helpers\StringHelper.cs" />
     <Compile Include="AvalonDock\IAvalonDockViewsRegistry.cs" />
     <Compile Include="AvalonDock\AvalonDockLayoutSerializationBehavior.cs" />
+    <Compile Include="TextEditor\IChainSelectionStrategy.cs" />
     <Compile Include="Interactivity\ConceptTypeNotification.cs" />
     <Compile Include="Events\EMRChangedEventArgs.cs" />
     <Compile Include="Events\SelectedConceptChangedEvent.cs" />
     <Compile Include="AvalonDock\MainDockingViewsRegistry.cs" />
+    <Compile Include="Interactivity\ListBoxScrollToSelectedItemBehavior.cs" />
+    <Compile Include="Misc\CaretPosition.cs" />
+    <Compile Include="Misc\EMRItem.cs" />
     <Compile Include="Misc\TextSelectionInfo.cs" />
+    <Compile Include="TextEditor\SelectChainBehavior.cs" />
     <Compile Include="TextEditor\FocusConceptBehavior.cs" />
+    <Compile Include="TextEditor\ScrollDirection.cs" />
     <Compile Include="TextEditor\SegmentsHighlighter.cs" />
     <Compile Include="TextEditor\SelectConceptBehavior.cs" />
     <Compile Include="Interactivity\UpdateSourceOnReturnBehavior.cs" />
+    <Compile Include="ViewModels\EMRCollectionViewModel.cs" />
     <Compile Include="ViewModels\EMRConceptsViewModel.cs" />
     <Compile Include="ViewModels\GroundTruthViewModel.cs" />
     <Compile Include="ViewModels\OutputViewModel.cs" />
     <Compile Include="AvalonDock\DockableView.cs" />
+    <Compile Include="Views\EMRCollectionView.xaml.cs">
+      <DependentUpon>EMRCollectionView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\EMRConceptsView.xaml.cs">
       <DependentUpon>EMRConceptsView.xaml</DependentUpon>
     </Compile>
@@ -200,6 +216,10 @@
     <Compile Include="Views\OutputView.xaml.cs">
       <DependentUpon>OutputView.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\EMRCollectionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\EMRConceptsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

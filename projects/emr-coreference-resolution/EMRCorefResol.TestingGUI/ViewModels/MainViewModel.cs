@@ -7,10 +7,13 @@ using Prism.Interactivity.InteractionRequest;
 using Prism.Mvvm;
 using Stateless;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.Composition;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace EMRCorefResol.TestingGUI
 {
@@ -21,20 +24,39 @@ namespace EMRCorefResol.TestingGUI
         private readonly StateMachine<MainState, MainTrigger> _mainSM;
         private readonly IEventAggregator _eventAggregator;
 
-        private EMRCollection _emrCollection;
         private EMR _currentEMR;
         private CorefChainCollection _currentGT;        
         private readonly IEMRReader _emrReader = new I2B2EMRReader();
         private readonly OutputEvent _outputEvent;
 
-        private ObservableCollection<CorefChain> _editingChains;
-        private ObservableCollection<Concept> _editingConcepts;
+        private EntityAnnotator _entityAnnotator;
+        private CorefAnnotator _corefAnnotator;
+
+        private EMRCollection _emrCollection;
+        private EMRCollection EMRCollection
+        {
+            get { return _emrCollection; }
+            set
+            {
+                if (SetProperty(ref _emrCollection, value))
+                {
+                    OnPropertyChanged(nameof(TotalEMRCount));
+                    _eventAggregator.GetEvent<EMRCollectionChangedEvent>().Publish(value);
+                }
+            }
+        }
 
         private string _emrDirPath;
         public string EMRDirPath
         {
             get { return _emrDirPath; }
-            private set { SetProperty(ref _emrDirPath, value); }
+            private set
+            {
+                if (SetProperty(ref _emrDirPath, value))
+                {
+                    OpenEMRDirCommand.RaiseCanExecuteChanged();
+                }
+            }
         }
 
         private int _currentEMRIndex = -1;
@@ -84,15 +106,16 @@ namespace EMRCorefResol.TestingGUI
         public DelegateCommand SaveAnnotationCommand { get; }
         public DelegateCommand CancelAnnotationCommand { get; }
 
+        public DelegateCommand OpenEMRDirCommand { get; }
+
         public InteractionRequest<INotification> Notification { get; }
         public InteractionRequest<IConfirmation> Confirmation { get; }
 
         [ImportingConstructor]
         public MainViewModel(IEventAggregator eventAggregator)
         {
-            _eventAggregator = eventAggregator;
             _mainSM = new StateMachine<MainState, MainTrigger>(MainState.NotLoaded);
-
+            _mainSM.OnTransitioned(OnTransition);
             var loadWithState = _mainSM.SetTriggerParameters<MainState>(MainTrigger.Load);
 
             _mainSM.Configure(MainState.NotLoaded)
@@ -144,11 +167,28 @@ namespace EMRCorefResol.TestingGUI
             SaveAnnotationCommand = _mainSM.TriggerToCommand(MainTrigger.SaveAnnotation);
             CancelAnnotationCommand = _mainSM.TriggerToCommand(MainTrigger.CancelAnnotation);
 
+            OpenEMRDirCommand = new DelegateCommand(OpenEMRDir, () => Directory.Exists(_emrDirPath));
+
             Notification = new InteractionRequest<INotification>();
             Confirmation = new InteractionRequest<IConfirmation>();
 
+            _eventAggregator = eventAggregator;
             _outputEvent = eventAggregator.GetEvent<OutputEvent>();
-            _mainSM.OnTransitioned(OnTransition);
+            eventAggregator.GetEvent<EMRIndexChangedEvent>().Subscribe(OnEMRIndexChanged, ThreadOption.UIThread);
+        }
+
+        private void OpenEMRDir()
+        {
+            Process.Start(_emrDirPath);
+        }
+
+        private void OnEMRIndexChanged(int index)
+        {
+            if (_mainSM.CanFire(MainTrigger.GoToIndex))
+            {
+                CurrentEMRIndex = index;
+                _mainSM.Fire(MainTrigger.GoToIndex);
+            }
         }
 
         private void OnTransition(StateMachine<MainState, MainTrigger>.Transition t)
@@ -162,43 +202,70 @@ namespace EMRCorefResol.TestingGUI
             switch (transition.Source)
             {
                 case MainState.CorefAnnotating:
-                    _editingChains = null;
+                    _corefAnnotator = null;
                     _eventAggregator.GetEvent<CorefAnnotationEndedEvent>().Publish(_currentGT);
                     break;
                 case MainState.EntityAnnotating:
-                    _editingConcepts = null;
-                    _eventAggregator.GetEvent<EntityAnnotationEndedEvent>().Publish(_currentEMR);
+                    _entityAnnotator = null;
+                    _eventAggregator.GetEvent<EntityAnnotationEndedEvent>().Publish(
+                        new EntityAnnotationEndedEventArgs(_currentEMR, _currentGT));
                     break;
             }
         }
 
-        private void SaveAnnotation(StateMachine<MainState, MainTrigger>.Transition transition)
+        private async void SaveAnnotation(StateMachine<MainState, MainTrigger>.Transition transition)
         {
             // TODO: check if ground truth or concepts is saved properly, we assume they are for now
-
             switch (transition.Source)
             {
                 case MainState.CorefAnnotating:
                     {
-                        var chainPath = _emrCollection.GetChainsPath(_currentEMRIndex);
-                        var chainFolder = Path.GetDirectoryName(chainPath);
-                        Directory.CreateDirectory(chainFolder);
-                        File.WriteAllLines(chainPath, _editingChains.Select(c => c.ToString()));
+                        var savingTask = Task.Run(() =>
+                        {
+                            var chainsPath = _emrCollection.GetChainsPath(_currentEMRIndex);
+                            var chainsFolder = Path.GetDirectoryName(chainsPath);
+                            var editingChains = _corefAnnotator.EditingChains;
 
-                        _currentGT = new CorefChainCollection(_editingChains.ToList());
-                        _editingChains = null;
+                            Directory.CreateDirectory(chainsFolder);
+                            File.WriteAllLines(chainsPath, editingChains.Select(c => c.ToString()));
+
+                            return new CorefChainCollection(editingChains.ToList());
+                        });
+
+                        _currentGT = await savingTask;
+                        _corefAnnotator = null;
                         _eventAggregator.GetEvent<CorefAnnotationEndedEvent>().Publish(_currentGT);
                     }
                     break;
                 case MainState.EntityAnnotating:
                     {
-                        var conceptsPath = _emrCollection.GetConceptsPath(_currentEMRIndex);
-                        File.WriteAllLines(conceptsPath, _editingConcepts.Select(c => $"{c}||t=\"{c.Type.ToString().ToLower()}\""));
+                        var savingTask = Task.Run(() =>
+                        {
+                            var editingConcepts = _entityAnnotator.EditingConcepts;
+                            var conceptsPath = _emrCollection.GetConceptsPath(_currentEMRIndex);
+                            File.WriteAllLines(conceptsPath, editingConcepts.Select(c => $"{c}||t=\"{c.Type.ToString().ToLower()}\""));
 
-                        var emrPath = _emrCollection.GetEMRPath(_currentEMRIndex);
-                        _currentEMR = new EMR(emrPath, conceptsPath, _emrReader);
-                        _editingConcepts = null;
-                        _eventAggregator.GetEvent<EntityAnnotationEndedEvent>().Publish(_currentEMR);
+                            var editingChains = _entityAnnotator.EditingChains;
+                            var chainsPath = _emrCollection.GetChainsPath(_currentEMRIndex);
+                            var chainsFolder = Path.GetDirectoryName(chainsPath);
+
+                            Directory.CreateDirectory(chainsFolder);
+                            File.WriteAllLines(chainsPath, editingChains.Select(c => c.ToString()));
+
+                            var emrPath = _emrCollection.GetEMRPath(_currentEMRIndex);
+                            var resultEMR = new EMR(emrPath, conceptsPath, _emrReader);
+                            resultEMR.BaseConceptIndex = _zeroBase ? 0 : 1;
+
+                            var resultChains = new CorefChainCollection(editingChains.ToList());
+                            return new EntityAnnotationEndedEventArgs(resultEMR, resultChains);
+                        });
+
+                        var e = await savingTask;
+                        _currentEMR = e.ResultEMR;
+                        _currentGT = e.ResultChains;
+
+                        _entityAnnotator = null;
+                        _eventAggregator.GetEvent<EntityAnnotationEndedEvent>().Publish(e);
                     }
                     break;
             }
@@ -206,24 +273,36 @@ namespace EMRCorefResol.TestingGUI
 
         private void BeginEntityAnnotation()
         {
-            Confirmation.Raise(new Confirmation(NotificationType.None)
+            if (_currentEMR.Concepts.Count > 0)
             {
-                Title = "Annotate Entity",
-                Content = "Do you want to override existing concepts?"
-            },
-            c => DoEntityAnnotation(c.Confirmed));
+                Confirmation.Raise(new Confirmation(NotificationType.None)
+                {
+                    Title = "Annotate Entity",
+                    Content = "Do you want to override existing concepts?"
+                },
+                c => DoEntityAnnotation(c.Confirmed));
+            }
+            else
+            {
+                DoEntityAnnotation(true);
+            }
         }
 
-        private void DoEntityAnnotation(bool isOverrode)
+        private void DoEntityAnnotation(bool shouldOverride)
         {
-            _editingConcepts = isOverrode ? new ObservableCollection<Concept>()
-                : new ObservableCollection<Concept>(_currentEMR.Concepts);
-            _eventAggregator.GetEvent<EntityAnnotationBegunEvent>().Publish(_editingConcepts);
+            var editingConcepts = shouldOverride ? new List<Concept>()
+                : new List<Concept>(_currentEMR.Concepts);
+            var editingChains = (_currentGT == null || _currentGT.Count == 0 || shouldOverride) ? new List<CorefChain>()
+                : new List<CorefChain>(_currentGT);
+
+            _entityAnnotator = new EntityAnnotator(editingConcepts, editingChains);
+            _eventAggregator.GetEvent<EntityAnnotationBegunEvent>()
+                .Publish(_entityAnnotator);
         }
 
         private void BeginCorefAnnotation()
         {
-            if (_currentGT != null)
+            if (_currentGT != null && _currentGT.Count > 0)
             {
                 Confirmation.Raise(new Confirmation(NotificationType.None)
                 {
@@ -238,20 +317,23 @@ namespace EMRCorefResol.TestingGUI
             }
         }
 
-        private void DoCorefAnnotation(bool isOverrode)
+        private void DoCorefAnnotation(bool shouldOverride)
         {
-            _editingChains = isOverrode ? new ObservableCollection<CorefChain>() 
-                : new ObservableCollection<CorefChain>(_currentGT);
-            _eventAggregator.GetEvent<CorefAnnotationBegunEvent>().Publish(_editingChains);
+            var editingChains = shouldOverride ? new List<CorefChain>() 
+                : new List<CorefChain>(_currentGT);
+
+            _corefAnnotator = new CorefAnnotator(editingChains);
+            _eventAggregator.GetEvent<CorefAnnotationBegunEvent>().Publish(_corefAnnotator);
         }
 
         private void Unload()
         {
-            _emrCollection = null;
+            EMRCollection = null;
             EMRDirPath = null;
             CurrentEMRIndex = -1;
 
-            OnPropertyChanged(nameof(TotalEMRCount));
+            _currentEMR = null;
+            _currentGT = null;
         }
 
         private MainState Load(MainState currentState)
@@ -289,9 +371,8 @@ namespace EMRCorefResol.TestingGUI
 
         private void OnReady()
         {
-            _emrCollection = new EMRCollection(_emrDirPath);
+            EMRCollection = new EMRCollection(_emrDirPath);
             CurrentEMRIndex = -1;
-            OnPropertyChanged(nameof(TotalEMRCount));
             BroadcastCurrentEMR();
         }
 

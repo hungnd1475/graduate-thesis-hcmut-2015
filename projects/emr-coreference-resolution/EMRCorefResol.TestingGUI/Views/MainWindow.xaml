@@ -13,6 +13,9 @@
             Title="MainWindow" Height="810" Width="1080"
             MinWidth="1080" MinHeight="810" ResizeMode="CanResizeWithGrip">
     <h:VSWindow.Resources>
+        <SolidColorBrush Color="#3FFFFFFF" x:Key="StatusButtonHoverBrushKey"/>
+        <SolidColorBrush Color="#2FFFFFFF" x:Key="StatusButtonPressesBrushKey"/>
+
         <DataTemplate x:Key="EMRBaseCheckboxContentTemplate">
             <TextBlock x:Name="Content"/>
             <DataTemplate.Triggers>
@@ -24,6 +27,31 @@
                 </DataTrigger>
             </DataTemplate.Triggers>
         </DataTemplate>
+        <Style TargetType="{x:Type Button}" x:Key="StatusBarButtonStyle" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Foreground" Value="{StaticResource HighlightTextBrushKey}"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Padding" Value="5,0"/>
+            <Setter Property="MinWidth" Value="0"/>
+            <Setter Property="MinHeight" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderThickness="0">
+                            <ContentPresenter Margin="{TemplateBinding Padding}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="{StaticResource StatusButtonHoverBrushKey}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="{StaticResource StatusButtonPressesBrushKey}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </h:VSWindow.Resources>
     <i:Interaction.Triggers>
         <p:InteractionRequestTrigger SourceObject="{Binding Notification}">
@@ -104,7 +132,9 @@
         </ToolBarTray>
         <StatusBar DockPanel.Dock="Bottom" Foreground="{StaticResource HighlightTextBrushKey}"
                    Background="{StaticResource AccentBrushKey}">
-            <TextBlock Text="{Binding CurrentState}"/>
+            <TextBlock Text="{Binding CurrentState}" Margin="0,0,15,0"/>
+            <Button Content="{Binding EMRDirPath}" Command="{Binding OpenEMRDirCommand}"
+                    Style="{StaticResource StatusBarButtonStyle}"/>
         </StatusBar>
         <xcad:DockingManager BorderThickness="0"
                              p:RegionManager.RegionName="{x:Static local:RegionNames.Workspace}"

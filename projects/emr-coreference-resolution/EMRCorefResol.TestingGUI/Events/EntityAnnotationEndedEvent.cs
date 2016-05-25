@@ -8,7 +8,20 @@ using System.Threading.Tasks;
 
 namespace EMRCorefResol.TestingGUI
 {
-    class EntityAnnotationEndedEvent : PubSubEvent<EMR>
+    class EntityAnnotationEndedEvent : PubSubEvent<EntityAnnotationEndedEventArgs>
     {
+    }
+
+    class EntityAnnotationEndedEventArgs
+    {
+        public EMR ResultEMR { get; }
+        public CorefChainCollection ResultChains { get; }
+
+        public EntityAnnotationEndedEventArgs(EMR resultEMR,
+            CorefChainCollection resultChains)
+        {
+            ResultEMR = resultEMR;
+            ResultChains = resultChains;
+        }
     }
 }

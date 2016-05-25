@@ -1,15 +1,15 @@
-﻿using HCMUT.EMRCorefResol;
-using Prism.Events;
+﻿using ICSharpCode.AvalonEdit;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Interactivity;
 
 namespace EMRCorefResol.TestingGUI
 {
-    class EntityAnnotationBegunEvent : PubSubEvent<EntityAnnotator>
+    public class SelectChainBehavior : Behavior<TextEditor>
     {
+
     }
 }

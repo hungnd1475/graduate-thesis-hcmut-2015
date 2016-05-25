@@ -20,22 +20,22 @@ namespace EMRCorefResol.TestingGUI
     {
         private readonly IEventAggregator _eventAggregator;
         private readonly IRegionManager _regionManager;
+        private CorefAnnotator _corefAnnotator;
+        private EntityAnnotator _entityAnnotator;
+        private CorefChainCollection _groundTruth;
 
-        private ObservableCollection<CorefChain> _editingChains;
-        private bool _removingConcepts = false;
-
-        private IEnumerable<CorefChain> _groundTruth;
-        private IEnumerable<CorefChain> GroundTruth
-        {
-            get { return _groundTruth; }
-            set
-            {
-                if (SetProperty(ref _groundTruth, value) && value != null)
-                {
-                    GTText = value.ToJointString();
-                }
-            }
-        }
+        //private IEnumerable<CorefChain> _groundTruth;
+        //private IEnumerable<CorefChain> GroundTruth
+        //{
+        //    get { return _groundTruth; }
+        //    set
+        //    {
+        //        if (SetProperty(ref _groundTruth, value))
+        //        {
+        //            GTText = value.ToJointString();
+        //        }
+        //    }
+        //}
 
         private string _gtText;
         public string GTText
@@ -52,97 +52,130 @@ namespace EMRCorefResol.TestingGUI
             {
                 if (SetProperty(ref _focusedConcepts, value))
                 {
-                    _eventAggregator.GetEvent<SelectedConceptChangedEvent>().Publish(null);
+                    _eventAggregator.GetEvent<SelectedConceptsChangedEvent>().Publish(null);
                     RemoveConceptsCommand.RaiseCanExecuteChanged();
                 }
             }
         }
 
-        public DelegateCommand SelectConceptCommand { get; }
+        public DelegateCommand SelectConceptsCommand { get; }
         public DelegateCommand RemoveConceptsCommand { get; }
+        public DelegateCommand<int?> SelectChainCommand { get; }
 
         [ImportingConstructor]
         public GroundTruthViewModel(IEventAggregator eventAggregator, IRegionManager regionManager)
         {
-            SelectConceptCommand = new DelegateCommand(SelectConcepts);
-            RemoveConceptsCommand = new DelegateCommand(RemoveConcepts, () => _editingChains != null && _focusedConcepts.Count > 0);
+            SelectConceptsCommand = new DelegateCommand(SelectConcepts);
+            RemoveConceptsCommand = new DelegateCommand(RemoveConcepts,
+                () => _corefAnnotator != null && _focusedConcepts != null && _focusedConcepts.Count > 0);
+            SelectChainCommand = new DelegateCommand<int?>(SelectChain);
 
             _eventAggregator = eventAggregator;
             eventAggregator.GetEvent<EMRChangedEvent>().Subscribe(EMRChanged, ThreadOption.UIThread);
             eventAggregator.GetEvent<CorefAnnotationBegunEvent>().Subscribe(OnCorefAnnotationBegun, ThreadOption.UIThread);
             eventAggregator.GetEvent<CorefAnnotationEndedEvent>().Subscribe(OnCorefAnnotationEnded, ThreadOption.UIThread);
+            eventAggregator.GetEvent<EntityAnnotationBegunEvent>().Subscribe(OnEntityAnnotationBegun, ThreadOption.UIThread);
+            eventAggregator.GetEvent<EntityAnnotationEndedEvent>().Subscribe(OnEntityAnnotationEnded, ThreadOption.UIThread);
 
             _regionManager = regionManager;
         }
 
+        private void SelectChain(int? index)
+        {
+            if (index.HasValue)
+            {
+                var chain = GetChain(index.Value);
+                _eventAggregator.GetEvent<SelectedChainChangedEvent>().Publish(chain);
+            }
+        }
+
+        private CorefChain GetChain(int index)
+        {
+            IReadOnlyList<CorefChain> editingChains = null;
+            if (_corefAnnotator != null)
+            {
+                editingChains = _corefAnnotator.EditingChains;
+            }
+            else if (_entityAnnotator != null)
+            {
+                editingChains = _entityAnnotator.EditingChains;
+            }
+
+            if (editingChains != null)
+            {
+                return index >= 0 && index < editingChains.Count ?
+                    editingChains[index] : null;
+            }
+            else if (_groundTruth != null)
+            {
+                return index >= 0 && index < _groundTruth.Count ?
+                    _groundTruth[index] : null;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        private async void OnEntityAnnotationEnded(EntityAnnotationEndedEventArgs e)
+        {
+            _entityAnnotator.CorefOperationCompleted -= CorefAnnotator_OperationCompleted;
+            _entityAnnotator = null;
+            _groundTruth = e.ResultChains;
+            GTText = await e.ResultChains.ToJointStringAsync();
+        }
+
+        private async void OnEntityAnnotationBegun(EntityAnnotator entityAnnotator)
+        {
+            _entityAnnotator = entityAnnotator;
+            _entityAnnotator.CorefOperationCompleted += CorefAnnotator_OperationCompleted;
+            _groundTruth = null;
+            GTText = await _entityAnnotator.EditingChains.ToJointStringAsync();
+        }
+
         private async void RemoveConcepts()
         {
-            _removingConcepts = true;
-
-            await Task.Run(() =>
-            {
-                int index = -1;
-                foreach (var c in _focusedConcepts)
-                {
-                    var oldChain = _editingChains.FindChainContains(c, out index);
-                    if (oldChain != null)
-                    {
-                        if (oldChain.Count <= 2)
-                        {
-                            _editingChains.Remove(oldChain);
-                        }
-                        else
-                        {
-                            var newChain = new List<Concept>(oldChain);
-                            newChain.Remove(c);
-                            _editingChains[index] = new CorefChain(newChain, oldChain.Type);
-                        }
-                    }
-                }
-            });
-
-            _removingConcepts = false;
-            GTText = await _editingChains.ToJointStringAsync();
+            await _corefAnnotator.RemoveConceptsAsync(_focusedConcepts);
         }
 
-        private void OnCorefAnnotationEnded(CorefChainCollection resultChains)
+        private async void OnCorefAnnotationEnded(CorefChainCollection resultChains)
         {
-            _editingChains.CollectionChanged -= EditingChains_CollectionChanged;
-            _editingChains = null;
+            _corefAnnotator.OperationCompleted -= CorefAnnotator_OperationCompleted;
+            _corefAnnotator = null;
+            _groundTruth = resultChains;
 
-            GroundTruth = resultChains;
+            GTText = await resultChains.ToJointStringAsync();
             RemoveConceptsCommand.RaiseCanExecuteChanged();
         }
 
-        private void OnCorefAnnotationBegun(ObservableCollection<CorefChain> editingChains)
+        private async void OnCorefAnnotationBegun(CorefAnnotator corefAnnotator)
         {
-            editingChains.CollectionChanged += EditingChains_CollectionChanged;
+            _corefAnnotator = corefAnnotator;
+            _corefAnnotator.OperationCompleted += CorefAnnotator_OperationCompleted;
+            _groundTruth = null;
 
-            GroundTruth = _editingChains = editingChains;            
+            GTText = await corefAnnotator.EditingChains.ToJointStringAsync();
             RemoveConceptsCommand.RaiseCanExecuteChanged();
         }
 
-        private async void EditingChains_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        private async void CorefAnnotator_OperationCompleted(CorefAnnotator corefAnnotator,
+            AnnotationOperationCompletedEventArgs e)
         {
-            if (!_removingConcepts)
+            if (e.Result == AnnotationOperationResult.Changed)
             {
-                GTText = await _editingChains.ToJointStringAsync();
+                GTText = await corefAnnotator.EditingChains.ToJointStringAsync();
             }
         }
 
         private void SelectConcepts()
-        {        
-            Concept c = null;
-            if (_focusedConcepts != null)
-            {
-                c = _focusedConcepts.Count > 0 ? _focusedConcepts[_focusedConcepts.Count - 1] : null;
-            }
-            _eventAggregator.GetEvent<SelectedConceptChangedEvent>().Publish(c);
+        {
+            _eventAggregator.GetEvent<SelectedConceptsChangedEvent>().Publish(_focusedConcepts);
         }
 
-        private void EMRChanged(EMRChangedEventArgs e)
+        private async void EMRChanged(EMRChangedEventArgs e)
         {
-            GroundTruth = e?.GroundTruth;
+            _groundTruth = e?.GroundTruth;
+            GTText = await _groundTruth.ToJointStringAsync();
         }
     }
 }

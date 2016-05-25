@@ -18,7 +18,6 @@ namespace EMRCorefResol.TestingGUI
     [PartCreationPolicy(CreationPolicy.Shared)]
     public class EMRConceptsViewModel : BindableBase
     {
-        private static readonly string EMPTY_EMR_CONCEPTS = "<empty>";
         private static readonly ConceptType[] CHAIN_TYPES = new ConceptType[]
         {
             ConceptType.Person,
@@ -26,28 +25,21 @@ namespace EMRCorefResol.TestingGUI
             ConceptType.Test,
             ConceptType.Treatment
         };
+        private static readonly ConceptType[] CONCEPT_TYPES = new ConceptType[]
+        {
+            ConceptType.Person,
+            ConceptType.Problem,
+            ConceptType.Test,
+            ConceptType.Treatment,
+            ConceptType.Pronoun            
+        };
 
         private ConceptCollection _originalConcepts;
-        private ObservableCollection<CorefChain> _editingChains;
-        private ObservableCollection<Concept> _editingConcepts;
         private readonly IEventAggregator _eventAggregator;
         private readonly IRegionManager _regionManager;
-        private bool _isRemovingConcepts;
 
-        private IEnumerable<Concept> _displayConcepts;
-        public IEnumerable<Concept> DisplayConcepts
-        {
-            get { return _displayConcepts; }
-            set
-            {
-                if (SetProperty(ref _displayConcepts, value))
-                {
-                    ConceptsText = value != null
-                        ? value.ToJointString(ConceptToString)
-                        : EMPTY_EMR_CONCEPTS;
-                }
-            }
-        }
+        private EntityAnnotator _entityAnnotator;
+        private CorefAnnotator _corefAnnotator;
 
         private string _conceptsText;
         public string ConceptsText
@@ -64,35 +56,48 @@ namespace EMRCorefResol.TestingGUI
             {
                 if (SetProperty(ref _focusedConcepts, value))
                 {
-                    _eventAggregator.GetEvent<SelectedConceptChangedEvent>().Publish(null);
+                    _eventAggregator.GetEvent<SelectedConceptsChangedEvent>().Publish(null);
 
-                    if (_editingChains != null)
-                    {
-                        CreateChainOrMergeCommand.RaiseCanExecuteChanged();                        
-                    }
-
-                    if (_editingConcepts != null)
+                    if (_entityAnnotator != null)
                     {
                         RemoveConceptsCommand.RaiseCanExecuteChanged();
+                        ChangeConceptTypeCommand.RaiseCanExecuteChanged();
+                    }
+
+                    if (_corefAnnotator != null)
+                    {
+                        CreateChainOrMergeCommand.RaiseCanExecuteChanged();
                     }
                 }
             }
         }
 
-        public DelegateCommand SelectConceptCommand { get; }
+        private CorefChain _selectedChain;
+        public CorefChain SelectedChain
+        {
+            get { return _selectedChain; }
+            set { SetProperty(ref _selectedChain, value); }
+        }
+
+        public DelegateCommand SelectConceptsCommand { get; }
         public DelegateCommand CreateChainOrMergeCommand { get; }
         public DelegateCommand RemoveConceptsCommand { get; }
+        public DelegateCommand ChangeConceptTypeCommand { get; }
 
-        public InteractionRequest<ConceptTypeNotification> ChainTypeNotification { get; }
+        public InteractionRequest<ConceptTypeNotification> TypeNotification { get; }
 
         [ImportingConstructor]
         public EMRConceptsViewModel(IEventAggregator eventAggregator, IRegionManager regionManager)
         {
-            SelectConceptCommand = new DelegateCommand(SelectConcepts);
-            CreateChainOrMergeCommand = new DelegateCommand(CreateChainOrMerge, () => _editingChains != null && _focusedConcepts.Count > 0);
-            RemoveConceptsCommand = new DelegateCommand(RemoveConcepts, () => _editingConcepts != null && _focusedConcepts.Count > 0);
+            SelectConceptsCommand = new DelegateCommand(SelectConcepts);
+            CreateChainOrMergeCommand = new DelegateCommand(CreateChainOrMerge, 
+                () => _corefAnnotator != null && _focusedConcepts.Count >= 2);
+            RemoveConceptsCommand = new DelegateCommand(RemoveConcepts, 
+                () => _entityAnnotator != null && _focusedConcepts.Count > 0);
+            ChangeConceptTypeCommand = new DelegateCommand(ChangeConceptType,
+                () => _entityAnnotator != null && _focusedConcepts.Count == 1);
 
-            ChainTypeNotification = new InteractionRequest<ConceptTypeNotification>();
+            TypeNotification = new InteractionRequest<ConceptTypeNotification>();
 
             _eventAggregator = eventAggregator;
             eventAggregator.GetEvent<EMRChangedEvent>().Subscribe(OnEMRChanged, ThreadOption.UIThread);
@@ -100,121 +105,138 @@ namespace EMRCorefResol.TestingGUI
             eventAggregator.GetEvent<CorefAnnotationEndedEvent>().Subscribe(OnCorefAnnotationEnded);
             eventAggregator.GetEvent<EntityAnnotationBegunEvent>().Subscribe(OnEntityAnnotationBegun);
             eventAggregator.GetEvent<EntityAnnotationEndedEvent>().Subscribe(OnEntityAnnotationEnded);
+            eventAggregator.GetEvent<SelectedChainChangedEvent>().Subscribe(SelectedChainChanged);
 
             _regionManager = regionManager;
         }
 
+        private void SelectedChainChanged(CorefChain chain)
+        {
+            SelectedChain = chain;
+        }
+
+        private void ChangeConceptType()
+        {
+            TypeNotification.Raise(new ConceptTypeNotification()
+            {
+                Title = "Change Concept Type",
+                Content = CONCEPT_TYPES
+            },
+            async n =>
+            {
+                var concept = _focusedConcepts[0];
+                if (await _entityAnnotator.ChangeConceptType(concept, n.SelectedType))
+                {
+                    var message = $"Concept '{concept}' has been changed to type {n.SelectedType}";
+                    _eventAggregator.GetEvent<OutputEvent>().Publish(message);
+                }         
+            });
+        }
+
         private async void RemoveConcepts()
         {
-            _isRemovingConcepts = true;
-            foreach (var c in _focusedConcepts)
-            {
-                _editingConcepts.Remove(c);
-            }
-            ConceptsText = await _editingConcepts.ToJointStringAsync(ConceptToString);
-            _isRemovingConcepts = false;
+            await _entityAnnotator.RemoveConceptsAsync(_focusedConcepts);
         }
 
-        private void OnEntityAnnotationEnded(EMR resultEMR)
+        private async void OnEntityAnnotationEnded(EntityAnnotationEndedEventArgs e)
         {
-            _editingConcepts.CollectionChanged -= EditingConcepts_CollectionChanged;
-            _editingConcepts = null;
-            DisplayConcepts = _originalConcepts = resultEMR.Concepts;
+            _entityAnnotator.OperationCompleted -= EntityAnnotator_OperationCompleted;
+            _entityAnnotator = null;                        
+            _originalConcepts = e.ResultEMR.Concepts;
+
+            ConceptsText = await _originalConcepts.ToJointStringAsync(c => c.ToString(true));
             RemoveConceptsCommand.RaiseCanExecuteChanged();
+            ChangeConceptTypeCommand.RaiseCanExecuteChanged();
         }
 
-        private void OnEntityAnnotationBegun(ObservableCollection<Concept> editingConcepts)
+        private async void OnEntityAnnotationBegun(EntityAnnotator entityAnnotator)
         {
-            editingConcepts.CollectionChanged += EditingConcepts_CollectionChanged;
-            DisplayConcepts = _editingConcepts = editingConcepts;
+            _entityAnnotator = entityAnnotator;
+            _entityAnnotator.OperationCompleted += EntityAnnotator_OperationCompleted;
+
+            ConceptsText = await entityAnnotator.EditingConcepts.ToJointStringAsync(c => c.ToString(true));
             RemoveConceptsCommand.RaiseCanExecuteChanged();
+            ChangeConceptTypeCommand.RaiseCanExecuteChanged();
         }
 
-        private async void EditingConcepts_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        private async void EntityAnnotator_OperationCompleted(EntityAnnotator entityAnnotator,
+            AnnotationOperationCompletedEventArgs e)
         {
-            if (!_isRemovingConcepts)
+            if (e.Result == AnnotationOperationResult.Changed)
             {
-                ConceptsText = await _editingConcepts.ToJointStringAsync(ConceptToString);
+                ConceptsText = await entityAnnotator.EditingConcepts.ToJointStringAsync(c => c.ToString(true));
             }
         }
+
+        private void OnCorefAnnotationBegun(CorefAnnotator corefAnnotator)
+        {
+            _regionManager.RequestNavigate(RegionNames.Workspace, "EMRConceptsView");
+            _corefAnnotator = corefAnnotator;
+            //_corefAnnotator.OperationCompleted += CorefAnnotator_OperationCompleted;
+            CreateChainOrMergeCommand.RaiseCanExecuteChanged();
+        }
+
+        //private void CorefAnnotator_OperationCompleted(AnnotationOperationCompletedEventArgs e)
+        //{
+        //    if (!string.IsNullOrEmpty(e.Message))
+        //    {
+        //        _eventAggregator.GetEvent<OutputEvent>().Publish(e.Message);
+        //    }
+        //}
 
         private void OnCorefAnnotationEnded(CorefChainCollection resultChains)
         {
-            _editingChains = null;
+            //_corefAnnotator.OperationCompleted -= CorefAnnotator_OperationCompleted;
+            _corefAnnotator = null;
             CreateChainOrMergeCommand.RaiseCanExecuteChanged();
         }
 
-        private void CreateChainOrMerge()
+        private async void CreateChainOrMerge()
         {
-            CorefChain containedChain = null;
-            int chainIndex = -1;
-
-            foreach (var c in _focusedConcepts)
+            var mergedIndex = await _corefAnnotator.MergeChainAsync(_focusedConcepts);
+            if (mergedIndex >= 0)
             {
-                containedChain = _editingChains.FindChainContains(c, out chainIndex);
-                if (containedChain != null)
-                    break;
-            }
-
-            string output = null;
-            if (containedChain != null)
-            {
-                var newChain = new List<Concept>(containedChain);
-                newChain.AddRange(_focusedConcepts);
-                _editingChains[chainIndex] = new CorefChain(newChain, containedChain.Type);
-                output = $"{_focusedConcepts.Count} concepts has been added to the chain of type {containedChain.Type} at index {chainIndex}";
-            }
-            else if (_focusedConcepts.Count >= 2)
-            {
-                ChainTypeNotification.Raise(new ConceptTypeNotification()
-                {
-                    Title = "Create Chain",
-                    Content = CHAIN_TYPES
-                },
-                n =>
-                {
-                    var newChain = new List<Concept>(_focusedConcepts);
-                    _editingChains.Add(new CorefChain(newChain, n.SelectedType));
-                    output = $"{_focusedConcepts.Count} concepts has been added to a new chain of type {n.SelectedType}";
-                });
+                var message = $"{_focusedConcepts.Count} concepts has been merged to the chain at index {mergedIndex}";
+                _eventAggregator.GetEvent<OutputEvent>().Publish(message);
             }
             else
             {
-                output = "There must be at least 2 concepts to create a new chain";
-            }
+                //TypeNotification.Raise(new ConceptTypeNotification()
+                //{
+                //    Title = "Create Chain",
+                //    Content = CHAIN_TYPES
+                //},
+                //async n =>
+                //{
 
-            if (output != null)
-            {
-                _eventAggregator.GetEvent<OutputEvent>().Publish(output);
-            }
-        }
-
-        private void OnCorefAnnotationBegun(ObservableCollection<CorefChain> editingChains)
-        {
-            _regionManager.RequestNavigate(RegionNames.Workspace, "EMRConceptsView");
-            _editingChains = editingChains;
-            CreateChainOrMergeCommand.RaiseCanExecuteChanged();
+                //});
+                var newChainType = await _corefAnnotator.CreateChainAsync(_focusedConcepts);
+                var message = string.Empty;
+                if (newChainType == ConceptType.None)
+                {
+                    message = "Cannot create new chain: There are two concepts with different types.";
+                }
+                else if (newChainType == ConceptType.Pronoun)
+                {
+                    message = "Cannot create new chain: All concepts are pronouns";
+                }
+                else
+                {
+                    message = $"{_focusedConcepts.Count} concepts has been added to a new chain of type {newChainType}";
+                }
+                _eventAggregator.GetEvent<OutputEvent>().Publish(message);
+            }                     
         }
 
         private void SelectConcepts()
         {
-            Concept c = null;
-            if (_focusedConcepts != null)
-            {
-                c = _focusedConcepts.Count > 0 ? _focusedConcepts[_focusedConcepts.Count - 1] : null;
-            }
-            _eventAggregator.GetEvent<SelectedConceptChangedEvent>().Publish(c);
+            _eventAggregator.GetEvent<SelectedConceptsChangedEvent>().Publish(_focusedConcepts);
         }
 
-        private void OnEMRChanged(EMRChangedEventArgs e)
+        private async void OnEMRChanged(EMRChangedEventArgs e)
         {
             _originalConcepts = e?.EMR.Concepts;
-            DisplayConcepts = _originalConcepts;
-        }
-
-        private static string ConceptToString(Concept c)
-        {
-            return $"{c}||t=\"{c.Type.ToString().ToLower()}\"";
+            ConceptsText = await _originalConcepts.ToJointStringAsync(c => c.ToString(true));
         }
     }
 }

@@ -28,8 +28,7 @@ namespace EMRCorefResol.TestingGUI
 
         private readonly IEventAggregator _eventAggregator;
         private readonly IRegionManager _regionManager;
-
-        private ObservableCollection<Concept> _editingConcepts;
+        private EntityAnnotator _entityAnnotator;        
 
         private EMR _currentEMR;
         public EMR CurrentEMR
@@ -38,11 +37,11 @@ namespace EMRCorefResol.TestingGUI
             set { SetProperty(ref _currentEMR, value); }
         }
 
-        private Concept _selectedConcept;
-        public Concept SelectedConcept
+        private IReadOnlyList<Concept> _selectedConcepts;
+        public IReadOnlyList<Concept> SelectedConcepts
         {
-            get { return _selectedConcept; }
-            set { SetProperty(ref _selectedConcept, value); }
+            get { return _selectedConcepts; }
+            set { SetProperty(ref _selectedConcepts, value); }
         }
 
         private TextSelectionInfo _textSelection;
@@ -51,7 +50,7 @@ namespace EMRCorefResol.TestingGUI
             get { return _textSelection; }
             set
             {
-                if (SetProperty(ref _textSelection, value) && _editingConcepts != null)
+                if (SetProperty(ref _textSelection, value) && _entityAnnotator != null)
                 {
                     AnnotateCommand.RaiseCanExecuteChanged();
                 }
@@ -71,7 +70,7 @@ namespace EMRCorefResol.TestingGUI
 
             _eventAggregator = eventAggregator;
             eventAggregator.GetEvent<EMRChangedEvent>().Subscribe(EMRChanged, ThreadOption.UIThread);
-            eventAggregator.GetEvent<SelectedConceptChangedEvent>().Subscribe(SelectedConceptChanged, ThreadOption.UIThread);
+            eventAggregator.GetEvent<SelectedConceptsChangedEvent>().Subscribe(SelectedConceptChanged, ThreadOption.UIThread);
             eventAggregator.GetEvent<EMRBaseChangedEvent>().Subscribe(OnEMRBaseChanged, ThreadOption.UIThread);
             eventAggregator.GetEvent<EntityAnnotationBegunEvent>().Subscribe(OnEntityAnnotationBegun, ThreadOption.UIThread);
             eventAggregator.GetEvent<EntityAnnotationEndedEvent>().Subscribe(OnEntityAnnotationEnded, ThreadOption.UIThread);
@@ -79,10 +78,28 @@ namespace EMRCorefResol.TestingGUI
             _regionManager = regionManager;
         }
 
-        private void OnEntityAnnotationEnded(EMR resultEMR)
+        private void OnEntityAnnotationBegun(EntityAnnotator entityAnnotator)
         {
-            _editingConcepts = null;
-            CurrentEMR = resultEMR;
+            _regionManager.RequestNavigate(RegionNames.Workspace, "EMRContentView");
+            _entityAnnotator = entityAnnotator;
+            _entityAnnotator.OperationCompleted += EntityAnnotator_OperationCompleted;
+            AnnotateCommand.RaiseCanExecuteChanged();
+        }
+
+        private void EntityAnnotator_OperationCompleted(EntityAnnotator annotator,
+            AnnotationOperationCompletedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(e.Message))
+            {
+                _eventAggregator.GetEvent<OutputEvent>().Publish(e.Message);
+            }
+        }
+
+        private void OnEntityAnnotationEnded(EntityAnnotationEndedEventArgs e)
+        {
+            _entityAnnotator.OperationCompleted -= EntityAnnotator_OperationCompleted;
+            _entityAnnotator = null;
+            CurrentEMR = e.ResultEMR;
             AnnotateCommand.RaiseCanExecuteChanged();
         }
 
@@ -96,18 +113,14 @@ namespace EMRCorefResol.TestingGUI
             c =>
             {
                 var concept = GetConceptFromSelection(c.SelectedType);
-                if (concept != null && !_editingConcepts.Contains(concept))
-                {
-                    _editingConcepts.Add(concept);
-                    _eventAggregator.GetEvent<OutputEvent>().Publish($"Concept '{concept}' is successfully added to Concepts List");
-                }
+                _entityAnnotator.AddConcept(concept);
             });
         }
 
         private bool CanAnnotate()
         {
             return _currentEMR != null
-                && _editingConcepts != null
+                && _entityAnnotator != null
                 && !string.IsNullOrWhiteSpace(_textSelection.Text);
         }
 
@@ -140,33 +153,19 @@ namespace EMRCorefResol.TestingGUI
                 type);
         }
 
-        private void OnEntityAnnotationBegun(ObservableCollection<Concept> editingConcepts)
-        {
-            _regionManager.RequestNavigate(RegionNames.Workspace, "EMRContentView");
-            _editingConcepts = editingConcepts;      
-            AnnotateCommand.RaiseCanExecuteChanged();
-        }
-
         private void OnEMRBaseChanged(bool zeroBase)
         {
-            if (_selectedConcept != null)
+            if (_selectedConcepts != null)
             {
-                var t = _selectedConcept;
-                SelectedConcept = null;
-                SelectedConcept = t;
+                var t = _selectedConcepts;
+                SelectedConcepts = null;
+                SelectedConcepts = t;
             }
         }
 
-        private void SelectedConceptChanged(Concept selectedConcept)
+        private void SelectedConceptChanged(IReadOnlyList<Concept> selectedConcepts)
         {
-            if (_selectedConcept == null)
-            {
-                SelectedConcept = selectedConcept;
-            }
-            else
-            {
-                SelectedConcept = _selectedConcept.Equals(selectedConcept) ? null : selectedConcept;
-            }
+            SelectedConcepts = selectedConcepts;
         }
 
         private void EMRChanged(EMRChangedEventArgs e)

@@ -81,7 +81,13 @@ namespace HCMUT.EMRCorefResol
 
         public override string ToString()
         {
-            return $"c=\"{Lexicon}\" {Begin} {End}";
+            return ToString(includeType: false);
+        }
+
+        public string ToString(bool includeType)
+        {
+            var typeString = includeType ? $"||t=\"{Type.ToString().ToLower()}\"" : string.Empty;
+            return $"c=\"{Lexicon}\" {Begin} {End}{typeString}";
         }
 
         public int CompareTo(Concept other)

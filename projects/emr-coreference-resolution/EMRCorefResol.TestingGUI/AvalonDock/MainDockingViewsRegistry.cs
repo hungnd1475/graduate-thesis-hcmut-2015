@@ -42,6 +42,7 @@ namespace EMRCorefResol.TestingGUI
                     regionManager.RegisterViewWithRegion(RegionName, typeof(EMRConceptsView));
                     regionManager.RegisterViewWithRegion(RegionName, typeof(GroundTruthView));
                     regionManager.RegisterViewWithRegion(RegionName, typeof(OutputView));
+                    regionManager.RegisterViewWithRegion(RegionName, typeof(EMRCollectionView));
                 }
                 _isRegistered = true;
             }
